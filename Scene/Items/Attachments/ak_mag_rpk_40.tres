@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AttachmentItemPD" format=3]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/AttachmentItemPD.gd" id="1_script"]
+[ext_resource type="Resource" uid="uid://hv4kejkdqbr7" path="res://Scene/Items/Bullets/76239/7.62x39mm_Item.tres" id="2_ammo"]
+
+[resource]
+script = ExtResource("1_script")
+attachment_slot = 4
+ads_time_multiplier = 1.12
+magazine_capacity = 40
+magazine_ammo_item = ExtResource("2_ammo")
+compatible_weapons = Array[String](["AK-47"])
+name = "RPK 40-rnd Mag (7.62x39)"
+description = "Longer RPK magazine. Ten more rounds, and it hangs low enough to slow your sights down."
+drop_scene = "res://Scene/Items/Attachments/pickup_attachment.tscn"
+item_size = Vector2(2, 1)

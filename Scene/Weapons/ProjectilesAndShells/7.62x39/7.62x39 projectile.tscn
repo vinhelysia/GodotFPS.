@@ -1,0 +1,74 @@
+[gd_scene format=4 uid="uid://bc8jxhqittw87"]
+
+[ext_resource type="Script" uid="uid://fo2f3fr8frg4" path="res://addons/cogito/CogitoObjects/cogito_projectile.gd" id="1_usm1l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i7lsc"]
+resource_name = "copper"
+cull_mode = 2
+albedo_color = Color(0.72156686, 0.45098066, 0.20000023, 1)
+metallic = 1.0
+roughness = 0.3
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_22aw1"]
+_surfaces = [{
+"aabb": AABB(-0.08561784, -0.038100004, -0.03810001, 0.17123568, 0.07620001, 0.07620002),
+"format": 34896613377,
+"index_count": 180,
+"index_data": PackedByteArray("AwARABIAAwAFABEAEgARABMABQATABEADQADABIAEgATAAYADQASAA4ADgASAAYABgATAAkAAQANAA4AEwAUAAkABQAUABMABgAJABUAFQAJABQADgAGAA8ADwAGABUAAQAOABYAFgAOAA8AFwANAAEAFgAXAAEAFwAYAA0AGAADAA0AAAAYABcAGAALAAMACwAFAAMAAAAMABgADAALABgAFwAZAAAAGQAMAAAAFgAZABcACwAaAAUADAAbAAsAGwAaAAsAHAAFABoAGwAcABoAFAAFABwAHQAbAAwAGQAdAAwABAAcABsAHQAEABsAFAAcAAoABAAKABwAHgAUAAoAHgAKAAQAFQAUAB4AAgAdABkAEAAEAB0AAgAQAB0AEAAeAAQAGQAfAAIAHwAQAAIAGQAWAB8ABwAeABAABwAVAB4AHwAHABAADwAVAAcAHwAWAAgAFgAPAAgACAAHAB8ACAAPAAcA"),
+"lods": [0.032499865, PackedByteArray("AwAJAAYABgAJAAQABAAJAAoACQAFAAoABAAKAAUAAwAFAAkABAAFAAsACwAFAAMADAAEAAsADAALAAMABwAGAAQADAADAA0ADgADAAYADQADAA4ADgAGAA8ADwAGAAcAAQANAA4AAQAMAA0ACAAOAA8AAQAOAAgACAAPAAcAAAAMAAEACAAAAAEAAAAIAAIACAAHAAIAAAAQAAwAAgAQAAAAAgAHABAAEAAEAAwABwAEABAA"), 0.056363944, PackedByteArray("AwAFAAYABgAFAAQABAAFAAMABwAGAAQABwAEAAIACAAGAAcACAAHAAIACAADAAYAAgAEAAAAAAAIAAIAAAAEAAMAAQADAAgAAAADAAEACAAAAAEA"), 0.08454591, PackedByteArray("AAABAAIAAQADAAIAAAADAAEAAgADAAQAAAAEAAMAAgAEAAAA")],
+"name": "copper",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("AAAAAP9/AAAAAP9/AAAAAAAA/3/+/wAAEsj/fwYpAAASyH9Cf70AAP///3+aagAAEsj41v9/AAA6WIHagdoAAAAA////fwAA//8gjyCPAAD//95wII8AABLIf0J/QgAAOlgAAP9/AAA6WP9/AAAAADpYgdp9JQAAOlj///9/AAA6WP9///8AAP//II/ecAAAEsh/vX9CAAD//2SV/38AAP///39llQAAEsh/vX+9AAAAAIHafSUAAAAAfSV9JQAAOlh9JX0lAAAAAH0lgdoAAP//3nDecAAAEsgGKf9/AAD//5pq/38AADpYfSWB2gAAEsj/f/nWAAAAAIHagdoAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_q7jq3"]
+resource_name = "7_62x39 projectile_Cube_003"
+_surfaces = [{
+"aabb": AABB(-0.08561784, -0.038100004, -0.03810001, 0.17123568, 0.07620001, 0.07620002),
+"attribute_data": PackedByteArray("joL/v/+/joL/v2/9/3//f///3x//X98f////f/8//38AAN8fAAD/f///AAD/v98f/7//f/+fnl8AAAAAb/3/v/+fAAD/XwAA/9+eX///nl//v55f/3+eX/8/nl8AAJ5f/x/fH3FrcOv/P46CjhRw6//fAAD/398f/78AAP/f/3//n98f/38AAP+f/3//f98f/z8AAP9fnl//X/9//z/fH/8fAAD/H55f/x//f3B9/79xa42U/z9v/Y8C/7+OFI2UcOuNlI2UjZSNlHDrcOtw6w=="),
+"format": 34896613399,
+"index_count": 180,
+"index_data": PackedByteArray("BAAcAB0ABAAKABwAHQAcAB4AEwAEAB0AHQAeAAsAEwAdABIAEgAdAAsABgATABIACwAeABAABgASAB8AHwASABQAEgALABQAHwAUAAwACwAQACAAFAALACAAIAAQACEADAAUAA0AFAAgAA0ADAANACIAIAAhACMADQAgACMAIwAhABEAIgANABUADQAjABUAIgAVAAMAIwARAAUAFQAjAAUABQARACQAAwAVACUAFQAFACUAAwAlACYABQAkACcAJQAFACcAJwAkACgAJgAlABYAJQAnABYAJgAWAAcAJwAoABgAFgAnABgAGAAoAA4AGAAOAAgAFgAYACkABwAWACkAKQAYAAgABwApACoAKQAIABcAKgApABcAKgAXAAkAGgArACwAGgAtACsAKwAtABkALQAaAC4ALgAaAC8ALQAuABsAMAAxAAEAMAAyADEAMQAyAAAAMgAwADMAMwAwAA8AMgAzAAIA"),
+"lods": [0.032499865, PackedByteArray("BAAQAAsABAAKABAACwAQAAUABQAQABEAEgAEAAsAEwAEABIABgATABIABgASAAwAEgALABQADAASABQAFAALAA0ADAAUAA0ADQALAAUADAANAAMAAwANABUADQAFABUAAwAVAAcABQARAA4ABwAVABYAFQAFABYABwAWAAkACQAWABcAFgAIABcABQAOABgAFgAFABgAGAAOAAgAFgAYAAgAGQAaABsADwAAAAEAAAAPAAIA"), 0.056363944, PackedByteArray("BAAKAAsADAAEAAsABgAEAAwACwAKAAUADAALAA0ADQALAAUADAANAAMADQAFAAMAAwAFAAcABwAFAAgABQAOAAgABwAIAAkADwAAAAEAAAAPAAIA"), 0.08454591, PackedByteArray("AAABAAIAAwAEAAUABgAEAAMAAwAFAAcABwAFAAgABwAIAAkA")],
+"material": SubResource("StandardMaterial3D_i7lsc"),
+"name": "copper",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 52,
+"vertex_data": PackedByteArray("AAAAAP9/i+wAAP9/AACL7AAA/3/+/4/EAAD/f/7/bzsSyP9/BilyCRLIf0J/vdE0AAD/fwAAxhAAAAAA/39sOBLI/38GKVMIAAD/fwAA0hX///9/mmo1HhLI+Nb/f4gxAAD///9/LBk6WIHagdoeO////3+aapIVAAD///9/j8T//yCPII/LP///3nAgj0UnOliB2n0lgxg6WP9/AABSAjpY////f4IsOlj/f///7z86WAAA/3/GKDpY/38AAD8CEsh/Qn9Cow3//yCPII/SK////3+aajIa///ecCCP6Tv//yCP3nDnLRLIf71/Qrge//9klf9/6DsAAIHafSX7AhLIf71/vbw9////f2WVzjcAAIHagdoOLRLI/3/51gc///+aav9/ZRI6WH0lgdrOOAAAfSWB2uM/EsgGKf9/CiP//95w3nAQBDpYfSV9JR8UAAB9JX0lMCj//2SV/38yGv//II/ecGMS////f2WVzjf//5pq/3/ON///3nDecH0pAACB2n0lldgAAH0lfSUk+AAAfSWB2jjSAACB2oHawMCjybXso8mjyW7lbuVu5W7l4recQHMRb9nTQ3qujkHG4M++nkivT4q+YKyMQvbL+yVh57Az7t90Gpu5Y1Zu5SC1QkEYBvMEBDU0yQQ1vb0xQArThSm1BLUEbyg31MK/S0KULvrKJS25FDUzNTNoF/4yrbDqNaXDBDU7s54ZkNgENZvWuxL8H/wfJfzUMToPOg9NEibJ+xmA4Io6efs5IhvRBLUoXU0z+spJR/rKNTOUGWUzQCf8H/wf/B8HQJsuBz21zI28MsvY19LQO/a79JbJ")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_22aw1")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_e83yt"]
+height = 0.05429077
+radius = 0.01171875
+
+[node name="7_62x39Projectile" type="RigidBody3D" unique_id=844824024]
+continuous_cd = true
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("1_usm1l")
+destroy_on_impact = true
+cogito_name = "7_62x39Projectile"
+
+[node name="7_62x39 projectile" type="Node3D" parent="." unique_id=392462260]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="7_62x39mm bullet" type="MeshInstance3D" parent="7_62x39 projectile" unique_id=575003327]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("ArrayMesh_q7jq3")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=269239475]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 6.8698935e-11, -0.0015716553)
+shape = SubResource("CylinderShape3D_e83yt")
+
+[node name="Lifespan" type="Timer" parent="." unique_id=982286599]
+wait_time = 3.0
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

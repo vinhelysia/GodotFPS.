@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Pistol_Resource" format=3 uid="uid://c0a1piy7rpc46"]
+
+[ext_resource type="Script" uid="uid://cwcu7wbttkbeu" path="res://Scripts/Weapons/Types/Pistol_Resource.gd" id="1_qc354"]
+
+[resource]
+script = ExtResource("1_qc354")
+hammer_rest_rotation = Vector3(0, 0, 0.8)
+hammer_cocked_rotation = Vector3(0, 0, 0)
+hammer_cock_duration = 0.04
+hammer_return_duration = 0.1
+weaponName = "USP"
+recoilVertical = 0.1
+recoilHorizontal = 0.05
+recoilRecovery = 8.0
+Type = 1
+weaponVelocity = 350
+locks_open_on_empty = true
+metadata/_custom_type_script = "uid://cwcu7wbttkbeu"

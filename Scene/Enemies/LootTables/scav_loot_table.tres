@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="LootTable" format=3 uid="uid://curftyaxcxdcf"]
+
+[ext_resource type="Script" uid="uid://bw38ep6ean3wy" path="res://addons/cogito/Components/LootTables/LootDropEntry.gd" id="1_entry"]
+[ext_resource type="Script" uid="uid://dj1uuvia16dhm" path="res://addons/cogito/Components/LootTables/BaseLootTable.gd" id="2_table"]
+[ext_resource type="Resource" uid="uid://hv4kejkdqbr7" path="res://Scene/Items/Bullets/76239/7.62x39mm_Item.tres" id="3_762x39"]
+[ext_resource type="Resource" uid="uid://p4tk4735s2bo" path="res://Scene/Items/Bullets/76251/7_62x51mm_item.tres" id="4_762x51"]
+
+[sub_resource type="Resource" id="Entry_762x39"]
+script = ExtResource("1_entry")
+name = "7.62x39mm Ammo"
+droptype = 1
+inventory_item = ExtResource("3_762x39")
+quantity_min = 5
+metadata/_custom_type_script = "uid://bw38ep6ean3wy"
+
+[sub_resource type="Resource" id="Entry_762x51"]
+script = ExtResource("1_entry")
+name = "7.62x51mm Ammo"
+weight = 40.0
+inventory_item = ExtResource("4_762x51")
+quantity_min = 2
+quantity_max = 6
+metadata/_custom_type_script = "uid://bw38ep6ean3wy"
+
+[resource]
+script = ExtResource("2_table")
+drops = Array[ExtResource("1_entry")]([SubResource("Entry_762x39"), SubResource("Entry_762x51")])

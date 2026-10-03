@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cpoyxgguqsn3m"]
+
+[ext_resource type="Script" uid="uid://dmeh01c5ccjqc" path="res://addons/cogito/CogitoObjects/cogito_object.gd" id="1_cogobj"]
+[ext_resource type="PackedScene" uid="uid://hb6a2o6ljd5q" path="res://addons/cogito/Components/Interactions/ExtendedPickupInteraction.tscn" id="2_extpick"]
+[ext_resource type="Script" uid="uid://b0a3vpjf8hylo" path="res://addons/cogito/Components/Interactions/PickupComponent.gd" id="4_tlq7m"]
+[ext_resource type="Resource" uid="uid://yv04ygxufxb1" path="res://Scene/Weapons/Firearms/AR/AK47/Ak-47_Wieldable.tres" id="5_hkr3y"]
+[ext_resource type="Script" uid="uid://di15gqemrkk0x" path="res://addons/cogito/InventoryPD/CustomResources/InventorySlotPD.gd" id="5_slot"]
+[ext_resource type="PackedScene" uid="uid://c2o5c3td65lqn" path="res://Scene/Weapons/Firearms/AR/AK47/AK47_Drop.tscn" id="7_mesh"]
+
+[sub_resource type="Resource" id="Resource_65xvt"]
+script = ExtResource("5_slot")
+inventory_item = ExtResource("5_hkr3y")
+metadata/_custom_type_script = "uid://di15gqemrkk0x"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ak47col"]
+size = Vector3(2.546454, 0.8548096, 0.13345948)
+
+[node name="Pickup_AK47" type="RigidBody3D" unique_id=1016856659]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0021060705, 0, 0)
+collision_layer = 3
+mass = 3.5
+script = ExtResource("1_cogobj")
+cogito_name = "AK-47"
+display_name = "AK-47"
+
+[node name="AK47_Drop" parent="." unique_id=1576005502 instance=ExtResource("7_mesh")]
+
+[node name="ExtendedPickupInteraction" parent="." unique_id=54646705 instance=ExtResource("2_extpick")]
+hold_interaction_text = "Wield"
+
+[node name="PickupComponent" type="Node3D" parent="." unique_id=610475193]
+script = ExtResource("4_tlq7m")
+slot_data = SubResource("Resource_65xvt")
+metadata/_custom_type_script = "uid://b0a3vpjf8hylo"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=566114659]
+transform = Transform3D(-0.0017782539, -0.0045208056, 0.9999882, 0.012974124, 0.9999055, 0.004543504, -0.9999142, 0.012982052, -0.0017194302, -0.00015057018, -0.1862475, -0.05129341)
+shape = SubResource("BoxShape3D_ak47col")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1270568352]
+bus = &"SFX"

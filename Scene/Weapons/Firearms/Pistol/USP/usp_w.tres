@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="WieldableItemPD" format=3 uid="uid://cao1lbgvo6tvi"]
+
+[ext_resource type="Texture2D" uid="uid://qavb4u01eo6f" path="res://Scene/Weapons/Firearms/Pistol/USP/icon_output.png" id="1_78j7u"]
+[ext_resource type="Script" uid="uid://bkxgkf3pj8kb8" path="res://addons/cogito/InventoryPD/CustomResources/WieldableItemPD.gd" id="1_hs8se"]
+[ext_resource type="Texture2D" uid="uid://rbqyqnsii8he" path="res://Scene/Weapons/Firearms/Pistol/USP/usp.png" id="2_g6t70"]
+[ext_resource type="PackedScene" uid="uid://cvkcum00xbetq" path="res://Scene/Weapons/Firearms/Pistol/USP/USP.tscn" id="3_g6t70"]
+[ext_resource type="PackedScene" uid="uid://bxxow5b026wvr" path="res://Scene/Weapons/Firearms/Pistol/USP/USP_drop.tscn" id="99_worldmodel"]
+
+[resource]
+script = ExtResource("1_hs8se")
+weapon_slot = 1
+wieldable_scene = ExtResource("3_g6t70")
+world_model = ExtResource("99_worldmodel")
+wieldable_data_icon = ExtResource("2_g6t70")
+quickslot_icon = ExtResource("2_g6t70")
+charge_max = 13.0
+ammo_item_name = ".45 ACP"
+charge_current = 13.0
+attachments = {
+4: "res://Scene/Items/Attachments/usp_mag_12.tres"
+}
+wieldable_range = 200.0
+wieldable_damage = 20.0
+name = "USP .45 ACP"
+description = "A German-engineered masterclass in reliability. Featuring a polymer frame and a patented recoil-reduction system, the USP stays on target even when you are panic-firing. It won't clear a horde on its own, but it’s the sidearm you want in your holster when your primary clicks empty."
+icon = ExtResource("1_78j7u")
+drop_scene = "uid://ckukvw522vy6q"
+item_size = Vector2(2, 1)
+can_auto_slot = true
+metadata/_custom_type_script = "uid://bkxgkf3pj8kb8"

@@ -1,0 +1,191 @@
+[gd_scene format=3 uid="uid://c5b73hl6rjw60"]
+
+[ext_resource type="PackedScene" uid="uid://b2cccsfb5tikx" path="res://addons/cogito/CogitoNPC/cogito_npc.tscn" id="1_base"]
+[ext_resource type="Script" uid="uid://bu8ysvykd2ety" path="res://Scripts/Enemies/HostileNPC.gd" id="2_scav"]
+[ext_resource type="Script" uid="uid://dkau1vh8suuuu" path="res://Scripts/Enemies/scav_perception.gd" id="3_4t50h"]
+[ext_resource type="Texture2D" uid="uid://dxujwswxgkals" path="res://Scene/Weapons/Firearms/AR/AK47/AK47.png" id="4_bnjg6"]
+[ext_resource type="PackedScene" path="res://Scene/Enemies/CorpseContainer.tscn" id="5_chest"]
+[ext_resource type="Texture2D" uid="uid://c1blj5u0t6uq4" path="res://Scene/Weapons/Firearms/AR/AK47/ak47_qucik.png" id="5_gxkms"]
+[ext_resource type="Script" uid="uid://cth50hd1c1wed" path="res://Scripts/Enemies/npc_loot_component.gd" id="6_lootcomp"]
+[ext_resource type="Script" uid="uid://bkxgkf3pj8kb8" path="res://addons/cogito/InventoryPD/CustomResources/WieldableItemPD.gd" id="6_q2n43"]
+[ext_resource type="BehaviorTree" uid="uid://dootm3wprrons" path="res://Scene/Enemies/BT/scav_brain.tres" id="7_brain"]
+[ext_resource type="PackedScene" uid="uid://daoa0ue5mkbbs" path="res://Scene/Weapons/Firearms/AR/AK47/AK47.tscn" id="7_rjfry"]
+[ext_resource type="PackedScene" uid="uid://bc8jxhqittw87" path="res://Scene/Weapons/ProjectilesAndShells/7.62x39/7.62x39 projectile.tscn" id="8_h1b52"]
+[ext_resource type="Resource" uid="uid://dj4by52i4ocd7" path="res://Scene/Enemies/Profiles/scav_profile.tres" id="8_profile"]
+[ext_resource type="Script" uid="uid://n2v7dh3aksy2" path="res://Scripts/Weapons/Types/AssaultRifle_Resource.gd" id="9_cgytp"]
+[ext_resource type="Resource" uid="uid://dr26ug8vis6t1" path="res://Scene/Enemies/Factions/scav_faction.tres" id="11_faction"]
+[ext_resource type="Resource" path="res://Scene/Enemies/Factions/player_faction.tres" id="12_playerfaction"]
+[ext_resource type="Resource" uid="uid://lbfw58nu7bix" path="res://Scene/Enemies/Loadouts/scav_loadout.tres" id="13_loadout"]
+
+[sub_resource type="Resource" id="Resource_bnjg6"]
+resource_local_to_scene = true
+script = ExtResource("6_q2n43")
+wieldable_scene = ExtResource("7_rjfry")
+quickslot_icon = ExtResource("5_gxkms")
+charge_max = 31.0
+ammo_item_name = "7.62x39mm"
+charge_current = 31.0
+wieldable_range = 1000.0
+wieldable_damage = 30.0
+name = "AK-47"
+description = "Scavenged from an abandoned military cache, this rifle has seen better days, but it still spits lead without hesitation. It's loud, it's messy, and it's exactly what you need to survive the next wave. Just watch your ammo counter—7.62 rounds go fast when you're holding down the trigger"
+icon = ExtResource("4_bnjg6")
+slot_background_preset = 1
+drop_scene = "uid://cpoyxgguqsn3m"
+item_size = Vector2(4, 2)
+can_auto_slot = true
+metadata/_custom_type_script = "uid://bkxgkf3pj8kb8"
+
+[sub_resource type="Resource" id="Resource_gxkms"]
+resource_local_to_scene = true
+script = ExtResource("9_cgytp")
+fireRate = 600.0
+weaponName = "AK 47"
+recoilVertical = 0.07
+recoilHorizontal = 0.06
+recoilRecovery = 6.0
+Type = 2
+bulletProjectileToLoad = ExtResource("8_h1b52")
+weaponVelocity = 716
+metadata/_custom_type_script = "uid://n2v7dh3aksy2"
+
+[sub_resource type="BlackboardPlan" id="BlackboardPlan_ojppo"]
+var/target/name = &"target"
+var/target/type = 24
+var/target/hint = 0
+var/target/hint_string = ""
+var/has_last_known/name = &"has_last_known"
+var/has_last_known/type = 1
+var/has_last_known/value = false
+var/has_last_known/hint = 0
+var/has_last_known/hint_string = ""
+var/ammo/name = &"ammo"
+var/ammo/type = 2
+var/ammo/value = 5
+var/ammo/hint = 0
+var/ammo/hint_string = ""
+var/reloading/name = &"reloading"
+var/reloading/type = 1
+var/reloading/value = false
+var/reloading/hint = 0
+var/reloading/hint_string = ""
+var/engage_range/name = &"engage_range"
+var/engage_range/type = 3
+var/engage_range/value = 15.0
+var/engage_range/hint = 0
+var/engage_range/hint_string = ""
+var/target_visible/name = &"target_visible"
+var/target_visible/type = 1
+var/target_visible/value = false
+var/target_visible/hint = 0
+var/target_visible/hint_string = ""
+var/last_seen_time/name = &"last_seen_time"
+var/last_seen_time/type = 3
+var/last_seen_time/value = -999.0
+var/last_seen_time/hint = 0
+var/last_seen_time/hint_string = ""
+var/last_known_pos/name = &"last_known_pos"
+var/last_known_pos/type = 9
+var/last_known_pos/value = Vector3(0, 0, 0)
+var/last_known_pos/hint = 0
+var/last_known_pos/hint_string = ""
+var/heard_pos/name = &"heard_pos"
+var/heard_pos/type = 9
+var/heard_pos/value = Vector3(0, 0, 0)
+var/heard_pos/hint = 0
+var/heard_pos/hint_string = ""
+var/heard_time/name = &"heard_time"
+var/heard_time/type = 3
+var/heard_time/value = -999.0
+var/heard_time/hint = 0
+var/heard_time/hint_string = ""
+var/alert/name = &"alert"
+var/alert/type = 2
+var/alert/value = 0
+var/alert/hint = 0
+var/alert/hint_string = ""
+var/combat_reacted/name = &"combat_reacted"
+var/combat_reacted/type = 1
+var/combat_reacted/value = false
+var/combat_reacted/hint = 0
+var/combat_reacted/hint_string = ""
+var/detection_level/name = &"detection_level"
+var/detection_level/type = 3
+var/detection_level/value = 0.0
+var/detection_level/hint = 0
+var/detection_level/hint_string = ""
+var/shots_fired_since_strafe/name = &"shots_fired_since_strafe"
+var/shots_fired_since_strafe/type = 2
+var/shots_fired_since_strafe/value = 0
+var/shots_fired_since_strafe/hint = 0
+var/shots_fired_since_strafe/hint_string = ""
+var/no_reserve_ammo/name = &"no_reserve_ammo"
+var/no_reserve_ammo/type = 1
+var/no_reserve_ammo/value = false
+var/no_reserve_ammo/hint = 0
+var/no_reserve_ammo/hint_string = ""
+
+[node name="Scav" unique_id=1240844793 instance=ExtResource("1_base")]
+collision_mask = 17
+script = ExtResource("2_scav")
+ai_profile = ExtResource("8_profile")
+equipped_wieldable = SubResource("Resource_bnjg6")
+equipped_weapon_data = SubResource("Resource_gxkms")
+faction = ExtResource("11_faction")
+player_faction = ExtResource("12_playerfaction")
+loadout = ExtResource("13_loadout")
+debug_loadout = false
+weapon_offset = Transform3D(-0.224434, -0.156682, 0.089957, -0.180632, 0.19751, -0.106649, -0.00367, -0.139473, -0.252083, 0, 0, 0)
+cogito_name = "Scav"
+display_name = "Scav"
+sprint_speed = 5.0
+
+[node name="Skeleton3D" parent="Rig" parent_id_path=PackedInt32Array(1075982299) index="0" unique_id=1082083865]
+bones/1/position = Vector3(0.005126236, 0.08625754, 0.87545)
+bones/1/rotation = Quaternion(0.76007503, -0.086052425, -0.07313094, 0.63994753)
+bones/3/rotation = Quaternion(-0.028790856, 0.00038885928, 0.00023932055, 0.9995854)
+bones/4/rotation = Quaternion(0.14496098, 0.0011645661, 0.00013247585, 0.9894367)
+bones/5/rotation = Quaternion(0.013670626, -0.00023924837, -0.00024011763, 0.9999065)
+bones/6/rotation = Quaternion(-0.0018725479, 0.09598446, -0.0035579696, 0.99537474)
+bones/7/rotation = Quaternion(-0.60238194, -0.37152022, -0.39603317, 0.5850355)
+bones/8/rotation = Quaternion(-0.27840614, 0.67255276, -0.5022081, 0.46685117)
+bones/9/rotation = Quaternion(0.28409216, 0.03383803, -0.0023827218, 0.9581967)
+bones/26/rotation = Quaternion(-0.63853663, 0.308943, 0.3310425, 0.6222829)
+bones/27/rotation = Quaternion(-0.2909965, -0.67877674, 0.477128, 0.47637403)
+bones/28/rotation = Quaternion(0.36766082, -0.14765309, 0.059248336, 0.9162499)
+bones/45/rotation = Quaternion(0.96045595, 0.10975387, -0.012932962, 0.25556093)
+bones/46/rotation = Quaternion(0.19967854, -0.10854817, 0.022703748, 0.9735659)
+bones/47/rotation = Quaternion(-0.50196904, 0.022100523, 0.09018785, 0.8598866)
+bones/48/rotation = Quaternion(-0.000137176, 0.9643069, -0.26478696, -0.0004994209)
+bones/49/rotation = Quaternion(0.9926154, -0.11800084, 0.014910971, 0.02383754)
+bones/50/rotation = Quaternion(0.13665332, 0.34772307, -0.05231975, 0.9261087)
+bones/51/rotation = Quaternion(-0.5856779, -0.049202975, -0.15959206, 0.7931525)
+bones/52/rotation = Quaternion(-0.00012003928, 0.9641921, -0.26520434, -0.0004952334)
+
+[node name="BoneAttachment3D" parent="Rig/Skeleton3D" index="1" unique_id=537023208]
+transform = Transform3D(0.99807876, -0.05798614, -0.021827042, 0.049208827, 0.9559395, -0.28941044, 0.037647158, 0.28778023, 0.9569562, -0.016272018, 1.5220306, 0.009316444)
+
+[node name="CogitoHealthAttribute" parent="." index="8" unique_id=1621381883]
+value_max = 80.0
+value_start = 80.0
+
+[node name="LookAtArea" parent="." index="13" unique_id=1003527868]
+transform = Transform3D(1, 0, 0, 0, 0.9999591, -0.0090406835, 0, 0.0090406835, 0.9999591, 0, 0, 0)
+
+[node name="Muzzle" type="Marker3D" parent="." index="14" unique_id=575613463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0.5)
+
+[node name="LootComponent" type="Node3D" parent="." index="15" unique_id=256628762 node_paths=PackedStringArray("health_component_to_monitor")]
+script = ExtResource("6_lootcomp")
+spawning_logic = 2
+amount_of_items_to_drop = 2
+loot_bag_scene = ExtResource("5_chest")
+health_component_to_monitor = NodePath("../CogitoHealthAttribute")
+
+[node name="Perception" parent="." index="16" unique_id=1516148782]
+script = ExtResource("3_4t50h")
+debug_perception = false
+
+[node name="BTPlayer" type="BTPlayer" parent="." index="17" unique_id=1437823093]
+behavior_tree = ExtResource("7_brain")
+blackboard_plan = SubResource("BlackboardPlan_ojppo")

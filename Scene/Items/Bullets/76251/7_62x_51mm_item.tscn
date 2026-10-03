@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://u7tvrbwfpvb2"]
+
+[ext_resource type="PackedScene" uid="uid://dh2kyasyxn7ms" path="res://Assets/7.62x51mm_Item.glb" id="1_b8itn"]
+[ext_resource type="Script" uid="uid://dmeh01c5ccjqc" path="res://addons/cogito/CogitoObjects/cogito_object.gd" id="2_5uoj0"]
+[ext_resource type="PackedScene" uid="uid://1xq4y42qkcur" path="res://addons/cogito/Components/Interactions/PickupComponent.tscn" id="2_17qlu"]
+[ext_resource type="Resource" uid="uid://p4tk4735s2bo" path="res://Scene/Items/Bullets/76251/7_62x51mm_item.tres" id="4_5uoj0"]
+[ext_resource type="Script" uid="uid://di15gqemrkk0x" path="res://addons/cogito/InventoryPD/CustomResources/InventorySlotPD.gd" id="5_xw5h4"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_b8itn"]
+height = 0.21111917
+radius = 0.017578125
+
+[sub_resource type="Resource" id="Resource_5uoj0"]
+resource_local_to_scene = true
+script = ExtResource("5_xw5h4")
+inventory_item = ExtResource("4_5uoj0")
+metadata/_custom_type_script = "uid://di15gqemrkk0x"
+
+[node name="7_62x51mm_Item" unique_id=1276708987 instance=ExtResource("1_b8itn")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("2_5uoj0")
+cogito_name = "7.62x51mm"
+display_name = "7.62x51mm"
+
+[node name="7_62x51 mag_002" parent="." index="0" unique_id=605894063]
+transform = Transform3D(1.6180179e-08, -0.37015927, 1.9708914e-08, -0.37015927, -1.6180175e-08, 5.705483e-09, -1.6180174e-08, -5.5892496e-08, -0.13052623, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=2082777454]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0002536904, 0)
+shape = SubResource("CylinderShape3D_b8itn")
+
+[node name="PickupComponent" parent="." index="2" unique_id=58604231 instance=ExtResource("2_17qlu")]
+slot_data = SubResource("Resource_5uoj0")
+display_item_name = true

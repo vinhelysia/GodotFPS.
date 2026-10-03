@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="NPCLoadout" format=3 uid="uid://lbfw58nu7bix"]
+
+[ext_resource type="Script" uid="uid://m561kix4p056" path="res://Scripts/Enemies/NPCLoadout.gd" id="1_loadout"]
+[ext_resource type="Script" uid="uid://bi7vru0xjqbtf" path="res://Scripts/Enemies/NPCWeaponOption.gd" id="2_weaponopt"]
+[ext_resource type="Script" uid="uid://d0e1drxvum1jm" path="res://Scripts/Enemies/NPCGearOption.gd" id="3_gearopt"]
+[ext_resource type="Resource" uid="uid://yv04ygxufxb1" path="res://Scene/Weapons/Firearms/AR/AK47/Ak-47_Wieldable.tres" id="4_wieldable"]
+[ext_resource type="Resource" uid="uid://dr3aharu3mmkm" path="res://Scene/Weapons/Firearms/AR/AK47/AK47.tres" id="5_weapondata"]
+[ext_resource type="Resource" uid="uid://hv4kejkdqbr7" path="res://Scene/Items/Bullets/76239/7.62x39mm_Item.tres" id="6_ammo"]
+[ext_resource type="Resource" path="res://Scene/Items/Gear/body_armor_placeholder.tres" id="7_bodyarmor"]
+[ext_resource type="Resource" path="res://Scene/Items/Gear/helmet_placeholder.tres" id="8_helmet"]
+[ext_resource type="Script" uid="uid://dxs1pbahn4jgk" path="res://Scripts/Inventory/AttachmentItemPD.gd" id="9_5q0vt"]
+[ext_resource type="Resource" path="res://Scene/Items/Gear/eyewear_placeholder.tres" id="9_eyewear"]
+[ext_resource type="Resource" uid="uid://curftyaxcxdcf" path="res://Scene/Enemies/LootTables/scav_loot_table.tres" id="10_pocketloot"]
+[ext_resource type="Resource" path="res://Scene/Items/Attachments/suppressor_item.tres" id="12_suppressor"]
+[ext_resource type="Resource" path="res://Scene/Items/Attachments/foregrip_item.tres" id="13_foregrip"]
+[ext_resource type="Resource" path="res://Scene/Items/Attachments/ak_mag_rpk_40.tres" id="14_rpk40"]
+[ext_resource type="Resource" path="res://Scene/Items/Attachments/muzzle_brake_item.tres" id="15_brake"]
+
+[sub_resource type="Resource" id="Resource_bodyarmoropt"]
+script = ExtResource("3_gearopt")
+gear_item = ExtResource("7_bodyarmor")
+
+[sub_resource type="Resource" id="Resource_helmetopt"]
+script = ExtResource("3_gearopt")
+gear_item = ExtResource("8_helmet")
+chance = 0.5
+
+[sub_resource type="Resource" id="Resource_eyewearopt"]
+script = ExtResource("3_gearopt")
+gear_item = ExtResource("9_eyewear")
+chance = 0.3
+
+[sub_resource type="Resource" id="Resource_ak47opt"]
+script = ExtResource("2_weaponopt")
+wieldable = ExtResource("4_wieldable")
+weapon_data = ExtResource("5_weapondata")
+ammo_item = ExtResource("6_ammo")
+attachment_options = Array[ExtResource("9_5q0vt")]([ExtResource("12_suppressor"), ExtResource("15_brake"), ExtResource("13_foregrip"), ExtResource("14_rpk40")])
+
+[resource]
+script = ExtResource("1_loadout")
+weapon_options = Array[ExtResource("2_weaponopt")]([SubResource("Resource_ak47opt")])
+gear_options = Array[ExtResource("3_gearopt")]([SubResource("Resource_bodyarmoropt"), SubResource("Resource_helmetopt"), SubResource("Resource_eyewearopt")])
+pocket_loot_table = ExtResource("10_pocketloot")

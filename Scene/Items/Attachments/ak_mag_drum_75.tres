@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AttachmentItemPD" format=3]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/AttachmentItemPD.gd" id="1_script"]
+[ext_resource type="Resource" uid="uid://hv4kejkdqbr7" path="res://Scene/Items/Bullets/76239/7.62x39mm_Item.tres" id="2_ammo"]
+
+[resource]
+script = ExtResource("1_script")
+attachment_slot = 4
+recoil_multiplier = 0.95
+ads_time_multiplier = 1.4
+magazine_capacity = 75
+magazine_ammo_item = ExtResource("2_ammo")
+compatible_weapons = Array[String](["AK-47"])
+name = "AK 75-rnd Drum (7.62x39)"
+description = "Seventy-five rounds of dead weight. The extra mass steadies the rifle and ruins your handling."
+drop_scene = "res://Scene/Items/Attachments/pickup_attachment.tscn"
+item_size = Vector2(2, 2)

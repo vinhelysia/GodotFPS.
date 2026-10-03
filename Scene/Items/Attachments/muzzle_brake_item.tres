@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AttachmentItemPD" format=3]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/AttachmentItemPD.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+attachment_slot = 1
+recoil_multiplier = 0.8
+loudness_multiplier = 1.2
+compatible_weapons = Array[String](["AK-47"])
+name = "AK Muzzle Brake"
+description = "Vents gas sideways: the rifle barely climbs, and every scav in the block hears you do it."
+drop_scene = "res://Scene/Items/Attachments/pickup_attachment.tscn"
+item_size = Vector2(1, 1)

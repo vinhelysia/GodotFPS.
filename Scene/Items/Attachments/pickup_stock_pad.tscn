@@ -1,0 +1,39 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://dmeh01c5ccjqc" path="res://addons/cogito/CogitoObjects/cogito_object.gd" id="1_cogobj"]
+[ext_resource type="PackedScene" uid="uid://1xq4y42qkcur" path="res://addons/cogito/Components/Interactions/PickupComponent.tscn" id="2_pickup"]
+[ext_resource type="Resource" path="res://Scene/Items/Attachments/stock_pad_item.tres" id="3_item"]
+[ext_resource type="Script" uid="uid://di15gqemrkk0x" path="res://addons/cogito/InventoryPD/CustomResources/InventorySlotPD.gd" id="4_slot"]
+
+[sub_resource type="Resource" id="Resource_slot"]
+resource_local_to_scene = true
+script = ExtResource("4_slot")
+inventory_item = ExtResource("3_item")
+
+[sub_resource type="BoxMesh" id="BoxMesh_body"]
+size = Vector3(0.04, 0.14, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rubber"]
+albedo_color = Color(0.15, 0.12, 0.1, 1)
+roughness = 0.9
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_col"]
+size = Vector3(0.06, 0.16, 0.12)
+
+[node name="Pickup_StockPad" type="RigidBody3D"]
+collision_layer = 3
+mass = 0.3
+script = ExtResource("1_cogobj")
+cogito_name = "Recoil Pad"
+display_name = "Recoil Pad"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_col")
+
+[node name="PickupComponent" parent="." instance=ExtResource("2_pickup")]
+slot_data = SubResource("Resource_slot")
+display_item_name = true
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_body")
+surface_material_override/0 = SubResource("StandardMaterial3D_rubber")

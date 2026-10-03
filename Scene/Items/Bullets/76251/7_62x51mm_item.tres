@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AmmoItemPD" format=3 uid="uid://p4tk4735s2bo"]
+
+[ext_resource type="Script" uid="uid://6vgnb68cqtwh" path="res://addons/cogito/InventoryPD/CustomResources/AmmoItemPD.gd" id="1_i3pv3"]
+[ext_resource type="Texture2D" uid="uid://bbpgq7jhre8l6" path="res://Scene/Items/Bullets/76251/7.62x51_Item.png" id="1_pfrcw"]
+
+[resource]
+script = ExtResource("1_i3pv3")
+name = "7.62x51mm"
+description = "Full-power rifle cartridge. Designed for maximum kinetic energy transfer and deep penetration. These heavy rounds offer superior damage and structural penetration compared to intermediate cartridges."
+icon = ExtResource("1_pfrcw")
+slot_background_preset = 1
+is_stackable = true
+stack_size = 50
+drop_scene = "uid://u7tvrbwfpvb2"
+metadata/_custom_type_script = "uid://6vgnb68cqtwh"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CogitoInventory" format=3 uid="uid://c4esrpyodtdq3"]
+
+[ext_resource type="Script" uid="uid://btnha2whsheir" path="res://addons/cogito/InventoryPD/cogito_inventory.gd" id="1_inv"]
+[ext_resource type="Script" uid="uid://di15gqemrkk0x" path="res://addons/cogito/InventoryPD/CustomResources/InventorySlotPD.gd" id="2_slot"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_inv")
+grid = true
+inventory_size = Vector2i(4, 2)

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AmmoItemPD" format=3 uid="uid://hv4kejkdqbr7"]
+
+[ext_resource type="Texture2D" uid="uid://bikkon4fayr1g" path="res://Scene/Items/Bullets/76239/7.62x39mm_Item.png" id="1_5hj6e"]
+[ext_resource type="Script" uid="uid://6vgnb68cqtwh" path="res://addons/cogito/InventoryPD/CustomResources/AmmoItemPD.gd" id="1_wvllo"]
+
+[resource]
+script = ExtResource("1_wvllo")
+name = "7.62x39mm"
+description = "A widely used intermediate rifle cartridge known for solid stopping power and dependable performance at short to medium range"
+icon = ExtResource("1_5hj6e")
+slot_background_preset = 1
+is_stackable = true
+stack_size = 70
+drop_scene = "uid://bdx62tdh4qp0"
+metadata/_custom_type_script = "uid://6vgnb68cqtwh"

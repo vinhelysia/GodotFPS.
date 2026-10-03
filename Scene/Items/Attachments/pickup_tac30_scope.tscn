@@ -1,0 +1,43 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://dmeh01c5ccjqc" path="res://addons/cogito/CogitoObjects/cogito_object.gd" id="1_cogobj"]
+[ext_resource type="PackedScene" uid="uid://1xq4y42qkcur" path="res://addons/cogito/Components/Interactions/PickupComponent.tscn" id="2_pickup"]
+[ext_resource type="Resource" path="res://Scene/Items/Attachments/tac30_scope_item.tres" id="3_item"]
+[ext_resource type="Script" uid="uid://di15gqemrkk0x" path="res://addons/cogito/InventoryPD/CustomResources/InventorySlotPD.gd" id="4_slot"]
+
+[sub_resource type="Resource" id="Resource_slot"]
+resource_local_to_scene = true
+script = ExtResource("4_slot")
+inventory_item = ExtResource("3_item")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_body"]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 0.25
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dark"]
+albedo_color = Color(0.1, 0.1, 0.12, 1)
+metallic = 0.4
+roughness = 0.5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_col"]
+size = Vector3(0.28, 0.09, 0.09)
+
+[node name="Pickup_TAC30Scope" type="RigidBody3D"]
+collision_layer = 3
+mass = 0.6
+script = ExtResource("1_cogobj")
+cogito_name = "TAC30 Riflescope"
+display_name = "TAC30 Riflescope"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_col")
+
+[node name="PickupComponent" parent="." instance=ExtResource("2_pickup")]
+slot_data = SubResource("Resource_slot")
+display_item_name = true
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0, -1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_body")
+surface_material_override/0 = SubResource("StandardMaterial3D_dark")

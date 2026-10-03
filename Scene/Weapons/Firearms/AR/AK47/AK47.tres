@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AssaultRifle_Resource" format=3 uid="uid://dr3aharu3mmkm"]
+
+[ext_resource type="PackedScene" uid="uid://bc8jxhqittw87" path="res://Scene/Weapons/ProjectilesAndShells/7.62x39/7.62x39 projectile.tscn" id="1_amxwy"]
+[ext_resource type="Script" uid="uid://n2v7dh3aksy2" path="res://Scripts/Weapons/Types/AssaultRifle_Resource.gd" id="1_suclb"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_suclb")
+fireRate = 600.0
+weaponName = "AK 47"
+recoilVertical = 0.07
+recoilHorizontal = 0.06
+recoilRecovery = 6.0
+Type = 2
+bulletProjectileToLoad = ExtResource("1_amxwy")
+weaponVelocity = 716
+metadata/_custom_type_script = "uid://n2v7dh3aksy2"

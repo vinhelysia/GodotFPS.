@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AttachmentItemPD" format=3]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/AttachmentItemPD.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+attachment_slot = 1
+recoil_multiplier = 0.92
+loudness_multiplier = 0.3
+suppresses_muzzle_flash = true
+compatible_weapons = Array[String](["M700"])
+name = "M700 Suppressor (7.62x51)"
+description = "Screw-on can for the M700. A subsonic hit from a hedgerow and nobody knows which hedgerow."
+drop_scene = "res://Scene/Items/Attachments/pickup_attachment.tscn"
+item_size = Vector2(2, 1)

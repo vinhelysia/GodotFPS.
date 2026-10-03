@@ -1,0 +1,78 @@
+[gd_resource type="BehaviorTree" format=3 uid="uid://dootm3wprrons"]
+
+[ext_resource type="Script" uid="uid://cn0aaugrfw2a4" path="res://Scripts/Enemies/BT/Tasks/btc_alert_at_least.gd" id="1_yflyk"]
+[ext_resource type="Script" uid="uid://cba8683mghvbd" path="res://Scripts/Enemies/BT/Tasks/bt_face_target.gd" id="2_k5wgg"]
+[ext_resource type="Script" uid="uid://hdwhniau8cbq" path="res://Scripts/Enemies/BT/Tasks/bt_shoot.gd" id="4_id76j"]
+[ext_resource type="Script" uid="uid://c0wr6f8loechx" path="res://Scripts/Enemies/BT/Tasks/bt_reload.gd" id="5_33d6f"]
+[ext_resource type="Script" uid="uid://jw0bvu47bdch" path="res://Scripts/Enemies/BT/Tasks/bt_move_to.gd" id="6_c8q6g"]
+[ext_resource type="Script" uid="uid://ck73n87sm7ua2" path="res://Scripts/Enemies/BT/Tasks/btc_has_last_known.gd" id="7_daogp"]
+[ext_resource type="Script" uid="uid://ibaffq1fj70y" path="res://Scripts/Enemies/BT/Tasks/bt_look_around.gd" id="8_wourw"]
+[ext_resource type="Script" uid="uid://dy4dufpwoytd7" path="res://Scripts/Enemies/BT/Tasks/bt_patrol.gd" id="9_iv4tx"]
+[ext_resource type="Script" uid="uid://dw74x0arhesi1" path="res://Scripts/Enemies/BT/Tasks/bt_strafe.gd" id="10_strafe"]
+[ext_resource type="Script" uid="uid://x1uxpt210y4y" path="res://Scripts/Enemies/BT/Tasks/btc_should_strafe.gd" id="11_shouldstrafe"]
+
+[sub_resource type="BTCondition" id="BTCondition_yflyk"]
+custom_name = "IsCombatAlert"
+script = ExtResource("1_yflyk")
+
+[sub_resource type="BTAction" id="BTAction_k5wgg"]
+custom_name = "FaceTarget"
+script = ExtResource("2_k5wgg")
+
+[sub_resource type="BTAction" id="BTAction_33d6f"]
+custom_name = "ReloadWeapon"
+script = ExtResource("5_33d6f")
+
+[sub_resource type="BTCondition" id="BTCondition_shouldstrafe"]
+custom_name = "ShouldStrafe"
+script = ExtResource("11_shouldstrafe")
+
+[sub_resource type="BTAction" id="BTAction_strafe"]
+custom_name = "Strafe"
+script = ExtResource("10_strafe")
+
+[sub_resource type="BTDynamicSequence" id="BTSequence_strafe"]
+custom_name = "StrafeSequence"
+children = [SubResource("BTCondition_shouldstrafe"), SubResource("BTAction_strafe")]
+
+[sub_resource type="BTAction" id="BTAction_ethxh"]
+custom_name = "ShootTarget"
+script = ExtResource("4_id76j")
+
+[sub_resource type="BTAction" id="BTAction_c8q6g"]
+custom_name = "MoveToTarget"
+script = ExtResource("6_c8q6g")
+
+[sub_resource type="BTDynamicSelector" id="BTSelector_daogp"]
+custom_name = "CombatActions"
+children = [SubResource("BTAction_33d6f"), SubResource("BTSequence_strafe"), SubResource("BTAction_ethxh"), SubResource("BTAction_c8q6g")]
+
+[sub_resource type="BTDynamicSequence" id="BTSequence_wourw"]
+custom_name = "CombatSequence"
+children = [SubResource("BTCondition_yflyk"), SubResource("BTAction_k5wgg"), SubResource("BTSelector_daogp")]
+
+[sub_resource type="BTCondition" id="BTCondition_iv4tx"]
+custom_name = "HasInvestigationTarget"
+script = ExtResource("7_daogp")
+
+[sub_resource type="BTAction" id="BTAction_03rya"]
+custom_name = "MoveToInvestigation"
+script = ExtResource("6_c8q6g")
+
+[sub_resource type="BTAction" id="BTAction_y3mpp"]
+custom_name = "LookAround"
+script = ExtResource("8_wourw")
+
+[sub_resource type="BTDynamicSequence" id="BTSequence_go0y3"]
+custom_name = "InvestigateSequence"
+children = [SubResource("BTCondition_iv4tx"), SubResource("BTAction_03rya"), SubResource("BTAction_y3mpp")]
+
+[sub_resource type="BTAction" id="BTAction_tyl7d"]
+custom_name = "PatrolPath"
+script = ExtResource("9_iv4tx")
+
+[sub_resource type="BTDynamicSelector" id="BTSelector_dfbx2"]
+children = [SubResource("BTSequence_wourw"), SubResource("BTSequence_go0y3"), SubResource("BTAction_tyl7d")]
+
+[resource]
+root_task = SubResource("BTSelector_dfbx2")

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AttachmentItemPD" format=3]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/AttachmentItemPD.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+attachment_slot = 2
+recoil_multiplier = 0.85
+name = "Foregrip"
+description = "Vertical foregrip. Noticeably tames recoil."
+drop_scene = "res://Scene/Items/Attachments/pickup_foregrip.tscn"
+item_size = Vector2(1, 1)

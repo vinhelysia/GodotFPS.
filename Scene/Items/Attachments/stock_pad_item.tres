@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AttachmentItemPD" format=3]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/AttachmentItemPD.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+attachment_slot = 3
+recoil_multiplier = 0.9
+ads_time_multiplier = 0.9
+name = "Recoil Pad"
+description = "Stock recoil pad. Softer shoulder, faster sight picture."
+drop_scene = "res://Scene/Items/Attachments/pickup_stock_pad.tscn"
+item_size = Vector2(1, 1)

@@ -1,0 +1,200 @@
+[gd_scene format=3 uid="uid://bc4ey2218mco8"]
+
+[ext_resource type="Texture2D" uid="uid://bc536g8kahgmu" path="res://addons/kenney_prototype_textures/light/texture_04.png" id="1_iiwd3"]
+[ext_resource type="Texture2D" uid="uid://bb2xvpi5xga8y" path="res://addons/kenney_prototype_textures/light/texture_01.png" id="2_oqwwa"]
+[ext_resource type="AudioStream" uid="uid://dje0ryitb2437" path="res://Assets/SFX/SlideDoor/DoorSlideOpen.ogg" id="3_fatix"]
+[ext_resource type="Script" uid="uid://cismjpvxmsbf2" path="res://addons/cogito/CogitoObjects/cogito_door.gd" id="3_lgqu4"]
+[ext_resource type="PackedScene" uid="uid://l61jtpfxu5x5" path="res://addons/cogito/Components/Interactions/BasicInteraction.tscn" id="4_lgqu4"]
+[ext_resource type="AudioStream" uid="uid://de4nh86bta3vc" path="res://Assets/SFX/SlideDoor/DoorSlideClose.ogg" id="4_qjye1"]
+[ext_resource type="Script" uid="uid://dohpdn3hnc12v" path="res://addons/cogito/CogitoObjects/cogito_button.gd" id="6_62jy6"]
+[ext_resource type="Texture2D" uid="uid://dh6gd1mh35b0o" path="res://addons/kenney_prototype_textures/light/texture_08.png" id="7_7lbyg"]
+[ext_resource type="PackedScene" uid="uid://c2r7ib4rrrdfj" path="res://addons/cogito/DemoScenes/DemoPrefabs/ksi_table_long.tscn" id="12_sp2ue"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kl144"]
+albedo_color = Color(0.52, 0.51, 0.49, 1)
+albedo_texture = ExtResource("2_oqwwa")
+uv1_scale = Vector3(5, 5, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kl144"]
+size = Vector3(1, 1, 0.12)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7lbyg"]
+albedo_color = Color(0.3, 0.28, 0.26, 1)
+albedo_texture = ExtResource("1_iiwd3")
+
+[sub_resource type="BoxMesh" id="BoxMesh_u16t1"]
+material = SubResource("StandardMaterial3D_7lbyg")
+size = Vector3(1, 1, 0.12)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_62jy6"]
+albedo_color = Color(0.7, 0.65, 0.3, 1)
+albedo_texture = ExtResource("7_7lbyg")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7lbyg"]
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.25
+radial_segments = 360
+rings = 0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_u16t1"]
+height = 0.25
+radius = 0.05
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u16t1"]
+albedo_color = Color(0.34, 0.32, 0.29, 1)
+albedo_texture = ExtResource("7_7lbyg")
+uv1_scale = Vector3(10, 10, 10)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_62jy6"]
+material = SubResource("StandardMaterial3D_u16t1")
+size = Vector2(7.2, 9.8)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fatix"]
+points = PackedVector3Array(3.6, 0, 4.9, -3.6, 0, 4.9, 3.6, 0, -4.9, -3.6, 0, -4.9)
+
+[sub_resource type="Animation" id="Animation_iiwd3"]
+resource_name = "Close"
+length = 0.5
+
+[sub_resource type="Animation" id="Animation_7lbyg"]
+resource_name = "InsidePressed"
+length = 0.5
+
+[sub_resource type="Animation" id="Animation_oqwwa"]
+resource_name = "Open"
+length = 0.5
+
+[sub_resource type="Animation" id="Animation_u16t1"]
+resource_name = "InsidePressed"
+length = 0.5
+
+[sub_resource type="Animation" id="Animation_lgqu4"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kl144"]
+_data = {
+&"Close": SubResource("Animation_iiwd3"),
+&"InsidePressed": SubResource("Animation_7lbyg"),
+&"Open": SubResource("Animation_oqwwa"),
+&"OutsidePressed": SubResource("Animation_u16t1"),
+&"RESET": SubResource("Animation_lgqu4")
+}
+
+[node name="House1" type="Node3D" unique_id=1040486314]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
+
+[node name="Label3D" type="Label3D" parent="." unique_id=945183535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0036806762, 1.2879541, 1.6129222)
+pixel_size = 0.008
+text = "Amoury
+"
+
+[node name="Geometry" type="Node3D" parent="." unique_id=550520277]
+
+[node name="Wall" type="CSGBox3D" parent="Geometry" unique_id=463404130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 1.5)
+use_collision = true
+size = Vector3(3, 2, 0.2)
+material = SubResource("StandardMaterial3D_kl144")
+
+[node name="Wall5" type="CSGBox3D" parent="Geometry" unique_id=1409564064]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.6, 1, -3.4)
+use_collision = true
+size = Vector3(10, 2, 0.2)
+material = SubResource("StandardMaterial3D_kl144")
+
+[node name="Wall6" type="CSGBox3D" parent="Geometry" unique_id=1203833830]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.6, 1, -3.4)
+use_collision = true
+size = Vector3(10, 2, 0.2)
+material = SubResource("StandardMaterial3D_kl144")
+
+[node name="Wall2" type="CSGBox3D" parent="Geometry" unique_id=1417366997]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 1.5)
+use_collision = true
+size = Vector3(3, 2, 0.2)
+material = SubResource("StandardMaterial3D_kl144")
+
+[node name="Wall3" type="CSGBox3D" parent="Geometry" unique_id=2123880316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 1.5)
+use_collision = true
+size = Vector3(1, 1, 0.2)
+material = SubResource("StandardMaterial3D_kl144")
+
+[node name="Wall4" type="CSGBox3D" parent="Geometry" unique_id=1277412998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -8.3)
+use_collision = true
+size = Vector3(7, 2, 0.2)
+material = SubResource("StandardMaterial3D_kl144")
+
+[node name="CogitoDoor" type="AnimatableBody3D" parent="Geometry" unique_id=1221446129]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 1.5)
+collision_layer = 7
+collision_mask = 3
+script = ExtResource("3_lgqu4")
+prompt_pos_mode = 2
+open_sound = ExtResource("3_fatix")
+close_sound = ExtResource("4_qjye1")
+ignore_interaction_raycast = true
+door_type = 1
+closed_position = Vector3(0, 0.5, 1.5)
+open_position = Vector3(0, 1.45, 1.5)
+door_speed = 0.5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Geometry/CogitoDoor" unique_id=1709512234]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.011289597)
+shape = SubResource("BoxShape3D_kl144")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Geometry/CogitoDoor" unique_id=1386068697]
+
+[node name="BasicInteraction" parent="Geometry/CogitoDoor" unique_id=578366840 instance=ExtResource("4_lgqu4")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Geometry/CogitoDoor" unique_id=1252600069]
+mesh = SubResource("BoxMesh_u16t1")
+
+[node name="ButtonBox" type="CSGBox3D" parent="Geometry" unique_id=627765345]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.67658776, 0.5538327, 1.4979376)
+layers = 2
+size = Vector3(0.2, 0.2, 0.23203126)
+material = SubResource("StandardMaterial3D_62jy6")
+
+[node name="CogitoButton" type="StaticBody3D" parent="Geometry/ButtonBox" unique_id=7766284]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00041222572, 0.00016731024, 6.246567e-05)
+collision_layer = 3
+script = ExtResource("6_62jy6")
+press_cooldown_time = 0.5
+objects_call_interact = Array[NodePath]([NodePath("../../CogitoDoor")])
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Geometry/ButtonBox/CogitoButton" unique_id=2077522958]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_7lbyg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Geometry/ButtonBox/CogitoButton" unique_id=1101609800]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+shape = SubResource("CylinderShape3D_u16t1")
+
+[node name="BasicInteraction" parent="Geometry/ButtonBox/CogitoButton" unique_id=883799988 instance=ExtResource("4_lgqu4")]
+
+[node name="Floor" type="StaticBody3D" parent="Geometry" unique_id=1651890978]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.07072144)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Geometry/Floor" unique_id=455561955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.503803)
+mesh = SubResource("PlaneMesh_62jy6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Geometry/Floor" unique_id=1574949744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.503803)
+shape = SubResource("ConvexPolygonShape3D_fatix")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=526775705]
+libraries/ = SubResource("AnimationLibrary_kl144")
+
+[node name="KSI_table_long" parent="." unique_id=192918298 instance=ExtResource("12_sp2ue")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3.4967785, 2.3841858e-08, 1.3982166)
+
+[node name="KSI_table_long2" parent="." unique_id=2027607774 instance=ExtResource("12_sp2ue")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3.4967785, 2.3841858e-08, -1.5011262)
+
+[node name="KSI_table_long3" parent="." unique_id=133783606 instance=ExtResource("12_sp2ue")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3.4967785, -4.7683717e-08, -0.06395326)

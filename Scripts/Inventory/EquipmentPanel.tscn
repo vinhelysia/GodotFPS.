@@ -1,0 +1,122 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/equipment_panel.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://Scripts/Inventory/EquipmentSlotUI.tscn" id="2_slot"]
+
+[node name="EquipmentPanel" type="HBoxContainer"]
+script = ExtResource("1_script")
+
+[node name="LeftPanel" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="LeftMargin" type="MarginContainer" parent="LeftPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="LeftContentVBox" type="VBoxContainer" parent="LeftPanel/LeftMargin"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="PanelHeaderLabel" type="Label" parent="LeftPanel/LeftMargin/LeftContentVBox"]
+visible = false
+layout_mode = 2
+text = "HEADER"
+
+[node name="EquipmentVBox" type="VBoxContainer" parent="LeftPanel/LeftMargin/LeftContentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Row1" type="HBoxContainer" parent="LeftPanel/LeftMargin/LeftContentVBox/EquipmentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Slot_Earpiece" parent="LeftPanel/LeftMargin/LeftContentVBox/EquipmentVBox/Row1" instance=ExtResource("2_slot")]
+layout_mode = 2
+slot_id = &"earpiece"
+slot_label = "Earpiece"
+
+[node name="Slot_Headwear" parent="LeftPanel/LeftMargin/LeftContentVBox/EquipmentVBox/Row1" instance=ExtResource("2_slot")]
+layout_mode = 2
+slot_id = &"helmet"
+slot_label = "Headwear"
+
+[node name="Slot_FaceCover" parent="LeftPanel/LeftMargin/LeftContentVBox/EquipmentVBox/Row1" instance=ExtResource("2_slot")]
+layout_mode = 2
+slot_id = &"face_cover"
+slot_label = "Face Cover"
+
+[node name="Row2" type="HBoxContainer" parent="LeftPanel/LeftMargin/LeftContentVBox/EquipmentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Slot_BodyArmor" parent="LeftPanel/LeftMargin/LeftContentVBox/EquipmentVBox/Row2" instance=ExtResource("2_slot")]
+layout_mode = 2
+slot_id = &"body_armor"
+slot_label = "Body Armor"
+
+[node name="Slot_Eyewear" parent="LeftPanel/LeftMargin/LeftContentVBox/EquipmentVBox/Row2" instance=ExtResource("2_slot")]
+layout_mode = 2
+slot_id = &"eyewear"
+slot_label = "Eyewear"
+
+[node name="Row3" type="HBoxContainer" parent="LeftPanel/LeftMargin/LeftContentVBox/EquipmentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Slot_OnSling" parent="LeftPanel/LeftMargin/LeftContentVBox/EquipmentVBox/Row3" instance=ExtResource("2_slot")]
+layout_mode = 2
+slot_id = &"primary_1"
+slot_shape = 1
+slot_label = "On Sling"
+hotkey_text = "1"
+
+[node name="Slot_Holster" parent="LeftPanel/LeftMargin/LeftContentVBox/EquipmentVBox/Row3" instance=ExtResource("2_slot")]
+layout_mode = 2
+slot_id = &"holster"
+slot_label = "Holster"
+hotkey_text = "3"
+
+[node name="Row4" type="HBoxContainer" parent="LeftPanel/LeftMargin/LeftContentVBox/EquipmentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Slot_OnBack" parent="LeftPanel/LeftMargin/LeftContentVBox/EquipmentVBox/Row4" instance=ExtResource("2_slot")]
+layout_mode = 2
+slot_id = &"primary_2"
+slot_shape = 1
+slot_label = "On Back"
+hotkey_text = "2"
+
+[node name="Slot_Scabbard" parent="LeftPanel/LeftMargin/LeftContentVBox/EquipmentVBox/Row4" instance=ExtResource("2_slot")]
+layout_mode = 2
+slot_id = &"melee"
+slot_label = "Scabbard"
+hotkey_text = "4"
+
+[node name="Spacer" type="Control" parent="."]
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+
+[node name="RightPanel" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="RightMargin" type="MarginContainer" parent="RightPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="RightVBox" type="VBoxContainer" parent="RightPanel/RightMargin"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="PocketsHeader" type="Label" parent="RightPanel/RightMargin/RightVBox"]
+layout_mode = 2
+text = "POCKETS"
+
+[node name="PocketsSlot" type="VBoxContainer" parent="RightPanel/RightMargin/RightVBox"]
+layout_mode = 2

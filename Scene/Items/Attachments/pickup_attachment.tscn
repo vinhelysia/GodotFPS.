@@ -1,0 +1,25 @@
+[gd_scene format=3]
+
+; Generic world pickup for any AttachmentItemPD. inventory_interface._drop_item()
+; assigns the dropped slot_data onto the PickupComponent at runtime, which sets
+; the display name from the item — so every attachment can share this one scene
+; as its drop_scene. Add a mesh per-item only if you want a bespoke world model.
+
+[ext_resource type="Script" uid="uid://dmeh01c5ccjqc" path="res://addons/cogito/CogitoObjects/cogito_object.gd" id="1_cogobj"]
+[ext_resource type="PackedScene" uid="uid://1xq4y42qkcur" path="res://addons/cogito/Components/Interactions/PickupComponent.tscn" id="2_pickup"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_col"]
+size = Vector3(0.18, 0.1, 0.1)
+
+[node name="Pickup_Attachment" type="RigidBody3D"]
+collision_layer = 3
+mass = 0.4
+script = ExtResource("1_cogobj")
+cogito_name = "Attachment"
+display_name = "Attachment"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_col")
+
+[node name="PickupComponent" parent="." instance=ExtResource("2_pickup")]
+display_item_name = true

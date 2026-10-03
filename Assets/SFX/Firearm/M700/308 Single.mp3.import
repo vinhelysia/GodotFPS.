@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cyxri4aax672l"
+path="res://.godot/imported/308 Single.mp3-3db1d860a1b87cb834ea3afe9b3bdb58.mp3str"
+
+[deps]
+
+source_file="res://Assets/SFX/Firearm/M700/308 Single.mp3"
+dest_files=["res://.godot/imported/308 Single.mp3-3db1d860a1b87cb834ea3afe9b3bdb58.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

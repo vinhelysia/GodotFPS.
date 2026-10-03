@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PocketInventory" format=3]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/pocket_inventory.gd" id="1_script"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_script")
+grid = true
+pocket_size = Vector2i(2, 2)
+inventory_size = Vector2i(4, 2)
+inventory_slots = [null, null, null, null, null, null, null, null]

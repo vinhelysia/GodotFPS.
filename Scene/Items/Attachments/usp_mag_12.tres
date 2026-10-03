@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AttachmentItemPD" format=3]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/AttachmentItemPD.gd" id="1_script"]
+[ext_resource type="Resource" uid="uid://c4pa8ralus4pb" path="res://Scene/Items/Bullets/45. ACP/45.ACP_Item.tres" id="2_ammo"]
+
+[resource]
+script = ExtResource("1_script")
+attachment_slot = 4
+magazine_capacity = 12
+magazine_ammo_item = ExtResource("2_ammo")
+compatible_weapons = Array[String](["USP .45 ACP"])
+name = "USP 12-rnd Mag (.45 ACP)"
+description = "Factory USP magazine. Twelve rounds of .45."
+drop_scene = "res://Scene/Items/Attachments/pickup_attachment.tscn"
+item_size = Vector2(1, 1)

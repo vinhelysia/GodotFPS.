@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AttachmentItemPD" format=3]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/AttachmentItemPD.gd" id="1_script"]
+[ext_resource type="Resource" uid="uid://p4tk4735s2bo" path="res://Scene/Items/Bullets/76251/7_62x51mm_item.tres" id="2_ammo"]
+
+[resource]
+script = ExtResource("1_script")
+attachment_slot = 4
+magazine_capacity = 5
+magazine_ammo_item = ExtResource("2_ammo")
+compatible_weapons = Array[String](["M700"])
+name = "M700 Internal Box (7.62x51)"
+description = "The rifle's internal five-round box. Pull it and you're feeding the chamber one round at a time."
+drop_scene = "res://Scene/Items/Attachments/pickup_attachment.tscn"
+item_size = Vector2(1, 1)

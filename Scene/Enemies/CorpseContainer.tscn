@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Enemies/corpse_container.gd" id="1_corpse"]
+[ext_resource type="PackedScene" uid="uid://l61jtpfxu5x5" path="res://addons/cogito/Components/Interactions/BasicInteraction.tscn" id="2_interact"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_head"]
+radius = 0.25
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_torso"]
+radius = 0.45
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_pelvis"]
+radius = 0.4
+
+[node name="CorpseContainer" type="StaticBody3D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_corpse")
+display_name = "Dead Body"
+text_when_closed = "Loot"
+text_when_open = "Loot"
+
+[node name="BasicInteraction" parent="." instance=ExtResource("2_interact")]
+
+[node name="HeadShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+shape = SubResource("SphereShape3D_head")
+
+[node name="TorsoShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0, 0)
+shape = SubResource("SphereShape3D_torso")
+
+[node name="PelvisShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("SphereShape3D_pelvis")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

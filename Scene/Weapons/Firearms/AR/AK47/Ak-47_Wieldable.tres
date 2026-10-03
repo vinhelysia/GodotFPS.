@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="WieldableItemPD" format=3 uid="uid://yv04ygxufxb1"]
+
+[ext_resource type="Script" uid="uid://bkxgkf3pj8kb8" path="res://addons/cogito/InventoryPD/CustomResources/WieldableItemPD.gd" id="1_33dit"]
+[ext_resource type="Texture2D" uid="uid://dxujwswxgkals" path="res://Scene/Weapons/Firearms/AR/AK47/AK47.png" id="1_ik1uf"]
+[ext_resource type="Texture2D" uid="uid://c1blj5u0t6uq4" path="res://Scene/Weapons/Firearms/AR/AK47/ak47_qucik.png" id="2_uqp7b"]
+[ext_resource type="PackedScene" uid="uid://daoa0ue5mkbbs" path="res://Scene/Weapons/Firearms/AR/AK47/AK47.tscn" id="3_0md2p"]
+[ext_resource type="PackedScene" uid="uid://c2o5c3td65lqn" path="res://Scene/Weapons/Firearms/AR/AK47/AK47_Drop.tscn" id="99_worldmodel"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_33dit")
+wieldable_scene = ExtResource("3_0md2p")
+quickslot_icon = ExtResource("2_uqp7b")
+charge_max = 31.0
+ammo_item_name = "7.62x39mm"
+charge_current = 31.0
+wieldable_range = 1000.0
+wieldable_damage = 30.0
+world_model = ExtResource("99_worldmodel")
+attachments = {
+4: "res://Scene/Items/Attachments/ak_mag_30.tres"
+}
+name = "AK-47"
+description = "Scavenged from an abandoned military cache, this rifle has seen better days, but it still spits lead without hesitation. It's loud, it's messy, and it's exactly what you need to survive the next wave. Just watch your ammo counter—7.62 rounds go fast when you're holding down the trigger"
+icon = ExtResource("1_ik1uf")
+slot_background_preset = 1
+drop_scene = "uid://cpoyxgguqsn3m"
+item_size = Vector2(4, 2)
+can_auto_slot = true
+metadata/_custom_type_script = "uid://bkxgkf3pj8kb8"

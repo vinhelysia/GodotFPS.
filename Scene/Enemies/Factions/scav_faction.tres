@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Faction" format=3 uid="uid://dr26ug8vis6t1"]
+
+[ext_resource type="Script" uid="uid://dj8h1t5mpncpd" path="res://Scripts/Enemies/Faction.gd" id="1_faction"]
+[ext_resource type="Script" uid="uid://824lywrjvabs" path="res://Scripts/Enemies/FactionRelation.gd" id="1_ylh07"]
+
+[resource]
+script = ExtResource("1_faction")
+faction_name = "Scav"
+relation_overrides = Array[ExtResource("1_ylh07")]([null])

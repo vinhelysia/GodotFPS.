@@ -1,0 +1,146 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/attachment_panel.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://Scripts/Inventory/EquipmentSlotUI.tscn" id="2_slot"]
+
+[node name="AttachmentPanel" type="PanelContainer"]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -420.0
+offset_top = -280.0
+offset_right = -60.0
+offset_bottom = 280.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBox" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HeaderRow" type="HBoxContainer" parent="Margin/VBox"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Margin/VBox/HeaderRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "MODDING"
+
+[node name="CloseButton" type="Button" parent="Margin/VBox/HeaderRow"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+text = "X"
+
+[node name="WarningLabel" type="Label" parent="Margin/VBox"]
+visible = false
+layout_mode = 2
+text = "Holster the weapon to modify it."
+
+[node name="SlotsGrid" type="GridContainer" parent="Margin/VBox"]
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+columns = 3
+
+[node name="Slot_Optic" parent="Margin/VBox/SlotsGrid" instance=ExtResource("2_slot")]
+layout_mode = 2
+slot_id = &"optic"
+slot_label = "Optic"
+
+[node name="Slot_Muzzle" parent="Margin/VBox/SlotsGrid" instance=ExtResource("2_slot")]
+layout_mode = 2
+slot_id = &"muzzle"
+slot_label = "Muzzle"
+
+[node name="Slot_Magazine" parent="Margin/VBox/SlotsGrid" instance=ExtResource("2_slot")]
+layout_mode = 2
+slot_id = &"magazine"
+slot_label = "Magazine"
+
+[node name="Slot_Grip" parent="Margin/VBox/SlotsGrid" instance=ExtResource("2_slot")]
+layout_mode = 2
+slot_id = &"grip"
+slot_label = "Grip"
+
+[node name="Slot_Stock" parent="Margin/VBox/SlotsGrid" instance=ExtResource("2_slot")]
+layout_mode = 2
+slot_id = &"stock"
+slot_label = "Stock"
+
+[node name="Separator" type="HSeparator" parent="Margin/VBox"]
+layout_mode = 2
+
+[node name="StatsHeader" type="Label" parent="Margin/VBox"]
+layout_mode = 2
+text = "STATS"
+
+[node name="StatsGrid" type="GridContainer" parent="Margin/VBox"]
+layout_mode = 2
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 4
+columns = 2
+
+[node name="Label_Damage" type="Label" parent="Margin/VBox/StatsGrid"]
+layout_mode = 2
+text = "Damage"
+
+[node name="Value_Damage" type="Label" parent="Margin/VBox/StatsGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-"
+
+[node name="Label_Range" type="Label" parent="Margin/VBox/StatsGrid"]
+layout_mode = 2
+text = "Range"
+
+[node name="Value_Range" type="Label" parent="Margin/VBox/StatsGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-"
+
+[node name="Label_Capacity" type="Label" parent="Margin/VBox/StatsGrid"]
+layout_mode = 2
+text = "Capacity"
+
+[node name="Value_Capacity" type="Label" parent="Margin/VBox/StatsGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-"
+
+[node name="Label_Recoil" type="Label" parent="Margin/VBox/StatsGrid"]
+layout_mode = 2
+text = "Recoil"
+
+[node name="Value_Recoil" type="Label" parent="Margin/VBox/StatsGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-"
+
+[node name="Label_Ads" type="Label" parent="Margin/VBox/StatsGrid"]
+layout_mode = 2
+text = "ADS time"
+
+[node name="Value_Ads" type="Label" parent="Margin/VBox/StatsGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-"
+
+[node name="Label_Loudness" type="Label" parent="Margin/VBox/StatsGrid"]
+layout_mode = 2
+text = "Loudness"
+
+[node name="Value_Loudness" type="Label" parent="Margin/VBox/StatsGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-"

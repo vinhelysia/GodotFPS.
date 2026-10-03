@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="WieldableItemPD" format=3 uid="uid://dyplgl2lq4m3i"]
+
+[ext_resource type="Texture2D" uid="uid://b4juxq6votn6o" path="res://Scene/Weapons/Firearms/Bolt-action/M700/M700.png" id="1_6ywfr"]
+[ext_resource type="Texture2D" uid="uid://davc2sbh1w433" path="res://Scene/Weapons/Firearms/Bolt-action/M700/m700quick.png" id="2_droao"]
+[ext_resource type="Script" uid="uid://bkxgkf3pj8kb8" path="res://addons/cogito/InventoryPD/CustomResources/WieldableItemPD.gd" id="2_hisdn"]
+[ext_resource type="PackedScene" uid="uid://dmdmar5r18j30" path="res://Scene/Weapons/Firearms/Bolt-action/M700/m700.tscn" id="3_6ywfr"]
+[ext_resource type="PackedScene" uid="uid://38efjuqypg1q" path="res://Scene/Weapons/Firearms/Bolt-action/M700/M700_Drop.tscn" id="99_worldmodel"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("2_hisdn")
+wieldable_scene = ExtResource("3_6ywfr")
+world_model = ExtResource("99_worldmodel")
+wieldable_data_icon = ExtResource("2_droao")
+quickslot_icon = ExtResource("2_droao")
+charge_max = 6.0
+ammo_item_name = "7.62x51mm"
+charge_current = 6.0
+wieldable_range = 1000.0
+wieldable_damage = 80.0
+attachments = {
+0: "res://Scene/Items/Attachments/tac30_scope_item.tres",
+4: "res://Scene/Items/Attachments/m700_internal_5.tres"
+}
+name = "M700"
+description = "Old reliable. There aren't many moving parts to break on an M700, making it the perfect companion for the lonely marksman. It’s heavy, it’s loud, and it hits like a freight train."
+icon = ExtResource("1_6ywfr")
+slot_background_preset = 1
+drop_scene = "uid://bebw6gvua3ljl"
+item_size = Vector2(5, 1)
+can_auto_slot = true
+metadata/_custom_type_script = "uid://bkxgkf3pj8kb8"

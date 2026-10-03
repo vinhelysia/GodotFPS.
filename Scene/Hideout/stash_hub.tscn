@@ -1,0 +1,192 @@
+[gd_scene format=3 uid="uid://kix4qjkyem53"]
+
+[ext_resource type="Script" uid="uid://cdpndmag5ehj6" path="res://Scripts/Raid/stash_hub_scene.gd" id="1_scene"]
+[ext_resource type="PackedScene" uid="uid://kicjwmh02uwf" path="res://addons/cogito/PackedScenes/cogito_player.tscn" id="2_player"]
+[ext_resource type="PackedScene" uid="uid://3okedyf5glns" path="res://addons/cogito/PackedScenes/container.tscn" id="3_container"]
+[ext_resource type="Script" uid="uid://btnha2whsheir" path="res://addons/cogito/InventoryPD/cogito_inventory.gd" id="5_48b3i"]
+[ext_resource type="Texture2D" uid="uid://dlglkrh1yoht" path="res://addons/kenney_prototype_textures/light/texture_13.png" id="10_floor_tex"]
+[ext_resource type="Script" uid="uid://di15gqemrkk0x" path="res://addons/cogito/InventoryPD/CustomResources/InventorySlotPD.gd" id="11_7hntb"]
+[ext_resource type="Script" uid="uid://cmt86kjfbkdge" path="res://Scripts/Inventory/pocket_inventory.gd" id="12_ssyg2"]
+[ext_resource type="PackedScene" path="res://Scene/Raid/deploy_button.tscn" id="13_deploy"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hub"]
+sky_top_color = Color(0.35, 0.45, 0.55, 1)
+sky_horizon_color = Color(0.7, 0.72, 0.75, 1)
+ground_bottom_color = Color(0.2, 0.2, 0.22, 1)
+ground_horizon_color = Color(0.45, 0.45, 0.48, 1)
+
+[sub_resource type="Sky" id="Sky_hub"]
+sky_material = SubResource("ProceduralSkyMaterial_hub")
+
+[sub_resource type="Environment" id="Environment_hub"]
+background_mode = 2
+sky = SubResource("Sky_hub")
+ambient_light_source = 2
+ambient_light_color = Color(0.65, 0.68, 0.72, 1)
+ambient_light_energy = 0.9
+tonemap_mode = 2
+
+[sub_resource type="BoxMesh" id="Mesh_floor"]
+size = Vector3(16, 0.2, 16)
+
+[sub_resource type="StandardMaterial3D" id="Mat_floor"]
+albedo_texture = ExtResource("10_floor_tex")
+uv1_scale = Vector3(8, 8, 8)
+
+[sub_resource type="BoxShape3D" id="Shape_floor"]
+size = Vector3(16, 0.2, 16)
+
+[sub_resource type="BoxMesh" id="Mesh_wall"]
+size = Vector3(16, 4, 0.2)
+
+[sub_resource type="BoxShape3D" id="Shape_wall_ns"]
+size = Vector3(16, 4, 0.2)
+
+[sub_resource type="BoxMesh" id="Mesh_wall_ew"]
+size = Vector3(0.2, 4, 16)
+
+[sub_resource type="BoxShape3D" id="Shape_wall_ew"]
+size = Vector3(0.2, 4, 16)
+
+[sub_resource type="Resource" id="Resource_48b3i"]
+resource_local_to_scene = true
+script = ExtResource("5_48b3i")
+grid = true
+inventory_size = Vector2i(4, 2)
+
+[sub_resource type="Resource" id="Resource_0eijj"]
+resource_local_to_scene = true
+script = ExtResource("5_48b3i")
+grid = true
+inventory_size = Vector2i(4, 2)
+
+[sub_resource type="Resource" id="Resource_6kxx4"]
+resource_local_to_scene = true
+script = ExtResource("5_48b3i")
+grid = true
+inventory_size = Vector2i(4, 3)
+
+[sub_resource type="Resource" id="Resource_u5smi"]
+resource_local_to_scene = true
+script = ExtResource("5_48b3i")
+grid = true
+inventory_size = Vector2i(4, 2)
+
+[sub_resource type="Resource" id="Resource_7hntb"]
+resource_local_to_scene = true
+script = ExtResource("5_48b3i")
+grid = true
+inventory_size = Vector2i(6, 2)
+
+[sub_resource type="Resource" id="Resource_ssyg2"]
+resource_local_to_scene = true
+script = ExtResource("5_48b3i")
+grid = true
+inventory_size = Vector2i(4, 2)
+
+[sub_resource type="Resource" id="Resource_s1jli"]
+resource_local_to_scene = true
+script = ExtResource("12_ssyg2")
+grid = true
+inventory_size = Vector2i(4, 2)
+inventory_slots = Array[ExtResource("11_7hntb")]([null, null, null, null, null, null, null, null])
+
+[node name="StashHub" type="Node3D" unique_id=1115350447 node_paths=PackedStringArray("connectors")]
+script = ExtResource("1_scene")
+connectors = [NodePath("RaidReturn")]
+
+[node name="RaidReturn" type="Marker3D" parent="." unique_id=519647133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 6)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1510943622]
+environment = SubResource("Environment_hub")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2012078393]
+transform = Transform3D(0.866025, -0.353553, 0.353553, 0, 0.707107, 0.707107, -0.5, -0.612372, 0.612372, 4, 10, 6)
+light_energy = 1.1
+shadow_enabled = true
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=792141245]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=391233069]
+mesh = SubResource("Mesh_floor")
+surface_material_override/0 = SubResource("Mat_floor")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1995384388]
+shape = SubResource("Shape_floor")
+
+[node name="WallNorth" type="StaticBody3D" parent="." unique_id=1688052538]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WallNorth" unique_id=427546785]
+mesh = SubResource("Mesh_wall")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallNorth" unique_id=1152277212]
+shape = SubResource("Shape_wall_ns")
+
+[node name="WallSouth" type="StaticBody3D" parent="." unique_id=256894332]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WallSouth" unique_id=903978765]
+mesh = SubResource("Mesh_wall")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallSouth" unique_id=1546758617]
+shape = SubResource("Shape_wall_ns")
+
+[node name="WallWest" type="StaticBody3D" parent="." unique_id=1604323683]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WallWest" unique_id=1370714586]
+mesh = SubResource("Mesh_wall_ew")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallWest" unique_id=1241232243]
+shape = SubResource("Shape_wall_ew")
+
+[node name="WallEast" type="StaticBody3D" parent="." unique_id=1317704834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WallEast" unique_id=1376368763]
+mesh = SubResource("Mesh_wall_ew")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallEast" unique_id=423819603]
+shape = SubResource("Shape_wall_ew")
+
+[node name="StashCrate_A" parent="." unique_id=518242430 instance=ExtResource("3_container")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -3)
+display_name = "STASH A"
+inventory_data = SubResource("Resource_48b3i")
+
+[node name="StashCrate_B" parent="." unique_id=1547965345 instance=ExtResource("3_container")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -3)
+display_name = "STASH B"
+inventory_data = SubResource("Resource_0eijj")
+
+[node name="StashCrate_C" parent="." unique_id=1467306266 instance=ExtResource("3_container")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -3)
+display_name = "STASH C"
+inventory_data = SubResource("Resource_6kxx4")
+
+[node name="StashCrate_D" parent="." unique_id=1826864928 instance=ExtResource("3_container")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3)
+display_name = "STASH D"
+inventory_data = SubResource("Resource_u5smi")
+
+[node name="StashCrate_E" parent="." unique_id=535091366 instance=ExtResource("3_container")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 0, 0)
+display_name = "STASH E"
+inventory_data = SubResource("Resource_7hntb")
+
+[node name="StashCrate_F" parent="." unique_id=643122497 instance=ExtResource("3_container")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 0, 0)
+display_name = "STASH F"
+inventory_data = SubResource("Resource_ssyg2")
+
+[node name="Player" parent="." unique_id=1532385616 instance=ExtResource("2_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 6)
+inventory_data = SubResource("Resource_s1jli")
+
+[node name="Deploy" parent="." unique_id=2034872030 instance=ExtResource("13_deploy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, -7.7)
+
+[connection signal="pressed" from="Deploy" to="." method="start_raid"]

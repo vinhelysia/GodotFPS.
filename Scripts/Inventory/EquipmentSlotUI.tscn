@@ -1,0 +1,153 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/equipment_slot_ui.gd" id="1_script"]
+[ext_resource type="AudioStream" uid="uid://cr3bcp0u6w1pl" path="res://addons/cogito/Assets/Audio/Kenney/UiAudio/mouseclick1.ogg" id="2_click"]
+[ext_resource type="Theme" uid="uid://by44nnjeu6u4n" path="res://addons/cogito/Theme/Cogito_Theme_A.tres" id="3_theme"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_highlight"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_selected"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[node name="EquipmentSlotUI" type="PanelContainer"]
+custom_minimum_size = Vector2(92, 92)
+offset_right = 92.0
+offset_bottom = 92.0
+focus_mode = 2
+theme = ExtResource("3_theme")
+script = ExtResource("1_script")
+highlight_color = Color(1, 1, 1, 1)
+sound_highlight = ExtResource("2_click")
+
+[node name="Background" type="Panel" parent="."]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bg")
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.0392157)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_highlight")
+
+[node name="Selected" type="Panel" parent="."]
+visible = false
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_selected")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="QuantityLabel" type="Label" parent="."]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+mouse_filter = 2
+text = "x99"
+
+[node name="ChargeLabel" type="Label" parent="."]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+mouse_filter = 2
+text = "100%"
+
+[node name="ModBadge" type="Label" parent="."]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+mouse_filter = 2
+text = "+1"
+
+[node name="NameFallback" type="Label" parent="."]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+mouse_filter = 2
+theme_override_font_sizes/font_size = 10
+text = "ITEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="HeaderStrip" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+mouse_filter = 2
+custom_minimum_size = Vector2(0, 16)
+
+[node name="HeaderMargin" type="MarginContainer" parent="HeaderStrip"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 1
+
+[node name="HeaderLabel" type="Label" parent="HeaderStrip/HeaderMargin"]
+layout_mode = 2
+mouse_filter = 2
+clip_text = true
+text = "SLOT"
+
+[node name="AmmoLabel" type="Label" parent="."]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+mouse_filter = 2
+text = "0/0"
+
+[node name="HotkeyBadge" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+mouse_filter = 2
+custom_minimum_size = Vector2(18, 18)
+
+[node name="HotkeyLabel" type="Label" parent="HotkeyBadge"]
+layout_mode = 2
+mouse_filter = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "1"
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="hidden" from="." to="." method="_on_hidden"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AttachmentItemPD" format=3]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/AttachmentItemPD.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+attachment_slot = 0
+ads_time_multiplier = 0.85
+ads_fov_override = 58.0
+name = "Red Dot Sight"
+description = "1x reflex sight. Barely any magnification, but you get on target fast."
+drop_scene = "res://Scene/Items/Attachments/pickup_attachment.tscn"
+item_size = Vector2(1, 1)

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AttachmentItemPD" format=3 uid="uid://b8kt4k3adjaih"]
+
+[ext_resource type="Script" uid="uid://dxs1pbahn4jgk" path="res://Scripts/Inventory/AttachmentItemPD.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://b2qb47p0lfvu5" path="res://Scene/Attachment/Scope/Elcan Specter/Elcan Specter.tscn" id="2_scene"]
+[ext_resource type="Texture2D" uid="uid://4j0cgixeev7r" path="res://Scene/Items/Attachments/icon_tac30_scope.png" id="3_icon"]
+
+[resource]
+script = ExtResource("1_script")
+ads_time_multiplier = 1.15
+ads_fov_override = 45.0
+ads_position_offset = Vector3(0, -0.601, 0.28)
+mount_scene = ExtResource("2_scene")
+name = "ELCAN SpecterDR"
+description = "1-4x dual-role combat optical sight. Mounts on any weapon with an optic rail."
+icon = ExtResource("3_icon")
+drop_scene = "res://Scene/Items/Attachments/pickup_attachment.tscn"
+item_size = Vector2(2, 1)

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AttachmentItemPD" format=3]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/AttachmentItemPD.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+attachment_slot = 1
+recoil_multiplier = 0.9
+loudness_multiplier = 0.25
+suppresses_muzzle_flash = true
+compatible_weapons = Array[String](["AK-47"])
+name = "PBS-1 Suppressor"
+description = "PBS-1 suppressor for 7.62x39 AK. Hides muzzle flash and cuts gunshot loudness."
+drop_scene = "res://Scene/Items/Attachments/pickup_suppressor.tscn"
+item_size = Vector2(2, 1)

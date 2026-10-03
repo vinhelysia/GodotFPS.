@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://g3y543wa5r6s"]
+
+[ext_resource type="Script" uid="uid://c4dn1kcpbnmlj" path="res://Scripts/Weapons/shell_casing_fx.gd" id="1_ipk66"]
+[ext_resource type="ArrayMesh" uid="uid://26hl6s8735t7" path="res://Scene/Weapons/ProjectilesAndShells/7.62x39/new_array_mesh.tres" id="2_im6c5"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_c1f1g"]
+height = 0.07799999
+radius = 0.011300003
+
+[node name="7_62x39ShellCasingFx_tscn" type="RigidBody3D" unique_id=1704166133]
+script = ExtResource("1_ipk66")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1200803637]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = ExtResource("2_im6c5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1806847873]
+transform = Transform3D(5, 0, 0, 0, -2.1855695e-07, 5, 0, -5, -2.1855695e-07, 4.656613e-09, 0, -1.8626451e-08)
+shape = SubResource("CylinderShape3D_c1f1g")

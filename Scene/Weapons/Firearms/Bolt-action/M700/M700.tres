@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BoltAction_Resource" format=3 uid="uid://dexbuqmkgsldx"]
+
+[ext_resource type="PackedScene" uid="uid://cmkpeaxchg5po" path="res://Scene/Weapons/ProjectilesAndShells/7.62x51/7.62x51 projectile.tscn" id="1_73mm4"]
+[ext_resource type="Script" uid="uid://cbuwlci27f7a2" path="res://Scripts/Weapons/Types/BoltAction_Resource.gd" id="1_qrmst"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_qrmst")
+boltCycleDuration = 1.2
+weaponName = "M700"
+recoilVertical = 0.8
+recoilHorizontal = 0.3
+recoilRecovery = 4.0
+Type = 2
+bulletProjectileToLoad = ExtResource("1_73mm4")
+weaponVelocity = 915
+metadata/_custom_type_script = "uid://cbuwlci27f7a2"

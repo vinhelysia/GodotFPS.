@@ -1,0 +1,86 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Local project/AI knowledge base
+docs/project/
+
+# Local AI agent configuration and onboarding
+.agent/
+.agents/
+.claude/
+.codex/
+.grok/
+CLAUDE.md
+AGENTS.md
+GROK.md
+AI_CONTEXT.md
+addons/godot_mcp/
+tools/gen_codebase_map.sh
+
+# Godot re-creates these whenever it holds the LimboAI DLL open
+addons/limboai/bin/~*
+
+# Throwaway debug probes / pose tracing tools (kept on disk, never shipped)
+tests/_tmp_*
+Scripts/Weapons/Helpers/snap_trace_collector.gd*
+# Generated Godot data and local build outputs
+*.uid
+*.translation
+.import/
+.mono/
+/build/
+/builds/
+/dist/
+/exports/
+
+# Tests and their local runners
+[tT]est/
+[tT]ests/
+__tests__/
+test_*
+*_test.*
+*_tests.*
+*_regression.*
+/tools/run_regressions.py
+
+# Markdown documentation anywhere in this game-source repository
+*.[mM][dD]
+
+# Local AI agents, prompts, MCP configuration and tooling
+.cursor/
+.gemini/
+.opencode/
+.aider*
+.github/agents/
+.github/prompts/
+.github/instructions/
+.mcp.json
+mcp.json
+mcp_config.json
+mcp-config.json
+addons/*mcp*/
+
+# Local editor state, temporary files and dependency caches
+.vscode/
+.idea/
+.obsidian/
+/temp/
+node_modules/
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+.env
+.env.*
+!.env.example
+
+# Local generated architecture diagrams and Blender backups
+/docs/diagrams/
+*.blend[0-9]*

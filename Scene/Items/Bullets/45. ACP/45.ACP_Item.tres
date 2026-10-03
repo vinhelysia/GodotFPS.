@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AmmoItemPD" format=3 uid="uid://c4pa8ralus4pb"]
+
+[ext_resource type="Texture2D" uid="uid://b1e37wjhsrc68" path="res://Scene/Items/Bullets/45. ACP/.png" id="1_f1e4t"]
+[ext_resource type="Script" uid="uid://6vgnb68cqtwh" path="res://addons/cogito/InventoryPD/CustomResources/AmmoItemPD.gd" id="2_4sv18"]
+
+[resource]
+script = ExtResource("2_4sv18")
+name = ".45 ACP"
+description = "Old reliable. The .45 ACP is a fat, heavy chunk of lead that hits like a runaway freight train. It kicks hard and drops fast over long distances, but if you need to blow a hole in something up close, accept no substitutes."
+icon = ExtResource("1_f1e4t")
+slot_background_preset = 1
+is_stackable = true
+stack_size = 90
+drop_scene = "uid://dkhrd4yxowafl"
+metadata/_custom_type_script = "uid://6vgnb68cqtwh"
