@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/reinforced_wood_chest.glb" id="1"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/reinforced_wood_chest_variants/reinforced_wood_chest_used.tres" id="2"]
+
+[node name="ReinforcedWoodChest_used" instance=ExtResource("1")]
+
+[node name="ChestBody" parent="ReinforcedWoodChest"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="ChestHasp" parent="ReinforcedWoodChest/ChestLidPivot/ChestHaspPivot"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="ChestLid" parent="ReinforcedWoodChest/ChestLidPivot"]
+surface_material_override/0 = ExtResource("2")

@@ -68,6 +68,18 @@ func close():
 
 
 func set_state():
+	if inventory_data != null:
+		# Legacy saves can reference an uninitialized .tres instead of embedding its contents.
+		# Detach asset data before repairing capacity so other chests keep their own state.
+		if inventory_data.resource_path.begins_with("res://"):
+			inventory_data = inventory_data.duplicate(true) as CogitoInventory
+		var slot_count: int = inventory_data.inventory_size.x * inventory_data.inventory_size.y
+		if inventory_data.inventory_slots.size() < slot_count:
+			inventory_data.inventory_slots.resize(slot_count)
+		inventory_data.owner = self
+		if not inventory_data.inventory_slots.is_empty():
+			inventory_data.first_slot = inventory_data.inventory_slots[0]
+		# Do not apply_initial_inventory(): loading must not reinsert starter loot or shrink slots.
 	interaction_text = tr(text_when_closed)
 	animation_player = $AnimationPlayer
 	object_state_updated.emit(interaction_text)

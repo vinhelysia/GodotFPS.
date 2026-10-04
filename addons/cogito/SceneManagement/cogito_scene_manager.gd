@@ -122,8 +122,9 @@ func _is_valid_save_token(token: String, max_len: int) -> bool:
 		return false
 	if token.begins_with(".") or token.contains(".."):
 		return false
-	# Reject path separators, absolute roots, nulls, and traversal fragments.
-	if token.contains("/") or token.contains("\\") or token.contains(":") or token.contains(String.chr(0)):
+	# Reject path separators and absolute roots; the code-point allowlist below
+	# also rejects control characters without constructing an invalid NUL string.
+	if token.contains("/") or token.contains("\\") or token.contains(":"):
 		return false
 	if token.contains("user://") or token.contains("res://") or token.begins_with("//"):
 		return false

@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/canned_food_variants/canned_food_worn_albedo.png" id="1_akiyp"]
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/canned_food_variants/canned_food_worn_orm.png" id="2_yknap"]
+
+[resource]
+resource_name = "canned_food_worn"
+albedo_texture = ExtResource("1_akiyp")
+metallic = 1.0
+metallic_texture = ExtResource("2_yknap")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_yknap")
+roughness_texture_channel = 1
+ao_enabled = true
+ao_texture = ExtResource("2_yknap")

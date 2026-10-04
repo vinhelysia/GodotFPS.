@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/tea_carton.glb" id="1"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/tea_carton_variants/tea_carton_used.tres" id="2"]
+
+[node name="tea_carton_used" instance=ExtResource("1")]
+
+[node name="tea_carton_Mesh" parent="tea_carton"]
+surface_material_override/0 = ExtResource("2")

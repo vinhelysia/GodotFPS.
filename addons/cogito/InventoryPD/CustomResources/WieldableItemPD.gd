@@ -111,7 +111,7 @@ func subtract(amount):
 ## picking ammo up while wielding it) mutate it on its own. If the weapon is in
 ## hand, its live mechanics must re-read the item right now: otherwise the next
 ## shot commits the stale round count straight back over what was just loaded.
-## Holstered weapons reconcile on equip (CogitoFirearm._restore_mechanics_from_item).
+## Loose loading also reconciles holstered state before a magazine can be detached.
 func _sync_wielded_weapon() -> void:
 	if not is_being_wielded or player_interaction_component == null:
 		return
@@ -130,10 +130,31 @@ func add(amount):
 	if charge_current > cap:
 		charge_current = cap
 
+	_sync_stored_firearm_charge()
 	_sync_wielded_weapon()
 	if is_being_wielded:
 		update_wieldable_data(player_interaction_component)
 	charge_changed.emit()
+
+
+## Use the existing re-equip rule only when a stored firearm's total was changed.
+## Coherent chamber/bolt state is left alone; live firearms use their own configuration.
+func _sync_stored_firearm_charge() -> void:
+	if is_being_wielded and player_interaction_component != null:
+		return
+	if not has_firearm_mechanical_state():
+		return
+	var state := get_firearm_mechanical_state()
+	var total := int(charge_current)
+	var saved_total := int(state.get("magazine_rounds", 0)) + int(state.get("chamber_rounds", 0))
+	if saved_total == total:
+		return
+	var chamber := mini(total, chamber_capacity())
+	state["chamber_rounds"] = chamber
+	state["magazine_rounds"] = total - chamber
+	if total > 0:
+		state["bolt_locked_open"] = false
+	set_firearm_mechanical_state(state)
 
 
 func has_firearm_mechanical_state() -> bool:

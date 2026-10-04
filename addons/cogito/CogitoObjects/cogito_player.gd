@@ -833,6 +833,10 @@ func _physics_process(delta):
 			LandingPitch = lerp(max_pitch, min_pitch, velocity_ratio)
 			# Play the landing sound
 			footstep_player._play_interaction("landing")
+		# Damage belongs to the airborne -> grounded transition, independent of
+		# movement/headbob and applied only once before airborne state is cleared.
+		if was_in_air and not on_ladder and fall_damage > 0 and last_velocity.y <= fall_damage_threshold:
+			decrease_attribute("health", fall_damage)
 		was_in_air = false  # Reset airborne state
 	else:
 		was_in_air = true  # Set airborne state
@@ -1025,11 +1029,6 @@ func _physics_process(delta):
 			elif last_velocity.y <= -5.0:
 				animationPlayer.play("landing")
 		
-		# Taking fall damage
-		if fall_damage > 0 and last_velocity.y <= fall_damage_threshold:
-			#health_component.subtract(fall_damage)
-			decrease_attribute("health",fall_damage)
-	
 	if Input.is_action_pressed("jump") and !is_movement_paused and is_on_floor() and jump_timer.is_stopped():
 		jump_timer.start() # prevent spam
 		is_jumping = true

@@ -36,6 +36,8 @@ var lean_amount: float = 0.0
 var _applied_pos_x: float = 0.0
 var _applied_rot_z: float = 0.0
 var _applied_coll_x: float = 0.0
+var _authored_head_x: float = 0.0
+var _authored_head_roll: float = 0.0
 
 var _player: CharacterBody3D
 var _head: Node3D
@@ -60,6 +62,8 @@ func _ready() -> void:
 		push_warning("PlayerLean: Head not found")
 		set_physics_process(false)
 		return
+	_authored_head_x = _head.position.x
+	_authored_head_roll = _head.rotation.z
 	if _stand_col:
 		_stand_base_x = _stand_col.position.x
 	if _crouch_col:
@@ -89,6 +93,19 @@ func get_neutral_head_transform() -> Transform3D:
 	return pose
 
 
+## Old saves lack lean ownership metadata. Restore only the lean channels to authored rest.
+## Preserve saved pitch, crouch height, depth and scale; never clamp the live pose each frame.
+func get_legacy_neutral_head_transform(saved_pose: Transform3D) -> Transform3D:
+	if not is_instance_valid(_head):
+		return saved_pose
+	var pose := saved_pose
+	pose.origin.x = _authored_head_x
+	var rotation := pose.basis.orthonormalized().get_euler(_head.rotation_order)
+	rotation.z = _authored_head_roll
+	pose.basis = Basis.from_euler(rotation, _head.rotation_order).scaled_local(pose.basis.get_scale())
+	return pose
+
+
 ## Absolute save restoration replaces Head; discard our old deltas first.
 func reset() -> void:
 	_clear_applied()
@@ -100,12 +117,12 @@ func _physics_process(delta: float) -> void:
 		return
 
 	var target := _compute_target()
-	# Cut the lean short of geometry BEFORE smoothing, so the existing filter ramps the block
-	# in and out. Clamping the applied pose instead would pop the moment the wall cleared.
-	if not is_zero_approx(target):
-		target *= _wall_clearance(_desired_offsets(target).x)
 	var k := 1.0 - exp(-smooth_speed * delta)
 	lean_amount = lerpf(lean_amount, target, k)
+	# Safety applies to the pose used this frame, including while releasing lean.
+	# Store the limited amount so clearing a wall still eases back toward full lean.
+	if not is_zero_approx(lean_amount):
+		lean_amount *= _wall_clearance(_desired_offsets(lean_amount).x)
 	_apply_pose(lean_amount)
 
 

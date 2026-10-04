@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://dfqbbyfh171u2"]
+
+[ext_resource type="PackedScene" uid="uid://cyu7ujwcci0ug" path="res://Assets/Blender/UI/bunker_terminal_v03.glb" id="1_model"]
+[ext_resource type="Script" uid="uid://cb5jqcr5w66m8" path="res://Scripts/Raid/raid_terminal.gd" id="2_button"]
+[ext_resource type="PackedScene" uid="uid://l61jtpfxu5x5" path="res://addons/cogito/Components/Interactions/BasicInteraction.tscn" id="3_interaction"]
+[ext_resource type="AudioStream" uid="uid://b6wdy2102jymr" path="res://addons/cogito/Assets/Audio/Kenney/UiAudio/switch2.ogg" id="4_sound"]
+[ext_resource type="PackedScene" path="res://Scene/Raid/raid_terminal_panel.tscn" id="5_panel"]
+
+[sub_resource type="BoxShape3D" id="Shape_monitor"]
+size = Vector3(0.678, 0.48, 0.5)
+
+[sub_resource type="BoxShape3D" id="Shape_console"]
+size = Vector3(0.66, 0.2, 0.59)
+
+[sub_resource type="StandardMaterial3D" id="Material_screen"]
+resource_local_to_scene = true
+shading_mode = 0
+
+[sub_resource type="QuadMesh" id="Mesh_screen"]
+material = SubResource("Material_screen")
+size = Vector2(0.451, 0.282)
+
+[sub_resource type="SystemFont" id="Font_idle"]
+font_names = PackedStringArray("Consolas", "DejaVu Sans Mono", "Liberation Mono", "monospace")
+subpixel_positioning = 0
+
+[node name="BunkerTerminal" type="StaticBody3D" unique_id=150291231]
+process_mode = 3
+collision_layer = 3
+collision_mask = 0
+script = ExtResource("2_button")
+display_name = "RAID TERMINAL"
+press_sound = ExtResource("4_sound")
+usable_interaction_text = "Select raid map"
+press_cooldown_time = 0.3
+
+[node name="Model" type="Node3D" parent="." unique_id=876737259 instance=ExtResource("1_model")]
+
+[node name="MonitorCollision" type="CollisionShape3D" parent="." unique_id=682594070]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3865, -0.039)
+shape = SubResource("Shape_monitor")
+
+[node name="ConsoleCollision" type="CollisionShape3D" parent="." unique_id=774261585]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0.165)
+shape = SubResource("Shape_console")
+
+[node name="BasicInteraction" parent="." unique_id=651234738 instance=ExtResource("3_interaction")]
+interaction_text = "Interact"
+ignore_open_gui = false
+
+[node name="Screen" type="MeshInstance3D" parent="." unique_id=1008903538]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4045, 0.185)
+cast_shadow = 0
+mesh = SubResource("Mesh_screen")
+
+[node name="ScreenViewport" type="SubViewport" parent="." unique_id=1900862879]
+disable_3d = true
+size = Vector2i(1024, 640)
+render_target_update_mode = 1
+
+[node name="IdleScreen" type="ColorRect" parent="ScreenViewport" unique_id=1689589351]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ScreenViewport/IdleScreen" unique_id=2116364683]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.45, 1, 0.55, 1)
+theme_override_fonts/font = SubResource("Font_idle")
+theme_override_font_sizes/font_size = 46
+text = "RAID TERMINAL
+MAP SELECTION"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TerminalPanel" parent="ScreenViewport" unique_id=1740571291 instance=ExtResource("5_panel")]
+
+[node name="ViewPose" type="Marker3D" parent="." unique_id=12897880]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4045, 0.78)
+
+[node name="TerminalCamera" type="Camera3D" parent="." unique_id=45482177]
+fov = 42.0
+near = 0.02

@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/anvil_stump_variants/anvil_stump_clean_albedo.png" id="1_ocbko"]
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/anvil_stump_variants/anvil_stump_clean_orm.png" id="2_dv3pk"]
+
+[resource]
+resource_name = "AnvilStump_clean"
+albedo_texture = ExtResource("1_ocbko")
+metallic = 1.0
+metallic_texture = ExtResource("2_dv3pk")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_dv3pk")
+roughness_texture_channel = 1
+texture_repeat = false
+metadata/extras = {
+"coverage_percent": 0.0,
+"wear_seed": 617
+}
+metadata/_gltf_primary_texture_coord = 0

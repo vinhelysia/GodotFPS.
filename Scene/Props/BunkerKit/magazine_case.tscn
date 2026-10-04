@@ -1,0 +1,5 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/magazine_case.glb" id="1_model"]
+
+[node name="MagazineCase" instance=ExtResource("1_model")]

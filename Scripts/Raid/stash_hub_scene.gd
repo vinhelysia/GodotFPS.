@@ -5,16 +5,68 @@ const RaidSaveSnapshot := preload("res://Scripts/Raid/raid_save_snapshot.gd")
 const ResultScene := preload("res://Scene/Raid/raid_result_panel.tscn")
 @export_file("*.tscn") var raid_scene_path: String = "res://Scene/Town.tscn"
 @export var raid_connector: String = "RaidSpawn"
+@export var raid_display_name: String = "Town"
+@export_range(0.0, 60.0, 1.0) var deployment_seconds: float = 10.0
 @export var restore_save_on_start: bool = true
 
 var return_saved: bool = false
 var departing: bool = false
 var result_panel: CanvasLayer
+var terminal_panel: Control
+var active_terminal: Node3D
+var terminal_previous_mouse_mode: int = Input.MOUSE_MODE_CAPTURED
 
 
 func _ready() -> void:
 	_finish_return.call_deferred()
 	_restore_startup.call_deferred()
+
+
+func open_terminal(terminal: Node3D = null) -> void:
+	var player: CogitoPlayer = CogitoSceneManager._current_player_node
+	if departing or CogitoSceneManager.is_currently_loading or player.is_dead or player.is_showing_ui or player.is_movement_paused:
+		return
+	if terminal == null:
+		terminal = get_node_or_null("Props/Table/Terminal")
+	if not is_instance_valid(terminal) or not terminal.has_method("begin_view"):
+		player.player_interaction_component.send_hint(null, "Terminal unavailable")
+		return
+	terminal_panel = terminal.panel
+	if not terminal_panel.deploy_requested.is_connected(_deploy_from_terminal):
+		terminal_panel.deploy_requested.connect(_deploy_from_terminal)
+		terminal_panel.close_requested.connect(_close_terminal)
+		terminal.view_closed.connect(_on_terminal_view_closed)
+	terminal_previous_mouse_mode = Input.mouse_mode
+	player._on_pause_movement()
+	player.is_showing_ui = true
+	active_terminal = terminal
+	if not terminal.begin_view(player, raid_display_name):
+		_on_terminal_view_closed()
+		player.player_interaction_component.send_hint(null, "Cannot use terminal from here")
+
+
+func _close_terminal() -> void:
+	if not is_instance_valid(active_terminal) or not is_instance_valid(terminal_panel) or not terminal_panel.visible:
+		return
+	active_terminal.close_view()
+
+
+func _on_terminal_view_closed() -> void:
+	active_terminal = null
+	var player: CogitoPlayer = CogitoSceneManager._current_player_node
+	if not is_instance_valid(player) or not player.is_inside_tree():
+		return
+	player.is_showing_ui = false
+	player._on_resume_movement()
+	Input.set_mouse_mode(terminal_previous_mouse_mode)
+
+
+func _deploy_from_terminal() -> void:
+	if not is_instance_valid(active_terminal) or not is_instance_valid(terminal_panel) or not terminal_panel.visible:
+		return
+	# Restore presentation synchronously before departure freezes this Hub.
+	active_terminal.close_view(true)
+	start_raid()
 
 
 func _restore_startup() -> void:
@@ -31,7 +83,7 @@ func _restore_startup() -> void:
 func start_raid() -> void:
 	var manager := CogitoSceneManager
 	var player: CogitoPlayer = manager._current_player_node
-	if departing or manager.is_currently_loading or player.is_dead or player.is_showing_ui:
+	if departing or manager.is_currently_loading or player.is_dead or player.is_showing_ui or player.is_movement_paused:
 		return
 	if not raid_scene_path.begins_with("res://") or raid_scene_path.contains("..") or not ResourceLoader.exists(raid_scene_path):
 		player.player_interaction_component.send_hint(null, "Raid destination unavailable — kit kept")
@@ -45,9 +97,14 @@ func start_raid() -> void:
 		player.player_interaction_component.send_hint(null, "Save failed — staying in Hub")
 		return
 	var prepared: CogitoPlayerState = manager._player_state.duplicate(true)
-	manager.set_meta("raid_departure", {"slot": manager._active_slot, "player": prepared})
+	manager.set_meta("raid_departure", {
+		"slot": manager._active_slot, "player": prepared,
+		"display_name": raid_display_name, "deploy_seconds": deployment_seconds,
+	})
 	departing = true
+	manager.is_currently_loading = true
 	process_mode = Node.PROCESS_MODE_DISABLED
+	await manager.fade_out()
 	manager.load_next_scene(raid_scene_path, raid_connector, "temp", manager.CogitoSceneLoadMode.FRESH_WITH_PLAYER)
 
 

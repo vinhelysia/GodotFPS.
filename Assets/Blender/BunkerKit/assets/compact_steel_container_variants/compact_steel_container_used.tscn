@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/compact_steel_container.glb" id="1"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/compact_steel_container_variants/compact_steel_container_used.tres" id="2"]
+
+[node name="CompactSteelContainer_used" instance=ExtResource("1")]
+
+[node name="ContainerBody" parent="CompactSteelContainer"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="ContainerDoorLeft" parent="CompactSteelContainer/ContainerDoorLeftPivot"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="ContainerLockLeft" parent="CompactSteelContainer/ContainerDoorLeftPivot/ContainerLockLeftPivot"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="ContainerDoorRight" parent="CompactSteelContainer/ContainerDoorRightPivot"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="ContainerLockRight" parent="CompactSteelContainer/ContainerDoorRightPivot/ContainerLockRightPivot"]
+surface_material_override/0 = ExtResource("2")

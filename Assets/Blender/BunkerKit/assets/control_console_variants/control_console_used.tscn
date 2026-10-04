@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/control_console.glb" id="1"]
+
+[node name="control_console_used" instance=ExtResource("1")]

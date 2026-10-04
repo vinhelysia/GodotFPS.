@@ -29,7 +29,9 @@ func _init():
 func apply_initial_inventory():
 	inventory_slots.resize(inventory_size.x * inventory_size.y)
 	for item in starter_inventory:
-		pick_up_slot_data(item)
+		# Pickup consumes incoming quantity; the authored starter remains reusable.
+		if item != null:
+			pick_up_slot_data(item.duplicate() as InventorySlotPD)
 	if inventory_slots.size() > 0:
 		first_slot = inventory_slots[0]
 
@@ -276,19 +278,15 @@ func drop_single_slot_data(grabbed_slot_data: InventorySlotPD, index: int) -> In
 	# Check if grabbed item is a combinable AND check if slot item is the target combine item:
 	elif grabbed_slot_data.inventory_item.has_method("is_combinable") and slot_data.inventory_item.name == grabbed_slot_data.inventory_item.target_item_combine :
 		var result_slot: InventorySlotPD = grabbed_slot_data.inventory_item.resulting_item
-		# Atomic: only burn ingredients if the product can actually land.
-		# can_pick_up is soft (doesn't reserve the freed target cell), so also
-		# accept the common case where the result fits the cell we're about to free.
-		var can_place_result := result_slot == null \
-			or can_pick_up_slot_data(result_slot) \
-			or is_enough_space(result_slot, slot_data.origin_index, true)
+		# Unlike ordinary pickup, crafting must place ALL output before consuming inputs.
+		var can_place_result := result_slot == null or _can_place_combined_result(result_slot, slot_data)
 		if not can_place_result:
 			_send_player_hint("No inventory space for the combined item.")
 		else:
 			remove_slot_data(slot_data)
 			grabbed_slot_data.quantity -= 1
 			if result_slot != null:
-				pick_up_slot_data(result_slot)
+				pick_up_slot_data(result_slot.duplicate() as InventorySlotPD)
 	
 	inventory_updated.emit(self)
 	
@@ -308,8 +306,43 @@ func drop_single_slot_data(grabbed_slot_data: InventorySlotPD, index: int) -> In
 		#return null
 
 
+## Preview the freed target and complete output without touching live slot data,
+## emitting pickup signals or equipping preview items. Native fit rules still apply.
+func _can_place_combined_result(result: InventorySlotPD, target: InventorySlotPD) -> bool:
+	if result.inventory_item == null or result.quantity <= 0:
+		return false
+	var preview := duplicate(false) as CogitoInventory
+	preview.inventory_slots = inventory_slots.duplicate()
+	preview.owner = owner
+	preview.null_out_slots(target)
+	if not result.inventory_item.is_stackable:
+		return preview.can_pick_up_slot_data(result)
+	if result.inventory_item.stack_size <= 0:
+		return false
+	var remaining := result.quantity
+	var seen: Array[InventorySlotPD] = []
+	for slot in preview.inventory_slots:
+		if slot == null or seen.has(slot):
+			continue
+		seen.append(slot)
+		if slot.inventory_item == result.inventory_item or slot.inventory_item.name == result.inventory_item.name:
+			remaining -= maxi(0, slot.inventory_item.stack_size - slot.quantity)
+			if remaining <= 0:
+				return true
+	for index in preview.inventory_slots.size():
+		if preview.inventory_slots[index] == null and preview.is_enough_space(result, index, true):
+			var placed := result.duplicate() as InventorySlotPD
+			placed.origin_index = index
+			preview.inventory_slots[index] = placed
+			preview.add_adjacent_slots(index)
+			remaining -= result.inventory_item.stack_size
+			if remaining <= 0:
+				return true
+	return false
+
+
 func pick_up_slot_data(slot_data: InventorySlotPD) -> bool:
-	if not slot_data or not slot_data.inventory_item:
+	if not slot_data or not slot_data.inventory_item or slot_data.quantity <= 0:
 		return false
 		
 	var original_quantity = slot_data.quantity
@@ -484,6 +517,8 @@ func get_item_to_swap(grabbed_slot_data: InventorySlotPD, to_place_index: int):
 
 ## Returns whether the given item fits in inventory
 func can_pick_up_slot_data(slot_data: InventorySlotPD) -> bool:
+	if not slot_data or not slot_data.inventory_item or slot_data.quantity <= 0:
+		return false
 	for index in inventory_slots.size():
 		if inventory_slots[index] and inventory_slots[index].can_fully_merge_with(slot_data):
 			return true

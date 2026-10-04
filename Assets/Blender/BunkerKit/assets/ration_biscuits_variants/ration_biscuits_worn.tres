@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/ration_biscuits_variants/ration_biscuits_worn_albedo.png" id="1_iwvt5"]
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/ration_biscuits_variants/ration_biscuits_worn_orm.png" id="2_7qsk2"]
+
+[resource]
+resource_name = "ration_biscuits_worn"
+albedo_texture = ExtResource("1_iwvt5")
+metallic = 1.0
+metallic_texture = ExtResource("2_7qsk2")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_7qsk2")
+roughness_texture_channel = 1
+ao_enabled = true
+ao_texture = ExtResource("2_7qsk2")

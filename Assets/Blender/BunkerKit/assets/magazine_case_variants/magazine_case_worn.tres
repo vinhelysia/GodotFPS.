@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/magazine_case_variants/magazine_case_worn_albedo.png" id="1_lgdye"]
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/magazine_case_variants/magazine_case_worn_orm.png" id="2_txyh3"]
+
+[resource]
+resource_name = "MagazineCase_worn"
+cull_mode = 2
+albedo_texture = ExtResource("1_lgdye")
+metallic = 1.0
+metallic_texture = ExtResource("2_txyh3")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_txyh3")
+roughness_texture_channel = 1
+texture_repeat = false
+metadata/extras = {
+"wear_coverage_percent": 38.0,
+"wear_seed": 1947.0
+}
+metadata/_gltf_primary_texture_coord = 0

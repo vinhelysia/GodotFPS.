@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/salvage_handcart.glb" id="1"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/salvage_handcart_variants/salvage_handcart_clean.tres" id="2"]
+
+[node name="SalvageHandcart_clean" instance=ExtResource("1")]
+
+[node name="HandcartBody" parent="SalvageHandcart"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="HandcartWheelLeft" parent="SalvageHandcart/HandcartWheelLeftPivot"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="HandcartWheelRight" parent="SalvageHandcart/HandcartWheelRightPivot"]
+surface_material_override/0 = ExtResource("2")

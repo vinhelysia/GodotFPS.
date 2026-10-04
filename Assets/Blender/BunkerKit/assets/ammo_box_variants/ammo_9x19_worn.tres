@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/ammo_box_variants/ammo_9x19_worn_albedo.png" id="1_abh0l"]
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/ammo_box_variants/ammo_9x19_worn_orm.png" id="2_60djy"]
+
+[resource]
+resource_name = "ammo_9x19_worn"
+cull_mode = 2
+albedo_texture = ExtResource("1_abh0l")
+metallic = 1.0
+metallic_texture = ExtResource("2_60djy")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_60djy")
+roughness_texture_channel = 1
+texture_repeat = false
+metadata/_gltf_primary_texture_coord = 0

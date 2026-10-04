@@ -1,0 +1,153 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/ceiling_strip_light.glb" id="ceiling_strip_light"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/bulkhead_light.glb" id="bulkhead_light"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/flickering_ceiling_bulb.tscn" id="flicker"]
+
+[sub_resource type="ProceduralSkyMaterial" id="SkyMaterial_bunker"]
+sky_top_color = Color(0.30, 0.33, 0.35, 1)
+sky_horizon_color = Color(0.55, 0.57, 0.58, 1)
+ground_bottom_color = Color(0.21, 0.23, 0.24, 1)
+ground_horizon_color = Color(0.48, 0.50, 0.52, 1)
+
+[sub_resource type="Sky" id="Sky_bunker"]
+sky_material = SubResource("SkyMaterial_bunker")
+
+[sub_resource type="Environment" id="Environment_bunker"]
+background_mode = 2
+background_color = Color(0.045, 0.055, 0.065, 1)
+sky = SubResource("Sky_bunker")
+ambient_light_source = 2
+ambient_light_color = Color(0.62, 0.68, 0.74, 1)
+ambient_light_energy = 0.65
+tonemap_mode = 2
+
+[node name="HubLighting" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_bunker")
+
+[node name="ArmoryStrip" type="Node3D" parent="."]
+position = Vector3(-4.5, 3.10, -4.7)
+
+[node name="Fixture" parent="ArmoryStrip" instance=ExtResource("ceiling_strip_light")]
+
+[node name="Light" type="OmniLight3D" parent="ArmoryStrip"]
+position = Vector3(0, -0.23, 0)
+light_color = Color(0.82, 0.9, 1, 1)
+light_energy = 2.34
+shadow_enabled = false
+omni_range = 5.5
+
+[node name="ProvisionsStrip" type="Node3D" parent="."]
+position = Vector3(4.5, 3.10, -4.7)
+
+[node name="Fixture" parent="ProvisionsStrip" instance=ExtResource("ceiling_strip_light")]
+
+[node name="Light" type="OmniLight3D" parent="ProvisionsStrip"]
+position = Vector3(0, -0.23, 0)
+light_color = Color(0.88, 0.94, 1, 1)
+light_energy = 2.25
+shadow_enabled = false
+omni_range = 5.5
+
+[node name="MaintenanceStrip" type="Node3D" parent="."]
+position = Vector3(-4.5, 3.10, 4.4)
+
+[node name="Fixture" parent="MaintenanceStrip" instance=ExtResource("ceiling_strip_light")]
+
+[node name="Light" type="OmniLight3D" parent="MaintenanceStrip"]
+position = Vector3(0, -0.23, 0)
+light_color = Color(1, 0.88, 0.71, 1)
+light_energy = 2.16
+shadow_enabled = false
+omni_range = 5.5
+
+[node name="ServiceStrip" type="Node3D" parent="."]
+position = Vector3(4.5, 3.10, 3.5)
+
+[node name="Fixture" parent="ServiceStrip" instance=ExtResource("ceiling_strip_light")]
+
+[node name="Light" type="OmniLight3D" parent="ServiceStrip"]
+position = Vector3(0, -0.23, 0)
+light_color = Color(0.85, 0.92, 1, 1)
+light_energy = 1.98
+shadow_enabled = false
+omni_range = 5.5
+
+[node name="DeployRouteStrip" type="Node3D" parent="."]
+position = Vector3(0, 3.10, -4.7)
+
+[node name="Fixture" parent="DeployRouteStrip" instance=ExtResource("ceiling_strip_light")]
+
+[node name="Light" type="OmniLight3D" parent="DeployRouteStrip"]
+position = Vector3(0, -0.23, 0)
+light_color = Color(0.85, 0.92, 1, 1)
+light_energy = 2.52
+shadow_enabled = true
+omni_range = 6
+
+[node name="EntranceRouteStrip" type="Node3D" parent="."]
+position = Vector3(0, 3.10, 4.4)
+
+[node name="Fixture" parent="EntranceRouteStrip" instance=ExtResource("ceiling_strip_light")]
+
+[node name="Light" type="OmniLight3D" parent="EntranceRouteStrip"]
+position = Vector3(0, -0.23, 0)
+light_color = Color(1, 0.91, 0.8, 1)
+light_energy = 2.16
+shadow_enabled = true
+omni_range = 6
+
+[node name="WestBulkhead" type="Node3D" parent="."]
+position = Vector3(-8, 2, 2)
+rotation = Vector3(0, 1.5707963267949, 0)
+
+[node name="Fixture" parent="WestBulkhead" instance=ExtResource("bulkhead_light")]
+
+[node name="Light" type="OmniLight3D" parent="WestBulkhead"]
+position = Vector3(0, 0.16, 0.32)
+light_color = Color(1, 0.83, 0.6, 1)
+light_energy = 0.5
+shadow_enabled = false
+omni_range = 3.5
+
+[node name="EastBulkhead" type="Node3D" parent="."]
+position = Vector3(8, 2, 0)
+rotation = Vector3(0, -1.5707963267949, 0)
+
+[node name="Fixture" parent="EastBulkhead" instance=ExtResource("bulkhead_light")]
+
+[node name="Light" type="OmniLight3D" parent="EastBulkhead"]
+position = Vector3(0, 0.16, 0.32)
+light_color = Color(0.75, 0.87, 1, 1)
+light_energy = 0.45
+shadow_enabled = false
+omni_range = 3.5
+
+[node name="ServiceDoorBulkhead" type="Node3D" parent="."]
+position = Vector3(8, 2.72, 6)
+rotation = Vector3(0, -1.5707963267949, 0)
+
+[node name="Fixture" parent="ServiceDoorBulkhead" instance=ExtResource("bulkhead_light")]
+
+[node name="Light" type="OmniLight3D" parent="ServiceDoorBulkhead"]
+position = Vector3(0, 0.16, 0.32)
+light_color = Color(1, 0.8, 0.52, 1)
+light_energy = 0.4
+shadow_enabled = false
+omni_range = 3
+
+[node name="ServiceBulb" parent="." instance=ExtResource("flicker")]
+position = Vector3(5.7, 3.17, 6.8)
+minimum_brightness = 0.72
+update_interval = 0.35
+
+[node name="Light" parent="ServiceBulb" index="1"]
+light_energy = 0.5
+shadow_enabled = false
+omni_range = 3.5
+
+[editable path="ServiceBulb"]

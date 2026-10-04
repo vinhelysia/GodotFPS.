@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Raid/raid_deployment_panel.gd" id="1_script"]
+[ext_resource type="Theme" path="res://addons/cogito/Theme/Cogito_Theme_A.tres" id="2_theme"]
+
+[node name="RaidDeploymentPanel" type="CanvasLayer"]
+process_mode = 3
+layer = 101
+script = ExtResource("1_script")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.045, 0.045, 1)
+theme = ExtResource("2_theme")
+
+[node name="Center" type="CenterContainer" parent="Backdrop"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Content" type="VBoxContainer" parent="Backdrop/Center"]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Title" type="Label" parent="Backdrop/Center/Content"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.35, 0.7, 0.65, 1)
+theme_override_font_sizes/font_size = 24
+text = "DEPLOYMENT READY"
+horizontal_alignment = 1
+
+[node name="Destination" type="Label" parent="Backdrop/Center/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "Town"
+horizontal_alignment = 1
+
+[node name="Countdown" type="Label" parent="Backdrop/Center/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Preparing deployment..."
+horizontal_alignment = 1
+
+[node name="Warning" type="Label" parent="Backdrop/Center/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Leaving now loses all carried gear.\nStash is preserved."
+horizontal_alignment = 1
+
+[node name="QuitButton" type="Button" parent="Backdrop/Center/Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+disabled = true
+text = "Quit game - lose carried kit"
+
+[connection signal="pressed" from="Backdrop/Center/Content/QuitButton" to="." method="_on_quit_pressed"]

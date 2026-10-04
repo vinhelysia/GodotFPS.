@@ -207,7 +207,7 @@ func set_grabbed_dimensions():
 	if is_rotated:
 		item_size = Vector2i(item_size.y, item_size.x)
 	size = Vector2i(64 * item_size.x, 64 * item_size.y)
-	if is_rotated:
+	if is_rotated and item_data.icon != null:
 		# Show the full icon pre-rotated 90° CW to match the swapped footprint
 		var img: Image = item_data.icon.get_image().duplicate()
 		img.rotate_90(CLOCKWISE)

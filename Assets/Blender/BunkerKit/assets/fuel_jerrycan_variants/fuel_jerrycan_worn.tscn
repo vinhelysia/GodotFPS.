@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/fuel_jerrycan.glb" id="1"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/fuel_jerrycan_variants/fuel_jerrycan_worn.tres" id="2"]
+
+[node name="fuel_jerrycan_worn" instance=ExtResource("1")]
+
+[node name="FuelJerrycanMesh" parent="FuelJerrycan"]
+surface_material_override/0 = ExtResource("2")

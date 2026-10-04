@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/kalo_cola.glb" id="1"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/kalo_cola_variants/kalo_cola_worn.tres" id="2"]
+
+[node name="kalo_cola_worn" instance=ExtResource("1")]
+
+[node name="kalo_cola_Mesh" parent="kalo_cola"]
+surface_material_override/0 = ExtResource("2")

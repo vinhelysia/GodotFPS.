@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/improvised_water_filter.glb" id="1"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/improvised_water_filter_variants/improvised_water_filter_worn.tres" id="2"]
+
+[node name="ImprovisedWaterFilter_worn" instance=ExtResource("1")]
+
+[node name="WaterFilterBody" parent="ImprovisedWaterFilter"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="WaterFilterTapLever" parent="ImprovisedWaterFilter/WaterFilterTapPivot"]
+surface_material_override/0 = ExtResource("2")

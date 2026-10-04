@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/water_bottle_variants/water_bottle_worn_albedo.png" id="1_otkso"]
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/water_bottle_variants/water_bottle_worn_orm.png" id="2_oi8o3"]
+
+[resource]
+resource_name = "water_bottle_worn"
+albedo_texture = ExtResource("1_otkso")
+metallic = 1.0
+metallic_texture = ExtResource("2_oi8o3")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_oi8o3")
+roughness_texture_channel = 1
+ao_enabled = true
+ao_texture = ExtResource("2_oi8o3")

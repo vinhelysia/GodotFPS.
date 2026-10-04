@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/mesh_gun_locker.glb" id="1"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/mesh_gun_locker_variants/worn_teal.tres" id="2"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/mesh_gun_locker_variants/worn_steel.tres" id="3"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/mesh_gun_locker_variants/worn_dark.tres" id="4"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/mesh_gun_locker_variants/worn_ochre.tres" id="5"]
+
+[node name="MeshGunLockerWorn" instance=ExtResource("1")]
+
+[node name="MeshGunLockerBolt" parent="MeshGunLocker/MeshGunDoorPivot/MeshGunBoltPivot"]
+surface_material_override/0 = ExtResource("3")
+
+[node name="MeshGunLockerHandle" parent="MeshGunLocker/MeshGunDoorPivot/MeshGunHandlePivot"]
+surface_material_override/0 = ExtResource("3")
+
+[node name="MeshGunLockerDoor" parent="MeshGunLocker/MeshGunDoorPivot"]
+surface_material_override/0 = ExtResource("2")
+surface_material_override/1 = ExtResource("3")
+surface_material_override/2 = ExtResource("4")
+surface_material_override/3 = ExtResource("5")
+
+[node name="MeshGunLockerBody" parent="MeshGunLocker"]
+surface_material_override/0 = ExtResource("2")
+surface_material_override/1 = ExtResource("3")
+surface_material_override/2 = ExtResource("4")

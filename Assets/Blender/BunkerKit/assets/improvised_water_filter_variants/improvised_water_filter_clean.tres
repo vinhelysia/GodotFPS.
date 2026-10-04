@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/improvised_water_filter_variants/improvised_water_filter_clean_albedo.png" id="1_pwo1k"]
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/improvised_water_filter_variants/improvised_water_filter_clean_orm.png" id="2_th5fq"]
+
+[resource]
+resource_name = "ImprovisedWaterFilter_clean"
+albedo_texture = ExtResource("1_pwo1k")
+metallic = 1.0
+metallic_texture = ExtResource("2_th5fq")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_th5fq")
+roughness_texture_channel = 1
+texture_repeat = false
+metadata/extras = {
+"coverage_percent": 0.0,
+"wear_seed": 617
+}
+metadata/_gltf_primary_texture_coord = 0

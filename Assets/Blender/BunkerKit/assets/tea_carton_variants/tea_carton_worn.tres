@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/tea_carton_variants/tea_carton_worn_albedo.png" id="1_pe6aq"]
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/tea_carton_variants/tea_carton_worn_orm.png" id="2_1kb67"]
+
+[resource]
+resource_name = "tea_carton_worn"
+albedo_texture = ExtResource("1_pe6aq")
+metallic = 1.0
+metallic_texture = ExtResource("2_1kb67")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_1kb67")
+roughness_texture_channel = 1
+ao_enabled = true
+ao_texture = ExtResource("2_1kb67")

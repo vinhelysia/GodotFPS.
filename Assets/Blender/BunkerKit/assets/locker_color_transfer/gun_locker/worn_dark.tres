@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/locker_color_transfer/gun_locker_worn_albedo.png" id="1_d8gep"]
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/gun_locker_variants/gun_locker_worn_orm.png" id="2_vrl13"]
+
+[resource]
+resource_name = "BK_Dark_Gun_worn"
+cull_mode = 2
+albedo_texture = ExtResource("1_d8gep")
+metallic = 1.0
+metallic_texture = ExtResource("2_vrl13")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_vrl13")
+roughness_texture_channel = 1
+texture_repeat = false
+metadata/extras = {
+"wear_coverage_percent": 28.0,
+"wear_seed": 84.0
+}
+metadata/_gltf_primary_texture_coord = 0

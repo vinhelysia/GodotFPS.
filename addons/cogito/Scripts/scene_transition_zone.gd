@@ -34,8 +34,8 @@ func transition_to_next_scene():
 	
 	CogitoSceneManager.is_currently_loading = true
 	
-	CogitoSceneManager.fade_out()
-	await CogitoSceneManager.fade_finished
+	# Wait for this blackout, not another fade's shared completion signal.
+	await CogitoSceneManager.fade_out()
 	
 	# CogitoSceneManager.load_next_scene(path_to_new_scene, target_connector, "temp", CogitoSceneManager.CogitoSceneLoadMode.TEMP)
 	CogitoSceneManager.load_next_scene(target_scene_path, target_connector, "temp", CogitoSceneManager.CogitoSceneLoadMode.TEMP)

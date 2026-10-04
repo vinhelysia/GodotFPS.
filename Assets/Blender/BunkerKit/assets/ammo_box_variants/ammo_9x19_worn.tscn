@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/ammo_9x19.glb" id="1"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/ammo_box_variants/ammo_9x19_worn.tres" id="2"]
+
+[node name="ammo_9x19_worn" instance=ExtResource("1")]
+
+[node name="ammo_9x19_Mesh" parent="ammo_9x19"]
+surface_material_override/0 = ExtResource("2")

@@ -21,6 +21,7 @@ signal death()
 
 var parent_position : Vector3
 var parent_rotation : Vector3
+var _death_handled: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -31,6 +32,8 @@ func _ready() -> void:
 
 
 func on_health_change(_health_name:String, _health_current:float, _health_max:float, has_increased:bool):
+	if _health_current > 0.0:
+		_death_handled = false
 	if !has_increased:
 		damage_taken.emit()
 		if sound_on_hit:
@@ -40,6 +43,10 @@ func on_health_change(_health_name:String, _health_current:float, _health_max:fl
 
 
 func on_death(_attribute_name:String, _value_current:float, _value_max:float):
+	if _death_handled:
+		return
+	# Latch before signals: another damage callback can run before the parent is freed.
+	_death_handled = true
 	death.emit()
 	parent_position = get_parent().global_position
 	parent_rotation = get_parent().global_rotation

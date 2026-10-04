@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/olive_storage_box.glb" id="1"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/olive_storage_box_variants/olive_storage_box_used.tres" id="2"]
+
+[node name="OliveStorageBox_used" instance=ExtResource("1")]
+
+[node name="StorageBoxBody" parent="OliveStorageBox"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="StorageBoxLatch1" parent="OliveStorageBox/StorageBoxLatch1Pivot"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="StorageBoxLatch2" parent="OliveStorageBox/StorageBoxLatch2Pivot"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="StorageBoxLid" parent="OliveStorageBox/StorageBoxLidPivot"]
+surface_material_override/0 = ExtResource("2")

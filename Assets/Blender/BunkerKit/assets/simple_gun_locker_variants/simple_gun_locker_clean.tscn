@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/simple_gun_locker.glb" id="1"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/simple_gun_locker_variants/simple_gun_locker_clean.tres" id="2"]
+
+[node name="SimpleGunLocker_clean" instance=ExtResource("1")]
+
+[node name="SimpleGunLockerBolt" parent="SimpleGunLocker/SimpleGunDoorPivot/SimpleGunBoltPivot"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="SimpleGunLockerDoor" parent="SimpleGunLocker/SimpleGunDoorPivot"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="SimpleGunLockerBody" parent="SimpleGunLocker"]
+surface_material_override/0 = ExtResource("2")

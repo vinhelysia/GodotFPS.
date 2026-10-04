@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://bij4uaq0qtu4c"]
+
+[sub_resource type="StandardMaterial3D" id="Mat_Wood"]
+albedo_color = Color(0.29, 0.27, 0.23, 1)
+roughness = 0.86
+
+[sub_resource type="BoxMesh" id="Mesh_1"]
+material = SubResource("Mat_Wood")
+size = Vector3(2.5, 0.08, 1.15)
+
+[sub_resource type="BoxShape3D" id="Shape_1"]
+size = Vector3(2.5, 0.08, 1.15)
+
+[sub_resource type="StandardMaterial3D" id="Mat_Steel"]
+albedo_color = Color(0.17, 0.21, 0.22, 1)
+roughness = 0.86
+
+[sub_resource type="BoxMesh" id="Mesh_2"]
+material = SubResource("Mat_Steel")
+size = Vector3(0.09, 0.92, 0.09)
+
+[sub_resource type="BoxShape3D" id="Shape_2"]
+size = Vector3(0.09, 0.92, 0.09)
+
+[sub_resource type="BoxMesh" id="Mesh_3"]
+material = SubResource("Mat_Steel")
+size = Vector3(0.07, 0.09, 0.95)
+
+[sub_resource type="BoxMesh" id="Mesh_4"]
+material = SubResource("Mat_Steel")
+size = Vector3(2.3, 0.09, 0.07)
+
+[node name="PackingBench" type="Node3D" unique_id=828453634]
+
+[node name="Top" type="MeshInstance3D" parent="." unique_id=483228690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.96, 0)
+mesh = SubResource("Mesh_1")
+
+[node name="TopBlocker" type="StaticBody3D" parent="." unique_id=298892892]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.96, 0)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TopBlocker" unique_id=1750729902]
+shape = SubResource("Shape_1")
+
+[node name="LeftRearLeg" type="MeshInstance3D" parent="." unique_id=1104354654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1500001, 0.46, -0.47500038)
+mesh = SubResource("Mesh_2")
+
+[node name="LeftRearLegBlocker" type="StaticBody3D" parent="." unique_id=2096869865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1500001, 0.46, -0.47500038)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LeftRearLegBlocker" unique_id=1265449171]
+shape = SubResource("Shape_2")
+
+[node name="LeftFrontLeg" type="MeshInstance3D" parent="." unique_id=1347269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1500001, 0.46, 0.4749999)
+mesh = SubResource("Mesh_2")
+
+[node name="LeftFrontLegBlocker" type="StaticBody3D" parent="." unique_id=1364320686]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1500001, 0.46, 0.4749999)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LeftFrontLegBlocker" unique_id=696058113]
+shape = SubResource("Shape_2")
+
+[node name="LeftLowerTie" type="MeshInstance3D" parent="." unique_id=8475075]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1500001, 0.2, 0)
+mesh = SubResource("Mesh_3")
+
+[node name="RightRearLeg" type="MeshInstance3D" parent="." unique_id=99078881]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1500001, 0.46, -0.47500038)
+mesh = SubResource("Mesh_2")
+
+[node name="RightRearLegBlocker" type="StaticBody3D" parent="." unique_id=698298136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1500001, 0.46, -0.47500038)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RightRearLegBlocker" unique_id=1703675287]
+shape = SubResource("Shape_2")
+
+[node name="RightFrontLeg" type="MeshInstance3D" parent="." unique_id=729448664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1500001, 0.46, 0.4749999)
+mesh = SubResource("Mesh_2")
+
+[node name="RightFrontLegBlocker" type="StaticBody3D" parent="." unique_id=2127269843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1500001, 0.46, 0.4749999)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RightFrontLegBlocker" unique_id=1121964945]
+shape = SubResource("Shape_2")
+
+[node name="RightLowerTie" type="MeshInstance3D" parent="." unique_id=1832398094]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1500001, 0.2, 0)
+mesh = SubResource("Mesh_3")
+
+[node name="RearTie" type="MeshInstance3D" parent="." unique_id=639161651]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, -0.47500038)
+mesh = SubResource("Mesh_4")

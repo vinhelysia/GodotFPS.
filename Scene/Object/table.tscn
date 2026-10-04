@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://cwsslwrqf2203"]
+
+[sub_resource type="StandardMaterial3D" id="Mat_Wood"]
+albedo_color = Color(0.29, 0.27, 0.23, 1)
+roughness = 0.86
+
+[sub_resource type="BoxMesh" id="BoxMesh_fqws2"]
+material = SubResource("Mat_Wood")
+size = Vector3(2.7, 0.08, 1.15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jmvd4"]
+size = Vector3(2.7, 0.08, 1.15)
+
+[sub_resource type="StandardMaterial3D" id="Mat_Steel"]
+albedo_color = Color(0.17, 0.21, 0.22, 1)
+roughness = 0.86
+
+[sub_resource type="BoxMesh" id="BoxMesh_ty283"]
+material = SubResource("Mat_Steel")
+size = Vector3(0.09, 0.92, 0.09)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pryrb"]
+size = Vector3(0.09, 0.92, 0.09)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6tx2l"]
+material = SubResource("Mat_Steel")
+size = Vector3(0.07, 0.09, 0.95)
+
+[sub_resource type="BoxMesh" id="BoxMesh_u2ryq"]
+material = SubResource("Mat_Steel")
+size = Vector3(2.5, 0.09, 0.07)
+
+[node name="Table" type="Node3D" unique_id=1769800870]
+
+[node name="Top" type="MeshInstance3D" parent="." unique_id=1807519405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.030664444, 0.96, 0.041378528)
+mesh = SubResource("BoxMesh_fqws2")
+
+[node name="TopBlocker" type="StaticBody3D" parent="." unique_id=1474027401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.030664444, 0.96, 0.041378528)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TopBlocker" unique_id=1592866724]
+shape = SubResource("BoxShape3D_jmvd4")
+
+[node name="LeftRearLeg" type="MeshInstance3D" parent="." unique_id=221992408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2193356, 0.46, -0.43362138)
+mesh = SubResource("BoxMesh_ty283")
+
+[node name="LeftRearLegBlocker" type="StaticBody3D" parent="." unique_id=344189654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2193356, 0.46, -0.43362138)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LeftRearLegBlocker" unique_id=2052052629]
+shape = SubResource("BoxShape3D_pryrb")
+
+[node name="LeftFrontLeg" type="MeshInstance3D" parent="." unique_id=501730335]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2193356, 0.46, 0.5163784)
+mesh = SubResource("BoxMesh_ty283")
+
+[node name="LeftFrontLegBlocker" type="StaticBody3D" parent="." unique_id=891153370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2193356, 0.46, 0.5163784)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LeftFrontLegBlocker" unique_id=1353261213]
+shape = SubResource("BoxShape3D_pryrb")
+
+[node name="LeftLowerTie" type="MeshInstance3D" parent="." unique_id=1043363865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2193356, 0.2, 0.041378528)
+mesh = SubResource("BoxMesh_6tx2l")
+
+[node name="RightRearLeg" type="MeshInstance3D" parent="." unique_id=830560441]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2806644, 0.46, -0.43362138)
+mesh = SubResource("BoxMesh_ty283")
+
+[node name="RightRearLegBlocker" type="StaticBody3D" parent="." unique_id=1722591626]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2806644, 0.46, -0.43362138)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RightRearLegBlocker" unique_id=86013624]
+shape = SubResource("BoxShape3D_pryrb")
+
+[node name="RightFrontLeg" type="MeshInstance3D" parent="." unique_id=47389482]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2806644, 0.46, 0.5163784)
+mesh = SubResource("BoxMesh_ty283")
+
+[node name="RightFrontLegBlocker" type="StaticBody3D" parent="." unique_id=887822825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2806644, 0.46, 0.5163784)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RightFrontLegBlocker" unique_id=836097070]
+shape = SubResource("BoxShape3D_pryrb")
+
+[node name="RightLowerTie" type="MeshInstance3D" parent="." unique_id=1721717415]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2806644, 0.2, 0.041378528)
+mesh = SubResource("BoxMesh_6tx2l")
+
+[node name="RearTie" type="MeshInstance3D" parent="." unique_id=276672441]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.030664444, 0.7, -0.43362138)
+mesh = SubResource("BoxMesh_u2ryq")

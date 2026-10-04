@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/control_console_variants/control_console_used.tscn" id="Prop_1"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/improvised_water_filter_variants/improvised_water_filter_clean.tscn" id="Prop_2"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/rubble_cluster.glb" id="Prop_3"]
+
+[node name="ServiceDressing" type="Node3D"]
+
+[node name="UtilityConsole" parent="." instance=ExtResource("Prop_1")]
+position = Vector3(6.92, 0, 3.15)
+rotation = Vector3(0, -1.570796, 0)
+
+[node name="WaterFilter" parent="." instance=ExtResource("Prop_2")]
+position = Vector3(6.62, 0, 4.85)
+rotation = Vector3(0, -1.570796, 0)
+
+[node name="ServiceRubble" parent="." instance=ExtResource("Prop_3")]
+position = Vector3(6.68, 0, 7.3)

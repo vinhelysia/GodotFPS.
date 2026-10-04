@@ -1,0 +1,9 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/duct_straight_4m.glb" id="1"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/light_used_variants/duct_straight_4m_used_3.tres" id="2"]
+
+[node name="duct_straight_4m_used_3" instance=ExtResource("1")]
+
+[node name="duct_straight_4m" parent="."]
+surface_material_override/0 = ExtResource("2")

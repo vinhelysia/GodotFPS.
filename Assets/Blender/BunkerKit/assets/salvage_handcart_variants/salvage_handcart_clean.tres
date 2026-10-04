@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/salvage_handcart_variants/salvage_handcart_clean_albedo.png" id="1_e6i5l"]
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/salvage_handcart_variants/salvage_handcart_clean_orm.png" id="2_t8r67"]
+
+[resource]
+resource_name = "SalvageHandcart_clean"
+albedo_texture = ExtResource("1_e6i5l")
+metallic = 1.0
+metallic_texture = ExtResource("2_t8r67")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_t8r67")
+roughness_texture_channel = 1
+texture_repeat = false
+metadata/extras = {
+"coverage_percent": 0.0,
+"wear_seed": 617
+}
+metadata/_gltf_primary_texture_coord = 0

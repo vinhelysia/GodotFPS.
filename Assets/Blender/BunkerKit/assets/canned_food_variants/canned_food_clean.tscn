@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/canned_food.glb" id="1"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/canned_food_variants/canned_food_clean.tres" id="2"]
+
+[node name="canned_food_clean" instance=ExtResource("1")]
+
+[node name="canned_food_Mesh" parent="canned_food"]
+surface_material_override/0 = ExtResource("2")

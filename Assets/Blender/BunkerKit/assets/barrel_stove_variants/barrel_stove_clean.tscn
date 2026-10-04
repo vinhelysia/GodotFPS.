@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/barrel_stove.glb" id="1"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/barrel_stove_variants/barrel_stove_clean.tres" id="2"]
+
+[node name="BarrelStove_clean" instance=ExtResource("1")]
+
+[node name="BarrelStoveBody" parent="BarrelStove"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="BarrelStoveDoor" parent="BarrelStove/StoveDoorPivot"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="BarrelStoveLatch" parent="BarrelStove/StoveDoorPivot/StoveLatchPivot"]
+surface_material_override/0 = ExtResource("2")

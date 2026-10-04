@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/portable_generator.glb" id="1"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/portable_generator_variants/portable_generator_clean.tres" id="2"]
+
+[node name="portable_generator_clean" instance=ExtResource("1")]
+
+[node name="PortableGeneratorMesh" parent="PortableGenerator"]
+surface_material_override/0 = ExtResource("2")

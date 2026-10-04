@@ -1,0 +1,392 @@
+[gd_scene format=3 uid="uid://cvgjeoalig4it"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/mesh_gun_locker_variants/mesh_gun_locker_used.tscn" id="Prop_1"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/simple_gun_locker_variants/simple_gun_locker_used.tscn" id="Prop_2"]
+[ext_resource type="PackedScene" uid="uid://bly0cl0urx13k" path="res://Assets/Blender/BunkerKit/assets/steel_locker.glb" id="Prop_3"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/weapon_case_variants/weapon_case_used.tscn" id="Prop_4"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/magazine_case_variants/magazine_case_used.tscn" id="Prop_5"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/ammo_box_variants/ammo_9x19_used.tscn" id="Prop_6"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/ammo_box_variants/ammo_556x45_used.tscn" id="Prop_7"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/ammo_box_variants/ammo_762x39_used.tscn" id="Prop_8"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/ammo_box_variants/ammo_762x51_used.tscn" id="Prop_9"]
+[ext_resource type="PackedScene" uid="uid://5yrvdk0hbvh1" path="res://Assets/Blender/BunkerKit/assets/metal_toolbox.glb" id="Prop_10"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/anvil_stump_variants/anvil_stump_used.tscn" id="Prop_11"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/portable_generator_variants/portable_generator_used.tscn" id="Prop_12"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/fuel_jerrycan_variants/fuel_jerrycan_used.tscn" id="Prop_13"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/barrel_stove_variants/barrel_stove_used.tscn" id="Prop_14"]
+[ext_resource type="PackedScene" uid="uid://b0e8lj7k6ndb0" path="res://Assets/Blender/BunkerKit/assets/medical_box.glb" id="Prop_15"]
+[ext_resource type="PackedScene" uid="uid://dl0guhppw1ahm" path="res://Assets/Blender/BunkerKit/assets/water_bottle.glb" id="Prop_16"]
+[ext_resource type="PackedScene" uid="uid://b0talo6xbp604" path="res://Assets/Blender/BunkerKit/assets/canned_food.glb" id="Prop_17"]
+[ext_resource type="PackedScene" uid="uid://c4s87va3wh4hb" path="res://Assets/Blender/BunkerKit/assets/canned_meat_rect.glb" id="Prop_18"]
+[ext_resource type="PackedScene" uid="uid://u5nrkptbrl3k" path="res://Assets/Blender/BunkerKit/assets/ration_biscuits.glb" id="Prop_19"]
+[ext_resource type="PackedScene" uid="uid://cjypdfmb6kv0u" path="res://Assets/Blender/BunkerKit/assets/tea_carton.glb" id="Prop_20"]
+[ext_resource type="PackedScene" uid="uid://dw8ypn54e0nh5" path="res://Assets/Blender/BunkerKit/assets/coffee_jar.glb" id="Prop_21"]
+[ext_resource type="PackedScene" uid="uid://dsbn41s1jiwgm" path="res://Assets/Blender/BunkerKit/assets/kalo_cola.glb" id="Prop_22"]
+[ext_resource type="PackedScene" uid="uid://c1rrhoqp1kjdv" path="res://Assets/Blender/BunkerKit/assets/salt_bag.glb" id="Prop_23"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/control_console_variants/control_console_used.tscn" id="Prop_24"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/improvised_water_filter_variants/improvised_water_filter_used.tscn" id="Prop_25"]
+[ext_resource type="PackedScene" uid="uid://bhsxm71yxa3aj" path="res://Assets/Blender/BunkerKit/assets/rubble_cluster.glb" id="Prop_26"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/salvage_handcart_variants/salvage_handcart_used.tscn" id="Prop_27"]
+
+[sub_resource type="StandardMaterial3D" id="Mat_Wood"]
+albedo_color = Color(0.29, 0.27, 0.23, 1)
+roughness = 0.86
+
+[sub_resource type="BoxMesh" id="Mesh_1"]
+material = SubResource("Mat_Wood")
+size = Vector3(2.5, 0.08, 1.15)
+
+[sub_resource type="BoxShape3D" id="Shape_1"]
+size = Vector3(2.5, 0.08, 1.15)
+
+[sub_resource type="StandardMaterial3D" id="Mat_Steel"]
+albedo_color = Color(0.17, 0.21, 0.22, 1)
+roughness = 0.86
+
+[sub_resource type="BoxMesh" id="Mesh_2"]
+material = SubResource("Mat_Steel")
+size = Vector3(0.09, 0.92, 0.09)
+
+[sub_resource type="BoxShape3D" id="Shape_2"]
+size = Vector3(0.09, 0.92, 0.09)
+
+[sub_resource type="BoxMesh" id="Mesh_3"]
+material = SubResource("Mat_Steel")
+size = Vector3(0.07, 0.09, 0.95)
+
+[sub_resource type="BoxMesh" id="Mesh_4"]
+material = SubResource("Mat_Steel")
+size = Vector3(2.3, 0.09, 0.07)
+
+[sub_resource type="BoxMesh" id="Mesh_5"]
+material = SubResource("Mat_Wood")
+size = Vector3(2.65, 0.08, 1)
+
+[sub_resource type="BoxShape3D" id="Shape_3"]
+size = Vector3(2.65, 0.08, 1)
+
+[sub_resource type="BoxMesh" id="Mesh_6"]
+material = SubResource("Mat_Steel")
+size = Vector3(0.07, 0.09, 0.8)
+
+[sub_resource type="BoxMesh" id="Mesh_7"]
+material = SubResource("Mat_Steel")
+size = Vector3(2.45, 0.09, 0.07)
+
+[sub_resource type="StandardMaterial3D" id="Mat_Shelf"]
+albedo_color = Color(0.25, 0.33, 0.32, 1)
+roughness = 0.86
+
+[sub_resource type="BoxMesh" id="Mesh_8"]
+material = SubResource("Mat_Shelf")
+size = Vector3(2.4, 0.05, 0.8)
+
+[sub_resource type="BoxShape3D" id="Shape_4"]
+size = Vector3(2.4, 0.05, 0.8)
+
+[sub_resource type="BoxMesh" id="Mesh_9"]
+material = SubResource("Mat_Steel")
+size = Vector3(0.065, 1.94, 0.065)
+
+[sub_resource type="BoxShape3D" id="Shape_5"]
+size = Vector3(0.065, 1.94, 0.065)
+
+[node name="HubDressing" type="Node3D" unique_id=758386794]
+
+[node name="MeshGunLocker" parent="." unique_id=405247939 instance=ExtResource("Prop_1")]
+transform = Transform3D(3.4007618e-07, 0, 1.0833334, 0, 1.0833334, 0, -1.0833334, 0, 3.4007618e-07, -7.43, 0, -4.1)
+
+[node name="SimpleGunLocker" parent="." unique_id=499461513 instance=ExtResource("Prop_2")]
+transform = Transform3D(3.825857e-07, 0, 1.21875, 0, 1.21875, 0, -1.21875, 0, 3.825857e-07, -7.17, 0, -2.7)
+
+[node name="SteelLocker" parent="." unique_id=1296257515 instance=ExtResource("Prop_3")]
+transform = Transform3D(3.4007618e-07, 0, 1.0833334, 0, 1.0833334, 0, -1.0833334, 0, 3.4007618e-07, -7.43, 0, -0.95)
+
+[node name="PackingBench" type="Node3D" parent="." unique_id=1788565027]
+
+[node name="Top" type="MeshInstance3D" parent="PackingBench" unique_id=1811113582]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9, 0.96, -5.7)
+mesh = SubResource("Mesh_1")
+
+[node name="TopBlocker" type="StaticBody3D" parent="PackingBench" unique_id=1131590018]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9, 0.96, -5.7)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PackingBench/TopBlocker" unique_id=1301698733]
+shape = SubResource("Shape_1")
+
+[node name="LeftRearLeg" type="MeshInstance3D" parent="PackingBench" unique_id=1764005937]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.05, 0.46, -6.175)
+mesh = SubResource("Mesh_2")
+
+[node name="LeftRearLegBlocker" type="StaticBody3D" parent="PackingBench" unique_id=899991328]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.05, 0.46, -6.175)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PackingBench/LeftRearLegBlocker" unique_id=1126642386]
+shape = SubResource("Shape_2")
+
+[node name="LeftFrontLeg" type="MeshInstance3D" parent="PackingBench" unique_id=622575262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.05, 0.46, -5.225)
+mesh = SubResource("Mesh_2")
+
+[node name="LeftFrontLegBlocker" type="StaticBody3D" parent="PackingBench" unique_id=570661631]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.05, 0.46, -5.225)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PackingBench/LeftFrontLegBlocker" unique_id=1905384481]
+shape = SubResource("Shape_2")
+
+[node name="LeftLowerTie" type="MeshInstance3D" parent="PackingBench" unique_id=1175948519]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.05, 0.2, -5.7)
+mesh = SubResource("Mesh_3")
+
+[node name="RightRearLeg" type="MeshInstance3D" parent="PackingBench" unique_id=599889794]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 0.46, -6.175)
+mesh = SubResource("Mesh_2")
+
+[node name="RightRearLegBlocker" type="StaticBody3D" parent="PackingBench" unique_id=244029891]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 0.46, -6.175)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PackingBench/RightRearLegBlocker" unique_id=2100824830]
+shape = SubResource("Shape_2")
+
+[node name="RightFrontLeg" type="MeshInstance3D" parent="PackingBench" unique_id=818144354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 0.46, -5.225)
+mesh = SubResource("Mesh_2")
+
+[node name="RightFrontLegBlocker" type="StaticBody3D" parent="PackingBench" unique_id=1951425588]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 0.46, -5.225)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PackingBench/RightFrontLegBlocker" unique_id=938200393]
+shape = SubResource("Shape_2")
+
+[node name="RightLowerTie" type="MeshInstance3D" parent="PackingBench" unique_id=599021368]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 0.2, -5.7)
+mesh = SubResource("Mesh_3")
+
+[node name="RearTie" type="MeshInstance3D" parent="PackingBench" unique_id=1757695884]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9, 0.7, -6.175)
+mesh = SubResource("Mesh_4")
+
+[node name="RifleCase" parent="." unique_id=589746607 instance=ExtResource("Prop_4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.45, 1, -5.43)
+
+[node name="MagazineCase" parent="." unique_id=2050625239 instance=ExtResource("Prop_5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.15, 1, -5.92)
+
+[node name="ammo_9x19" parent="." unique_id=339921526 instance=ExtResource("Prop_6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.95, 1, -6.05)
+
+[node name="ammo_556x45" parent="." unique_id=986503698 instance=ExtResource("Prop_7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.55, 1, -6.05)
+
+[node name="ammo_762x39" parent="." unique_id=971073122 instance=ExtResource("Prop_8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.15, 1, -6.05)
+
+[node name="ammo_762x51" parent="." unique_id=103996175 instance=ExtResource("Prop_9")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 1, -6.05)
+
+[node name="Workbench" type="Node3D" parent="." unique_id=1500962503]
+
+[node name="Top" type="MeshInstance3D" parent="Workbench" unique_id=1025165611]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6, 0.96, 5.8)
+mesh = SubResource("Mesh_5")
+
+[node name="TopBlocker" type="StaticBody3D" parent="Workbench" unique_id=1736348567]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6, 0.96, 5.8)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Workbench/TopBlocker" unique_id=1612452706]
+shape = SubResource("Shape_3")
+
+[node name="LeftRearLeg" type="MeshInstance3D" parent="Workbench" unique_id=530758507]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.825, 0.46, 5.4)
+mesh = SubResource("Mesh_2")
+
+[node name="LeftRearLegBlocker" type="StaticBody3D" parent="Workbench" unique_id=361317305]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.825, 0.46, 5.4)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Workbench/LeftRearLegBlocker" unique_id=1878391156]
+shape = SubResource("Shape_2")
+
+[node name="LeftFrontLeg" type="MeshInstance3D" parent="Workbench" unique_id=1320605282]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.825, 0.46, 6.2)
+mesh = SubResource("Mesh_2")
+
+[node name="LeftFrontLegBlocker" type="StaticBody3D" parent="Workbench" unique_id=1110003975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.825, 0.46, 6.2)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Workbench/LeftFrontLegBlocker" unique_id=125752493]
+shape = SubResource("Shape_2")
+
+[node name="LeftLowerTie" type="MeshInstance3D" parent="Workbench" unique_id=1477638806]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.825, 0.2, 5.8)
+mesh = SubResource("Mesh_6")
+
+[node name="RightRearLeg" type="MeshInstance3D" parent="Workbench" unique_id=2050990492]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.375, 0.46, 5.4)
+mesh = SubResource("Mesh_2")
+
+[node name="RightRearLegBlocker" type="StaticBody3D" parent="Workbench" unique_id=301335604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.375, 0.46, 5.4)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Workbench/RightRearLegBlocker" unique_id=828581213]
+shape = SubResource("Shape_2")
+
+[node name="RightFrontLeg" type="MeshInstance3D" parent="Workbench" unique_id=1426787033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.375, 0.46, 6.2)
+mesh = SubResource("Mesh_2")
+
+[node name="RightFrontLegBlocker" type="StaticBody3D" parent="Workbench" unique_id=857895593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.375, 0.46, 6.2)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Workbench/RightFrontLegBlocker" unique_id=1900077618]
+shape = SubResource("Shape_2")
+
+[node name="RightLowerTie" type="MeshInstance3D" parent="Workbench" unique_id=606754541]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.375, 0.2, 5.8)
+mesh = SubResource("Mesh_6")
+
+[node name="RearTie" type="MeshInstance3D" parent="Workbench" unique_id=461928838]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6, 0.7, 5.4)
+mesh = SubResource("Mesh_7")
+
+[node name="Toolbox" parent="." unique_id=801679119 instance=ExtResource("Prop_10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92, 1, 5.85)
+
+[node name="Anvil" parent="." unique_id=114665138 instance=ExtResource("Prop_11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, 5.8)
+
+[node name="Generator" parent="." unique_id=1734633698 instance=ExtResource("Prop_12")]
+transform = Transform3D(3.1391647e-07, 0, 1, 0, 1, 0, -1, 0, 3.1391647e-07, -6.25, 0, 3.1)
+
+[node name="FuelCan" parent="." unique_id=1394924798 instance=ExtResource("Prop_13")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1, 0, 3.1)
+
+[node name="ColdStove" parent="." unique_id=1397432101 instance=ExtResource("Prop_14")]
+transform = Transform3D(3.1391647e-07, 0, 1, 0, 1, 0, -1, 0, 3.1391647e-07, -7.15, 0, 4.4)
+
+[node name="SupplyShelf" type="Node3D" parent="." unique_id=767425878]
+
+[node name="LowerDeck" type="MeshInstance3D" parent="SupplyShelf" unique_id=1724023367]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.455, -6.35)
+mesh = SubResource("Mesh_8")
+
+[node name="LowerDeckBlocker" type="StaticBody3D" parent="SupplyShelf" unique_id=2003625297]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.455, -6.35)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SupplyShelf/LowerDeckBlocker" unique_id=763162920]
+shape = SubResource("Shape_4")
+
+[node name="MiddleDeck" type="MeshInstance3D" parent="SupplyShelf" unique_id=1408665804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.075, -6.35)
+mesh = SubResource("Mesh_8")
+
+[node name="MiddleDeckBlocker" type="StaticBody3D" parent="SupplyShelf" unique_id=803284991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.075, -6.35)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SupplyShelf/MiddleDeckBlocker" unique_id=1950111913]
+shape = SubResource("Shape_4")
+
+[node name="UpperDeck" type="MeshInstance3D" parent="SupplyShelf" unique_id=495465427]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.695, -6.35)
+mesh = SubResource("Mesh_8")
+
+[node name="UpperDeckBlocker" type="StaticBody3D" parent="SupplyShelf" unique_id=1285087457]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.695, -6.35)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SupplyShelf/UpperDeckBlocker" unique_id=583539760]
+shape = SubResource("Shape_4")
+
+[node name="LeftRearPost" type="MeshInstance3D" parent="SupplyShelf" unique_id=598245109]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.88, 0.97, -6.68)
+mesh = SubResource("Mesh_9")
+
+[node name="LeftRearPostBlocker" type="StaticBody3D" parent="SupplyShelf" unique_id=377175743]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.88, 0.97, -6.68)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SupplyShelf/LeftRearPostBlocker" unique_id=1747464069]
+shape = SubResource("Shape_5")
+
+[node name="LeftFrontPost" type="MeshInstance3D" parent="SupplyShelf" unique_id=1884387685]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.88, 0.97, -6.02)
+mesh = SubResource("Mesh_9")
+
+[node name="LeftFrontPostBlocker" type="StaticBody3D" parent="SupplyShelf" unique_id=589289818]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.88, 0.97, -6.02)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SupplyShelf/LeftFrontPostBlocker" unique_id=457874953]
+shape = SubResource("Shape_5")
+
+[node name="RightRearPost" type="MeshInstance3D" parent="SupplyShelf" unique_id=1215751906]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.12, 0.97, -6.68)
+mesh = SubResource("Mesh_9")
+
+[node name="RightRearPostBlocker" type="StaticBody3D" parent="SupplyShelf" unique_id=394142816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.12, 0.97, -6.68)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SupplyShelf/RightRearPostBlocker" unique_id=1918031710]
+shape = SubResource("Shape_5")
+
+[node name="RightFrontPost" type="MeshInstance3D" parent="SupplyShelf" unique_id=1891799022]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.12, 0.97, -6.02)
+mesh = SubResource("Mesh_9")
+
+[node name="RightFrontPostBlocker" type="StaticBody3D" parent="SupplyShelf" unique_id=2096366628]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.12, 0.97, -6.02)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SupplyShelf/RightFrontPostBlocker" unique_id=692985995]
+shape = SubResource("Shape_5")
+
+[node name="MedicalKit" parent="." unique_id=187283275 instance=ExtResource("Prop_15")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.12, 1.1, -6.34)
+
+[node name="WaterBottle" parent="." unique_id=671415961 instance=ExtResource("Prop_16")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.62, 1.1, -6.34)
+
+[node name="CannedFood" parent="." unique_id=1301676693 instance=ExtResource("Prop_17")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.06, 1.1, -6.34)
+
+[node name="CannedMeat" parent="." unique_id=905680955 instance=ExtResource("Prop_18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.59, 1.1, -6.34)
+
+[node name="Biscuits" parent="." unique_id=241528040 instance=ExtResource("Prop_19")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.22, 1.72, -6.34)
+
+[node name="Tea" parent="." unique_id=745927724 instance=ExtResource("Prop_20")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.83, 1.72, -6.34)
+
+[node name="Coffee" parent="." unique_id=1489275475 instance=ExtResource("Prop_21")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.12, 1.72, -6.34)
+
+[node name="KaloDrink" parent="." unique_id=729808481 instance=ExtResource("Prop_22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 1.72, -6.34)
+
+[node name="Salt" parent="." unique_id=1207670639 instance=ExtResource("Prop_23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.94, 1.72, -6.34)
+
+[node name="UtilityConsole" parent="." unique_id=1451450396 instance=ExtResource("Prop_24")]
+transform = Transform3D(3.1391647e-07, 0, -1, 0, 1, 0, 1, 0, 3.1391647e-07, 6.92, 0, 3.15)
+
+[node name="WaterFilter" parent="." unique_id=1313878316 instance=ExtResource("Prop_25")]
+transform = Transform3D(3.1391647e-07, 0, -1, 0, 1, 0, 1, 0, 3.1391647e-07, 6.62, 0, 4.85)
+
+[node name="ServiceRubble" parent="." unique_id=408735238 instance=ExtResource("Prop_26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.68, 0, 7.3)
+
+[node name="SalvageHandcart" parent="." unique_id=376298783 instance=ExtResource("Prop_27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3, 0, 0.8)

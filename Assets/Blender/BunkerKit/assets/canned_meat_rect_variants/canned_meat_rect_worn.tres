@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/canned_meat_rect_variants/canned_meat_rect_worn_albedo.png" id="1_ctayy"]
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/canned_meat_rect_variants/canned_meat_rect_worn_orm.png" id="2_bj7qq"]
+
+[resource]
+resource_name = "canned_meat_rect_worn"
+albedo_texture = ExtResource("1_ctayy")
+metallic = 1.0
+metallic_texture = ExtResource("2_bj7qq")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_bj7qq")
+roughness_texture_channel = 1
+ao_enabled = true
+ao_texture = ExtResource("2_bj7qq")

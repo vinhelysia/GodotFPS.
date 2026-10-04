@@ -1,0 +1,5 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/bulkhead_light.glb" id="1_model"]
+
+[node name="BulkheadLight" instance=ExtResource("1_model")]

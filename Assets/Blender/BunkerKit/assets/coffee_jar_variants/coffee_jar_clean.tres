@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/coffee_jar_variants/coffee_jar_clean_albedo.png" id="1_qr4yk"]
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/coffee_jar_variants/coffee_jar_clean_orm.png" id="2_phe3x"]
+
+[resource]
+resource_name = "coffee_jar_clean"
+albedo_texture = ExtResource("1_qr4yk")
+metallic = 1.0
+metallic_texture = ExtResource("2_phe3x")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_phe3x")
+roughness_texture_channel = 1
+ao_enabled = true
+ao_texture = ExtResource("2_phe3x")

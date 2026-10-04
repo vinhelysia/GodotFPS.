@@ -49,6 +49,8 @@ func use_slot_data(index: int):
 
 
 func can_pick_up_slot_data(slot_data: InventorySlotPD) -> bool:
+	if not slot_data or not slot_data.inventory_item or slot_data.quantity <= 0:
+		return false
 	if is_instance_valid(owner) and ("equipment" in owner or owner.get("equipment") != null):
 		var equipment = owner.get("equipment")
 		if equipment:
@@ -80,6 +82,8 @@ func can_pick_up_slot_data(slot_data: InventorySlotPD) -> bool:
 
 
 func pick_up_slot_data(slot_data: InventorySlotPD) -> bool:
+	if not slot_data or not slot_data.inventory_item or slot_data.quantity <= 0:
+		return false
 	if is_instance_valid(owner) and ("equipment" in owner or owner.get("equipment") != null):
 		var equipment = owner.get("equipment")
 		if equipment:

@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/fuel_jerrycan_variants/fuel_jerrycan_clean_albedo.png" id="1_xnpwy"]
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/fuel_jerrycan_variants/fuel_jerrycan_clean_orm.png" id="2_1sjoc"]
+
+[resource]
+resource_name = "fuel_jerrycan_clean"
+cull_mode = 2
+albedo_texture = ExtResource("1_xnpwy")
+metallic = 1.0
+metallic_texture = ExtResource("2_1sjoc")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_1sjoc")
+roughness_texture_channel = 1
+texture_repeat = false
+metadata/extras = {
+"wear_coverage_percent": 22.0,
+"wear_seed": 417.0
+}
+metadata/_gltf_primary_texture_coord = 0

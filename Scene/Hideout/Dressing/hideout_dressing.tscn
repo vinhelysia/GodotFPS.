@@ -1,0 +1,19 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/Hideout/Dressing/armorydressing.tscn" id="1"]
+
+[ext_resource type="PackedScene" path="res://Scene/Hideout/Dressing/maintenancedressing.tscn" id="2"]
+
+[ext_resource type="PackedScene" path="res://Scene/Hideout/Dressing/provisionsdressing.tscn" id="3"]
+
+[ext_resource type="PackedScene" path="res://Scene/Hideout/Dressing/servicedressing.tscn" id="4"]
+
+[node name="HideoutDressing" type="Node3D"]
+
+[node name="ArmoryDressing" parent="." instance=ExtResource("1")]
+
+[node name="MaintenanceDressing" parent="." instance=ExtResource("2")]
+
+[node name="ProvisionsDressing" parent="." instance=ExtResource("3")]
+
+[node name="ServiceDressing" parent="." instance=ExtResource("4")]

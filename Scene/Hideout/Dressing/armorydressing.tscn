@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://b2uhxytj0q7fn"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/gun_locker_variants/gun_locker_used.tscn" id="Prop_1"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/mesh_gun_locker_variants/mesh_gun_locker_clean.tscn" id="Prop_2"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/simple_gun_locker_variants/simple_gun_locker_used.tscn" id="Prop_3"]
+[ext_resource type="PackedScene" uid="uid://bly0cl0urx13k" path="res://Assets/Blender/BunkerKit/assets/steel_locker.glb" id="Prop_4"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/weapon_case_variants/weapon_case_used.tscn" id="Prop_5"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/pistol_case_variants/pistol_case_clean.tscn" id="Prop_6"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/magazine_case_variants/magazine_case_used.tscn" id="Prop_7"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/ammo_box_variants/ammo_9x19_clean.tscn" id="Prop_8"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/ammo_box_variants/ammo_556x45_used.tscn" id="Prop_9"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/ammo_box_variants/ammo_762x39_clean.tscn" id="Prop_10"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/ammo_box_variants/ammo_762x51_used.tscn" id="Prop_11"]
+[ext_resource type="PackedScene" uid="uid://dsnqpuu4w8e4q" path="res://Assets/Blender/BunkerKit/assets/wood_pallet.glb" id="Prop_12"]
+[ext_resource type="PackedScene" uid="uid://dr2ktvult1dve" path="res://Assets/Blender/BunkerKit/assets/wood_crate.glb" id="Prop_13"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_26jog"]
+albedo_color = Color(0.29, 0.27, 0.23, 1)
+roughness = 0.86
+
+[sub_resource type="BoxMesh" id="Mesh_1"]
+material = SubResource("StandardMaterial3D_26jog")
+size = Vector3(2.7, 0.08, 1.15)
+
+[sub_resource type="BoxShape3D" id="Shape_1"]
+size = Vector3(2.7, 0.08, 1.15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gvidx"]
+albedo_color = Color(0.17, 0.21, 0.22, 1)
+roughness = 0.86
+
+[sub_resource type="BoxMesh" id="Mesh_2"]
+material = SubResource("StandardMaterial3D_gvidx")
+size = Vector3(0.09, 0.92, 0.09)
+
+[sub_resource type="BoxShape3D" id="Shape_2"]
+size = Vector3(0.09, 0.92, 0.09)
+
+[sub_resource type="BoxMesh" id="Mesh_3"]
+material = SubResource("StandardMaterial3D_gvidx")
+size = Vector3(0.07, 0.09, 0.95)
+
+[sub_resource type="BoxMesh" id="Mesh_4"]
+material = SubResource("StandardMaterial3D_gvidx")
+size = Vector3(2.5, 0.09, 0.07)
+
+[node name="ArmoryDressing" type="Node3D" unique_id=1374356353]
+
+[node name="GunLocker" parent="." unique_id=1301194494 instance=ExtResource("Prop_1")]
+transform = Transform3D(3.1391647e-07, 0, 1, 0, 1, 0, -1, 0, 3.1391647e-07, -7.43, 0, -6.65)
+
+[node name="MeshGunLocker" parent="." unique_id=167023382 instance=ExtResource("Prop_2")]
+transform = Transform3D(3.1391647e-07, 0, 1, 0, 1, 0, -1, 0, 3.1391647e-07, -7.43, 0, -5.4)
+
+[node name="SimpleGunLocker" parent="." unique_id=1971731200 instance=ExtResource("Prop_3")]
+transform = Transform3D(3.1391647e-07, 0, 1, 0, 1, 0, -1, 0, 3.1391647e-07, -7.17, 0, -4.15)
+
+[node name="SteelLocker" parent="." unique_id=1183877200 instance=ExtResource("Prop_4")]
+transform = Transform3D(3.1391647e-07, 0, 1, 0, 1, 0, -1, 0, 3.1391647e-07, -7.43, 0, -2.85)
+
+[node name="PackingBench" type="Node3D" parent="." unique_id=866070909]
+
+[node name="Top" type="MeshInstance3D" parent="PackingBench" unique_id=871806749]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25, 0.96, -5.65)
+mesh = SubResource("Mesh_1")
+
+[node name="TopBlocker" type="StaticBody3D" parent="PackingBench" unique_id=869639051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25, 0.96, -5.65)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PackingBench/TopBlocker" unique_id=604494872]
+shape = SubResource("Shape_1")
+
+[node name="LeftRearLeg" type="MeshInstance3D" parent="PackingBench" unique_id=1769189562]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0.46, -6.125)
+mesh = SubResource("Mesh_2")
+
+[node name="LeftRearLegBlocker" type="StaticBody3D" parent="PackingBench" unique_id=712947263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0.46, -6.125)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PackingBench/LeftRearLegBlocker" unique_id=718029077]
+shape = SubResource("Shape_2")
+
+[node name="LeftFrontLeg" type="MeshInstance3D" parent="PackingBench" unique_id=849344971]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0.46, -5.175)
+mesh = SubResource("Mesh_2")
+
+[node name="LeftFrontLegBlocker" type="StaticBody3D" parent="PackingBench" unique_id=1503502360]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0.46, -5.175)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PackingBench/LeftFrontLegBlocker" unique_id=1581903009]
+shape = SubResource("Shape_2")
+
+[node name="LeftLowerTie" type="MeshInstance3D" parent="PackingBench" unique_id=44571288]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0.2, -5.65)
+mesh = SubResource("Mesh_3")
+
+[node name="RightRearLeg" type="MeshInstance3D" parent="PackingBench" unique_id=1382896605]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.46, -6.125)
+mesh = SubResource("Mesh_2")
+
+[node name="RightRearLegBlocker" type="StaticBody3D" parent="PackingBench" unique_id=421154654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.46, -6.125)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PackingBench/RightRearLegBlocker" unique_id=1465825029]
+shape = SubResource("Shape_2")
+
+[node name="RightFrontLeg" type="MeshInstance3D" parent="PackingBench" unique_id=729775762]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.46, -5.175)
+mesh = SubResource("Mesh_2")
+
+[node name="RightFrontLegBlocker" type="StaticBody3D" parent="PackingBench" unique_id=1056498867]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.46, -5.175)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PackingBench/RightFrontLegBlocker" unique_id=864771871]
+shape = SubResource("Shape_2")
+
+[node name="RightLowerTie" type="MeshInstance3D" parent="PackingBench" unique_id=563337524]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.2, -5.65)
+mesh = SubResource("Mesh_3")
+
+[node name="RearTie" type="MeshInstance3D" parent="PackingBench" unique_id=173834805]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25, 0.7, -6.125)
+mesh = SubResource("Mesh_4")
+
+[node name="RifleCase" parent="." unique_id=1549388050 instance=ExtResource("Prop_5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.58, 1, -5.35)
+
+[node name="PistolCase" parent="." unique_id=1416529105 instance=ExtResource("Prop_6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.57, 1, -5.35)
+
+[node name="MagazineCase" parent="." unique_id=624195215 instance=ExtResource("Prop_7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1, -5.94)
+
+[node name="ammo_9x19" parent="." unique_id=1428436761 instance=ExtResource("Prop_8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.36, 1, -5.98)
+
+[node name="ammo_556x45" parent="." unique_id=1546934074 instance=ExtResource("Prop_9")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96, 1, -5.98)
+
+[node name="ammo_762x39" parent="." unique_id=1086297155 instance=ExtResource("Prop_10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.56, 1, -5.98)
+
+[node name="ammo_762x51" parent="." unique_id=1208735767 instance=ExtResource("Prop_11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.16, 1, -5.98)
+
+[node name="Pallet" parent="." unique_id=790737517 instance=ExtResource("Prop_12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7, 0, -1.45)
+
+[node name="SupplyCrate" parent="Pallet" unique_id=388428214 instance=ExtResource("Prop_13")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.205, 0)

@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://jlfu0qy01u5b"]
+
+[sub_resource type="StandardMaterial3D" id="Mat_Shelf"]
+albedo_color = Color(0.25, 0.33, 0.32, 1)
+roughness = 0.86
+
+[sub_resource type="BoxMesh" id="Mesh_8"]
+material = SubResource("Mat_Shelf")
+size = Vector3(2.4, 0.05, 0.8)
+
+[sub_resource type="BoxShape3D" id="Shape_4"]
+size = Vector3(2.4, 0.05, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="Mat_Steel"]
+albedo_color = Color(0.17, 0.21, 0.22, 1)
+roughness = 0.86
+
+[sub_resource type="BoxMesh" id="Mesh_9"]
+material = SubResource("Mat_Steel")
+size = Vector3(0.065, 1.94, 0.065)
+
+[sub_resource type="BoxShape3D" id="Shape_5"]
+size = Vector3(0.065, 1.94, 0.065)
+
+[node name="SupplyShelf" type="Node3D" unique_id=443061919]
+
+[node name="LowerDeck" type="MeshInstance3D" parent="." unique_id=1784462706]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.455, 0)
+mesh = SubResource("Mesh_8")
+
+[node name="LowerDeckBlocker" type="StaticBody3D" parent="." unique_id=1483017559]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.455, 0)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LowerDeckBlocker" unique_id=1097841805]
+shape = SubResource("Shape_4")
+
+[node name="MiddleDeck" type="MeshInstance3D" parent="." unique_id=1156483407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.075, 0)
+mesh = SubResource("Mesh_8")
+
+[node name="MiddleDeckBlocker" type="StaticBody3D" parent="." unique_id=935286329]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.075, 0)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MiddleDeckBlocker" unique_id=1204707305]
+shape = SubResource("Shape_4")
+
+[node name="UpperDeck" type="MeshInstance3D" parent="." unique_id=1772578787]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.695, 0)
+mesh = SubResource("Mesh_8")
+
+[node name="UpperDeckBlocker" type="StaticBody3D" parent="." unique_id=1438852225]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.695, 0)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="UpperDeckBlocker" unique_id=1716804738]
+shape = SubResource("Shape_4")
+
+[node name="LeftRearPost" type="MeshInstance3D" parent="." unique_id=602725806]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1199999, 0.97, -0.32999992)
+mesh = SubResource("Mesh_9")
+
+[node name="LeftRearPostBlocker" type="StaticBody3D" parent="." unique_id=971174056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1199999, 0.97, -0.32999992)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LeftRearPostBlocker" unique_id=1123747922]
+shape = SubResource("Shape_5")
+
+[node name="LeftFrontPost" type="MeshInstance3D" parent="." unique_id=53452474]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1199999, 0.97, 0.32999992)
+mesh = SubResource("Mesh_9")
+
+[node name="LeftFrontPostBlocker" type="StaticBody3D" parent="." unique_id=702897692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1199999, 0.97, 0.32999992)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LeftFrontPostBlocker" unique_id=1654656691]
+shape = SubResource("Shape_5")
+
+[node name="RightRearPost" type="MeshInstance3D" parent="." unique_id=1187184235]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1199999, 0.97, -0.32999992)
+mesh = SubResource("Mesh_9")
+
+[node name="RightRearPostBlocker" type="StaticBody3D" parent="." unique_id=668517256]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1199999, 0.97, -0.32999992)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RightRearPostBlocker" unique_id=1956454310]
+shape = SubResource("Shape_5")
+
+[node name="RightFrontPost" type="MeshInstance3D" parent="." unique_id=651271878]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1199999, 0.97, 0.32999992)
+mesh = SubResource("Mesh_9")
+
+[node name="RightFrontPostBlocker" type="StaticBody3D" parent="." unique_id=1943380791]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1199999, 0.97, 0.32999992)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RightFrontPostBlocker" unique_id=1603028577]
+shape = SubResource("Shape_5")

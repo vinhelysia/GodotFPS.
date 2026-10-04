@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/weapon_case.glb" id="1"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/weapon_case_variants/weapon_case_clean.tres" id="2"]
+
+[node name="WeaponCase_clean" instance=ExtResource("1")]
+
+[node name="WeaponCaseBody" parent="WeaponCase"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="WeaponCaseHandle" parent="WeaponCase/WeaponHandlePivot"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="WeaponCaseLatch1" parent="WeaponCase/WeaponLatch1Pivot"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="WeaponCaseLatch2" parent="WeaponCase/WeaponLatch2Pivot"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="WeaponCaseLatch3" parent="WeaponCase/WeaponLatch3Pivot"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="WeaponCaseLatch4" parent="WeaponCase/WeaponLatch4Pivot"]
+surface_material_override/0 = ExtResource("2")
+
+[node name="WeaponCaseLid" parent="WeaponCase/WeaponLidPivot"]
+surface_material_override/0 = ExtResource("2")

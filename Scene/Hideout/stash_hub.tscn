@@ -4,87 +4,108 @@
 [ext_resource type="PackedScene" uid="uid://kicjwmh02uwf" path="res://addons/cogito/PackedScenes/cogito_player.tscn" id="2_player"]
 [ext_resource type="PackedScene" uid="uid://3okedyf5glns" path="res://addons/cogito/PackedScenes/container.tscn" id="3_container"]
 [ext_resource type="Script" uid="uid://btnha2whsheir" path="res://addons/cogito/InventoryPD/cogito_inventory.gd" id="5_48b3i"]
-[ext_resource type="Texture2D" uid="uid://dlglkrh1yoht" path="res://addons/kenney_prototype_textures/light/texture_13.png" id="10_floor_tex"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/weapon_case_variants/weapon_case_used.tscn" id="8_ssyg2"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/gun_locker_variants/gun_locker_used.tscn" id="9_s1jli"]
+[ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/wood_pallet.tscn" id="9_s8q8v"]
+[ext_resource type="PackedScene" path="res://Scene/Hideout/Environment/hub_architecture.tscn" id="9_u5smi"]
+[ext_resource type="PackedScene" path="res://Scene/Hideout/Environment/hub_lighting.tscn" id="10_7hntb"]
+[ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/wood_crate.tscn" id="10_xbxu7"]
 [ext_resource type="Script" uid="uid://di15gqemrkk0x" path="res://addons/cogito/InventoryPD/CustomResources/InventorySlotPD.gd" id="11_7hntb"]
+[ext_resource type="PackedScene" uid="uid://cwsslwrqf2203" path="res://Scene/Object/table.tscn" id="12_kuuxs"]
 [ext_resource type="Script" uid="uid://cmt86kjfbkdge" path="res://Scripts/Inventory/pocket_inventory.gd" id="12_ssyg2"]
-[ext_resource type="PackedScene" path="res://Scene/Raid/deploy_button.tscn" id="13_deploy"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/mesh_gun_locker_variants/mesh_gun_locker_used.tscn" id="14_48xdp"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/pistol_case_variants/pistol_case_clean.tscn" id="14_s1jli"]
+[ext_resource type="PackedScene" uid="uid://dfqbbyfh171u2" path="res://Scene/Hideout/bunker_terminal.tscn" id="14_terminal"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/simple_gun_locker_variants/simple_gun_locker_used.tscn" id="15_u0676"]
+[ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/steel_locker.tscn" id="16_2653j"]
+[ext_resource type="PackedScene" uid="uid://bij4uaq0qtu4c" path="res://Scene/Props/BunkerKit/packing_bench.tscn" id="17_7p4p3"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/magazine_case_variants/magazine_case_used.tscn" id="19_5fbox"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/ammo_box_variants/ammo_9x19_used.tscn" id="20_5c36d"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/ammo_box_variants/ammo_556x45_used.tscn" id="21_w1dtd"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/ammo_box_variants/ammo_762x39_used.tscn" id="22_w3knw"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/ammo_box_variants/ammo_762x51_used.tscn" id="23_o8rnv"]
+[ext_resource type="PackedScene" uid="uid://5j4r3n1gtg4i" path="res://Scene/Props/BunkerKit/workbench.tscn" id="24_8nm6u"]
+[ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/metal_toolbox.tscn" id="25_3bxo8"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/anvil_stump_variants/anvil_stump_used.tscn" id="26_vrjc8"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/portable_generator_variants/portable_generator_used.tscn" id="27_titff"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/fuel_jerrycan_variants/fuel_jerrycan_used.tscn" id="28_ucxhd"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/barrel_stove_variants/barrel_stove_used.tscn" id="29_4u6if"]
+[ext_resource type="PackedScene" uid="uid://jlfu0qy01u5b" path="res://Scene/Props/BunkerKit/supply_shelf.tscn" id="30_w83kw"]
+[ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/medical_box.tscn" id="31_tjru6"]
+[ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/water_bottle.tscn" id="32_5da30"]
+[ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/canned_food.tscn" id="33_0e6ly"]
+[ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/canned_meat_rect.tscn" id="34_r8fu8"]
+[ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/ration_biscuits.tscn" id="35_me8mn"]
+[ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/tea_carton.tscn" id="36_7v5gc"]
+[ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/coffee_jar.tscn" id="37_8u8t0"]
+[ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/kalo_cola.tscn" id="38_v0k83"]
+[ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/salt_bag.tscn" id="39_emgle"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/control_console_variants/control_console_used.tscn" id="40_m116d"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/improvised_water_filter_variants/improvised_water_filter_used.tscn" id="41_jes8q"]
+[ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/rubble_cluster.tscn" id="42_ophah"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/salvage_handcart_variants/salvage_handcart_used.tscn" id="43_5c2q7"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hub"]
-sky_top_color = Color(0.35, 0.45, 0.55, 1)
-sky_horizon_color = Color(0.7, 0.72, 0.75, 1)
-ground_bottom_color = Color(0.2, 0.2, 0.22, 1)
-ground_horizon_color = Color(0.45, 0.45, 0.48, 1)
-
-[sub_resource type="Sky" id="Sky_hub"]
-sky_material = SubResource("ProceduralSkyMaterial_hub")
-
-[sub_resource type="Environment" id="Environment_hub"]
-background_mode = 2
-sky = SubResource("Sky_hub")
-ambient_light_source = 2
-ambient_light_color = Color(0.65, 0.68, 0.72, 1)
-ambient_light_energy = 0.9
-tonemap_mode = 2
-
-[sub_resource type="BoxMesh" id="Mesh_floor"]
-size = Vector3(16, 0.2, 16)
-
-[sub_resource type="StandardMaterial3D" id="Mat_floor"]
-albedo_texture = ExtResource("10_floor_tex")
-uv1_scale = Vector3(8, 8, 8)
-
-[sub_resource type="BoxShape3D" id="Shape_floor"]
-size = Vector3(16, 0.2, 16)
-
-[sub_resource type="BoxMesh" id="Mesh_wall"]
-size = Vector3(16, 4, 0.2)
-
-[sub_resource type="BoxShape3D" id="Shape_wall_ns"]
-size = Vector3(16, 4, 0.2)
-
-[sub_resource type="BoxMesh" id="Mesh_wall_ew"]
-size = Vector3(0.2, 4, 16)
-
-[sub_resource type="BoxShape3D" id="Shape_wall_ew"]
-size = Vector3(0.2, 4, 16)
-
-[sub_resource type="Resource" id="Resource_48b3i"]
+[sub_resource type="Resource" id="Resource_s8q8v"]
 resource_local_to_scene = true
 script = ExtResource("5_48b3i")
 grid = true
 inventory_size = Vector2i(4, 2)
 
-[sub_resource type="Resource" id="Resource_0eijj"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_xbxu7"]
+resource_local_to_scene = true
+size = Vector3(0.8, 0.8, 0.8)
+
+[sub_resource type="Resource" id="Resource_48xdp"]
 resource_local_to_scene = true
 script = ExtResource("5_48b3i")
 grid = true
 inventory_size = Vector2i(4, 2)
 
-[sub_resource type="Resource" id="Resource_6kxx4"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_u0676"]
+resource_local_to_scene = true
+size = Vector3(0.8, 0.8, 0.8)
+
+[sub_resource type="Resource" id="Resource_2653j"]
 resource_local_to_scene = true
 script = ExtResource("5_48b3i")
 grid = true
 inventory_size = Vector2i(4, 3)
 
-[sub_resource type="Resource" id="Resource_u5smi"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_7p4p3"]
+resource_local_to_scene = true
+size = Vector3(0.8, 0.8, 0.8)
+
+[sub_resource type="Resource" id="Resource_5fbox"]
 resource_local_to_scene = true
 script = ExtResource("5_48b3i")
 grid = true
 inventory_size = Vector2i(4, 2)
 
-[sub_resource type="Resource" id="Resource_7hntb"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_5c36d"]
+resource_local_to_scene = true
+size = Vector3(0.8, 0.8, 0.8)
+
+[sub_resource type="Resource" id="Resource_w1dtd"]
 resource_local_to_scene = true
 script = ExtResource("5_48b3i")
 grid = true
 inventory_size = Vector2i(6, 2)
 
-[sub_resource type="Resource" id="Resource_ssyg2"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_w3knw"]
+resource_local_to_scene = true
+size = Vector3(0.8, 0.8, 0.8)
+
+[sub_resource type="Resource" id="Resource_o8rnv"]
 resource_local_to_scene = true
 script = ExtResource("5_48b3i")
 grid = true
 inventory_size = Vector2i(4, 2)
 
-[sub_resource type="Resource" id="Resource_s1jli"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_8nm6u"]
+resource_local_to_scene = true
+size = Vector3(0.8, 0.8, 0.8)
+
+[sub_resource type="Resource" id="Resource_3bxo8"]
 resource_local_to_scene = true
 script = ExtResource("12_ssyg2")
 grid = true
@@ -98,95 +119,251 @@ connectors = [NodePath("RaidReturn")]
 [node name="RaidReturn" type="Marker3D" parent="." unique_id=519647133]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 6)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1510943622]
-environment = SubResource("Environment_hub")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2012078393]
-transform = Transform3D(0.866025, -0.353553, 0.353553, 0, 0.707107, 0.707107, -0.5, -0.612372, 0.612372, 4, 10, 6)
-light_energy = 1.1
-shadow_enabled = true
-
-[node name="Floor" type="StaticBody3D" parent="." unique_id=792141245]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=391233069]
-mesh = SubResource("Mesh_floor")
-surface_material_override/0 = SubResource("Mat_floor")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1995384388]
-shape = SubResource("Shape_floor")
-
-[node name="WallNorth" type="StaticBody3D" parent="." unique_id=1688052538]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -8)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="WallNorth" unique_id=427546785]
-mesh = SubResource("Mesh_wall")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="WallNorth" unique_id=1152277212]
-shape = SubResource("Shape_wall_ns")
-
-[node name="WallSouth" type="StaticBody3D" parent="." unique_id=256894332]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 8)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="WallSouth" unique_id=903978765]
-mesh = SubResource("Mesh_wall")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="WallSouth" unique_id=1546758617]
-shape = SubResource("Shape_wall_ns")
-
-[node name="WallWest" type="StaticBody3D" parent="." unique_id=1604323683]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 2, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="WallWest" unique_id=1370714586]
-mesh = SubResource("Mesh_wall_ew")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="WallWest" unique_id=1241232243]
-shape = SubResource("Shape_wall_ew")
-
-[node name="WallEast" type="StaticBody3D" parent="." unique_id=1317704834]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="WallEast" unique_id=1376368763]
-mesh = SubResource("Mesh_wall_ew")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="WallEast" unique_id=423819603]
-shape = SubResource("Shape_wall_ew")
-
 [node name="StashCrate_A" parent="." unique_id=518242430 instance=ExtResource("3_container")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -3)
 display_name = "STASH A"
-inventory_data = SubResource("Resource_48b3i")
+inventory_data = SubResource("Resource_s8q8v")
+
+[node name="chest2" parent="StashCrate_A" index="1"]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="StashCrate_A" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_xbxu7")
+
+[node name="StashLabel" type="Label3D" parent="StashCrate_A" unique_id=571874355]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92, 0)
+pixel_size = 0.0015
+billboard = 1
+modulate = Color(0.76, 0.85, 0.79, 1)
+text = "STASH A"
 
 [node name="StashCrate_B" parent="." unique_id=1547965345 instance=ExtResource("3_container")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -3)
 display_name = "STASH B"
-inventory_data = SubResource("Resource_0eijj")
+inventory_data = SubResource("Resource_48xdp")
+
+[node name="chest2" parent="StashCrate_B" index="1"]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="StashCrate_B" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_u0676")
+
+[node name="StashLabel" type="Label3D" parent="StashCrate_B" unique_id=1406261501]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92, 0)
+pixel_size = 0.0015
+billboard = 1
+modulate = Color(0.76, 0.85, 0.79, 1)
+text = "STASH B"
 
 [node name="StashCrate_C" parent="." unique_id=1467306266 instance=ExtResource("3_container")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -3)
 display_name = "STASH C"
-inventory_data = SubResource("Resource_6kxx4")
+inventory_data = SubResource("Resource_2653j")
+
+[node name="chest2" parent="StashCrate_C" index="1"]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="StashCrate_C" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_7p4p3")
+
+[node name="StashLabel" type="Label3D" parent="StashCrate_C" unique_id=1627675221]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92, 0)
+pixel_size = 0.0015
+billboard = 1
+modulate = Color(0.76, 0.85, 0.79, 1)
+text = "STASH C"
 
 [node name="StashCrate_D" parent="." unique_id=1826864928 instance=ExtResource("3_container")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3)
 display_name = "STASH D"
-inventory_data = SubResource("Resource_u5smi")
+inventory_data = SubResource("Resource_5fbox")
+
+[node name="chest2" parent="StashCrate_D" index="1"]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="StashCrate_D" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_5c36d")
+
+[node name="StashLabel" type="Label3D" parent="StashCrate_D" unique_id=105614099]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92, 0)
+pixel_size = 0.0015
+billboard = 1
+modulate = Color(0.76, 0.85, 0.79, 1)
+text = "STASH D"
 
 [node name="StashCrate_E" parent="." unique_id=535091366 instance=ExtResource("3_container")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 0, 0)
 display_name = "STASH E"
-inventory_data = SubResource("Resource_7hntb")
+inventory_data = SubResource("Resource_w1dtd")
+
+[node name="chest2" parent="StashCrate_E" index="1"]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="StashCrate_E" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_w3knw")
+
+[node name="StashLabel" type="Label3D" parent="StashCrate_E" unique_id=2047949860]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92, 0)
+pixel_size = 0.0015
+billboard = 1
+modulate = Color(0.76, 0.85, 0.79, 1)
+text = "STASH E"
 
 [node name="StashCrate_F" parent="." unique_id=643122497 instance=ExtResource("3_container")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 0, 0)
 display_name = "STASH F"
-inventory_data = SubResource("Resource_ssyg2")
+inventory_data = SubResource("Resource_o8rnv")
+
+[node name="chest2" parent="StashCrate_F" index="1"]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="StashCrate_F" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_8nm6u")
+
+[node name="StashLabel" type="Label3D" parent="StashCrate_F" unique_id=1056662001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92, 0)
+pixel_size = 0.0015
+billboard = 1
+modulate = Color(0.76, 0.85, 0.79, 1)
+text = "STASH F"
 
 [node name="Player" parent="." unique_id=1532385616 instance=ExtResource("2_player")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 6)
-inventory_data = SubResource("Resource_s1jli")
+inventory_data = SubResource("Resource_3bxo8")
 
-[node name="Deploy" parent="." unique_id=2034872030 instance=ExtResource("13_deploy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, -7.7)
+[node name="HubArchitecture" parent="." unique_id=1104933506 instance=ExtResource("9_u5smi")]
 
-[connection signal="pressed" from="Deploy" to="." method="start_raid"]
+[node name="Props" type="Node3D" parent="." unique_id=1076131317]
+
+[node name="GunLocker" parent="Props" unique_id=27779519 instance=ExtResource("9_s1jli")]
+transform = Transform3D(3.7669977e-07, 0, 1.2, 0, 1.2, 0, -1.2, 0, 3.7669977e-07, -7.6590233, 0, -6.608277)
+
+[node name="GunLocker2" parent="Props" unique_id=154217004 instance=ExtResource("9_s1jli")]
+transform = Transform3D(3.7669977e-07, 0, 1.2, 0, 1.2, 0, -1.2, 0, 3.7669977e-07, -7.6587567, 0, -5.6303277)
+
+[node name="Pallet" parent="Props" unique_id=1977683850 instance=ExtResource("9_s8q8v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9046545, 0, 7.449934)
+
+[node name="SupplyCrate" parent="Props/Pallet" unique_id=200179973 instance=ExtResource("10_xbxu7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.205, 0)
+
+[node name="Pallet2" parent="Props" unique_id=1591515853 instance=ExtResource("9_s8q8v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.796292, 0, 7.449934)
+
+[node name="Table" parent="Props" unique_id=1769800870 instance=ExtResource("12_kuuxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.445)
+
+[node name="Terminal" parent="Props/Table" unique_id=1502498432 instance=ExtResource("14_terminal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013696432, 1, 0.12686777)
+
+[node name="PistolCase" parent="Props" unique_id=318837506 instance=ExtResource("14_s1jli")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.78452015, 1, -7.1646585)
+
+[node name="HubDressing" type="Node3D" parent="." unique_id=1974456285]
+
+[node name="MeshGunLocker" parent="HubDressing" unique_id=405247939 instance=ExtResource("14_48xdp")]
+transform = Transform3D(3.4007618e-07, 0, 1.0833334, 0, 1.0833334, 0, -1.0833334, 0, 3.4007618e-07, -7.43, 0, -4.1)
+
+[node name="SimpleGunLocker" parent="HubDressing" unique_id=499461513 instance=ExtResource("15_u0676")]
+transform = Transform3D(3.825857e-07, 0, 1.21875, 0, 1.21875, 0, -1.21875, 0, 3.825857e-07, -7.17, 0, -2.7)
+
+[node name="SteelLocker" parent="HubDressing" unique_id=1206109897 instance=ExtResource("16_2653j")]
+transform = Transform3D(3.4007618e-07, 0, 1.0833334, 0, 1.0833334, 0, -1.0833334, 0, 3.4007618e-07, -7.43, 0, -0.95)
+
+[node name="PackingBench" parent="HubDressing" unique_id=828453634 instance=ExtResource("17_7p4p3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9, 0, -5.7)
+
+[node name="RifleCase" parent="HubDressing" unique_id=589746607 instance=ExtResource("8_ssyg2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.45, 1, -5.43)
+
+[node name="MagazineCase" parent="HubDressing" unique_id=2050625239 instance=ExtResource("19_5fbox")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.15, 1, -5.92)
+
+[node name="ammo_9x19" parent="HubDressing" unique_id=339921526 instance=ExtResource("20_5c36d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.95, 1, -6.05)
+
+[node name="ammo_556x45" parent="HubDressing" unique_id=986503698 instance=ExtResource("21_w1dtd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.55, 1, -6.05)
+
+[node name="ammo_762x39" parent="HubDressing" unique_id=971073122 instance=ExtResource("22_w3knw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.15, 1, -6.05)
+
+[node name="ammo_762x51" parent="HubDressing" unique_id=103996175 instance=ExtResource("23_o8rnv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 1, -6.05)
+
+[node name="Workbench" parent="HubDressing" unique_id=1375885737 instance=ExtResource("24_8nm6u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6, 0, 5.8)
+
+[node name="Toolbox" parent="HubDressing" unique_id=1621150955 instance=ExtResource("25_3bxo8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92, 1, 5.85)
+
+[node name="Anvil" parent="HubDressing" unique_id=114665138 instance=ExtResource("26_vrjc8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, 5.8)
+
+[node name="Generator" parent="HubDressing" unique_id=1734633698 instance=ExtResource("27_titff")]
+transform = Transform3D(3.1391647e-07, 0, 1, 0, 1, 0, -1, 0, 3.1391647e-07, -6.25, 0, 3.1)
+
+[node name="FuelCan" parent="HubDressing" unique_id=1394924798 instance=ExtResource("28_ucxhd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1, 0, 3.1)
+
+[node name="ColdStove" parent="HubDressing" unique_id=1397432101 instance=ExtResource("29_4u6if")]
+transform = Transform3D(3.1391647e-07, 0, 1, 0, 1, 0, -1, 0, 3.1391647e-07, -7.15, 0, 4.4)
+
+[node name="SupplyShelf" parent="HubDressing" unique_id=443061919 instance=ExtResource("30_w83kw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -6.35)
+
+[node name="MedicalKit" parent="HubDressing" unique_id=893332888 instance=ExtResource("31_tjru6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.12, 1.1, -6.34)
+
+[node name="WaterBottle" parent="HubDressing" unique_id=664110761 instance=ExtResource("32_5da30")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.62, 1.1, -6.34)
+
+[node name="CannedFood" parent="HubDressing" unique_id=459129988 instance=ExtResource("33_0e6ly")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.06, 1.1, -6.34)
+
+[node name="CannedMeat" parent="HubDressing" unique_id=857220285 instance=ExtResource("34_r8fu8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.59, 1.1, -6.34)
+
+[node name="Biscuits" parent="HubDressing" unique_id=664243019 instance=ExtResource("35_me8mn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.22, 1.72, -6.34)
+
+[node name="Tea" parent="HubDressing" unique_id=1780320097 instance=ExtResource("36_7v5gc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.83, 1.72, -6.34)
+
+[node name="Coffee" parent="HubDressing" unique_id=1898733210 instance=ExtResource("37_8u8t0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.12, 1.72, -6.34)
+
+[node name="KaloDrink" parent="HubDressing" unique_id=1480271624 instance=ExtResource("38_v0k83")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 1.72, -6.34)
+
+[node name="Salt" parent="HubDressing" unique_id=576609153 instance=ExtResource("39_emgle")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.94, 1.72, -6.34)
+
+[node name="UtilityConsole" parent="HubDressing" unique_id=1451450396 instance=ExtResource("40_m116d")]
+transform = Transform3D(3.1391647e-07, 0, -1, 0, 1, 0, 1, 0, 3.1391647e-07, 6.92, 0, 3.15)
+
+[node name="WaterFilter" parent="HubDressing" unique_id=1313878316 instance=ExtResource("41_jes8q")]
+transform = Transform3D(3.1391647e-07, 0, -1, 0, 1, 0, 1, 0, 3.1391647e-07, 6.62, 0, 4.85)
+
+[node name="ServiceRubble" parent="HubDressing" unique_id=348143995 instance=ExtResource("42_ophah")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.68, 0, 7.3)
+
+[node name="SalvageHandcart" parent="HubDressing" unique_id=376298783 instance=ExtResource("43_5c2q7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3, 0, 0.8)
+
+[node name="HubLighting" parent="." unique_id=1089145789 instance=ExtResource("10_7hntb")]
+
+[connection signal="pressed_ref" from="Props/Table/Terminal" to="." method="open_terminal"]
+
+[editable path="StashCrate_A"]
+[editable path="StashCrate_B"]
+[editable path="StashCrate_C"]
+[editable path="StashCrate_D"]
+[editable path="StashCrate_E"]
+[editable path="StashCrate_F"]

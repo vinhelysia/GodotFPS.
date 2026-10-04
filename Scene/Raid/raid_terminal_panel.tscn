@@ -1,0 +1,161 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Raid/raid_terminal_panel.gd" id="1_script"]
+
+[sub_resource type="SystemFont" id="Font_terminal"]
+font_names = PackedStringArray("Consolas", "DejaVu Sans Mono", "Liberation Mono", "monospace")
+
+[sub_resource type="StyleBoxEmpty" id="Style_text"]
+
+[sub_resource type="Theme" id="Theme_terminal"]
+default_font = SubResource("Font_terminal")
+default_font_size = 26
+PanelContainer/styles/panel = SubResource("Style_text")
+Label/colors/font_color = Color(0.45, 1, 0.55, 1)
+Button/colors/font_color = Color(0.45, 1, 0.55, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0.45, 1, 0.55, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_disabled_color = Color(0.25, 0.5, 0.3, 1)
+Button/styles/normal = SubResource("Style_text")
+Button/styles/hover = SubResource("Style_text")
+Button/styles/pressed = SubResource("Style_text")
+Button/styles/hover_pressed = SubResource("Style_text")
+Button/styles/disabled = SubResource("Style_text")
+Button/styles/focus = SubResource("Style_text")
+
+[node name="RaidTerminalPanel" type="Control"]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_terminal")
+script = ExtResource("1_script")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Center" type="CenterContainer" parent="Backdrop"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="Backdrop/Center"]
+custom_minimum_size = Vector2(936, 584)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="Backdrop/Center/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 24
+
+[node name="Content" type="VBoxContainer" parent="Backdrop/Center/Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Header" type="HBoxContainer" parent="Backdrop/Center/Panel/Margin/Content"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Backdrop/Center/Panel/Margin/Content/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "RAID TERMINAL / MAP SELECT"
+
+[node name="Connection" type="Label" parent="Backdrop/Center/Panel/Margin/Content/Header"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.45, 1, 0.55, 1)
+theme_override_font_sizes/font_size = 20
+text = "ONLINE"
+
+[node name="Separator" type="Label" parent="Backdrop/Center/Panel/Margin/Content"]
+layout_mode = 2
+text = "----------------------------------------"
+
+[node name="MapHeading" type="Label" parent="Backdrop/Center/Panel/Margin/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "AVAILABLE DESTINATIONS:"
+
+[node name="TownButton" type="Button" parent="Backdrop/Center/Panel/Margin/Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../Buttons/CloseButton")
+focus_next = NodePath("../Buttons/CloseButton")
+focus_previous = NodePath("../Buttons/DeployButton")
+toggle_mode = true
+button_pressed = true
+text = "  TOWN"
+alignment = 0
+
+[node name="Unavailable" type="Button" parent="Backdrop/Center/Panel/Margin/Content"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+focus_mode = 0
+disabled = true
+text = "  OTHER MAPS     [UNAVAILABLE]"
+alignment = 0
+
+[node name="Status" type="Label" parent="Backdrop/Center/Panel/Margin/Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 22
+text = "KIT LOST ON DEATH OR ABANDON.\nSTASH REMAINS IN HUB."
+autowrap_mode = 3
+vertical_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="Backdrop/Center/Panel/Margin/Content"]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="CloseButton" type="Button" parent="Backdrop/Center/Panel/Margin/Content/Buttons"]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_top = NodePath("../../TownButton")
+focus_neighbor_right = NodePath("../DeployButton")
+focus_next = NodePath("../DeployButton")
+focus_previous = NodePath("../../TownButton")
+text = "  [BACK]"
+alignment = 0
+
+[node name="DeployButton" type="Button" parent="Backdrop/Center/Panel/Margin/Content/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../CloseButton")
+focus_neighbor_top = NodePath("../../TownButton")
+focus_next = NodePath("../../TownButton")
+focus_previous = NodePath("../CloseButton")
+text = "  [DEPLOY]"
+alignment = 0
+
+[node name="InputHint" type="Label" parent="Backdrop/Center/Panel/Margin/Content"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.45, 1, 0.55, 1)
+theme_override_font_sizes/font_size = 18
+text = "CLICK / ARROWS / TAB: SELECT    ENTER: CONFIRM    ESC: BACK"
+
+[connection signal="pressed" from="Backdrop/Center/Panel/Margin/Content/TownButton" to="." method="_on_town_pressed"]
+[connection signal="pressed" from="Backdrop/Center/Panel/Margin/Content/Buttons/CloseButton" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Backdrop/Center/Panel/Margin/Content/Buttons/DeployButton" to="." method="_on_deploy_pressed"]

@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/kalo_cola_variants/kalo_cola_worn_albedo.png" id="1_aman0"]
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/kalo_cola_variants/kalo_cola_worn_orm.png" id="2_0p2ju"]
+
+[resource]
+resource_name = "kalo_cola_worn"
+albedo_texture = ExtResource("1_aman0")
+metallic = 1.0
+metallic_texture = ExtResource("2_0p2ju")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_0p2ju")
+roughness_texture_channel = 1
+ao_enabled = true
+ao_texture = ExtResource("2_0p2ju")

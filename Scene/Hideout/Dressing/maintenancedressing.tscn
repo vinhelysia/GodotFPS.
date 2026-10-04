@@ -1,0 +1,129 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/metal_toolbox.glb" id="Prop_1"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/anvil_stump_variants/anvil_stump_used.tscn" id="Prop_2"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/portable_generator_variants/portable_generator_used.tscn" id="Prop_3"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/fuel_jerrycan_variants/fuel_jerrycan_worn.tscn" id="Prop_4"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/barrel_stove_variants/barrel_stove_used.tscn" id="Prop_5"]
+
+[sub_resource type="StandardMaterial3D" id="Mat_Wood"]
+albedo_color = Color(0.29, 0.27, 0.23, 1)
+roughness = 0.86
+
+[sub_resource type="BoxMesh" id="Mesh_1"]
+material = SubResource("Mat_Wood")
+size = Vector3(2.65, 0.08, 1)
+
+[sub_resource type="BoxShape3D" id="Shape_1"]
+size = Vector3(2.65, 0.08, 1)
+
+[sub_resource type="StandardMaterial3D" id="Mat_Steel"]
+albedo_color = Color(0.17, 0.21, 0.22, 1)
+roughness = 0.86
+
+[sub_resource type="BoxMesh" id="Mesh_2"]
+material = SubResource("Mat_Steel")
+size = Vector3(0.09, 0.92, 0.09)
+
+[sub_resource type="BoxShape3D" id="Shape_2"]
+size = Vector3(0.09, 0.92, 0.09)
+
+[sub_resource type="BoxMesh" id="Mesh_3"]
+material = SubResource("Mat_Steel")
+size = Vector3(0.07, 0.09, 0.8)
+
+[sub_resource type="BoxMesh" id="Mesh_4"]
+material = SubResource("Mat_Steel")
+size = Vector3(2.45, 0.09, 0.07)
+
+[node name="MaintenanceDressing" type="Node3D"]
+
+[node name="Workbench" type="Node3D" parent="."]
+
+[node name="Top" type="MeshInstance3D" parent="Workbench"]
+position = Vector3(-5.6, 0.96, 5.8)
+mesh = SubResource("Mesh_1")
+
+[node name="TopBlocker" type="StaticBody3D" parent="Workbench"]
+position = Vector3(-5.6, 0.96, 5.8)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Workbench/TopBlocker"]
+shape = SubResource("Shape_1")
+
+[node name="LeftRearLeg" type="MeshInstance3D" parent="Workbench"]
+position = Vector3(-6.825, 0.46, 5.4)
+mesh = SubResource("Mesh_2")
+
+[node name="LeftRearLegBlocker" type="StaticBody3D" parent="Workbench"]
+position = Vector3(-6.825, 0.46, 5.4)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Workbench/LeftRearLegBlocker"]
+shape = SubResource("Shape_2")
+
+[node name="LeftFrontLeg" type="MeshInstance3D" parent="Workbench"]
+position = Vector3(-6.825, 0.46, 6.2)
+mesh = SubResource("Mesh_2")
+
+[node name="LeftFrontLegBlocker" type="StaticBody3D" parent="Workbench"]
+position = Vector3(-6.825, 0.46, 6.2)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Workbench/LeftFrontLegBlocker"]
+shape = SubResource("Shape_2")
+
+[node name="LeftLowerTie" type="MeshInstance3D" parent="Workbench"]
+position = Vector3(-6.825, 0.2, 5.8)
+mesh = SubResource("Mesh_3")
+
+[node name="RightRearLeg" type="MeshInstance3D" parent="Workbench"]
+position = Vector3(-4.375, 0.46, 5.4)
+mesh = SubResource("Mesh_2")
+
+[node name="RightRearLegBlocker" type="StaticBody3D" parent="Workbench"]
+position = Vector3(-4.375, 0.46, 5.4)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Workbench/RightRearLegBlocker"]
+shape = SubResource("Shape_2")
+
+[node name="RightFrontLeg" type="MeshInstance3D" parent="Workbench"]
+position = Vector3(-4.375, 0.46, 6.2)
+mesh = SubResource("Mesh_2")
+
+[node name="RightFrontLegBlocker" type="StaticBody3D" parent="Workbench"]
+position = Vector3(-4.375, 0.46, 6.2)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Workbench/RightFrontLegBlocker"]
+shape = SubResource("Shape_2")
+
+[node name="RightLowerTie" type="MeshInstance3D" parent="Workbench"]
+position = Vector3(-4.375, 0.2, 5.8)
+mesh = SubResource("Mesh_3")
+
+[node name="RearTie" type="MeshInstance3D" parent="Workbench"]
+position = Vector3(-5.6, 0.7, 5.4)
+mesh = SubResource("Mesh_4")
+
+[node name="Toolbox" parent="." instance=ExtResource("Prop_1")]
+position = Vector3(-5.92, 1, 5.85)
+
+[node name="Anvil" parent="." instance=ExtResource("Prop_2")]
+position = Vector3(-3.8, 0, 5.8)
+
+[node name="Generator" parent="." instance=ExtResource("Prop_3")]
+position = Vector3(-6.25, 0, 3.1)
+rotation = Vector3(0, 1.570796, 0)
+
+[node name="FuelCan" parent="." instance=ExtResource("Prop_4")]
+position = Vector3(-5.1, 0, 3.1)
+
+[node name="ColdStove" parent="." instance=ExtResource("Prop_5")]
+position = Vector3(-7.12, 0, 6.8)
+rotation = Vector3(0, 1.570796, 0)

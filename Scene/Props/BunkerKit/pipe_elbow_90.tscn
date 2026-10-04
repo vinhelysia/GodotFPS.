@@ -1,0 +1,5 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/pipe_elbow_90.glb" id="1_model"]
+
+[node name="PipeElbow90" instance=ExtResource("1_model")]

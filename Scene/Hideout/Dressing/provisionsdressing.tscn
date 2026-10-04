@@ -1,0 +1,139 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/medical_box.glb" id="Prop_1"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/water_bottle_variants/water_bottle_clean.tscn" id="Prop_2"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/canned_food_variants/canned_food_clean.tscn" id="Prop_3"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/canned_meat_rect_variants/canned_meat_rect_used.tscn" id="Prop_4"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/ration_biscuits_variants/ration_biscuits_used.tscn" id="Prop_5"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/tea_carton_variants/tea_carton_clean.tscn" id="Prop_6"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/kalo_cola_variants/kalo_cola_used.tscn" id="Prop_7"]
+
+[sub_resource type="StandardMaterial3D" id="Mat_Shelf"]
+albedo_color = Color(0.25, 0.33, 0.32, 1)
+roughness = 0.86
+
+[sub_resource type="BoxMesh" id="Mesh_1"]
+material = SubResource("Mat_Shelf")
+size = Vector3(2.4, 0.05, 0.8)
+
+[sub_resource type="BoxShape3D" id="Shape_1"]
+size = Vector3(2.4, 0.05, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="Mat_Steel"]
+albedo_color = Color(0.17, 0.21, 0.22, 1)
+roughness = 0.86
+
+[sub_resource type="BoxMesh" id="Mesh_2"]
+material = SubResource("Mat_Steel")
+size = Vector3(0.065, 1.94, 0.065)
+
+[sub_resource type="BoxShape3D" id="Shape_2"]
+size = Vector3(0.065, 1.94, 0.065)
+
+[node name="ProvisionsDressing" type="Node3D"]
+
+[node name="SupplyShelf" type="Node3D" parent="."]
+
+[node name="LowerDeck" type="MeshInstance3D" parent="SupplyShelf"]
+position = Vector3(6, 0.455, -6.35)
+mesh = SubResource("Mesh_1")
+
+[node name="LowerDeckBlocker" type="StaticBody3D" parent="SupplyShelf"]
+position = Vector3(6, 0.455, -6.35)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SupplyShelf/LowerDeckBlocker"]
+shape = SubResource("Shape_1")
+
+[node name="MiddleDeck" type="MeshInstance3D" parent="SupplyShelf"]
+position = Vector3(6, 1.075, -6.35)
+mesh = SubResource("Mesh_1")
+
+[node name="MiddleDeckBlocker" type="StaticBody3D" parent="SupplyShelf"]
+position = Vector3(6, 1.075, -6.35)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SupplyShelf/MiddleDeckBlocker"]
+shape = SubResource("Shape_1")
+
+[node name="UpperDeck" type="MeshInstance3D" parent="SupplyShelf"]
+position = Vector3(6, 1.695, -6.35)
+mesh = SubResource("Mesh_1")
+
+[node name="UpperDeckBlocker" type="StaticBody3D" parent="SupplyShelf"]
+position = Vector3(6, 1.695, -6.35)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SupplyShelf/UpperDeckBlocker"]
+shape = SubResource("Shape_1")
+
+[node name="LeftRearPost" type="MeshInstance3D" parent="SupplyShelf"]
+position = Vector3(4.88, 0.97, -6.68)
+mesh = SubResource("Mesh_2")
+
+[node name="LeftRearPostBlocker" type="StaticBody3D" parent="SupplyShelf"]
+position = Vector3(4.88, 0.97, -6.68)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SupplyShelf/LeftRearPostBlocker"]
+shape = SubResource("Shape_2")
+
+[node name="LeftFrontPost" type="MeshInstance3D" parent="SupplyShelf"]
+position = Vector3(4.88, 0.97, -6.02)
+mesh = SubResource("Mesh_2")
+
+[node name="LeftFrontPostBlocker" type="StaticBody3D" parent="SupplyShelf"]
+position = Vector3(4.88, 0.97, -6.02)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SupplyShelf/LeftFrontPostBlocker"]
+shape = SubResource("Shape_2")
+
+[node name="RightRearPost" type="MeshInstance3D" parent="SupplyShelf"]
+position = Vector3(7.12, 0.97, -6.68)
+mesh = SubResource("Mesh_2")
+
+[node name="RightRearPostBlocker" type="StaticBody3D" parent="SupplyShelf"]
+position = Vector3(7.12, 0.97, -6.68)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SupplyShelf/RightRearPostBlocker"]
+shape = SubResource("Shape_2")
+
+[node name="RightFrontPost" type="MeshInstance3D" parent="SupplyShelf"]
+position = Vector3(7.12, 0.97, -6.02)
+mesh = SubResource("Mesh_2")
+
+[node name="RightFrontPostBlocker" type="StaticBody3D" parent="SupplyShelf"]
+position = Vector3(7.12, 0.97, -6.02)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SupplyShelf/RightFrontPostBlocker"]
+shape = SubResource("Shape_2")
+
+[node name="MedicalKit" parent="." instance=ExtResource("Prop_1")]
+position = Vector3(5.12, 1.1, -6.34)
+
+[node name="WaterBottle" parent="." instance=ExtResource("Prop_2")]
+position = Vector3(5.62, 1.1, -6.32)
+
+[node name="CannedFood" parent="." instance=ExtResource("Prop_3")]
+position = Vector3(6.06, 1.1, -6.32)
+
+[node name="CannedMeat" parent="." instance=ExtResource("Prop_4")]
+position = Vector3(6.59, 1.1, -6.32)
+
+[node name="Biscuits" parent="." instance=ExtResource("Prop_5")]
+position = Vector3(5.22, 1.72, -6.34)
+
+[node name="Tea" parent="." instance=ExtResource("Prop_6")]
+position = Vector3(5.83, 1.72, -6.34)
+
+[node name="KaloDrink" parent="." instance=ExtResource("Prop_7")]
+position = Vector3(6.5, 1.72, -6.34)

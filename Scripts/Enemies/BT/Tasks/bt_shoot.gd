@@ -75,12 +75,7 @@ func _tick(delta: float) -> Status:
 		return FAILURE
 
 	var muzzle_pos := _get_muzzle_pos(npc)
-	# Aim at ~+0.5m above origin: CogitoPlayer's standing collision box
-	# (0.6x1.7x0.6, local center +0.05) spans roughly origin-0.8 to origin+0.9
-	# vertically. +1.0 overshot the box top by ~0.1m, causing shots to sail
-	# over the player's head except when spread randomly angled down — this
-	# was the "sometimes hits sometimes doesn't" bug. +0.5 lands solidly inside.
-	var aim_pos := (target as Node3D).global_position + Vector3(0.0, 0.5, 0.0)
+	var aim_pos := _get_aim_pos(target as Node3D)
 	# LOS grace: tolerate brief line-of-sight loss (player strafing a cover
 	# edge, muzzle shifting) instead of bailing to chase immediately.
 	var los_grace: float = profile.los_grace if profile else 0.4
@@ -158,6 +153,15 @@ func _get_muzzle_pos(npc: HostileNPC) -> Vector3:
 	return npc.global_position + Vector3(0.0, 1.4, 0.0)
 
 
+func _get_aim_pos(target: Node3D) -> Vector3:
+	# Crouch/slide and stand-up transitions use the short collider. Its center
+	# stays hittable while the head is still interpolating between poses.
+	if target is CogitoPlayer and not target.crouching_collision_shape.disabled:
+		return target.crouching_collision_shape.global_position
+	# Preserve the existing standing aim and fallback for other targets.
+	return target.global_position + Vector3(0.0, 0.5, 0.0)
+
+
 func _cast_ray(npc: HostileNPC, from: Vector3, to: Vector3) -> Dictionary:
 	var space: PhysicsDirectSpaceState3D = npc.get_world_3d().direct_space_state
 	var params := PhysicsRayQueryParameters3D.create(from, to)
@@ -215,7 +219,7 @@ func _spread_magnitude(npc: HostileNPC, target: Node3D, aim_dir: Vector3, dist: 
 
 
 func _shoot(npc: HostileNPC, target: Node3D, muzzle_pos: Vector3, dist: float) -> void:
-	var aim_pos := target.global_position + Vector3(0.0, 0.5, 0.0)
+	var aim_pos := _get_aim_pos(target)
 	var aim_dir := (aim_pos - muzzle_pos).normalized()
 	if debug_shoot:
 		print("[shoot] GEOM npc_pos=%s muzzle=%s target=%s(%s) aim_pos=%s aim_dir=%s" % [

@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/locker_color_transfer/mesh_gun_locker_clean_albedo.png" id="1_af7rt"]
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/mesh_gun_locker_variants/mesh_gun_locker_clean_orm.png" id="2_tt45p"]
+
+[resource]
+resource_name = "BK_Steel_MeshGun_clean"
+cull_mode = 2
+albedo_texture = ExtResource("1_af7rt")
+metallic = 1.0
+metallic_texture = ExtResource("2_tt45p")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_tt45p")
+roughness_texture_channel = 1
+texture_repeat = false
+metadata/extras = {
+"wear_coverage_percent": 24.0,
+"wear_seed": 631.0
+}
+metadata/_gltf_primary_texture_coord = 0

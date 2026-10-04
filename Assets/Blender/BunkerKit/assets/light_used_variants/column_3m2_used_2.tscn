@@ -1,0 +1,9 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/column_3m2.glb" id="1"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/light_used_variants/column_3m2_used_2.tres" id="2"]
+
+[node name="column_3m2_used_2" instance=ExtResource("1")]
+
+[node name="column_3m2" parent="."]
+surface_material_override/0 = ExtResource("2")

@@ -1,0 +1,362 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/floor_4m.glb" id="floor_4m"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/ceiling_4m.glb" id="ceiling_4m"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/wall_4m.glb" id="wall_4m"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/wall_doorway_4m.glb" id="wall_doorway_4m"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/column_3m2.glb" id="column_3m2"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/beam_4m.glb" id="beam_4m"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/door_frame.glb" id="door_frame"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/door_leaf.glb" id="door_leaf"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/hermetic_door.glb" id="hermetic_door"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/duct_straight_4m.glb" id="duct_straight_4m"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/duct_elbow_90.glb" id="duct_elbow_90"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/duct_grille.glb" id="duct_grille"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/pipe_straight_4m.glb" id="pipe_straight_4m"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/pipe_elbow_90.glb" id="pipe_elbow_90"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/pipe_valve.glb" id="pipe_valve"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/cable_tray_4m.glb" id="cable_tray_4m"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/electrical_box.glb" id="electrical_box"]
+
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/light_used_variants/beam_4m_used_2.tscn" id="beam_4m_used_2"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/light_used_variants/beam_4m_used_3.tscn" id="beam_4m_used_3"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/light_used_variants/ceiling_4m_used_2.tscn" id="ceiling_4m_used_2"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/light_used_variants/ceiling_4m_used_3.tscn" id="ceiling_4m_used_3"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/light_used_variants/column_3m2_used_2.tscn" id="column_3m2_used_2"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/light_used_variants/column_3m2_used_3.tscn" id="column_3m2_used_3"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/light_used_variants/duct_straight_4m_used_2.tscn" id="duct_straight_4m_used_2"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/light_used_variants/duct_straight_4m_used_3.tscn" id="duct_straight_4m_used_3"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/light_used_variants/floor_4m_used_2.tscn" id="floor_4m_used_2"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/light_used_variants/floor_4m_used_3.tscn" id="floor_4m_used_3"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/light_used_variants/pipe_straight_4m_used_2.tscn" id="pipe_straight_4m_used_2"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/light_used_variants/pipe_straight_4m_used_3.tscn" id="pipe_straight_4m_used_3"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/light_used_variants/wall_4m_used_2.tscn" id="wall_4m_used_2"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/light_used_variants/wall_4m_used_3.tscn" id="wall_4m_used_3"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/light_used_variants/wall_doorway_4m_used_2.tscn" id="wall_doorway_4m_used_2"]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/light_used_variants/wall_doorway_4m_used_3.tscn" id="wall_doorway_4m_used_3"]
+
+[node name="HubArchitecture" type="Node3D"]
+
+[node name="Floor" type="Node3D" parent="."]
+
+[node name="Ceiling" type="Node3D" parent="."]
+
+[node name="Perimeter" type="Node3D" parent="."]
+
+[node name="Structure" type="Node3D" parent="."]
+
+[node name="Doors" type="Node3D" parent="."]
+
+[node name="Utilities" type="Node3D" parent="."]
+
+[node name="Floor_00" parent="Floor" instance=ExtResource("floor_4m")]
+position = Vector3(-6, 0, -6)
+
+[node name="Ceiling_00" parent="Ceiling" instance=ExtResource("ceiling_4m")]
+position = Vector3(-6, 3.2, -6)
+
+[node name="Floor_01" parent="Floor" instance=ExtResource("floor_4m_used_2")]
+position = Vector3(-6, 0, -2)
+
+[node name="Ceiling_01" parent="Ceiling" instance=ExtResource("ceiling_4m_used_2")]
+position = Vector3(-6, 3.2, -2)
+
+[node name="Floor_02" parent="Floor" instance=ExtResource("floor_4m_used_3")]
+position = Vector3(-6, 0, 2)
+
+[node name="Ceiling_02" parent="Ceiling" instance=ExtResource("ceiling_4m_used_3")]
+position = Vector3(-6, 3.2, 2)
+
+[node name="Floor_03" parent="Floor" instance=ExtResource("floor_4m")]
+position = Vector3(-6, 0, 6)
+
+[node name="Ceiling_03" parent="Ceiling" instance=ExtResource("ceiling_4m")]
+position = Vector3(-6, 3.2, 6)
+
+[node name="Floor_10" parent="Floor" instance=ExtResource("floor_4m_used_2")]
+position = Vector3(-2, 0, -6)
+
+[node name="Ceiling_10" parent="Ceiling" instance=ExtResource("ceiling_4m_used_2")]
+position = Vector3(-2, 3.2, -6)
+
+[node name="Floor_11" parent="Floor" instance=ExtResource("floor_4m_used_3")]
+position = Vector3(-2, 0, -2)
+
+[node name="Ceiling_11" parent="Ceiling" instance=ExtResource("ceiling_4m_used_3")]
+position = Vector3(-2, 3.2, -2)
+
+[node name="Floor_12" parent="Floor" instance=ExtResource("floor_4m")]
+position = Vector3(-2, 0, 2)
+
+[node name="Ceiling_12" parent="Ceiling" instance=ExtResource("ceiling_4m")]
+position = Vector3(-2, 3.2, 2)
+
+[node name="Floor_13" parent="Floor" instance=ExtResource("floor_4m_used_2")]
+position = Vector3(-2, 0, 6)
+
+[node name="Ceiling_13" parent="Ceiling" instance=ExtResource("ceiling_4m_used_2")]
+position = Vector3(-2, 3.2, 6)
+
+[node name="Floor_20" parent="Floor" instance=ExtResource("floor_4m_used_3")]
+position = Vector3(2, 0, -6)
+
+[node name="Ceiling_20" parent="Ceiling" instance=ExtResource("ceiling_4m_used_3")]
+position = Vector3(2, 3.2, -6)
+
+[node name="Floor_21" parent="Floor" instance=ExtResource("floor_4m")]
+position = Vector3(2, 0, -2)
+
+[node name="Ceiling_21" parent="Ceiling" instance=ExtResource("ceiling_4m")]
+position = Vector3(2, 3.2, -2)
+
+[node name="Floor_22" parent="Floor" instance=ExtResource("floor_4m_used_2")]
+position = Vector3(2, 0, 2)
+
+[node name="Ceiling_22" parent="Ceiling" instance=ExtResource("ceiling_4m_used_2")]
+position = Vector3(2, 3.2, 2)
+
+[node name="Floor_23" parent="Floor" instance=ExtResource("floor_4m_used_3")]
+position = Vector3(2, 0, 6)
+
+[node name="Ceiling_23" parent="Ceiling" instance=ExtResource("ceiling_4m_used_3")]
+position = Vector3(2, 3.2, 6)
+
+[node name="Floor_30" parent="Floor" instance=ExtResource("floor_4m")]
+position = Vector3(6, 0, -6)
+
+[node name="Ceiling_30" parent="Ceiling" instance=ExtResource("ceiling_4m")]
+position = Vector3(6, 3.2, -6)
+
+[node name="Floor_31" parent="Floor" instance=ExtResource("floor_4m_used_2")]
+position = Vector3(6, 0, -2)
+
+[node name="Ceiling_31" parent="Ceiling" instance=ExtResource("ceiling_4m_used_2")]
+position = Vector3(6, 3.2, -2)
+
+[node name="Floor_32" parent="Floor" instance=ExtResource("floor_4m_used_3")]
+position = Vector3(6, 0, 2)
+
+[node name="Ceiling_32" parent="Ceiling" instance=ExtResource("ceiling_4m_used_3")]
+position = Vector3(6, 3.2, 2)
+
+[node name="Floor_33" parent="Floor" instance=ExtResource("floor_4m")]
+position = Vector3(6, 0, 6)
+
+[node name="Ceiling_33" parent="Ceiling" instance=ExtResource("ceiling_4m")]
+position = Vector3(6, 3.2, 6)
+
+[node name="North_0" parent="Perimeter" instance=ExtResource("wall_4m")]
+position = Vector3(-6, 0, -8)
+
+[node name="South_0" parent="Perimeter" instance=ExtResource("wall_4m_used_2")]
+position = Vector3(-6, 0, 8)
+rotation = Vector3(0, 3.14159265358979, 0)
+
+[node name="West_0" parent="Perimeter" instance=ExtResource("wall_4m_used_3")]
+position = Vector3(-8, 0, -6)
+rotation = Vector3(0, 1.5707963267949, 0)
+
+[node name="East_0" parent="Perimeter" instance=ExtResource("wall_4m")]
+position = Vector3(8, 0, -6)
+rotation = Vector3(0, -1.5707963267949, 0)
+
+[node name="North_1" parent="Perimeter" instance=ExtResource("wall_4m_used_2")]
+position = Vector3(-2, 0, -8)
+
+[node name="South_1" parent="Perimeter" instance=ExtResource("wall_doorway_4m")]
+position = Vector3(-2, 0, 8)
+rotation = Vector3(0, 3.14159265358979, 0)
+
+[node name="West_1" parent="Perimeter" instance=ExtResource("wall_4m_used_3")]
+position = Vector3(-8, 0, -2)
+rotation = Vector3(0, 1.5707963267949, 0)
+
+[node name="East_1" parent="Perimeter" instance=ExtResource("wall_4m")]
+position = Vector3(8, 0, -2)
+rotation = Vector3(0, -1.5707963267949, 0)
+
+[node name="North_2" parent="Perimeter" instance=ExtResource("wall_4m_used_2")]
+position = Vector3(2, 0, -8)
+
+[node name="South_2" parent="Perimeter" instance=ExtResource("wall_4m_used_3")]
+position = Vector3(2, 0, 8)
+rotation = Vector3(0, 3.14159265358979, 0)
+
+[node name="West_2" parent="Perimeter" instance=ExtResource("wall_4m")]
+position = Vector3(-8, 0, 2)
+rotation = Vector3(0, 1.5707963267949, 0)
+
+[node name="East_2" parent="Perimeter" instance=ExtResource("wall_4m_used_2")]
+position = Vector3(8, 0, 2)
+rotation = Vector3(0, -1.5707963267949, 0)
+
+[node name="North_3" parent="Perimeter" instance=ExtResource("wall_4m_used_3")]
+position = Vector3(6, 0, -8)
+
+[node name="South_3" parent="Perimeter" instance=ExtResource("wall_4m")]
+position = Vector3(6, 0, 8)
+rotation = Vector3(0, 3.14159265358979, 0)
+
+[node name="West_3" parent="Perimeter" instance=ExtResource("wall_4m_used_2")]
+position = Vector3(-8, 0, 6)
+rotation = Vector3(0, 1.5707963267949, 0)
+
+[node name="East_3" parent="Perimeter" instance=ExtResource("wall_doorway_4m_used_2")]
+position = Vector3(8, 0, 6)
+rotation = Vector3(0, -1.5707963267949, 0)
+
+[node name="PerimeterColumn_0" parent="Structure" instance=ExtResource("column_3m2")]
+position = Vector3(-7.73, 0, -7.73)
+
+[node name="PerimeterColumn_1" parent="Structure" instance=ExtResource("column_3m2_used_2")]
+position = Vector3(-7.73, 0, -4)
+
+[node name="PerimeterColumn_2" parent="Structure" instance=ExtResource("column_3m2_used_3")]
+position = Vector3(-7.73, 0, 0)
+
+[node name="PerimeterColumn_3" parent="Structure" instance=ExtResource("column_3m2")]
+position = Vector3(-7.73, 0, 4)
+
+[node name="PerimeterColumn_4" parent="Structure" instance=ExtResource("column_3m2_used_2")]
+position = Vector3(-7.73, 0, 7.73)
+
+[node name="PerimeterColumn_5" parent="Structure" instance=ExtResource("column_3m2_used_3")]
+position = Vector3(7.73, 0, -7.73)
+
+[node name="PerimeterColumn_6" parent="Structure" instance=ExtResource("column_3m2")]
+position = Vector3(7.73, 0, -4)
+
+[node name="PerimeterColumn_7" parent="Structure" instance=ExtResource("column_3m2_used_2")]
+position = Vector3(7.73, 0, 0)
+
+[node name="PerimeterColumn_8" parent="Structure" instance=ExtResource("column_3m2_used_3")]
+position = Vector3(7.73, 0, 4)
+
+[node name="PerimeterColumn_9" parent="Structure" instance=ExtResource("column_3m2")]
+position = Vector3(7.73, 0, 7.73)
+
+[node name="CeilingBeam_0" parent="Structure" instance=ExtResource("beam_4m")]
+position = Vector3(-6, 2.98, -4)
+
+[node name="CeilingBeam_1" parent="Structure" instance=ExtResource("beam_4m_used_2")]
+position = Vector3(-2, 2.98, -4)
+
+[node name="CeilingBeam_2" parent="Structure" instance=ExtResource("beam_4m_used_3")]
+position = Vector3(2, 2.98, -4)
+
+[node name="CeilingBeam_3" parent="Structure" instance=ExtResource("beam_4m")]
+position = Vector3(6, 2.98, -4)
+
+[node name="CeilingBeam_4" parent="Structure" instance=ExtResource("beam_4m_used_2")]
+position = Vector3(-6, 2.98, 0)
+
+[node name="CeilingBeam_5" parent="Structure" instance=ExtResource("beam_4m_used_3")]
+position = Vector3(-2, 2.98, 0)
+
+[node name="CeilingBeam_6" parent="Structure" instance=ExtResource("beam_4m")]
+position = Vector3(2, 2.98, 0)
+
+[node name="CeilingBeam_7" parent="Structure" instance=ExtResource("beam_4m_used_2")]
+position = Vector3(6, 2.98, 0)
+
+[node name="CeilingBeam_8" parent="Structure" instance=ExtResource("beam_4m_used_3")]
+position = Vector3(-6, 2.98, 4)
+
+[node name="CeilingBeam_9" parent="Structure" instance=ExtResource("beam_4m")]
+position = Vector3(-2, 2.98, 4)
+
+[node name="CeilingBeam_10" parent="Structure" instance=ExtResource("beam_4m_used_2")]
+position = Vector3(2, 2.98, 4)
+
+[node name="CeilingBeam_11" parent="Structure" instance=ExtResource("beam_4m_used_3")]
+position = Vector3(6, 2.98, 4)
+
+[node name="SouthHermeticEntry" parent="Doors" instance=ExtResource("hermetic_door")]
+position = Vector3(-2, 0, 8)
+rotation = Vector3(0, 3.14159265358979, 0)
+
+[node name="EastServiceFrame" parent="Doors" instance=ExtResource("door_frame")]
+position = Vector3(8, 0, 6)
+rotation = Vector3(0, -1.5707963267949, 0)
+
+[node name="EastServiceLeafClosed" parent="Doors" instance=ExtResource("door_leaf")]
+position = Vector3(8, 0, 5.41)
+rotation = Vector3(0, -1.5707963267949, 0)
+
+[node name="MaintenanceDuctA" parent="Utilities" instance=ExtResource("duct_straight_4m")]
+position = Vector3(-8, 2.45, 5.2)
+
+[node name="MaintenanceDuctBend" parent="Utilities" instance=ExtResource("duct_elbow_90")]
+position = Vector3(-4, 2.45, 5.2)
+
+[node name="MaintenanceDuctB" parent="Utilities" instance=ExtResource("duct_straight_4m_used_2")]
+position = Vector3(-3.2, 2.45, 4.4)
+rotation = Vector3(0, 1.5707963267949, 0)
+
+[node name="MaintenanceDuctOutlet" parent="Utilities" instance=ExtResource("duct_grille")]
+position = Vector3(-3.2, 2.45, 0.4)
+rotation = Vector3(0, 1.5707963267949, 0)
+
+[node name="NorthPipeA" parent="Utilities" instance=ExtResource("pipe_straight_4m")]
+position = Vector3(-8, 2.4, -7.81)
+
+[node name="NorthIsolationValve" parent="Utilities" instance=ExtResource("pipe_valve")]
+position = Vector3(-4, 2.4, -7.81)
+
+[node name="NorthPipeB" parent="Utilities" instance=ExtResource("pipe_straight_4m_used_2")]
+position = Vector3(-3.5, 2.4, -7.81)
+
+[node name="NorthPipeIntoWall" parent="Utilities" instance=ExtResource("pipe_elbow_90")]
+position = Vector3(0.5, 2.4, -7.81)
+
+[node name="EastCableTray_0" parent="Utilities" instance=ExtResource("cable_tray_4m")]
+position = Vector3(7.2, 2.835, 8)
+rotation = Vector3(0, 1.5707963267949, 0)
+
+[node name="EastCableTray_1" parent="Utilities" instance=ExtResource("cable_tray_4m")]
+position = Vector3(7.2, 2.835, 4)
+rotation = Vector3(0, 1.5707963267949, 0)
+
+[node name="EastCableTray_2" parent="Utilities" instance=ExtResource("cable_tray_4m")]
+position = Vector3(7.2, 2.835, 0)
+rotation = Vector3(0, 1.5707963267949, 0)
+
+[node name="EastCableTray_3" parent="Utilities" instance=ExtResource("cable_tray_4m")]
+position = Vector3(7.2, 2.835, -4)
+rotation = Vector3(0, 1.5707963267949, 0)
+
+[node name="ServiceElectricalPanel" parent="Utilities" instance=ExtResource("electrical_box")]
+position = Vector3(8, 0.95, 3.95)
+rotation = Vector3(0, -1.5707963267949, 0)

@@ -65,6 +65,8 @@ var player_state_dir : String = CogitoSceneManager.cogito_state_dir + CogitoScen
 @export var body_transform: Transform3D
 @export var neck_transform: Transform3D
 @export var head_transform: Transform3D
+# Missing in old resources: their Head may already contain untracked lean.
+@export var head_lean_neutralized: bool = false
 @export var eyes_transform: Transform3D
 @export var camera_transform: Transform3D
 
@@ -73,10 +75,12 @@ func save_node_transforms(player):
 	body_transform = player.get_node("Body").transform
 	neck_transform = player.get_node("Body/Neck").transform
 	head_transform = player.get_node("Body/Neck/Head").transform
+	head_lean_neutralized = false
 	# The optional project lean component owns its transient Head contribution.
 	var lean = player.get_node_or_null("PlayerLean")
 	if lean != null and lean.has_method("get_neutral_head_transform"):
 		head_transform = lean.get_neutral_head_transform()
+		head_lean_neutralized = true
 	eyes_transform = player.get_node("Body/Neck/Head/Eyes").transform
 	camera_transform = player.get_node("Body/Neck/Head/Eyes/Camera").transform
 
@@ -85,9 +89,12 @@ func load_node_transforms(player):
 	var lean = player.get_node_or_null("PlayerLean")
 	if lean != null and lean.has_method("reset"):
 		lean.reset()
+	var restored_head_transform := head_transform
+	if not head_lean_neutralized and lean != null and lean.has_method("get_legacy_neutral_head_transform"):
+		restored_head_transform = lean.get_legacy_neutral_head_transform(head_transform)
 	player.get_node("Body").transform = body_transform
 	player.get_node("Body/Neck").transform = neck_transform
-	player.get_node("Body/Neck/Head").transform = head_transform
+	player.get_node("Body/Neck/Head").transform = restored_head_transform
 	player.get_node("Body/Neck/Head/Eyes").transform = eyes_transform
 	player.get_node("Body/Neck/Head/Eyes/Camera").transform = camera_transform
 

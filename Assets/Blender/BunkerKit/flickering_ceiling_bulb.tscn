@@ -1,0 +1,19 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Assets/Blender/BunkerKit/flickering_light.gd" id="1_1bh1l"]
+[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/ceiling_bulb.glb" id="2_efuam"]
+
+[node name="FlickeringCeilingBulb" type="Node3D" unique_id=1028612226]
+script = ExtResource("1_1bh1l")
+
+[node name="Model" type="Node3D" parent="." unique_id=1622118021 instance=ExtResource("2_efuam")]
+
+[node name="Light" type="OmniLight3D" parent="." unique_id=939100891]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.23, 0)
+light_color = Color(1, 0.65, 0.25, 1)
+light_energy = 0.65
+shadow_enabled = true
+omni_range = 3.8
+
+[node name="Timer" type="Timer" parent="." unique_id=1272970709]
+one_shot = true
