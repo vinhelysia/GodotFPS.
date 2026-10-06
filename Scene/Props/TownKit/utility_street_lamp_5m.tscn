@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/assets/utility_street_lamp_5m.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/materials/town_utilities_clean.tres" id="2_finish"]
+
+[node name="TownStreetLamp" instance=ExtResource("1_model")]
+
+[node name="LampAssembly" parent="TownStreetLamp" index="0"]
+surface_material_override/0 = ExtResource("2_finish")

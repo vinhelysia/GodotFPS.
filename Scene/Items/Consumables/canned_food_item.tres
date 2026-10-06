@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ConsumableItemPD" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://addons/cogito/InventoryPD/CustomResources/ConsumableItemPD.gd" id="1_consumable"]
+[ext_resource type="Texture2D" path="res://Scene/Items/Consumables/icon_canned_food.png" id="2_icon"]
+[ext_resource type="AudioStream" path="res://addons/cogito/Assets/Audio/Kenney/handleSmallLeather.ogg" id="3_pickup"]
+
+[resource]
+script = ExtResource("1_consumable")
+attribute_name = "hunger"
+attribute_change_amount = 25.0
+value_to_change = 0
+name = "Canned Food"
+description = "A sealed tin of provisions. Restores up to 25 hunger."
+icon = ExtResource("2_icon")
+slot_background_preset = 1
+is_stackable = true
+stack_size = 5
+drop_scene = "res://Scene/Items/Consumables/pickup_canned_food.tscn"
+item_drop_size = 0.24
+hint_icon_on_use = ExtResource("2_icon")
+hint_text_on_use = "Canned Food restored up to 25 hunger."
+item_size = Vector2(1, 1)
+sound_pickup = ExtResource("3_pickup")
+can_auto_slot = false

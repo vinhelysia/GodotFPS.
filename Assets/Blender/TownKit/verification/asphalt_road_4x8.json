@@ -1,0 +1,180 @@
+{
+  "asset": "asphalt_road_4x8",
+  "scene": "Town_Road",
+  "root": "TownRoad",
+  "budget": 200,
+  "texture_group": "circulation",
+  "origin": "surface corner (0,0,0); X 0..4, Blender Y 0..8",
+  "details": {
+    "walk_surface_z": 0,
+    "grid_ports": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0
+      ],
+      [
+        4,
+        8,
+        0
+      ]
+    ],
+    "lane_marks": "none; neutral local/service road"
+  },
+  "source": "C:\\Stuff\\Blender\\TownKit\\source\\asphalt_road_4x8.blend",
+  "visual_nodes": [
+    "Road"
+  ],
+  "collision_node": "Road-colonly",
+  "dimensions_blender_m": [
+    4.0,
+    8.0,
+    0.11999999731779099
+  ],
+  "bounds_blender_m": [
+    [
+      0.0,
+      0.0,
+      -0.11999999731779099
+    ],
+    [
+      4.0,
+      8.0,
+      0.0
+    ]
+  ],
+  "visual_triangles": 44,
+  "visual_surfaces": 1,
+  "geometry_sha256": {
+    "Road": "aee12baea3c9af772dbd5a69a060396e532a766ef9b2075e5239274e7e04c516"
+  },
+  "uv_sha256": {
+    "Road": "9c7575b9da5d1fb71cf31a566879f74952a94271350f1342cc48d8ae1a0c9b89"
+  },
+  "variants": [
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "clean",
+      "seed": 202610060,
+      "material": "town_circulation_clean",
+      "albedo_sha256": "471005c85bbf833493cf29f0f2d2703bae6bc0275aad2d8d82d8ffb9439cbd40",
+      "requested_coverage_percent": 0.5,
+      "threshold_coverage_percent": 0.49998468866487944,
+      "paint_texels": 718422,
+      "atlas_size": 1024,
+      "unique_uv_islands": 130,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 90.65590834617615,
+      "visual_triangles": 220,
+      "geometry_unchanged": true,
+      "images": [
+        "town_circulation_clean_Albedo",
+        "town_circulation_clean_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    },
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "used",
+      "seed": 202610061,
+      "material": "town_circulation_used",
+      "albedo_sha256": "618b3bfcb055686ce3c541412cfdf8a820b19493924e464b61f50de32ed65ab5",
+      "requested_coverage_percent": 3,
+      "threshold_coverage_percent": 3.000047325944918,
+      "paint_texels": 718422,
+      "atlas_size": 1024,
+      "unique_uv_islands": 130,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 90.65590834617615,
+      "visual_triangles": 220,
+      "geometry_unchanged": true,
+      "images": [
+        "town_circulation_used_Albedo",
+        "town_circulation_used_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    },
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "worn",
+      "seed": 202610062,
+      "material": "town_circulation_worn",
+      "albedo_sha256": "0bd11a0139169dce60e341f14f4fcf50d3c7f0528dae61f19a98cc22a1797c37",
+      "requested_coverage_percent": 8,
+      "threshold_coverage_percent": 8.000033406549354,
+      "paint_texels": 718422,
+      "atlas_size": 1024,
+      "unique_uv_islands": 130,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 90.65590834617615,
+      "visual_triangles": 220,
+      "geometry_unchanged": true,
+      "images": [
+        "town_circulation_worn_Albedo",
+        "town_circulation_worn_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    }
+  ],
+  "pass_source_export": true,
+  "native_godot_runtime": "Not run; gameplay agent owns integration",
+  "source_reopened": true,
+  "packed_variant_images": 6,
+  "outward_manifold_islands": {
+    "Road": 1,
+    "Road-colonly": 1
+  },
+  "zero_area_faces": 0,
+  "zero_uv_overlaps": 0,
+  "openings_and_walk_planes_checked": true,
+  "glb_reimport_dimensions_tris_pivots_materials": true,
+  "glb": "C:\\Stuff\\Blender\\TownKit\\godot\\assets\\asphalt_road_4x8.glb",
+  "previews": [
+    "C:\\Stuff\\Blender\\TownKit\\previews\\asphalt_road_4x8_clean.png",
+    "C:\\Stuff\\Blender\\TownKit\\previews\\asphalt_road_4x8_used.png",
+    "C:\\Stuff\\Blender\\TownKit\\previews\\asphalt_road_4x8_worn.png"
+  ],
+  "sha256": {
+    "asphalt_road_4x8.glb": "eecd67c216f7f76df6de7e21a2a8d525872ef7443b5e3aeaee085e516298538a",
+    "asphalt_road_4x8.blend": "70ca3e72a766d59f3238eacf010c90f936bb5b2256d9bf6815bcb78488f4abf4"
+  },
+  "dimensions_godot_m": [
+    4.0,
+    0.11999999731779099,
+    8.0
+  ],
+  "variant_overrides": {
+    "clean": "res://Assets/Blender/TownKit/materials/town_circulation_clean.tres",
+    "used": "res://Assets/Blender/TownKit/materials/town_circulation_used.tres",
+    "worn": "res://Assets/Blender/TownKit/materials/town_circulation_worn.tres"
+  },
+  "import_recommendation": "Copy assets/, textures/, materials/ preserving relative paths; apply shared override to main visual surface 0 only. Leave LampDiffuser separate."
+}

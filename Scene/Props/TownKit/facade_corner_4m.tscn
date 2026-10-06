@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/assets/facade_corner_4m.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/materials/town_architecture_clean.tres" id="2_finish"]
+
+[node name="TownFacadeCorner" instance=ExtResource("1_model")]
+
+[node name="FacadeCorner" parent="TownFacadeCorner" index="0"]
+surface_material_override/0 = ExtResource("2_finish")

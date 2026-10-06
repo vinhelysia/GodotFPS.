@@ -22,7 +22,7 @@
 [ext_resource type="AudioStream" uid="uid://dc03jiw2a6y3j" path="res://addons/cogito/DynamicFootstepSystem/FootstepProfiles/generic_footstep_profile.tres" id="18_mdors"]
 [ext_resource type="Resource" uid="uid://ca0q2t6w08ubh" path="res://addons/cogito/DynamicFootstepSystem/FootstepMaterialLibrary/sample_footstep_material_library.tres" id="19_pc36t"]
 [ext_resource type="PackedScene" uid="uid://dy3tudla5p2nc" path="res://addons/cogito/Components/PlayerInteractionComponent.tscn" id="20_4f25o"]
-[ext_resource type="PackedScene" uid="uid://0c32kepv0ahx" path="res://addons/cogito/PackedScenes/Player_HUD.tscn" id="21_j3p88"]
+[ext_resource type="PackedScene" path="res://Scene/UI/player_vitals_hud.tscn" id="21_j3p88"]
 [ext_resource type="PackedScene" uid="uid://dkie3md1cmsip" path="res://addons/cogito/EasyMenus/Scenes/PauseMenu.tscn" id="22_haksr"]
 [ext_resource type="PackedScene" uid="uid://cga0lxak2u2oq" path="res://addons/cogito/Components/AutoPickUpZone.tscn" id="24_810bw"]
 [ext_resource type="Script" uid="uid://egffa3q4ftpg" path="res://addons/cogito/Scripts/CogitoGUI.gd" id="24_ekjhh"]
@@ -32,6 +32,9 @@
 [ext_resource type="PackedScene" uid="uid://txkg0abvpsj7" path="res://addons/cogito/Components/AutoConsumes/StaminaAutoConsume.tscn" id="35_wx2rv"]
 [ext_resource type="Script" uid="uid://dw0bupxm1mn0q" path="res://Scripts/Weapons/weapon_recoil.gd" id="36_recoil"]
 [ext_resource type="Script" path="res://Scripts/Player/player_lean.gd" id="37_lean"]
+[ext_resource type="Texture2D" path="res://Assets/UI/Icons/hunger.svg" id="38_hunger_icon"]
+[ext_resource type="Texture2D" path="res://Assets/UI/Icons/thirst.svg" id="39_thirst_icon"]
+[ext_resource type="Script" path="res://Scripts/Player/drink_action.gd" id="40_drink"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8vem4"]
 size = Vector3(0.6, 1.7, 0.6)
@@ -90,6 +93,25 @@ metadata/_custom_type_script = "uid://b6l8lsrktfd4b"
 [node name="StaminaAttribute" parent="." unique_id=1726381400 instance=ExtResource("8_kodbk")]
 
 [node name="HealthAttribute" parent="." unique_id=369673944 instance=ExtResource("9_ky5mf")]
+attribute_color = Color(0.9, 0.23, 0.23, 1)
+
+[node name="HungerAttribute" type="Node" parent="."]
+script = ExtResource("6_xg64i")
+attribute_name = "hunger"
+attribute_display_name = "Hunger"
+attribute_color = Color(0.9, 0.67, 0.23, 1)
+attribute_icon = ExtResource("38_hunger_icon")
+value_max = 100.0
+value_start = 100.0
+
+[node name="ThirstAttribute" type="Node" parent="."]
+script = ExtResource("6_xg64i")
+attribute_name = "thirst"
+attribute_display_name = "Thirst"
+attribute_color = Color(0.23, 0.67, 0.9, 1)
+attribute_icon = ExtResource("39_thirst_icon")
+value_max = 100.0
+value_start = 100.0
 
 [node name="StandingCollisionShape" type="CollisionShape3D" parent="." unique_id=55700280]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
@@ -179,11 +201,17 @@ one_shot = true
 [node name="PlayerLean" type="Node" parent="."]
 script = ExtResource("37_lean")
 
-[node name="PlayerInteractionComponent" parent="." unique_id=1376914453 node_paths=PackedStringArray("interaction_raycast", "carryable_position", "stamina_attribute", "wieldable_container") instance=ExtResource("20_4f25o")]
+[node name="PlayerInteractionComponent" parent="." unique_id=1376914453 node_paths=PackedStringArray("interaction_raycast", "carryable_position", "stamina_attribute", "wieldable_container", "consumable_action") instance=ExtResource("20_4f25o")]
 interaction_raycast = NodePath("../Body/Neck/Head/Eyes/Camera/InteractionRaycast")
 carryable_position = NodePath("../Body/Neck/Head/Eyes/Camera/CarryablePosition")
 stamina_attribute = NodePath("../StaminaAttribute")
 wieldable_container = NodePath("../Body/Neck/Head/Wieldables")
+consumable_action = NodePath("../DrinkAction")
+
+[node name="DrinkAction" type="Node" parent="." node_paths=PackedStringArray("camera", "interaction_component")]
+script = ExtResource("40_drink")
+camera = NodePath("../Body/Neck/Head/Eyes/Camera")
+interaction_component = NodePath("../PlayerInteractionComponent")
 
 [node name="GUI" type="Control" parent="." unique_id=947008994]
 layout_mode = 3

@@ -19,6 +19,9 @@ const msaa_2d_key = "msaa_2d"
 const msaa_3d_key = "msaa_3d"
 const scope_resolution_key = "scope_resolution"
 const default_scope_resolution = 512
+const ao_mode_key = "ao_mode"
+const ao_intensity_key = "ao_intensity"
+enum AOMode { SCENE_DEFAULT, OFF, ON }
 
 # Gameplay options
 const invert_vertical_axis_key = "invert_vertical_axis"
@@ -37,3 +40,17 @@ static func get_scope_resolution(config: ConfigFile) -> int:
 	if typeof(resolution) == TYPE_INT and (resolution == 512 or resolution == 1024):
 		return resolution
 	return default_scope_resolution
+
+
+static func get_ao_mode(config: ConfigFile) -> int:
+	var mode = config.get_value(section_name, ao_mode_key, AOMode.SCENE_DEFAULT)
+	if typeof(mode) == TYPE_INT and mode in AOMode.values():
+		return mode
+	return AOMode.SCENE_DEFAULT
+
+
+static func get_ao_intensity(config: ConfigFile) -> float:
+	var intensity = config.get_value(section_name, ao_intensity_key, 1.0)
+	if typeof(intensity) not in [TYPE_INT, TYPE_FLOAT] or not is_finite(float(intensity)):
+		return 1.0
+	return clampf(float(intensity), 0.0, 2.0)

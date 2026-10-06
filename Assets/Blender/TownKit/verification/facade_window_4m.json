@@ -1,0 +1,182 @@
+{
+  "asset": "facade_window_4m",
+  "scene": "Town_Facade_Window",
+  "root": "TownFacadeWindow",
+  "budget": 1200,
+  "texture_group": "architecture",
+  "origin": "inner-bottom left grid point (0,0,0); X 0..4, outside Blender Y -0.25..0",
+  "details": {
+    "nominal_dimensions_blender_m": [
+      4,
+      0.25,
+      3.2
+    ],
+    "ports_blender_m": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        0
+      ]
+    ],
+    "wall_thickness_m": 0.25,
+    "window_opening_m": [
+      1.6,
+      1.35
+    ],
+    "window_bottom_m": 1.05,
+    "window": "opaque matte blue-gray glazing; no transparent material",
+    "collision": "fitted wall segments plus thin opaque glazing proxy; window blocked, doorway variant remains open"
+  },
+  "source": "C:\\Stuff\\Blender\\TownKit\\source\\facade_window_4m.blend",
+  "visual_nodes": [
+    "FacadeWindow"
+  ],
+  "collision_node": "FacadeWindow-colonly",
+  "dimensions_blender_m": [
+    4.0,
+    0.25,
+    3.200000047683716
+  ],
+  "bounds_blender_m": [
+    [
+      0.0,
+      -0.25,
+      0.0
+    ],
+    [
+      4.0,
+      0.0,
+      3.200000047683716
+    ]
+  ],
+  "visual_triangles": 360,
+  "visual_surfaces": 1,
+  "geometry_sha256": {
+    "FacadeWindow": "747efbbfb10e3ce042406e2ec13b2ef653961a1a7cf389fdb7d2343ae624b339"
+  },
+  "uv_sha256": {
+    "FacadeWindow": "5e0451f8eb9bc0e558d302311e512f1fea915aa1834c546e66287df7f90c62e1"
+  },
+  "variants": [
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "clean",
+      "seed": 202610070,
+      "material": "town_architecture_clean",
+      "albedo_sha256": "d3c4c9a63293f89ecdc75a2c75c996e268a2b9b96dc48e3d5766e54259f0de62",
+      "requested_coverage_percent": 0.5,
+      "threshold_coverage_percent": 0.5000098006821275,
+      "paint_texels": 2856944,
+      "atlas_size": 2048,
+      "unique_uv_islands": 902,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 98.0063214302063,
+      "visual_triangles": 1616,
+      "geometry_unchanged": true,
+      "images": [
+        "town_architecture_clean_Albedo",
+        "town_architecture_clean_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    },
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "used",
+      "seed": 202610071,
+      "material": "town_architecture_used",
+      "albedo_sha256": "f601cf8e3c84e4ee1d9cd6b6c6748c4fb391b5167e0d6c701e6dda003674cb43",
+      "requested_coverage_percent": 3,
+      "threshold_coverage_percent": 2.999988799220426,
+      "paint_texels": 2856944,
+      "atlas_size": 2048,
+      "unique_uv_islands": 902,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 98.0063214302063,
+      "visual_triangles": 1616,
+      "geometry_unchanged": true,
+      "images": [
+        "town_architecture_used_Albedo",
+        "town_architecture_used_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    },
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "worn",
+      "seed": 202610072,
+      "material": "town_architecture_worn",
+      "albedo_sha256": "2c60f1a2aad19274c837f42aa2c9fe6307ef78b32f16c2e4ea540bd3642c3400",
+      "requested_coverage_percent": 8,
+      "threshold_coverage_percent": 8.000051803605531,
+      "paint_texels": 2856944,
+      "atlas_size": 2048,
+      "unique_uv_islands": 902,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 98.0063214302063,
+      "visual_triangles": 1616,
+      "geometry_unchanged": true,
+      "images": [
+        "town_architecture_worn_Albedo",
+        "town_architecture_worn_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    }
+  ],
+  "pass_source_export": true,
+  "native_godot_runtime": "Not run; gameplay agent owns integration",
+  "source_reopened": true,
+  "packed_variant_images": 6,
+  "outward_manifold_islands": {
+    "FacadeWindow": 14,
+    "FacadeWindow-colonly": 5
+  },
+  "zero_area_faces": 0,
+  "zero_uv_overlaps": 0,
+  "openings_and_walk_planes_checked": true,
+  "glb_reimport_dimensions_tris_pivots_materials": true,
+  "glb": "C:\\Stuff\\Blender\\TownKit\\godot\\assets\\facade_window_4m.glb",
+  "previews": [
+    "C:\\Stuff\\Blender\\TownKit\\previews\\facade_window_4m_clean.png",
+    "C:\\Stuff\\Blender\\TownKit\\previews\\facade_window_4m_used.png",
+    "C:\\Stuff\\Blender\\TownKit\\previews\\facade_window_4m_worn.png",
+    "C:\\Stuff\\Blender\\TownKit\\previews\\facade_window_4m_rear.png"
+  ],
+  "sha256": {
+    "facade_window_4m.glb": "62044ee53ccc2ffc2cc3eccae1f7869a5942568e1045073a7a95194d85ee3ee0",
+    "facade_window_4m.blend": "9cecb18bf2f84b336a7b73890df11df3cec1e66aa5b63c33e0cf5d63f19dee50"
+  },
+  "dimensions_godot_m": [
+    4.0,
+    3.200000047683716,
+    0.25
+  ],
+  "variant_overrides": {
+    "clean": "res://Assets/Blender/TownKit/materials/town_architecture_clean.tres",
+    "used": "res://Assets/Blender/TownKit/materials/town_architecture_used.tres",
+    "worn": "res://Assets/Blender/TownKit/materials/town_architecture_worn.tres"
+  },
+  "import_recommendation": "Copy assets/, textures/, materials/ preserving relative paths; apply shared override to main visual surface 0 only. Leave LampDiffuser separate."
+}

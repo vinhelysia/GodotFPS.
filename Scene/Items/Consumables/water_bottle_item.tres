@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="AnimatedConsumableItem" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/animated_consumable_item.gd" id="1_consumable"]
+[ext_resource type="Texture2D" path="res://Scene/Items/Consumables/icon_water_bottle.png" id="2_icon"]
+[ext_resource type="AudioStream" path="res://addons/cogito/Assets/Audio/Kenney/handleSmallLeather.ogg" id="3_pickup"]
+[ext_resource type="PackedScene" path="res://Scene/Items/Consumables/water_drink_view.tscn" id="4_drink"]
+
+[resource]
+script = ExtResource("1_consumable")
+use_scene = ExtResource("4_drink")
+attribute_name = "thirst"
+attribute_change_amount = 40.0
+value_to_change = 0
+name = "Water Bottle"
+description = "A bottle of drinking water. Restores up to 40 thirst."
+icon = ExtResource("2_icon")
+slot_background_preset = 1
+is_stackable = true
+stack_size = 5
+drop_scene = "res://Scene/Items/Consumables/pickup_water_bottle.tscn"
+item_drop_size = 0.38
+hint_icon_on_use = ExtResource("2_icon")
+hint_text_on_use = "Water Bottle restored up to 40 thirst."
+item_size = Vector2(1, 2)
+sound_pickup = ExtResource("3_pickup")
+can_auto_slot = false

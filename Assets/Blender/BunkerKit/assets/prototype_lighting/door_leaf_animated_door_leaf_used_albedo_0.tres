@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://pm6carfa0hma"]
+
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/prototype_lighting/door_leaf_animated_door_leaf_used_albedo_encoded.png" id="1_hgf8g"]
+[ext_resource type="Texture2D" uid="uid://dl8o7d1l3b3d8" path="res://Assets/Blender/BunkerKit/assets/door_animation/door_leaf_animated_door_leaf_used_orm.png" id="2_6gi38"]
+
+[resource]
+resource_name = "door_leaf_used_prototype_encoded"
+cull_mode = 2
+albedo_texture = ExtResource("1_hgf8g")
+metallic = 1.0
+metallic_texture = ExtResource("2_6gi38")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_6gi38")
+roughness_texture_channel = 1
+texture_repeat = false
+metadata/extras = {
+"wear_coverage_percent": 5.0,
+"wear_seed": 20439496.0
+}
+metadata/_gltf_primary_texture_coord = 0

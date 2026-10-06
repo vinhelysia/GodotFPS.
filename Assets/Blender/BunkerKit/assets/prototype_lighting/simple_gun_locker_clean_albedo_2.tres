@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://mhutqh81mgfv"]
+
+[ext_resource type="Texture2D" path="res://Assets/Blender/BunkerKit/assets/prototype_lighting/simple_gun_locker_clean_albedo_encoded.png" id="1_gv5up"]
+[ext_resource type="Texture2D" uid="uid://dx8vw3k4m8mto" path="res://Assets/Blender/BunkerKit/assets/simple_gun_locker_variants/simple_gun_locker_clean_orm.png" id="2_0v4vh"]
+
+[resource]
+resource_name = "SimpleGunLocker_clean_prototype_encoded"
+albedo_texture = ExtResource("1_gv5up")
+metallic = 1.0
+metallic_texture = ExtResource("2_0v4vh")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_0v4vh")
+roughness_texture_channel = 1
+texture_repeat = false
+metadata/extras = {
+"coverage_percent": 0.0,
+"wear_seed": 811.0
+}
+metadata/_gltf_primary_texture_coord = 0

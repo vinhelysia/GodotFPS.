@@ -1,5 +1,5 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3 uid="uid://c8o5wvy3c7w1f"]
 
-[ext_resource type="PackedScene" path="res://Assets/Blender/BunkerKit/assets/reinforced_wood_chest.glb" id="1_model"]
+[ext_resource type="PackedScene" uid="uid://bn1hwkaya0d1a" path="res://Assets/Blender/BunkerKit/assets/reinforced_wood_chest.glb" id="1_model"]
 
-[node name="ReinforcedWoodChest" instance=ExtResource("1_model")]
+[node name="ReinforcedWoodChest" unique_id=1554443739 instance=ExtResource("1_model")]

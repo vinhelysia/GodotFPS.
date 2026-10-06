@@ -17,6 +17,8 @@ class_name SlotPanel extends PanelContainer
 @export var sound_highlight : AudioStream
 
 var item_data = null
+# Logical inventory cell: queued old grid children can shift sibling indices during refresh.
+var slot_index: int = -1
 var origin_index : int = -1
 var grid : bool
 var ammo_slot : bool
@@ -57,6 +59,7 @@ func set_hotbar_icon():
 
 
 func set_slot_data(slot_data: InventorySlotPD, index: int, moving: bool, x_size: int):
+	slot_index = index
 	item_data = slot_data.inventory_item
 	_apply_item_background(Vector2i.ZERO, true)
 	if moving:
@@ -174,27 +177,27 @@ func _on_charge_changed():
 func _on_gui_input(event: InputEvent):
 	# Setting SLOT GAMPEAD INTERACTIONS HERE
 	if event.is_action_pressed("inventory_move_item"):
-		slot_pressed.emit(get_index(), "inventory_move_item")
-		highlight_slot.emit(get_index(), true)
+		slot_pressed.emit(slot_index, "inventory_move_item")
+		highlight_slot.emit(slot_index, true)
 		get_viewport().set_input_as_handled()
 	if event.is_action_pressed("inventory_use_item"):
-		print("Slot.gd: inventory_use_item pressed on slot ", get_index())
-		slot_pressed.emit(get_index(), "inventory_use_item")
+		print("Slot.gd: inventory_use_item pressed on slot ", slot_index)
+		slot_pressed.emit(slot_index, "inventory_use_item")
 		get_viewport().set_input_as_handled()
 	if event.is_action_pressed("inventory_drop_item"):
-		slot_pressed.emit(get_index(), "inventory_drop_item")
+		slot_pressed.emit(slot_index, "inventory_drop_item")
 		get_viewport().set_input_as_handled()
 	if event.is_action_pressed("inventory_assign_item"):
-		slot_pressed.emit(get_index(), "inventory_assign_item")
+		slot_pressed.emit(slot_index, "inventory_assign_item")
 		get_viewport().set_input_as_handled()
 	if event.is_action_pressed("inventory_rotate_item"):
-		slot_pressed.emit(get_index(), "inventory_rotate_item")
+		slot_pressed.emit(slot_index, "inventory_rotate_item")
 		get_viewport().set_input_as_handled()
 	if event.is_action_pressed("inventory_detach_item"):
-		slot_pressed.emit(get_index(), "inventory_detach_item")
+		slot_pressed.emit(slot_index, "inventory_detach_item")
 		get_viewport().set_input_as_handled()
 	if event.is_action_pressed("inventory_mod_item"):
-		slot_pressed.emit(get_index(), "inventory_mod_item")
+		slot_pressed.emit(slot_index, "inventory_mod_item")
 		get_viewport().set_input_as_handled()
 
 	if event.is_action_pressed("interact") or event.is_action_pressed("interact2"):
@@ -234,9 +237,9 @@ func _on_hidden():
 	
 func _on_focus_entered() -> void:
 	Audio.play_sound(sound_highlight)
-	highlight_slot.emit(get_index(), true)
+	highlight_slot.emit(slot_index, true)
 	$Panel.show()
 
 func _on_focus_exited() -> void:
-	highlight_slot.emit(get_index(), false)
+	highlight_slot.emit(slot_index, false)
 	$Panel.hide()

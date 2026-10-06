@@ -14,6 +14,9 @@ signal options_changed(windowed_resolution_changed: bool)
 @onready var anti_aliasing_2d_option_button: OptionButton = $%AntiAliasing2DOptionButton
 @onready var anti_aliasing_3d_option_button: OptionButton = $%AntiAliasing3DOptionButton
 @onready var scope_quality_option_button: OptionButton = %ScopeQualityOptionButton
+@onready var ao_option_button: OptionButton = %AOOptionButton
+@onready var ao_intensity_slider: HSlider = %AOIntensitySlider
+@onready var ao_intensity_value_label: Label = %AOIntensityValueLabel
 @onready var fullscreen_mode_check_button: CheckBox = %FullscreenModeCheckButton
 
 var windowed_resolution: Vector2i
@@ -55,6 +58,8 @@ var _loaded_vsync: Variant
 var _loaded_msaa_2d: Variant
 var _loaded_msaa_3d: Variant
 var _loaded_scope_resolution: int
+var _loaded_ao_mode: int
+var _loaded_ao_intensity: float
 
 
 func initialize() -> void:
@@ -63,6 +68,8 @@ func initialize() -> void:
 	fullscreen_mode_check_button.toggled.connect(_on_fullscreen_mode_toggled)
 	windowed_resolution_option_button.item_selected.connect(_on_resolution_selected)
 	scope_quality_option_button.item_selected.connect(_on_scope_quality_selected)
+	ao_option_button.item_selected.connect(_on_ao_selected)
+	ao_intensity_slider.value_changed.connect(_on_ao_intensity_changed)
 	gui_scale_slider.value_changed.connect(_on_gui_scale_slider_value_changed)
 	vsync_check_button.toggled.connect(_on_v_sync_check_button_toggled)
 	anti_aliasing_2d_option_button.item_selected.connect(_on_anti_aliasing_2d_option_button_item_selected)
@@ -81,8 +88,12 @@ func read_config(config: ConfigFile, have_cfg: bool) -> void:
 	_loaded_msaa_2d = config.get_value(OptionsConstants.section_name, OptionsConstants.msaa_2d_key, 0)
 	_loaded_msaa_3d = config.get_value(OptionsConstants.section_name, OptionsConstants.msaa_3d_key, 0)
 	_loaded_scope_resolution = OptionsConstants.default_scope_resolution
+	_loaded_ao_mode = OptionsConstants.AOMode.SCENE_DEFAULT
+	_loaded_ao_intensity = 1.0
 	if have_cfg:
 		_loaded_scope_resolution = OptionsConstants.get_scope_resolution(config)
+		_loaded_ao_mode = OptionsConstants.get_ao_mode(config)
+		_loaded_ao_intensity = OptionsConstants.get_ao_intensity(config)
 
 
 func apply_loaded(skip_applying: bool, have_cfg: bool, config: ConfigFile) -> void:
@@ -97,6 +108,9 @@ func apply_loaded(skip_applying: bool, have_cfg: bool, config: ConfigFile) -> vo
 	anti_aliasing_2d_option_button.selected = _loaded_msaa_2d
 	anti_aliasing_3d_option_button.selected = _loaded_msaa_3d
 	scope_quality_option_button.select(scope_quality_option_button.get_item_index(_loaded_scope_resolution))
+	ao_option_button.select(ao_option_button.get_item_index(_loaded_ao_mode))
+	ao_intensity_slider.set_value_no_signal(_loaded_ao_intensity)
+	refresh_ao_controls()
 	if !skip_applying:
 		get_tree().call_group("scope_renderers", "set_render_resolution", _loaded_scope_resolution)
 
@@ -136,6 +150,8 @@ func store_in_config(config: ConfigFile) -> void:
 	config.set_value(OptionsConstants.section_name, OptionsConstants.msaa_2d_key, anti_aliasing_2d_option_button.get_selected_id())
 	config.set_value(OptionsConstants.section_name, OptionsConstants.msaa_3d_key, anti_aliasing_3d_option_button.get_selected_id())
 	config.set_value(OptionsConstants.section_name, OptionsConstants.scope_resolution_key, scope_quality_option_button.get_selected_id())
+	config.set_value(OptionsConstants.section_name, OptionsConstants.ao_mode_key, ao_option_button.get_selected_id())
+	config.set_value(OptionsConstants.section_name, OptionsConstants.ao_intensity_key, ao_intensity_slider.value)
 
 	# We previously removed the legacy `render_scale` key – clean it if present
 	if config.has_section_key(OptionsConstants.section_name, "render_scale"):
@@ -244,6 +260,21 @@ func _on_resolution_selected(index: int) -> void:
 
 func _on_scope_quality_selected(_index: int) -> void:
 	options_changed.emit(false)
+
+
+func _on_ao_selected(_index: int) -> void:
+	refresh_ao_controls()
+	options_changed.emit(false)
+
+
+func _on_ao_intensity_changed(_value: float) -> void:
+	refresh_ao_controls()
+	options_changed.emit(false)
+
+
+func refresh_ao_controls() -> void:
+	ao_intensity_slider.editable = ao_option_button.get_selected_id() != OptionsConstants.AOMode.OFF
+	ao_intensity_value_label.text = "%d%%" % roundi(ao_intensity_slider.value * 100.0)
 
 
 func _on_fullscreen_resolution_slider_value_changed(value: float) -> void:

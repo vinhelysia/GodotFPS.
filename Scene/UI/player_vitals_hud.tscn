@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://addons/cogito/PackedScenes/Player_HUD.tscn" id="1_hud"]
+[ext_resource type="PackedScene" path="res://Scene/UI/player_vital_bar.tscn" id="2_vital_bar"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_panel"]
+
+[node name="PlayerVitalsHUD" instance=ExtResource("1_hud")]
+ui_attribute_prefab = ExtResource("2_vital_bar")
+
+[node name="MarginContainer_BottomLeft" parent="." index="6"]
+offset_left = 24.0
+offset_top = -84.0
+offset_right = 234.0
+offset_bottom = -24.0
+mouse_filter = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="PlayerAttributes" parent="MarginContainer_BottomLeft" index="0"]
+custom_minimum_size = Vector2(0, 0)
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_panel")
+
+[node name="MarginContainer" parent="MarginContainer_BottomLeft/PlayerAttributes" index="0"]
+mouse_filter = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="VBoxContainer" parent="MarginContainer_BottomLeft/PlayerAttributes/MarginContainer" index="0"]
+mouse_filter = 2
+theme_override_constants/separation = 4

@@ -1,0 +1,175 @@
+{
+  "asset": "utility_street_lamp_5m",
+  "scene": "Town_Street_Lamp",
+  "root": "TownStreetLamp",
+  "budget": 1500,
+  "texture_group": "utilities",
+  "origin": "bottom centre at foundation ground (0,0,0)",
+  "details": {
+    "height_m": 5,
+    "diffuser_node_path": "TownStreetLamp/LampDiffuser",
+    "diffuser_material": "Town_LampDiffuser",
+    "diffuser_surface_index": 0,
+    "default_emission_energy": 0.15,
+    "day_night": "static asset; native Godot light + per-instance material override owned by gameplay",
+    "power": "service cover at .34 m, underground feed through base; no hanging cable",
+    "collision": "base and mast only; luminaire/arm outside walking height"
+  },
+  "source": "C:\\Stuff\\Blender\\TownKit\\source\\utility_street_lamp_5m.blend",
+  "visual_nodes": [
+    "LampAssembly",
+    "LampDiffuser"
+  ],
+  "collision_node": "LampAssembly-colonly",
+  "dimensions_blender_m": [
+    0.3199999928474426,
+    1.1400000154972076,
+    5.0
+  ],
+  "bounds_blender_m": [
+    [
+      -0.1599999964237213,
+      -0.9800000190734863,
+      0.0
+    ],
+    [
+      0.1599999964237213,
+      0.1599999964237213,
+      5.0
+    ]
+  ],
+  "visual_triangles": 624,
+  "visual_surfaces": 2,
+  "geometry_sha256": {
+    "LampAssembly": "a3c730da90130dd78125df182ca17ea1242f21be9a26e275a9588e3a4b24ba7e",
+    "LampDiffuser": "bcef0f823d13a5def039c170c704c6feb63519d3973f141b2d355b1c52797de1"
+  },
+  "uv_sha256": {
+    "LampAssembly": "9ec1cbfda037b21924ee8660bd6d1ed85c6fc95efb7251c214328adaab3f1a66",
+    "LampDiffuser": "69d2b0e1c63866c6ff6fe9d18b6b551287af2908a934832f201e98bf8baf2ea4"
+  },
+  "variants": [
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "clean",
+      "seed": 202610090,
+      "material": "town_utilities_clean",
+      "albedo_sha256": "7ae41e32be50b7febf4781fc4475c6db7294adb5ccfde6faae2c90db33836acf",
+      "requested_coverage_percent": 0.5,
+      "threshold_coverage_percent": 0.49991563923587895,
+      "paint_texels": 320054,
+      "atlas_size": 1024,
+      "unique_uv_islands": 298,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 184.90820407867432,
+      "visual_triangles": 640,
+      "geometry_unchanged": true,
+      "images": [
+        "town_utilities_clean_Albedo",
+        "town_utilities_clean_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    },
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "used",
+      "seed": 202610091,
+      "material": "town_utilities_used",
+      "albedo_sha256": "1c3604be1da425c3a102eb080db213781f917bf0f5e29f580579460a4bb2ae16",
+      "requested_coverage_percent": 3,
+      "threshold_coverage_percent": 3.0001187299643184,
+      "paint_texels": 320054,
+      "atlas_size": 1024,
+      "unique_uv_islands": 298,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 184.90820407867432,
+      "visual_triangles": 640,
+      "geometry_unchanged": true,
+      "images": [
+        "town_utilities_used_Albedo",
+        "town_utilities_used_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    },
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "worn",
+      "seed": 202610092,
+      "material": "town_utilities_worn",
+      "albedo_sha256": "109cc5897de2d242fead7897522211666c258bd1aeb59a36048cb2ca9e739a4d",
+      "requested_coverage_percent": 8,
+      "threshold_coverage_percent": 7.999900016872153,
+      "paint_texels": 320054,
+      "atlas_size": 1024,
+      "unique_uv_islands": 298,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 184.90820407867432,
+      "visual_triangles": 640,
+      "geometry_unchanged": true,
+      "images": [
+        "town_utilities_worn_Albedo",
+        "town_utilities_worn_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    }
+  ],
+  "pass_source_export": true,
+  "native_godot_runtime": "Not run; gameplay agent owns integration",
+  "lamp_contact_groups": {
+    "islands": 16,
+    "contact_groups": 1,
+    "nonmanifold_edges": 0,
+    "zero_area_faces": 0
+  },
+  "source_reopened": true,
+  "packed_variant_images": 6,
+  "outward_manifold_islands": {
+    "LampAssembly": 16,
+    "LampDiffuser": 1,
+    "LampAssembly-colonly": 2
+  },
+  "zero_area_faces": 0,
+  "zero_uv_overlaps": 0,
+  "openings_and_walk_planes_checked": true,
+  "glb_reimport_dimensions_tris_pivots_materials": true,
+  "glb": "C:\\Stuff\\Blender\\TownKit\\godot\\assets\\utility_street_lamp_5m.glb",
+  "previews": [
+    "C:\\Stuff\\Blender\\TownKit\\previews\\utility_street_lamp_5m_clean.png",
+    "C:\\Stuff\\Blender\\TownKit\\previews\\utility_street_lamp_5m_used.png",
+    "C:\\Stuff\\Blender\\TownKit\\previews\\utility_street_lamp_5m_worn.png",
+    "C:\\Stuff\\Blender\\TownKit\\previews\\utility_street_lamp_5m_rear.png"
+  ],
+  "sha256": {
+    "utility_street_lamp_5m.glb": "05c35222a3802f9497ef3449ac591656a85cf56b851d4957b594632779ead04a",
+    "utility_street_lamp_5m.blend": "176a813ebf793fe8d4cde201e0593503b7096e7a2b7e4ed05e87a603ae93725e"
+  },
+  "dimensions_godot_m": [
+    0.3199999928474426,
+    5.0,
+    1.1400000154972076
+  ],
+  "variant_overrides": {
+    "clean": "res://Assets/Blender/TownKit/materials/town_utilities_clean.tres",
+    "used": "res://Assets/Blender/TownKit/materials/town_utilities_used.tres",
+    "worn": "res://Assets/Blender/TownKit/materials/town_utilities_worn.tres"
+  },
+  "import_recommendation": "Copy assets/, textures/, materials/ preserving relative paths; apply shared override to main visual surface 0 only. Leave LampDiffuser separate."
+}

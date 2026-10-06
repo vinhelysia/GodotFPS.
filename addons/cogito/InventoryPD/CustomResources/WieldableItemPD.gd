@@ -51,6 +51,8 @@ func use(target) -> bool:
 
 		
 	player_interaction_component = target.player_interaction_component
+	if player_interaction_component.is_consumable_action_active():
+		return false
 	if player_interaction_component.carried_object != null:
 		player_interaction_component.send_hint(null,"Can't equip item while carrying.")
 		return false
@@ -66,7 +68,7 @@ func use(target) -> bool:
 
 # Functions for WIELDABLES
 func take_out():
-	if player_interaction_component.is_changing_wieldables:
+	if player_interaction_component.is_changing_wieldables or player_interaction_component.is_consumable_action_active():
 		return
 	
 	is_being_wielded = true
@@ -75,7 +77,7 @@ func take_out():
 
 
 func put_away():
-	if player_interaction_component.is_changing_wieldables:
+	if player_interaction_component.is_changing_wieldables or player_interaction_component.is_consumable_action_active():
 		return
 	
 	is_being_wielded = false

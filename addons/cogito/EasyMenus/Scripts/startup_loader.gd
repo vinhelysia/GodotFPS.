@@ -2,6 +2,8 @@ extends Node
 #Loads options like volume and graphic options on game startup
 
 var config = ConfigFile.new()
+var _ao_mode: int = OptionsConstants.AOMode.SCENE_DEFAULT
+var _ao_intensity := 1.0
 
 @onready var sfx_bus_index = AudioServer.get_bus_index(OptionsConstants.sfx_bus_name)
 @onready var music_bus_index = AudioServer.get_bus_index(OptionsConstants.music_bus_name)
@@ -13,6 +15,7 @@ func load_settings():
 	
 	if err != OK:
 		return
+	apply_ambient_occlusion(config)
 	
 	var sfx_volume = config.get_value(OptionsConstants.section_name, OptionsConstants.sfx_volume_key_name, 1)
 	var music_volume = config.get_value(OptionsConstants.section_name, OptionsConstants.music_volume_key_name, 1)
@@ -51,7 +54,44 @@ func load_settings():
 
 
 func _ready():
+	get_tree().node_added.connect(_on_node_added)
 	load_settings()
+
+
+func apply_ambient_occlusion(options: ConfigFile) -> void:
+	_ao_mode = OptionsConstants.get_ao_mode(options)
+	_ao_intensity = OptionsConstants.get_ao_intensity(options)
+	for node: Node in get_tree().root.find_children("*", "WorldEnvironment", true, false):
+		_apply_environment(node as WorldEnvironment)
+
+
+func _on_node_added(node: Node) -> void:
+	if node is WorldEnvironment:
+		# The incoming scene may not be current_scene yet. Apply to this exact node.
+		_apply_new_environment.call_deferred(weakref(node))
+
+
+func _apply_new_environment(reference: WeakRef) -> void:
+	var node := reference.get_ref() as WorldEnvironment
+	if is_instance_valid(node) and node.is_inside_tree():
+		_apply_environment(node)
+
+
+func _apply_environment(node: WorldEnvironment) -> void:
+	if node.environment == null:
+		return
+	var original := node.get_meta("_options_ao_original", node.environment) as Environment
+	if _ao_mode == OptionsConstants.AOMode.SCENE_DEFAULT and is_equal_approx(_ao_intensity, 1.0):
+		node.environment = original
+		if node.has_meta("_options_ao_original"):
+			node.remove_meta("_options_ao_original")
+		return
+	if not node.has_meta("_options_ao_original"):
+		# Environment resources can be shared by scenes; only change this runtime copy.
+		node.set_meta("_options_ao_original", original)
+		node.environment = original.duplicate() as Environment
+	node.environment.ssao_enabled = original.ssao_enabled if _ao_mode == OptionsConstants.AOMode.SCENE_DEFAULT else _ao_mode == OptionsConstants.AOMode.ON
+	node.environment.ssao_intensity = original.ssao_intensity * _ao_intensity
 
 
 func set_msaa(mode, index):

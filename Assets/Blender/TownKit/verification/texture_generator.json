@@ -1,0 +1,7 @@
+{
+  "pass": true,
+  "same_seed_reproducible": true,
+  "changed_seed_changes_layout": true,
+  "coverage_stable_changed_seed": true,
+  "invalid_controls_rejected": true
+}

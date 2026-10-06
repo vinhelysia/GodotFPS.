@@ -105,6 +105,11 @@ func use_slot_data(index: int):
 	if !slot_data.inventory_item.has_method("use"):
 		return
 
+	# Animated items need the exact source stack; recovery/quantity commit happens later.
+	if slot_data.inventory_item.has_method("begin_inventory_use"):
+		slot_data.inventory_item.begin_inventory_use(self, slot_data, owner)
+		return
+
 	var use_successful : bool = slot_data.inventory_item.use(owner)
 	if slot_data.inventory_item.has_method("is_consumable") and use_successful:
 		slot_data.quantity -= 1

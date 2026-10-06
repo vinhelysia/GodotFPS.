@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/assets/sidewalk_4x2.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/materials/town_circulation_clean.tres" id="2_finish"]
+
+[node name="TownSidewalk" instance=ExtResource("1_model")]
+
+[node name="Sidewalk" parent="TownSidewalk" index="0"]
+surface_material_override/0 = ExtResource("2_finish")

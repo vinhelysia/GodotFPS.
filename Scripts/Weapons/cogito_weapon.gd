@@ -355,6 +355,8 @@ func action_secondary(_is_released: bool) -> void:
 				block_ads_during_shot_tween, _shoot_motion.is_active, false,
 				player_interaction_component)
 	else:
+		if player_interaction_component != null and player_interaction_component.is_consumable_action_active():
+			return
 		if _is_player_sprinting() or _obstruction_blocked or _ads.is_view_blocked():
 			return
 		if _bolt_root_tween:
@@ -367,6 +369,8 @@ func action_secondary(_is_released: bool) -> void:
 
 
 func reload() -> void:
+	if player_interaction_component != null and player_interaction_component.is_consumable_action_active():
+		return
 	if not _setup_valid or weapon_data == null or animation_player == null or _state != WeaponState.IDLE or animation_player.is_playing():
 		return
 	if _item_ref == null:
@@ -902,7 +906,8 @@ func _is_player_input_blocked() -> bool:
 		return false
 	var player := player_interaction_component.get_parent()
 	return player != null and (player.get("is_movement_paused") == true \
-			or player.get("is_showing_ui") == true or player.get("is_dead") == true)
+			or player.get("is_showing_ui") == true or player.get("is_dead") == true \
+			or player_interaction_component.is_consumable_action_active())
 
 
 func _get_reload_animation_name() -> String:

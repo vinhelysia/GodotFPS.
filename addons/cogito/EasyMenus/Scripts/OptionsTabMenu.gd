@@ -278,6 +278,8 @@ func load_options(skip_applying: bool = false):
 
 	# LOADING GRAPHICS CFG
 	graphics_tab.apply_loaded(skip_applying, have_cfg, config)
+	if not skip_applying:
+		MenuTemplateManager.startup_loader.apply_ambient_occlusion(config if have_cfg else ConfigFile.new())
 
 
 func refresh_resolution_controls():
@@ -349,6 +351,7 @@ func _on_graphics_options_changed(windowed_resolution_changed: bool) -> void:
 func _on_apply_changes_pressed() -> void:
 	if not save_options():
 		return
+	MenuTemplateManager.startup_loader.apply_ambient_occlusion(config)
 	get_tree().call_group("scope_renderers", "set_render_resolution", OptionsConstants.get_scope_resolution(config))
 	apply_gui_scale_value()
 

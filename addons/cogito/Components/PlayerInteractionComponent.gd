@@ -53,6 +53,7 @@ var player: CogitoPlayer
 ## List of Wieldable nodes
 @export var wieldable_nodes: Array[Node]
 @export var wieldable_container: Node3D
+@export var consumable_action: Node
 var is_changing_wieldables: bool = false # Used to avoid any input acitons while wieldables are being swapped
 # Various variables used for wieldable handling
 var equipped_wieldable_item: WieldableItemPD = null
@@ -81,6 +82,15 @@ func _process(_delta):
 	pass
 
 
+func is_consumable_action_active() -> bool:
+	return is_instance_valid(consumable_action) and consumable_action.get("is_active") == true
+
+
+func cancel_consumable_action() -> void:
+	if is_consumable_action_active():
+		consumable_action.cancel()
+
+
 func _notification(what: int) -> void:
 	# A paused SceneTree cannot run the firearm's next physics tick to clear fire.
 	if what == NOTIFICATION_PAUSED and is_instance_valid(equipped_wieldable_node):
@@ -107,7 +117,7 @@ func _input(event: InputEvent) -> void:
 	# Releases must still reach held actions after UI/death blocks new presses.
 	# Leave UI releases unhandled so inventory buttons and dragging receive them.
 	if is_wielding:
-		var input_blocked: bool = player.is_movement_paused or player.is_showing_ui or player.is_dead
+		var input_blocked: bool = player.is_movement_paused or player.is_showing_ui or player.is_dead or is_consumable_action_active()
 		if event.is_action_released("action_primary"):
 			attempt_action_primary(true)
 			if not input_blocked:
@@ -226,6 +236,8 @@ func stop_carrying():
 
 ### Wieldable Management
 func equip_wieldable(wieldable_item: WieldableItemPD):
+	if is_consumable_action_active():
+		return
 	if wieldable_item != null:
 		_reset_wieldable_container_motion()
 		equipped_wieldable_item = wieldable_item #Set Inventory Item reference
@@ -243,6 +255,8 @@ func equip_wieldable(wieldable_item: WieldableItemPD):
 
 
 func change_wieldable_to(next_wieldable: InventoryItemPD):
+	if is_consumable_action_active():
+		return
 	is_changing_wieldables = true
 	_reset_wieldable_container_motion()
 	if equipped_wieldable_item != null:
@@ -259,6 +273,8 @@ func change_wieldable_to(next_wieldable: InventoryItemPD):
 
 
 func attempt_action_primary(is_released: bool):
+	if not is_released and is_consumable_action_active():
+		return
 	if is_changing_wieldables: # Block action if currently in the process of changing wieldables
 		return
 	if equipped_wieldable_node == null:
@@ -273,6 +289,8 @@ func attempt_action_primary(is_released: bool):
 
 
 func attempt_action_secondary(is_released: bool):
+	if not is_released and is_consumable_action_active():
+		return
 	if is_changing_wieldables: # Block action if currently in the process of changing wieldables
 		return
 	if equipped_wieldable_node == null:
@@ -285,6 +303,8 @@ func attempt_action_secondary(is_released: bool):
 
 
 func attempt_reload():
+	if is_consumable_action_active():
+		return
 	var inventory: CogitoInventory = get_parent().inventory_data
 	# Some safety checks if reload should even be triggered.
 	if inventory == null:
@@ -318,6 +338,7 @@ func attempt_reload():
 
 
 func on_death():
+	cancel_consumable_action()
 	if is_instance_valid(equipped_wieldable_node):
 		attempt_action_primary(true)
 		attempt_action_secondary(true)

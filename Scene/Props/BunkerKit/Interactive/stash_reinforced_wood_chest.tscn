@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://addons/cogito/CogitoObjects/cogito_container.gd" id="1_container"]
+[ext_resource type="Script" path="res://addons/cogito/InventoryPD/cogito_inventory.gd" id="2_inventory"]
+[ext_resource type="PackedScene" path="res://addons/cogito/Components/Interactions/BasicInteraction.tscn" id="3_interaction"]
+[ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/reinforced_wood_chest.tscn" id="4_model"]
+
+[sub_resource type="Resource" id="Inventory"]
+resource_local_to_scene = true
+script = ExtResource("2_inventory")
+grid = true
+inventory_size = Vector2i(4, 2)
+
+[sub_resource type="BoxShape3D" id="Collision"]
+size = Vector3(1.2, 0.68, 0.702)
+
+[node name="StashContainer" type="StaticBody3D"]
+collision_layer = 3
+script = ExtResource("1_container")
+inventory_data = SubResource("Inventory")
+uses_animation = false
+
+[node name="BasicInteraction" parent="." instance=ExtResource("3_interaction")]
+
+[node name="Model" parent="." instance=ExtResource("4_model")]
+process_mode = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+position = Vector3(0, 0.34, 0)
+shape = SubResource("Collision")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -98,6 +98,7 @@ func populate_item_grid(inventory_data : CogitoInventory) -> void:
 	var index = 0
 	for slot_data in inventory_data.inventory_slots:
 		var slot = Slot.instantiate()
+		slot.slot_index = index
 		grid_container.add_child(slot)
 		# Filling array for gamepad navigation.
 		slot_array.append(slot)

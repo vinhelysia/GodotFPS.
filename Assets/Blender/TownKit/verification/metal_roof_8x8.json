@@ -1,0 +1,190 @@
+{
+  "asset": "metal_roof_8x8",
+  "scene": "Town_Metal_Roof",
+  "root": "TownMetalRoof",
+  "budget": 1200,
+  "texture_group": "roof",
+  "origin": "eave underside corner (0,0,0); footprint X/Y 0..8; seat at wall-top 3.2 m",
+  "details": {
+    "footprint_m": [
+      8,
+      8
+    ],
+    "half_span_m": 4,
+    "rise_m": 0.8,
+    "slope_degrees": 11.309932474020215,
+    "wall_seat_z": 0,
+    "ridge_top_z": 0.859,
+    "overhang_m": 0,
+    "connectors_blender_m": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0
+      ],
+      [
+        8,
+        8,
+        0
+      ]
+    ],
+    "collision": "omitted; roof not intended as accessible gameplay surface",
+    "gable": "integrated end panels at X 0..0.04 and 7.96..8, 8 m span / .8 m rise; internal join gables may be occluded"
+  },
+  "source": "C:\\Stuff\\Blender\\TownKit\\source\\metal_roof_8x8.blend",
+  "visual_nodes": [
+    "MetalRoof"
+  ],
+  "collision_node": null,
+  "dimensions_blender_m": [
+    8.0,
+    8.0,
+    0.859000027179718
+  ],
+  "bounds_blender_m": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      8.0,
+      8.0,
+      0.859000027179718
+    ]
+  ],
+  "visual_triangles": 252,
+  "visual_surfaces": 1,
+  "geometry_sha256": {
+    "MetalRoof": "9760ae047d25c7c0983f1372f594e20f2b6f0c7893b385fd08165d69d0769cb0"
+  },
+  "uv_sha256": {
+    "MetalRoof": "67b70c13fbe87ca4b39351d0165a50e893d668a77f09976752b9b84a17954196"
+  },
+  "variants": [
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "clean",
+      "seed": 202610080,
+      "material": "town_roof_clean",
+      "albedo_sha256": "92e65af9f9769d8c796a0ef2f88405b71271bb407fa67d19d90be5e81b8f15a7",
+      "requested_coverage_percent": 0.5,
+      "threshold_coverage_percent": 0.49993488841502126,
+      "paint_texels": 491464,
+      "atlas_size": 1024,
+      "unique_uv_islands": 126,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 55.15762495994568,
+      "visual_triangles": 252,
+      "geometry_unchanged": true,
+      "images": [
+        "town_roof_clean_Albedo",
+        "town_roof_clean_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    },
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "used",
+      "seed": 202610081,
+      "material": "town_roof_used",
+      "albedo_sha256": "9c2fce750179587492e3b9da6a05effdffd038d668a6f767a927b61512c45500",
+      "requested_coverage_percent": 3,
+      "threshold_coverage_percent": 3.0000162778962447,
+      "paint_texels": 491464,
+      "atlas_size": 1024,
+      "unique_uv_islands": 126,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 55.15762495994568,
+      "visual_triangles": 252,
+      "geometry_unchanged": true,
+      "images": [
+        "town_roof_used_Albedo",
+        "town_roof_used_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    },
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "worn",
+      "seed": 202610082,
+      "material": "town_roof_worn",
+      "albedo_sha256": "3e07c81bc15d25da5c62b7e7fba52e581581b1a0f704440eb585861af487e884",
+      "requested_coverage_percent": 8,
+      "threshold_coverage_percent": 7.999975583155633,
+      "paint_texels": 491464,
+      "atlas_size": 1024,
+      "unique_uv_islands": 126,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 55.15762495994568,
+      "visual_triangles": 252,
+      "geometry_unchanged": true,
+      "images": [
+        "town_roof_worn_Albedo",
+        "town_roof_worn_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    }
+  ],
+  "pass_source_export": true,
+  "native_godot_runtime": "Not run; gameplay agent owns integration",
+  "source_reopened": true,
+  "packed_variant_images": 6,
+  "outward_manifold_islands": {
+    "MetalRoof": 21
+  },
+  "zero_area_faces": 0,
+  "zero_uv_overlaps": 0,
+  "openings_and_walk_planes_checked": true,
+  "glb_reimport_dimensions_tris_pivots_materials": true,
+  "glb": "C:\\Stuff\\Blender\\TownKit\\godot\\assets\\metal_roof_8x8.glb",
+  "previews": [
+    "C:\\Stuff\\Blender\\TownKit\\previews\\metal_roof_8x8_clean.png",
+    "C:\\Stuff\\Blender\\TownKit\\previews\\metal_roof_8x8_used.png",
+    "C:\\Stuff\\Blender\\TownKit\\previews\\metal_roof_8x8_worn.png",
+    "C:\\Stuff\\Blender\\TownKit\\previews\\metal_roof_8x8_rear.png"
+  ],
+  "sha256": {
+    "metal_roof_8x8.glb": "d6dd50748c9ac5d204a9ce17b5a1e7c11e2459104f9010995f1dc6ea7765e21e",
+    "metal_roof_8x8.blend": "694e3bd13b7498835d2c2af0d4c3536e3ee6417baa80086e4e1adcef8409bd0d"
+  },
+  "dimensions_godot_m": [
+    8.0,
+    0.859000027179718,
+    8.0
+  ],
+  "variant_overrides": {
+    "clean": "res://Assets/Blender/TownKit/materials/town_roof_clean.tres",
+    "used": "res://Assets/Blender/TownKit/materials/town_roof_used.tres",
+    "worn": "res://Assets/Blender/TownKit/materials/town_roof_worn.tres"
+  },
+  "import_recommendation": "Copy assets/, textures/, materials/ preserving relative paths; apply shared override to main visual surface 0 only. Leave LampDiffuser separate."
+}

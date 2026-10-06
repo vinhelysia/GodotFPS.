@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://addons/cogito/CogitoObjects/cogito_object.gd" id="1_object"]
+[ext_resource type="PackedScene" path="res://addons/cogito/Components/Interactions/PickupComponent.tscn" id="2_pickup"]
+[ext_resource type="Resource" path="res://Scene/Items/Consumables/kalo_cola_item.tres" id="3_item"]
+[ext_resource type="Script" path="res://addons/cogito/InventoryPD/CustomResources/InventorySlotPD.gd" id="4_slot"]
+[ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/kalo_cola.tscn" id="5_model"]
+[ext_resource type="Material" path="res://Assets/Blender/BunkerKit/assets/kalo_cola_variants/kalo_cola_clean.tres" id="6_material"]
+
+[sub_resource type="Resource" id="Slot"]
+resource_local_to_scene = true
+script = ExtResource("4_slot")
+inventory_item = ExtResource("3_item")
+quantity = 1
+origin_index = -1
+
+[sub_resource type="BoxShape3D" id="Collision"]
+size = Vector3(0.1188, 0.20736, 0.1188)
+
+[node name="Pickup_KaloCola" type="RigidBody3D"]
+collision_layer = 3
+mass = 0.2
+sleeping = true
+script = ExtResource("1_object")
+cogito_name = "Kalo Cola"
+display_name = "Kalo Cola"
+
+[node name="Model" parent="." instance=ExtResource("5_model")]
+process_mode = 4
+scale = Vector3(1.8, 1.8, 1.8)
+
+[node name="kalo_cola_Mesh" parent="Model/kalo_cola" index="1"]
+surface_material_override/0 = ExtResource("6_material")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+position = Vector3(0, 0.10368, 0)
+shape = SubResource("Collision")
+
+[node name="PickupComponent" parent="." instance=ExtResource("2_pickup")]
+slot_data = SubResource("Slot")
+display_item_name = true
+
+[editable path="Model"]

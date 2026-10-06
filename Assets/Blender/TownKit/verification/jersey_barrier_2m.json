@@ -1,0 +1,162 @@
+{
+  "asset": "jersey_barrier_2m",
+  "scene": "Town_Jersey_Barrier",
+  "root": "TownJerseyBarrier",
+  "budget": 600,
+  "texture_group": "utilities",
+  "origin": "bottom centre (0,0,0); length X, width Y",
+  "details": {
+    "nominal_dimensions_blender_m": [
+      2,
+      0.65,
+      0.9
+    ],
+    "construction": "sloped cast concrete, broad foot, recessed end reflectors"
+  },
+  "source": "C:\\Stuff\\Blender\\TownKit\\source\\jersey_barrier_2m.blend",
+  "visual_nodes": [
+    "JerseyBarrier"
+  ],
+  "collision_node": "JerseyBarrier-colonly",
+  "dimensions_blender_m": [
+    2.0,
+    0.6499999761581421,
+    0.8999999761581421
+  ],
+  "bounds_blender_m": [
+    [
+      -1.0,
+      -0.32499998807907104,
+      0.0
+    ],
+    [
+      1.0,
+      0.32499998807907104,
+      0.8999999761581421
+    ]
+  ],
+  "visual_triangles": 60,
+  "visual_surfaces": 1,
+  "geometry_sha256": {
+    "JerseyBarrier": "3463052ac17091cf39980385d043e192e513450da4480a49504d424312b8c341"
+  },
+  "uv_sha256": {
+    "JerseyBarrier": "bfb1f2431a328c45f5f46ca9132f972e7f0d87ea76b798e02dc9a289120cb2fa"
+  },
+  "variants": [
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "clean",
+      "seed": 202610090,
+      "material": "town_utilities_clean",
+      "albedo_sha256": "7ae41e32be50b7febf4781fc4475c6db7294adb5ccfde6faae2c90db33836acf",
+      "requested_coverage_percent": 0.5,
+      "threshold_coverage_percent": 0.49991563923587895,
+      "paint_texels": 320054,
+      "atlas_size": 1024,
+      "unique_uv_islands": 298,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 184.90820407867432,
+      "visual_triangles": 640,
+      "geometry_unchanged": true,
+      "images": [
+        "town_utilities_clean_Albedo",
+        "town_utilities_clean_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    },
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "used",
+      "seed": 202610091,
+      "material": "town_utilities_used",
+      "albedo_sha256": "1c3604be1da425c3a102eb080db213781f917bf0f5e29f580579460a4bb2ae16",
+      "requested_coverage_percent": 3,
+      "threshold_coverage_percent": 3.0001187299643184,
+      "paint_texels": 320054,
+      "atlas_size": 1024,
+      "unique_uv_islands": 298,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 184.90820407867432,
+      "visual_triangles": 640,
+      "geometry_unchanged": true,
+      "images": [
+        "town_utilities_used_Albedo",
+        "town_utilities_used_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    },
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "worn",
+      "seed": 202610092,
+      "material": "town_utilities_worn",
+      "albedo_sha256": "109cc5897de2d242fead7897522211666c258bd1aeb59a36048cb2ca9e739a4d",
+      "requested_coverage_percent": 8,
+      "threshold_coverage_percent": 7.999900016872153,
+      "paint_texels": 320054,
+      "atlas_size": 1024,
+      "unique_uv_islands": 298,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 184.90820407867432,
+      "visual_triangles": 640,
+      "geometry_unchanged": true,
+      "images": [
+        "town_utilities_worn_Albedo",
+        "town_utilities_worn_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    }
+  ],
+  "pass_source_export": true,
+  "native_godot_runtime": "Not run; gameplay agent owns integration",
+  "source_reopened": true,
+  "packed_variant_images": 6,
+  "outward_manifold_islands": {
+    "JerseyBarrier": 3,
+    "JerseyBarrier-colonly": 1
+  },
+  "zero_area_faces": 0,
+  "zero_uv_overlaps": 0,
+  "openings_and_walk_planes_checked": true,
+  "glb_reimport_dimensions_tris_pivots_materials": true,
+  "glb": "C:\\Stuff\\Blender\\TownKit\\godot\\assets\\jersey_barrier_2m.glb",
+  "previews": [
+    "C:\\Stuff\\Blender\\TownKit\\previews\\jersey_barrier_2m_clean.png",
+    "C:\\Stuff\\Blender\\TownKit\\previews\\jersey_barrier_2m_used.png",
+    "C:\\Stuff\\Blender\\TownKit\\previews\\jersey_barrier_2m_worn.png"
+  ],
+  "sha256": {
+    "jersey_barrier_2m.glb": "6c00cb0fd02f1b5438169674831f8b5494037f350002ffa04e511f1ef2cfc7f9",
+    "jersey_barrier_2m.blend": "cffa70ee1b68cf5a71d4aae062d41d27123bcf60ad71b95a0e0f3afd9ab85627"
+  },
+  "dimensions_godot_m": [
+    2.0,
+    0.8999999761581421,
+    0.6499999761581421
+  ],
+  "variant_overrides": {
+    "clean": "res://Assets/Blender/TownKit/materials/town_utilities_clean.tres",
+    "used": "res://Assets/Blender/TownKit/materials/town_utilities_used.tres",
+    "worn": "res://Assets/Blender/TownKit/materials/town_utilities_worn.tres"
+  },
+  "import_recommendation": "Copy assets/, textures/, materials/ preserving relative paths; apply shared override to main visual surface 0 only. Leave LampDiffuser separate."
+}

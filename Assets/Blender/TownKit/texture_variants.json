@@ -1,0 +1,334 @@
+{
+  "circulation": [
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "clean",
+      "seed": 202610060,
+      "material": "town_circulation_clean",
+      "albedo_sha256": "471005c85bbf833493cf29f0f2d2703bae6bc0275aad2d8d82d8ffb9439cbd40",
+      "requested_coverage_percent": 0.5,
+      "threshold_coverage_percent": 0.49998468866487944,
+      "paint_texels": 718422,
+      "atlas_size": 1024,
+      "unique_uv_islands": 130,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 90.65590834617615,
+      "visual_triangles": 220,
+      "geometry_unchanged": true,
+      "images": [
+        "town_circulation_clean_Albedo",
+        "town_circulation_clean_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    },
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "used",
+      "seed": 202610061,
+      "material": "town_circulation_used",
+      "albedo_sha256": "618b3bfcb055686ce3c541412cfdf8a820b19493924e464b61f50de32ed65ab5",
+      "requested_coverage_percent": 3,
+      "threshold_coverage_percent": 3.000047325944918,
+      "paint_texels": 718422,
+      "atlas_size": 1024,
+      "unique_uv_islands": 130,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 90.65590834617615,
+      "visual_triangles": 220,
+      "geometry_unchanged": true,
+      "images": [
+        "town_circulation_used_Albedo",
+        "town_circulation_used_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    },
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "worn",
+      "seed": 202610062,
+      "material": "town_circulation_worn",
+      "albedo_sha256": "0bd11a0139169dce60e341f14f4fcf50d3c7f0528dae61f19a98cc22a1797c37",
+      "requested_coverage_percent": 8,
+      "threshold_coverage_percent": 8.000033406549354,
+      "paint_texels": 718422,
+      "atlas_size": 1024,
+      "unique_uv_islands": 130,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 90.65590834617615,
+      "visual_triangles": 220,
+      "geometry_unchanged": true,
+      "images": [
+        "town_circulation_worn_Albedo",
+        "town_circulation_worn_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    }
+  ],
+  "architecture": [
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "clean",
+      "seed": 202610070,
+      "material": "town_architecture_clean",
+      "albedo_sha256": "d3c4c9a63293f89ecdc75a2c75c996e268a2b9b96dc48e3d5766e54259f0de62",
+      "requested_coverage_percent": 0.5,
+      "threshold_coverage_percent": 0.5000098006821275,
+      "paint_texels": 2856944,
+      "atlas_size": 2048,
+      "unique_uv_islands": 902,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 98.0063214302063,
+      "visual_triangles": 1616,
+      "geometry_unchanged": true,
+      "images": [
+        "town_architecture_clean_Albedo",
+        "town_architecture_clean_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    },
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "used",
+      "seed": 202610071,
+      "material": "town_architecture_used",
+      "albedo_sha256": "f601cf8e3c84e4ee1d9cd6b6c6748c4fb391b5167e0d6c701e6dda003674cb43",
+      "requested_coverage_percent": 3,
+      "threshold_coverage_percent": 2.999988799220426,
+      "paint_texels": 2856944,
+      "atlas_size": 2048,
+      "unique_uv_islands": 902,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 98.0063214302063,
+      "visual_triangles": 1616,
+      "geometry_unchanged": true,
+      "images": [
+        "town_architecture_used_Albedo",
+        "town_architecture_used_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    },
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "worn",
+      "seed": 202610072,
+      "material": "town_architecture_worn",
+      "albedo_sha256": "2c60f1a2aad19274c837f42aa2c9fe6307ef78b32f16c2e4ea540bd3642c3400",
+      "requested_coverage_percent": 8,
+      "threshold_coverage_percent": 8.000051803605531,
+      "paint_texels": 2856944,
+      "atlas_size": 2048,
+      "unique_uv_islands": 902,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 98.0063214302063,
+      "visual_triangles": 1616,
+      "geometry_unchanged": true,
+      "images": [
+        "town_architecture_worn_Albedo",
+        "town_architecture_worn_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    }
+  ],
+  "roof": [
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "clean",
+      "seed": 202610080,
+      "material": "town_roof_clean",
+      "albedo_sha256": "92e65af9f9769d8c796a0ef2f88405b71271bb407fa67d19d90be5e81b8f15a7",
+      "requested_coverage_percent": 0.5,
+      "threshold_coverage_percent": 0.49993488841502126,
+      "paint_texels": 491464,
+      "atlas_size": 1024,
+      "unique_uv_islands": 126,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 55.15762495994568,
+      "visual_triangles": 252,
+      "geometry_unchanged": true,
+      "images": [
+        "town_roof_clean_Albedo",
+        "town_roof_clean_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    },
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "used",
+      "seed": 202610081,
+      "material": "town_roof_used",
+      "albedo_sha256": "9c2fce750179587492e3b9da6a05effdffd038d668a6f767a927b61512c45500",
+      "requested_coverage_percent": 3,
+      "threshold_coverage_percent": 3.0000162778962447,
+      "paint_texels": 491464,
+      "atlas_size": 1024,
+      "unique_uv_islands": 126,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 55.15762495994568,
+      "visual_triangles": 252,
+      "geometry_unchanged": true,
+      "images": [
+        "town_roof_used_Albedo",
+        "town_roof_used_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    },
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "worn",
+      "seed": 202610082,
+      "material": "town_roof_worn",
+      "albedo_sha256": "3e07c81bc15d25da5c62b7e7fba52e581581b1a0f704440eb585861af487e884",
+      "requested_coverage_percent": 8,
+      "threshold_coverage_percent": 7.999975583155633,
+      "paint_texels": 491464,
+      "atlas_size": 1024,
+      "unique_uv_islands": 126,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 55.15762495994568,
+      "visual_triangles": 252,
+      "geometry_unchanged": true,
+      "images": [
+        "town_roof_worn_Albedo",
+        "town_roof_worn_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    }
+  ],
+  "utilities": [
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "clean",
+      "seed": 202610090,
+      "material": "town_utilities_clean",
+      "albedo_sha256": "7ae41e32be50b7febf4781fc4475c6db7294adb5ccfde6faae2c90db33836acf",
+      "requested_coverage_percent": 0.5,
+      "threshold_coverage_percent": 0.49991563923587895,
+      "paint_texels": 320054,
+      "atlas_size": 1024,
+      "unique_uv_islands": 298,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 184.90820407867432,
+      "visual_triangles": 640,
+      "geometry_unchanged": true,
+      "images": [
+        "town_utilities_clean_Albedo",
+        "town_utilities_clean_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    },
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "used",
+      "seed": 202610091,
+      "material": "town_utilities_used",
+      "albedo_sha256": "1c3604be1da425c3a102eb080db213781f917bf0f5e29f580579460a4bb2ae16",
+      "requested_coverage_percent": 3,
+      "threshold_coverage_percent": 3.0001187299643184,
+      "paint_texels": 320054,
+      "atlas_size": 1024,
+      "unique_uv_islands": 298,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 184.90820407867432,
+      "visual_triangles": 640,
+      "geometry_unchanged": true,
+      "images": [
+        "town_utilities_used_Albedo",
+        "town_utilities_used_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    },
+    {
+      "method": "unique face atlas with spatially biased 3D noise",
+      "variant": "worn",
+      "seed": 202610092,
+      "material": "town_utilities_worn",
+      "albedo_sha256": "109cc5897de2d242fead7897522211666c258bd1aeb59a36048cb2ca9e739a4d",
+      "requested_coverage_percent": 8,
+      "threshold_coverage_percent": 7.999900016872153,
+      "paint_texels": 320054,
+      "atlas_size": 1024,
+      "unique_uv_islands": 298,
+      "atlas_rectangles_overlap": false,
+      "texels_per_meter": 184.90820407867432,
+      "visual_triangles": 640,
+      "geometry_unchanged": true,
+      "images": [
+        "town_utilities_worn_Albedo",
+        "town_utilities_worn_ORM"
+      ],
+      "wear_biases": [
+        "lower surfaces",
+        "physical face edges",
+        "upward dust",
+        "gravity-aligned spatial clusters"
+      ],
+      "coverage_definition": "Occupied Town surface texels above threshold; padding excluded, filtered appearance approximate"
+    }
+  ]
+}

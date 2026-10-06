@@ -195,6 +195,10 @@ func _on_player_state_load():
 	inventory_interface.hot_bar_inventory.set_inventory_data(player.inventory_data)
 	connect_to_external_inventories()
 	player.inventory_data.inventory_updated.emit(player.inventory_data)
+	# A restored max can change without attribute_changed when the current value stays equal.
+	for attribute_ui in ui_attribute_area.get_children():
+		var attribute: CogitoAttribute = attribute_ui.assigned_player_attribute
+		attribute_ui.on_attribute_changed(attribute.attribute_name, attribute.value_current, attribute.value_max, false)
 	damage_overlay.modulate = Color.TRANSPARENT # Hide damage overlay when loading after death
 
 
