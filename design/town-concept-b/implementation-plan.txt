@@ -1,0 +1,236 @@
+# Town Concept B — phased implementation handoff
+
+Date: 2026-10-06. Status: planning only; no Concept B scene implementation yet.
+Game snapshot: 196da90532f3d8ca3f3e01e2d2dde8bc36d5e511.
+Tracked-path autoload fix:14496bd156be1990129063d02685df24a5e47ac4.
+Active project/Git root: C:/Stuff/godot-fps-cogito-master/godot-fps-cogito-master/.
+Actual destination: res://Scene/Town.tscn. Do not create a parallel Town map.
+The local development checkout requires the configured Godot MCP Pro addon;
+it remains ignored and is not included in this Git snapshot. project.godot still
+lists its three runtime helpers. A tools-free fresh clone/export was not tested.
+
+## 1. Authority and locked scope
+
+Read outer/nested AGENTS.md, AI_CONTEXT.md, relevant project knowledge and live
+scene/resource dependencies before editing. Apply godot-modular-fps to the
+existing Cogito integration, not its example folder layout.
+
+The design source is this folder's town-layout.json and town-layout.svg.
+The JSON is proposal data, NOT a runtime dependency or layout generator.
+Coordinates: metres; X east, Z south, north=-Z; building position=footprint centre.
+Normalized wrapper front=-Z; Godot yaw 0=N,90=W,180=S,270=E.
+bounds_xz=[minX,maxX,minZ,maxZ]; depot bounds/turning_pad=[minX,minZ,maxX,maxZ].
+Source/import module origins are grid corners, not assumed footprint centres.
+
+User decisions:
+- Post-Soviet Eastern Europe, modern, late autumn, abandoned for years.
+- 200x200m crossroads village; municipal/transport depot added later southeast.
+- 33 structures,14 reusable types;17 ground interiors including4 upper interiors.
+- No solid whole-map perimeter wall. Depot keeps its own fence.
+- Natural edges: tree belts, drainage, slight embankments, broken fences and wrecks.
+- Terrain -0.6..2.4m; flat building pads; depot pad Y0.5m; foundation raise0.2m.
+- S(-86,70); E1(86,-84); E2(86,84), with alternate routes.
+- Main-road M-chain is the only permitted continuous sightline >80m.
+- Curves follow old plot lines, terrain or drainage; no arbitrary wiggles.
+- Keep the existing 30-minute day/night cycle and08:00 new-raid start.
+- Preserve raid/player/inventory/save/Scav ownership and existing raid rules.
+- No new encounter policy, passive hunger/thirst drain, power/lock system,
+  manager/autoload, runtime procedural map system or framework rewrite.
+
+Current verification is planar only:33 structures/14 types,17/4 interiors,
+3384.56m2 roof area/8.46% coverage, min building gap3.2m; connected road graph.
+Straight road envelopes and gate approach widths PASS. Secondary LOS<80m,
+smooth curves, terrain, stair access, navigation, traversal and FPS are pending.
+Run the portable proposal check from project root:
+  node design/town-concept-b/check-layout.cjs
+Regenerate the diagram after intentional data edits:
+  node design/town-concept-b/draw-layout.cjs
+The diagram is not native runtime evidence. PNG rendering is a local authoring
+step; no host-specific browser runner is shipped with this plan.
+
+## 2. Coordination and file ownership
+
+Use three GPT-6.1 Sol/high subagents plus primary, with these exclusive write
+scopes. Paths below are proposed deliverables, not pre-existing APIs. Each agent
+may inspect the whole integration read-only but must not edit another scope.
+Do not create all listed optional directories/files before they are needed.
+
+Agent A — terrain and circulation:
+- Scene/World/TownConceptB/terrain_roads.tscn
+- Assets/TownConceptB/Terrain/ and Assets/TownConceptB/Roads/ if needed
+- Own terrain, flat pads,38 road edges, sidewalks, curves, ditch/culvert geometry
+  and fitted static collision. Deliver a static scene payload with explicit
+  placement transforms; no runtime layout generator.
+
+Agent B — reusable architecture and interiors:
+- Scene/Props/TownKit/Buildings/
+- Assets/TownConceptB/Buildings/ if genuinely new assets are required
+- Own14 type templates, normalized origins/fronts, building collision and actual
+  upper access. Reuse existing TownKit facade/roof scenes and shared finishes.
+- Reuse G/W/I/C geometry intelligently; repair G frame, preserve W partial roof.
+- No Persist loot/NPC/player nodes inside building templates. Missing finished
+  assets get a concrete modeling brief; graybox must not wait for full art.
+- Do not overwrite canonical Assets/Blender/TownKit/ exports or operate another
+  chat's Blender session. Primary coordinates any modeling handoff.
+
+Agent C — plots, dressing and layout checks:
+- Scene/World/TownConceptB/dressing.tscn
+- Scene/World/TownConceptB/night_lighting.tscn only if a separate static payload helps
+- Assets/TownConceptB/Dressing/ if needed
+- tests/town_expansion_regression.gd and tests/day_night_cycle_regression.gd
+- Own depot fences/gates, privacy screens, gardens, utility alignment, wrecks,
+  vegetation masks/chunks and fixture updates. Keep static appearances tunable
+  in Inspector. No new gameplay behavior. Stage fine dressing until graybox PASS.
+
+Primary — integration, live editor, verification and publication:
+- Scene/Town.tscn is written by primary only.
+- Own raid connector/spawn/extract transforms, existing loot/NPC/patrol placement,
+  native navigation bake, signal/export rebinding, runtime tests and screenshots.
+- Own design corrections, relevant docs/project notes and final diff/commit.
+- Existing raid/day-night scripts change only for a demonstrated integration bug,
+  not to accommodate a speculative architecture.
+
+Shared existing Scene/Props/TownKit module scenes, Assets/Blender/TownKit exports,
+addons/cogito and project.godot are outside subagent write scope. Use local scene
+overrides. A necessary shared edit must first be handed to primary with evidence.
+
+Only primary operates Godot MCP. get_project_info must confirm the exact nested
+project before operations. Different MCP ports still control the same editor:
+serialize open/save/import/play/stop/bake. No agent may steal a live session.
+Runtime calls need play_scene first; project settings use the setting API only.
+Do not switch to a Godot CLI workaround if MCP fails. Diagnose the actual owning
+process/session; never kill all Node processes. Preserve unrelated dirty files.
+
+Each delivery includes: files, resource dependencies, transforms/bounds, collider
+ownership, what was checked, what was not, and the integration steps for primary.
+Subagents do not commit/push or write Scene/Town.tscn. Agent C hands fixture write
+ownership to primary explicitly after its work stops; primary never edits those
+fixtures while C still owns them.
+
+## 3. Live contracts to preserve
+
+Keep res://Scene/Town.tscn, root Town and Scripts/Raid/raid_scene.gd.
+Keep Player and RaidSpawn; root connectors=[NodePath("RaidSpawn")].
+Keep root NPCs Scav_Courtyard/Scav_Warehouse/Scav_OuterShed and corresponding
+PatrolPath_Courtyard/PatrolPath_Warehouse/PatrolPath_OuterShed, including P0..P3.
+Reposition existing patrols to valid paths after graybox; do not add Scavs or
+re-enable legacy Cogito state machines. Existing NPC references use ../PatrolPath_*.
+Keep Loot/Pickup_usp, Loot/Pickup_M700, Props/GunLocker and persistence ownership.
+Keep NavigationRegion3D/Level and navmesh_source; only static environment
+geometry should move into optional composition payloads.
+
+Keep NavigationRegion3D/Level/Extract/ExtractionZone as E1 at(86,-84).
+Add E2 at(86,84), proposed path NavigationRegion3D/Level/ExtractSE/ExtractionZone,
+using Scene/Raid/extraction_zone.tscn and the same extraction_completed -> extract
+signal route. Do not add an extraction manager or duplicate finish_raid logic.
+Existing interaction/countdown/cancel/death/return rules stay unchanged.
+
+Keep DayNightCycle, DirectionalLight3D and WorldEnvironment. Primary rebinds the
+exported night_lights array if scene ownership/placements change. Existing
+day/night fixture asserts15 lights; intentionally update it if count changes.
+
+Keep TownExpansion/IndustrialArchitecture and TownExpansion/CivicArchitecture
+parents at identity transforms where practical. Preserve their Persist children:
+Industrial: Provision_water_bottle, Provision_canned_meat_rect.
+Civic: Provision_canned_food, Provision_ration_biscuits.
+Move individual children rather than changing their parent transforms/paths.
+
+Primary confirms I1..I5 <-> Industrial Building_00..04 and C1..C5 <-> Civic
+Building_00..04 mapping before extraction. Existing Building roots can contain
+normalized static templates without moving their separate Persist neighbours.
+G geometry is spread under OuterDetail, not one reusable garage root. Do not
+move all OuterDetail: extract only garage walls/frame/roof/collision. W has its
+own Warehouse subtree and a24x9m partial roof, not a fully covered24x18m box.
+C1..C4 currently have solid8x16m floor slabs atY3.225 and no stairs. Their upper
+floors are visual only; actual cutouts/access/collision are part of implementation.
+
+## 4. Save compatibility boundary
+
+Native Cogito objects/NPCs save parent path and local pose. CSM replaces current
+Persist nodes with snapshot instances. Changing parents can make restoration
+skip objects; retaining names/parents alone does NOT migrate old coordinates.
+Legacy direct Town saves can put player/loot/NPC/corpses into new walls/terrain.
+
+The supported production route remains fresh Hub deployment and preserved Hub
+stash/carried state. Use isolated fresh raid fixtures for layout verification.
+Do not delete user saves, silently apply old poses as a migration, or promise
+legacy direct Town snapshot geometry compatibility. If migration becomes a user
+requirement, propose its policy before adding it; keep it outside this art pass.
+
+## 5. Phases and acceptance gates
+
+Phase0 — baseline and contracts (primary):
+- Snapshot current Scene/Town.tscn, dirty state and relevant dependencies; use the
+  committed game baseline above for recovery without resetting unrelated work.
+- Confirm MCP project and session ownership; record live paths and reuse mapping.
+- Run/check relevant existing baseline evidence; do not mislabel historical PASS
+  as a new test. Agree on any intentional fixture contract change before patching.
+
+Phase1 — playable graybox (A+B in parallel; C prepares checks):
+- A authors terrain/roads/drainage and flat pads; B authors normalized33 building
+  instances from14 templates, including provisional interior and stair geometry.
+- Primary integrates payloads into actual Town, removes the old whole-map solid
+  wall, places S/E1/E2 and remaps existing NPC/patrol/loot poses without reparenting.
+- C prepares opaque plot screens, depot gates and revised route/interior fixtures.
+- No dense foliage, final wear or full modeling release before this gate passes.
+
+Gate1 — native graybox acceptance (primary):
+- Physical player walks S->E1/E2 and alternate routes, enters17 ground interiors
+  and walks up/down all4 upper interiors; no stuck doors, head hits or terrain seams.
+- Use actual player Camera3D and collider dimensions; do not retune the player to
+  make a layout fit. Author stairs1.2m wide, landings>=1.2m and headroom>=2.1m.
+- Proposed U-stair envelope3x4.2m:2 flights of10 risers x0.16m, tread0.28m, floor
+  height3.2m. Test real collision; do not assume capsule movement steps automatically.
+- Test eye-height standing/ADS/lean and upper-floor physics rays. Secondary routes
+  must not have continuous LOS>80m; main M-chain is the only exception. Tree/mesh
+  fences are not opaque blockers. Correct data and static placements before art.
+- GN/GW clear6.5m, GS clear5m; depot18x18m turning pad unobstructed; curves have
+  >=12m secondary radius and swept clearance; culverts/aprons/overhangs do not
+  overlap. Planar segments alone do not prove smooth-curve validity.
+- Native navigation connects spawn, extracts, ground interiors, intended upper
+  areas and patrol points. Existing bake AABB isY-1..2 and clips terrain/pads at
+  Y2.4+0.2 plus upper floors: revise source/bake bounds deliberately. Exclude roofs
+  through proper source/collision policy, not a height cap that also excludes stairs.
+- Boundary wrecks/natural edges have checked collision and keep extract routes
+  clear. Trees and a0.6m ditch do not automatically prevent leaving the map.
+
+Phase2 — reusable art and coherent plots (B+C, A fixes only approved ground issues):
+- Replace passing graybox shells with finished reusable assets; preserve footprint,
+  origin, entrance, stairs and collider contract. Source GLB existence is not export
+  verification. Model requests describe exact metric dimensions and modular joins.
+- C adds real plots, fenced yards, utilities and local wear; use the JSON vegetation
+  regions as candidates with4m building/2.5m road/5m marker/3m ditch masks. Crowns
+  stay inside bounds. Do not impose exact tree counts before exclusion masks.
+- Use chunked static MultiMesh only where repeated vegetation warrants it; no
+  whole-map single culling group. Separate trunk collision from grass rendering.
+- Preserve local30-minute clock/AO ownership; practical lamps align with fixtures.
+- Recheck all geometry/transforms/collision/nav/LOS after finished assets are placed.
+
+Phase3 — gameplay/runtime acceptance (primary, after C's fixture handoff):
+- C delivers the updated town_expansion fixture for33/17/4 structures/interiors, new road
+  routes,2 extracts and stairs; old +/-64m loop/10-door assumptions are obsolete.
+- Run relevant existing isolated-save suites through MCP: town_expansion,
+  town_baseline, day_night_cycle, raid_deployment, raid_return and raid_lifecycle.
+- Both extracts: interact countdown, cancel on leave/UI/death, exactly one Hub
+  return; carried kit retained on extract, lost on death/abandon, stash preserved.
+- Verify fresh second Town resets authored NPC/loot/world and removes prior raid
+  corpses; fresh NPCs may roll their authored loadout normally.
+- Separately, direct Town save/load in the new layout preserves existing live
+  NPC kit/ammo and corpse state without reroll/resurrection. Preserve native
+  save/load ownership; this is not migration of legacy pre-redesign snapshots.
+- Capture matched08:00/midnight views, both extracts, depot, village and interiors.
+- Measure1080p120FPS target(8.33ms/frame); disclose scene/quality/camera and GPU/CPU
+  timings. No guaranteed FPS, night-perception balance or parkour claim without test.
+- stop_scene after owned tests, clean only owned isolated save directories and
+  restore temporary capture/editor state. Never touch personal saves/options.
+
+Phase4 — handoff/publication (primary):
+- Review agent diffs and dependency completeness; record actual PASS/fail evidence
+  and remaining limits. Update Dev Log and relevant architecture/layout knowledge;
+  regenerate Codebase Map only for real class/API/path structural changes.
+- Preserve current ignore policy: local tests/docs/AI tooling remain excluded unless
+  user requests a policy change. Do not force-add them automatically.
+- Commit each verified phase with a focused message; push only within user scope.
+
+Start the implementation team with Phase0/Phase1, not all art tasks simultaneously.
+No Concept B implementation or modeling dispatch was performed by this plan task.

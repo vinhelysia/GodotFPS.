@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "scope": "2D rectangles, straight road envelopes, gate widths and graph only; no 3D LOS/nav/traversal",
+  "buildings": 33,
+  "types": 14,
+  "interiors": 17,
+  "upper_interiors": 4,
+  "roof_area_m2": 3384.56,
+  "roof_coverage_percent": 8.46,
+  "minimum_building_gap_m": 3.2,
+  "minimum_footpath_gap_m": 0.69,
+  "gate_minimum_envelope_width_m": {
+    "GN": 5.96,
+    "GW": 5.7,
+    "GS": 4.47
+  },
+  "routes": {
+    "E1": {
+      "meters": 286,
+      "path": [
+        "S",
+        "T1",
+        "T2",
+        "W3",
+        "W2",
+        "F",
+        "S1",
+        "J",
+        "N2",
+        "N3",
+        "X1",
+        "E1"
+      ]
+    },
+    "E1_northern": {
+      "meters": 340,
+      "path": [
+        "S",
+        "T1",
+        "T2",
+        "W3",
+        "W2",
+        "W1",
+        "N1",
+        "R1",
+        "R2",
+        "R3",
+        "N3",
+        "X1",
+        "E1"
+      ]
+    },
+    "E2": {
+      "meters": 202,
+      "path": [
+        "S",
+        "T1",
+        "T2",
+        "W3",
+        "W4",
+        "S2",
+        "GW",
+        "Y",
+        "X2",
+        "X3",
+        "X4",
+        "GS",
+        "E2"
+      ]
+    },
+    "E2_alternate": {
+      "meters": 263,
+      "path": [
+        "S",
+        "T1",
+        "T2",
+        "W3",
+        "W2",
+        "F",
+        "S1",
+        "F2",
+        "Q1",
+        "GN",
+        "Y",
+        "X2",
+        "X3",
+        "X4",
+        "GS",
+        "E2"
+      ]
+    }
+  },
+  "errors": [],
+  "warnings": []
+}
