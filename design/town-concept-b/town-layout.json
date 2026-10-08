@@ -1,6 +1,6 @@
 {
-  "version": "concept-b-stage2-20261006",
-  "status": "proposal_only",
+  "version": "concept-b-design-revision-20261008",
+  "status": "design_2d_checked_native_sync_pending",
   "units": "m",
   "bounds_xz": [
     -100,
@@ -168,7 +168,7 @@
       "id": "H03",
       "type": "T01",
       "xz": [
-        -66,
+        -65.5,
         52
       ],
       "yaw_deg": 290,
@@ -325,7 +325,7 @@
       "type": "T05",
       "xz": [
         15,
-        8
+        6.5
       ],
       "yaw_deg": 90,
       "floors": 1,
@@ -337,7 +337,7 @@
       "id": "G",
       "type": "T06",
       "xz": [
-        49,
+        46.5,
         70
       ],
       "yaw_deg": 0,
@@ -377,7 +377,7 @@
       "type": "T07",
       "xz": [
         56,
-        -83
+        -81.5
       ],
       "yaw_deg": 155,
       "floors": 1,
@@ -558,10 +558,10 @@
       "id": "P",
       "type": "T14",
       "xz": [
-        79,
-        36
+        78,
+        35.5
       ],
-      "yaw_deg": 180,
+      "yaw_deg": 90,
       "floors": 1,
       "access": "ground",
       "reuse": "new",
@@ -606,8 +606,8 @@
       90
     ],
     "W1": [
-      -58,
-      -8
+      -64,
+      -12
     ],
     "W2": [
       -62,
@@ -678,12 +678,12 @@
       -84
     ],
     "X2": [
-      57.5,
+      56.6,
       60
     ],
     "X3": [
-      57.8,
-      68
+      56.6,
+      69.5
     ],
     "X4": [
       68,
@@ -704,6 +704,18 @@
     "S4": [
       16,
       96
+    ],
+    "PJ": [
+      56.6,
+      35.5
+    ],
+    "PA": [
+      74.3,
+      35.5
+    ],
+    "RF": [
+      44,
+      -68.9
     ]
   },
   "roads": [
@@ -870,12 +882,12 @@
     {
       "id": "R04",
       "from": "R3",
-      "to": "N3",
+      "to": "RF",
       "hierarchy": "secondary",
       "surface": "gravel",
       "width_m": 4.5,
       "sidewalk_m": 0,
-      "reason": "ridge_and_old_lane"
+      "reason": "farmyard_gravel_cul_de_sac"
     },
     {
       "id": "Q01",
@@ -1086,6 +1098,37 @@
       "width_m": 6,
       "sidewalk_m": 0,
       "reason": "south_road_continuation"
+    },
+    {
+      "id": "R05",
+      "from": "RF",
+      "to": "N3",
+      "hierarchy": "footpath",
+      "surface": "dirt",
+      "width_m": 1.8,
+      "sidewalk_m": 0,
+      "reason": "farmyard_pedestrian_easement_preserves_northern_route"
+    },
+    {
+      "id": "D03",
+      "from": "Y",
+      "to": "PJ",
+      "hierarchy": "footpath",
+      "surface": "dirt",
+      "width_m": 1.8,
+      "sidewalk_m": 0,
+      "reason": "pump_house_service_walk"
+    },
+    {
+      "id": "D04",
+      "from": "PJ",
+      "to": "PA",
+      "hierarchy": "footpath",
+      "surface": "dirt",
+      "width_m": 1.8,
+      "sidewalk_m": 0,
+      "reason": "pump_door_apron",
+      "door_approach_for": "P"
     }
   ],
   "vegetation": [
@@ -1630,13 +1673,14 @@
           14
         ]
       ],
-      "height_m": 2
+      "height_m": 2,
+      "thickness_m": 0.14
     },
     {
       "id": "O2",
       "path": [
         [
-          -51,
+          -60,
           8
         ],
         [
@@ -1644,7 +1688,8 @@
           8
         ]
       ],
-      "height_m": 2
+      "height_m": 2,
+      "thickness_m": 0.14
     },
     {
       "id": "O3",
@@ -1658,7 +1703,8 @@
           -57
         ]
       ],
-      "height_m": 2
+      "height_m": 2,
+      "thickness_m": 0.14
     },
     {
       "id": "O4",
@@ -1668,11 +1714,12 @@
           -54
         ],
         [
-          29,
+          50,
           -54
         ]
       ],
-      "height_m": 2
+      "height_m": 2,
+      "thickness_m": 0.14
     },
     {
       "id": "O5",
@@ -1686,13 +1733,14 @@
           -16
         ]
       ],
-      "height_m": 2
+      "height_m": 2,
+      "thickness_m": 0.14
     },
     {
       "id": "O6",
       "path": [
         [
-          46,
+          42.5,
           9
         ],
         [
@@ -1700,7 +1748,8 @@
           9
         ]
       ],
-      "height_m": 2
+      "height_m": 2,
+      "thickness_m": 0.14
     },
     {
       "id": "O7",
@@ -1714,7 +1763,8 @@
           68
         ]
       ],
-      "height_m": 2
+      "height_m": 2,
+      "thickness_m": 0.14
     },
     {
       "id": "O8",
@@ -1728,7 +1778,8 @@
           68
         ]
       ],
-      "height_m": 2
+      "height_m": 2,
+      "thickness_m": 0.14
     },
     {
       "id": "O9",
@@ -1742,7 +1793,8 @@
           35
         ]
       ],
-      "height_m": 2
+      "height_m": 2,
+      "thickness_m": 0.14
     },
     {
       "id": "O10",
@@ -1756,7 +1808,8 @@
           32
         ]
       ],
-      "height_m": 2
+      "height_m": 2,
+      "thickness_m": 0.14
     },
     {
       "id": "O11",
@@ -1770,7 +1823,8 @@
           87
         ]
       ],
-      "height_m": 2
+      "height_m": 2.4,
+      "thickness_m": 0.14
     },
     {
       "id": "O12",
@@ -1784,12 +1838,131 @@
           25
         ]
       ],
-      "height_m": 2
+      "height_m": 2,
+      "thickness_m": 0.14
+    },
+    {
+      "id": "O13",
+      "path": [
+        [
+          -48,
+          -94
+        ],
+        [
+          -48,
+          -76
+        ]
+      ],
+      "height_m": 2,
+      "purpose": "Workshop I02 east yard return, below northern lane",
+      "thickness_m": 0.14
+    },
+    {
+      "id": "O14",
+      "path": [
+        [
+          -29,
+          -51
+        ],
+        [
+          -29,
+          -36.5
+        ]
+      ],
+      "height_m": 2,
+      "kind": "solid_fence",
+      "thickness_m": 0.14,
+      "purpose": "L02 garden east return; front door approach remains west"
+    },
+    {
+      "id": "O15",
+      "path": [
+        [
+          -32,
+          5
+        ],
+        [
+          -16,
+          5
+        ]
+      ],
+      "height_m": 2,
+      "kind": "solid_fence",
+      "thickness_m": 0.14,
+      "purpose": "Shop rear yard boundary"
+    },
+    {
+      "id": "O16",
+      "path": [
+        [
+          -23,
+          19.05
+        ],
+        [
+          -23,
+          32
+        ]
+      ],
+      "height_m": 2,
+      "kind": "solid_fence",
+      "thickness_m": 0.14,
+      "purpose": "H05 garden east boundary; north door approach stays clear"
+    },
+    {
+      "id": "O17",
+      "path": [
+        [
+          40,
+          -68
+        ],
+        [
+          40,
+          -54
+        ]
+      ],
+      "height_m": 2,
+      "kind": "solid_fence",
+      "thickness_m": 0.14,
+      "purpose": "North cooperative garden return joins O4; farm pedestrian easement stays north"
+    },
+    {
+      "id": "O18",
+      "height_m": 2,
+      "thickness_m": 0.14,
+      "kind": "solid_garden_boundary",
+      "path": [
+        [
+          -5,
+          -80
+        ],
+        [
+          -5,
+          -54
+        ]
+      ],
+      "purpose": "Solid boundary between A01 and A02 courtyards, south endpoint beside O4; northern gravel lane remains open"
+    },
+    {
+      "id": "O19",
+      "height_m": 2,
+      "thickness_m": 0.14,
+      "kind": "solid_garden_boundary",
+      "path": [
+        [
+          -5.2,
+          47.5
+        ],
+        [
+          1.9,
+          47.5
+        ]
+      ],
+      "purpose": "L03 front garden south return; north door approach stays open and west street sidewalk remains walkable"
     }
   ],
-  "validation_scope": "2D footprints and road envelopes only; 3D LOS, traversal, smooth curves and nav pending",
+  "validation_scope": "Revised offline 2D footprint, swept fillet, door/path, routing and conservative road-group LOS; native synchronization and 3D recheck pending",
   "road_rules": {
-    "curve_authoring": "joined polylines are design alignments; fillet contours within clearance envelope",
+    "curve_authoring": "Joined road alignments; checked swept fillets use 18m main,12m secondary,8m service,2m pedestrian radius. Scene synchronization and native recheck still required.",
     "minimum_secondary_radius_m": 12,
     "curve_clearance_recheck_required": true,
     "sidewalk_core_edges": [
@@ -1804,20 +1977,351 @@
       5
     ],
     "private_driveway_width_m": 3,
-    "foundation_apron_m": 2
+    "foundation_apron_m": 2,
+    "minimum_footpath_radius_m": 1.5,
+    "default_footpath_radius_m": 2,
+    "minimum_service_radius_m": 8,
+    "default_main_radius_m": 18,
+    "chains": [
+      [
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M05"
+      ],
+      [
+        "S01",
+        "S02",
+        "S03",
+        "S04"
+      ],
+      [
+        "W01",
+        "W02",
+        "W03",
+        "W04",
+        "W05"
+      ],
+      [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05"
+      ],
+      [
+        "Q01",
+        "Q02",
+        "Q03",
+        "Q04"
+      ],
+      [
+        "D01",
+        "D02"
+      ],
+      [
+        "D03",
+        "D04"
+      ],
+      [
+        "P01",
+        "P02",
+        "P03"
+      ],
+      [
+        "F01",
+        "F02"
+      ],
+      [
+        "F03",
+        "F04"
+      ],
+      [
+        "E01",
+        "E02"
+      ],
+      [
+        "X01",
+        "X02",
+        "X03",
+        "X04",
+        "X05"
+      ]
+    ],
+    "los_limits_m": {
+      "main": 150,
+      "other": 80
+    }
   },
   "boundary_closures": [
     {
       "node": "N0",
-      "kind": "abandoned_truck"
+      "kind": "abandoned_truck",
+      "obstacle_id": "B_N0"
     },
     {
       "node": "N4",
-      "kind": "checkpoint_barrier_wreck"
+      "kind": "closed_checkpoint_steel_panel",
+      "obstacle_id": "B_N4"
     },
     {
       "node": "S3",
-      "kind": "bus_wreck"
+      "kind": "bus_wreck",
+      "obstacle_id": "B_S3"
     }
+  ],
+  "native_graybox_corrections": [
+    "W1 follows west cottage plots to break W02/R01 alignment",
+    "V02 north1.5m and I03 south1.5m retain their lots",
+    "O4 extended within civic/workshop plot boundary",
+    "O11 height2.4m blocks downhill eye rays",
+    "O13 returns around I02 yard without crossing R02",
+    "H03 east0.5m retains cottage plot and closes W02 south lean ray"
+  ],
+  "pump_access": {
+    "building": "P",
+    "front": "West",
+    "door_threshold_xz": [
+      75.5,
+      35.5
+    ],
+    "entry_node": "PA",
+    "yard_node": "Y",
+    "roads": [
+      "D03",
+      "D04"
+    ],
+    "door_apron": {
+      "width_m": 1.8,
+      "depth_m": 1.2,
+      "from_xz": [
+        74.3,
+        35.5
+      ],
+      "to_xz": [
+        75.5,
+        35.5
+      ]
+    },
+    "minimum_W_gap_m": 3
+  },
+  "tight_passage": {
+    "buildings": [
+      "G",
+      "W"
+    ],
+    "roads": [
+      "X01",
+      "X02",
+      "X03"
+    ],
+    "width_m": 2,
+    "minimum_clearance_each_side_m": 2,
+    "corner_radius_m": 2
+  },
+  "farmyard": {
+    "node": "RF",
+    "center_xz": [
+      44,
+      -68.9
+    ],
+    "size_m": [
+      8,
+      8
+    ],
+    "surface": "gravel",
+    "vehicle_access_roads": [
+      "R04"
+    ],
+    "pedestrian_exit": "R05",
+    "story": "Former farm storage yard; main lane terminates here, foot easement reaches checkpoint verge"
+  },
+  "obstacles": [
+    {
+      "id": "B_N0",
+      "kind": "vehicle",
+      "model": "abandoned_truck",
+      "xz": [
+        -94,
+        -48
+      ],
+      "size_m": [
+        2.5,
+        2.4,
+        6.8
+      ],
+      "yaw_deg": -17.10272896905237,
+      "opaque": true,
+      "boundary_node": "N0",
+      "blocks_route": true,
+      "purpose": "Truck parked across former western through-road; town continues beyond"
+    },
+    {
+      "id": "B_N4",
+      "kind": "barrier",
+      "model": "closed_checkpoint_steel_panel",
+      "xz": [
+        84.5,
+        -58.0416667
+      ],
+      "size_m": [
+        11.6,
+        2.2,
+        0.3
+      ],
+      "yaw_deg": 112.619864948,
+      "opaque": true,
+      "boundary_node": "N4",
+      "blocks_route": true,
+      "purpose": "Closed 11.6m opaque checkpoint cordon across road and sidewalks before eastern culvert; E1 approach stays at N3"
+    },
+    {
+      "id": "B_S3",
+      "kind": "vehicle",
+      "model": "abandoned_bus",
+      "xz": [
+        16,
+        97
+      ],
+      "size_m": [
+        2.5,
+        2.6,
+        8.2
+      ],
+      "yaw_deg": 90,
+      "opaque": true,
+      "boundary_node": "S3",
+      "blocks_route": true,
+      "purpose": "Bus closure beyond Z92 culvert; southern street visibly continues beyond"
+    },
+    {
+      "id": "V_S02",
+      "kind": "vehicle",
+      "model": "abandoned_short_bus",
+      "xz": [
+        2.52,
+        33.24
+      ],
+      "size_m": [
+        2.5,
+        2.8,
+        8.2
+      ],
+      "yaw_deg": 116.565051177,
+      "opaque": true,
+      "affected_road": "S02",
+      "minimum_walk_gap_m": 2,
+      "purpose": "Bus abandoned obliquely on east lane; walk around west sidewalk"
+    },
+    {
+      "id": "V_S03",
+      "kind": "vehicle",
+      "model": "abandoned_municipal_truck",
+      "xz": [
+        9.095,
+        62.299
+      ],
+      "size_m": [
+        2.5,
+        2.4,
+        6.8
+      ],
+      "yaw_deg": -79.215702132,
+      "opaque": true,
+      "affected_road": "S03",
+      "minimum_walk_gap_m": 2,
+      "purpose": "Truck on west lane; opposite offset leaves east sidewalk walk"
+    },
+    {
+      "id": "V_Q02_A",
+      "kind": "vehicle",
+      "model": "abandoned_service_van",
+      "xz": [
+        37.371,
+        -0.108
+      ],
+      "size_m": [
+        2.5,
+        2.4,
+        5.4
+      ],
+      "yaw_deg": 175.236358309,
+      "opaque": true,
+      "affected_road": "Q02",
+      "minimum_walk_gap_m": 2,
+      "purpose": "Service van parked on west side of depot access"
+    },
+    {
+      "id": "V_Q02_B",
+      "kind": "vehicle",
+      "model": "abandoned_service_van",
+      "xz": [
+        41.462,
+        12.108
+      ],
+      "size_m": [
+        2.5,
+        2.4,
+        5.4
+      ],
+      "yaw_deg": 175.236358309,
+      "opaque": true,
+      "affected_road": "Q02",
+      "minimum_walk_gap_m": 2,
+      "purpose": "Second van on east side; service access remains walkable"
+    }
+  ],
+  "revision_note": "Design-only revision 2026-10-08; do not treat 2026-10-06 native sampled PASS as verification of these coordinates. Scene and saved static payloads remain unchanged.",
+  "design_changes_20261008": {
+    "scene_modified": false,
+    "G": {
+      "from_xz": [
+        49,
+        70
+      ],
+      "to_xz": [
+        46.5,
+        70
+      ],
+      "W_unchanged": true
+    },
+    "P": {
+      "to_xz": [
+        78,
+        35.5
+      ],
+      "yaw_deg": 90,
+      "path": "Y -> PJ -> PA -> west door"
+    },
+    "north_lane": {
+      "vehicle_end": "RF",
+      "pedestrian_exit": "R05",
+      "turning_policy": "8x8m yard is a reversing apron, not a bus U-turn"
+    },
+    "new_solid_fences": [
+      "O14",
+      "O15",
+      "O16",
+      "O17",
+      "O18",
+      "O19"
+    ],
+    "extended_existing_fences": [
+      "O2",
+      "O6"
+    ],
+    "explicit_boundary_obstacles": [
+      "B_N0",
+      "B_N4",
+      "B_S3"
+    ]
+  },
+  "pending_3d_validation": [
+    "Apply revised coordinates/blockers to the existing Town and static terrain/dressing payloads; prior native PASS is for the 2026-10-06 scene.",
+    "Raycast standing, ADS, both lean directions and upper interiors against actual wall/window/vehicle/gate geometry. 2D LOS includes straight road rectangles only; native fillet road surfaces and off-road camera endpoints need checking.",
+    "Bake navigation and physically traverse all alternate routes, G/W passage and P entrance; projected vehicle sidewalk gaps do not prove pathfinding/traversal.",
+    "Verify curved road/collision seams, height changes/drainage, door swing, transparent/missing faces, and footprint-excluded terrain/trees/wire fences.",
+    "Rerun existing Town/deployment/return/lifecycle regressions with isolated saves after integration; verify natural map-edge containment."
   ]
 }

@@ -1,0 +1,318 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/facade_solid_4m.tscn" id="ext_0"]
+
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/materials/town_architecture_worn.tres" id="ext_1"]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/facade_window_4m.tscn" id="ext_2"]
+
+[sub_resource type="StandardMaterial3D" id="wall"]
+albedo_color = Color(0.43, 0.44, 0.4, 1)
+roughness = 1.0
+
+[sub_resource type="StandardMaterial3D" id="floor"]
+albedo_color = Color(0.31, 0.32, 0.3, 1)
+roughness = 1.0
+
+[sub_resource type="StandardMaterial3D" id="roof"]
+albedo_color = Color(0.18, 0.23, 0.22, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="trim"]
+albedo_color = Color(0.22, 0.31, 0.29, 1)
+roughness = 0.85
+
+[sub_resource type="BoxMesh" id="GroundFloor_mesh"]
+material = SubResource("floor")
+size = Vector3(24, 0.2, 12)
+
+[sub_resource type="BoxShape3D" id="GroundFloor_shape"]
+size = Vector3(24, 0.2, 12)
+
+[sub_resource type="BoxMesh" id="RoofVisual_mesh"]
+material = SubResource("roof")
+size = Vector3(24, 0.2, 12)
+
+[sub_resource type="ConcavePolygonShape3D" id="CeilingUnderside_shape"]
+data = PackedVector3Array(-12, 6.4, -6, 12, 6.4, 6, 12, 6.4, -6, -12, 6.4, -6, -12, 6.4, 6, 12, 6.4, 6)
+backface_collision = false
+
+[node name="T03_apartment" type="Node3D"]
+
+[node name="Architecture" type="Node3D" parent="."]
+
+[node name="GroundFloor" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0, -0.1, 0)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/GroundFloor"]
+mesh = SubResource("GroundFloor_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/GroundFloor"]
+shape = SubResource("GroundFloor_shape")
+
+[node name="West_0_0" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(-11.75, 0, -6)
+rotation = Vector3(0, -1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/West_0_0/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="East_0_0" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(11.75, 0, 6)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/East_0_0/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="West_0_1" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(-11.75, 0, -2)
+rotation = Vector3(0, -1.5708, 0)
+
+[node name="FacadeWindow" parent="Architecture/West_0_1/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="East_0_1" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(11.75, 0, 2)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="FacadeWindow" parent="Architecture/East_0_1/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="West_0_2" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(-11.75, 0, 2)
+rotation = Vector3(0, -1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/West_0_2/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="East_0_2" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(11.75, 0, -2)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/East_0_2/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Rear_0_0" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(-12, 0, 5.75)
+rotation = Vector3(0, 0, 0)
+
+[node name="FacadeWindow" parent="Architecture/Rear_0_0/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Rear_0_1" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(-8, 0, 5.75)
+rotation = Vector3(0, 0, 0)
+
+[node name="FacadeSolid" parent="Architecture/Rear_0_1/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Rear_0_2" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(-4, 0, 5.75)
+rotation = Vector3(0, 0, 0)
+
+[node name="FacadeWindow" parent="Architecture/Rear_0_2/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Rear_0_3" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(0, 0, 5.75)
+rotation = Vector3(0, 0, 0)
+
+[node name="FacadeSolid" parent="Architecture/Rear_0_3/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Rear_0_4" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(4, 0, 5.75)
+rotation = Vector3(0, 0, 0)
+
+[node name="FacadeWindow" parent="Architecture/Rear_0_4/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Rear_0_5" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(8, 0, 5.75)
+rotation = Vector3(0, 0, 0)
+
+[node name="FacadeSolid" parent="Architecture/Rear_0_5/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Front_0_0" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(12, 0, -5.75)
+rotation = Vector3(0, 3.14159, 0)
+
+[node name="FacadeWindow" parent="Architecture/Front_0_0/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Front_0_1" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(8, 0, -5.75)
+rotation = Vector3(0, 3.14159, 0)
+
+[node name="FacadeSolid" parent="Architecture/Front_0_1/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Front_0_2" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(4, 0, -5.75)
+rotation = Vector3(0, 3.14159, 0)
+
+[node name="FacadeWindow" parent="Architecture/Front_0_2/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Front_0_3" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(0, 0, -5.75)
+rotation = Vector3(0, 3.14159, 0)
+
+[node name="FacadeSolid" parent="Architecture/Front_0_3/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Front_0_4" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(-4, 0, -5.75)
+rotation = Vector3(0, 3.14159, 0)
+
+[node name="FacadeWindow" parent="Architecture/Front_0_4/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Front_0_5" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(-8, 0, -5.75)
+rotation = Vector3(0, 3.14159, 0)
+
+[node name="FacadeSolid" parent="Architecture/Front_0_5/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="West_1_0" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(-11.75, 3.2, -6)
+rotation = Vector3(0, -1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/West_1_0/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="East_1_0" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(11.75, 3.2, 6)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/East_1_0/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="West_1_1" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(-11.75, 3.2, -2)
+rotation = Vector3(0, -1.5708, 0)
+
+[node name="FacadeWindow" parent="Architecture/West_1_1/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="East_1_1" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(11.75, 3.2, 2)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="FacadeWindow" parent="Architecture/East_1_1/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="West_1_2" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(-11.75, 3.2, 2)
+rotation = Vector3(0, -1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/West_1_2/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="East_1_2" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(11.75, 3.2, -2)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/East_1_2/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Rear_1_0" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(-12, 3.2, 5.75)
+rotation = Vector3(0, 0, 0)
+
+[node name="FacadeWindow" parent="Architecture/Rear_1_0/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Rear_1_1" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(-8, 3.2, 5.75)
+rotation = Vector3(0, 0, 0)
+
+[node name="FacadeSolid" parent="Architecture/Rear_1_1/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Rear_1_2" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(-4, 3.2, 5.75)
+rotation = Vector3(0, 0, 0)
+
+[node name="FacadeWindow" parent="Architecture/Rear_1_2/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Rear_1_3" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(0, 3.2, 5.75)
+rotation = Vector3(0, 0, 0)
+
+[node name="FacadeSolid" parent="Architecture/Rear_1_3/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Rear_1_4" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(4, 3.2, 5.75)
+rotation = Vector3(0, 0, 0)
+
+[node name="FacadeWindow" parent="Architecture/Rear_1_4/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Rear_1_5" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(8, 3.2, 5.75)
+rotation = Vector3(0, 0, 0)
+
+[node name="FacadeSolid" parent="Architecture/Rear_1_5/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Front_1_0" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(12, 3.2, -5.75)
+rotation = Vector3(0, 3.14159, 0)
+
+[node name="FacadeWindow" parent="Architecture/Front_1_0/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Front_1_1" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(8, 3.2, -5.75)
+rotation = Vector3(0, 3.14159, 0)
+
+[node name="FacadeSolid" parent="Architecture/Front_1_1/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Front_1_2" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(4, 3.2, -5.75)
+rotation = Vector3(0, 3.14159, 0)
+
+[node name="FacadeWindow" parent="Architecture/Front_1_2/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Front_1_3" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(0, 3.2, -5.75)
+rotation = Vector3(0, 3.14159, 0)
+
+[node name="FacadeSolid" parent="Architecture/Front_1_3/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Front_1_4" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(-4, 3.2, -5.75)
+rotation = Vector3(0, 3.14159, 0)
+
+[node name="FacadeWindow" parent="Architecture/Front_1_4/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Front_1_5" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(-8, 3.2, -5.75)
+rotation = Vector3(0, 3.14159, 0)
+
+[node name="FacadeSolid" parent="Architecture/Front_1_5/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="RoofVisual" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(0, 6.5, 0)
+mesh = SubResource("RoofVisual_mesh")
+
+[node name="CeilingUnderside" type="StaticBody3D" parent="Architecture"]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/CeilingUnderside"]
+shape = SubResource("CeilingUnderside_shape")
+
+[node name="Markers" type="Node3D" parent="."]

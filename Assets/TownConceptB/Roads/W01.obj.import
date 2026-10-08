@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bfs74hxxxevym"
+path="res://.godot/imported/W01.obj-4b82f2c31fbff3524e37651fc5a1195c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/W01.obj-4b82f2c31fbff3524e37651fc5a1195c.mesh"]
+
+source_file="res://Assets/TownConceptB/Roads/W01.obj"
+dest_files=["res://.godot/imported/W01.obj-4b82f2c31fbff3524e37651fc5a1195c.mesh", "res://.godot/imported/W01.obj-4b82f2c31fbff3524e37651fc5a1195c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

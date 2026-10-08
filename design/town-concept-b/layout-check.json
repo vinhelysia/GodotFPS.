@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "scope": "2D rectangles, straight road envelopes, gate widths and graph only; no 3D LOS/nav/traversal",
+  "scope": "2D footprint/envelope/gate/graph checks; conservative swept fillets for every authored road chain and certified proxy LOS; no 3D camera/nav/traversal",
   "buildings": 33,
   "types": 14,
   "interiors": 17,
@@ -8,12 +8,990 @@
   "roof_area_m2": 3384.56,
   "roof_coverage_percent": 8.46,
   "minimum_building_gap_m": 3.2,
-  "minimum_footpath_gap_m": 0.69,
+  "minimum_footpath_gap_m": 2.1,
   "gate_minimum_envelope_width_m": {
     "GN": 5.96,
     "GW": 5.7,
     "GS": 4.47
   },
+  "circulation_fillets": {
+    "count": 28,
+    "minimum_building_clearance_m": 2.09999381901166,
+    "method": "256 arc chords minus circular sagitta bound; maximum adjoining road/sidewalk half-width; fence half-thickness included",
+    "fillets": [
+      {
+        "node": "N1",
+        "roads": [
+          "M01",
+          "M02"
+        ],
+        "radius_m": 18,
+        "start": [
+          -55.705824568138624,
+          -36.217176790196504
+        ],
+        "end": [
+          -54.314337672840104,
+          -35.72573506913604
+        ],
+        "center": [
+          -60.99936984721399,
+          -19.01315463320138
+        ],
+        "sagitta_m": 2.3089214340465958e-7,
+        "minimum_building_clearance": {
+          "building": "L02",
+          "conservative_clearance_m": 5.088488529239564
+        },
+        "minimum_fence_clearance": {
+          "fence": "O3",
+          "conservative_clearance_m": 17.02952100461681
+        }
+      },
+      {
+        "node": "J",
+        "roads": [
+          "M02",
+          "M03"
+        ],
+        "radius_m": 18,
+        "start": [
+          -16.379326463710402,
+          -20.55173058548416
+        ],
+        "end": [
+          -3.5429191537758538,
+          -20.348029398626963
+        ],
+        "center": [
+          -9.694294289336533,
+          -37.264311021418834
+        ],
+        "sagitta_m": 0.000018259463015590782,
+        "minimum_building_clearance": {
+          "building": "K",
+          "conservative_clearance_m": 4.808638170610547
+        },
+        "minimum_fence_clearance": {
+          "fence": "O14",
+          "conservative_clearance_m": 15.217845390084392
+        }
+      },
+      {
+        "node": "N2",
+        "roads": [
+          "M03",
+          "M04"
+        ],
+        "radius_m": 18,
+        "start": [
+          33.02728754921006,
+          -33.64628638153093
+        ],
+        "end": [
+          34.92575713264863,
+          -34.462878566324314
+        ],
+        "center": [
+          26.875912413649388,
+          -50.5625680043228
+        ],
+        "sagitta_m": 4.5307048712750486e-7,
+        "minimum_building_clearance": {
+          "building": "H06",
+          "conservative_clearance_m": 10.577452629265618
+        },
+        "minimum_fence_clearance": {
+          "fence": "O4",
+          "conservative_clearance_m": 14.417120980605207
+        }
+      },
+      {
+        "node": "N3",
+        "roads": [
+          "M04",
+          "M05"
+        ],
+        "radius_m": 18,
+        "start": [
+          69.44549685097805,
+          -51.72274842548902
+        ],
+        "end": [
+          70.57226464690035,
+          -52.23844360287515
+        ],
+        "center": [
+          77.49534156997731,
+          -35.62305898749054
+        ],
+        "sagitta_m": 1.6277673808851034e-7,
+        "minimum_building_clearance": {
+          "building": "L05",
+          "conservative_clearance_m": 12.10372449170297
+        },
+        "minimum_fence_clearance": {
+          "fence": "O4",
+          "conservative_clearance_m": 16.25838645397516
+        }
+      },
+      {
+        "node": "S1",
+        "roads": [
+          "S01",
+          "S02"
+        ],
+        "radius_m": 12,
+        "start": [
+          -8.144637767358661,
+          13.541157954902744
+        ],
+        "end": [
+          -6.8984715812577,
+          18.2030568374846
+        ],
+        "center": [
+          3.834654710741292,
+          12.836493691485105
+        ],
+        "sagitta_m": 0.0000037522281655100187,
+        "minimum_building_clearance": {
+          "building": "V01",
+          "conservative_clearance_m": 11.344150253015247
+        },
+        "minimum_fence_clearance": {
+          "fence": "O15",
+          "conservative_clearance_m": 7.034223710925355
+        }
+      },
+      {
+        "node": "S2",
+        "roads": [
+          "S02",
+          "S03"
+        ],
+        "radius_m": 12,
+        "start": [
+          7.256246522984105,
+          46.51249304596821
+        ],
+        "end": [
+          8.311183028054813,
+          49.63371089728777
+        ],
+        "center": [
+          -3.476879769014884,
+          51.879056191967706
+        ],
+        "sagitta_m": 0.0000017362870048387435,
+        "minimum_building_clearance": {
+          "building": "L03",
+          "conservative_clearance_m": 8.842250963022451
+        },
+        "minimum_fence_clearance": {
+          "fence": "O19",
+          "conservative_clearance_m": 0.8765152056898113
+        }
+      },
+      {
+        "node": "S3",
+        "roads": [
+          "S03",
+          "S04"
+        ],
+        "radius_m": 12,
+        "start": [
+          15.788062797069696,
+          88.8873296846159
+        ],
+        "end": [
+          16,
+          91.13267497929586
+        ],
+        "center": [
+          4,
+          91.13267497929586
+        ],
+        "sagitta_m": 8.108673399398469e-7,
+        "minimum_building_clearance": {
+          "building": "I05",
+          "conservative_clearance_m": 16.61075708856853
+        },
+        "minimum_fence_clearance": {
+          "fence": "O11",
+          "conservative_clearance_m": 4.8332858682233155
+        }
+      },
+      {
+        "node": "W1",
+        "roads": [
+          "W01",
+          "W02"
+        ],
+        "radius_m": 12,
+        "start": [
+          -63.126722437507375,
+          -14.328740166646995
+        ],
+        "end": [
+          -63.87580037321298,
+          -9.516007464259586
+        ],
+        "center": [
+          -51.89077230667884,
+          -10.115258867586302
+        ],
+        "sagitta_m": 0.000003823687145576571,
+        "minimum_building_clearance": {
+          "building": "H01",
+          "conservative_clearance_m": 7.887337138626697
+        },
+        "minimum_fence_clearance": {
+          "fence": "O2",
+          "conservative_clearance_m": 15.619682517522836
+        }
+      },
+      {
+        "node": "W2",
+        "roads": [
+          "W02",
+          "W03"
+        ],
+        "radius_m": 12,
+        "start": [
+          -62.09202340661054,
+          26.159531867789305
+        ],
+        "end": [
+          -61.359980468760845,
+          29.728052734345727
+        ],
+        "center": [
+          -50.106995340076395,
+          25.560280464462608
+        ],
+        "sagitta_m": 0.000002125645923278796,
+        "minimum_building_clearance": {
+          "building": "H02",
+          "conservative_clearance_m": 9.65797446774354
+        },
+        "minimum_fence_clearance": {
+          "fence": "O1",
+          "conservative_clearance_m": 11.664788035761587
+        }
+      },
+      {
+        "node": "W3",
+        "roads": [
+          "W03",
+          "W04"
+        ],
+        "radius_m": 12,
+        "start": [
+          -54.47026479077306,
+          48.330285064912744
+        ],
+        "end": [
+          -44.96320754802659,
+          56.03482241940785
+        ],
+        "center": [
+          -43.217279662088615,
+          44.16251279502961
+        ],
+        "sagitta_m": 0.00002620851292123305,
+        "minimum_building_clearance": {
+          "building": "H03",
+          "conservative_clearance_m": 5.369651004883046
+        },
+        "minimum_fence_clearance": {
+          "fence": "O7",
+          "conservative_clearance_m": 9.645151372079226
+        }
+      },
+      {
+        "node": "W4",
+        "roads": [
+          "W04",
+          "W05"
+        ],
+        "radius_m": 12,
+        "start": [
+          -21.532637280940214,
+          59.480494517508795
+        ],
+        "end": [
+          -14.758011265461274,
+          58.503697507135975
+        ],
+        "center": [
+          -19.786709395002234,
+          47.608184893130556
+        ],
+        "sagitta_m": 0.00000765769270261174,
+        "minimum_building_clearance": {
+          "building": "L03",
+          "conservative_clearance_m": 11.253689849443273
+        },
+        "minimum_fence_clearance": {
+          "fence": "O8",
+          "conservative_clearance_m": 6.8780670262682495
+        }
+      },
+      {
+        "node": "R1",
+        "roads": [
+          "R01",
+          "R02"
+        ],
+        "radius_m": 12,
+        "start": [
+          -52.604959039181445,
+          -61.54710358206458
+        ],
+        "end": [
+          -46.27200097149838,
+          -71.03247007391262
+        ],
+        "center": [
+          -40.657348326469986,
+          -60.42701507774788
+        ],
+        "sagitta_m": 0.000022451753818764075,
+        "minimum_building_clearance": {
+          "building": "I01",
+          "conservative_clearance_m": 6.1450185090647365
+        },
+        "minimum_fence_clearance": {
+          "fence": "O13",
+          "conservative_clearance_m": 2.939476973959261
+        }
+      },
+      {
+        "node": "R2",
+        "roads": [
+          "R02",
+          "R03"
+        ],
+        "radius_m": 12,
+        "start": [
+          -21.58558086672557,
+          -84.10175130585117
+        ],
+        "end": [
+          -13.9981403740329,
+          -85.33302339567214
+        ],
+        "center": [
+          -15.97092822169718,
+          -73.49629630968643
+        ],
+        "sagitta_m": 0.000009731287044179027,
+        "minimum_building_clearance": {
+          "building": "A01",
+          "conservative_clearance_m": 10.851741574564123
+        },
+        "minimum_fence_clearance": {
+          "fence": "O18",
+          "conservative_clearance_m": 8.139802347789105
+        }
+      },
+      {
+        "node": "R3",
+        "roads": [
+          "R03",
+          "R04"
+        ],
+        "radius_m": 12,
+        "start": [
+          27.5313241173427,
+          -78.41144598044288
+        ],
+        "end": [
+          32.098396476823375,
+          -76.63604229006481
+        ],
+        "center": [
+          25.558536269678406,
+          -66.57471889445716
+        ],
+        "sagitta_m": 0.000003870558030083515,
+        "minimum_building_clearance": {
+          "building": "A02",
+          "conservative_clearance_m": 9.321364416173383
+        },
+        "minimum_fence_clearance": {
+          "fence": "O17",
+          "conservative_clearance_m": 9.385403626546243
+        }
+      },
+      {
+        "node": "Q0",
+        "roads": [
+          "Q01",
+          "Q02"
+        ],
+        "radius_m": 8,
+        "start": [
+          39.77847406793438,
+          -5.107629660328086
+        ],
+        "end": [
+          39.90619472836606,
+          -2.8743367403926987
+        ],
+        "center": [
+          31.933828662407024,
+          -3.5387005792226103
+        ],
+        "sagitta_m": 0.0000012008802725560486,
+        "minimum_building_clearance": {
+          "building": "L04",
+          "conservative_clearance_m": 5.316170218655384
+        },
+        "minimum_fence_clearance": {
+          "fence": "O6",
+          "conservative_clearance_m": 9.334327197324049
+        }
+      },
+      {
+        "node": "Q1",
+        "roads": [
+          "Q02",
+          "Q03"
+        ],
+        "radius_m": 8,
+        "start": [
+          38.16185314448113,
+          18.057762266226476
+        ],
+        "end": [
+          38.74960382582478,
+          21.79904918197947
+        ],
+        "center": [
+          46.134219210440165,
+          18.722126105056393
+        ],
+        "sagitta_m": 0.0000034854021624397546,
+        "minimum_building_clearance": {
+          "building": "I04",
+          "conservative_clearance_m": 9.50039268877306
+        },
+        "minimum_fence_clearance": {
+          "fence": "O6",
+          "conservative_clearance_m": 7.223032679599159
+        }
+      },
+      {
+        "node": "GN",
+        "roads": [
+          "Q03",
+          "Q04"
+        ],
+        "radius_m": 8,
+        "start": [
+          42.64514309506379,
+          31.14834342815309
+        ],
+        "end": [
+          43.15167910110555,
+          32.910074606633295
+        ],
+        "center": [
+          35.2605277104484,
+          34.22526650507617
+        ],
+        "sagitta_m": 8.046821653451275e-7,
+        "minimum_building_clearance": {
+          "building": "I04",
+          "conservative_clearance_m": 8.245564104351832
+        },
+        "minimum_fence_clearance": {
+          "fence": "O12",
+          "conservative_clearance_m": 17.764793926770604
+        }
+      },
+      {
+        "node": "GW",
+        "roads": [
+          "D01",
+          "D02"
+        ],
+        "radius_m": 8,
+        "start": [
+          21.971765391997597,
+          44.5070586520006
+        ],
+        "end": [
+          26.01698963862513,
+          44.5500880832614
+        ],
+        "center": [
+          23.91205039228826,
+          52.26819865316325
+        ],
+        "sagitta_m": 0.0000039879885784799285,
+        "minimum_building_clearance": {
+          "building": "I05",
+          "conservative_clearance_m": 7.7460413833961
+        },
+        "minimum_fence_clearance": {
+          "fence": "O12",
+          "conservative_clearance_m": 16.463443366873374
+        }
+      },
+      {
+        "node": "PJ",
+        "roads": [
+          "D03",
+          "D04"
+        ],
+        "radius_m": 2,
+        "start": [
+          56.00078005685926,
+          36.31968765806988
+        ],
+        "end": [
+          57.61535826044292,
+          35.5
+        ],
+        "center": [
+          57.61535826044292,
+          37.5
+        ],
+        "sagitta_m": 0.000003367396436804171,
+        "minimum_building_clearance": {
+          "building": "W",
+          "conservative_clearance_m": 5.62931429101595
+        },
+        "minimum_fence_clearance": {
+          "fence": "O6",
+          "conservative_clearance_m": 25.529996632603563
+        }
+      },
+      {
+        "node": "T1",
+        "roads": [
+          "P01",
+          "P02"
+        ],
+        "radius_m": 2,
+        "start": [
+          -75.16993862685173,
+          75.41503068657413
+        ],
+        "end": [
+          -72.99514263652286,
+          75.16261886376905
+        ],
+        "center": [
+          -74.27551143585183,
+          73.6261763045743
+        ],
+        "sagitta_m": 0.000005118779322188516,
+        "minimum_building_clearance": {
+          "building": "H03",
+          "conservative_clearance_m": 16.942677331385404
+        },
+        "minimum_fence_clearance": {
+          "fence": "O7",
+          "conservative_clearance_m": 24.93115378631072
+        }
+      },
+      {
+        "node": "T2",
+        "roads": [
+          "P02",
+          "P03"
+        ],
+        "radius_m": 2,
+        "start": [
+          -62.106370666276604,
+          66.08864222189717
+        ],
+        "end": [
+          -61.90685931881367,
+          65.89754525069505
+        ],
+        "center": [
+          -63.38673946560556,
+          64.5521996627024
+        ],
+        "sagitta_m": 7.290315351404786e-8,
+        "minimum_building_clearance": {
+          "building": "H03",
+          "conservative_clearance_m": 8.288347136981866
+        },
+        "minimum_fence_clearance": {
+          "fence": "O7",
+          "conservative_clearance_m": 12.994887131982276
+        }
+      },
+      {
+        "node": "F",
+        "roads": [
+          "F01",
+          "F02"
+        ],
+        "radius_m": 2,
+        "start": [
+          -35.265031872543645,
+          18.098159952793942
+        ],
+        "end": [
+          -34.71814653192708,
+          17.97912196532793
+        ],
+        "center": [
+          -34.57040316089646,
+          19.97365747424135
+        ],
+        "sagitta_m": 3.0071216494675923e-7,
+        "minimum_building_clearance": {
+          "building": "H05",
+          "conservative_clearance_m": 5.651839746493893
+        },
+        "minimum_fence_clearance": {
+          "fence": "O2",
+          "conservative_clearance_m": 8.659121664615766
+        }
+      },
+      {
+        "node": "F2",
+        "roads": [
+          "F03",
+          "F04"
+        ],
+        "radius_m": 2,
+        "start": [
+          17.679037152495123,
+          21.925931650575798
+        ],
+        "end": [
+          18.32776360393464,
+          21.967223639606537
+        ],
+        "center": [
+          18.12875616589264,
+          19.977149259186557
+        ],
+        "sagitta_m": 4.065743457459803e-7,
+        "minimum_building_clearance": {
+          "building": "V02",
+          "conservative_clearance_m": 8.175931244001452
+        },
+        "minimum_fence_clearance": {
+          "fence": "O12",
+          "conservative_clearance_m": 1.7028503734771283
+        }
+      },
+      {
+        "node": "X1",
+        "roads": [
+          "E01",
+          "E02"
+        ],
+        "radius_m": 2,
+        "start": [
+          75.90489916234878,
+          -69.71469748704637
+        ],
+        "end": [
+          76.17479881603634,
+          -70.24471834245088
+        ],
+        "center": [
+          77.80226575844982,
+          -69.08224195501269
+        ],
+        "sagitta_m": 3.3989566672332217e-7,
+        "minimum_building_clearance": {
+          "building": "CP",
+          "conservative_clearance_m": 2.659823585210239
+        },
+        "minimum_fence_clearance": {
+          "fence": "O4",
+          "conservative_clearance_m": 29.22877055466111
+        }
+      },
+      {
+        "node": "X2",
+        "roads": [
+          "X01",
+          "X02"
+        ],
+        "radius_m": 2,
+        "start": [
+          55.97244085379144,
+          59.40796306961457
+        ],
+        "end": [
+          56.6,
+          60.86275037463349
+        ],
+        "center": [
+          54.6,
+          60.86275037463349
+        ],
+        "sagitta_m": 0.0000025308090605413724,
+        "minimum_building_clearance": {
+          "building": "W",
+          "conservative_clearance_m": 2.099997469190941
+        },
+        "minimum_fence_clearance": {
+          "fence": "O11",
+          "conservative_clearance_m": 25.067247094557448
+        }
+      },
+      {
+        "node": "X3",
+        "roads": [
+          "X02",
+          "X03"
+        ],
+        "radius_m": 2,
+        "start": [
+          56.6,
+          68.02189764267645
+        ],
+        "end": [
+          58.01300693300605,
+          69.93381791802817
+        ],
+        "center": [
+          58.6,
+          68.02189764267645
+        ],
+        "sagitta_m": 0.000006180988341819571,
+        "minimum_building_clearance": {
+          "building": "G",
+          "conservative_clearance_m": 2.09999381901166
+        },
+        "minimum_fence_clearance": {
+          "fence": "O11",
+          "conservative_clearance_m": 15.996175900983475
+        }
+      },
+      {
+        "node": "X4",
+        "roads": [
+          "X03",
+          "X04"
+        ],
+        "radius_m": 2,
+        "start": [
+          67.84117121698984,
+          72.95123677714601
+        ],
+        "end": [
+          68.1486053409958,
+          73.0743026704979
+        ],
+        "center": [
+          67.25417814999588,
+          74.86315705249773
+        ],
+        "sagitta_m": 1.0482063794725605e-7,
+        "minimum_building_clearance": {
+          "building": "W",
+          "conservative_clearance_m": 5.651236672325359
+        },
+        "minimum_fence_clearance": {
+          "fence": "O11",
+          "conservative_clearance_m": 12.855697224681462
+        }
+      },
+      {
+        "node": "GS",
+        "roads": [
+          "X04",
+          "X05"
+        ],
+        "radius_m": 2,
+        "start": [
+          81.70970889650711,
+          79.85485444825356
+        ],
+        "end": [
+          82.2294952678803,
+          80.2294952678803
+        ],
+        "center": [
+          80.8152817055072,
+          81.64370883025339
+        ],
+        "sagitta_m": 3.949104914191537e-7,
+        "minimum_building_clearance": {
+          "building": "W",
+          "conservative_clearance_m": 12.977130708154215
+        },
+        "minimum_fence_clearance": {
+          "fence": "O11",
+          "conservative_clearance_m": 5.811234446409441
+        }
+      }
+    ],
+    "minimum_solid_fence_clearance_m": 0.8765152056898113
+  },
+  "tight_passage": {
+    "straight": [
+      {
+        "road": "X01",
+        "building": "G",
+        "clearance_m": 4.883026432033091
+      },
+      {
+        "road": "X01",
+        "building": "W",
+        "clearance_m": 2.1000000000000014
+      },
+      {
+        "road": "X02",
+        "building": "G",
+        "clearance_m": 2.1000000000000014
+      },
+      {
+        "road": "X02",
+        "building": "W",
+        "clearance_m": 2.1000000000000014
+      },
+      {
+        "road": "X03",
+        "building": "G",
+        "clearance_m": 2.1000000000000014
+      },
+      {
+        "road": "X03",
+        "building": "W",
+        "clearance_m": 2.968911694403397
+      }
+    ],
+    "fillets": [
+      {
+        "node": "X2",
+        "radius_m": 2,
+        "start": [
+          55.97244085379144,
+          59.40796306961457
+        ],
+        "end": [
+          56.6,
+          60.86275037463349
+        ],
+        "center": [
+          54.6,
+          60.86275037463349
+        ],
+        "sagitta_m": 0.0000025308090605413724,
+        "clearance": [
+          {
+            "building": "G",
+            "conservative_clearance_m": 4.169797703493549
+          },
+          {
+            "building": "W",
+            "conservative_clearance_m": 2.099997469190941
+          }
+        ]
+      },
+      {
+        "node": "X3",
+        "radius_m": 2,
+        "start": [
+          56.6,
+          68.02189764267645
+        ],
+        "end": [
+          58.01300693300605,
+          69.93381791802817
+        ],
+        "center": [
+          58.6,
+          68.02189764267645
+        ],
+        "sagitta_m": 0.000006180988341819571,
+        "clearance": [
+          {
+            "building": "G",
+            "conservative_clearance_m": 2.09999381901166
+          },
+          {
+            "building": "W",
+            "conservative_clearance_m": 2.5461088047185134
+          }
+        ]
+      }
+    ],
+    "method": "256 arc chords; clearance reduced by exact circular sagitta bound"
+  },
+  "pump_access": {
+    "threshold_xz": [
+      75.5,
+      35.5
+    ],
+    "warehouse_gap_m": 3.200000000000003,
+    "door_apron_exemption": "D04/P only; exterior entry endpoint cap is 0.3m from P footprint"
+  },
+  "farmyard": {
+    "minimum_building_gap_m": 3.1751930624407843,
+    "vehicle_dead_end": true,
+    "pedestrian_exit": "R05"
+  },
+  "obstacles": [
+    {
+      "id": "B_N0",
+      "minimum_building_gap_m": 16.884924015059397
+    },
+    {
+      "id": "B_N4",
+      "minimum_building_gap_m": 2.272552585338267
+    },
+    {
+      "id": "B_S3",
+      "minimum_building_gap_m": 25.693822214688108
+    },
+    {
+      "id": "V_S02",
+      "minimum_building_gap_m": 5.202042786399733,
+      "affected_road": "S02",
+      "envelope_side_gaps_m": [
+        -1.2994116629015373,
+        2.0994116628981407
+      ],
+      "maximum_walk_gap_m": 2.0994116628981407
+    },
+    {
+      "id": "V_S03",
+      "minimum_building_gap_m": 14.331158739296573,
+      "affected_road": "S03",
+      "envelope_side_gaps_m": [
+        2.699855300476887,
+        -0.49985530049597404
+      ],
+      "maximum_walk_gap_m": 2.699855300476887
+    },
+    {
+      "id": "V_Q02_A",
+      "minimum_building_gap_m": 9.159095006576443,
+      "affected_road": "Q02",
+      "envelope_side_gaps_m": [
+        3.7967057908221324,
+        -0.7967057908479283
+      ],
+      "maximum_walk_gap_m": 3.7967057908221324
+    },
+    {
+      "id": "V_Q02_B",
+      "minimum_building_gap_m": 8.58696762733926,
+      "affected_road": "Q02",
+      "envelope_side_gaps_m": [
+        -1.294646488050966,
+        4.2946464880251565
+      ],
+      "maximum_walk_gap_m": 4.2946464880251565
+    }
+  ],
   "routes": {
     "E1": {
       "meters": 286,
@@ -33,7 +1011,7 @@
       ]
     },
     "E1_northern": {
-      "meters": 340,
+      "meters": 342,
       "path": [
         "S",
         "T1",
@@ -45,13 +1023,14 @@
         "R1",
         "R2",
         "R3",
+        "RF",
         "N3",
         "X1",
         "E1"
       ]
     },
     "E2": {
-      "meters": 202,
+      "meters": 204,
       "path": [
         "S",
         "T1",
@@ -69,7 +1048,7 @@
       ]
     },
     "E2_alternate": {
-      "meters": 263,
+      "meters": 264,
       "path": [
         "S",
         "T1",
@@ -90,6 +1069,360 @@
       ]
     }
   },
+  "los": {
+    "status": "PASS",
+    "scope": "2D same-group road-envelope endpoints (carriageway + sidewalks), arbitrary connecting angles through open space; straight design rectangles; no global off-road endpoints or 3D camera/nav proof",
+    "method": "Analytic line/rotated-rectangle intersections and all offset topology events per sampled angle. Lower value is a clear witnessed segment, not the exhaustive maximum. Upper uses road expansion/blocker erosion by R*sin(half angle step), then divides by cos(half angle step); this bounds every unsampled direction in the stated proxy model.",
+    "resolution": {
+      "measured_angle_step_deg": 0.25,
+      "bound_angle_step_deg": 0.05,
+      "offsets": "all polygon vertices and edge-intersection events; one-sided 1e-7m nudges",
+      "numeric_tolerance_m": 0.00001
+    },
+    "blockers": {
+      "count": 59,
+      "building_footprints": 33,
+      "solid_fence_segments": 19,
+      "vehicles_or_wrecks": 6,
+      "barriers": 1,
+      "ids": [
+        "H01",
+        "H02",
+        "H03",
+        "H04",
+        "H05",
+        "H06",
+        "L01",
+        "L02",
+        "L03",
+        "L04",
+        "L05",
+        "A01",
+        "A02",
+        "V01",
+        "V02",
+        "G",
+        "I01",
+        "I02",
+        "I03",
+        "I04",
+        "I05",
+        "W",
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06",
+        "K",
+        "U",
+        "B",
+        "CP",
+        "P",
+        "O1:1",
+        "O2:1",
+        "O3:1",
+        "O4:1",
+        "O5:1",
+        "O6:1",
+        "O7:1",
+        "O8:1",
+        "O9:1",
+        "O10:1",
+        "O11:1",
+        "O12:1",
+        "O13:1",
+        "O14:1",
+        "O15:1",
+        "O16:1",
+        "O17:1",
+        "O18:1",
+        "O19:1",
+        "B_N0",
+        "B_N4",
+        "B_S3",
+        "V_S02",
+        "V_S03",
+        "V_Q02_A",
+        "V_Q02_B"
+      ],
+      "excludes": "trees, terrain, wire/mesh fences; obstacles without opaque:true; fences/vehicles/barriers <2m"
+    },
+    "groups": {
+      "M": {
+        "limit_m": 150,
+        "status": "PASS",
+        "measured_max_m": 143.25251591092754,
+        "conservative_upper_bound_m": 143.6184634075144,
+        "witness_endpoints_xz": [
+          [
+            84.15429435494435,
+            -58.48135999346319
+          ],
+          [
+            -56.46626936049112,
+            -31.147491347336576
+          ]
+        ],
+        "witness_angle_deg": 169,
+        "roads": [
+          "M01",
+          "M02",
+          "M03",
+          "M04",
+          "M05"
+        ],
+        "evaluated_lines": 311234,
+        "bound_evaluated_lines": 2040535,
+        "bound_erosion_m": 0.042392764613898036
+      },
+      "S": {
+        "limit_m": 80,
+        "status": "PASS",
+        "measured_max_m": 74.4461318944535,
+        "conservative_upper_bound_m": 75.28860525893236,
+        "witness_endpoints_xz": [
+          [
+            -14.041777773970434,
+            -10.077983873121049
+          ],
+          [
+            6.040520047797892,
+            61.60833189386592
+          ]
+        ],
+        "witness_angle_deg": 74.35024640169267,
+        "roads": [
+          "S01",
+          "S02",
+          "S03",
+          "S04"
+        ],
+        "evaluated_lines": 215962,
+        "bound_evaluated_lines": 1513686,
+        "bound_erosion_m": 0.0258919318636878
+      },
+      "W": {
+        "limit_m": 80,
+        "status": "PASS",
+        "measured_max_m": 76.2930888698484,
+        "conservative_upper_bound_m": 76.45463546183409,
+        "witness_endpoints_xz": [
+          [
+            -64.09595026934659,
+            -18.152135284107175
+          ],
+          [
+            -52.32159266036521,
+            57.22690631366328
+          ]
+        ],
+        "witness_angle_deg": 81.12202511266933,
+        "roads": [
+          "W01",
+          "W02",
+          "W03",
+          "W04",
+          "W05"
+        ],
+        "evaluated_lines": 269364,
+        "bound_evaluated_lines": 1715056,
+        "bound_erosion_m": 0.024915719353167838
+      },
+      "R": {
+        "limit_m": 80,
+        "status": "PASS",
+        "measured_max_m": 78.87256523766601,
+        "conservative_upper_bound_m": 79.18524669653772,
+        "witness_endpoints_xz": [
+          [
+            -24.28015121892464,
+            -85.22107363879721
+          ],
+          [
+            51.9112561625269,
+            -64.8311008971878
+          ]
+        ],
+        "witness_angle_deg": 14.982139847221088,
+        "roads": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05"
+        ],
+        "evaluated_lines": 251094,
+        "bound_evaluated_lines": 1651459,
+        "bound_erosion_m": 0.03005359100550319
+      },
+      "Q": {
+        "limit_m": 80,
+        "status": "PASS",
+        "measured_max_m": 75.2319076444239,
+        "conservative_upper_bound_m": 76.87983190319329,
+        "witness_endpoints_xz": [
+          [
+            36.79851679478831,
+            -34.02971962135424
+          ],
+          [
+            41.71891897268676,
+            41.04111073389666
+          ]
+        ],
+        "witness_angle_deg": 86.25,
+        "roads": [
+          "Q01",
+          "Q02",
+          "Q03",
+          "Q04"
+        ],
+        "evaluated_lines": 169782,
+        "bound_evaluated_lines": 1193019,
+        "bound_erosion_m": 0.018598459233955197
+      },
+      "D": {
+        "limit_m": 80,
+        "status": "PASS",
+        "measured_max_m": 67.82148319622632,
+        "conservative_upper_bound_m": 67.85521141354026,
+        "witness_endpoints_xz": [
+          [
+            74.29999990125992,
+            34.60000011710007
+          ],
+          [
+            7.333027154233822,
+            45.33210820615099
+          ]
+        ],
+        "witness_angle_deg": 170.8952144259917,
+        "roads": [
+          "D01",
+          "D02",
+          "D03",
+          "D04"
+        ],
+        "evaluated_lines": 126710,
+        "bound_evaluated_lines": 872475,
+        "bound_erosion_m": 0.015131501341659906
+      },
+      "P": {
+        "limit_m": 80,
+        "status": "PASS",
+        "measured_max_m": 38.33846061481756,
+        "conservative_upper_bound_m": 38.36256349950007,
+        "witness_endpoints_xz": [
+          [
+            -51.26006009959257,
+            55.672672759874274
+          ],
+          [
+            -86.44721343420619,
+            70.89442701226936
+          ]
+        ],
+        "witness_angle_deg": 156.60697671844864,
+        "roads": [
+          "P01",
+          "P02",
+          "P03"
+        ],
+        "evaluated_lines": 62518,
+        "bound_evaluated_lines": 444018,
+        "bound_erosion_m": 0.008816740077286462
+      },
+      "F": {
+        "limit_m": 80,
+        "status": "PASS",
+        "measured_max_m": 79.53213455898666,
+        "conservative_upper_bound_m": 79.72099099303524,
+        "witness_endpoints_xz": [
+          [
+            37.87840596223964,
+            18.78406062282326
+          ],
+          [
+            -41.65297150814757,
+            19.131083923980192
+          ]
+        ],
+        "witness_angle_deg": 179.75000000000003,
+        "roads": [
+          "F01",
+          "F02",
+          "F03",
+          "F04"
+        ],
+        "evaluated_lines": 183968,
+        "bound_evaluated_lines": 1291644,
+        "bound_erosion_m": 0.022040925503374678
+      },
+      "E": {
+        "limit_m": 80,
+        "status": "PASS",
+        "measured_max_m": 36.07447140589619,
+        "conservative_upper_bound_m": 36.09249182596086,
+        "witness_endpoints_xz": [
+          [
+            85.18626656644715,
+            -84.58123804543575
+          ],
+          [
+            69.05131684250858,
+            -52.31622782351274
+          ]
+        ],
+        "witness_angle_deg": 116.56852396100552,
+        "roads": [
+          "E01",
+          "E02"
+        ],
+        "evaluated_lines": 43756,
+        "bound_evaluated_lines": 326227,
+        "bound_erosion_m": 0.007914717855018814
+      },
+      "X": {
+        "limit_m": 80,
+        "status": "PASS",
+        "measured_max_m": 36.74715519864295,
+        "conservative_upper_bound_m": 36.78977490703012,
+        "witness_endpoints_xz": [
+          [
+            55.600000084572784,
+            63.713092824927145
+          ],
+          [
+            86.67809160453892,
+            83.32190825752684
+          ]
+        ],
+        "witness_angle_deg": 32.25,
+        "roads": [
+          "X01",
+          "X02",
+          "X03",
+          "X04",
+          "X05"
+        ],
+        "evaluated_lines": 103002,
+        "bound_evaluated_lines": 661864,
+        "bound_erosion_m": 0.011495852322773741
+      }
+    }
+  },
   "errors": [],
-  "warnings": []
+  "warnings": [],
+  "design_version": "concept-b-design-revision-20261008",
+  "design_sha256": "7e6d009466eb79b5678507d3edb2ecc803f7fdb73ef3ed6cc1e78bfae7c66f12",
+  "route_scope": "Connected nominal pedestrian graph lengths. Vehicle obstacles have local projected bypass widths; actual detours/nav/player traversal require graybox 3D.",
+  "native_scene_synchronized": false,
+  "pending_3d_validation": [
+    "Apply revised coordinates/blockers to the existing Town and static terrain/dressing payloads; prior native PASS is for the 2026-10-06 scene.",
+    "Raycast standing, ADS, both lean directions and upper interiors against actual wall/window/vehicle/gate geometry. 2D LOS includes straight road rectangles only; native fillet road surfaces and off-road camera endpoints need checking.",
+    "Bake navigation and physically traverse all alternate routes, G/W passage and P entrance; projected vehicle sidewalk gaps do not prove pathfinding/traversal.",
+    "Verify curved road/collision seams, height changes/drainage, door swing, transparent/missing faces, and footprint-excluded terrain/trees/wire fences.",
+    "Rerun existing Town/deployment/return/lifecycle regressions with isolated saves after integration; verify natural map-edge containment."
+  ]
 }

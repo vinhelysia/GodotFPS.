@@ -1,0 +1,275 @@
+# Town 500 × 500 m — implementation plan
+
+Ngày: 2026-10-08. **Planning hoàn tất; chưa implementation map mới.** File dùng .txt theo policy Git hiện có loại Markdown khỏi tracking; không đổi .gitignore.
+
+Người dùng chọn **layout trong pack mới**, với ba điều chỉnh đã xác nhận:
+1. River chỉ có hai cầu: county bridge và northern footbridge; bỏ ford/log crossing.
+2. E-B chuyển sang farm service gate phía tây nam; cả bốn extracts dùng behavior hiện có.
+3. T01–T12 là **12 plots/POIs**, không phải 12 buildings khổng lồ. Mỗi plot chứa buildings đúng tỷ lệ, yard và phụ trợ.
+
+Target là res://Scene/Town.tscn trong nested Cogito project. New layout thay các placements cũ; không giữ nguyên rồi translate toàn bộ 33-building core. Reuse assets/templates và gameplay dependencies phù hợp. Không tạo scene raid song song hoặc thực thi các instructions trong attached implementation prompt như authorization riêng.
+
+## 1. Evidence, baseline và scope
+
+- Actual Town hiện có 200 × 200 m Concept B: 33 structures / 14 templates, 17 ground interiors / bốn upper interiors. Revised design ngày 2026-10-08 chưa sync vào native scene. Vì người dùng đã chọn layout mới, không cần sync một layout cũ sắp bị thay.
+- Historical native PASS của layout 2026-10-06 chỉ là baseline. Nó không verify pack mới, revised coordinates hoặc map 500 m.
+- Attached JSON là DESIGN PROPOSAL: 53 objects / 21 kinds, 8 zones, 9 corridors, 93 tree instances, 7 cover clusters. Objects gồm buildings, bridges, towers, dock, containers và railcars; không phải 53 buildings.
+- Pack có 17 enterable flags / 7 floors=2 flags. Các flags chưa chứng minh doorway, stairs hoặc upper interiors.
+- Cover clusters yêu cầu 64 pieces nhưng chỉ có 20 centres, thiếu dimensions/rotation/transforms từng piece.
+- Godot MCP get_project_info trong lượt này xác nhận đúng C:/Stuff/godot-fps-cogito-master/godot-fps-cogito-master/, Godot 4.7, Forward Plus, main scene StashHub. Chưa play/stop/bake/test.
+- Git có uncommitted scene, asset, design, theme và settings changes. Lượt này chỉ viết plan; không stage/reset/overwrite những changes đó.
+
+Scope gồm new layout, terrain/crossings, reusable scene composition, finished art, native encounters và verification. Giữ Hub → Deploy → Town → extract/death/abandon → Hub; không rewrite Cogito, save/loading/UI hoặc thêm manager/autoload/runtime world generator.
+
+Nguồn chính:
+- C:/Users/Vinh/AppData/Local/Temp/map_layout_godot (1).json và master/zone SVGs: layout proposal mới.
+- Attached README / godot_agent_implementation_prompt: background instructions, không phải integration architecture.
+- docs/project/Town Expansion.md và actual Scene/Town.tscn: baseline/live dependencies.
+- design/town-concept-b/: prior design và reusable checks; không còn là layout authority của bản mới.
+- C:/Stuff/Blender/TownKit/town_detail_polish_handoff_20261008.md: latest source/export release, native import còn thiếu.
+- C:/Stuff/Blender/TreeKit/: reusable birch release; isolated QA không chứng minh whole-map FPS.
+- BunkerKit: reusable industrial dressing; chọn finished exports theo manifests/reports.
+
+Provenance SHA-256 khi đọc:
+- Attached JSON: 5B00249B20F86BC36BCD773F410A6EF434EE084526A27F5777AE5676AA0DA55D.
+- Attached prompt: D1126D16F299E51F109276BAC444144CEBF67F83A34C909C08A74D1D5705DFA2.
+- Attached README: BF501C0A79D69D11131C8F59AC287A02F407D641188D36E1650372FB5522284C.
+- Prior revised core JSON: 7E6D009466EB79B5678507D3EDB2ECC803F7FDB73EF3ED6CC1E78BFAE7C66F12.
+
+## 2. Hợp đồng thiết kế đã chốt
+
+| Phần | Hợp đồng |
+|---|---|
+| World | 500 × 500 m; X/Z ±250; X east, Z south, north=-Z; 1 unit=1 m |
+| Setting | Modern post-Soviet Eastern Europe, cuối thu, bỏ hoang nhiều năm; low-poly, selective wear |
+| Geography | Town west bank; industry east; bunker trong NW hills; forest NE/E; lake SE; farmland W/S |
+| Town | Envelope X[-160.23,39.77], Z[-39.77,160.23]; T01–T12 là plots. Target 25–35 physical structures trong core theo density brief; catalogue chính xác chốt ở Phase0 |
+| Interiors | Khoảng nửa buildings vào được ground; 3–4 buildings có accessible upper floor. New acceptance counts phải theo approved catalogue, không giữ old33/17/4 assertions |
+| Terrain | Core relief≤3 m; hills15–20 m, max20; flat building pads. Hill peak không mặc định là bunker gate elevation. County grade≤6%, gravel≤10% là proposed native-verification targets |
+| River | Không vượt ngoài đúng hai bridges; actual channel/banks chỉ có một geometry authority |
+| County bridge | Anchor (78.783,28.088); 6 m carriageway + 1 m pedestrian strip mỗi bên; deck span theo bank gap |
+| Northern footbridge | Anchor khoảng (60.13,-65); clear width2.5 m; hai bank approaches nối route graph |
+| S1 / S2 | (-236.36,170.45) / (-236.36,10.23); equal50/50 selection một lần khi fresh departure |
+| Extracts | E-A(236.36,-236.36), E-B(-65,235), E-C(214.77,147.73), E-D(-236.36,-236.36); cả bốn active, F single press +5 s hiện có |
+| Bunker | Exterior + đúng một entry room, proposed8×8 m; deep interior đóng. Không underground transition, keys/power/quest mới |
+| Scavs | 8: ba Town, farm1, factory2, rail1, bunker1; reuse HostileNPC/LimboAI/loadout/corpse flow |
+| Water | Deep-water death qua player health/death authority: carried kit mất, stash giữ, về Hub; không swimming |
+| Clock / deploy |30-minute cycle,08:00 new raid; giữ loading/fade/deploy10 s và input/combat/clock freeze |
+| LOS | Town alleys/secondary≤80 m; deliberate Town main road≤150 m; outer route segments target≤120 m; deliberate field/rail vistas≤200 m với hard cover/escape options |
+| Glass | Camera/AI vision thấy qua pane; player/bullets bị pane chặn; frame/wall opaque |
+| Performance |1080p/120 FPS trên RTX4060 Laptop là target cần đo |
+| Pacing |10–15 phút với looting và1–2 fights là playtest target; không hard raid timer |
+
+Các widths, terrain targets, asset budgets và content allocation mới trong plan là đề xuất kỹ thuật cho authoring; phải được ghi vào approved canonical data trước dispatch. Không suy ra gameplay slow/noise từ các notes của ford/log đã bỏ.
+
+## 3. Sửa pack trước khi dựng
+
+| Finding đã kiểm tra offline | Canonical correction |
+|---|---|
+| R01/R02ford/R03log tạo ba crossings | R01 county bridge; R02 replacement northern footbridge tại approved anchor; retire R03 và routes phụ thuộc nó |
+| Water width7.5 m khác river zoning envelope khoảng30–35 m | Zoning không tự là actual water polygon. Chốt water level, banks/depth, channel geometry và deck elevation từ một authority |
+| E-B rail exit cách E-C≈39 m | Relocate E-B tới(-65,235), đổi tên/routes/zone notes; không thêm extra extract |
+| E-D conditional / E-B,C different requirements | Bỏ conditions; giữ native four-extract behavior |
+| Town12 box tổng10,721.5 m² | Box là plot envelopes. Buildings nhỏ hơn, có setback/yard/shed; không scale model đầy plot |
+| All53 structure yaws=0 | Chốt front/door/road-facing rotation theo mỗi actual object |
+| Cache11.36×7.95, railcar rộng10.23 m, tank/container/logging boxes | Phân biệt cluster envelope và physical asset; record individual dimensions/pivots |
+| T10/P05, H01/H02/P08, F02/P07, L01/L02/L04/P09 route overlaps | Reroute around solid buildings hoặc resize/recompose plot, không giả enterable để hợp thức hóa path |
+| F04 sát swept P07; tree centres F022/F035/G012 trong trail | Reserve actual swept clearance trước vegetation/cover placement |
+| Wider channel ảnh hưởng F021/F031 | Recompute bank exclusion sau hydrology normalization |
+| Dock L03 hoàn toàn trong lake, gần shore nhất≈4.688 m | Add gangway/landing hoặc dời dock; actual deck/nav connection phải liên tục |
+| Old M-chain khác pack P01 | Dùng P01 + new Town road network; không overlay old roads |
+| IDs cùng tên nhưng khác nghĩa | Namespace actual placements; giữ source_ref cho plot/object/type |
+| Barracks/armory enterable và B04 underground portal notes | Shells/exterior theo bunker scope; chỉ một entry room native trong Town |
+| Cover clusters thiếu physical footprints | Explicit transforms hoặc deterministic offline placement recipe với dimensions |
+
+Đây là proxy findings, không phải native collision PASS/FAIL. Hai bunker rectangle overlaps0.010/0.005 m có thể do rounding. Railcar/rail và bridge/road overlap là intended; checks cần rules theo loại object.
+
+## 4. Ownership và architecture
+
+| Owner | Files được sửa | Boundary |
+|---|---|---|
+| Primary | Scene/Town.tscn; narrow project-local raid/spawn/water/glass edits; NPC/loot; tests; canonical design/docs | Sở hữu mọi MCP open/save/play/stop/bake, merge và native acceptance |
+| Terrain subagent | New payloads dưới Scene/World/Town500m/Terrain và Circulation; own authoring contracts/helpers | Không Town/raid/UI/NPC/settings/editor |
+| Architecture subagent | Scene/Props/TownKit/ reusable scenes; Scene/World/Town500m/POI payloads/manifests | Không terrain/shared atlas/Town/editor |
+| Dressing subagent | Scene/World/Town500m/Dressing; own cover/vegetation data và material overrides | Không buildings/terrain/raid/AI/editor |
+| Modeling chat | Dedicated Blender source/exports/textures/manifests/reports cho approved batches | Không Godot scene/layout authority/editor/tests |
+
+Các payload folders là proposed paths, chưa có files. Bốn concurrent slots gồm primary và ba subagents; primary ghép sequentially. Modeling chat làm source/export riêng. Nhiều MCP ports có thể trỏ cùng editor: không cho workers chiếm editor đồng thời.
+
+Town root và NavigationRegion3D/Level giữ identity. Corpse code hiện dùng world position rồi add trực tiếp vào current scene, nên không đặt toàn raid dưới một map parent đã scale/translate. Preserve needed Persist, Loot, Player, original Scav/patrol và interaction paths; change visual placements qua explicit mapping sau đọc callers.
+
+JSON là offline authoring data. Runtime dùng editable PackedScene instances/static resources. Reuse portions của existing author_buildings.cjs / author_terrain.cjs / author_dressing.cjs nếu phù hợp; không chạy old hardcoded road/bounds data lên new map. Không thêm runtime parser, map loader hoặc per-prop script. Path3D/Curve3D chỉ dùng khi giúp author/edit actual corridor hoặc existing patrol.
+
+## 5. Phase0 — freeze baseline, normalize JSON và spatial contract
+
+**Owner:** primary + ba audit workers. Đây là bước implementation đầu tiên; chưa làm finished assets mới.
+
+1. Archive original attachments nguyên trạng trong reference snapshot cùng hashes. New corrected layout.json là file khác, không mất source provenance.
+2. Snapshot Town/core resources/current Git diff; giữ user changes riêng, không blanket-stage/reset.
+3. MCP confirm correct project; phối hợp editor session, capture before và run relevant baseline với isolated saves.
+4. Author design/town-500m/layout.json từ pack: 12 Town plots, actual building catalogue, zones, pads/elevations, roads/ports, actual river/lake/banks, đúng hai bridges, S1/S2 và four extracts. P02 bunker access dài≈116.928 m trong source: grade10% chỉ cho endpoint rise≤11.693 m; gate có thể ở lower terrace, hills peak15–20 m. Nếu cần road dài hơn, alignment phải có lý do terrain, không arbitrary wiggles.
+5. Mapping cả53 source entries thành retain / resize / split / replace / defer. R02 thay bằng footbridge, R03 retired; không dùng source object count làm actual building count.
+6. Catalogue ghi physical dimensions, yaw/front/door, floors/access, source_ref, asset reuse và collider role. Cover pieces có deterministic placement. Preserve source zones nhưng sửa route/structure conflicts.
+7. Building plot plan target25–35 core structures: principal buildings + garages/sheds/kiosk/utilities, dense core và transition yards. Allocate ground/upper access rõ; không mọi floors=2 đều có stairs.
+8. Reserve spawn pads, doors, roads/trails, bridge banks, extraction volumes, gangway và vegetation/cover clearance.
+9. Produce corrected master/zone SVGs từ cùng JSON; run bounds, full-footprint overlaps, swept roads, doors/gates, water/bridge span, gangway, route graph và scoped LOS checks.
+
+**Deliverables:** canonical JSON, catalogue/source mapping, corrected SVG, layout-check.json, baseline snapshot.
+
+**Exit gate:** all8 spawn→extract graph pairs connected; banks chỉ nối qua hai bridges. Tắt một bridge còn route qua bridge kia; tắt cả hai thì banks disconnected. Actual trigger volumes nằm trong dry bounds. Không unclassified overlaps/water definitions. Report checker exclusions rõ; geometry PASS không là runtime PASS.
+
+## 6. Phase1 — modular building, glass và collision pilots
+
+**Owner:** architecture/modeling source pilots; primary native checks.
+
+1. Chọn pilots cottage/store/civic/warehouse/shed từ new functions, reuse14 existing templates khi dimensions phù hợp.
+2. Chốt real scale/front/pivot/door/stair/headroom/collision, plot envelope tách physical model. Existing examples: cottage10×8, shop12×8, clinic12×10, workshop8×16, warehouse24.6×18.6, shed6×4, kiosk4×4.
+3. Primary lập removal/remapping list cho old33 placements; không sync prior G/P/41-road revision trước khi replace layout.
+4. Import latest TownKit GLB + atlases/variants đồng bộ; verify source/import hashes, không old UV/new atlas.
+5. Glass source cần separate opaque wall/frame helper và glass-only collider helper. Tag actual glass-only StaticBody3D, không tag combined body RID.
+6. Project-local ScavPerception vision query có bounded pane skip nếu cần; player/Scav physical bullet collision giữ nguyên. Không rewrite BT combat.
+7. Native-test ground room, upper stair room, industrial shell, doorway/window và deck-floor pilot trước nhân.
+
+**Exit gate:** unit scale/door/stair/headroom/pivots/materials pass native; player đi thật, không chỉ nav query. Glass vision qua pane nhưng opaque frame/wall, player/bullets blocked. Test one/two panes, pane→wall, untagged body và skip-limit fail-closed behavior. Export QA chưa là runtime PASS.
+
+## 7. Phase2 — terrain, hydrology, two bridges
+
+**Owner:** terrain worker; primary integration/native verification.
+
+1. Build continuous terrain với static chunks khoảng100 m cho authoring/culling, không runtime streaming.
+2. Hills15–20 m, core relief≤3 m, flat building/road/bridge pads. Elevation thật từ graybox, không để tới sau finished art.
+3. New P01/core roads là authority; remove superseded old slab/roads trong active composition sau backup, không delete reusable assets.
+4. River open gap≥max(20 m, measured maximum jump reach+6 m). Measure actual sprint/slide-jump/bunnyhop/air-step/elevated takeoff; nearby rocks/logs không thành crossing chain.
+5. Bridge span = actual bank gap theo deck axis+6 m. County6+1+1 m, footbridge clear2.5 m; guardrails không lấn clear corridor; actual deck floor collision.
+6. Banks/roads/trails/decks có continuous approaches, slopes và safety margins. Deep-water/bed không nav source: không để combined layer1 terrain collider mang cả submerged walkable bed vào bake. Rendered bed có thể không có collider; dry terrain/deck collider ownership tách rõ. Water joins north→lake→south/east không walkaround.
+7. Author deep-water Area ngoài bank/deck safe volumes; primary reuse health/death flow, không direct clear kit/teleport.
+
+**Deliverables:** static terrain/water/circulation/decks, pad/height/collision contracts, natural-edge geometry.
+
+**Exit gate:** player đi qua cả hai bridges, no fall/gap/double collision; đứng/crouch/lean trên deck không chết; deep-water fall gọi đúng health/death authority. Không unintended jump/edge crossing; verify navigation source exclusions ở phase này. Native nav absence trên water/bed kiểm tra sau bake ở Phase3; production kit loss/Hub return kiểm tra ở Phase4.
+
+## 8. Phase3 — full eight-zone graybox và navigation
+
+**Owner:** architecture/dressing workers riêng files; primary Town assembly.
+
+| Zone | Source coverage | First-pass composition |
+|---|---|---|
+| Town | T01–T12 |12 plots với real-scale houses/shops/clinic/civic/apartment/garage/market; auxiliaries/yards; P05/P06 corrected |
+| Industry/rail | I01–I09 | Warehouse/office/maintenance/tanks/container groups/railcars, service lanes; cars aligned rail tangent |
+| Bunker | B01–B08 | Exterior shells/utility/gate/towers + one entry room; no underground transition |
+| Hills | H01–H04 | Observation/pillbox/mast/ruin; P08 outside opaque structures |
+| Forest | F01–F04 | Ranger/logging/stand/cache; corrected P07 and clearing/trail reserves |
+| Farmland | A01–A09 | West/south farms/barn/sheds/coop/pump/cistern; fields divided by real property/drainage boundaries |
+| River | R01 / replacement R02 | Two bridge approaches; no R03 crossing |
+| Lake | L01–L04 | Pump/hut/shed/dock + real gangway; corrected P09 and dry E-C approach |
+
+1. Reusable/editable models và shells, unit scale. Do not turn all giant boxes into one mesh or assume enterable/floors flags implement interiors.
+2. Road-facing buildings có setback/yard/service access. Doorway pilot target≥1.2×2.4 m; actual headroom/steps/stairs validated.
+3. Side roads/alleys follow plot/terrain/drainage, not arbitrary wiggles; no route through opaque footprint.
+4. Natural map bounds: tree belts, banks/ditches, blocked external roads, damaged fences, background continuation; không whole-map solid wall.
+5. Farm hard cover riêng khỏi leafy concealment; avoid uniform scatter. Bunker stays native contiguous exterior/one room; không import Hub stash/terminal.
+6. First bake: one NavigationRegion3D, static colliders mask1, cell/height0.1 m, radius0.4 m, height1.8 m; Y bounds computed from walkable terrain/upper floors/hills.
+7. Proposed bake budget≤120 s, peak editor private RAM≤8 GiB; log absolute/delta idle/errors. Nếu vượt, stop acceptance/profile sources; subdivision là follow-up cần ownership/seam tests, không auto NavigationLink workaround.
+
+**Exit gate:**8 physical spawn→extract walks; both bridges independently; each ground/upper interior, gate, railway crossing, entry room và gangway. Catalogue/interior counts match approved new data, not old33/17/4. No nav on water/sealed roofs; standing/ADS/lean/high-ground/window LOS sampled with scope recorded.
+
+## 9. Phase4 — production raid integration
+
+**Owner:** primary only.
+
+1. Reuse Hub start_raid(): Inspector-authored connector pool; scalar RaidSpawn fallback chỉ khi pool rỗng. Pool có invalid connector thì fail giữ kit, không silent fallback. Old fixtures sửa hub.raid_connector phải override pool để test missing/branch behavior; scalar fallback có case riêng với empty pool.
+2. Preserve existing RaidSpawn path as S1, add second direct Marker3D. Validate selected connector is registered in Town.connectors before prepared save/fade.
+3. Choose50/50 once per fresh departure, pass selected connector through existing FRESH_WITH_PLAYER. Duplicate Deploy/loading guards do not reroll or load twice; countdown ticks never choose.
+4. Update production Hub/prototype entry settings when destination is Town; no spawn selector UI or manager.
+5. Repurpose existing Extract/E1 path→E-A and ExtractSE/E2→E-C; add E-B/E-D using same scene/script/signal authority. Total4, not6.
+6. Giữ native trigger6×3×6 /5 s; ground each on dry pad với bounds margin. Nhả F vẫn tiếp tục countdown theo single-press behavior; rời zone/chết/mở UI mới hủy. Return failure/Retry behavior giữ nguyên.
+7. Deep-water Area invokes native player damage/death once, no inventory/save bypass.
+
+**Exit gate:** deterministic tests both spawn branches; missing/unregistered connector keeps kit at Hub; repeated deploy/load failure safe. All4 extracts return exact kit/stash/result. Quit during countdown, abandon and water death lose carried gear/preserve stash. Save schema unchanged.
+
+Legacy direct Town debug saves are kept but spatially incompatible with new placements. Supported production tests use fresh Hub deploy; no deletion, blanket migration or old Town snapshot presented as new-layout verification.
+
+## 10. Phase5 — finished art and vegetation pilots
+
+**Owner:** architecture/dressing workers + modeling chat; primary native/performance acceptance.
+
+| Batch | Contents | Before modeling |
+|---|---|---|
+| A | Opaque fence/walls, static truck/bus/van wrecks | Actual dimensions, opaque collider role, walk gaps and pivots |
+| B | Pine/fruit-tree families, shrubs/reeds/grass, rocks/logs/stumps | Species/silhouette/real height/crown, trunk physics, cover vs concealment |
+| C | Barn/cottage/industrial families, rail/dock/bridge finish | Approved physical models within POI envelopes, doors/ports/stairs unchanged |
+| D | Bunker surface/entry finish, utilities/landmarks | Terrain pad/elevation and one-room scope |
+
+- Use low-poly-industrial-props cho architecture/industrial props đã duyệt; reuse TownKit/BunkerKit first. Vegetation giữ morphology tự nhiên và TreeKit-style ground/trunk pivots/collision; không áp mechanical details hoặc clean/used/worn finishes lên cây.
+- Birch TreeKit15 silhouettes/late_autumn can serve broadleaf transition rows; pine/orchard require suitable morphology, not renamed birch.
+- Proposed visual tris caps to confirm before creating new props: truck/bus3000, van2000, opaque fence module300, fruit tree1500, shrub/reeds cluster300, rock300, log stack800. Pine/railcar/tank/tower/bridge/new architecture caps still require a per-prop agreement. Existing verified birch cap3000.
+- Models/materials/variation at Inspector/resource level; do not copy .godot, sample project.godot or source backups into gameplay assets.
+- Pilot one forest segment, field/orchard segment, industrial/bridge approach. Native scale/collision/performance acceptance before full coverage.
+- Static MultiMesh patches initially around50 m, grouped by species/material. Trunk colliders authored separately; no script per tree. Patch/density tuning from measured culling, no speculative streaming/wind/LOD.
+- Selective wear and coherent late-autumn palette; clustered related props, not random independent scatter.
+- Keep day_night_cycle/options ownership. Tune muted daylight and local night pools via authored environment/lights; don't enable expensive GI/fog/shadows everywhere before benchmark. Project settings only via MCP API.
+
+**Exit gate:** each pilot native accepted, then finish per zone without changing access/collision. Matched daytime/nighttime captures; physical cover versus AI/camera concealment verified separately. Leaf density alone does not certify AI visibility blocking.
+
+## 11. Phase6 — eight Scavs, loot and pacing
+
+**Owner:** primary; workers supply reserved encounter pads.
+
+1. Keep original three Scav identities/loadouts, move them and patrols to new Town positions; add farm1/factory2/rail1/bunker1. No legacy Cogito state-machine reactivation.
+2. Static authored placements/patrols on actual navigation. Proposed spawn safety≥60 m and no direct initial LOS; no distance activation/spawn manager.
+3. Native loadout/corpse flow: fresh raid resets world, debug save/load does not reroll kit or resurrect killed NPC.
+4. First outer loot budget proposal16 containers distributed by POI access/exposure, native Cogito containers/existing item tables. Not a new quest/loot-tier system or rigid2-per-zone rule.
+5. Preserve needed loot/Persist paths and existing kit/ammo conservation. Corpses cannot block full doorway/corridor.
+6. Timed runs from both spawns: route-only timing separated from loot+1–2fight sessions. Tune routes/loot/exposure toward10–15-minute target, not hard timer.
+
+**Exit gate:** fresh8Scavs/no unexpected corpses, safe initial insertion, AI traverses both bridges/interiors, corpse/loot state stable, production return/save/loss unchanged. Record nighttime perception limits; darkness does not automatically alter AI detection behavior.
+
+## 12. Phase7 — regressions, performance and final handoff
+
+**Owner:** primary; serialized native sessions with isolated saves.
+
+| Existing suite / contract | Required reach |
+|---|---|
+| town_expansion_regression.gd | Replace old layout assertions with approved new catalogue,2spawns/4extracts/8walks/two bridges/interiors/gangway/bounds/water negative checks |
+| old ground_contract.json / new ground contract | New world/pad queries; do not use old±100 bounds as map authority |
+| raid_deployment_regression | Selected connector before countdown; choose once/repeated Deploy/invalid destination/freeze/Quit fallback |
+| raid_lifecycle_regression | Both spawn branches/invalid pool,8freshScavs,loot/corpse reset,scalar fallback với empty pool,abandon/restart stash |
+| raid_return_regression | All4 paths,production5 s; release-keeps-countdown và leave/death/UI-cancel; kit kept/lost,return failure/Retry |
+| town_baseline_regression | Pickup/equip/fire/ADS/reload conservation→kill/corpse loot→save/load |
+| day_night_cycle_regression |30minute/08:00/deploy freeze/Environment isolation/options ownership |
+| raid_result / raid_transition | Modal/fade/loading failure/recovery after new map deployment |
+| raid_fade_regression | Connector selection trước fade/await không phá freeze/fade/transition boundary |
+| corpse_loot_volume_regression | Root identity/world corpse placement and interaction remain correct |
+
+Add small native assertions only for non-trivial spawn/glass/water logic where existing fixtures don't cover it. No new test framework. Deterministic RNG branch tests, not flaky random histograms. Run affected checks per phase; full relevant suite at final integration.
+
+Performance protocol:
+1. Actual rendered1080p foreground, record resolution/quality/power/window/vsync/frame cap and warm/cold state. No editor1280×720/headless FPS substituted for1080p.
+2. Sample core, forest, farm, both bridge approaches, industry/rail, bunker and shore; daytime/nighttime,8Scavs/combat, plus M700/TAC30 ADS to expose scope render cost.
+3. Warm-up10 s then capture60 s per representative sample; CPU/GPU P50/P95/P99/spikes/draws/primitives/memory when tools expose them. Mark unavailable counters; no invented GPU timing.
+4. Proposed120FPS acceptance CPU/GPU P95≤8.33 ms at tested workloads. Loading/deploy spikes reported separately.
+5. Profile failures, then reduce costly density/surfaces/shadow/light cost. Add LOD/culling/nav subdivision only with evidence; correctness stays.
+6. Temporary graphics settings through API and restored after tests; stop owned runtime and restore temporary state.
+
+Final deliverables:
+- Actual Town integration, reusable static scenes/resources, narrow project-local behavior changes.
+- Canonical JSON/SVG/catalogue/source mapping; scoped2D/3D reports; nav/routes/collision/LOS checks; before/after.
+- Dev Log evidence/limits; Architecture/Roadmap only if actual scope/design changes; Codebase Map when API/class/path structure changes.
+- Handoff includes completed phases, unresolved limits, benchmark configuration, legacy spatial-save limit, asset source/export hashes.
+- Review phase diffs before commits; push only under relevant publication authorization, never blanket-stage unrelated work.
+
+## 13. Parallel execution and dispatch briefs
+
+Critical path: Phase0 contract → Phase1 pilots → Phase2 terrain/two bridges → Phase3 full graybox/nav → Phase4 raid gate → Phase5/6 art+encounters → Phase7 acceptance.
+
+After Phase0, terrain and architecture workers author independently from approved pads/ports; dressing reserves corridors and prepares prototypes. Modeling pilots run after per-asset dimensions/budgets are approved. Primary serializes Town merges/editor/runtime. Changes to door/pad/road footprints require updated canonical data/checks before merge.
+
+**Terrain worker brief:** Consume canonical layout; static terrain/circulation/water/two decks in owned folders; no ford/log or extra crossing. Manifest heights/ports/collision/nav source exclusions and source hashes. No Town/raid/settings/editor edits. Primary owns native bake/traversal.
+
+**Architecture worker brief:** New12plots/functions and approved outer objects; reuse14templates when suitable. Actual models within envelopes, one bunker entry room. Editable static payloads, doors/pivots/ports contracts and retained/replaced dependency mapping. No runtime builders, shared atlas mutations or Town/editor edits.
+
+**Dressing worker brief:** Approved bank/road/door/bridge/spawn/extract reservations; deterministic field boundaries/vegetation/hard cover separately from concealment. Own payloads/material overrides only. First performance pilot before map-wide coverage; no per-tree scripts or unauthorized footprint changes.
+
+**Modeling chat brief:** Apply low-poly-industrial-props cho approved industrial/architecture slugs, dimensions/pivots/collider roles/tris/surface budgets. Vegetation theo natural species morphology và TreeKit-style export contracts; không industrial wear trên cây. Coherent post-Soviet/late-autumn kit với selective wear. Source+GLB+dependencies+manifest+verification/hashes; no new gameplay/third crossing/layout redesign hoặc live Godot operations.
+
+Workers report actual files/checks/limits; source QA is not runtime PASS. This turn dispatched audit only, not implementation jobs.

@@ -1,6 +1,66 @@
 # Town Concept B — phased implementation handoff
 
-Date: 2026-10-06. Status: planning only; no Concept B scene implementation yet.
+Date: 2026-10-08. Status: revised 2D design checked; native scene synchronization pending.
+
+## Immediate gate — design revision only, 2026-10-08
+
+Do not run scene builders or edit Town until the design revision is approved for
+integration. The existing 2026-10-06 graybox and native PASS remain a historical
+snapshot. They do not verify the revised JSON/SVG. This review changes no scenes,
+runtime code, assets, settings, saves or navigation bake.
+
+The revised design has33 structures,41 road edges,28 checked swept fillets,
+19 solid privacy screens and7 explicit vehicle/barrier proxies. No new road
+wiggles: R04 now ends at the8x8m RF farmyard(44,-68.9);1.8m dirt R05 retains
+the northern pedestrian alternative. RF is a reversing apron, not a bus U-turn.
+
+G moves from(49,70) to(46.5,70); W stays(69,54),yaw90. X2/X3 move to
+(56.6,60)/(56.6,69.5). Width2m, radius2m and2.10m conservative clearance
+outside each path edge pass, including arcs. P moves to(78,35.5),yaw90(front
+west); W gap3.20m. Width1.8m D03/D04 connect Y->PJ(56.6,35.5)->PA(74.3,35.5),
+then a1.2m deep apron reaches threshold(75.5,35.5). Only D04/P owns that apron.
+
+Blockers: truck B_N0, full-width opaque steel checkpoint panel B_N4, bus B_S3;
+staggered bus/truck on S02/S03 and vans on Q02. JSON records footprint, height,
+yaw and purpose. O14..O19 are property/garden boundaries; O2/O6 extend existing
+yard boundaries. Preserve front-door approaches and projected sidewalk bypasses
+(minimum2.099m at S02). These widths are local planar checks, not navigation PASS.
+
+Certified road-group LOS lower witness / conservative upper (m):
+M143.253/143.618; R78.873/79.185; S74.446/75.289; W76.293/76.455;
+F79.532/79.721; Q75.232/76.880; D67.821/67.855; P38.338/38.363;
+E36.074/36.092; X36.747/36.790. M limit150, all others80. Road endpoints
+include sidewalks; rays may cross open yards. Buildings are solid footprint
+proxies and fences/vehicles are opaque height>=2m rectangles. Trees, terrain,
+mesh fences, native curved-road endpoints and global off-road cameras are not
+certified by this proxy. See layout-check.json for witnesses/method/limitations.
+
+Nominal pedestrian graph: E1/main286m or north342m; E2/west204m or north264m.
+The alternatives share final extraction approaches; they are not fully disjoint.
+Removing R05 would destroy the northern E1 alternative. The gravel vehicle ring
+is broken while pedestrian access stays connected.
+
+Next integration ownership:
+- Terrain agent: consume revised chains/radii and41 edges in author_terrain.cjs;
+  its old hardcoded38-edge/chain contract is stale. Rebuild pads after G/P move.
+- Dressing agent: consume JSON obstacles and19 screens in author_dressing.cjs;
+  replace old hardcoded boundary wrecks with the explicit revised proxies.
+- Primary: actual Town building transforms, preserved Persist/raid/interaction
+  paths, native nav bake, collision/door/standing/ADS/lean/upper LOS, route walking
+  and existing Town/deployment/return/lifecycle suites with isolated saves.
+Only primary operates MCP. Validate actual vehicle windows/transparent faces,
+gate approaches, fillet surfaces, floor heights and natural-edge containment.
+Do not carry this 2D PASS forward as a native PASS. No modeling dispatch is needed
+for a closed-box graybox proxy; request finished art only after native acceptance.
+
+Reproduce offline review:
+  node design/town-concept-b/check-los.cjs --self-check
+  node design/town-concept-b/check-layout.cjs
+  node design/town-concept-b/draw-layout.cjs
+
+## Prior implementation baseline — 2026-10-06 snapshot
+
+The material below describes the integrated older graybox, not the new coordinates.
 Game snapshot: 196da90532f3d8ca3f3e01e2d2dde8bc36d5e511.
 Tracked-path autoload fix:14496bd156be1990129063d02685df24a5e47ac4.
 Active project/Git root: C:/Stuff/godot-fps-cogito-master/godot-fps-cogito-master/.
@@ -16,7 +76,7 @@ scene/resource dependencies before editing. Apply godot-modular-fps to the
 existing Cogito integration, not its example folder layout.
 
 The design source is this folder's town-layout.json and town-layout.svg.
-The JSON is proposal data, NOT a runtime dependency or layout generator.
+The JSON is offline authoring/test data, NOT a runtime dependency or layout generator.
 Coordinates: metres; X east, Z south, north=-Z; building position=footprint centre.
 Normalized wrapper front=-Z; Godot yaw 0=N,90=W,180=S,270=E.
 bounds_xz=[minX,maxX,minZ,maxZ]; depot bounds/turning_pad=[minX,minZ,maxX,maxZ].
@@ -37,11 +97,16 @@ User decisions:
 - No new encounter policy, passive hunger/thirst drain, power/lock system,
   manager/autoload, runtime procedural map system or framework rewrite.
 
-Current verification is planar only:33 structures/14 types,17/4 interiors,
-3384.56m2 roof area/8.46% coverage, min building gap3.2m; connected road graph.
-Straight road envelopes and gate approach widths PASS. Secondary LOS<80m,
-smooth curves, terrain, stair access, navigation, traversal and FPS are pending.
-Run the portable proposal check from project root:
+Current graybox acceptance PASS through Godot MCP:33 structures/14 types,
+17 ground interiors/four upper interiors, four physical spawn/extract routes,
+road-node navigation, three gate clear spans and turning pad. Sampled native
+standing/ADS/lean LOS on 12 secondary edges and four upper interiors PASS.
+Offline checks retain3384.56m2/8.46% roof coverage, min building gap3.2m,
+terrain seams/flat pads,26 curves (secondary radius>=12m), min swept gap0.666m.
+This is sampled coverage, not exhaustive360-degree LOS or finished art.
+Natural-edge containment, fine plots/vegetation, encounter/night balance and FPS
+remain later gates. Legacy pre-redesign direct Town saves are not migrated.
+Run the portable planar check from project root:
   node design/town-concept-b/check-layout.cjs
 Regenerate the diagram after intentional data edits:
   node design/town-concept-b/draw-layout.cjs
@@ -58,7 +123,7 @@ Do not create all listed optional directories/files before they are needed.
 Agent A — terrain and circulation:
 - Scene/World/TownConceptB/terrain_roads.tscn
 - Assets/TownConceptB/Terrain/ and Assets/TownConceptB/Roads/ if needed
-- Own terrain, flat pads,38 road edges, sidewalks, curves, ditch/culvert geometry
+- Own terrain, flat pads,41 revised road edges (older native baseline38), sidewalks, curves, ditch/culvert geometry
   and fitted static collision. Deliver a static scene payload with explicit
   placement transforms; no runtime layout generator.
 
@@ -233,4 +298,8 @@ Phase4 — handoff/publication (primary):
 - Commit each verified phase with a focused message; push only within user scope.
 
 Start the implementation team with Phase0/Phase1, not all art tasks simultaneously.
-No Concept B implementation or modeling dispatch was performed by this plan task.
+The plan publication did not implement Concept B. The subsequent Phase 0–1 task
+integrates the actual Town scene; consult the phase evidence before claiming PASS.
+
+Current Phase0–1 results: see phase1-verification.json. Boundary containment and
+full art/vegetation remain later gates; do not mistake sampled PASS for final map.

@@ -1,0 +1,187 @@
+[gd_scene load_steps=23 format=3]
+
+
+[sub_resource type="StandardMaterial3D" id="wall"]
+albedo_color = Color(0.43, 0.44, 0.4, 1)
+roughness = 1.0
+
+[sub_resource type="StandardMaterial3D" id="floor"]
+albedo_color = Color(0.31, 0.32, 0.3, 1)
+roughness = 1.0
+
+[sub_resource type="StandardMaterial3D" id="roof"]
+albedo_color = Color(0.18, 0.23, 0.22, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="trim"]
+albedo_color = Color(0.22, 0.31, 0.29, 1)
+roughness = 0.85
+
+[sub_resource type="BoxMesh" id="GroundFloor_mesh"]
+material = SubResource("floor")
+size = Vector3(10, 0.2, 8)
+
+[sub_resource type="BoxShape3D" id="GroundFloor_shape"]
+size = Vector3(10, 0.2, 8)
+
+[sub_resource type="BoxMesh" id="WestWall_mesh"]
+material = SubResource("wall")
+size = Vector3(0.25, 3.2, 8)
+
+[sub_resource type="BoxShape3D" id="WestWall_shape"]
+size = Vector3(0.25, 3.2, 8)
+
+[sub_resource type="BoxMesh" id="EastWall_mesh"]
+material = SubResource("wall")
+size = Vector3(0.25, 3.2, 8)
+
+[sub_resource type="BoxShape3D" id="EastWall_shape"]
+size = Vector3(0.25, 3.2, 8)
+
+[sub_resource type="BoxMesh" id="RearWall_mesh"]
+material = SubResource("wall")
+size = Vector3(10, 3.2, 0.25)
+
+[sub_resource type="BoxShape3D" id="RearWall_shape"]
+size = Vector3(10, 3.2, 0.25)
+
+[sub_resource type="BoxMesh" id="FrontLeft_mesh"]
+material = SubResource("wall")
+size = Vector3(4.4, 3.2, 0.25)
+
+[sub_resource type="BoxShape3D" id="FrontLeft_shape"]
+size = Vector3(4.4, 3.2, 0.25)
+
+[sub_resource type="BoxMesh" id="FrontRight_mesh"]
+material = SubResource("wall")
+size = Vector3(4.4, 3.2, 0.25)
+
+[sub_resource type="BoxShape3D" id="FrontRight_shape"]
+size = Vector3(4.4, 3.2, 0.25)
+
+[sub_resource type="BoxMesh" id="FrontLintel_mesh"]
+material = SubResource("wall")
+size = Vector3(1.2, 0.8, 0.25)
+
+[sub_resource type="BoxShape3D" id="FrontLintel_shape"]
+size = Vector3(1.2, 0.8, 0.25)
+
+[sub_resource type="BoxMesh" id="DoorSeal_mesh"]
+material = SubResource("trim")
+size = Vector3(1.2, 2.4, 0.25)
+
+[sub_resource type="BoxShape3D" id="DoorSeal_shape"]
+size = Vector3(1.2, 2.4, 0.25)
+
+[sub_resource type="BoxMesh" id="RoofVisual_mesh"]
+material = SubResource("roof")
+size = Vector3(10, 0.2, 8)
+
+[sub_resource type="ConcavePolygonShape3D" id="CeilingUnderside_shape"]
+data = PackedVector3Array(-5, 3.2, -4, 5, 3.2, 4, 5, 3.2, -4, -5, 3.2, -4, -5, 3.2, 4, 5, 3.2, 4)
+backface_collision = false
+
+[node name="T01_cottage" type="Node3D"]
+
+[node name="Architecture" type="Node3D" parent="."]
+
+[node name="GroundFloor" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0, -0.1, 0)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/GroundFloor"]
+mesh = SubResource("GroundFloor_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/GroundFloor"]
+shape = SubResource("GroundFloor_shape")
+
+[node name="WestWall" type="StaticBody3D" parent="Architecture"]
+position = Vector3(-4.875, 1.6, 0)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/WestWall"]
+mesh = SubResource("WestWall_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/WestWall"]
+shape = SubResource("WestWall_shape")
+
+[node name="EastWall" type="StaticBody3D" parent="Architecture"]
+position = Vector3(4.875, 1.6, 0)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/EastWall"]
+mesh = SubResource("EastWall_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/EastWall"]
+shape = SubResource("EastWall_shape")
+
+[node name="RearWall" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0, 1.6, 3.875)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/RearWall"]
+mesh = SubResource("RearWall_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/RearWall"]
+shape = SubResource("RearWall_shape")
+
+[node name="FrontLeft" type="StaticBody3D" parent="Architecture"]
+position = Vector3(-2.8, 1.6, -3.875)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/FrontLeft"]
+mesh = SubResource("FrontLeft_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/FrontLeft"]
+shape = SubResource("FrontLeft_shape")
+
+[node name="FrontRight" type="StaticBody3D" parent="Architecture"]
+position = Vector3(2.8, 1.6, -3.875)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/FrontRight"]
+mesh = SubResource("FrontRight_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/FrontRight"]
+shape = SubResource("FrontRight_shape")
+
+[node name="FrontLintel" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0, 2.8, -3.875)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/FrontLintel"]
+mesh = SubResource("FrontLintel_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/FrontLintel"]
+shape = SubResource("FrontLintel_shape")
+
+[node name="DoorSeal" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0, 1.2, -3.875)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/DoorSeal"]
+mesh = SubResource("DoorSeal_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/DoorSeal"]
+shape = SubResource("DoorSeal_shape")
+
+[node name="RoofVisual" type="MeshInstance3D" parent="Architecture"]
+position = Vector3(0, 3.3, 0)
+mesh = SubResource("RoofVisual_mesh")
+
+[node name="CeilingUnderside" type="StaticBody3D" parent="Architecture"]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/CeilingUnderside"]
+shape = SubResource("CeilingUnderside_shape")
+
+[node name="Markers" type="Node3D" parent="."]

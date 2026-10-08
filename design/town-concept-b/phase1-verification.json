@@ -1,0 +1,147 @@
+{
+  "date": "2026-10-06",
+  "project": "res://Scene/Town.tscn",
+  "status": "Phase 0–1 graybox integrated; sampled native acceptance PASS",
+  "ownership": "Three GPT-6.1 Sol/high subagents authored disjoint static payloads; primary integrated and operated Godot MCP.",
+  "structure": {
+    "buildings": 33,
+    "reusable_types": 14,
+    "templates_including_variants": 18,
+    "ground_interiors": 17,
+    "upper_interiors": 4,
+    "roads": 38,
+    "curves": 26,
+    "extracts": 2,
+    "night_lights": 15
+  },
+  "native_navigation": {
+    "polygons": 3383,
+    "cell_size_m": 0.1,
+    "cell_height_m": 0.1,
+    "agent_radius_m": 0.4,
+    "agent_height_m": 1.8,
+    "max_vertex_y_m": 5.3,
+    "source": "static layer1 colliders; roofs excluded by one-sided downward ceiling winding"
+  },
+  "coverage": "Actual Cogito controller: four spawn/extract routes, all17 ground/four upper interiors both directions, three gates/turning pad. LOS:12 selected secondary edges at3 positions, standing/USP ADS/left-right lean and eight directions at each upper interior; only in-map lengths >80m count. This is sampled, not exhaustive LOS.",
+  "tests": [
+    {
+      "result_file": "townAccepted_navigation.json",
+      "success": true,
+      "exit_code": 0,
+      "duration_sec": 17.92,
+      "target": "res://tests/town_expansion_regression.tscn"
+    },
+    {
+      "result_file": "townAccepted_route0.json",
+      "success": true,
+      "exit_code": 0,
+      "duration_sec": 87.89,
+      "target": "res://tests/town_expansion_regression.tscn"
+    },
+    {
+      "result_file": "townAccepted_route1.json",
+      "success": true,
+      "exit_code": 0,
+      "duration_sec": 95.73,
+      "target": "res://tests/town_expansion_regression.tscn"
+    },
+    {
+      "result_file": "townAccepted_route2.json",
+      "success": true,
+      "exit_code": 0,
+      "duration_sec": 58.99,
+      "target": "res://tests/town_expansion_regression.tscn"
+    },
+    {
+      "result_file": "townAccepted_route3.json",
+      "success": true,
+      "exit_code": 0,
+      "duration_sec": 104.19,
+      "target": "res://tests/town_expansion_regression.tscn"
+    },
+    {
+      "result_file": "townAccepted_interiors.json",
+      "success": true,
+      "exit_code": 0,
+      "duration_sec": 77,
+      "target": "res://tests/town_expansion_regression.tscn"
+    },
+    {
+      "result_file": "townAccepted_los.json",
+      "success": true,
+      "exit_code": 0,
+      "duration_sec": 168.08,
+      "target": "res://tests/town_expansion_regression.tscn"
+    },
+    {
+      "result_file": "townFinal_town_baseline_regression.json",
+      "success": true,
+      "exit_code": 0,
+      "duration_sec": 30.42,
+      "target": "res://tests/town_baseline_regression.tscn"
+    },
+    {
+      "result_file": "townFinal_day_night_cycle_regression.json",
+      "success": true,
+      "exit_code": 0,
+      "duration_sec": 5.79,
+      "target": "res://tests/day_night_cycle_regression.tscn"
+    },
+    {
+      "result_file": "townFinal_raid_deployment_regression.json",
+      "success": true,
+      "exit_code": 0,
+      "duration_sec": 18.25,
+      "target": "res://tests/raid_deployment_regression.tscn"
+    },
+    {
+      "result_file": "townFinal_raid_return_regression.json",
+      "success": true,
+      "exit_code": 0,
+      "duration_sec": 27.55,
+      "target": "res://tests/raid_return_regression.tscn"
+    },
+    {
+      "result_file": "townFinal_raid_return_regression_E2.json",
+      "success": true,
+      "exit_code": 0,
+      "duration_sec": 27.37,
+      "target": "res://tests/raid_return_regression.tscn"
+    },
+    {
+      "result_file": "townFinal_raid_lifecycle_regression.json",
+      "success": true,
+      "exit_code": 0,
+      "duration_sec": 27.68,
+      "target": "res://tests/raid_lifecycle_regression.tscn"
+    }
+  ],
+  "rendered_tests": [
+    "Town baseline PASS; actual pickup/equip/fire/reload, corpse/save-load and pause rendering",
+    "Town interiors PASS;17 ground/four upper both directions"
+  ],
+  "raw_results": "../../../.agent-snapshots/town_concept_b_20261006/phase1/",
+  "captures": [
+    "before_0800.png",
+    "after_graybox_0800.png",
+    "after_graybox_midnight.png",
+    "village_0800.png",
+    "depot_0800.png",
+    "rendered_interior.png",
+    "upper_L01_0800.png"
+  ],
+  "known_diagnostics": [
+    "Headless Town baseline dummy-renderer pause-screenshot null texture error; rendered baseline PASS.",
+    "Route3 reports11 resources still in use at exit; traversal assertions PASS.",
+    "Return/lifecycle invalid-destination and denied-write errors are deliberately injected failure cases.",
+    "Headless Jolt/custom solver and DynamicInputIcon no-device warnings."
+  ],
+  "remaining": [
+    "Finished art/materials, fine plots/vegetation/driveways and natural map-edge containment; graybox can still be walked out of.",
+    "Exhaustive camera LOS, patrol/encounter/loot/night-perception balancing and full combat playtest.",
+    "1080p120FPS profiling; no performance guarantee.",
+    "Legacy pre-redesign direct Town save coordinates are not migrated; supported entry is fresh Hub Deploy.",
+    "Ignored local MCP/tests/docs preserve existing ignore policy; tools-free fresh clone/export unverified."
+  ]
+}

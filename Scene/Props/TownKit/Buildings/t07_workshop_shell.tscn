@@ -1,0 +1,160 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/facade_solid_4m.tscn" id="ext_0"]
+
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/materials/town_architecture_worn.tres" id="ext_1"]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/facade_window_4m.tscn" id="ext_2"]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/metal_roof_8x8.tscn" id="ext_3"]
+
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/materials/town_roof_worn.tres" id="ext_4"]
+
+[sub_resource type="StandardMaterial3D" id="wall"]
+albedo_color = Color(0.43, 0.44, 0.4, 1)
+roughness = 1.0
+
+[sub_resource type="StandardMaterial3D" id="floor"]
+albedo_color = Color(0.31, 0.32, 0.3, 1)
+roughness = 1.0
+
+[sub_resource type="StandardMaterial3D" id="roof"]
+albedo_color = Color(0.18, 0.23, 0.22, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="trim"]
+albedo_color = Color(0.22, 0.31, 0.29, 1)
+roughness = 0.85
+
+[sub_resource type="BoxMesh" id="GroundFloor_mesh"]
+material = SubResource("floor")
+size = Vector3(8, 0.2, 16)
+
+[sub_resource type="BoxShape3D" id="GroundFloor_shape"]
+size = Vector3(8, 0.2, 16)
+
+[sub_resource type="ConcavePolygonShape3D" id="CeilingUnderside_shape"]
+data = PackedVector3Array(-4, 3.2, -8, 4, 3.2, 8, 4, 3.2, -8, -4, 3.2, -8, -4, 3.2, 8, 4, 3.2, 8)
+backface_collision = false
+
+[node name="T07_workshop" type="Node3D"]
+
+[node name="Architecture" type="Node3D" parent="."]
+
+[node name="GroundFloor" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0, -0.1, 0)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/GroundFloor"]
+mesh = SubResource("GroundFloor_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/GroundFloor"]
+shape = SubResource("GroundFloor_shape")
+
+[node name="West_0_0" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(-3.75, 0, -8)
+rotation = Vector3(0, -1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/West_0_0/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="East_0_0" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(3.75, 0, 8)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/East_0_0/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="West_0_1" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(-3.75, 0, -4)
+rotation = Vector3(0, -1.5708, 0)
+
+[node name="FacadeWindow" parent="Architecture/West_0_1/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="East_0_1" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(3.75, 0, 4)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="FacadeWindow" parent="Architecture/East_0_1/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="West_0_2" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(-3.75, 0, 0)
+rotation = Vector3(0, -1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/West_0_2/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="East_0_2" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(3.75, 0, 0)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/East_0_2/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="West_0_3" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(-3.75, 0, 4)
+rotation = Vector3(0, -1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/West_0_3/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="East_0_3" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(3.75, 0, -4)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/East_0_3/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Rear_0_0" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(-4, 0, 7.75)
+rotation = Vector3(0, 0, 0)
+
+[node name="FacadeWindow" parent="Architecture/Rear_0_0/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Rear_0_1" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(0, 0, 7.75)
+rotation = Vector3(0, 0, 0)
+
+[node name="FacadeSolid" parent="Architecture/Rear_0_1/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Front_0_0" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(4, 0, -7.75)
+rotation = Vector3(0, 3.14159, 0)
+
+[node name="FacadeWindow" parent="Architecture/Front_0_0/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Front_0_1" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(0, 0, -7.75)
+rotation = Vector3(0, 3.14159, 0)
+
+[node name="FacadeSolid" parent="Architecture/Front_0_1/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Roof_0" parent="Architecture" instance=ExtResource("ext_3")]
+position = Vector3(4, 3.2, 0)
+rotation = Vector3(0, 1.5707963, 0)
+
+[node name="MetalRoof" parent="Architecture/Roof_0/TownMetalRoof" index="0"]
+surface_material_override/0 = ExtResource("ext_4")
+
+[node name="Roof_1" parent="Architecture" instance=ExtResource("ext_3")]
+position = Vector3(4, 3.2, 8)
+rotation = Vector3(0, 1.5707963, 0)
+
+[node name="MetalRoof" parent="Architecture/Roof_1/TownMetalRoof" index="0"]
+surface_material_override/0 = ExtResource("ext_4")
+
+[node name="CeilingUnderside" type="StaticBody3D" parent="Architecture"]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/CeilingUnderside"]
+shape = SubResource("CeilingUnderside_shape")
+
+[node name="Markers" type="Node3D" parent="."]

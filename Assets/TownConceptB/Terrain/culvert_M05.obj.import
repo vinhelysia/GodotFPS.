@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dhrq4te2u224i"
+path="res://.godot/imported/culvert_M05.obj-ff964e330dbe9dd8b3039672a5f97dcf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/culvert_M05.obj-ff964e330dbe9dd8b3039672a5f97dcf.mesh"]
+
+source_file="res://Assets/TownConceptB/Terrain/culvert_M05.obj"
+dest_files=["res://.godot/imported/culvert_M05.obj-ff964e330dbe9dd8b3039672a5f97dcf.mesh", "res://.godot/imported/culvert_M05.obj-ff964e330dbe9dd8b3039672a5f97dcf.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

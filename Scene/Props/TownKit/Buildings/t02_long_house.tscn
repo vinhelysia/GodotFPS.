@@ -1,0 +1,818 @@
+[gd_scene load_steps=76 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/facade_solid_4m.tscn" id="ext_0"]
+
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/materials/town_architecture_worn.tres" id="ext_1"]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/facade_window_4m.tscn" id="ext_2"]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/facade_doorway_4m.tscn" id="ext_3"]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/metal_roof_8x8.tscn" id="ext_4"]
+
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/materials/town_roof_worn.tres" id="ext_5"]
+
+[sub_resource type="StandardMaterial3D" id="wall"]
+albedo_color = Color(0.43, 0.44, 0.4, 1)
+roughness = 1.0
+
+[sub_resource type="StandardMaterial3D" id="floor"]
+albedo_color = Color(0.31, 0.32, 0.3, 1)
+roughness = 1.0
+
+[sub_resource type="StandardMaterial3D" id="roof"]
+albedo_color = Color(0.18, 0.23, 0.22, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="trim"]
+albedo_color = Color(0.22, 0.31, 0.29, 1)
+roughness = 0.85
+
+[sub_resource type="BoxMesh" id="GroundFloor_mesh"]
+material = SubResource("floor")
+size = Vector3(8, 0.2, 16)
+
+[sub_resource type="BoxShape3D" id="GroundFloor_shape"]
+size = Vector3(8, 0.2, 16)
+
+[sub_resource type="BoxMesh" id="FrontLeftInfill_mesh"]
+material = SubResource("wall")
+size = Vector3(2, 3.2, 0.25)
+
+[sub_resource type="BoxShape3D" id="FrontLeftInfill_shape"]
+size = Vector3(2, 3.2, 0.25)
+
+[sub_resource type="BoxMesh" id="FrontRightInfill_mesh"]
+material = SubResource("wall")
+size = Vector3(2, 3.2, 0.25)
+
+[sub_resource type="BoxShape3D" id="FrontRightInfill_shape"]
+size = Vector3(2, 3.2, 0.25)
+
+[sub_resource type="BoxMesh" id="UpperFloorWest_mesh"]
+material = SubResource("floor")
+size = Vector3(5, 0.2, 16)
+
+[sub_resource type="BoxShape3D" id="UpperFloorWest_shape"]
+size = Vector3(5, 0.2, 16)
+
+[sub_resource type="BoxMesh" id="UpperFloorEast_mesh"]
+material = SubResource("floor")
+size = Vector3(0.4, 0.2, 16)
+
+[sub_resource type="BoxShape3D" id="UpperFloorEast_shape"]
+size = Vector3(0.4, 0.2, 16)
+
+[sub_resource type="BoxMesh" id="UpperFloorFront_mesh"]
+material = SubResource("floor")
+size = Vector3(2.6, 0.2, 8)
+
+[sub_resource type="BoxShape3D" id="UpperFloorFront_shape"]
+size = Vector3(2.6, 0.2, 8)
+
+[sub_resource type="BoxMesh" id="UpperFloorRear_mesh"]
+material = SubResource("floor")
+size = Vector3(2.6, 0.2, 4)
+
+[sub_resource type="BoxShape3D" id="UpperFloorRear_shape"]
+size = Vector3(2.6, 0.2, 4)
+
+[sub_resource type="BoxMesh" id="LowerStep_1_mesh"]
+material = SubResource("floor")
+size = Vector3(1.2, 0.16, 0.28)
+
+[sub_resource type="BoxShape3D" id="LowerStep_1_shape"]
+size = Vector3(1.2, 0.16, 0.28)
+
+[sub_resource type="BoxMesh" id="UpperStep_1_mesh"]
+material = SubResource("floor")
+size = Vector3(1.2, 0.16, 0.28)
+
+[sub_resource type="BoxShape3D" id="UpperStep_1_shape"]
+size = Vector3(1.2, 0.16, 0.28)
+
+[sub_resource type="BoxMesh" id="LowerStep_2_mesh"]
+material = SubResource("floor")
+size = Vector3(1.2, 0.32, 0.28)
+
+[sub_resource type="BoxShape3D" id="LowerStep_2_shape"]
+size = Vector3(1.2, 0.32, 0.28)
+
+[sub_resource type="BoxMesh" id="UpperStep_2_mesh"]
+material = SubResource("floor")
+size = Vector3(1.2, 0.32, 0.28)
+
+[sub_resource type="BoxShape3D" id="UpperStep_2_shape"]
+size = Vector3(1.2, 0.32, 0.28)
+
+[sub_resource type="BoxMesh" id="LowerStep_3_mesh"]
+material = SubResource("floor")
+size = Vector3(1.2, 0.48, 0.28)
+
+[sub_resource type="BoxShape3D" id="LowerStep_3_shape"]
+size = Vector3(1.2, 0.48, 0.28)
+
+[sub_resource type="BoxMesh" id="UpperStep_3_mesh"]
+material = SubResource("floor")
+size = Vector3(1.2, 0.48, 0.28)
+
+[sub_resource type="BoxShape3D" id="UpperStep_3_shape"]
+size = Vector3(1.2, 0.48, 0.28)
+
+[sub_resource type="BoxMesh" id="LowerStep_4_mesh"]
+material = SubResource("floor")
+size = Vector3(1.2, 0.64, 0.28)
+
+[sub_resource type="BoxShape3D" id="LowerStep_4_shape"]
+size = Vector3(1.2, 0.64, 0.28)
+
+[sub_resource type="BoxMesh" id="UpperStep_4_mesh"]
+material = SubResource("floor")
+size = Vector3(1.2, 0.64, 0.28)
+
+[sub_resource type="BoxShape3D" id="UpperStep_4_shape"]
+size = Vector3(1.2, 0.64, 0.28)
+
+[sub_resource type="BoxMesh" id="LowerStep_5_mesh"]
+material = SubResource("floor")
+size = Vector3(1.2, 0.8, 0.28)
+
+[sub_resource type="BoxShape3D" id="LowerStep_5_shape"]
+size = Vector3(1.2, 0.8, 0.28)
+
+[sub_resource type="BoxMesh" id="UpperStep_5_mesh"]
+material = SubResource("floor")
+size = Vector3(1.2, 0.8, 0.28)
+
+[sub_resource type="BoxShape3D" id="UpperStep_5_shape"]
+size = Vector3(1.2, 0.8, 0.28)
+
+[sub_resource type="BoxMesh" id="LowerStep_6_mesh"]
+material = SubResource("floor")
+size = Vector3(1.2, 0.96, 0.28)
+
+[sub_resource type="BoxShape3D" id="LowerStep_6_shape"]
+size = Vector3(1.2, 0.96, 0.28)
+
+[sub_resource type="BoxMesh" id="UpperStep_6_mesh"]
+material = SubResource("floor")
+size = Vector3(1.2, 0.96, 0.28)
+
+[sub_resource type="BoxShape3D" id="UpperStep_6_shape"]
+size = Vector3(1.2, 0.96, 0.28)
+
+[sub_resource type="BoxMesh" id="LowerStep_7_mesh"]
+material = SubResource("floor")
+size = Vector3(1.2, 1.12, 0.28)
+
+[sub_resource type="BoxShape3D" id="LowerStep_7_shape"]
+size = Vector3(1.2, 1.12, 0.28)
+
+[sub_resource type="BoxMesh" id="UpperStep_7_mesh"]
+material = SubResource("floor")
+size = Vector3(1.2, 1.12, 0.28)
+
+[sub_resource type="BoxShape3D" id="UpperStep_7_shape"]
+size = Vector3(1.2, 1.12, 0.28)
+
+[sub_resource type="BoxMesh" id="LowerStep_8_mesh"]
+material = SubResource("floor")
+size = Vector3(1.2, 1.28, 0.28)
+
+[sub_resource type="BoxShape3D" id="LowerStep_8_shape"]
+size = Vector3(1.2, 1.28, 0.28)
+
+[sub_resource type="BoxMesh" id="UpperStep_8_mesh"]
+material = SubResource("floor")
+size = Vector3(1.2, 1.28, 0.28)
+
+[sub_resource type="BoxShape3D" id="UpperStep_8_shape"]
+size = Vector3(1.2, 1.28, 0.28)
+
+[sub_resource type="BoxMesh" id="LowerStep_9_mesh"]
+material = SubResource("floor")
+size = Vector3(1.2, 1.44, 0.28)
+
+[sub_resource type="BoxShape3D" id="LowerStep_9_shape"]
+size = Vector3(1.2, 1.44, 0.28)
+
+[sub_resource type="BoxMesh" id="UpperStep_9_mesh"]
+material = SubResource("floor")
+size = Vector3(1.2, 1.44, 0.28)
+
+[sub_resource type="BoxShape3D" id="UpperStep_9_shape"]
+size = Vector3(1.2, 1.44, 0.28)
+
+[sub_resource type="BoxMesh" id="LowerStep_10_mesh"]
+material = SubResource("floor")
+size = Vector3(1.2, 1.6, 0.28)
+
+[sub_resource type="BoxShape3D" id="LowerStep_10_shape"]
+size = Vector3(1.2, 1.6, 0.28)
+
+[sub_resource type="BoxMesh" id="UpperStep_10_mesh"]
+material = SubResource("floor")
+size = Vector3(1.2, 1.6, 0.28)
+
+[sub_resource type="BoxShape3D" id="UpperStep_10_shape"]
+size = Vector3(1.2, 1.6, 0.28)
+
+[sub_resource type="BoxMesh" id="MidLanding_mesh"]
+material = SubResource("floor")
+size = Vector3(2.6, 0.16, 1.2)
+
+[sub_resource type="BoxShape3D" id="MidLanding_shape"]
+size = Vector3(2.6, 0.16, 1.2)
+
+[sub_resource type="BoxMesh" id="UpperGuardWest_mesh"]
+material = SubResource("trim")
+size = Vector3(0.06, 1, 4)
+
+[sub_resource type="BoxShape3D" id="UpperGuardWest_shape"]
+size = Vector3(0.06, 1, 4)
+
+[sub_resource type="BoxMesh" id="UpperGuardEast_mesh"]
+material = SubResource("trim")
+size = Vector3(0.06, 1, 4)
+
+[sub_resource type="BoxShape3D" id="UpperGuardEast_shape"]
+size = Vector3(0.06, 1, 4)
+
+[sub_resource type="BoxMesh" id="UpperGuardRear_mesh"]
+material = SubResource("trim")
+size = Vector3(2.6, 1, 0.06)
+
+[sub_resource type="BoxShape3D" id="UpperGuardRear_shape"]
+size = Vector3(2.6, 1, 0.06)
+
+[sub_resource type="BoxMesh" id="UpperGuardFront_mesh"]
+material = SubResource("trim")
+size = Vector3(1.2, 1, 0.06)
+
+[sub_resource type="BoxShape3D" id="UpperGuardFront_shape"]
+size = Vector3(1.2, 1, 0.06)
+
+[sub_resource type="ConcavePolygonShape3D" id="CeilingUnderside_shape"]
+data = PackedVector3Array(-4, 6.4, -8, 4, 6.4, 8, 4, 6.4, -8, -4, 6.4, -8, -4, 6.4, 8, 4, 6.4, 8)
+backface_collision = false
+
+[node name="T02_long_house" type="Node3D"]
+
+[node name="Architecture" type="Node3D" parent="."]
+
+[node name="GroundFloor" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0, -0.1, 0)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/GroundFloor"]
+mesh = SubResource("GroundFloor_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/GroundFloor"]
+shape = SubResource("GroundFloor_shape")
+
+[node name="West_0_0" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(-3.75, 0, -8)
+rotation = Vector3(0, -1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/West_0_0/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="East_0_0" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(3.75, 0, 8)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/East_0_0/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="West_0_1" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(-3.75, 0, -4)
+rotation = Vector3(0, -1.5708, 0)
+
+[node name="FacadeWindow" parent="Architecture/West_0_1/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="East_0_1" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(3.75, 0, 4)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="FacadeWindow" parent="Architecture/East_0_1/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="West_0_2" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(-3.75, 0, 0)
+rotation = Vector3(0, -1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/West_0_2/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="East_0_2" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(3.75, 0, 0)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/East_0_2/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="West_0_3" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(-3.75, 0, 4)
+rotation = Vector3(0, -1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/West_0_3/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="East_0_3" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(3.75, 0, -4)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/East_0_3/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Rear_0_0" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(-4, 0, 7.75)
+rotation = Vector3(0, 0, 0)
+
+[node name="FacadeWindow" parent="Architecture/Rear_0_0/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Rear_0_1" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(0, 0, 7.75)
+rotation = Vector3(0, 0, 0)
+
+[node name="FacadeSolid" parent="Architecture/Rear_0_1/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Entrance" parent="Architecture" instance=ExtResource("ext_3")]
+position = Vector3(2, 0, -7.75)
+rotation = Vector3(0, 3.14159, 0)
+
+[node name="FacadeDoorway" parent="Architecture/Entrance/TownFacadeDoorway" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="FrontLeftInfill" type="StaticBody3D" parent="Architecture"]
+position = Vector3(-3, 1.6, -7.875)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/FrontLeftInfill"]
+mesh = SubResource("FrontLeftInfill_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/FrontLeftInfill"]
+shape = SubResource("FrontLeftInfill_shape")
+
+[node name="FrontRightInfill" type="StaticBody3D" parent="Architecture"]
+position = Vector3(3, 1.6, -7.875)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/FrontRightInfill"]
+mesh = SubResource("FrontRightInfill_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/FrontRightInfill"]
+shape = SubResource("FrontRightInfill_shape")
+
+[node name="West_1_0" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(-3.75, 3.2, -8)
+rotation = Vector3(0, -1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/West_1_0/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="East_1_0" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(3.75, 3.2, 8)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/East_1_0/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="West_1_1" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(-3.75, 3.2, -4)
+rotation = Vector3(0, -1.5708, 0)
+
+[node name="FacadeWindow" parent="Architecture/West_1_1/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="East_1_1" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(3.75, 3.2, 4)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="FacadeWindow" parent="Architecture/East_1_1/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="West_1_2" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(-3.75, 3.2, 0)
+rotation = Vector3(0, -1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/West_1_2/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="East_1_2" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(3.75, 3.2, 0)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/East_1_2/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="West_1_3" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(-3.75, 3.2, 4)
+rotation = Vector3(0, -1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/West_1_3/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="East_1_3" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(3.75, 3.2, -4)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="FacadeSolid" parent="Architecture/East_1_3/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Rear_1_0" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(-4, 3.2, 7.75)
+rotation = Vector3(0, 0, 0)
+
+[node name="FacadeWindow" parent="Architecture/Rear_1_0/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Rear_1_1" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(0, 3.2, 7.75)
+rotation = Vector3(0, 0, 0)
+
+[node name="FacadeSolid" parent="Architecture/Rear_1_1/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Front_1_0" parent="Architecture" instance=ExtResource("ext_2")]
+position = Vector3(4, 3.2, -7.75)
+rotation = Vector3(0, 3.14159, 0)
+
+[node name="FacadeWindow" parent="Architecture/Front_1_0/TownFacadeWindow" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="Front_1_1" parent="Architecture" instance=ExtResource("ext_0")]
+position = Vector3(0, 3.2, -7.75)
+rotation = Vector3(0, 3.14159, 0)
+
+[node name="FacadeSolid" parent="Architecture/Front_1_1/TownFacadeSolid" index="0"]
+surface_material_override/0 = ExtResource("ext_1")
+
+[node name="UpperFloorWest" type="StaticBody3D" parent="Architecture"]
+position = Vector3(-1.5, 3.1, 0)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/UpperFloorWest"]
+mesh = SubResource("UpperFloorWest_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/UpperFloorWest"]
+shape = SubResource("UpperFloorWest_shape")
+
+[node name="UpperFloorEast" type="StaticBody3D" parent="Architecture"]
+position = Vector3(3.8, 3.1, 0)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/UpperFloorEast"]
+mesh = SubResource("UpperFloorEast_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/UpperFloorEast"]
+shape = SubResource("UpperFloorEast_shape")
+
+[node name="UpperFloorFront" type="StaticBody3D" parent="Architecture"]
+position = Vector3(2.3, 3.1, -4)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/UpperFloorFront"]
+mesh = SubResource("UpperFloorFront_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/UpperFloorFront"]
+shape = SubResource("UpperFloorFront_shape")
+
+[node name="UpperFloorRear" type="StaticBody3D" parent="Architecture"]
+position = Vector3(2.3, 3.1, 6)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/UpperFloorRear"]
+mesh = SubResource("UpperFloorRear_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/UpperFloorRear"]
+shape = SubResource("UpperFloorRear_shape")
+
+[node name="LowerStep_1" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.6, 0.08, 0.14)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/LowerStep_1"]
+mesh = SubResource("LowerStep_1_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/LowerStep_1"]
+shape = SubResource("LowerStep_1_shape")
+
+[node name="UpperStep_1" type="StaticBody3D" parent="Architecture"]
+position = Vector3(3, 1.68, 2.66)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/UpperStep_1"]
+mesh = SubResource("UpperStep_1_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/UpperStep_1"]
+shape = SubResource("UpperStep_1_shape")
+
+[node name="LowerStep_2" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.6, 0.16, 0.42)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/LowerStep_2"]
+mesh = SubResource("LowerStep_2_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/LowerStep_2"]
+shape = SubResource("LowerStep_2_shape")
+
+[node name="UpperStep_2" type="StaticBody3D" parent="Architecture"]
+position = Vector3(3, 1.76, 2.38)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/UpperStep_2"]
+mesh = SubResource("UpperStep_2_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/UpperStep_2"]
+shape = SubResource("UpperStep_2_shape")
+
+[node name="LowerStep_3" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.6, 0.24, 0.7)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/LowerStep_3"]
+mesh = SubResource("LowerStep_3_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/LowerStep_3"]
+shape = SubResource("LowerStep_3_shape")
+
+[node name="UpperStep_3" type="StaticBody3D" parent="Architecture"]
+position = Vector3(3, 1.84, 2.1)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/UpperStep_3"]
+mesh = SubResource("UpperStep_3_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/UpperStep_3"]
+shape = SubResource("UpperStep_3_shape")
+
+[node name="LowerStep_4" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.6, 0.32, 0.98)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/LowerStep_4"]
+mesh = SubResource("LowerStep_4_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/LowerStep_4"]
+shape = SubResource("LowerStep_4_shape")
+
+[node name="UpperStep_4" type="StaticBody3D" parent="Architecture"]
+position = Vector3(3, 1.92, 1.82)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/UpperStep_4"]
+mesh = SubResource("UpperStep_4_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/UpperStep_4"]
+shape = SubResource("UpperStep_4_shape")
+
+[node name="LowerStep_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.6, 0.4, 1.26)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/LowerStep_5"]
+mesh = SubResource("LowerStep_5_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/LowerStep_5"]
+shape = SubResource("LowerStep_5_shape")
+
+[node name="UpperStep_5" type="StaticBody3D" parent="Architecture"]
+position = Vector3(3, 2, 1.54)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/UpperStep_5"]
+mesh = SubResource("UpperStep_5_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/UpperStep_5"]
+shape = SubResource("UpperStep_5_shape")
+
+[node name="LowerStep_6" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.6, 0.48, 1.54)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/LowerStep_6"]
+mesh = SubResource("LowerStep_6_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/LowerStep_6"]
+shape = SubResource("LowerStep_6_shape")
+
+[node name="UpperStep_6" type="StaticBody3D" parent="Architecture"]
+position = Vector3(3, 2.08, 1.26)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/UpperStep_6"]
+mesh = SubResource("UpperStep_6_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/UpperStep_6"]
+shape = SubResource("UpperStep_6_shape")
+
+[node name="LowerStep_7" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.6, 0.56, 1.82)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/LowerStep_7"]
+mesh = SubResource("LowerStep_7_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/LowerStep_7"]
+shape = SubResource("LowerStep_7_shape")
+
+[node name="UpperStep_7" type="StaticBody3D" parent="Architecture"]
+position = Vector3(3, 2.16, 0.98)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/UpperStep_7"]
+mesh = SubResource("UpperStep_7_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/UpperStep_7"]
+shape = SubResource("UpperStep_7_shape")
+
+[node name="LowerStep_8" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.6, 0.64, 2.1)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/LowerStep_8"]
+mesh = SubResource("LowerStep_8_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/LowerStep_8"]
+shape = SubResource("LowerStep_8_shape")
+
+[node name="UpperStep_8" type="StaticBody3D" parent="Architecture"]
+position = Vector3(3, 2.24, 0.7)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/UpperStep_8"]
+mesh = SubResource("UpperStep_8_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/UpperStep_8"]
+shape = SubResource("UpperStep_8_shape")
+
+[node name="LowerStep_9" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.6, 0.72, 2.38)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/LowerStep_9"]
+mesh = SubResource("LowerStep_9_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/LowerStep_9"]
+shape = SubResource("LowerStep_9_shape")
+
+[node name="UpperStep_9" type="StaticBody3D" parent="Architecture"]
+position = Vector3(3, 2.32, 0.42)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/UpperStep_9"]
+mesh = SubResource("UpperStep_9_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/UpperStep_9"]
+shape = SubResource("UpperStep_9_shape")
+
+[node name="LowerStep_10" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.6, 0.8, 2.66)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/LowerStep_10"]
+mesh = SubResource("LowerStep_10_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/LowerStep_10"]
+shape = SubResource("LowerStep_10_shape")
+
+[node name="UpperStep_10" type="StaticBody3D" parent="Architecture"]
+position = Vector3(3, 2.4, 0.14)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/UpperStep_10"]
+mesh = SubResource("UpperStep_10_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/UpperStep_10"]
+shape = SubResource("UpperStep_10_shape")
+
+[node name="MidLanding" type="StaticBody3D" parent="Architecture"]
+position = Vector3(2.3, 1.52, 3.4)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/MidLanding"]
+mesh = SubResource("MidLanding_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/MidLanding"]
+shape = SubResource("MidLanding_shape")
+
+[node name="UpperGuardWest" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0.97, 3.7, 2)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/UpperGuardWest"]
+mesh = SubResource("UpperGuardWest_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/UpperGuardWest"]
+shape = SubResource("UpperGuardWest_shape")
+
+[node name="UpperGuardEast" type="StaticBody3D" parent="Architecture"]
+position = Vector3(3.63, 3.7, 2)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/UpperGuardEast"]
+mesh = SubResource("UpperGuardEast_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/UpperGuardEast"]
+shape = SubResource("UpperGuardEast_shape")
+
+[node name="UpperGuardRear" type="StaticBody3D" parent="Architecture"]
+position = Vector3(2.3, 3.7, 4.03)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/UpperGuardRear"]
+mesh = SubResource("UpperGuardRear_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/UpperGuardRear"]
+shape = SubResource("UpperGuardRear_shape")
+
+[node name="UpperGuardFront" type="StaticBody3D" parent="Architecture"]
+position = Vector3(1.6, 3.7, -0.03)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/UpperGuardFront"]
+mesh = SubResource("UpperGuardFront_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/UpperGuardFront"]
+shape = SubResource("UpperGuardFront_shape")
+
+[node name="Roof_0" parent="Architecture" instance=ExtResource("ext_4")]
+position = Vector3(4, 6.4, 0)
+rotation = Vector3(0, 1.5707963, 0)
+
+[node name="MetalRoof" parent="Architecture/Roof_0/TownMetalRoof" index="0"]
+surface_material_override/0 = ExtResource("ext_5")
+
+[node name="Roof_1" parent="Architecture" instance=ExtResource("ext_4")]
+position = Vector3(4, 6.4, 8)
+rotation = Vector3(0, 1.5707963, 0)
+
+[node name="MetalRoof" parent="Architecture/Roof_1/TownMetalRoof" index="0"]
+surface_material_override/0 = ExtResource("ext_5")
+
+[node name="CeilingUnderside" type="StaticBody3D" parent="Architecture"]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/CeilingUnderside"]
+shape = SubResource("CeilingUnderside_shape")
+
+[node name="Markers" type="Node3D" parent="."]
+
+[node name="GFEntry" type="Marker3D" parent="Markers"]
+position = Vector3(0, 0, -9.2)
+
+[node name="GFInterior" type="Marker3D" parent="Markers"]
+position = Vector3(0, 0, -6.8)
+
+[node name="StairBottom" type="Marker3D" parent="Markers"]
+position = Vector3(1.6, 0, -0.8)
+
+[node name="FirstFlightTop" type="Marker3D" parent="Markers"]
+position = Vector3(1.6, 1.6, 3.35)
+
+[node name="MidLanding" type="Marker3D" parent="Markers"]
+position = Vector3(3, 1.6, 3.35)
+
+[node name="UpperLanding" type="Marker3D" parent="Markers"]
+position = Vector3(3, 3.2, -0.6)
+
+[node name="UpperInterior" type="Marker3D" parent="Markers"]
+position = Vector3(0, 3.2, -3)
