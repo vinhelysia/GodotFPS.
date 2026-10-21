@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/wood_fence/assets/wood_fence_plank.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/wood_fence/materials/town_wood_fences_worn.tres" id="2_finish"]
+
+[node name="shared_wood_fence__plank" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "shared_wood_fence"
+metadata/catalog_variant = "plank"
+metadata/finish = "worn"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="WoodFencePlank" parent="Model/TownWoodFencePlank"]
+surface_material_override/0 = ExtResource("2_finish")

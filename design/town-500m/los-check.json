@@ -1,0 +1,704 @@
+{
+  "layout_sha256": "653d4136c93a643de6df52f7244741cffe870059dd43de495964170b2894dd12",
+  "status": "FAIL",
+  "native_verified": false,
+  "scope": "2D same-group road-envelope endpoints (carriageway + sidewalks), arbitrary connecting angles through open space; straight design rectangles; no global off-road endpoints or 3D camera/nav proof",
+  "method": "Analytic line/rotated-rectangle intersections and all offset topology events per sampled angle. Lower value is a clear witnessed segment, not the exhaustive maximum. Upper uses road expansion/blocker erosion by R*sin(half angle step), then divides by cos(half angle step); this bounds every unsampled direction in the stated proxy model.",
+  "resolution": {
+    "measured_angle_step_deg": 0.5,
+    "bound_angle_step_deg": 0.1,
+    "offsets": "all polygon vertices and edge-intersection events; one-sided 1e-7m nudges",
+    "numeric_tolerance_m": 0.00001,
+    "certified_groups": [
+      "P02"
+    ]
+  },
+  "blockers": {
+    "count": 87,
+    "building_footprints": 75,
+    "solid_fence_segments": 0,
+    "vehicles_or_wrecks": 0,
+    "barriers": 12,
+    "ids": [
+      "T01-A",
+      "T01-B",
+      "T01-C",
+      "T02-A",
+      "T02-B",
+      "T02-C",
+      "T03-A",
+      "T03-B",
+      "T03-C",
+      "T04-A",
+      "T04-B",
+      "T05-A",
+      "T05-B",
+      "T05-C",
+      "T06-A",
+      "T06-B",
+      "T06-C",
+      "T07-A",
+      "T07-B",
+      "T07-C",
+      "T08-A",
+      "T08-B",
+      "T09-A",
+      "T09-B",
+      "T10-A",
+      "T10-B",
+      "T10-C",
+      "T11-A",
+      "T11-B",
+      "T11-C",
+      "T12-A",
+      "T12-B",
+      "I01-A",
+      "I02-A",
+      "I05-A",
+      "I07-A",
+      "B01-A",
+      "B02-A",
+      "B03-A",
+      "B05-A",
+      "B06-A",
+      "F01-A",
+      "F02-A",
+      "F02-B",
+      "A01-A",
+      "A02-A",
+      "A04-A",
+      "A05-A",
+      "A06-A",
+      "A07-A",
+      "A08-A",
+      "L01-A",
+      "L02-A",
+      "L04-A",
+      "I03-A",
+      "I03-B",
+      "I03-C",
+      "I04-A",
+      "I04-B",
+      "I04-C",
+      "I06-A",
+      "I06-B",
+      "I06-C",
+      "I08-A",
+      "I09-A",
+      "B04-ENTRY",
+      "B07-A",
+      "B08-A",
+      "H01-A",
+      "H02-A",
+      "H03-A",
+      "H04-A",
+      "F03-A",
+      "A03-A",
+      "A09-A",
+      "C05-01",
+      "C05-02",
+      "C05-03",
+      "C05-04",
+      "C05-05",
+      "C05-06",
+      "C05-07",
+      "C05-08",
+      "C05-09",
+      "C05-10",
+      "C05-11",
+      "C05-12"
+    ],
+    "excludes": "trees, terrain, wire/mesh fences; obstacles without opaque:true; fences/vehicles/barriers <2m"
+  },
+  "groups": {
+    "COUNTY_W": {
+      "status": "PASS",
+      "limit_m": 200,
+      "conservative_upper_bound_m": 98.02869153775367,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Deliberate open county approach outside Town"
+    },
+    "P03": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 98.58504356997845,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "P09": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 115.60648160289887,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "BUNKER_ENTRY": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 27.966803003077462,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "TOWN_ALLEY_N": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 21.643751296981044,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "TOWN_EAST_N": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 10.681540224335977,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "TOWN_ALLEY_S": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 44.177208399795674,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "TOWN_EAST_S": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 57.087635962734275,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_T01-A": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 30.832341899497095,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_T02-A": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 24.104414555676087,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_T02-B": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 28.711582193292646,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_T03-A": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 17.527437351634113,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_T04-A": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 28.752341971155094,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_T05-A": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 31.35881175280044,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_T06-B": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 49.11718714776243,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_T06-C": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 12.570000000000004,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_T07-A": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 17.73,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_T07-B": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 43.029999999999994,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_T08-A": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 26.709999999999997,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_T10-C": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 9.580180174615236,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_T11-A": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 24.0384928258425,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_T11-B": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 25.439715793535175,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_T12-A": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 22.709999999999997,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_I01-A": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 49.980000000000004,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_I02-A": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 73.09021514145695,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_I05-A": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 31.349999999999998,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_A01-A": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 8.374039853849377,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_A06-A": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 8.695834892172504,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_A07-A": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 23.145831637626273,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_L01-A": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 13.703136343039592,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ACCESS_B04-ENTRY": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 1.8,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Whole authored corridor; no artificial splitting of long straight streets"
+    },
+    "ROUTE_G01": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 99.31,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Additional whole pedestrian route outside source corridors"
+    },
+    "ROUTE_G02": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 52.89942956026389,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Additional whole pedestrian route outside source corridors"
+    },
+    "ROUTE_G03": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 92.5,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Additional whole pedestrian route outside source corridors"
+    },
+    "ROUTE_G04": {
+      "status": "PASS",
+      "limit_m": 200,
+      "conservative_upper_bound_m": 143.6706522266046,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Additional whole pedestrian route outside source corridors"
+    },
+    "ROUTE_G15": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 101.5675489595078,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Additional whole pedestrian route outside source corridors"
+    },
+    "ROUTE_G20": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 118.17999999999999,
+      "method": "Any two road-envelope endpoints are at most path length plus width apart; blockers can only shorten visibility",
+      "reason": "Additional whole pedestrian route outside source corridors"
+    },
+    "M": {
+      "limit_m": 150,
+      "status": "FAIL",
+      "measured_max_m": 201.36383010615577,
+      "conservative_upper_bound_m": null,
+      "witness_endpoints_xz": [
+        [
+          -160.6814959580445,
+          17.615562873949635
+        ],
+        [
+          40.52599580361593,
+          25.548868238179182
+        ]
+      ],
+      "witness_angle_deg": 2.2579158684405445,
+      "roads": [
+        "M:0",
+        "M:1"
+      ],
+      "evaluated_lines": 101216,
+      "bound_evaluated_lines": 0,
+      "bound_erosion_m": null,
+      "reason": "Witnessed lower bound; failing segment needs no upper certificate"
+    },
+    "COUNTY_E": {
+      "limit_m": 200,
+      "status": "FAIL",
+      "measured_max_m": 213.95241037111765,
+      "conservative_upper_bound_m": null,
+      "witness_endpoints_xz": [
+        [
+          249.67373072678305,
+          -3.986671228319413
+        ],
+        [
+          39.014004450327306,
+          33.40468644614698
+        ]
+      ],
+      "witness_angle_deg": 169.93502675303426,
+      "roads": [
+        "COUNTY_E:0",
+        "COUNTY_E:1",
+        "COUNTY_E:2",
+        "COUNTY_E:3"
+      ],
+      "evaluated_lines": 100600,
+      "bound_evaluated_lines": 0,
+      "bound_erosion_m": null,
+      "reason": "Witnessed lower bound; failing segment needs no upper certificate"
+    },
+    "P02": {
+      "limit_m": 120,
+      "status": "PASS",
+      "measured_max_m": 115.29231534451709,
+      "conservative_upper_bound_m": 115.42813629706342,
+      "witness_endpoints_xz": [
+        [
+          -141.7699999277554,
+          -120.44999979243862
+        ],
+        [
+          -58.477519514123934,
+          -40.73374872627026
+        ]
+      ],
+      "witness_angle_deg": 43.74319625967025,
+      "roads": [
+        "P02:0",
+        "P02:1",
+        "P02:2",
+        "P02:3"
+      ],
+      "evaluated_lines": 78748,
+      "bound_evaluated_lines": 505785,
+      "bound_erosion_m": 0.0508908942351792,
+      "reason": "Witnessed lower bound plus conservative continuous-angle upper certificate in the stated 2D proxy model"
+    },
+    "P04": {
+      "limit_m": 200,
+      "status": "FAIL",
+      "measured_max_m": 375.79160273567516,
+      "conservative_upper_bound_m": null,
+      "witness_endpoints_xz": [
+        [
+          212.2700001103233,
+          -249.9999999004849
+        ],
+        [
+          249.23276938496764,
+          123.96936030726911
+        ]
+      ],
+      "witness_angle_deg": 84.35527441504848,
+      "roads": [
+        "P04:0",
+        "P04:1",
+        "P04:2",
+        "P04:3",
+        "P04:4"
+      ],
+      "evaluated_lines": 162726,
+      "bound_evaluated_lines": 0,
+      "bound_erosion_m": null,
+      "reason": "Witnessed lower bound; failing segment needs no upper certificate"
+    },
+    "P05": {
+      "limit_m": 80,
+      "status": "FAIL",
+      "measured_max_m": 113.92141030474667,
+      "conservative_upper_bound_m": null,
+      "witness_endpoints_xz": [
+        [
+          -69.2479479610853,
+          37.34278626313286
+        ],
+        [
+          -66.26583309237793,
+          151.2251585458188
+        ]
+      ],
+      "witness_angle_deg": 88.50000000000001,
+      "roads": [
+        "P05:0",
+        "P05:1",
+        "P05:2",
+        "P05:3"
+      ],
+      "evaluated_lines": 93534,
+      "bound_evaluated_lines": 0,
+      "bound_erosion_m": null,
+      "reason": "Witnessed lower bound; failing segment needs no upper certificate"
+    },
+    "P06": {
+      "limit_m": 80,
+      "status": "FAIL",
+      "measured_max_m": 125.24344431296979,
+      "conservative_upper_bound_m": null,
+      "witness_endpoints_xz": [
+        [
+          23.333974216115863,
+          33.541468404857305
+        ],
+        [
+          35.338026384517235,
+          158.2083167443989
+        ]
+      ],
+      "witness_angle_deg": 84.5,
+      "roads": [
+        "P06:0",
+        "P06:1",
+        "P06:2"
+      ],
+      "evaluated_lines": 73664,
+      "bound_evaluated_lines": 0,
+      "bound_erosion_m": null,
+      "reason": "Witnessed lower bound; failing segment needs no upper certificate"
+    },
+    "P07": {
+      "limit_m": 120,
+      "status": "FAIL",
+      "measured_max_m": 235.74091694942868,
+      "conservative_upper_bound_m": null,
+      "witness_endpoints_xz": [
+        [
+          182.93889185158523,
+          -195.89410270098077
+        ],
+        [
+          92.7247486044843,
+          21.902105444039474
+        ]
+      ],
+      "witness_angle_deg": 112.5,
+      "roads": [
+        "P07:0",
+        "P07:1",
+        "P07:2",
+        "P07:3",
+        "P07:4",
+        "P07:5"
+      ],
+      "evaluated_lines": 175692,
+      "bound_evaluated_lines": 0,
+      "bound_erosion_m": null,
+      "reason": "Witnessed lower bound; failing segment needs no upper certificate"
+    },
+    "P08": {
+      "limit_m": 120,
+      "status": "FAIL",
+      "measured_max_m": 144.79094354381817,
+      "conservative_upper_bound_m": null,
+      "witness_endpoints_xz": [
+        [
+          -5.259307670104921,
+          -205.57926297404293
+        ],
+        [
+          -86.40294316533455,
+          -85.66209259829378
+        ]
+      ],
+      "witness_angle_deg": 124.08479830872021,
+      "roads": [
+        "P08:0",
+        "P08:1",
+        "P08:2"
+      ],
+      "evaluated_lines": 87070,
+      "bound_evaluated_lines": 0,
+      "bound_erosion_m": null,
+      "reason": "Witnessed lower bound; failing segment needs no upper certificate"
+    },
+    "P10": {
+      "limit_m": 120,
+      "status": "FAIL",
+      "measured_max_m": 186.535404174184,
+      "conservative_upper_bound_m": null,
+      "witness_endpoints_xz": [
+        [
+          107.97327726070411,
+          -119.96786821201817
+        ],
+        [
+          -59.86729901905115,
+          -38.57377773546183
+        ]
+      ],
+      "witness_angle_deg": 154.1289885068556,
+      "roads": [
+        "P10:0",
+        "P10:1",
+        "P10:2",
+        "P10:3",
+        "P10:4",
+        "P10:5"
+      ],
+      "evaluated_lines": 136020,
+      "bound_evaluated_lines": 0,
+      "bound_erosion_m": null,
+      "reason": "Witnessed lower bound; failing segment needs no upper certificate"
+    },
+    "P11": {
+      "limit_m": 120,
+      "status": "FAIL",
+      "measured_max_m": 171.18715106953823,
+      "conservative_upper_bound_m": null,
+      "witness_endpoints_xz": [
+        [
+          -191.09736929864678,
+          120.59856517939419
+        ],
+        [
+          -63.75000007439072,
+          234.99999979874633
+        ]
+      ],
+      "witness_angle_deg": 41.93467112617404,
+      "roads": [
+        "P11:0",
+        "P11:1",
+        "P11:2",
+        "P11:3"
+      ],
+      "evaluated_lines": 85840,
+      "bound_evaluated_lines": 0,
+      "bound_erosion_m": null,
+      "reason": "Witnessed lower bound; failing segment needs no upper certificate"
+    },
+    "P12": {
+      "limit_m": 120,
+      "status": "FAIL",
+      "measured_max_m": 156.16632217273835,
+      "conservative_upper_bound_m": null,
+      "witness_endpoints_xz": [
+        [
+          -237.38674498138857,
+          -235.64705226310136
+        ],
+        [
+          -139.7700000625082,
+          -113.75000023803496
+        ]
+      ],
+      "witness_angle_deg": 51.31179938841603,
+      "roads": [
+        "P12:0",
+        "P12:1",
+        "P12:2",
+        "P12:3",
+        "P12:4"
+      ],
+      "evaluated_lines": 98932,
+      "bound_evaluated_lines": 0,
+      "bound_erosion_m": null,
+      "reason": "Witnessed lower bound; failing segment needs no upper certificate"
+    },
+    "ROUTE_G19": {
+      "limit_m": 120,
+      "status": "FAIL",
+      "measured_max_m": 122.15381865640217,
+      "conservative_upper_bound_m": null,
+      "witness_endpoints_xz": [
+        [
+          -226.19945594091078,
+          -139.99999990038054
+        ],
+        [
+          -215.5530491464493,
+          -18.31101340321215
+        ]
+      ],
+      "witness_angle_deg": 85,
+      "roads": [
+        "ROUTE_G19:0",
+        "ROUTE_G19:1",
+        "ROUTE_G19:2",
+        "ROUTE_G19:3"
+      ],
+      "evaluated_lines": 76920,
+      "bound_evaluated_lines": 0,
+      "bound_erosion_m": null,
+      "reason": "Witnessed lower bound; failing segment needs no upper certificate"
+    }
+  },
+  "pending": [
+    "Do not start spatial acceptance with FAIL corridors; add plausible property/terrain/vehicle occlusion and rerun",
+    "Opaque footprint proxies ignore actual windows/doors,terrain and vegetation; native standing/ADS/lean/upstairs rays mandatory"
+  ]
+}

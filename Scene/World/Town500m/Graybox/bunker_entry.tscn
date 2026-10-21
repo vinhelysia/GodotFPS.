@@ -1,0 +1,173 @@
+[gd_scene load_steps=18 format=3]
+
+[sub_resource type="StandardMaterial3D" id="graybox"]
+albedo_color = Color(0.39, 0.41, 0.37, 1)
+roughness = 1.0
+
+[sub_resource type="BoxMesh" id="GroundFloor_mesh"]
+material = SubResource("graybox")
+size = Vector3(8, 0.2, 8)
+
+[sub_resource type="BoxShape3D" id="GroundFloor_shape"]
+size = Vector3(8, 0.2, 8)
+
+[sub_resource type="BoxMesh" id="WestWall_mesh"]
+material = SubResource("graybox")
+size = Vector3(0.25, 3.2, 8)
+
+[sub_resource type="BoxShape3D" id="WestWall_shape"]
+size = Vector3(0.25, 3.2, 8)
+
+[sub_resource type="BoxMesh" id="EastWall_mesh"]
+material = SubResource("graybox")
+size = Vector3(0.25, 3.2, 8)
+
+[sub_resource type="BoxShape3D" id="EastWall_shape"]
+size = Vector3(0.25, 3.2, 8)
+
+[sub_resource type="BoxMesh" id="RearSeal_mesh"]
+material = SubResource("graybox")
+size = Vector3(8, 3.2, 0.25)
+
+[sub_resource type="BoxShape3D" id="RearSeal_shape"]
+size = Vector3(8, 3.2, 0.25)
+
+[sub_resource type="BoxMesh" id="FrontLeft_mesh"]
+material = SubResource("graybox")
+size = Vector3(3.4, 3.2, 0.25)
+
+[sub_resource type="BoxShape3D" id="FrontLeft_shape"]
+size = Vector3(3.4, 3.2, 0.25)
+
+[sub_resource type="BoxMesh" id="FrontRight_mesh"]
+material = SubResource("graybox")
+size = Vector3(3.4, 3.2, 0.25)
+
+[sub_resource type="BoxShape3D" id="FrontRight_shape"]
+size = Vector3(3.4, 3.2, 0.25)
+
+[sub_resource type="BoxMesh" id="FrontLintel_mesh"]
+material = SubResource("graybox")
+size = Vector3(1.2, 0.8, 0.25)
+
+[sub_resource type="BoxShape3D" id="FrontLintel_shape"]
+size = Vector3(1.2, 0.8, 0.25)
+
+[sub_resource type="BoxMesh" id="Roof_mesh"]
+material = SubResource("graybox")
+size = Vector3(8, 0.2, 8)
+
+[sub_resource type="BoxShape3D" id="Roof_shape"]
+size = Vector3(8, 0.2, 8)
+
+[node name="bunker_entry" type="Node3D"]
+metadata/graybox = true
+metadata/finished_art = false
+metadata/footprint_m = Vector2(8, 8)
+metadata/height_m = 3.6
+metadata/ground_access = true
+metadata/upper_access = false
+
+[node name="Architecture" type="Node3D" parent="."]
+
+[node name="GroundFloor" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0, -0.1, 0)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/GroundFloor"]
+mesh = SubResource("GroundFloor_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/GroundFloor"]
+shape = SubResource("GroundFloor_shape")
+
+[node name="WestWall" type="StaticBody3D" parent="Architecture"]
+position = Vector3(-3.875, 1.6, 0)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/WestWall"]
+mesh = SubResource("WestWall_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/WestWall"]
+shape = SubResource("WestWall_shape")
+
+[node name="EastWall" type="StaticBody3D" parent="Architecture"]
+position = Vector3(3.875, 1.6, 0)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/EastWall"]
+mesh = SubResource("EastWall_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/EastWall"]
+shape = SubResource("EastWall_shape")
+
+[node name="RearSeal" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0, 1.6, 3.875)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/RearSeal"]
+mesh = SubResource("RearSeal_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/RearSeal"]
+shape = SubResource("RearSeal_shape")
+
+[node name="FrontLeft" type="StaticBody3D" parent="Architecture"]
+position = Vector3(-2.3, 1.6, -3.875)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/FrontLeft"]
+mesh = SubResource("FrontLeft_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/FrontLeft"]
+shape = SubResource("FrontLeft_shape")
+
+[node name="FrontRight" type="StaticBody3D" parent="Architecture"]
+position = Vector3(2.3, 1.6, -3.875)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/FrontRight"]
+mesh = SubResource("FrontRight_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/FrontRight"]
+shape = SubResource("FrontRight_shape")
+
+[node name="FrontLintel" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0, 2.8, -3.875)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/FrontLintel"]
+mesh = SubResource("FrontLintel_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/FrontLintel"]
+shape = SubResource("FrontLintel_shape")
+
+[node name="Roof" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0, 3.3, 0)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/Roof"]
+mesh = SubResource("Roof_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/Roof"]
+shape = SubResource("Roof_shape")
+
+[node name="Markers" type="Node3D" parent="."]
+
+[node name="GFEntry" type="Marker3D" parent="Markers"]
+position = Vector3(0, 0, -5.2)
+
+[node name="GFInterior" type="Marker3D" parent="Markers"]
+position = Vector3(0, 0, -2.8)
+
+[node name="DoorThreshold" type="Marker3D" parent="Markers"]
+position = Vector3(0, 0, -4)
+
+[node name="DeepRearSealed" type="Marker3D" parent="Markers"]
+position = Vector3(0, 0, 3.75)

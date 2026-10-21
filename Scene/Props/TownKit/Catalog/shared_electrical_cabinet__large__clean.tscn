@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/electrical_cabinet/assets/electrical_cabinet_large.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/electrical_cabinet/materials/town_electrical_cabinets_clean.tres" id="2_finish"]
+
+[node name="shared_electrical_cabinet__large" type="Node3D"]
+metadata/catalog_id = "shared_electrical_cabinet"
+metadata/catalog_variant = "large"
+metadata/finish = "clean"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="ElectricalCabinetLarge" parent="Model/TownElectricalCabinetLarge"]
+surface_material_override/0 = ExtResource("2_finish")

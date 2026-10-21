@@ -1,0 +1,47 @@
+BUNKER PROTOTYPE — MEASURED TOP-DOWN LAYOUT (2026-10-08, Asia/Saigon)
+
+Nguồn: res://Scene/Hideout/bunker_prototype_16x20.tscn
+Godot MCP xác nhận nested Cogito project / Godot 4.7 / Forward Plus.
+Extraction: SceneState + mesh/Shape3D/Animation resources, CACHE_MODE_IGNORE_DEEP.
+Không instantiate Node, open/save scene, play/stop, reimport, bake, settings hay thay editor resource.
+
+SHA256 scene trước và sau: e3125ac5c52762ba6f1cfa3e9a85b753a65074e1203b5dcb5e72dc61a49955c3
+Floor bounds X -8..8; Y -0.18..0.008; Z -20..0; actual floor 16 x 20 m.
+Wall visual/collision shell X -8.2..8.2; Z -20.200001..0.2; rounded 16.400 x 20.400 m.
+World origin (X,Z)=(0,0), north=-Z, east=+X, south=+Z. Grid 1 m.
+SVG scale 62 drawing px/m; resize-to-fit changes screen scale, not metre labels.
+
+Architecture: native mesh horizontal section at Y=1 m; actual gaps preserved.
+Room envelopes được lấy giữa mặt tường: west width 7.8 m / east 3.8 m; common/med 4 m,
+armory/workshop/provisions/service 7.8 m. Chưa trừ cột, furniture hoặc swing.
+Corridor inner faces X=0..4: 4.00 m. Rough doorway 1.40 m; fixed frame clear 1.20 m at Y1.
+D01 common, D02 armory, D03 workshop, D04 medbay, D05 provisions, D06 service, D07 entry.
+D01–06 imported clip +100deg local Y, edge pivot, swing vào phòng.
+D07 imported clip -100deg local Y, CENTRAL pivot at (2,0); hai đầu lá quét vào/ra shell.
+Solid doors show default authored CLOSED poses. Dashed arcs are mathematical clip sweeps,
+not a live open-door state or a proposed hinge correction.
+Stash steel row visual gap 0.90000m; west locker-to-wood-stash gap 1.02492m.
+
+Visual projection: transformed LOCAL mesh AABB corners, preserving full nested transforms,
+rotation and scale. Conservative hull per assembly; not exact triangle silhouette.
+Cyan outlines: resource collider projections; disabled imported stash helpers excluded.
+Collision projection can differ from visible hardware. Projections do NOT prove walkable
+clearance: tabletop supports/overhead parts project into the same plan. No player radius subtracted.
+Props small grouped G1–G6. Every furniture/door ID includes exact node paths in layout-data.json
+and SVG title elements. Architectural groups retain full node paths. Eight lockers and six
+stash models remain at their actual positions. No historical Common bench exists in current
+scene geometry; none was invented. Ceilings, beams/ducts/trays/lights and player omitted
+visually for readability; raw geometry included in scene-snapshot.json.
+Authored hidden coffee_jar__002 mesh is excluded from the visual plan; G3 records 23/24 visible.
+
+Verification: native extraction warnings0; SVG XML/JSON parse; floor bounds;7doors;
+6stash;8lockers; section loops close and stay convex; doorway widths; +/-100deg tracks;
+ID badge overlap self-check; source SHA256 unchanged. Final PNG rendered with existing sharp and visually inspected inline: labels, dimensions,
+legend and door sweeps legible. All 179 text bounds fit with no overlap (Arial metrics, 1px tolerance).
+validation.json records final QA; 113 scene/geometry resource hashes rechecked unchanged.
+No runtime physics/navmesh/traversal/interaction/save-state test performed; main chat owns runtime.
+
+Files: layout.svg (editable), layout.png (preview), layout-data.json (measured data),
+scene-snapshot.json (raw resources), read_scene_snapshot.gd (read-only MCP body),
+build_layout.py (offline vectors/self-checks), render_layout.cjs (existing sharp),
+validation.json (final QA receipt). .gdignore prevents design artifacts entering Godot imports.

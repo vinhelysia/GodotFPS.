@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/bunker_wall_phone/assets/bunker_wall_phone_mounted.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/bunker_wall_phone/materials/town_bunker_wall_phone_mounted_used.tres" id="2_finish"]
+
+[node name="bunker_wall_phone__mounted" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "bunker_wall_phone"
+metadata/catalog_variant = "mounted"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="WallPhone" parent="Model/TownBunkerWallPhone"]
+surface_material_override/0 = ExtResource("2_finish")

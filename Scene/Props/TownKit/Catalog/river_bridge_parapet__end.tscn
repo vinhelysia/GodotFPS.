@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/river_bridge_parapet/assets/river_bridge_parapet_end.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/river_bridge_parapet/materials/town_river_bridge_parapet_end_used.tres" id="2_finish"]
+
+[node name="river_bridge_parapet__end" type="Node3D"]
+metadata/catalog_id = "river_bridge_parapet"
+metadata/catalog_variant = "end"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="BridgeParapetEnd" parent="Model/TownBridgeParapetEnd"]
+surface_material_override/0 = ExtResource("2_finish")

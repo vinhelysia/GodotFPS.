@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/bunker_radio_cabinet/assets/bunker_radio_cabinet_with-controls.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/bunker_radio_cabinet/materials/town_bunker_radio_cabinet_with-controls_used.tres" id="2_finish"]
+
+[node name="bunker_radio_cabinet__with-controls" type="Node3D"]
+metadata/catalog_id = "bunker_radio_cabinet"
+metadata/catalog_variant = "with-controls"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="RadioCabinet" parent="Model/TownBunkerRadioCabinet"]
+surface_material_override/0 = ExtResource("2_finish")

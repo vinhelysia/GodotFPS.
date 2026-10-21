@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/bunker_breaker_panel/assets/bunker_breaker_panel_closed.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/bunker_breaker_panel/materials/town_bunker_breaker_panel_closed_used.tres" id="2_finish"]
+
+[node name="bunker_breaker_panel__closed" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "bunker_breaker_panel"
+metadata/catalog_variant = "closed"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="BreakerPanel" parent="Model/TownBunkerBreakerPanel"]
+surface_material_override/0 = ExtResource("2_finish")

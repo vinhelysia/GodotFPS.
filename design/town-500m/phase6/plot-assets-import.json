@@ -1,0 +1,36 @@
+{
+  "status": "SOURCE_HASH_VERIFIED_NATIVE_PENDING",
+  "wrapper": "res://Scene/Props/TownKit/Catalog/forest_birch_tree__A__late_autumn.tscn",
+  "unit_scale": [
+    1,
+    1,
+    1
+  ],
+  "files": [
+    {
+      "res_path": "res://Assets/Blender/TownKit/props/forest_birch_tree/assets/forest_birch_tree_A.glb",
+      "sha256": "457202bc34c249e43500d130d65c27b600c2c31bd6e5627c615becdcfcb09983",
+      "bytes": 1391436
+    },
+    {
+      "res_path": "res://Assets/Blender/TownKit/props/forest_birch_tree/materials/birch_young_late_autumn.tres",
+      "sha256": "9e89c28231851dd87a5a5fe7032f43cf2c338cc92f4d3671c49af7f4577b7b33",
+      "bytes": 670
+    },
+    {
+      "res_path": "res://Assets/Blender/TownKit/props/forest_birch_tree/textures/birch_young_late_autumn_albedo.png",
+      "sha256": "af6102b10d1ea5f92135b9d0fdb790fee01ce8c3742d2ddce460f0bdef3ca46f",
+      "bytes": 611478
+    },
+    {
+      "res_path": "res://Assets/Blender/TownKit/props/forest_birch_tree/textures/birch_young_late_autumn_orm.png",
+      "sha256": "7043b49f32054da6a3aa1c87bedc9dc6e9a98d18551f9b76d65ef2d270af94e6",
+      "bytes": 594493
+    },
+    {
+      "res_path": "res://Scene/Props/TownKit/Catalog/forest_birch_tree__A__late_autumn.tscn",
+      "sha256": "d522250d02df4ab97f2590ff9e9d6c34195e93d06f74f3ad4d10616804a4f86e",
+      "bytes": 792
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+[gd_scene load_steps=12 format=3]
+
+[sub_resource type="StandardMaterial3D" id="earth"]
+albedo_color = Color(0.36, 0.31, 0.25, 1)
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="BoxMesh" id="mesh_CountyWest"]
+size = Vector3(6, 5, 20)
+
+[sub_resource type="BoxShape3D" id="shape_CountyWest"]
+size = Vector3(6, 5, 20)
+
+[sub_resource type="BoxMesh" id="mesh_CountyEast"]
+size = Vector3(6, 5, 20)
+
+[sub_resource type="BoxShape3D" id="shape_CountyEast"]
+size = Vector3(6, 5, 20)
+
+[sub_resource type="BoxMesh" id="mesh_RailNorth"]
+size = Vector3(18, 5, 6)
+
+[sub_resource type="BoxShape3D" id="shape_RailNorth"]
+size = Vector3(18, 5, 6)
+
+[sub_resource type="BoxMesh" id="mesh_RailEast"]
+size = Vector3(6, 5, 18)
+
+[sub_resource type="BoxShape3D" id="shape_RailEast"]
+size = Vector3(6, 5, 18)
+
+[sub_resource type="BoxMesh" id="mesh_FarmSouth"]
+size = Vector3(16, 5, 6)
+
+[sub_resource type="BoxShape3D" id="shape_FarmSouth"]
+size = Vector3(16, 5, 6)
+
+[node name="RoadCollapses" type="Node3D"]
+
+[node name="CountyWest" type="StaticBody3D" parent="."]
+position = Vector3(-247, 4.5, 15)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Visual" type="MeshInstance3D" parent="CountyWest"]
+mesh = SubResource("mesh_CountyWest")
+material_override = SubResource("earth")
+
+[node name="Collision" type="CollisionShape3D" parent="CountyWest"]
+shape = SubResource("shape_CountyWest")
+
+[node name="CountyEast" type="StaticBody3D" parent="."]
+position = Vector3(247, 4.5, 0)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Visual" type="MeshInstance3D" parent="CountyEast"]
+mesh = SubResource("mesh_CountyEast")
+material_override = SubResource("earth")
+
+[node name="Collision" type="CollisionShape3D" parent="CountyEast"]
+shape = SubResource("shape_CountyEast")
+
+[node name="RailNorth" type="StaticBody3D" parent="."]
+position = Vector3(214.77, 4.5, -247)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Visual" type="MeshInstance3D" parent="RailNorth"]
+mesh = SubResource("mesh_RailNorth")
+material_override = SubResource("earth")
+
+[node name="Collision" type="CollisionShape3D" parent="RailNorth"]
+shape = SubResource("shape_RailNorth")
+
+[node name="RailEast" type="StaticBody3D" parent="."]
+position = Vector3(247, 4.5, 121.59)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Visual" type="MeshInstance3D" parent="RailEast"]
+mesh = SubResource("mesh_RailEast")
+material_override = SubResource("earth")
+
+[node name="Collision" type="CollisionShape3D" parent="RailEast"]
+shape = SubResource("shape_RailEast")
+
+[node name="FarmSouth" type="StaticBody3D" parent="."]
+position = Vector3(10.23, 4, 247)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Visual" type="MeshInstance3D" parent="FarmSouth"]
+mesh = SubResource("mesh_FarmSouth")
+material_override = SubResource("earth")
+
+[node name="Collision" type="CollisionShape3D" parent="FarmSouth"]
+shape = SubResource("shape_FarmSouth")

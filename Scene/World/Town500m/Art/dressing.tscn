@@ -1,0 +1,575 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Dressing/dressing.tscn" id="1"]
+
+[node name="Town500mDressing" instance=ExtResource("1")]
+
+[node name="C01_01" parent="HardCover" ]
+visible = false
+
+[node name="Shape" parent="HardCover/C01_01/Graybox/Body" ]
+disabled = true
+
+[node name="C01_02" parent="HardCover" ]
+visible = false
+
+[node name="Shape" parent="HardCover/C01_02/Graybox/Body" ]
+disabled = true
+
+[node name="F001" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F001/TrunkBody" ]
+disabled = true
+
+[node name="F002" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F002/TrunkBody" ]
+disabled = true
+
+[node name="F003" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F003/TrunkBody" ]
+disabled = true
+
+[node name="F004" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F004/TrunkBody" ]
+disabled = true
+
+[node name="F005" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F005/TrunkBody" ]
+disabled = true
+
+[node name="F006" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F006/TrunkBody" ]
+disabled = true
+
+[node name="F007" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F007/TrunkBody" ]
+disabled = true
+
+[node name="F008" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F008/TrunkBody" ]
+disabled = true
+
+[node name="F009" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F009/TrunkBody" ]
+disabled = true
+
+[node name="F010" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F010/TrunkBody" ]
+disabled = true
+
+[node name="F011" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F011/TrunkBody" ]
+disabled = true
+
+[node name="F012" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F012/TrunkBody" ]
+disabled = true
+
+[node name="F013" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F013/TrunkBody" ]
+disabled = true
+
+[node name="F014" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F014/TrunkBody" ]
+disabled = true
+
+[node name="F015" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F015/TrunkBody" ]
+disabled = true
+
+[node name="F016" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F016/TrunkBody" ]
+disabled = true
+
+[node name="F017" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F017/TrunkBody" ]
+disabled = true
+
+[node name="F018" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F018/TrunkBody" ]
+disabled = true
+
+[node name="F019" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F019/TrunkBody" ]
+disabled = true
+
+[node name="F020" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F020/TrunkBody" ]
+disabled = true
+
+[node name="F021" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F021/TrunkBody" ]
+disabled = true
+
+[node name="F022" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F022/TrunkBody" ]
+disabled = true
+
+[node name="F023" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F023/TrunkBody" ]
+disabled = true
+
+[node name="F024" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F024/TrunkBody" ]
+disabled = true
+
+[node name="F025" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F025/TrunkBody" ]
+disabled = true
+
+[node name="F026" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F026/TrunkBody" ]
+disabled = true
+
+[node name="F027" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F027/TrunkBody" ]
+disabled = true
+
+[node name="F028" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F028/TrunkBody" ]
+disabled = true
+
+[node name="F029" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F029/TrunkBody" ]
+disabled = true
+
+[node name="F030" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F030/TrunkBody" ]
+disabled = true
+
+[node name="F031" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F031/TrunkBody" ]
+disabled = true
+
+[node name="F032" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F032/TrunkBody" ]
+disabled = true
+
+[node name="F033" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F033/TrunkBody" ]
+disabled = true
+
+[node name="F034" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F034/TrunkBody" ]
+disabled = true
+
+[node name="F035" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F035/TrunkBody" ]
+disabled = true
+
+[node name="F036" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F036/TrunkBody" ]
+disabled = true
+
+[node name="F037" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F037/TrunkBody" ]
+disabled = true
+
+[node name="F038" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F038/TrunkBody" ]
+disabled = true
+
+[node name="F039" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F039/TrunkBody" ]
+disabled = true
+
+[node name="F040" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F040/TrunkBody" ]
+disabled = true
+
+[node name="F041" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F041/TrunkBody" ]
+disabled = true
+
+[node name="F042" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F042/TrunkBody" ]
+disabled = true
+
+[node name="F043" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F043/TrunkBody" ]
+disabled = true
+
+[node name="F044" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F044/TrunkBody" ]
+disabled = true
+
+[node name="F045" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F045/TrunkBody" ]
+disabled = true
+
+[node name="F046" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F046/TrunkBody" ]
+disabled = true
+
+[node name="F047" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F047/TrunkBody" ]
+disabled = true
+
+[node name="F048" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/F048/TrunkBody" ]
+disabled = true
+
+[node name="G001" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/G001/TrunkBody" ]
+disabled = true
+
+[node name="G002" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/G002/TrunkBody" ]
+disabled = true
+
+[node name="G003" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/G003/TrunkBody" ]
+disabled = true
+
+[node name="G004" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/G004/TrunkBody" ]
+disabled = true
+
+[node name="G005" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/G005/TrunkBody" ]
+disabled = true
+
+[node name="G006" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/G006/TrunkBody" ]
+disabled = true
+
+[node name="G007" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/G007/TrunkBody" ]
+disabled = true
+
+[node name="G008" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/G008/TrunkBody" ]
+disabled = true
+
+[node name="G009" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/G009/TrunkBody" ]
+disabled = true
+
+[node name="G010" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/G010/TrunkBody" ]
+disabled = true
+
+[node name="G011" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/G011/TrunkBody" ]
+disabled = true
+
+[node name="G012" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/G012/TrunkBody" ]
+disabled = true
+
+[node name="H001" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/H001/TrunkBody" ]
+disabled = true
+
+[node name="H002" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/H002/TrunkBody" ]
+disabled = true
+
+[node name="H003" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/H003/TrunkBody" ]
+disabled = true
+
+[node name="H004" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/H004/TrunkBody" ]
+disabled = true
+
+[node name="H005" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/H005/TrunkBody" ]
+disabled = true
+
+[node name="H006" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/H006/TrunkBody" ]
+disabled = true
+
+[node name="H007" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/H007/TrunkBody" ]
+disabled = true
+
+[node name="H008" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/H008/TrunkBody" ]
+disabled = true
+
+[node name="H009" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/H009/TrunkBody" ]
+disabled = true
+
+[node name="H010" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/H010/TrunkBody" ]
+disabled = true
+
+[node name="H011" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/H011/TrunkBody" ]
+disabled = true
+
+[node name="H012" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/H012/TrunkBody" ]
+disabled = true
+
+[node name="H013" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/H013/TrunkBody" ]
+disabled = true
+
+[node name="H014" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/H014/TrunkBody" ]
+disabled = true
+
+[node name="H015" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/H015/TrunkBody" ]
+disabled = true
+
+[node name="H016" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/H016/TrunkBody" ]
+disabled = true
+
+[node name="H017" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/H017/TrunkBody" ]
+disabled = true
+
+[node name="H018" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/H018/TrunkBody" ]
+disabled = true
+
+[node name="H019" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/H019/TrunkBody" ]
+disabled = true
+
+[node name="H020" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/H020/TrunkBody" ]
+disabled = true
+
+[node name="A001" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/A001/TrunkBody" ]
+disabled = true
+
+[node name="A002" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/A002/TrunkBody" ]
+disabled = true
+
+[node name="A003" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/A003/TrunkBody" ]
+disabled = true
+
+[node name="A004" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/A004/TrunkBody" ]
+disabled = true
+
+[node name="A005" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/A005/TrunkBody" ]
+disabled = true
+
+[node name="A006" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/A006/TrunkBody" ]
+disabled = true
+
+[node name="A007" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/A007/TrunkBody" ]
+disabled = true
+
+[node name="A008" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/A008/TrunkBody" ]
+disabled = true
+
+[node name="A009" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/A009/TrunkBody" ]
+disabled = true
+
+[node name="A010" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/A010/TrunkBody" ]
+disabled = true
+
+[node name="A011" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/A011/TrunkBody" ]
+disabled = true
+
+[node name="A012" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/A012/TrunkBody" ]
+disabled = true
+
+[node name="A013" parent="Concealment" ]
+visible = false
+
+[node name="Shape" parent="Concealment/A013/TrunkBody" ]
+disabled = true

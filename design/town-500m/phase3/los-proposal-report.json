@@ -1,0 +1,1922 @@
+{
+  "status": "2D PROXY PASS; NATIVE PENDING",
+  "spatial": {
+    "status": "PASS",
+    "errors": [],
+    "warnings": [
+      "Geometry covers straight swept polylines, solid footprint proxies and topology, not native terrain/collision, rounded corners, windows or full 3D visibility."
+    ],
+    "scope": "Offline Phase0 spatial checks only",
+    "counts": {
+      "source_objects": 53,
+      "town_plots": 12,
+      "town_structures": 32,
+      "all_structures": 76,
+      "town_ground_interiors": 15,
+      "town_upper_interiors": 4,
+      "bridges": 2,
+      "cover": 83,
+      "trees": 93
+    },
+    "minimum_building_gap_m": 1,
+    "minimum_structure_corridor_clearance_m": 0.5630755130394705,
+    "building_checks": [
+      {
+        "id": "T01-A",
+        "nearest_authored_corridor_clearance_m": 2.400000000000001
+      },
+      {
+        "id": "T01-B",
+        "nearest_authored_corridor_clearance_m": 15.158953888718907
+      },
+      {
+        "id": "T01-C",
+        "nearest_authored_corridor_clearance_m": 9.510322926640617
+      },
+      {
+        "id": "T02-A",
+        "nearest_authored_corridor_clearance_m": 2.4
+      },
+      {
+        "id": "T02-B",
+        "nearest_authored_corridor_clearance_m": 2.400000000000001
+      },
+      {
+        "id": "T02-C",
+        "nearest_authored_corridor_clearance_m": 12.549535307957669
+      },
+      {
+        "id": "T03-A",
+        "nearest_authored_corridor_clearance_m": 2.4
+      },
+      {
+        "id": "T03-B",
+        "nearest_authored_corridor_clearance_m": 18.544536507718565
+      },
+      {
+        "id": "T03-C",
+        "nearest_authored_corridor_clearance_m": 12.218307817702707
+      },
+      {
+        "id": "T04-A",
+        "nearest_authored_corridor_clearance_m": 2.4
+      },
+      {
+        "id": "T04-B",
+        "nearest_authored_corridor_clearance_m": 15.58302156766168
+      },
+      {
+        "id": "T05-A",
+        "nearest_authored_corridor_clearance_m": 2.3999999999999972
+      },
+      {
+        "id": "T05-B",
+        "nearest_authored_corridor_clearance_m": 13.1
+      },
+      {
+        "id": "T05-C",
+        "nearest_authored_corridor_clearance_m": 20.77233259250144
+      },
+      {
+        "id": "T06-A",
+        "nearest_authored_corridor_clearance_m": 7.460023923410741
+      },
+      {
+        "id": "T06-B",
+        "nearest_authored_corridor_clearance_m": 2.3999999999999972
+      },
+      {
+        "id": "T06-C",
+        "nearest_authored_corridor_clearance_m": 2.3999999999999972
+      },
+      {
+        "id": "T07-A",
+        "nearest_authored_corridor_clearance_m": 2.3999999999999972
+      },
+      {
+        "id": "T07-B",
+        "nearest_authored_corridor_clearance_m": 2.3999999999999972
+      },
+      {
+        "id": "T07-C",
+        "nearest_authored_corridor_clearance_m": 25.63469426995533
+      },
+      {
+        "id": "T08-A",
+        "nearest_authored_corridor_clearance_m": 2.3999999999999972
+      },
+      {
+        "id": "T08-B",
+        "nearest_authored_corridor_clearance_m": 11.609999999999996
+      },
+      {
+        "id": "T09-A",
+        "nearest_authored_corridor_clearance_m": 42.476714563651896
+      },
+      {
+        "id": "T09-B",
+        "nearest_authored_corridor_clearance_m": 36.11308338453881
+      },
+      {
+        "id": "T10-A",
+        "nearest_authored_corridor_clearance_m": 3.064826271458265
+      },
+      {
+        "id": "T10-B",
+        "nearest_authored_corridor_clearance_m": 6.60732975164938
+      },
+      {
+        "id": "T10-C",
+        "nearest_authored_corridor_clearance_m": 0.5630755130394705
+      },
+      {
+        "id": "T11-A",
+        "nearest_authored_corridor_clearance_m": 2.4000000000000115
+      },
+      {
+        "id": "T11-B",
+        "nearest_authored_corridor_clearance_m": 2.4000000000000115
+      },
+      {
+        "id": "T11-C",
+        "nearest_authored_corridor_clearance_m": 15.400000000000011
+      },
+      {
+        "id": "T12-A",
+        "nearest_authored_corridor_clearance_m": 2.3999999999999946
+      },
+      {
+        "id": "T12-B",
+        "nearest_authored_corridor_clearance_m": 8.301778656667452
+      },
+      {
+        "id": "I01-A",
+        "nearest_authored_corridor_clearance_m": 2.4000000000000044
+      },
+      {
+        "id": "I02-A",
+        "nearest_authored_corridor_clearance_m": 1.25
+      },
+      {
+        "id": "I05-A",
+        "nearest_authored_corridor_clearance_m": 2.3999999999999972
+      },
+      {
+        "id": "I07-A",
+        "nearest_authored_corridor_clearance_m": 29.465934861288236
+      },
+      {
+        "id": "B01-A",
+        "nearest_authored_corridor_clearance_m": 32.75
+      },
+      {
+        "id": "B02-A",
+        "nearest_authored_corridor_clearance_m": 48.40000000000001
+      },
+      {
+        "id": "B03-A",
+        "nearest_authored_corridor_clearance_m": 38.6623264910414
+      },
+      {
+        "id": "B05-A",
+        "nearest_authored_corridor_clearance_m": 25.75
+      },
+      {
+        "id": "B06-A",
+        "nearest_authored_corridor_clearance_m": 3.82999999999999
+      },
+      {
+        "id": "F01-A",
+        "nearest_authored_corridor_clearance_m": 16.88477631085024
+      },
+      {
+        "id": "F02-A",
+        "nearest_authored_corridor_clearance_m": 19.5
+      },
+      {
+        "id": "F02-B",
+        "nearest_authored_corridor_clearance_m": 29.806548835666955
+      },
+      {
+        "id": "A01-A",
+        "nearest_authored_corridor_clearance_m": 2.327708763999667
+      },
+      {
+        "id": "A02-A",
+        "nearest_authored_corridor_clearance_m": 15.436768346279505
+      },
+      {
+        "id": "A04-A",
+        "nearest_authored_corridor_clearance_m": 6.75
+      },
+      {
+        "id": "A05-A",
+        "nearest_authored_corridor_clearance_m": 3.088924267617056
+      },
+      {
+        "id": "A06-A",
+        "nearest_authored_corridor_clearance_m": 2.399999999999983
+      },
+      {
+        "id": "A07-A",
+        "nearest_authored_corridor_clearance_m": 2.3999999999999972
+      },
+      {
+        "id": "A08-A",
+        "nearest_authored_corridor_clearance_m": 43.10616521803956
+      },
+      {
+        "id": "L01-A",
+        "nearest_authored_corridor_clearance_m": 0.7094059774546483
+      },
+      {
+        "id": "L02-A",
+        "nearest_authored_corridor_clearance_m": 2.7322609641235194
+      },
+      {
+        "id": "L04-A",
+        "nearest_authored_corridor_clearance_m": 2.6402000344234464
+      },
+      {
+        "id": "I03-A",
+        "nearest_authored_corridor_clearance_m": 3.5
+      },
+      {
+        "id": "I03-B",
+        "nearest_authored_corridor_clearance_m": 3.5
+      },
+      {
+        "id": "I03-C",
+        "nearest_authored_corridor_clearance_m": 3.5
+      },
+      {
+        "id": "I04-A",
+        "nearest_authored_corridor_clearance_m": 8.969999999999999
+      },
+      {
+        "id": "I04-B",
+        "nearest_authored_corridor_clearance_m": 11.124460320950297
+      },
+      {
+        "id": "I04-C",
+        "nearest_authored_corridor_clearance_m": 5.106511207298941
+      },
+      {
+        "id": "I06-A",
+        "nearest_authored_corridor_clearance_m": 20.42708546246941
+      },
+      {
+        "id": "I06-B",
+        "nearest_authored_corridor_clearance_m": 28.3938627112415
+      },
+      {
+        "id": "I06-C",
+        "nearest_authored_corridor_clearance_m": 27.14652468574945
+      },
+      {
+        "id": "I08-A",
+        "nearest_authored_corridor_clearance_m": 2.5700000000000003
+      },
+      {
+        "id": "I09-A",
+        "nearest_authored_corridor_clearance_m": 43.57199298369041
+      },
+      {
+        "id": "B04-ENTRY",
+        "nearest_authored_corridor_clearance_m": 2.4000000000000115
+      },
+      {
+        "id": "B07-A",
+        "nearest_authored_corridor_clearance_m": 8.75
+      },
+      {
+        "id": "B08-A",
+        "nearest_authored_corridor_clearance_m": 52.23778872784378
+      },
+      {
+        "id": "H01-A",
+        "nearest_authored_corridor_clearance_m": 6.148422381313737
+      },
+      {
+        "id": "H02-A",
+        "nearest_authored_corridor_clearance_m": 9.330518093956961
+      },
+      {
+        "id": "H03-A",
+        "nearest_authored_corridor_clearance_m": 10.191372295314919
+      },
+      {
+        "id": "H04-A",
+        "nearest_authored_corridor_clearance_m": 0.9499999999999886
+      },
+      {
+        "id": "F03-A",
+        "nearest_authored_corridor_clearance_m": 50.600863716449076
+      },
+      {
+        "id": "F04-A",
+        "nearest_authored_corridor_clearance_m": 3.0999999999999943
+      },
+      {
+        "id": "A03-A",
+        "nearest_authored_corridor_clearance_m": 4.25
+      },
+      {
+        "id": "A09-A",
+        "nearest_authored_corridor_clearance_m": 57.69218115109841
+      }
+    ],
+    "corridor_checks": [
+      {
+        "id": "P01",
+        "length_m": 528.7319461216604,
+        "maximum_grade_percent": 3.0239721203459036
+      },
+      {
+        "id": "P02",
+        "length_m": 128.1097228315425,
+        "maximum_grade_percent": 7.709989661114147
+      },
+      {
+        "id": "P03",
+        "length_m": 95.08504356997845,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "P04",
+        "length_m": 402.6216669478625,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "P05",
+        "length_m": 149.88340306689196,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "P06",
+        "length_m": 160.29219497095244,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "P07",
+        "length_m": 383.26198524343295,
+        "maximum_grade_percent": 1.5811388300841895
+      },
+      {
+        "id": "P08",
+        "length_m": 158.1531351550308,
+        "maximum_grade_percent": 12.840286952831557
+      },
+      {
+        "id": "P09",
+        "length_m": 113.10648160289887,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "P10",
+        "length_m": 206.5526456464908,
+        "maximum_grade_percent": 2.1256348146113284
+      },
+      {
+        "id": "P11",
+        "length_m": 219.28861070921852,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "P12",
+        "length_m": 215.5973090551912,
+        "maximum_grade_percent": 8.033213701541579
+      },
+      {
+        "id": "BUNKER_ENTRY",
+        "length_m": 26.16680300307746,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "GR_G01",
+        "length_m": 96.81,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "GR_G02",
+        "length_m": 50.39942956026389,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "GR_G03",
+        "length_m": 90,
+        "maximum_grade_percent": 0.5555555555555556
+      },
+      {
+        "id": "GR_G04",
+        "length_m": 141.1706522266046,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "GR_G05",
+        "length_m": 125.91214998317861,
+        "maximum_grade_percent": 0.794204530804689
+      },
+      {
+        "id": "GR_G07",
+        "length_m": 33.06908794799381,
+        "maximum_grade_percent": 3.0239721203459036
+      },
+      {
+        "id": "GR_G08",
+        "length_m": 50,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "GR_G09",
+        "length_m": 93.7192053948155,
+        "maximum_grade_percent": 0.9525959825318502
+      },
+      {
+        "id": "GR_G10",
+        "length_m": 23.522384774800788,
+        "maximum_grade_percent": 2.1256348146113284
+      },
+      {
+        "id": "GR_G12",
+        "length_m": 63.31105522924828,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "GR_G13",
+        "length_m": 181.3255518715132,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "GR_G14",
+        "length_m": 201.9364333719197,
+        "maximum_grade_percent": 1.5811388300841895
+      },
+      {
+        "id": "GR_G15",
+        "length_m": 99.0675489595078,
+        "maximum_grade_percent": 1.0004492225201038
+      },
+      {
+        "id": "GR_G16",
+        "length_m": 113.10648160289887,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "GR_G17",
+        "length_m": 219.28861070921852,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "GR_G18",
+        "length_m": 128.1097228315425,
+        "maximum_grade_percent": 7.709989661114147
+      },
+      {
+        "id": "GR_G19",
+        "length_m": 178.26237921249265,
+        "maximum_grade_percent": 10
+      },
+      {
+        "id": "GR_G20",
+        "length_m": 115.67999999999999,
+        "maximum_grade_percent": 1.1732957878681216
+      },
+      {
+        "id": "GR_G21",
+        "length_m": 99.91730905519118,
+        "maximum_grade_percent": 8.033213701541579
+      },
+      {
+        "id": "GR_G22",
+        "length_m": 74.59315535752722,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "TOWN_ALLEY_N",
+        "length_m": 19.143751296981044,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "TOWN_EAST_N",
+        "length_m": 8.181540224335977,
+        "maximum_grade_percent": 8.128428917492451
+      },
+      {
+        "id": "TOWN_ALLEY_S",
+        "length_m": 41.677208399795674,
+        "maximum_grade_percent": 1.1996964748782246
+      },
+      {
+        "id": "TOWN_EAST_S",
+        "length_m": 54.587635962734275,
+        "maximum_grade_percent": 0.9159583322885396
+      },
+      {
+        "id": "ACCESS_T01-A",
+        "length_m": 29.032341899497094,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_T02-A",
+        "length_m": 22.304414555676086,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_T02-B",
+        "length_m": 26.911582193292645,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_T03-A",
+        "length_m": 15.727437351634114,
+        "maximum_grade_percent": 0.9388905913606513
+      },
+      {
+        "id": "ACCESS_T04-A",
+        "length_m": 26.952341971155093,
+        "maximum_grade_percent": 1.9545902502991805
+      },
+      {
+        "id": "ACCESS_T05-A",
+        "length_m": 29.55881175280044,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_T06-B",
+        "length_m": 47.31718714776243,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_T06-C",
+        "length_m": 10.770000000000003,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_T07-A",
+        "length_m": 15.93,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_T07-B",
+        "length_m": 41.23,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_T08-A",
+        "length_m": 24.909999999999997,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_T10-C",
+        "length_m": 7.780180174615236,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_T11-A",
+        "length_m": 22.2384928258425,
+        "maximum_grade_percent": 1.6549462932727819
+      },
+      {
+        "id": "ACCESS_T11-B",
+        "length_m": 23.639715793535174,
+        "maximum_grade_percent": 1.8266599891852549
+      },
+      {
+        "id": "ACCESS_T12-A",
+        "length_m": 20.909999999999997,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_I01-A",
+        "length_m": 48.18000000000001,
+        "maximum_grade_percent": 2.0755500207555
+      },
+      {
+        "id": "ACCESS_I02-A",
+        "length_m": 71.29021514145695,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_I05-A",
+        "length_m": 29.549999999999997,
+        "maximum_grade_percent": 1.6920473773265654
+      },
+      {
+        "id": "ACCESS_A01-A",
+        "length_m": 6.574039853849377,
+        "maximum_grade_percent": 1.9839121938854893
+      },
+      {
+        "id": "ACCESS_A06-A",
+        "length_m": 6.895834892172505,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_A07-A",
+        "length_m": 21.345831637626272,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_L01-A",
+        "length_m": 11.903136343039591,
+        "maximum_grade_percent": 4.200573576495888
+      },
+      {
+        "id": "ACCESS_B04-ENTRY",
+        "length_m": 0,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "P04_SERVICE_BYPASS",
+        "length_m": 48.8211915673694,
+        "maximum_grade_percent": 0
+      }
+    ],
+    "marker_checks": [
+      {
+        "id": "S1",
+        "water_clearance_m": 319.75360553113467
+      },
+      {
+        "id": "S2",
+        "water_clearance_m": 284.4877531789912
+      },
+      {
+        "id": "E-A",
+        "water_clearance_m": 191.83353246627198
+      },
+      {
+        "id": "E-B",
+        "water_clearance_m": 165.25330677478138
+      },
+      {
+        "id": "E-C",
+        "water_clearance_m": 2.1119572158499653
+      },
+      {
+        "id": "E-D",
+        "water_clearance_m": 243.11510082016204
+      }
+    ],
+    "bridge_checks": [
+      {
+        "id": "R01",
+        "water_gap_m": 20.955778,
+        "deck_length_m": 32.955778,
+        "clear_width_m": 8
+      },
+      {
+        "id": "R02",
+        "water_gap_m": 20,
+        "deck_length_m": 26,
+        "clear_width_m": 2.5
+      }
+    ],
+    "graph_checks": [
+      {
+        "id": "G01",
+        "length_m": 96.81,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "G02",
+        "length_m": 50.39942956026389,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "G03",
+        "length_m": 90,
+        "maximum_grade_percent": 0.5555555555555556
+      },
+      {
+        "id": "G04",
+        "length_m": 141.1706522266046,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "G05",
+        "length_m": 125.91214998317861,
+        "maximum_grade_percent": 0.794204530804689
+      },
+      {
+        "id": "G06",
+        "length_m": 32.95578935387238,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "G07",
+        "length_m": 33.06908794799381,
+        "maximum_grade_percent": 3.0239721203459036
+      },
+      {
+        "id": "G08",
+        "length_m": 50,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "G09",
+        "length_m": 93.7192053948155,
+        "maximum_grade_percent": 0.9525959825318502
+      },
+      {
+        "id": "G10",
+        "length_m": 23.522384774800788,
+        "maximum_grade_percent": 2.1256348146113284
+      },
+      {
+        "id": "G11",
+        "length_m": 26.000000247626197,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "G12",
+        "length_m": 63.31105522924828,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "G13",
+        "length_m": 181.3255518715132,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "G14",
+        "length_m": 201.9364333719197,
+        "maximum_grade_percent": 1.5811388300841895
+      },
+      {
+        "id": "G15",
+        "length_m": 99.0675489595078,
+        "maximum_grade_percent": 1.0004492225201038
+      },
+      {
+        "id": "G16",
+        "length_m": 113.10648160289887,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "G17",
+        "length_m": 219.28861070921852,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "G18",
+        "length_m": 128.1097228315425,
+        "maximum_grade_percent": 7.709989661114147
+      },
+      {
+        "id": "G19",
+        "length_m": 178.26237921249265,
+        "maximum_grade_percent": 10
+      },
+      {
+        "id": "G20",
+        "length_m": 115.67999999999999,
+        "maximum_grade_percent": 1.1732957878681216
+      },
+      {
+        "id": "G21",
+        "length_m": 99.91730905519118,
+        "maximum_grade_percent": 8.033213701541579
+      },
+      {
+        "id": "G22",
+        "length_m": 74.59315535752722,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "G23",
+        "length_m": 26,
+        "maximum_grade_percent": 0
+      }
+    ],
+    "access_checks": [
+      {
+        "id": "ACCESS_T01-A",
+        "length_m": 29.032341899497094,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_T02-A",
+        "length_m": 22.304414555676086,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_T02-B",
+        "length_m": 26.911582193292645,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_T03-A",
+        "length_m": 15.727437351634114,
+        "maximum_grade_percent": 0.9388905913606513
+      },
+      {
+        "id": "ACCESS_T04-A",
+        "length_m": 26.952341971155093,
+        "maximum_grade_percent": 1.9545902502991805
+      },
+      {
+        "id": "ACCESS_T05-A",
+        "length_m": 29.55881175280044,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_T06-B",
+        "length_m": 47.31718714776243,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_T06-C",
+        "length_m": 10.770000000000003,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_T07-A",
+        "length_m": 15.93,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_T07-B",
+        "length_m": 41.23,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_T08-A",
+        "length_m": 24.909999999999997,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_T10-C",
+        "length_m": 7.780180174615236,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_T11-A",
+        "length_m": 22.2384928258425,
+        "maximum_grade_percent": 1.6549462932727819
+      },
+      {
+        "id": "ACCESS_T11-B",
+        "length_m": 23.639715793535174,
+        "maximum_grade_percent": 1.8266599891852549
+      },
+      {
+        "id": "ACCESS_T12-A",
+        "length_m": 20.909999999999997,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_I01-A",
+        "length_m": 48.18000000000001,
+        "maximum_grade_percent": 2.0755500207555
+      },
+      {
+        "id": "ACCESS_I02-A",
+        "length_m": 71.29021514145695,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_I05-A",
+        "length_m": 29.549999999999997,
+        "maximum_grade_percent": 1.6920473773265654
+      },
+      {
+        "id": "ACCESS_A01-A",
+        "length_m": 6.574039853849377,
+        "maximum_grade_percent": 1.9839121938854893
+      },
+      {
+        "id": "ACCESS_A06-A",
+        "length_m": 6.895834892172505,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_A07-A",
+        "length_m": 21.345831637626272,
+        "maximum_grade_percent": 0
+      },
+      {
+        "id": "ACCESS_L01-A",
+        "length_m": 11.903136343039591,
+        "maximum_grade_percent": 4.200573576495888
+      },
+      {
+        "id": "ACCESS_B04-ENTRY",
+        "length_m": 0,
+        "maximum_grade_percent": 0
+      }
+    ],
+    "routes": [
+      {
+        "from": "S1",
+        "to": "E_A",
+        "route": {
+          "length_m": 786.469731245015,
+          "edge_ids": [
+            "G01",
+            "G03",
+            "G04",
+            "G08",
+            "G09",
+            "G10",
+            "G11",
+            "G12",
+            "G14"
+          ]
+        },
+        "without_R01": {
+          "length_m": 786.469731245015,
+          "edge_ids": [
+            "G01",
+            "G03",
+            "G04",
+            "G08",
+            "G09",
+            "G10",
+            "G11",
+            "G12",
+            "G14"
+          ]
+        },
+        "without_R02": {
+          "length_m": 870.1105768070886,
+          "edge_ids": [
+            "G01",
+            "G03",
+            "G04",
+            "G05",
+            "G06",
+            "G13",
+            "G14"
+          ]
+        },
+        "without_both": null
+      },
+      {
+        "from": "S1",
+        "to": "E_B",
+        "route": {
+          "length_m": 316.0986107092185,
+          "edge_ids": [
+            "G01",
+            "G17"
+          ]
+        },
+        "without_R01": {
+          "length_m": 316.0986107092185,
+          "edge_ids": [
+            "G01",
+            "G17"
+          ]
+        },
+        "without_R02": {
+          "length_m": 316.0986107092185,
+          "edge_ids": [
+            "G01",
+            "G17"
+          ]
+        },
+        "without_both": {
+          "length_m": 316.0986107092185,
+          "edge_ids": [
+            "G01",
+            "G17"
+          ]
+        }
+      },
+      {
+        "from": "S1",
+        "to": "E_C",
+        "route": {
+          "length_m": 732.091710074056,
+          "edge_ids": [
+            "G01",
+            "G03",
+            "G04",
+            "G05",
+            "G06",
+            "G07",
+            "G15",
+            "G16"
+          ]
+        },
+        "without_R01": {
+          "length_m": 1011.1019682550091,
+          "edge_ids": [
+            "G01",
+            "G03",
+            "G04",
+            "G08",
+            "G09",
+            "G10",
+            "G11",
+            "G12",
+            "G13",
+            "G07",
+            "G15",
+            "G16"
+          ]
+        },
+        "without_R02": {
+          "length_m": 732.091710074056,
+          "edge_ids": [
+            "G01",
+            "G03",
+            "G04",
+            "G05",
+            "G06",
+            "G07",
+            "G15",
+            "G16"
+          ]
+        },
+        "without_both": null
+      },
+      {
+        "from": "S1",
+        "to": "E_D",
+        "route": {
+          "length_m": 464.98968826768385,
+          "edge_ids": [
+            "G01",
+            "G03",
+            "G19",
+            "G21"
+          ]
+        },
+        "without_R01": {
+          "length_m": 464.98968826768385,
+          "edge_ids": [
+            "G01",
+            "G03",
+            "G19",
+            "G21"
+          ]
+        },
+        "without_R02": {
+          "length_m": 464.98968826768385,
+          "edge_ids": [
+            "G01",
+            "G03",
+            "G19",
+            "G21"
+          ]
+        },
+        "without_both": {
+          "length_m": 464.98968826768385,
+          "edge_ids": [
+            "G01",
+            "G03",
+            "G19",
+            "G21"
+          ]
+        }
+      },
+      {
+        "from": "S2",
+        "to": "E_A",
+        "route": {
+          "length_m": 650.0591608052789,
+          "edge_ids": [
+            "G02",
+            "G04",
+            "G08",
+            "G09",
+            "G10",
+            "G11",
+            "G12",
+            "G14"
+          ]
+        },
+        "without_R01": {
+          "length_m": 650.0591608052789,
+          "edge_ids": [
+            "G02",
+            "G04",
+            "G08",
+            "G09",
+            "G10",
+            "G11",
+            "G12",
+            "G14"
+          ]
+        },
+        "without_R02": {
+          "length_m": 733.7000063673524,
+          "edge_ids": [
+            "G02",
+            "G04",
+            "G05",
+            "G06",
+            "G13",
+            "G14"
+          ]
+        },
+        "without_both": null
+      },
+      {
+        "from": "S2",
+        "to": "E_B",
+        "route": {
+          "length_m": 359.68804026948237,
+          "edge_ids": [
+            "G02",
+            "G03",
+            "G17"
+          ]
+        },
+        "without_R01": {
+          "length_m": 359.68804026948237,
+          "edge_ids": [
+            "G02",
+            "G03",
+            "G17"
+          ]
+        },
+        "without_R02": {
+          "length_m": 359.68804026948237,
+          "edge_ids": [
+            "G02",
+            "G03",
+            "G17"
+          ]
+        },
+        "without_both": {
+          "length_m": 359.68804026948237,
+          "edge_ids": [
+            "G02",
+            "G03",
+            "G17"
+          ]
+        }
+      },
+      {
+        "from": "S2",
+        "to": "E_C",
+        "route": {
+          "length_m": 595.68113963432,
+          "edge_ids": [
+            "G02",
+            "G04",
+            "G05",
+            "G06",
+            "G07",
+            "G15",
+            "G16"
+          ]
+        },
+        "without_R01": {
+          "length_m": 874.6913978152729,
+          "edge_ids": [
+            "G02",
+            "G04",
+            "G08",
+            "G09",
+            "G10",
+            "G11",
+            "G12",
+            "G13",
+            "G07",
+            "G15",
+            "G16"
+          ]
+        },
+        "without_R02": {
+          "length_m": 595.68113963432,
+          "edge_ids": [
+            "G02",
+            "G04",
+            "G05",
+            "G06",
+            "G07",
+            "G15",
+            "G16"
+          ]
+        },
+        "without_both": null
+      },
+      {
+        "from": "S2",
+        "to": "E_D",
+        "route": {
+          "length_m": 328.5791178279477,
+          "edge_ids": [
+            "G02",
+            "G19",
+            "G21"
+          ]
+        },
+        "without_R01": {
+          "length_m": 328.5791178279477,
+          "edge_ids": [
+            "G02",
+            "G19",
+            "G21"
+          ]
+        },
+        "without_R02": {
+          "length_m": 328.5791178279477,
+          "edge_ids": [
+            "G02",
+            "G19",
+            "G21"
+          ]
+        },
+        "without_both": {
+          "length_m": 328.5791178279477,
+          "edge_ids": [
+            "G02",
+            "G19",
+            "G21"
+          ]
+        }
+      }
+    ],
+    "native_verified": false
+  },
+  "groups": {
+    "COUNTY_W": {
+      "status": "PASS",
+      "limit_m": 200,
+      "conservative_upper_bound_m": 98.02869153775367,
+      "method": "Whole path length plus width bound"
+    },
+    "P03": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 98.58504356997845,
+      "method": "Whole path length plus width bound"
+    },
+    "P09": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 115.60648160289887,
+      "method": "Whole path length plus width bound"
+    },
+    "BUNKER_ENTRY": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 27.966803003077462,
+      "method": "Whole path length plus width bound"
+    },
+    "TOWN_ALLEY_N": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 21.643751296981044,
+      "method": "Whole path length plus width bound"
+    },
+    "TOWN_EAST_N": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 10.681540224335977,
+      "method": "Whole path length plus width bound"
+    },
+    "TOWN_ALLEY_S": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 44.177208399795674,
+      "method": "Whole path length plus width bound"
+    },
+    "TOWN_EAST_S": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 57.087635962734275,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_T01-A": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 30.832341899497095,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_T02-A": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 24.104414555676087,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_T02-B": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 28.711582193292646,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_T03-A": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 17.527437351634113,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_T04-A": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 28.752341971155094,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_T05-A": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 31.35881175280044,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_T06-B": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 49.11718714776243,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_T06-C": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 12.570000000000004,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_T07-A": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 17.73,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_T07-B": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 43.029999999999994,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_T08-A": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 26.709999999999997,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_T10-C": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 9.580180174615236,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_T11-A": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 24.0384928258425,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_T11-B": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 25.439715793535175,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_T12-A": {
+      "status": "PASS",
+      "limit_m": 80,
+      "conservative_upper_bound_m": 22.709999999999997,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_I01-A": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 49.980000000000004,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_I02-A": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 73.09021514145695,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_I05-A": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 31.349999999999998,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_A01-A": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 8.374039853849377,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_A06-A": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 8.695834892172504,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_A07-A": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 23.145831637626273,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_L01-A": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 13.703136343039592,
+      "method": "Whole path length plus width bound"
+    },
+    "ACCESS_B04-ENTRY": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 1.8,
+      "method": "Whole path length plus width bound"
+    },
+    "P04_SERVICE_BYPASS": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 51.3211915673694,
+      "method": "Whole path length plus width bound"
+    },
+    "ROUTE_G01": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 99.31,
+      "method": "Whole path length plus width bound"
+    },
+    "ROUTE_G02": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 52.89942956026389,
+      "method": "Whole path length plus width bound"
+    },
+    "ROUTE_G03": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 92.5,
+      "method": "Whole path length plus width bound"
+    },
+    "ROUTE_G04": {
+      "status": "PASS",
+      "limit_m": 200,
+      "conservative_upper_bound_m": 143.6706522266046,
+      "method": "Whole path length plus width bound"
+    },
+    "ROUTE_G15": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 101.5675489595078,
+      "method": "Whole path length plus width bound"
+    },
+    "ROUTE_G20": {
+      "status": "PASS",
+      "limit_m": 120,
+      "conservative_upper_bound_m": 118.17999999999999,
+      "method": "Whole path length plus width bound"
+    },
+    "M": {
+      "limit_m": 150,
+      "status": "PASS",
+      "measured_max_m": 141.56613995024128,
+      "conservative_upper_bound_m": 142.83408047963417,
+      "witness_endpoints_xz": [
+        [
+          -100.264832620693,
+          10.752229823460919
+        ],
+        [
+          40.52579320259118,
+          25.549920883193206
+        ]
+      ],
+      "witness_angle_deg": 6,
+      "roads": [
+        "M:0",
+        "M:1"
+      ],
+      "evaluated_lines": 119210,
+      "bound_evaluated_lines": 874711,
+      "bound_erosion_m": 0.08793504669133675
+    },
+    "COUNTY_E": {
+      "limit_m": 200,
+      "status": "PASS",
+      "measured_max_m": 138.4538232734576,
+      "conservative_upper_bound_m": 138.88017912207937,
+      "witness_endpoints_xz": [
+        [
+          169.9878974973752,
+          -11.999999967443184
+        ],
+        [
+          39.07723572957604,
+          33.07615575323372
+        ]
+      ],
+      "witness_angle_deg": 161.00000000000003,
+      "roads": [
+        "COUNTY_E:0",
+        "COUNTY_E:1",
+        "COUNTY_E:2",
+        "COUNTY_E:3",
+        "COUNTY_E:4",
+        "COUNTY_E:5",
+        "COUNTY_E:6"
+      ],
+      "evaluated_lines": 200344,
+      "bound_evaluated_lines": 983106,
+      "bound_erosion_m": 0.09390977917988448
+    },
+    "P02": {
+      "limit_m": 120,
+      "status": "PASS",
+      "measured_max_m": 115.29231534451709,
+      "conservative_upper_bound_m": 115.42813629706342,
+      "witness_endpoints_xz": [
+        [
+          -141.7699999277554,
+          -120.44999979243862
+        ],
+        [
+          -58.477519514123934,
+          -40.73374872627026
+        ]
+      ],
+      "witness_angle_deg": 43.74319625967025,
+      "roads": [
+        "P02:0",
+        "P02:1",
+        "P02:2",
+        "P02:3"
+      ],
+      "evaluated_lines": 88354,
+      "bound_evaluated_lines": 564423,
+      "bound_erosion_m": 0.0508908942351792
+    },
+    "P04": {
+      "limit_m": 200,
+      "status": "PASS",
+      "measured_max_m": 188.79227992883318,
+      "conservative_upper_bound_m": 189.13740302267806,
+      "witness_endpoints_xz": [
+        [
+          217.26999989379948,
+          -249.99999990018134
+        ],
+        [
+          205.90679013729851,
+          -61.5500000998187
+        ]
+      ],
+      "witness_angle_deg": 93.45065860696627,
+      "roads": [
+        "P04:0",
+        "P04:1",
+        "P04:2",
+        "P04:3",
+        "P04:4"
+      ],
+      "evaluated_lines": 195064,
+      "bound_evaluated_lines": 1189669,
+      "bound_erosion_m": 0.1649134484805035
+    },
+    "P05": {
+      "limit_m": 80,
+      "status": "PASS",
+      "measured_max_m": 73.75094430776791,
+      "conservative_upper_bound_m": 73.98545170231543,
+      "witness_endpoints_xz": [
+        [
+          -80.00071332947255,
+          30.77019127640155
+        ],
+        [
+          -60.33982602981334,
+          101.8521953060966
+        ]
+      ],
+      "witness_angle_deg": 74.53885154925982,
+      "roads": [
+        "P05:0",
+        "P05:1",
+        "P05:2",
+        "P05:3"
+      ],
+      "evaluated_lines": 110584,
+      "bound_evaluated_lines": 708795,
+      "bound_erosion_m": 0.054099945932609236
+    },
+    "P06": {
+      "limit_m": 80,
+      "status": "PASS",
+      "measured_max_m": 78.19511809052143,
+      "conservative_upper_bound_m": 79.18536731456544,
+      "witness_endpoints_xz": [
+        [
+          50.9999999798095,
+          81.5975365047082
+        ],
+        [
+          35.21201429848744,
+          158.1822347238496
+        ]
+      ],
+      "witness_angle_deg": 101.64838066985732,
+      "roads": [
+        "P06:0",
+        "P06:1",
+        "P06:2",
+        "P06:3",
+        "P06:4",
+        "P06:5",
+        "P06:6"
+      ],
+      "evaluated_lines": 155186,
+      "bound_evaluated_lines": 811386,
+      "bound_erosion_m": 0.056332888329159635
+    },
+    "P07": {
+      "limit_m": 120,
+      "status": "PASS",
+      "measured_max_m": 119.31429728053601,
+      "conservative_upper_bound_m": 119.69688298577591,
+      "witness_endpoints_xz": [
+        [
+          237.3971998066639,
+          -235.32280005337094
+        ],
+        [
+          141.8220793007084,
+          -163.89942939768005
+        ]
+      ],
+      "witness_angle_deg": 143.22920587567177,
+      "roads": [
+        "P07:0",
+        "P07:1",
+        "P07:2",
+        "P07:3",
+        "P07:4",
+        "P07:5",
+        "P07:6",
+        "P07:7",
+        "P07:8",
+        "P07:9",
+        "P07:10",
+        "P07:11"
+      ],
+      "evaluated_lines": 550872,
+      "bound_evaluated_lines": 1776369,
+      "bound_erosion_m": 0.13018765210958752
+    },
+    "P08": {
+      "limit_m": 120,
+      "status": "PASS",
+      "measured_max_m": 114.29016575551606,
+      "conservative_upper_bound_m": 118.67831381002777,
+      "witness_endpoints_xz": [
+        [
+          -24.281855164499788,
+          -192.47004122682708
+        ],
+        [
+          -83.14564211637177,
+          -94.5042483493744
+        ]
+      ],
+      "witness_angle_deg": 121,
+      "roads": [
+        "P08:0",
+        "P08:1",
+        "P08:2"
+      ],
+      "evaluated_lines": 100886,
+      "bound_evaluated_lines": 683022,
+      "bound_erosion_m": 0.06321570340649871
+    },
+    "P10": {
+      "limit_m": 120,
+      "status": "PASS",
+      "measured_max_m": 114.19184147057213,
+      "conservative_upper_bound_m": 114.83066474814757,
+      "witness_endpoints_xz": [
+        [
+          107.79176951350495,
+          -119.53369442363518
+        ],
+        [
+          20.315743905449906,
+          -46.13259359906188
+        ]
+      ],
+      "witness_angle_deg": 140,
+      "roads": [
+        "P10:0",
+        "P10:1",
+        "P10:2",
+        "P10:3",
+        "P10:4",
+        "P10:5"
+      ],
+      "evaluated_lines": 158460,
+      "bound_evaluated_lines": 881226,
+      "bound_erosion_m": 0.08149425846672394
+    },
+    "P11": {
+      "limit_m": 120,
+      "status": "PASS",
+      "measured_max_m": 109.12297075984856,
+      "conservative_upper_bound_m": 109.83573660778569,
+      "witness_endpoints_xz": [
+        [
+          -165.9439400887222,
+          181.75000003506608
+        ],
+        [
+          -63.75000009365025,
+          220.01514573893604
+        ]
+      ],
+      "witness_angle_deg": 20.527736500425522,
+      "roads": [
+        "P11:0",
+        "P11:1",
+        "P11:2",
+        "P11:3",
+        "P11:4",
+        "P11:5",
+        "P11:6",
+        "P11:7"
+      ],
+      "evaluated_lines": 191008,
+      "bound_evaluated_lines": 944740,
+      "bound_erosion_m": 0.07500116790124231
+    },
+    "P12": {
+      "limit_m": 120,
+      "status": "PASS",
+      "measured_max_m": 117.6642492922818,
+      "conservative_upper_bound_m": 118.25391595496843,
+      "witness_endpoints_xz": [
+        [
+          -231.15212365430307,
+          -231.0515297798634
+        ],
+        [
+          -221.9202930553349,
+          -113.75000009969173
+        ]
+      ],
+      "witness_angle_deg": 85.5,
+      "roads": [
+        "P12:0",
+        "P12:1",
+        "P12:2",
+        "P12:3",
+        "P12:4"
+      ],
+      "evaluated_lines": 127334,
+      "bound_evaluated_lines": 718105,
+      "bound_erosion_m": 0.06828996980045583
+    },
+    "ROUTE_G19": {
+      "limit_m": 120,
+      "status": "PASS",
+      "measured_max_m": 117.10504226220779,
+      "conservative_upper_bound_m": 118.38530211545367,
+      "witness_endpoints_xz": [
+        [
+          -226.15648706655705,
+          -139.99999990024358
+        ],
+        [
+          -217.9876522606887,
+          -23.18021963530772
+        ]
+      ],
+      "witness_angle_deg": 86.00000000000001,
+      "roads": [
+        "ROUTE_G19:0",
+        "ROUTE_G19:1",
+        "ROUTE_G19:2",
+        "ROUTE_G19:3"
+      ],
+      "evaluated_lines": 90900,
+      "bound_evaluated_lines": 640398,
+      "bound_erosion_m": 0.07618559669408986
+    }
+  },
+  "scope": "2D same-group road-envelope endpoints (carriageway + sidewalks), arbitrary connecting angles through open space; straight design rectangles; no global off-road endpoints or 3D camera/nav proof",
+  "method": "Analytic line/rotated-rectangle intersections and all offset topology events per sampled angle. Lower value is a clear witnessed segment, not the exhaustive maximum. Upper uses road expansion/blocker erosion by R*sin(half angle step), then divides by cos(half angle step); this bounds every unsampled direction in the stated proxy model.",
+  "blockers": {
+    "count": 106,
+    "building_footprints": 75,
+    "solid_fence_segments": 0,
+    "vehicles_or_wrecks": 0,
+    "barriers": 31,
+    "ids": [
+      "T01-A",
+      "T01-B",
+      "T01-C",
+      "T02-A",
+      "T02-B",
+      "T02-C",
+      "T03-A",
+      "T03-B",
+      "T03-C",
+      "T04-A",
+      "T04-B",
+      "T05-A",
+      "T05-B",
+      "T05-C",
+      "T06-A",
+      "T06-B",
+      "T06-C",
+      "T07-A",
+      "T07-B",
+      "T07-C",
+      "T08-A",
+      "T08-B",
+      "T09-A",
+      "T09-B",
+      "T10-A",
+      "T10-B",
+      "T10-C",
+      "T11-A",
+      "T11-B",
+      "T11-C",
+      "T12-A",
+      "T12-B",
+      "I01-A",
+      "I02-A",
+      "I05-A",
+      "I07-A",
+      "B01-A",
+      "B02-A",
+      "B03-A",
+      "B05-A",
+      "B06-A",
+      "F01-A",
+      "F02-A",
+      "F02-B",
+      "A01-A",
+      "A02-A",
+      "A04-A",
+      "A05-A",
+      "A06-A",
+      "A07-A",
+      "A08-A",
+      "L01-A",
+      "L02-A",
+      "L04-A",
+      "I03-A",
+      "I03-B",
+      "I03-C",
+      "I04-A",
+      "I04-B",
+      "I04-C",
+      "I06-A",
+      "I06-B",
+      "I06-C",
+      "I08-A",
+      "I09-A",
+      "B04-ENTRY",
+      "B07-A",
+      "B08-A",
+      "H01-A",
+      "H02-A",
+      "H03-A",
+      "H04-A",
+      "F03-A",
+      "A03-A",
+      "A09-A",
+      "C05-01",
+      "C05-02",
+      "C05-03",
+      "C05-04",
+      "C05-05",
+      "C05-06",
+      "C05-07",
+      "C05-08",
+      "C05-09",
+      "C05-10",
+      "C05-11",
+      "C05-12",
+      "LOS_M_RETURN",
+      "LOS_COUNTY_E_SCREEN",
+      "LOS_P05_RETURN",
+      "LOS_P06_RETURN",
+      "LOS_P07_YARD",
+      "LOS_P08_ROCK",
+      "LOS_P10_ROCK",
+      "LOS_P11_TRAILER",
+      "LOS_P12_PANEL",
+      "LOS_P05_KIOSK_RETURN",
+      "LOS_P07_ROCK",
+      "LOS_P12_ROCK",
+      "LOS_P12_YARD_RETURN",
+      "LOS_P04_FREIGHT",
+      "LOS_P07_GRANITE_RETURN",
+      "LOS_P11_PROPERTY_RETURN",
+      "LOS_P11_FIELD_CORNER",
+      "LOS_P12_INNER_WEST_PANEL",
+      "LOS_P12_ROCK_ABUTMENT"
+    ],
+    "excludes": "trees, terrain, wire/mesh fences; obstacles without opaque:true; fences/vehicles/barriers <2m"
+  },
+  "native_verified": false,
+  "source_sha256": {
+    "layout.json": "3eaf13391a1fd9781a20bb179bab8f60c88a9a4a14384f8a738b3b7539aab81b",
+    "dressing-proposal.json": "432134c590483a2b2de08ac0c8a735f907d0f49ce8146eb37d3e6a5279e36d79"
+  }
+}

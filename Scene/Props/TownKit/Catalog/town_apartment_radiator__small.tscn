@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/apartment_radiator/assets/apartment_radiator_small.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/apartment_radiator/materials/town_apartment_radiator_small_used.tres" id="2_finish"]
+
+[node name="town_apartment_radiator__small" type="Node3D"]
+metadata/catalog_id = "town_apartment_radiator"
+metadata/catalog_variant = "small"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="RadiatorSmall" parent="Model/TownRadiatorSmall"]
+surface_material_override/0 = ExtResource("2_finish")

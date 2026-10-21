@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/wood_post_sign/assets/wood_post_sign_direction.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/wood_post_sign/materials/town_wood_post_sign_direction_used.tres" id="2_finish"]
+
+[node name="shared_wood_post_sign__direction" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "shared_wood_post_sign"
+metadata/catalog_variant = "direction"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="WoodPostSignDirection" parent="Model/TownWoodPostSignDirection"]
+surface_material_override/0 = ExtResource("2_finish")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/rail_tank_wagon/assets/rail_tank_wagon_plain.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/rail_tank_wagon/materials/town_rail_tank_wagon_plain_used.tres" id="2_finish"]
+
+[node name="industry_rail_tank_wagon__plain" type="Node3D"]
+metadata/catalog_id = "industry_rail_tank_wagon"
+metadata/catalog_variant = "plain"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="RailTankWagonPlain" parent="Model/TownRailTankWagonPlain"]
+surface_material_override/0 = ExtResource("2_finish")

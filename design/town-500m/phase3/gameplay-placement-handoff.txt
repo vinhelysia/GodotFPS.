@@ -1,0 +1,33 @@
+Town500m Phase3 gameplay relocation proposal
+
+Consume gameplay-placement-proposal.json. Change origins only, preserve every
+parent/name/subtree/basis/scale/resource/signal. Keep Props/Loot, OuterDetail,
+TownExpansion/IndustrialArchitecture/CivicArchitecture/NightLighting identity
+parents after retiring old building roots; they still own Persist children.
+
+Props/Crate5 and GunLocker -> T08-A garage sides. Pickup_M700 -> T08-A floor;
+Pickup_usp -> T04-A shop. Industrial two provisions -> T11-A workshop;
+civic two -> T04-A. Four exact provision parent/name paths remain unchanged.
+15 DayNightCycle references remain:13streetlamp assemblies beside county
+road/P05/P06;2compound spotlights below garage/workshop ceilings. GarageLamp
+keeps OuterDetail path/1.5scale and sits.4m below T08-A ceiling.
+Three Scav roots/loadout/profile/BT/patrol paths stay intact; canonical XZ and
+12waypoints use terrain.heightAtY. Native capsule bottom0 plus.05settle.
+No added actors, pickups or behavior.
+
+FloorY=canonical pad+.2, confirmed native floor local top0. Weapon/crate
+rootY derives from transformed native collider corners and existing basis;
+locker minY0 from nested1.2*.01 scales. Provisions collider bottom0 plus.02
+settle. JSON holds exact poses, height evidence, source hashes and limits.
+
+Native walking helpers:
+ tests/bunker_prototype_regression.gd:87 _walk_to(player,destination)
+ tests/town_expansion_regression.gd:245 _walk_to_floor(player,target)
+ tests/town_expansion_regression.gd:311 _navigation_reaches(map,start,target)
+ tests/town500_terrain_regression.gd:470 _walk(target,label)
+Combine navigation query with real controller walking for acceptance.
+
+No Town/script/canonical edit or editor/runtime operation performed.
+Native contacts/interactions/patrol/nav/night verification is primary-owned.
+Reconcile new dressing screens/fences with lamp bases before applying.
+Legacy spatial saves remain incompatible; no user-save migration/deletion.

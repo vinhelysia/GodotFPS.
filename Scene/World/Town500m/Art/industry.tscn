@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/POI/industry.tscn" id="1"]
+
+[node name="industry" instance=ExtResource("1")]
+
+[node name="I04-A" parent="." ]
+visible = false
+
+[node name="Collision" parent="I04-A/Architecture/SolidShell" ]
+disabled = true
+
+[node name="I04-B" parent="." ]
+visible = false
+
+[node name="Collision" parent="I04-B/Architecture/SolidShell" ]
+disabled = true
+
+[node name="I04-C" parent="." ]
+visible = false
+
+[node name="Collision" parent="I04-C/Architecture/SolidShell" ]
+disabled = true
+
+[node name="I06-A" parent="." ]
+visible = false
+
+[node name="Collision" parent="I06-A/Architecture/SolidShell" ]
+disabled = true
+
+[node name="I06-B" parent="." ]
+visible = false
+
+[node name="Collision" parent="I06-B/Architecture/SolidShell" ]
+disabled = true
+
+[node name="I06-C" parent="." ]
+visible = false
+
+[node name="Collision" parent="I06-C/Architecture/SolidShell" ]
+disabled = true
+
+[node name="I08-A" parent="." ]
+visible = false
+
+[node name="Collision" parent="I08-A/Architecture/SolidShell" ]
+disabled = true
+
+[node name="I09-A" parent="." ]
+visible = false
+
+[node name="Collision" parent="I09-A/Architecture/SolidShell" ]
+disabled = true

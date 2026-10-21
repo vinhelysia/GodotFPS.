@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/river_bridge_support/assets/river_bridge_support_pier.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/river_bridge_support/materials/town_river_bridge_support_pier_used.tres" id="2_finish"]
+
+[node name="river_bridge_support__pier" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "river_bridge_support"
+metadata/catalog_variant = "pier"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="BridgeSupportPier" parent="Model/TownBridgeSupportPier"]
+surface_material_override/0 = ExtResource("2_finish")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/concrete_rubble/assets/concrete_rubble_small.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/concrete_rubble/materials/town_concrete_rubble_used.tres" id="2_finish"]
+
+[node name="shared_concrete_rubble__small" type="Node3D"]
+metadata/catalog_id = "shared_concrete_rubble"
+metadata/catalog_variant = "small"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="ConcreteRubbleSmall" parent="Model/TownConcreteRubbleSmall"]
+surface_material_override/0 = ExtResource("2_finish")

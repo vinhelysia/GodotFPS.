@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3]
+
+[ext_resource type="Shader" path="res://Scene/World/Town500m/Art/TerrainPilot/ground_blend.gdshader" id="1_shader"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Grass/Grass_001_COLOR.jpg" id="2_grass"]
+
+[resource]
+resource_name = "Apartment plot ground with original shore outside"
+shader = ExtResource("1_shader")
+shader_parameter/grass_texture = ExtResource("2_grass")
+shader_parameter/original_color = Color(0.48, 0.44, 0.36, 1)

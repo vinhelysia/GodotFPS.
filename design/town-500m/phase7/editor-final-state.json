@@ -1,0 +1,22 @@
+{
+  "console_scope": "Final rendered receipts have no shader/runtime script failure. Nonfatal compiler/Jolt warnings remain; editor automation diagnostics are recorded separately, not hidden by a zero-error claim.",
+  "editor_scene": "res://Scene/Town.tscn",
+  "navigation_debug_overlay": true,
+  "open_scenes": [
+    "res://Scene/Hideout/stash_hub.tscn",
+    "res://Scene/Town.tscn",
+    "res://Scene/World/Town500m/terrain_payload.tscn"
+  ],
+  "playing": false,
+  "project": "C:/Stuff/godot-fps-cogito-master/godot-fps-cogito-master/",
+  "run_args": "",
+  "shader_sha256": "53b0747b7952f2810ab030787547dbd5d0b260bb7504b77308fd5190c32457ba",
+  "unsaved": [],
+  "scanning": false,
+  "visible_modal_windows": [],
+  "editor_only_diagnostics": [
+    "Post-reload/artifact import emitted progress_dialog reentrancy errors; import finished and no modal remained.",
+    "Editor reload logged invalid node path Scope; completed final native game logs had no such failure. Not investigated as a weapon gameplay bug in this visual pass.",
+    "Raw Image file loading warnings are editor-only comparison-artifact operations, not exported gameplay."
+  ]
+}

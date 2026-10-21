@@ -1,0 +1,29 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Props/town.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Props/industry.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Props/bunker.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Props/hills.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Props/forest.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Props/farmland.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Props/river.tscn" id="7"]
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Props/lake.tscn" id="8"]
+
+[node name="Town500Props" type="Node3D"]
+metadata/placement_plan = "res://design/town-500m/phase5/placement-plan.json"
+
+[node name="town" parent="." instance=ExtResource("1")]
+
+[node name="industry" parent="." instance=ExtResource("2")]
+
+[node name="bunker" parent="." instance=ExtResource("3")]
+
+[node name="hills" parent="." instance=ExtResource("4")]
+
+[node name="forest" parent="." instance=ExtResource("5")]
+
+[node name="farmland" parent="." instance=ExtResource("6")]
+
+[node name="river" parent="." instance=ExtResource("7")]
+
+[node name="lake" parent="." instance=ExtResource("8")]

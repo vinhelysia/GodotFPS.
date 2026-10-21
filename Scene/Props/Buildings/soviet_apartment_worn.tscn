@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/Buildings/SovietApartmentWorn/soviet_apartment_block_01_overgrown.glb" id="1_model"]
+
+[node name="SovietApartmentWorn" type="Node3D"]
+metadata/source_revision = "v5_visual_correction"
+metadata/appearance_profile = "worn"
+metadata/source_glb_sha256 = "f3b7f6d5352223684504fd388c4c03b6d7abb8e1f1a60268d3e8f58a4620b0b3"
+metadata/import_contract = "Metres; root/model unit transform; embedded materials; preserve Building-colonly as static concave collision"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]

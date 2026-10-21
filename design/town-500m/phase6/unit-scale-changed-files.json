@@ -1,0 +1,27 @@
+{
+  "snapshot": "C:\\Stuff\\godot-fps-cogito-master\\.agent-snapshots\\town500_unit_scale_20261020",
+  "changed_files": [
+    "design/town-500m/phase5/author-placement.cjs",
+    "design/town-500m/phase5/check-placement.cjs",
+    "design/town-500m/phase5/contact-adjustments.json",
+    "design/town-500m/phase5/HANDOFF.md",
+    "design/town-500m/phase5/outer-placement.json",
+    "design/town-500m/phase5/outer-plan.cjs",
+    "design/town-500m/phase5/placement-check.json",
+    "design/town-500m/phase5/placement-coordinates.csv",
+    "design/town-500m/phase5/placement-map.svg",
+    "design/town-500m/phase5/placement-plan.json",
+    "design/town-500m/phase5/placement-plan.txt",
+    "design/town-500m/phase5/review-placement.cjs",
+    "design/town-500m/phase5/town-industry-placement.json",
+    "design/town-500m/phase5/town-industry-plan.cjs",
+    "Scene/World/Town500m/Art/dressing.tscn",
+    "Scene/World/Town500m/Props/farmland.tscn",
+    "Scene/World/Town500m/Props/forest.tscn",
+    "Scene/World/Town500m/Props/hills.tscn",
+    "Scene/World/Town500m/Props/industry.tscn",
+    "Scene/World/Town500m/Props/lake.tscn",
+    "Scene/World/Town500m/Props/town.tscn",
+    "tests/town500_props_capture_regression.gd"
+  ]
+}

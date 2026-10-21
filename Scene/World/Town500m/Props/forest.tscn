@@ -1,0 +1,640 @@
+[gd_scene load_steps=21 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/forest_pine_tree__C.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/forest_spruce_tree__C.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/forest_birch_tree__B.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/forest_tarp_camp__intact.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/forest_ranger_shelter_props__cot.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/forest_ranger_shelter_props__table.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/forest_ranger_shelter_props__shelf.tscn" id="7"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/forest_campfire_ring__ash.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/forest_tree_stump__old.tscn" id="9"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/forest_fallen_log__short.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wooden_crate__small__visual.tscn" id="11"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/forest_undergrowth__A__visual.tscn" id="12"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/forest_undergrowth__B__visual.tscn" id="13"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/forest_small_forest_debris__A__visual.tscn" id="14"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/forest_small_forest_debris__C__visual.tscn" id="15"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/forest_forest_trail_sign__painted.tscn" id="16"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/forest_logging_trailer__loaded.tscn" id="17"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/forest_log_stack__long.tscn" id="18"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/forest_log_stack__short.tscn" id="19"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_timber_stack__boards.tscn" id="20"]
+
+[node name="forest" type="Node3D"]
+
+[node name="OT-F001" parent="." instance=ExtResource("1")]
+position = Vector3(83.75, 2.005, -158.75)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F001"
+metadata/catalog_id = "forest_pine_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F002" parent="." instance=ExtResource("2")]
+position = Vector3(87.95, 2.005, -112.05)
+rotation = Vector3(0, 0.820305, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F002"
+metadata/catalog_id = "forest_spruce_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F003" parent="." instance=ExtResource("3")]
+position = Vector3(187.73, 3.005, -240)
+rotation = Vector3(0, 1.640609, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F003"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F004" parent="." instance=ExtResource("1")]
+position = Vector3(92.16, 2.198617, -131.02)
+rotation = Vector3(0, 2.460914, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F004"
+metadata/catalog_id = "forest_pine_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F005" parent="." instance=ExtResource("2")]
+position = Vector3(96.93, 2.672057, -235.11)
+rotation = Vector3(0, 3.281219, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F005"
+metadata/catalog_id = "forest_spruce_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F006" parent="." instance=ExtResource("3")]
+position = Vector3(84.09, 2.005, -67.27)
+rotation = Vector3(0, 4.101524, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F006"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F007" parent="." instance=ExtResource("1")]
+position = Vector3(79.32, 2.005, -244.43)
+rotation = Vector3(0, 4.921828, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F007"
+metadata/catalog_id = "forest_pine_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F008" parent="." instance=ExtResource("2")]
+position = Vector3(114.89, 3.005, -240.11)
+rotation = Vector3(0, 5.742133, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F008"
+metadata/catalog_id = "forest_spruce_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F009" parent="." instance=ExtResource("3")]
+position = Vector3(99.89, 2.963072, -197.84)
+rotation = Vector3(0, 0.279253, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F009"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F010" parent="." instance=ExtResource("1")]
+position = Vector3(73.07, 2.056043, -135.45)
+rotation = Vector3(0, 1.099557, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F010"
+metadata/catalog_id = "forest_pine_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F011" parent="." instance=ExtResource("2")]
+position = Vector3(185, 2.691252, -199.43)
+rotation = Vector3(0, 1.919862, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F011"
+metadata/catalog_id = "forest_spruce_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F012" parent="." instance=ExtResource("3")]
+position = Vector3(138.52, 3.005, -184.89)
+rotation = Vector3(0, 2.740167, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F012"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F013" parent="." instance=ExtResource("1")]
+position = Vector3(134.77, 3.005, -237.73)
+rotation = Vector3(0, 3.560472, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F013"
+metadata/catalog_id = "forest_pine_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F014" parent="." instance=ExtResource("2")]
+position = Vector3(101.59, 3.005, -216.7)
+rotation = Vector3(0, 4.380776, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F014"
+metadata/catalog_id = "forest_spruce_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F015" parent="." instance=ExtResource("3")]
+position = Vector3(111.48, 3.005, -164.32)
+rotation = Vector3(0, 5.201081, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F015"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F016" parent="." instance=ExtResource("1")]
+position = Vector3(99.2, 2.89718, -185.45)
+rotation = Vector3(0, 6.021386, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F016"
+metadata/catalog_id = "forest_pine_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F017" parent="." instance=ExtResource("2")]
+position = Vector3(79.77, 2.005, -118.75)
+rotation = Vector3(0, 0.558505, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F017"
+metadata/catalog_id = "forest_spruce_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F018" parent="." instance=ExtResource("3")]
+position = Vector3(158.41, 3.005, -132.5)
+rotation = Vector3(0, 1.37881, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F018"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F019" parent="." instance=ExtResource("1")]
+position = Vector3(60.34, 2.17651, -212.61)
+rotation = Vector3(0, 2.199115, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F019"
+metadata/catalog_id = "forest_pine_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F020" parent="." instance=ExtResource("2")]
+position = Vector3(159.89, 3.005, -179.2)
+rotation = Vector3(0, 3.01942, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F020"
+metadata/catalog_id = "forest_spruce_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F021" parent="." instance=ExtResource("3")]
+position = Vector3(49.77, 3.005, -126.02)
+rotation = Vector3(0, 3.839724, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F021"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F022" parent="." instance=ExtResource("1")]
+position = Vector3(228.41, 3.005, -213.86)
+rotation = Vector3(0, 4.660029, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F022"
+metadata/catalog_id = "forest_pine_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F023" parent="." instance=ExtResource("2")]
+position = Vector3(200.57, 3.000391, -193.07)
+rotation = Vector3(0, 5.480334, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F023"
+metadata/catalog_id = "forest_spruce_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F024" parent="." instance=ExtResource("3")]
+position = Vector3(236.93, 3.005, -211.02)
+rotation = Vector3(0, 0.017453, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F024"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F025" parent="." instance=ExtResource("1")]
+position = Vector3(76.93, 2.032331, -169.89)
+rotation = Vector3(0, 0.837758, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F025"
+metadata/catalog_id = "forest_pine_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F026" parent="." instance=ExtResource("2")]
+position = Vector3(173.98, 3.005, -230.45)
+rotation = Vector3(0, 1.658063, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F026"
+metadata/catalog_id = "forest_spruce_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F027" parent="." instance=ExtResource("3")]
+position = Vector3(184.43, 3.005, -182.16)
+rotation = Vector3(0, 2.478368, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F027"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F028" parent="." instance=ExtResource("1")]
+position = Vector3(78.98, 2.008779, -186.14)
+rotation = Vector3(0, 3.298672, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F028"
+metadata/catalog_id = "forest_pine_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F029" parent="." instance=ExtResource("2")]
+position = Vector3(158.41, 3.005, -207.39)
+rotation = Vector3(0, 4.118977, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F029"
+metadata/catalog_id = "forest_spruce_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F030" parent="." instance=ExtResource("3")]
+position = Vector3(63.86, 2.017936, -222.95)
+rotation = Vector3(0, 4.939282, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F030"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F031" parent="." instance=ExtResource("1")]
+position = Vector3(41.7, 3.005, -236.7)
+rotation = Vector3(0, 5.759587, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F031"
+metadata/catalog_id = "forest_pine_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F032" parent="." instance=ExtResource("2")]
+position = Vector3(127.05, 3.005, -232.16)
+rotation = Vector3(0, 0.296706, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F032"
+metadata/catalog_id = "forest_spruce_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F033" parent="." instance=ExtResource("3")]
+position = Vector3(51.7, 3.242012, -195)
+rotation = Vector3(0, 1.117011, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F033"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F034" parent="." instance=ExtResource("1")]
+position = Vector3(157.16, 3.005, -233.64)
+rotation = Vector3(0, 1.937315, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F034"
+metadata/catalog_id = "forest_pine_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F035" parent="." instance=ExtResource("2")]
+position = Vector3(133.64, 3.005, -130.91)
+rotation = Vector3(0, 2.75762, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F035"
+metadata/catalog_id = "forest_spruce_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F036" parent="." instance=ExtResource("3")]
+position = Vector3(148.3, 3.005, -194.55)
+rotation = Vector3(0, 3.577925, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F036"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F037" parent="." instance=ExtResource("1")]
+position = Vector3(67.84, 2.087216, -202.61)
+rotation = Vector3(0, 4.39823, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F037"
+metadata/catalog_id = "forest_pine_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F038" parent="." instance=ExtResource("2")]
+position = Vector3(54.2, 3.440504, -176.25)
+rotation = Vector3(0, 5.218534, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F038"
+metadata/catalog_id = "forest_spruce_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F039" parent="." instance=ExtResource("3")]
+position = Vector3(159.09, 3.005, -223.64)
+rotation = Vector3(0, 6.038839, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F039"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F040" parent="." instance=ExtResource("1")]
+position = Vector3(103.18, 3.005, -163.3)
+rotation = Vector3(0, 0.575959, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F040"
+metadata/catalog_id = "forest_pine_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F041" parent="." instance=ExtResource("2")]
+position = Vector3(60.91, 2.785054, -152.16)
+rotation = Vector3(0, 1.396263, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F041"
+metadata/catalog_id = "forest_spruce_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F042" parent="." instance=ExtResource("3")]
+position = Vector3(90.45, 2.030637, -202.84)
+rotation = Vector3(0, 2.216568, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F042"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F043" parent="." instance=ExtResource("1")]
+position = Vector3(223.41, 3.005, -135)
+rotation = Vector3(0, 3.036873, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F043"
+metadata/catalog_id = "forest_pine_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F044" parent="." instance=ExtResource("2")]
+position = Vector3(146.36, 3.005, -170.91)
+rotation = Vector3(0, 3.857178, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F044"
+metadata/catalog_id = "forest_spruce_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F045" parent="." instance=ExtResource("3")]
+position = Vector3(110.77, 3.005, -103.98)
+rotation = Vector3(0, 4.677482, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F045"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F046" parent="." instance=ExtResource("1")]
+position = Vector3(201.7, 3.005, -130)
+rotation = Vector3(0, 5.497787, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F046"
+metadata/catalog_id = "forest_pine_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F047" parent="." instance=ExtResource("2")]
+position = Vector3(92.65, 2.728707, -102.5)
+rotation = Vector3(0, 0.034907, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F047"
+metadata/catalog_id = "forest_spruce_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-F048" parent="." instance=ExtResource("3")]
+position = Vector3(160.68, 3.005, -193.64)
+rotation = Vector3(0, 0.855211, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-F048"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-G001" parent="." instance=ExtResource("1")]
+position = Vector3(116.672, 2.568321, -62.815)
+rotation = Vector3(0, 1.675516, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-G001"
+metadata/catalog_id = "forest_pine_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-G002" parent="." instance=ExtResource("2")]
+position = Vector3(93.18, 2.03314, -79.66)
+rotation = Vector3(0, 2.495821, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-G002"
+metadata/catalog_id = "forest_spruce_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-G003" parent="." instance=ExtResource("3")]
+position = Vector3(108.18, 2.005, 6.02)
+rotation = Vector3(0, 3.316126, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-G003"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-G004" parent="." instance=ExtResource("1")]
+position = Vector3(94.118, 3.005, -100.595)
+rotation = Vector3(0, 4.13643, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-G004"
+metadata/catalog_id = "forest_pine_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-G005" parent="." instance=ExtResource("2")]
+position = Vector3(80.45, 2.005, -101.93)
+rotation = Vector3(0, 4.956735, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-G005"
+metadata/catalog_id = "forest_spruce_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-G006" parent="." instance=ExtResource("3")]
+position = Vector3(108.75, 2.005, 55.57)
+rotation = Vector3(0, 5.77704, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-G006"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-G007" parent="." instance=ExtResource("1")]
+position = Vector3(102.535, 2.982988, -88.382)
+rotation = Vector3(0, 0.314159, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-G007"
+metadata/catalog_id = "forest_pine_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-G008" parent="." instance=ExtResource("2")]
+position = Vector3(112.84, 2.080998, 75.8)
+rotation = Vector3(0, 1.134464, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-G008"
+metadata/catalog_id = "forest_spruce_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-G009" parent="." instance=ExtResource("3")]
+position = Vector3(87.05, 2.005, -57.84)
+rotation = Vector3(0, 1.954769, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-G009"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-G010" parent="." instance=ExtResource("1")]
+position = Vector3(81.14, 2.005, -91.25)
+rotation = Vector3(0, 2.775074, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-G010"
+metadata/catalog_id = "forest_pine_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-G011" parent="." instance=ExtResource("2")]
+position = Vector3(109.77, 2.005, 46.93)
+rotation = Vector3(0, 3.595378, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-G011"
+metadata/catalog_id = "forest_spruce_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-G012" parent="." instance=ExtResource("3")]
+position = Vector3(112.16, 3.005, -112.05)
+rotation = Vector3(0, 4.415683, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-G012"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OF-tarp" parent="." instance=ExtResource("4")]
+position = Vector3(117, 3, -178)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OF-tarp"
+metadata/catalog_id = "forest_tarp_camp"
+metadata/role = "Ranger rest canopy in F01 southern yard"
+
+[node name="OF-cot" parent="." instance=ExtResource("5")]
+position = Vector3(115.9, 3, -178)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OF-cot"
+metadata/catalog_id = "forest_ranger_shelter_props"
+metadata/role = "Camp cot under west edge of tarp"
+
+[node name="OF-table" parent="." instance=ExtResource("6")]
+position = Vector3(118.1, 3, -178)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OF-table"
+metadata/catalog_id = "forest_ranger_shelter_props"
+metadata/role = "Ranger field table under east edge of tarp"
+
+[node name="OF-shelf" parent="." instance=ExtResource("7")]
+position = Vector3(118.2, 3, -179.15)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OF-shelf"
+metadata/catalog_id = "forest_ranger_shelter_props"
+metadata/role = "Small supply shelf below tarp rear edge"
+
+[node name="OF-fire" parent="." instance=ExtResource("8")]
+position = Vector3(121.5, 3, -174)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OF-fire"
+metadata/catalog_id = "forest_campfire_ring"
+metadata/role = "Cold campfire clear of fabric and access route"
+
+[node name="OF-stump" parent="." instance=ExtResource("9")]
+position = Vector3(123.2, 3, -174.6)
+rotation = Vector3(0, 0.436332, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OF-stump"
+metadata/catalog_id = "forest_tree_stump"
+metadata/role = "Natural sitting stump beside cold fire"
+
+[node name="OF-log" parent="." instance=ExtResource("10")]
+position = Vector3(124.8, 3, -173.7)
+rotation = Vector3(0, 0.261799, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OF-log"
+metadata/catalog_id = "forest_fallen_log"
+metadata/role = "Fallen seating log outside camp approach"
+
+[node name="OF-woodcrate" parent="." instance=ExtResource("11")]
+position = Vector3(118.1, 3.75, -178)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OF-woodcrate"
+metadata/catalog_id = "shared_wooden_crate"
+metadata/role = "Equipment crate on ranger table"
+
+[node name="OF-undergrowth-01" parent="." instance=ExtResource("12")]
+position = Vector3(122, 2.848485, -181)
+rotation = Vector3(0, 0.698132, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OF-undergrowth-01"
+metadata/catalog_id = "forest_undergrowth"
+metadata/role = "Undergrowth beside cottage yard edge"
+
+[node name="OF-undergrowth-02" parent="." instance=ExtResource("13")]
+position = Vector3(125, 3, -179)
+rotation = Vector3(0, 1.308997, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OF-undergrowth-02"
+metadata/catalog_id = "forest_undergrowth"
+metadata/role = "Undergrowth at camp perimeter"
+
+[node name="OF-debris-01" parent="." instance=ExtResource("14")]
+position = Vector3(120.9, 3, -179.7)
+rotation = Vector3(0, 1.919862, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OF-debris-01"
+metadata/catalog_id = "forest_small_forest_debris"
+metadata/role = "Leaf and twig litter outside camp"
+
+[node name="OF-debris-02" parent="." instance=ExtResource("15")]
+position = Vector3(123.2, 2.946585, -180.4)
+rotation = Vector3(-0.142165, 0.443599, -0.051244)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OF-debris-02"
+metadata/catalog_id = "forest_small_forest_debris"
+metadata/role = "Broken branch litter outside camp"
+
+[node name="OF-trail-sign" parent="." instance=ExtResource("16")]
+position = Vector3(134, 3, -184)
+rotation = Vector3(0, 0.698132, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OF-trail-sign"
+metadata/catalog_id = "forest_forest_trail_sign"
+metadata/role = "Ranger route sign beside forest trail, outside its clear envelope"
+
+[node name="OF-trailer" parent="." instance=ExtResource("17")]
+position = Vector3(177, 3, -139)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OF-trailer"
+metadata/catalog_id = "forest_logging_trailer"
+metadata/role = "Loaded trailer parked south of F02 storage shed"
+
+[node name="OF-logstock-01" parent="." instance=ExtResource("18")]
+position = Vector3(172, 3, -139)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OF-logstock-01"
+metadata/catalog_id = "forest_log_stack"
+metadata/role = "Cut logs waiting beside logging trailer"
+
+[node name="OF-logstock-02" parent="." instance=ExtResource("19")]
+position = Vector3(174, 3, -136)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OF-logstock-02"
+metadata/catalog_id = "forest_log_stack"
+metadata/role = "Offcuts separate from long timber"
+
+[node name="OF-timber" parent="." instance=ExtResource("20")]
+position = Vector3(179, 3, -136.5)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OF-timber"
+metadata/catalog_id = "shared_timber_stack"
+metadata/role = "Sawn boards beside closed saw shed"

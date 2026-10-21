@@ -1,0 +1,252 @@
+{
+  "date": "2026-10-08",
+  "status": "PHASE1_NATIVE_PILOTS_PASS / FULL_MAP_LOS_HOLD",
+  "project_path": "C:\\Stuff\\godot-fps-cogito-master\\godot-fps-cogito-master",
+  "baseline_commit": "4b8be66239d7929d1343dbe27c16e4807809e259",
+  "asset_batch": [
+    {
+      "path": "res://Assets/Blender/TownKit/assets/facade_solid_4m.glb",
+      "matches_release": true
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/assets/facade_window_4m.glb",
+      "matches_release": true
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/assets/facade_doorway_4m.glb",
+      "matches_release": true
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/assets/facade_corner_4m.glb",
+      "matches_release": true
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/assets/guard_booth_3m.glb",
+      "matches_release": true
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/assets/metal_roof_8x8.glb",
+      "matches_release": true
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/textures/town_architecture_clean_albedo.png",
+      "matches_release": true
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/textures/town_architecture_clean_orm.png",
+      "matches_release": true
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/textures/town_architecture_used_albedo.png",
+      "matches_release": true
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/textures/town_architecture_used_orm.png",
+      "matches_release": true
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/textures/town_architecture_worn_albedo.png",
+      "matches_release": true
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/textures/town_architecture_worn_orm.png",
+      "matches_release": true
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/textures/town_roof_clean_albedo.png",
+      "matches_release": true
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/textures/town_roof_clean_orm.png",
+      "matches_release": true
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/textures/town_roof_used_albedo.png",
+      "matches_release": true
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/textures/town_roof_used_orm.png",
+      "matches_release": true
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/textures/town_roof_worn_albedo.png",
+      "matches_release": true
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/textures/town_roof_worn_orm.png",
+      "matches_release": true
+    }
+  ],
+  "godot_derived_changes": [
+    "Assets/Blender/TownKit/assets/facade_corner_4m_town_architecture_used_albedo.png",
+    "Assets/Blender/TownKit/assets/facade_corner_4m_town_architecture_used_albedo.png.import",
+    "Assets/Blender/TownKit/assets/facade_corner_4m_town_architecture_used_orm.png",
+    "Assets/Blender/TownKit/assets/facade_corner_4m_town_architecture_used_orm.png.import",
+    "Assets/Blender/TownKit/assets/facade_doorway_4m_town_architecture_used_albedo.png",
+    "Assets/Blender/TownKit/assets/facade_doorway_4m_town_architecture_used_albedo.png.import",
+    "Assets/Blender/TownKit/assets/facade_doorway_4m_town_architecture_used_orm.png",
+    "Assets/Blender/TownKit/assets/facade_doorway_4m_town_architecture_used_orm.png.import",
+    "Assets/Blender/TownKit/assets/facade_solid_4m_town_architecture_used_albedo.png",
+    "Assets/Blender/TownKit/assets/facade_solid_4m_town_architecture_used_albedo.png.import",
+    "Assets/Blender/TownKit/assets/facade_solid_4m_town_architecture_used_orm.png",
+    "Assets/Blender/TownKit/assets/facade_solid_4m_town_architecture_used_orm.png.import",
+    "Assets/Blender/TownKit/assets/facade_window_4m_town_architecture_used_albedo.png",
+    "Assets/Blender/TownKit/assets/facade_window_4m_town_architecture_used_albedo.png.import",
+    "Assets/Blender/TownKit/assets/facade_window_4m_town_architecture_used_orm.png",
+    "Assets/Blender/TownKit/assets/facade_window_4m_town_architecture_used_orm.png.import",
+    "Assets/Blender/TownKit/assets/guard_booth_3m_town_architecture_used_albedo.png",
+    "Assets/Blender/TownKit/assets/guard_booth_3m_town_architecture_used_albedo.png.import",
+    "Assets/Blender/TownKit/assets/guard_booth_3m_town_architecture_used_orm.png",
+    "Assets/Blender/TownKit/assets/guard_booth_3m_town_architecture_used_orm.png.import",
+    "Assets/Blender/TownKit/assets/metal_roof_8x8_town_roof_used_albedo.png",
+    "Assets/Blender/TownKit/assets/metal_roof_8x8_town_roof_used_albedo.png.import",
+    "Assets/Blender/TownKit/assets/metal_roof_8x8_town_roof_used_orm.png",
+    "Assets/Blender/TownKit/assets/metal_roof_8x8_town_roof_used_orm.png.import"
+  ],
+  "checks": {
+    "glass": {
+      "status": "PASS",
+      "checks": 62,
+      "exit_code": 0,
+      "duration_sec": 7.09,
+      "artifact": "tests/artifacts/town500_phase1_20261008/glass-actual-headless.json",
+      "velocities_mps": [
+        60,
+        716
+      ],
+      "warning": "Two ObjectDB instances leaked at exit; cause unresolved"
+    },
+    "building_headless": {
+      "status": "PASS",
+      "checks": 101,
+      "exit_code": 0,
+      "duration_sec": 115.08,
+      "artifact": "tests/artifacts/town500_phase1_20261008/building-pilots-headless.json",
+      "version_note": "Before two additional booth side-mullion assertions, final source accepted rendered"
+    },
+    "building_rendered": {
+      "status": "PASS",
+      "checks": 107,
+      "artifact": "tests/artifacts/town500_phase1_20261008/building-pilots-rendered.json",
+      "engine": "Godot4.7 ForwardPlus",
+      "device": "RTX4060Laptop",
+      "process_ended": true
+    },
+    "town_baseline": {
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_sec": 29.89,
+      "artifact": "tests/artifacts/town500_phase1_20261008/town-baseline-headless.json",
+      "known_diagnostic": "Headless dummy-renderer pause screenshot Parameter t is null"
+    },
+    "parallel_mcp": {
+      "status": "PASS",
+      "simultaneous_clients": 2,
+      "results": [
+        {
+          "project_path": "C:/Stuff/godot-fps-cogito-master/godot-fps-cogito-master/",
+          "godot": "4.7-stable (official)",
+          "renderer": "forward_plus"
+        },
+        {
+          "project_path": "C:/Stuff/godot-fps-cogito-master/godot-fps-cogito-master/",
+          "godot": "4.7-stable (official)",
+          "renderer": "forward_plus"
+        }
+      ]
+    }
+  },
+  "protected_files": [
+    {
+      "path": "Scene/Town.tscn",
+      "before": "275BD53376918812CCD6B1F5C28D2C6B8EBD59A62AA3AEA6A478356025E229FC",
+      "after": "275BD53376918812CCD6B1F5C28D2C6B8EBD59A62AA3AEA6A478356025E229FC"
+    },
+    {
+      "path": "project.godot",
+      "before": "080BDB5A0067E222F77529C3DBE1DE6B539461103CBFA26C77A9376CA56DD59E",
+      "after": "080BDB5A0067E222F77529C3DBE1DE6B539461103CBFA26C77A9376CA56DD59E"
+    },
+    {
+      "path": "addons/cogito/Theme/Cogito_Theme_A.tres",
+      "before": "1C6E3C0F966ACBDBDABFDDF0C8C407493CDABD587001CE4F2DBBBF0BEBCD95E6",
+      "after": "1C6E3C0F966ACBDBDABFDDF0C8C407493CDABD587001CE4F2DBBBF0BEBCD95E6"
+    },
+    {
+      "path": "Assets/TownConceptB/Buildings/author_buildings.cjs",
+      "before": "132C119A86B5160340384A427291836CD1BBF39610EE3A833493EEEC3E751761",
+      "after": "132C119A86B5160340384A427291836CD1BBF39610EE3A833493EEEC3E751761"
+    }
+  ],
+  "files": [
+    {
+      "path": "Scene/Props/TownKit/facade_window_4m.tscn",
+      "sha256": "81B566BB8F0A02CB681C71EC86CEC876DF7EFF2098A1C0D63A37759E0635A708"
+    },
+    {
+      "path": "Scene/Props/TownKit/guard_booth_3m.tscn",
+      "sha256": "FC1A928C8446CD0B7057FA292164052D240D3C4F0F3C6C1B411D70E7997B8492"
+    },
+    {
+      "path": "Scripts/Enemies/scav_perception.gd",
+      "sha256": "3B95B4F3BF601E0CCBF178A1DF742FA01D4F46CF60EDCE77D3114CD652B56EC9"
+    },
+    {
+      "path": "tests/town_glass_regression.gd",
+      "sha256": "9EAD426426CDDCD1E640EB86F29525F345C880D54C5D4C1D33E1D9FA5C2C5DAD"
+    },
+    {
+      "path": "tests/town_glass_regression.tscn",
+      "sha256": "C3F749EFDF705781DC0CC06A8D8DFCDF92A66448315B99FFC065D631D63B0BD0"
+    },
+    {
+      "path": "tests/town500_building_pilots.gd",
+      "sha256": "ABD31638BE91B0C9226B832DE24BABFAADEF212605D82799EDDBBA3C6EEEF8B2"
+    },
+    {
+      "path": "tests/town500_building_pilots.tscn",
+      "sha256": "81515F410AC091A86E2E5441D23F052B6A361CB92FA14B37B4150B183D38EDA4"
+    },
+    {
+      "path": "design/town-500m/phase1/author-glass-collision.cjs",
+      "sha256": "7D288186AAB5DD96E651769BAB3B30AC94BEF529494756A6F194E87ADFEB53EF"
+    },
+    {
+      "path": "design/town-500m/phase1/pilot-contract.json",
+      "sha256": "83394AD6274C91CDF9E7F73CF900132E9A8F9A706A91AEB3F498D517A5F43696"
+    },
+    {
+      "path": "design/town-500m/phase1/legacy-remap.json",
+      "sha256": "06367EEF14B453E688D524CA5AF4CD3B949EAF70602F0E9E95106DB8CC7A1359"
+    },
+    {
+      "path": "tests/artifacts/town500_phase1_20261008/window.png",
+      "sha256": "32058698946369586C70E53F2E060EFD076551DA2E40130E1FEE80EC738A7C9B"
+    },
+    {
+      "path": "tests/artifacts/town500_phase1_20261008/booth.png",
+      "sha256": "1DB8CD4E287383D5F3BADDF11ADCD2AE6C7CDF5CE308D6487D7CB9EBCDB6C392"
+    }
+  ],
+  "collision_contract": {
+    "glass_only_group": "ai_vision_transparent",
+    "max_skipped_static_panes": 4,
+    "layer": 1,
+    "window_panes": 1,
+    "booth_panes": 3,
+    "opaque_wall_frame_shapes": [
+      9,
+      31
+    ],
+    "booth_downward_ceiling": true,
+    "imported_helper_inactive": true,
+    "authored_visual_paths_preserved": true
+  },
+  "limits": [
+    "No500m Town placement/terrain/navigation/LOS acceptance",
+    "11 scoped LOS groups remain HOLD",
+    "No whole-map FPS, all-angle glass sorting/CCD, fresh clone/export",
+    "ObjectDB exit warning unresolved",
+    "No commit/push"
+  ]
+}

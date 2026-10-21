@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/soviet_bus_shelter/assets/soviet_bus_shelter_intact.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/soviet_bus_shelter/materials/town_soviet_bus_shelter_intact_clean.tres" id="2_finish"]
+
+[node name="town_soviet_bus_shelter__intact" type="Node3D"]
+metadata/catalog_id = "town_soviet_bus_shelter"
+metadata/catalog_variant = "intact"
+metadata/finish = "clean"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="SovietBusShelterIntact" parent="Model/TownSovietBusShelterIntact"]
+surface_material_override/0 = ExtResource("2_finish")

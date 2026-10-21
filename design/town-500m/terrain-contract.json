@@ -1,0 +1,2320 @@
+{
+  "schema_version": 1,
+  "status": "PHASE0 OFFLINE AUTHORING CONTRACT; NATIVE PENDING",
+  "units": "meters",
+  "coordinates": {
+    "axes": "+X east; +Z south; +Y up",
+    "bounds_xz_m": [
+      -250,
+      -250,
+      250,
+      250
+    ],
+    "root_transform": "identity"
+  },
+  "source": {
+    "file": "reference/map_layout_godot.json",
+    "sha256": "5B00249B20F86BC36BCD773F410A6EF434EE084526A27F5777AE5676AA0DA55D",
+    "original_attachments_unchanged": true
+  },
+  "elevation_policy": {
+    "core_surface_range_y_m": [
+      0.5,
+      3.5
+    ],
+    "core_relief_max_m": 3,
+    "default_core_pad_y_m": 2,
+    "hills_peak_range_y_m": [
+      15,
+      20
+    ],
+    "hills_max_y_m": 20,
+    "bunker_lower_terrace_y_m": 10,
+    "building_root_above_pad_m": 0.2,
+    "flat_pad_extension_m": 0.4,
+    "pad_blend_margin_m": 4,
+    "road_grade_limits_percent": {
+      "county": 6,
+      "gravel": 10,
+      "footpath": 15
+    },
+    "interpolation": "Triangulate exact pad/river/bank/road boundaries, blend terrain anchors smoothly. Road profiles override terrain only in reserved corridors; do not flatten hill peaks globally."
+  },
+  "terrain_anchors": [
+    {
+      "id": "HILL_W",
+      "xz_m": [
+        -210,
+        -190
+      ],
+      "y_m": 20
+    },
+    {
+      "id": "HILL_N",
+      "xz_m": [
+        -90,
+        -235
+      ],
+      "y_m": 18
+    },
+    {
+      "id": "HILL_E",
+      "xz_m": [
+        -35,
+        -165
+      ],
+      "y_m": 15
+    },
+    {
+      "id": "BUNKER_TERRACE",
+      "xz_m": [
+        -150,
+        -155
+      ],
+      "y_m": 10
+    },
+    {
+      "id": "FARM_W",
+      "xz_m": [
+        -210,
+        100
+      ],
+      "y_m": 1.5
+    },
+    {
+      "id": "FARM_S",
+      "xz_m": [
+        -65,
+        220
+      ],
+      "y_m": 1.5
+    },
+    {
+      "id": "INDUSTRY",
+      "xz_m": [
+        175,
+        35
+      ],
+      "y_m": 2
+    },
+    {
+      "id": "FOREST",
+      "xz_m": [
+        140,
+        -180
+      ],
+      "y_m": 3
+    }
+  ],
+  "pads": [
+    {
+      "id": "S1",
+      "center_xz_m": [
+        -236.36,
+        170.45
+      ],
+      "size_m": [
+        12,
+        12
+      ],
+      "surface_y_m": 1.5,
+      "role": "spawn"
+    },
+    {
+      "id": "S2",
+      "center_xz_m": [
+        -236.36,
+        10.23
+      ],
+      "size_m": [
+        12,
+        12
+      ],
+      "surface_y_m": 2,
+      "role": "spawn"
+    },
+    {
+      "id": "E_A",
+      "center_xz_m": [
+        236.36,
+        -236.36
+      ],
+      "size_m": [
+        10,
+        10
+      ],
+      "surface_y_m": 2,
+      "role": "extract"
+    },
+    {
+      "id": "E_B",
+      "center_xz_m": [
+        -65,
+        235
+      ],
+      "size_m": [
+        10,
+        10
+      ],
+      "surface_y_m": 1.5,
+      "role": "extract"
+    },
+    {
+      "id": "E_C",
+      "center_xz_m": [
+        214.77,
+        147.73
+      ],
+      "size_m": [
+        10,
+        10
+      ],
+      "surface_y_m": 2.5,
+      "role": "extract"
+    },
+    {
+      "id": "E_D",
+      "center_xz_m": [
+        -236.36,
+        -236.36
+      ],
+      "size_m": [
+        10,
+        10
+      ],
+      "surface_y_m": 16,
+      "role": "extract"
+    },
+    {
+      "id": "B04_ENTRY",
+      "center_xz_m": [
+        -149,
+        -147
+      ],
+      "size_m": [
+        9,
+        9
+      ],
+      "surface_y_m": 10,
+      "role": "bunker entry flat pad; building root +0.2"
+    },
+    {
+      "id": "B06_GATE",
+      "center_xz_m": [
+        -140,
+        -128
+      ],
+      "size_m": [
+        12,
+        10
+      ],
+      "surface_y_m": 10,
+      "role": "bunker gate lower terrace"
+    },
+    {
+      "id": "BUNKER_ACCESS_END",
+      "center_xz_m": [
+        -139.77,
+        -120.45
+      ],
+      "size_m": [
+        8,
+        8
+      ],
+      "surface_y_m": 10,
+      "role": "P02 endpoint"
+    },
+    {
+      "id": "R01_WEST",
+      "center_xz_m": [
+        63.412871,
+        34.027268
+      ],
+      "size_m": [
+        8,
+        8
+      ],
+      "surface_y_m": 3,
+      "role": "dry approach pad clipped to dry terrain; bridge owns wet portion"
+    },
+    {
+      "id": "R01_EAST",
+      "center_xz_m": [
+        94.153593,
+        22.14905
+      ],
+      "size_m": [
+        8,
+        8
+      ],
+      "surface_y_m": 3,
+      "role": "dry approach pad clipped to dry terrain; bridge owns wet portion"
+    },
+    {
+      "id": "R02_WEST",
+      "center_xz_m": [
+        48.142396,
+        -59.971842
+      ],
+      "size_m": [
+        4,
+        4
+      ],
+      "surface_y_m": 3,
+      "role": "dry approach pad clipped to dry terrain; bridge owns wet portion"
+    },
+    {
+      "id": "R02_EAST",
+      "center_xz_m": [
+        72.118667,
+        -70.028603
+      ],
+      "size_m": [
+        4,
+        4
+      ],
+      "surface_y_m": 3,
+      "role": "dry approach pad clipped to dry terrain; bridge owns wet portion"
+    }
+  ],
+  "building_pad_binding": {
+    "catalogue_owner": "building-catalogue.json",
+    "rule": "For actual buildings use pad_intent and validated terrain height; Town default2m, bunker10m, source hill objects require local anchor/grade grounding. Emit exact rotated footprint+0.4m flat pad after primary merges catalogue; do not use source plot envelopes as collider/pad footprints."
+  },
+  "hydrology": {
+    "authority": "river.actual_water_polygon_xz_m union lake.actual_water_polygon_xz_m; zones are visual planning only",
+    "water_level_y_m": 0,
+    "deep_water_threshold_y_m": -0.35,
+    "rendered_bed_y_m": -4,
+    "bed_collision": "none; no layer1 collider or nav source",
+    "water_surface_collision": "none; deep-water Area owns death detection, not floor collision",
+    "minimum_open_water_gap_m": 20,
+    "runtime_jump_margin_rule": "Before Phase2 acceptance measure max actual elevated sprint/slide-jump/bunnyhop/air-step reach; enlarge channel if maxreach+6>20. Recompute every deck/port/reservation and regenerate canonical data when enlarged.",
+    "bank_top_target_y_m": 3,
+    "bank_steep_face_horizontal_run_m": 2,
+    "bank_face_min_height_above_deep_water_m": 3.35,
+    "bank_reservation_dry_setback_m": 6,
+    "bank_rule": "Visible collision matches steep faces; no rocks/logs/props/stepping chain in wet or bank reserve. Width/death are the separator, not slope alone.",
+    "river": {
+      "centerline_xz_m": [
+        [
+          29.55,
+          -250
+        ],
+        [
+          14.77,
+          -170.45
+        ],
+        [
+          45.45,
+          -100
+        ],
+        [
+          75,
+          -29.55
+        ],
+        [
+          79.55,
+          39.77
+        ],
+        [
+          95.45,
+          110.23
+        ],
+        [
+          110.23,
+          160.23
+        ],
+        [
+          129.55,
+          189.77
+        ]
+      ],
+      "minimum_width_m": 20,
+      "offset_method": "10m perpendicular banks with miter joins; extend north axis100m then clip polygon to world bounds, preserving width at map edge",
+      "actual_water_polygon_xz_m": [
+        [
+          19.378865,
+          -250
+        ],
+        [
+          4.378774,
+          -169.265408
+        ],
+        [
+          36.254586,
+          -96.069484
+        ],
+        [
+          65.131076,
+          -27.225194
+        ],
+        [
+          69.622795,
+          41.206877
+        ],
+        [
+          85.76737,
+          112.750697
+        ],
+        [
+          101.056732,
+          164.473844
+        ],
+        [
+          121.181003,
+          195.243562
+        ],
+        [
+          137.918997,
+          184.296438
+        ],
+        [
+          119.403268,
+          155.986156
+        ],
+        [
+          105.13263,
+          107.709303
+        ],
+        [
+          89.477205,
+          38.333123
+        ],
+        [
+          84.868924,
+          -31.874806
+        ],
+        [
+          54.645414,
+          -103.930516
+        ],
+        [
+          25.161226,
+          -171.634592
+        ],
+        [
+          39.381745,
+          -248.17331
+        ],
+        [
+          39.721135,
+          -250
+        ]
+      ],
+      "crossing_ids": [
+        "R01",
+        "R02"
+      ],
+      "retired_crossing_ids": [
+        "R03"
+      ],
+      "source_ford_removed": true
+    },
+    "lake": {
+      "actual_water_polygon_xz_m": [
+        [
+          114.77,
+          170.45
+        ],
+        [
+          189.77,
+          150
+        ],
+        [
+          250,
+          164.77
+        ],
+        [
+          250,
+          250
+        ],
+        [
+          125,
+          250
+        ],
+        [
+          104.55,
+          214.77
+        ]
+      ],
+      "south_and_east_boundary_join": true,
+      "shoreline_dry_route": "P09 and E_C; preserve >=1m full-pad/route margin after catalogue integration"
+    },
+    "death_area_exclusions": [
+      "dry bank terrain",
+      "bridge deck and dry approaches",
+      "dock/gangway walking surface"
+    ],
+    "native_pending": [
+      "Water/bank gaps, damage trigger height/corner seams, deck-safe crouch/lean, actual no-swim death/Hub loss, shoreline negative traversal"
+    ]
+  },
+  "bridges": [
+    {
+      "id": "R01",
+      "kind": "county",
+      "anchor_xz_m": [
+        78.783232,
+        28.088159
+      ],
+      "axis_west_to_east_xz": [
+        0.932787,
+        -0.360429
+      ],
+      "yaw_deg": 21.126532,
+      "water_intersections_axis_m": [
+        -10.477889,
+        10.477889
+      ],
+      "actual_water_gap_along_axis_m": 20.955778,
+      "deck_length_m": 32.955778,
+      "deck_clear_width_m": 8,
+      "carriageway_m": 6,
+      "pedestrian_strip_each_side_m": 1,
+      "deck_surface_y_m": 3,
+      "deck_thickness_m": 0.4,
+      "railing_outside_clear_width": true,
+      "deck_ports_xz_m": {
+        "west": [
+          63.412871,
+          34.027268
+        ],
+        "east": [
+          94.153593,
+          22.14905
+        ]
+      },
+      "landing_overlap_each_bank_m": 6,
+      "collision_owner": "this bridge only; remove underlying terrain/causeway in wet span",
+      "navigation_source": "layer1 deck and dry approaches only; no nav link"
+    },
+    {
+      "id": "R02",
+      "kind": "footbridge",
+      "anchor_xz_m": [
+        60.130531500000004,
+        -65.0002225
+      ],
+      "axis_west_to_east_xz": [
+        0.922164,
+        -0.386798
+      ],
+      "yaw_deg": 22.755438,
+      "water_intersections_axis_m": [
+        -9.999424,
+        10.000576
+      ],
+      "actual_water_gap_along_axis_m": 20,
+      "deck_length_m": 26,
+      "deck_clear_width_m": 2.5,
+      "carriageway_m": 0,
+      "pedestrian_strip_each_side_m": 0,
+      "deck_surface_y_m": 3,
+      "deck_thickness_m": 0.4,
+      "railing_outside_clear_width": true,
+      "deck_ports_xz_m": {
+        "west": [
+          48.142396,
+          -59.971842
+        ],
+        "east": [
+          72.118667,
+          -70.028603
+        ]
+      },
+      "landing_overlap_each_bank_m": 3,
+      "collision_owner": "this bridge only; remove underlying terrain/causeway in wet span",
+      "navigation_source": "layer1 deck and dry approaches only; no nav link",
+      "requested_anchor_xz_m": [
+        60.13,
+        -65
+      ]
+    }
+  ],
+  "corrected_corridors": [
+    {
+      "id": "P01",
+      "name": "County road east-west",
+      "type": "county_road",
+      "width_m": 8,
+      "points_xz_m": [
+        [
+          -250,
+          14.77
+        ],
+        [
+          -160.23,
+          21.59
+        ],
+        [
+          -60.23,
+          10.23
+        ],
+        [
+          63.412871,
+          34.027268
+        ],
+        [
+          94.153593,
+          22.14905
+        ],
+        [
+          125,
+          10.23
+        ],
+        [
+          130,
+          -8
+        ],
+        [
+          170,
+          -8
+        ],
+        [
+          180,
+          5.73
+        ],
+        [
+          250,
+          0
+        ]
+      ],
+      "reservation_margin_each_side_m": 1,
+      "surface": "asphalt",
+      "maximum_grade_percent": 6,
+      "bridge_id": "R01",
+      "width_definition": "6m carriageway plus 1m walkway each side",
+      "surface_y_m": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "reason": "Full8m service-road bypass south of abandoned delivery wreck; road reservation follows actual passable asphalt, original east/west extents retained."
+    },
+    {
+      "id": "P02",
+      "name": "Bunker access gravel",
+      "type": "gravel_road",
+      "width_m": 4,
+      "points_xz_m": [
+        [
+          -60.23,
+          -39.77
+        ],
+        [
+          -85.23,
+          -85.23
+        ],
+        [
+          -120.45,
+          -110.23
+        ],
+        [
+          -139.77,
+          -107
+        ],
+        [
+          -139.77,
+          -120.45
+        ]
+      ],
+      "reservation_margin_each_side_m": 1,
+      "surface": "gravel",
+      "maximum_grade_percent": 10,
+      "surface_y_m": [
+        2,
+        6,
+        8.8,
+        9.6,
+        10
+      ],
+      "correction": "Lower terrace access aligns perpendicular to the six metre south gate; approach bends on the flattened gate apron",
+      "phase2_grade_correction": "Shared junction/flat pad reduces usable ramp length; Y-only correction, road XZ/width unchanged. Check Phase2 terrain-authoring report for actual slopes."
+    },
+    {
+      "id": "P03",
+      "name": "Southern farm track",
+      "type": "gravel_road",
+      "width_m": 3.5,
+      "points_xz_m": [
+        [
+          -20.45,
+          160.23
+        ],
+        [
+          0,
+          210.23
+        ],
+        [
+          10.23,
+          250
+        ]
+      ],
+      "reservation_margin_each_side_m": 1,
+      "surface": "gravel",
+      "maximum_grade_percent": 10,
+      "surface_y_m": [
+        1.5,
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "id": "P04",
+      "name": "Railway right-of-way",
+      "type": "rail",
+      "width_m": 5,
+      "points_xz_m": [
+        [
+          214.77,
+          -250
+        ],
+        [
+          214.77,
+          -129.55
+        ],
+        [
+          204.55,
+          -20.45
+        ],
+        [
+          195.45,
+          70.45
+        ],
+        [
+          214.77,
+          110.23
+        ],
+        [
+          250,
+          121.59
+        ]
+      ],
+      "reservation_margin_each_side_m": 1,
+      "surface": "rail_ballast",
+      "maximum_grade_percent": 15,
+      "surface_y_m": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "P05",
+      "name": "Town south alley",
+      "type": "footpath",
+      "width_m": 2.5,
+      "points_xz_m": [
+        [
+          -80.68,
+          31.82
+        ],
+        [
+          -60.23,
+          44.32
+        ],
+        [
+          -60.23,
+          98.86
+        ],
+        [
+          -82,
+          142
+        ],
+        [
+          -61.36,
+          152.27
+        ]
+      ],
+      "reservation_margin_each_side_m": 1,
+      "surface": "dirt",
+      "maximum_grade_percent": 15,
+      "correction": "Avoid original T10 market footprint; actual new plot structures checked by primary",
+      "surface_y_m": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "P06",
+      "name": "Town east backstreet",
+      "type": "footpath",
+      "width_m": 2.6,
+      "points_xz_m": [
+        [
+          20.45,
+          34.09
+        ],
+        [
+          40.91,
+          39.77
+        ],
+        [
+          40.91,
+          82
+        ],
+        [
+          51,
+          82
+        ],
+        [
+          51,
+          103
+        ],
+        [
+          40.91,
+          103
+        ],
+        [
+          40.91,
+          125
+        ],
+        [
+          34.09,
+          157.95
+        ]
+      ],
+      "reservation_margin_each_side_m": 1,
+      "surface": "dirt",
+      "maximum_grade_percent": 15,
+      "surface_y_m": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "reason": "Real garage-yard boundary return at Z96; east service detour preserves original door access junctions at63.7/110.7"
+    },
+    {
+      "id": "P07",
+      "name": "Forest extraction trail",
+      "type": "footpath",
+      "width_m": 3,
+      "points_xz_m": [
+        [
+          94.153593,
+          22.14905
+        ],
+        [
+          106.82,
+          -51.14
+        ],
+        [
+          106.82,
+          -74
+        ],
+        [
+          88,
+          -74
+        ],
+        [
+          88,
+          -94
+        ],
+        [
+          106.82,
+          -94
+        ],
+        [
+          106.82,
+          -120.45
+        ],
+        [
+          130,
+          -136.36
+        ],
+        [
+          145,
+          -136.36
+        ],
+        [
+          145,
+          -156
+        ],
+        [
+          140,
+          -180
+        ],
+        [
+          200,
+          -200
+        ],
+        [
+          236.36,
+          -236.36
+        ]
+      ],
+      "reservation_margin_each_side_m": 1,
+      "surface": "dirt",
+      "maximum_grade_percent": 15,
+      "correction": "Pass west of F02 logging-yard plot and east of F01 ranger shelter; county approach explicit",
+      "surface_y_m": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2
+      ],
+      "reason": "Forest extraction trail follows the west end of an opaque forestry-service boundary and skirts the east side of a granite outcrop; fixed tree trunks and cache remain clear."
+    },
+    {
+      "id": "P08",
+      "name": "Hills ridgeline hike",
+      "type": "footpath",
+      "width_m": 2.5,
+      "points_xz_m": [
+        [
+          -85.23,
+          -85.23
+        ],
+        [
+          -75,
+          -113
+        ],
+        [
+          -75,
+          -156
+        ],
+        [
+          -4.55,
+          -204.55
+        ]
+      ],
+      "reservation_margin_each_side_m": 1,
+      "surface": "dirt",
+      "maximum_grade_percent": 15,
+      "correction": "Ridge trail stays east of bunker fence; starts at existing gravel-road node to avoid a floating connection",
+      "surface_y_m": [
+        6,
+        9.8,
+        15,
+        18
+      ],
+      "phase2_grade_correction": "Shared junction/flat pad reduces usable ramp length; Y-only correction, road XZ/width unchanged. Check Phase2 terrain-authoring report for actual slopes."
+    },
+    {
+      "id": "P09",
+      "name": "Lake shore approach",
+      "type": "footpath",
+      "width_m": 2.5,
+      "points_xz_m": [
+        [
+          120.45,
+          109.09
+        ],
+        [
+          135.23,
+          138.64
+        ],
+        [
+          168.18,
+          142.05
+        ],
+        [
+          198.86,
+          145.45
+        ],
+        [
+          214.77,
+          147.73
+        ]
+      ],
+      "reservation_margin_each_side_m": 1,
+      "surface": "dirt",
+      "maximum_grade_percent": 15,
+      "correction": "Keep shoreline route; move/resize L01/L02/L04 catalogue so solid models clear sweep",
+      "surface_y_m": [
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5
+      ]
+    },
+    {
+      "id": "P10",
+      "name": "North Town footbridge connection",
+      "type": "footpath",
+      "surface": "dirt",
+      "width_m": 2.5,
+      "maximum_grade_percent": 15,
+      "reservation_margin_each_side_m": 1,
+      "points_xz_m": [
+        [
+          -60.23,
+          -39.77
+        ],
+        [
+          -10,
+          -55
+        ],
+        [
+          30,
+          -45
+        ],
+        [
+          48.142396,
+          -59.971842
+        ],
+        [
+          72.118667,
+          -70.028603
+        ],
+        [
+          92,
+          -85
+        ],
+        [
+          106.82,
+          -120.45
+        ]
+      ],
+      "bridge_id": "R02",
+      "surface_y_m": [
+        2,
+        2.5,
+        2.5,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "id": "P11",
+      "name": "Southwest farm extract approach",
+      "type": "footpath",
+      "surface": "dirt",
+      "width_m": 2.5,
+      "maximum_grade_percent": 15,
+      "reservation_margin_each_side_m": 1,
+      "points_xz_m": [
+        [
+          -190,
+          120
+        ],
+        [
+          -179,
+          160
+        ],
+        [
+          -179,
+          183
+        ],
+        [
+          -130,
+          183
+        ],
+        [
+          -104,
+          183
+        ],
+        [
+          -104,
+          205
+        ],
+        [
+          -100,
+          210
+        ],
+        [
+          -65,
+          220
+        ],
+        [
+          -65,
+          235
+        ]
+      ],
+      "surface_y_m": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "reason": "Farm extraction path follows the east end of a feed-yard property return north of A06, then rejoins the original southwest extraction approach; no extra route group or extraction changes."
+    },
+    {
+      "id": "P12",
+      "name": "Northwest extract route",
+      "type": "footpath",
+      "surface": "dirt",
+      "width_m": 2.5,
+      "maximum_grade_percent": 15,
+      "reservation_margin_each_side_m": 1,
+      "points_xz_m": [
+        [
+          -139.77,
+          -120.45
+        ],
+        [
+          -139.77,
+          -115
+        ],
+        [
+          -225,
+          -115
+        ],
+        [
+          -225,
+          -140
+        ],
+        [
+          -225,
+          -220
+        ],
+        [
+          -236.36,
+          -236.36
+        ]
+      ],
+      "surface_y_m": [
+        10,
+        10,
+        11,
+        11,
+        14.4,
+        16
+      ],
+      "correction": "Follow the outside of the south and west bunker fence; leave the gate apron before turning west",
+      "phase2_grade_correction": "Shared junction/flat pad reduces usable ramp length; Y-only correction, road XZ/width unchanged. Check Phase2 terrain-authoring report for actual slopes."
+    },
+    {
+      "id": "BUNKER_ENTRY",
+      "name": "South gate to entry room apron",
+      "type": "footpath",
+      "surface": "gravel",
+      "width_m": 1.8,
+      "maximum_grade_percent": 15,
+      "points_xz_m": [
+        [
+          -139.77,
+          -120.45
+        ],
+        [
+          -139.77,
+          -137
+        ],
+        [
+          -149,
+          -139.7
+        ]
+      ],
+      "surface_y_m": [
+        10,
+        10,
+        10
+      ],
+      "reason": "Only intended entry into the fenced compound; skirts B06 security shed and meets B04 door apron"
+    },
+    {
+      "id": "P04_SERVICE_BYPASS",
+      "name": "Derailed freight west service bypass",
+      "type": "footpath",
+      "surface": "gravel",
+      "width_m": 2.5,
+      "maximum_grade_percent": 15,
+      "reservation_margin_each_side_m": 1,
+      "points_xz_m": [
+        [
+          210.12837763519707,
+          -80
+        ],
+        [
+          197.5,
+          -80
+        ],
+        [
+          197.5,
+          -54
+        ],
+        [
+          207.69281393217233,
+          -54
+        ]
+      ],
+      "surface_y_m": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "connects_to_corridor": "P04",
+      "reason": "Physical2.5m trail around derailed railcar west end; track geometry is retained."
+    }
+  ],
+  "road_surface_profiles_y_m": {
+    "P01": [
+      2,
+      2,
+      2,
+      3,
+      3,
+      2,
+      2
+    ],
+    "P02": [
+      2,
+      6,
+      8.8,
+      9.6,
+      10
+    ],
+    "P03": [
+      1.5,
+      1.5,
+      1.5
+    ],
+    "P04": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "P05": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "P06": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "P07": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2
+    ],
+    "P08": [
+      6,
+      9.8,
+      15,
+      18
+    ],
+    "P09": [
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5
+    ],
+    "P10": [
+      2,
+      2.5,
+      2.5,
+      3,
+      3,
+      3,
+      3
+    ],
+    "P11": [
+      1.5,
+      1.5,
+      1.5,
+      1.5,
+      1.5
+    ],
+    "P12": [
+      10,
+      10,
+      11,
+      11,
+      14.4,
+      16
+    ],
+    "BUNKER_ENTRY": [
+      10,
+      10,
+      10
+    ]
+  },
+  "bunker_access_grade_contract": {
+    "source_length_m": 116.928177,
+    "start_surface_y_m": 2,
+    "end_surface_y_m": 10,
+    "rise_m": 8,
+    "maximum_endpoint_rise_at_10_percent_m": 11.692818,
+    "gate_vs_hill_peak": "Gate terrace10m; hills may peak20m separately; B06gate reached via short dry P02 endpoint connector"
+  },
+  "dock": {
+    "source_ref": "L03",
+    "deck_center_xz_m": [
+      175,
+      173
+    ],
+    "deck_size_m": [
+      4,
+      14
+    ],
+    "deck_surface_y_m": 2.5,
+    "gangway_from_xz_m": [
+      175,
+      147
+    ],
+    "gangway_to_xz_m": [
+      175,
+      167
+    ],
+    "gangway_clear_width_m": 2.5,
+    "gangway_length_m": 20,
+    "shore_landing_size_m": [
+      6,
+      6
+    ],
+    "connections": [
+      "G22",
+      "G23"
+    ],
+    "collision_role": "narrow physical gangway+deck over nonwalkable water; no connection to other bank",
+    "deck_overlap_m": 1
+  },
+  "route_graph": {
+    "nodes": {
+      "S1": {
+        "xz_m": [
+          -236.36,
+          170.45
+        ],
+        "surface_y_m": 1.5,
+        "bank": "west"
+      },
+      "S2": {
+        "xz_m": [
+          -236.36,
+          10.23
+        ],
+        "surface_y_m": 2,
+        "bank": "west"
+      },
+      "E_A": {
+        "xz_m": [
+          236.36,
+          -236.36
+        ],
+        "surface_y_m": 2,
+        "bank": "east"
+      },
+      "E_B": {
+        "xz_m": [
+          -65,
+          235
+        ],
+        "surface_y_m": 1.5,
+        "bank": "west"
+      },
+      "E_C": {
+        "xz_m": [
+          214.77,
+          147.73
+        ],
+        "surface_y_m": 2.5,
+        "bank": "east"
+      },
+      "E_D": {
+        "xz_m": [
+          -236.36,
+          -236.36
+        ],
+        "surface_y_m": 16,
+        "bank": "west"
+      },
+      "W_S": {
+        "xz_m": [
+          -190,
+          120
+        ],
+        "surface_y_m": 1.5,
+        "bank": "west"
+      },
+      "W_J": {
+        "xz_m": [
+          -190,
+          30
+        ],
+        "surface_y_m": 2,
+        "bank": "west"
+      },
+      "T_J": {
+        "xz_m": [
+          -60.23,
+          10.23
+        ],
+        "surface_y_m": 2,
+        "bank": "west"
+      },
+      "T_N": {
+        "xz_m": [
+          -60.23,
+          -39.77
+        ],
+        "surface_y_m": 2,
+        "bank": "west"
+      },
+      "T_NE": {
+        "xz_m": [
+          30,
+          -45
+        ],
+        "surface_y_m": 2.5,
+        "bank": "west"
+      },
+      "C_W": {
+        "xz_m": [
+          63.412871,
+          34.027268
+        ],
+        "surface_y_m": 3,
+        "bank": "west"
+      },
+      "C_E": {
+        "xz_m": [
+          94.153593,
+          22.14905
+        ],
+        "surface_y_m": 3,
+        "bank": "east"
+      },
+      "F_W": {
+        "xz_m": [
+          48.142396,
+          -59.971842
+        ],
+        "surface_y_m": 3,
+        "bank": "west"
+      },
+      "F_E": {
+        "xz_m": [
+          72.118667,
+          -70.028603
+        ],
+        "surface_y_m": 3,
+        "bank": "east"
+      },
+      "FOREST": {
+        "xz_m": [
+          106.82,
+          -120.45
+        ],
+        "surface_y_m": 3,
+        "bank": "east"
+      },
+      "E_J": {
+        "xz_m": [
+          125,
+          10.23
+        ],
+        "surface_y_m": 2,
+        "bank": "east"
+      },
+      "SHORE": {
+        "xz_m": [
+          120.45,
+          109.09
+        ],
+        "surface_y_m": 2.5,
+        "bank": "east"
+      },
+      "B_GATE": {
+        "xz_m": [
+          -139.77,
+          -120.45
+        ],
+        "surface_y_m": 10,
+        "bank": "west"
+      },
+      "H_W": {
+        "xz_m": [
+          -225,
+          -140
+        ],
+        "surface_y_m": 11,
+        "bank": "west"
+      },
+      "GANGWAY_SHORE": {
+        "xz_m": [
+          175,
+          147
+        ],
+        "surface_y_m": 2.5,
+        "bank": "east"
+      },
+      "DOCK": {
+        "xz_m": [
+          175,
+          173
+        ],
+        "surface_y_m": 2.5,
+        "bank": "east"
+      }
+    },
+    "edges": [
+      {
+        "id": "G01",
+        "from": "S1",
+        "to": "W_S",
+        "points_xz_m": [
+          [
+            -236.36,
+            170.45
+          ],
+          [
+            -236.36,
+            120
+          ],
+          [
+            -190,
+            120
+          ]
+        ],
+        "surface_y_m": [
+          1.5,
+          1.5,
+          1.5
+        ],
+        "clear_width_m": 2.5,
+        "kind": "dry_path",
+        "bank": "west",
+        "maximum_grade_percent": 15
+      },
+      {
+        "id": "G02",
+        "from": "S2",
+        "to": "W_J",
+        "points_xz_m": [
+          [
+            -236.36,
+            10.23
+          ],
+          [
+            -190,
+            30
+          ]
+        ],
+        "surface_y_m": [
+          2,
+          2
+        ],
+        "clear_width_m": 2.5,
+        "kind": "dry_path",
+        "bank": "west",
+        "maximum_grade_percent": 15
+      },
+      {
+        "id": "G03",
+        "from": "W_S",
+        "to": "W_J",
+        "points_xz_m": [
+          [
+            -190,
+            120
+          ],
+          [
+            -190,
+            30
+          ]
+        ],
+        "surface_y_m": [
+          1.5,
+          2
+        ],
+        "clear_width_m": 2.5,
+        "kind": "dry_path",
+        "bank": "west",
+        "maximum_grade_percent": 15
+      },
+      {
+        "id": "G04",
+        "from": "W_J",
+        "to": "T_J",
+        "points_xz_m": [
+          [
+            -190,
+            30
+          ],
+          [
+            -190,
+            19.328316
+          ],
+          [
+            -160.23,
+            21.59
+          ],
+          [
+            -60.23,
+            10.23
+          ]
+        ],
+        "surface_y_m": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "clear_width_m": 2.5,
+        "kind": "dry_path",
+        "bank": "west",
+        "maximum_grade_percent": 6
+      },
+      {
+        "id": "G05",
+        "from": "T_J",
+        "to": "C_W",
+        "points_xz_m": [
+          [
+            -60.23,
+            10.23
+          ],
+          [
+            63.412871,
+            34.027268
+          ]
+        ],
+        "surface_y_m": [
+          2,
+          3
+        ],
+        "clear_width_m": 8,
+        "kind": "dry_path",
+        "bank": "west",
+        "maximum_grade_percent": 15
+      },
+      {
+        "id": "G06",
+        "from": "C_W",
+        "to": "C_E",
+        "points_xz_m": [
+          [
+            63.412871,
+            34.027268
+          ],
+          [
+            94.153593,
+            22.14905
+          ]
+        ],
+        "surface_y_m": [
+          3,
+          3
+        ],
+        "clear_width_m": 8,
+        "kind": "bridge",
+        "bank": null,
+        "maximum_grade_percent": 15,
+        "bridge_id": "R01"
+      },
+      {
+        "id": "G07",
+        "from": "C_E",
+        "to": "E_J",
+        "points_xz_m": [
+          [
+            94.153593,
+            22.14905
+          ],
+          [
+            125,
+            10.23
+          ]
+        ],
+        "surface_y_m": [
+          3,
+          2
+        ],
+        "clear_width_m": 8,
+        "kind": "dry_path",
+        "bank": "east",
+        "maximum_grade_percent": 15
+      },
+      {
+        "id": "G08",
+        "from": "T_J",
+        "to": "T_N",
+        "points_xz_m": [
+          [
+            -60.23,
+            10.23
+          ],
+          [
+            -60.23,
+            -39.77
+          ]
+        ],
+        "surface_y_m": [
+          2,
+          2
+        ],
+        "clear_width_m": 2.5,
+        "kind": "dry_path",
+        "bank": "west",
+        "maximum_grade_percent": 15
+      },
+      {
+        "id": "G09",
+        "from": "T_N",
+        "to": "T_NE",
+        "points_xz_m": [
+          [
+            -60.23,
+            -39.77
+          ],
+          [
+            -10,
+            -55
+          ],
+          [
+            30,
+            -45
+          ]
+        ],
+        "surface_y_m": [
+          2,
+          2.5,
+          2.5
+        ],
+        "clear_width_m": 2.5,
+        "kind": "dry_path",
+        "bank": "west",
+        "maximum_grade_percent": 15
+      },
+      {
+        "id": "G10",
+        "from": "T_NE",
+        "to": "F_W",
+        "points_xz_m": [
+          [
+            30,
+            -45
+          ],
+          [
+            48.142396,
+            -59.971842
+          ]
+        ],
+        "surface_y_m": [
+          2.5,
+          3
+        ],
+        "clear_width_m": 2.5,
+        "kind": "dry_path",
+        "bank": "west",
+        "maximum_grade_percent": 15
+      },
+      {
+        "id": "G11",
+        "from": "F_W",
+        "to": "F_E",
+        "points_xz_m": [
+          [
+            48.142396,
+            -59.971842
+          ],
+          [
+            72.118667,
+            -70.028603
+          ]
+        ],
+        "surface_y_m": [
+          3,
+          3
+        ],
+        "clear_width_m": 2.5,
+        "kind": "bridge",
+        "bank": null,
+        "maximum_grade_percent": 15,
+        "bridge_id": "R02"
+      },
+      {
+        "id": "G12",
+        "from": "F_E",
+        "to": "FOREST",
+        "points_xz_m": [
+          [
+            72.118667,
+            -70.028603
+          ],
+          [
+            92,
+            -85
+          ],
+          [
+            106.82,
+            -120.45
+          ]
+        ],
+        "surface_y_m": [
+          3,
+          3,
+          3
+        ],
+        "clear_width_m": 2.5,
+        "kind": "dry_path",
+        "bank": "east",
+        "maximum_grade_percent": 15
+      },
+      {
+        "id": "G13",
+        "from": "C_E",
+        "to": "FOREST",
+        "points_xz_m": [
+          [
+            94.153593,
+            22.14905
+          ],
+          [
+            106.82,
+            -51.14
+          ],
+          [
+            106.82,
+            -74
+          ],
+          [
+            88,
+            -74
+          ],
+          [
+            88,
+            -94
+          ],
+          [
+            106.82,
+            -94
+          ],
+          [
+            106.82,
+            -120.45
+          ]
+        ],
+        "surface_y_m": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "clear_width_m": 2.5,
+        "kind": "dry_path",
+        "bank": "east",
+        "maximum_grade_percent": 15,
+        "reason": "Forest extraction trail follows the west end of an opaque forestry-service boundary and skirts the east side of a granite outcrop; fixed tree trunks and cache remain clear."
+      },
+      {
+        "id": "G14",
+        "from": "FOREST",
+        "to": "E_A",
+        "points_xz_m": [
+          [
+            106.82,
+            -120.45
+          ],
+          [
+            130,
+            -136.36
+          ],
+          [
+            145,
+            -136.36
+          ],
+          [
+            145,
+            -156
+          ],
+          [
+            140,
+            -180
+          ],
+          [
+            200,
+            -200
+          ],
+          [
+            236.36,
+            -236.36
+          ]
+        ],
+        "surface_y_m": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2
+        ],
+        "clear_width_m": 2.5,
+        "kind": "dry_path",
+        "bank": "east",
+        "maximum_grade_percent": 15,
+        "reason": "Forest extraction trail follows the west end of an opaque forestry-service boundary and skirts the east side of a granite outcrop; fixed tree trunks and cache remain clear."
+      },
+      {
+        "id": "G15",
+        "from": "E_J",
+        "to": "SHORE",
+        "points_xz_m": [
+          [
+            125,
+            10.23
+          ],
+          [
+            120.45,
+            60
+          ],
+          [
+            120.45,
+            109.09
+          ]
+        ],
+        "surface_y_m": [
+          2,
+          2.5,
+          2.5
+        ],
+        "clear_width_m": 2.5,
+        "kind": "dry_path",
+        "bank": "east",
+        "maximum_grade_percent": 15
+      },
+      {
+        "id": "G16",
+        "from": "SHORE",
+        "to": "E_C",
+        "points_xz_m": [
+          [
+            120.45,
+            109.09
+          ],
+          [
+            135.23,
+            138.64
+          ],
+          [
+            168.18,
+            142.05
+          ],
+          [
+            198.86,
+            145.45
+          ],
+          [
+            214.77,
+            147.73
+          ]
+        ],
+        "surface_y_m": [
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5
+        ],
+        "clear_width_m": 2.5,
+        "kind": "dry_path",
+        "bank": "east",
+        "maximum_grade_percent": 15
+      },
+      {
+        "id": "G17",
+        "from": "W_S",
+        "to": "E_B",
+        "points_xz_m": [
+          [
+            -190,
+            120
+          ],
+          [
+            -179,
+            160
+          ],
+          [
+            -179,
+            183
+          ],
+          [
+            -130,
+            183
+          ],
+          [
+            -104,
+            183
+          ],
+          [
+            -104,
+            205
+          ],
+          [
+            -100,
+            210
+          ],
+          [
+            -65,
+            220
+          ],
+          [
+            -65,
+            235
+          ]
+        ],
+        "surface_y_m": [
+          1.5,
+          1.5,
+          1.5,
+          1.5,
+          1.5,
+          1.5,
+          1.5,
+          1.5,
+          1.5
+        ],
+        "clear_width_m": 2.5,
+        "kind": "dry_path",
+        "bank": "west",
+        "maximum_grade_percent": 15,
+        "reason": "Farm extraction path follows the east end of a feed-yard property return north of A06, then rejoins the original southwest extraction approach; no extra route group or extraction changes."
+      },
+      {
+        "id": "G18",
+        "from": "T_N",
+        "to": "B_GATE",
+        "points_xz_m": [
+          [
+            -60.23,
+            -39.77
+          ],
+          [
+            -85.23,
+            -85.23
+          ],
+          [
+            -120.45,
+            -110.23
+          ],
+          [
+            -139.77,
+            -107
+          ],
+          [
+            -139.77,
+            -120.45
+          ]
+        ],
+        "surface_y_m": [
+          2,
+          6,
+          8.8,
+          9.6,
+          10
+        ],
+        "clear_width_m": 2.5,
+        "kind": "dry_path",
+        "bank": "west",
+        "maximum_grade_percent": 15,
+        "phase2_grade_correction": "Shared junction/flat pad reduces usable ramp length; Y-only correction, road XZ/width unchanged. Check Phase2 terrain-authoring report for actual slopes."
+      },
+      {
+        "id": "G19",
+        "from": "W_J",
+        "to": "H_W",
+        "points_xz_m": [
+          [
+            -190,
+            30
+          ],
+          [
+            -195.54653253821215,
+            18.90693492357573
+          ],
+          [
+            -225,
+            -40
+          ],
+          [
+            -225,
+            -110
+          ],
+          [
+            -225,
+            -140
+          ]
+        ],
+        "surface_y_m": [
+          2,
+          2,
+          4,
+          11,
+          11
+        ],
+        "clear_width_m": 2.5,
+        "kind": "dry_path",
+        "bank": "west",
+        "maximum_grade_percent": 15,
+        "junction_contract": "At county-road intersection both authored surfaces are Y2; asphalt has material priority, no coplanar path slab",
+        "phase2_correction": "At (-225,-115), shared P12/G20 crossing is Y11; keep [-225,-110] at11 to remove conflicting Y9.333333 ramp. XZ unchanged."
+      },
+      {
+        "id": "G20",
+        "from": "B_GATE",
+        "to": "H_W",
+        "points_xz_m": [
+          [
+            -139.77,
+            -120.45
+          ],
+          [
+            -139.77,
+            -115
+          ],
+          [
+            -225,
+            -115
+          ],
+          [
+            -225,
+            -140
+          ]
+        ],
+        "surface_y_m": [
+          10,
+          10,
+          11,
+          11
+        ],
+        "clear_width_m": 2.5,
+        "kind": "dry_path",
+        "bank": "west",
+        "maximum_grade_percent": 15
+      },
+      {
+        "id": "G21",
+        "from": "H_W",
+        "to": "E_D",
+        "points_xz_m": [
+          [
+            -225,
+            -140
+          ],
+          [
+            -225,
+            -220
+          ],
+          [
+            -236.36,
+            -236.36
+          ]
+        ],
+        "surface_y_m": [
+          11,
+          14.4,
+          16
+        ],
+        "clear_width_m": 2.5,
+        "kind": "dry_path",
+        "bank": "west",
+        "maximum_grade_percent": 15,
+        "phase2_grade_correction": "Shared junction/flat pad reduces usable ramp length; Y-only correction, road XZ/width unchanged. Check Phase2 terrain-authoring report for actual slopes."
+      },
+      {
+        "id": "G22",
+        "from": "SHORE",
+        "to": "GANGWAY_SHORE",
+        "points_xz_m": [
+          [
+            120.45,
+            109.09
+          ],
+          [
+            135.23,
+            138.64
+          ],
+          [
+            168.18,
+            142.05
+          ],
+          [
+            175,
+            147
+          ]
+        ],
+        "surface_y_m": [
+          2.5,
+          2.5,
+          2.5,
+          2.5
+        ],
+        "clear_width_m": 2.5,
+        "kind": "dry_path",
+        "bank": "east",
+        "maximum_grade_percent": 15
+      },
+      {
+        "id": "G23",
+        "from": "GANGWAY_SHORE",
+        "to": "DOCK",
+        "points_xz_m": [
+          [
+            175,
+            147
+          ],
+          [
+            175,
+            165
+          ],
+          [
+            175,
+            173
+          ]
+        ],
+        "surface_y_m": [
+          2.5,
+          2.5,
+          2.5
+        ],
+        "clear_width_m": 2.5,
+        "kind": "gangway",
+        "bank": "east",
+        "maximum_grade_percent": 15
+      }
+    ],
+    "semantics": "Undirected explicit pedestrian graph; bridge edges are the only west/east bank edges. Crosses narrow road/water via actual bridge deck, not teleport/navlink."
+  },
+  "natural_boundary_contract": {
+    "playable_bounds_xz_m": [
+      -250,
+      -250,
+      250,
+      250
+    ],
+    "visible_blockers_required": [
+      "rock escarpment/steep berm at W/N land boundary with no step chain",
+      "collapsed roadway/embankment at P01/P04/P03 external termini",
+      "water joins N river and SE lake boundary"
+    ],
+    "tree_belts_are_not_collision_containment": true,
+    "walkaround_test_required": true
+  },
+  "navigation_contract": {
+    "initial_regions": 1,
+    "cell_size_m": 0.1,
+    "cell_height_m": 0.1,
+    "agent_radius_m": 0.4,
+    "agent_height_m": 1.8,
+    "static_collision_mask": 1,
+    "include": [
+      "dry terrain",
+      "deck/gangway walking floors",
+      "actual stairs/interior floors"
+    ],
+    "exclude": [
+      "water surface",
+      "submerged bed",
+      "sealed roof tops",
+      "obsolete slab/causeways",
+      "duplicated bridge decks"
+    ],
+    "bake_aabb_policy": "bounds±250 plus actual lowest walkable floor/highest upper-floor/hill heights; source must not include bed",
+    "budget_max_seconds": 120,
+    "budget_peak_editor_private_ram_gib": 8,
+    "budget_failure": "Stop native acceptance; profile before designing subdivision/seam ownership."
+  },
+  "native_pending": [
+    "Godot import/geometry/collision and actual controller movement",
+    "All8 spawn/extract physical walks plus bank-cut tests",
+    "Slope/door/upper-floor grounding after actual catalogue merge",
+    "Native navigation excludes bed and has only two crossings",
+    "Natural world-edge containment and elevated jump attempt sweeps",
+    "FPS1080p120 with8Scavs and production raid/death regression"
+  ],
+  "offline_self_check": {
+    "status": "DRAFT",
+    "scope": "Replaced stale worker-only self-check after hydrology/bridge/graph corrections; canonical checker owns acceptance",
+    "native_pass": false
+  },
+  "phase0_primary_corrections": [
+    "Extend north river cap before clipping to prevent edge shortcut",
+    "County bridge6m bank overlap preserves full8m approach sweep",
+    "GraphG04 follows county alignment rather than phantom straight shortcut",
+    "G23 classifies dock gangway; not dry shoreline terrain"
+  ],
+  "unzoned_dry_land": "Open woodland, rough grass and plot transition ground outside explicit zones; no terrain holes. Do not interpret zoning edges as walls or uniformly scatter trees.",
+  "phase2_height_corrections": [
+    {
+      "point_xz_m": [
+        -225,
+        -110
+      ],
+      "from_y_m": 9,
+      "to_y_m": 11,
+      "reason": "G19 crossing P12/G20 Y11"
+    },
+    {
+      "point_xz_m": [
+        -139.77,
+        -107
+      ],
+      "from_y_m": 9.1,
+      "to_y_m": 9.6,
+      "reason": "Actual clear-width profile after flat pad/junction easing"
+    },
+    {
+      "point_xz_m": [
+        -75,
+        -113
+      ],
+      "from_y_m": 10.3,
+      "to_y_m": 9.8,
+      "reason": "Actual clear-width profile after flat pad/junction easing"
+    },
+    {
+      "point_xz_m": [
+        -225,
+        -220
+      ],
+      "from_y_m": 14,
+      "to_y_m": 14.4,
+      "reason": "Actual clear-width profile after flat pad/junction easing"
+    }
+  ]
+}

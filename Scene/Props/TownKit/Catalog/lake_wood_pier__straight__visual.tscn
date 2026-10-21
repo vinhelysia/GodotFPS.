@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/lake_wood_pier/assets/lake_wood_pier_straight.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/lake_wood_pier/materials/town_lake_wood_pier_straight_used.tres" id="2_finish"]
+
+[node name="lake_wood_pier__straight" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "lake_wood_pier"
+metadata/catalog_variant = "straight"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="WoodPierStraight" parent="Model/TownWoodPierStraight"]
+surface_material_override/0 = ExtResource("2_finish")

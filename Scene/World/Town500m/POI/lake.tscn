@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t14_pump_house.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn" id="3"]
+
+[node name="lake" type="Node3D"]
+metadata/town500_zone = "lake"
+metadata/phase = 3
+
+[node name="L01-A" parent="." instance=ExtResource("1")]
+position = Vector3(119, 2.2, 127)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "L01-A"
+metadata/source_ref = "L01"
+metadata/zone = "lake"
+metadata/ground_access = true
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = false
+
+[node name="L02-A" parent="." instance=ExtResource("2")]
+position = Vector3(153, 2.2, 149)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "L02-A"
+metadata/source_ref = "L02"
+metadata/zone = "lake"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = false
+
+[node name="L04-A" parent="." instance=ExtResource("3")]
+position = Vector3(188, 2.2, 138)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "L04-A"
+metadata/source_ref = "L04"
+metadata/zone = "lake"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = false

@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-08",
+  "status": "Unmodified design proposal; user decisions override attached instructions",
+  "files": [
+    {
+      "original_name": "map_layout_godot (1).json",
+      "archive_path": "reference/map_layout_godot.json",
+      "sha256": "5B00249B20F86BC36BCD773F410A6EF434EE084526A27F5777AE5676AA0DA55D",
+      "bytes": 62395
+    },
+    {
+      "original_name": "README (1).md",
+      "archive_path": "reference/README.txt",
+      "sha256": "BF501C0A79D69D11131C8F59AC287A02F407D641188D36E1650372FB5522284C",
+      "bytes": 2574
+    },
+    {
+      "original_name": "godot_agent_implementation_prompt (1).md",
+      "archive_path": "reference/godot_agent_implementation_prompt.txt",
+      "sha256": "D1126D16F299E51F109276BAC444144CEBF67F83A34C909C08A74D1D5705DFA2",
+      "bytes": 5701
+    },
+    {
+      "original_name": "detailed_master_map (1).svg",
+      "archive_path": "reference/detailed_master_map.svg",
+      "sha256": "9062B70A155703208CA5F154E06B1E3A898E4B969F467151D101D301F04B1E88",
+      "bytes": 55864
+    },
+    {
+      "original_name": "detailed_master_map_preview (1).png",
+      "archive_path": "reference/detailed_master_map_preview.png",
+      "sha256": "01830065FEA648F46F3F0F2B26A9EA2FAFBACBA693DB1D3118CCB526E5AE558E",
+      "bytes": 310194
+    },
+    {
+      "original_name": "zone_industry (1).svg",
+      "archive_path": "reference/zone_industry.svg",
+      "sha256": "D02A1425936EA7C1FE154A482902E9871562588C4EB0CC72694C2A751865D6D5",
+      "bytes": 55769
+    },
+    {
+      "original_name": "zone_industry (1).png",
+      "archive_path": "reference/zone_industry.png",
+      "sha256": "5D0FF94A51661150621638B25E16F8D1B354A583FEC58C0A08842BC587A9E284",
+      "bytes": 163720
+    },
+    {
+      "original_name": "zone_lake (1).svg",
+      "archive_path": "reference/zone_lake.svg",
+      "sha256": "2D6A0C9C1BB9D1DDE846ED2F2A69702A9A1E9D9CAEDD1DF9422AE8EFD347D847",
+      "bytes": 54239
+    },
+    {
+      "original_name": "zone_lake (1).png",
+      "archive_path": "reference/zone_lake.png",
+      "sha256": "66ED15C9DC962CF8E84F8E71E89405E5A8DEC00D991662B453509ABD09F32304",
+      "bytes": 103886
+    },
+    {
+      "original_name": "zone_river (1).svg",
+      "archive_path": "reference/zone_river.svg",
+      "sha256": "7574E7A14C4B47A608EDDDE961A271434536F72DC8CF7EDA7B0DFE9BA66A4A04",
+      "bytes": 54200
+    },
+    {
+      "original_name": "zone_river (1).png",
+      "archive_path": "reference/zone_river.png",
+      "sha256": "75BBD0F642F5A568CF9EF0A6D1B98C0044F2FAF3C8563E7A499E7961746F9BC4",
+      "bytes": 197887
+    },
+    {
+      "original_name": "zone_town (1).svg",
+      "archive_path": "reference/zone_town.svg",
+      "sha256": "4288597F03138E4F0C50AEA27DD419DD5077F336205814FF7963C89330B106D4",
+      "bytes": 56109
+    },
+    {
+      "original_name": "zone_town (1).png",
+      "archive_path": "reference/zone_town.png",
+      "sha256": "F97A456A86B2E2BFCD5E19127CDA3998B6BFF381BD65D37E2287F9748786B3F6",
+      "bytes": 137061
+    },
+    {
+      "original_name": "zone_bunker (1).svg",
+      "archive_path": "reference/zone_bunker.svg",
+      "sha256": "6B389E73F34C7103105BD137BDCD5DAD3F7787F6FF4C7A5FA11539D59E16B726",
+      "bytes": 55240
+    },
+    {
+      "original_name": "zone_bunker (1).png",
+      "archive_path": "reference/zone_bunker.png",
+      "sha256": "3517BC375B08DE68C5BE0991AB6B0126BDEAEC72C036E8F480545DF69CBD7C6D",
+      "bytes": 134400
+    },
+    {
+      "original_name": "zone_farmland (1).svg",
+      "archive_path": "reference/zone_farmland.svg",
+      "sha256": "65E307A9521E2F98AA66E5989DC6FA8A07E7775A34929126D5447847C2B68C60",
+      "bytes": 55735
+    },
+    {
+      "original_name": "zone_farmland (1).png",
+      "archive_path": "reference/zone_farmland.png",
+      "sha256": "2F7EFC4E28E72992AF34D66BAE4857054AD490C51753D5D79B7D1442A009F6DA",
+      "bytes": 175604
+    },
+    {
+      "original_name": "zone_forest (1).svg",
+      "archive_path": "reference/zone_forest.svg",
+      "sha256": "29FBD5F2C16A7AA911853B6C3E376C932C7089AECCC6C5A7661879EA5D0A2FAF",
+      "bytes": 54618
+    },
+    {
+      "original_name": "zone_forest (1).png",
+      "archive_path": "reference/zone_forest.png",
+      "sha256": "469C6BA4E5A1DE19541DB498BAED6C2B28C8F362380079E73740EECE6D15D962",
+      "bytes": 163611
+    },
+    {
+      "original_name": "zone_hills (1).svg",
+      "archive_path": "reference/zone_hills.svg",
+      "sha256": "DC67752306B33C11111BA97FE945C846BC18CB5AD6B61BE53BA2E15AB47EC47C",
+      "bytes": 54472
+    },
+    {
+      "original_name": "zone_hills (1).png",
+      "archive_path": "reference/zone_hills.png",
+      "sha256": "4C40B6409F4CC308048F5F1B308D7F501416391556840C6612E9406E86232778",
+      "bytes": 146434
+    }
+  ]
+}

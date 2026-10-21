@@ -1,0 +1,71 @@
+Town500m Phase1 — reusable building/glass/collision pilots, 2026-10-08
+
+Result: native pilot acceptance PASS; full500m map remains unbuilt/LOS HOLD.
+
+Implemented
+- Copied exactly6 finished architecture/roof GLBs plus12 matching texture maps;
+  source release396hashes verified by asset worker,18 destination hashes match.
+  Godot generated12 extracted embedded maps and refreshed their import sidecars;
+  these are derived import output, not a second arbitrary texture release.
+- Two existing module wrappers preserve visual hierarchy/material overrides;
+  imported combined collision helpers have unstable native names, so the static
+  visual root is disabled and explicit ALWAYS bodies own the fitted collision.
+  Window:9 opaque boxes +1 glass body; booth:31 opaque boxes/one downward ceiling
+  +3 glass bodies. Only actual panes are ai_vision_transparent; layer1 remains.
+- Project-local ScavPerception skips at most4 tagged static pane RIDs from the
+  original ray; fifth/untagged/dynamic bodies fail closed. Same mask3/API/target
+  acceptance; player and Scav bullet paths unchanged. No shared Cogito rewrite.
+- Test-only five pilots reuse cottage/shop/civic-upper/warehouse/closed-shed
+  templates. Level deck proxies match the proposed spans/widths. No production
+  Town placement, terrain, raid/save logic or gameplay setting changed.
+- legacy-remap.json describes exact33 roots to retire later and54 new reusable
+  catalogue placements. No fake one-to-one migration or old-save deletion.
+
+Native evidence through Godot MCP
+- Correct nestedCogito/Godot4.7/ForwardPlus;6 imports/materials read back.
+- ScavPerception +glass regression +building fixture compile PASS.
+- Glass actual modules:62checks,exit0,7.09s. Vision clear through panes; real
+  walls/mullions opaque, player blocked, native player/Scav hitscan blocked, CCD
+  projectile impacts actual12mm glass at60 and authoredAK716m/s; no NPC damage.
+- Headless building pilots:101checks,exit0,115.08s before added side-mullion rays.
+  Final rendered fixture:107checks onRTX4060Laptop; four native GF entry/exit
+  routes, stair ascent/descent, sealed shed, centre/edge deck walks/headroom,
+  exact player-pane contacts, both side mullions and visual capture assertions.
+- Existing Town baseline regression:exit0/29.89s/PASS; pre-existing dummy renderer
+  pause-screenshot diagnostic persists in headless; no new ScriptError observed.
+- Both fixture save roots isolated before actors; no restored user-root pointer
+  before CSM shutdown. Empty owned roots removed. Rendered process ended; final
+  stop_scene confirms no playing scene. Screenshots viewed; two native glass
+  surfaces retained, panes show background/frame, no magenta/missing material.
+- Codebase Map regenerated via existing GitBash generator; diff-check and old
+  template authoring --check PASS (old33/17/4 count is historical, not500m gate).
+
+MCP/session coordination
+- User asked to allow parallel chats. Outer .codex/config.toml overrides only
+  GODOT_MCP_PORT="" so new clients scan6505–6509 instead of colliding on6506.
+  Effective Codex config readback PASS; Blender/global configs unchanged.
+  Two disposable clients6505/6507 simultaneously confirm nestedCogito, then close.
+  No firewall change, Node sweep or permanently pre-opened idle servers.
+- Dedicated read-only bunker-layout chat created and completed measured SVG/PNG
+  under design/bunker-prototype-layout/. It does not modify scene or runtime.
+
+Remaining limits
+- Two ObjectDB instances warn at glass fixture exit; cause unresolved. Legacy
+  NPC orphan-state diagnostic is not proof of cause; no gameplay cleanup patch.
+- No fresh-clone/export, all-angle glass sorting/CCD, whole-map FPS, terrain,
+  navigation bake, water death/return or 500m route pacing verified this phase.
+- No commit/push. Preserve existing dirty Town provision/Theme/project.godot.
+- Next Phase2: native terrain/pads/hydrology/two bridges. Resolve11 LOS groups
+  in the composition stage before full graybox acceptance; do not call them fixed.
+
+Primary files
+Scene/Props/TownKit/facade_window_4m.tscn
+Scene/Props/TownKit/guard_booth_3m.tscn
+Scripts/Enemies/scav_perception.gd
+design/town-500m/phase1/author-glass-collision.cjs
+design/town-500m/phase1/asset-import.json
+design/town-500m/phase1/legacy-remap.json
+design/town-500m/phase1/pilot-contract.json
+tests/town_glass_regression.gd/.tscn
+tests/town500_building_pilots.gd/.tscn
+tests/artifacts/town500_phase1_20261008/

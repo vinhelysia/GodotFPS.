@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Art/ApartmentSite/dry_terrain.tscn" id="1_base"]
+[ext_resource type="Material" path="res://Scene/World/Town500m/Art/TerrainPilot/ground_blend.tres" id="2_town"]
+[ext_resource type="Material" path="res://Scene/World/Town500m/Art/ApartmentSite/ground_farmland.tres" id="3_farmland"]
+[ext_resource type="Material" path="res://Scene/World/Town500m/Art/ApartmentSite/ground_shore.tres" id="4_shore"]
+
+[node name="Town500mDryTerrain" instance=ExtResource("1_base")]
+
+[node name="chunk_0_2_farmland_cut" parent="ApartmentExcavation"]
+material_override = ExtResource("3_farmland")
+
+[node name="chunk_0_2_shore_cut" parent="ApartmentExcavation"]
+material_override = ExtResource("4_shore")
+
+[node name="chunk_0_2_town_cut" parent="ApartmentExcavation"]
+material_override = ExtResource("2_town")
+
+[node name="chunk_0_3_farmland_cut" parent="ApartmentExcavation"]
+material_override = ExtResource("3_farmland")
+
+[node name="chunk_0_3_shore_cut" parent="ApartmentExcavation"]
+material_override = ExtResource("4_shore")
+
+[node name="chunk_0_3_town_cut" parent="ApartmentExcavation"]
+material_override = ExtResource("2_town")
+
+[node name="entry_spur" parent="ApartmentExcavation"]
+material_override = ExtResource("3_farmland")

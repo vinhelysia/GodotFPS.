@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/industry_steel_beam_stack/assets/industry_steel_beam_stack_small.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/industry_steel_beam_stack/materials/town_industry_steel_beam_stack_small_clean.tres" id="2_finish"]
+
+[node name="industry_steel_beam_stack__small" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "industry_steel_beam_stack"
+metadata/catalog_variant = "small"
+metadata/finish = "clean"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="SteelBeamStack" parent="Model/SteelBeamStockpile"]
+surface_material_override/0 = ExtResource("2_finish")

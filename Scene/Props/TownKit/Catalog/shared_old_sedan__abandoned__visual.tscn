@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/old_sedan/assets/old_sedan_abandoned.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/old_sedan/materials/town_old_sedans_used.tres" id="2_finish"]
+
+[node name="shared_old_sedan__abandoned" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "shared_old_sedan"
+metadata/catalog_variant = "abandoned"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="SedanBodyAbandoned" parent="Model/TownOldSedanAbandoned"]
+surface_material_override/0 = ExtResource("2_finish")

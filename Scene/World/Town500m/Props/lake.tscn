@@ -1,0 +1,165 @@
+[gd_scene load_steps=18 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/lake_wood_pier__straight.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/lake_rowboat__beached.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/lake_fishing_net__rolled.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/lake_boat_toolkit__oars__visual.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/lake_boat_toolkit__toolbox.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/lake_fishing_crate__closed.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/lake_fishing_trap__basket.tscn" id="7"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/lake_fishing_trap__cage.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/lake_rope_coil__large__visual.tscn" id="9"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/lake_lantern__off__visual.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/lake_life_ring__mounted__visual.tscn" id="11"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/lake_mooring_bollard__timber.tscn" id="12"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/lake_lakeside_bench__worn.tscn" id="13"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/lake_water_intake_pipe__intake__visual.tscn" id="14"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/lake_cattails__dense__visual.tscn" id="15"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/lake_cattails__sparse__visual.tscn" id="16"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_street_litter__tin__visual.tscn" id="17"]
+
+[node name="lake" type="Node3D"]
+
+[node name="OL-pier-stock" parent="." instance=ExtResource("1")]
+position = Vector3(185, 2, 132.5)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OL-pier-stock"
+metadata/catalog_id = "lake_wood_pier"
+metadata/role = "Spare pier section stored beside L04 boat shed"
+
+[node name="OL-boat" parent="." instance=ExtResource("2")]
+position = Vector3(183, 2, 137)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OL-boat"
+metadata/catalog_id = "lake_rowboat"
+metadata/role = "Beached rowboat on boat-shed dry service apron"
+
+[node name="OL-net" parent="." instance=ExtResource("3")]
+position = Vector3(184, 2, 135)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OL-net"
+metadata/catalog_id = "lake_fishing_net"
+metadata/role = "Rolled fishing net beside beached boat"
+
+[node name="OL-oars" parent="." instance=ExtResource("4")]
+position = Vector3(183, 2, 135.7)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OL-oars"
+metadata/catalog_id = "lake_boat_toolkit"
+metadata/role = "Oars stored beside beached boat"
+
+[node name="OL-toolbox" parent="." instance=ExtResource("5")]
+position = Vector3(185.4, 2, 134.9)
+rotation = Vector3(0, 0.174533, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OL-toolbox"
+metadata/catalog_id = "lake_boat_toolkit"
+metadata/role = "Boat repair toolbox beside net"
+
+[node name="OL-crate-01" parent="." instance=ExtResource("6")]
+position = Vector3(190, 2, 134)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OL-crate-01"
+metadata/catalog_id = "lake_fishing_crate"
+metadata/role = "Closed fishing crate by boat shed rear service side"
+
+[node name="OL-crate-02" parent="." instance=ExtResource("6")]
+position = Vector3(191.2, 2, 134)
+rotation = Vector3(0, 0.174533, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OL-crate-02"
+metadata/catalog_id = "lake_fishing_crate"
+metadata/role = "Second closed crate in fishing stock"
+
+[node name="OL-trap-01" parent="." instance=ExtResource("7")]
+position = Vector3(190, 2, 132.5)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OL-trap-01"
+metadata/catalog_id = "lake_fishing_trap"
+metadata/role = "Basket trap drying beside crates"
+
+[node name="OL-trap-02" parent="." instance=ExtResource("8")]
+position = Vector3(191.2, 2, 132.5)
+rotation = Vector3(0, 0.261799, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OL-trap-02"
+metadata/catalog_id = "lake_fishing_trap"
+metadata/role = "Metal trap beside basket trap"
+
+[node name="OL-rope" parent="." instance=ExtResource("9")]
+position = Vector3(188, 2, 132.7)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OL-rope"
+metadata/catalog_id = "lake_rope_coil"
+metadata/role = "Mooring rope stored at boat shed"
+
+[node name="OL-lantern" parent="." instance=ExtResource("10")]
+position = Vector3(190, 2.38, 134)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OL-lantern"
+metadata/catalog_id = "lake_lantern"
+metadata/role = "Unlit lantern atop fishing crate"
+
+[node name="OL-lifering" parent="." instance=ExtResource("11")]
+position = Vector3(188, 3.05, 135.995)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OL-lifering"
+metadata/catalog_id = "lake_life_ring"
+metadata/role = "Lifesaving ring mounted on boat shed north service wall"
+
+[node name="OL-bollard" parent="." instance=ExtResource("12")]
+position = Vector3(169, 2.684142, 148.5)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OL-bollard"
+metadata/catalog_id = "lake_mooring_bollard"
+metadata/role = "Retired timber bollard stored above shoreline reserve"
+
+[node name="OL-bench" parent="." instance=ExtResource("13")]
+position = Vector3(160, 2.306747, 138.3)
+rotation = Vector3(0.123688, -3.140278, 0.010652)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OL-bench"
+metadata/catalog_id = "lake_lakeside_bench"
+metadata/role = "Existing settlement shore overlook, back from path and bank"
+
+[node name="OL-intake-stock" parent="." instance=ExtResource("14")]
+position = Vector3(117.3, 2.29, 125.8)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OL-intake-stock"
+metadata/catalog_id = "lake_water_intake_pipe"
+metadata/role = "Spare intake pipe along pump-house rear wall"
+
+[node name="OL-cattails-01" parent="." instance=ExtResource("15")]
+position = Vector3(161, 2.440149, 151)
+rotation = Vector3(0, 0.785398, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OL-cattails-01"
+metadata/catalog_id = "lake_cattails"
+metadata/role = "Dry upper-shore cattail patch outside six metre bank reserve"
+
+[node name="OL-cattails-02" parent="." instance=ExtResource("16")]
+position = Vector3(162, 2.566958, 151)
+rotation = Vector3(0, 0.174533, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OL-cattails-02"
+metadata/catalog_id = "lake_cattails"
+metadata/role = "Sparse cattails near upper shore patch"
+
+[node name="OL-litter" parent="." instance=ExtResource("17")]
+position = Vector3(192.5, 2, 132.8)
+rotation = Vector3(0, 0.523599, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OL-litter"
+metadata/catalog_id = "shared_street_litter"
+metadata/role = "Small discarded tin near fishing work stock"

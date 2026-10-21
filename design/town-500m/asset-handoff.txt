@@ -1,0 +1,35 @@
+Town500m asset handoff — Phase0, 2026-10-08
+Status: offline authoring complete; native/modeling pending. Catalogue is placement authority; terrain-contract owns pads/roads/water/two bridges/dock. No Town scene or runtime change in this phase.
+
+1. Approved composition
+12 Town source plots become32 real-scale structures,15 ground interiors and4 upper interiors. T03-A/T06-B/T07-A/T12-A use t02_long_house with actual stairs. T06-A uses the closed apartment shell: floors=2 does not imply an accessible upper floor. Source Town boxes remain plot envelopes and must never be scaled into giant physical buildings.
+76 physical objects total:54 existing editable scene instances,22 dimensioned pending asset instances.53 source objects have one explicit mapping each. R01/R02 map to terrain-owned bridges;R03 retired;L03 maps to terrain-owned DOCK/gangway, without duplicate structure collision. B01/B02/B03/B05 remain shells;B04-ENTRY is the only bunker ground interior,8x8 m at(-149,-147),front south,yaw180. Deep rear entry sealed; no underground scene/teleport/keys/power system.
+
+2. Reuse and dimensional authority
+Reuse14 TownKit template types through18 existing scene variants in res://Scene/Props/TownKit/Buildings/. Sizes/access come from Assets/TownConceptB/Buildings/building_contract.json. Do not scale templates to source envelopes. Local pivot=floor centre;root=pad+0.2m. Front local -Z is confirmed by façade/entry nodes. Godot yaw front=[-sin(yaw),-cos(yaw)];90 faces west,180 faces south. Catalogue records exact threshold and1.8m-wide apron with3m exterior run. GFEntry marker is an approach marker1.2m outside wall, not the threshold itself.
+Town pads useY2m;farmY1.5m except A01-A hill-side padY3.30743m;bunker lower terraceY10m. Other outer pads are authoring targets in pad_intent;primary must reconcile with terrain surface and native floor offsets, keeping actual entry8x8 rather than copying its source43.18x23.86 envelope. Roof/eave outsets and imported collision must be measured before final art acceptance.
+
+3. Pending physical assets
+fuel_tank: 5 x 5 x 5 m (local X x Z x height); I03-A, I03-B, I03-C.
+container: 6.06 x 2.44 x 2.59 m (local X x Z x height); I04-A, I04-B, I04-C, I06-A, I06-B, I06-C.
+railcar: 3.1 x 14 x 4 m (local X x Z x height); I08-A, I09-A.
+bunker_entry: 8 x 8 x 3.6 m (local X x Z x height); B04-ENTRY.
+watch_tower: 4 x 4 x 8 m (local X x Z x height); B07-A, B08-A.
+observation_platform: 4 x 4 x 5 m (local X x Z x height); H01-A.
+sealed_pillbox: 6 x 5 x 2.7 m (local X x Z x height); H02-A.
+radio_mast: 2 x 2 x 13 m (local X x Z x height); H03-A.
+stone_ruin: 8 x 6 x 2.4 m (local X x Z x height); H04-A.
+hunting_stand: 3 x 3 x 4.5 m (local X x Z x height); F03-A.
+cache_crate: 1.2 x 0.8 x 0.75 m (local X x Z x height); F04-A.
+wind_pump: 3 x 3 x 7 m (local X x Z x height); A03-A.
+water_cistern: 4 x 4 x 4 m (local X x Z x height); A09-A.
+These are actual sizes, not cluster envelopes. Fuel tanks have3 separate5m footprints; containers have six6.06x2.44m single-height instances with8m centre spacing;railcars use3.1m width and14m body length. Towers/mast have no accessible upper floor in Phase0. H01 is a sealed/nonclimbable observation landmark until any later access is separately designed. H04 is a compact solid ruin silhouette, not a promised new room. F04 cache is one1.2x0.8m box.
+New per-prop visual triangle/surface budgets for these families remain unapproved in implementation-plan.txt; no modeling dispatched or geometry generated. First inspect existing TownKit/BunkerKit finished manifests for compatible reuse; fit a collision helper to the actual asset, not to these old source envelopes. A reused asset with different dimensions requires catalogue/check update before import.
+
+4. Art release and collision gates
+Latest inspected release: C:/Stuff/Blender/TownKit/town_detail_polish_handoff_20261008.md, asset_manifest.json, release_files_sha256.json and verification/detail_polish_release.json. New transparent window/booth GLBs are not yet copied/imported into this Godot project. Copy GLBs,UV-aligned atlas maps and material variants as one checked batch;do not mix old geometry/new atlas. Keep surface0 opaque architecture override and embedded surface1 glass. Phase1 must separate glass-only collision from opaque wall/frame bodies before AI-pane skipping;player/bullets still blocked. Do not infer this from alpha transparency alone.
+Unit-scale static PackedScene instances; no runtime JSON parser,generator,manager or per-prop scripts. Existing closed shell variants must remain closed;do not add entry flags to opaque geometry. Existing stair templates still require actual player/native navigation verification at all four placements. Bunker entry needs a fitted room/floor/ceiling and blocked deep doorway; exterior gate route remains open.
+
+5. Offline evidence and exclusions
+Catalogue checks:32 Town footprints contained inside12 plots;pairwise rectangle gap>=1m;corrected non-rail roads+route graph swept clearance>=0.563075513m;water clearance>=4.244482788m;all ground-door aprons clear other structures;8 proposed patrol loops swept with1m radius have>=1.5m structure clearance. Evidence hashes/counts are in building-catalogue.json.offline_self_check. Railcar/rail overlap is intended. Source mappings are complete;no third crossing is authored.
+Primary owns access street connectivity,LOS,spawn/extract/cover/tree merge and final layout-check.json. These checks use oriented proxy rectangles and authored path widths;they do not certify native terrain elevation,roof/eave silhouettes,mesh/collision/glass,stairs,nav bake,player traversal or1080p FPS. Keep runtime stopped for this offline phase.

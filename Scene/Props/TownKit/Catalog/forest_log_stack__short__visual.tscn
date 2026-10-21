@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/forest_log_stack/assets/forest_log_stack_short.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/forest_log_stack/materials/town_forest_log_stack_short_used.tres" id="2_finish"]
+
+[node name="forest_log_stack__short" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "forest_log_stack"
+metadata/catalog_variant = "short"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="LogStackShort" parent="Model/TownLogStackShort"]
+surface_material_override/0 = ExtResource("2_finish")

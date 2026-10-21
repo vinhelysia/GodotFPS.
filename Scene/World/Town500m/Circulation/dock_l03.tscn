@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3]
+
+[sub_resource type="StandardMaterial3D" id="wood"]
+albedo_color = Color(0.34, 0.26, 0.17, 1)
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="BoxMesh" id="mesh_Deck"]
+size = Vector3(4, 0.35, 14)
+
+[sub_resource type="BoxShape3D" id="shape_Deck"]
+size = Vector3(4, 0.35, 14)
+
+[sub_resource type="BoxMesh" id="mesh_Gangway"]
+size = Vector3(2.5, 0.35, 20)
+
+[sub_resource type="BoxShape3D" id="shape_Gangway"]
+size = Vector3(2.5, 0.35, 20)
+
+[node name="DockL03" type="Node3D"]
+
+[node name="Deck" type="StaticBody3D" parent="."]
+position = Vector3(175, 2.325, 173)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Visual" type="MeshInstance3D" parent="Deck"]
+mesh = SubResource("mesh_Deck")
+material_override = SubResource("wood")
+
+[node name="Collision" type="CollisionShape3D" parent="Deck"]
+shape = SubResource("shape_Deck")
+
+[node name="Gangway" type="StaticBody3D" parent="."]
+position = Vector3(175, 2.325, 157)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Visual" type="MeshInstance3D" parent="Gangway"]
+mesh = SubResource("mesh_Gangway")
+material_override = SubResource("wood")
+
+[node name="Collision" type="CollisionShape3D" parent="Gangway"]
+shape = SubResource("shape_Gangway")

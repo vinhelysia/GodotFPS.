@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/concrete_utility_pole/assets/concrete_utility_pole_insulators.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/concrete_utility_pole/materials/town_concrete_utility_poles_used.tres" id="2_finish"]
+
+[node name="shared_concrete_utility_pole__insulators" type="Node3D"]
+metadata/catalog_id = "shared_concrete_utility_pole"
+metadata/catalog_variant = "insulators"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="ConcreteUtilityPoleInsulators" parent="Model/TownConcreteUtilityPoleInsulators"]
+surface_material_override/0 = ExtResource("2_finish")

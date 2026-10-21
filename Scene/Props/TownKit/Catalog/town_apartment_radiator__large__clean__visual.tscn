@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/apartment_radiator/assets/apartment_radiator_large.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/apartment_radiator/materials/town_apartment_radiator_large_clean.tres" id="2_finish"]
+
+[node name="town_apartment_radiator__large" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "town_apartment_radiator"
+metadata/catalog_variant = "large"
+metadata/finish = "clean"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="RadiatorLarge" parent="Model/TownRadiatorLarge"]
+surface_material_override/0 = ExtResource("2_finish")

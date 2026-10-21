@@ -1,0 +1,76 @@
+{
+  "tiles": [
+    {
+      "tile": 0,
+      "bounds_xz": [
+        -250,
+        -250,
+        0,
+        0
+      ],
+      "polygons": 4162,
+      "vertices": 3407,
+      "elapsed_ms": 1553
+    },
+    {
+      "tile": 1,
+      "bounds_xz": [
+        0,
+        -250,
+        250,
+        0
+      ],
+      "polygons": 3508,
+      "vertices": 2760,
+      "elapsed_ms": 1379
+    },
+    {
+      "tile": 2,
+      "bounds_xz": [
+        -250,
+        0,
+        0,
+        250
+      ],
+      "polygons": 2028,
+      "vertices": 1754,
+      "elapsed_ms": 1596
+    },
+    {
+      "tile": 3,
+      "bounds_xz": [
+        0,
+        0,
+        250,
+        250
+      ],
+      "polygons": 2143,
+      "vertices": 1765,
+      "elapsed_ms": 1258
+    }
+  ],
+  "vertices": 9642,
+  "polygons": 11841,
+  "seams": {
+    "x": {
+      "joined_edge_pairs": 18,
+      "open_boundary_edges": [
+        {
+          "a": "(0.0, 2.2, 102.5)",
+          "b": "(0.0, 2.2, 105.1)"
+        },
+        {
+          "a": "(0.0, 2.2, 102.5)",
+          "b": "(0.0, 2.2, 101.8)"
+        }
+      ]
+    },
+    "z": {
+      "joined_edge_pairs": 12,
+      "open_boundary_edges": []
+    }
+  },
+  "nonmanifold_edges": 0,
+  "runtime_regions": 1,
+  "runtime_links": 0
+}

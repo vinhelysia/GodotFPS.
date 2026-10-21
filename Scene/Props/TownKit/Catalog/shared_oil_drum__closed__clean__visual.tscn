@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/oil_drum/assets/oil_drum_closed.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/oil_drum/materials/town_oil_drums_clean.tres" id="2_finish"]
+
+[node name="shared_oil_drum__closed" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "shared_oil_drum"
+metadata/catalog_variant = "closed"
+metadata/finish = "clean"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="OilDrumClosed" parent="Model/TownOilDrumClosed"]
+surface_material_override/0 = ExtResource("2_finish")

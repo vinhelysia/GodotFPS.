@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/farmland_grain_hopper/assets/farmland_grain_hopper_tall.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/farmland_grain_hopper/materials/town_farmland_grain_hopper_tall_used.tres" id="2_finish"]
+
+[node name="farmland_grain_hopper__tall" type="Node3D"]
+metadata/catalog_id = "farmland_grain_hopper"
+metadata/catalog_variant = "tall"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="GrainHopperTall" parent="Model/TownGrainHopperTall"]
+surface_material_override/0 = ExtResource("2_finish")

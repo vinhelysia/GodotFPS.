@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/lake_lantern/assets/lake_lantern_off.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/lake_lantern/materials/town_lake_lantern_used.tres" id="2_finish"]
+
+[node name="lake_lantern__off" type="Node3D"]
+metadata/catalog_id = "lake_lantern"
+metadata/catalog_variant = "off"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="Lantern" parent="Model/TownLakeLantern"]
+surface_material_override/0 = ExtResource("2_finish")

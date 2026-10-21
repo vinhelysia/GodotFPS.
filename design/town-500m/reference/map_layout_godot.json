@@ -1,0 +1,3101 @@
+{
+  "title": "500m Extraction Map - Detailed Godot Blockout Plan",
+  "schema_version": "1.0.0",
+  "status": "DESIGN PROPOSAL (not an existing game scene)",
+  "source": "map_500m_zoning_sketch.svg (provided by user)",
+  "source_preservation": {
+    "map_side_m": 500,
+    "svg_map_bounds_px": [
+      30,
+      30,
+      470,
+      470
+    ],
+    "original_road_water_rail_spawns_extractions_preserved": true
+  },
+  "coordinate_system": {
+    "engine": "Godot 4.x",
+    "units": "meters",
+    "axes": "+X east, -Z north, +Y up",
+    "origin": "center of map",
+    "world_bounds_x_m": [
+      -250,
+      250
+    ],
+    "world_bounds_z_m": [
+      -250,
+      250
+    ],
+    "original_svg_to_world": "X=(svg_x-250)*500/440; Z=(svg_y-250)*500/440"
+  },
+  "zones": [
+    {
+      "id": "town",
+      "name": "Town Core",
+      "polygon_xz_m": [
+        [
+          -160.23,
+          -39.77
+        ],
+        [
+          39.77,
+          -39.77
+        ],
+        [
+          39.77,
+          160.23
+        ],
+        [
+          -160.23,
+          160.23
+        ]
+      ],
+      "role": "High-density urban combat and central loot hub",
+      "combat_profile": "Close to medium; alleys and two-storey sightlines",
+      "landmarks": [
+        "T01",
+        "T03",
+        "T05",
+        "T07",
+        "T10"
+      ],
+      "implementation_notes": "Keep 6m main road open; interconnect at least 3 alley routes across blocks. Interiors only for tagged buildings."
+    },
+    {
+      "id": "industry",
+      "name": "Industry / Rail Yard",
+      "polygon_xz_m": [
+        [
+          120.45,
+          -120.45
+        ],
+        [
+          239.77,
+          -120.45
+        ],
+        [
+          239.77,
+          110.23
+        ],
+        [
+          125.0,
+          110.23
+        ]
+      ],
+      "role": "Medium-range industrial combat and eastern route to E-B",
+      "combat_profile": "Mid to long lanes, hard cover from freight cars and containers",
+      "landmarks": [
+        "I01",
+        "I03",
+        "I04",
+        "I07"
+      ],
+      "implementation_notes": "Do not place collision on rail crossing of county road; use 8m cargo lanes."
+    },
+    {
+      "id": "bunker",
+      "name": "Military Bunker",
+      "polygon_xz_m": [
+        [
+          -220.45,
+          -220.45
+        ],
+        [
+          -79.55,
+          -220.45
+        ],
+        [
+          -79.55,
+          -120.45
+        ],
+        [
+          -220.45,
+          -120.45
+        ]
+      ],
+      "role": "High-risk secured compound, optional underground entrance",
+      "combat_profile": "Close-range compound; strong choke at south gate",
+      "landmarks": [
+        "B01",
+        "B02",
+        "B04",
+        "B06"
+      ],
+      "implementation_notes": "Build underground as separate scene stub; exterior compound and gate first."
+    },
+    {
+      "id": "hills",
+      "name": "Hills",
+      "polygon_xz_m": [
+        [
+          -250.0,
+          -250.0
+        ],
+        [
+          10.23,
+          -250.0
+        ],
+        [
+          -10.23,
+          -150.0
+        ],
+        [
+          -79.55,
+          -89.77
+        ],
+        [
+          -250.0,
+          -70.45
+        ]
+      ],
+      "role": "Overwatch with alternate ridge traversal",
+      "combat_profile": "Long sightlines broken by boulders and tree stands",
+      "landmarks": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "implementation_notes": "Use gentle stepped terrain blockout, max practical walkable slope 30 degrees."
+    },
+    {
+      "id": "forest",
+      "name": "Forest and Greenbelt",
+      "polygon_xz_m": [
+        [
+          29.55,
+          -250.0
+        ],
+        [
+          250.0,
+          -250.0
+        ],
+        [
+          250.0,
+          -120.45
+        ],
+        [
+          120.45,
+          -120.45
+        ],
+        [
+          120.45,
+          110.23
+        ],
+        [
+          110.23,
+          160.23
+        ],
+        [
+          95.45,
+          110.23
+        ],
+        [
+          79.55,
+          39.77
+        ],
+        [
+          75.0,
+          -29.55
+        ],
+        [
+          45.45,
+          -100.0
+        ],
+        [
+          14.77,
+          -170.45
+        ]
+      ],
+      "role": "Concealed flanking route west of rail yard and NE extract approach",
+      "combat_profile": "Short intermittent sightlines with tree/log cover",
+      "landmarks": [
+        "F01",
+        "F02",
+        "F03"
+      ],
+      "implementation_notes": "Keep a 4m cleared hiking trail to E-A; preserve 6m buffer around river."
+    },
+    {
+      "id": "farmland",
+      "name": "West and South Farmland",
+      "polygon_xz_m": [
+        [
+          -170.45,
+          -60.23
+        ],
+        [
+          -250.0,
+          -60.23
+        ],
+        [
+          -250.0,
+          250.0
+        ],
+        [
+          100.0,
+          250.0
+        ],
+        [
+          100.0,
+          170.45
+        ],
+        [
+          -170.45,
+          170.45
+        ]
+      ],
+      "role": "Spawn approach with alternating exposed fields and farm structures",
+      "combat_profile": "Medium to long with hedges, crop rows, bale cover",
+      "landmarks": [
+        "A01",
+        "A02",
+        "A04",
+        "A06"
+      ],
+      "implementation_notes": "S1 and S2 need initial safe cover and 18m no-loot spawn clearance."
+    },
+    {
+      "id": "river",
+      "name": "River / Crossings",
+      "polygon_xz_m": [
+        [
+          10.23,
+          -250.0
+        ],
+        [
+          37.5,
+          -250.0
+        ],
+        [
+          31.82,
+          -170.45
+        ],
+        [
+          61.36,
+          -102.27
+        ],
+        [
+          89.77,
+          -34.09
+        ],
+        [
+          94.32,
+          39.77
+        ],
+        [
+          110.23,
+          106.82
+        ],
+        [
+          146.59,
+          190.91
+        ],
+        [
+          122.73,
+          204.55
+        ],
+        [
+          92.05,
+          160.23
+        ],
+        [
+          80.68,
+          109.09
+        ],
+        [
+          62.5,
+          42.05
+        ],
+        [
+          59.09,
+          -23.86
+        ],
+        [
+          29.55,
+          -93.18
+        ],
+        [
+          0.0,
+          -165.91
+        ]
+      ],
+      "role": "Natural separator; defines bridge and secondary crossing",
+      "combat_profile": "Bridge medium-long; fords close, high exposure",
+      "landmarks": [
+        "R01",
+        "R02",
+        "R03"
+      ],
+      "implementation_notes": "All water is non-walkable except explicit shallow-ford path; river path must connect into lake."
+    },
+    {
+      "id": "lake",
+      "name": "Lake Shore",
+      "polygon_xz_m": [
+        [
+          96.59,
+          109.09
+        ],
+        [
+          250.0,
+          109.09
+        ],
+        [
+          250.0,
+          250.0
+        ],
+        [
+          125.0,
+          250.0
+        ],
+        [
+          92.05,
+          214.77
+        ]
+      ],
+      "role": "Exposed final shoreline route and E-C extract",
+      "combat_profile": "Open water, reeds, isolated cover",
+      "landmarks": [
+        "L01",
+        "L02",
+        "L03",
+        "L04"
+      ],
+      "implementation_notes": "Accessible shore only, no deep-water traversals; make E-C extract at shoreline on dry ground."
+    }
+  ],
+  "structures": [
+    {
+      "id": "T01",
+      "zone_id": "town",
+      "name": "Northwest house",
+      "kind": "house",
+      "position_xz_m": [
+        -137.5,
+        -17.61
+      ],
+      "footprint_m": [
+        29.55,
+        26.14
+      ],
+      "rotation_y_deg": 0,
+      "floors": 2,
+      "enterable": true,
+      "blockout_height_m": 6.5,
+      "loot_tier": "common",
+      "ai_interest": "civilian_loot",
+      "notes": ""
+    },
+    {
+      "id": "T02",
+      "zone_id": "town",
+      "name": "Pharmacy",
+      "kind": "store",
+      "position_xz_m": [
+        -97.16,
+        -14.2
+      ],
+      "footprint_m": [
+        30.68,
+        23.86
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": true,
+      "blockout_height_m": 3.4,
+      "loot_tier": "medical",
+      "ai_interest": "medical_loot",
+      "notes": ""
+    },
+    {
+      "id": "T03",
+      "zone_id": "town",
+      "name": "Post office",
+      "kind": "civic",
+      "position_xz_m": [
+        -32.95,
+        -13.07
+      ],
+      "footprint_m": [
+        34.09,
+        26.14
+      ],
+      "rotation_y_deg": 0,
+      "floors": 2,
+      "enterable": true,
+      "blockout_height_m": 6.2,
+      "loot_tier": "documents",
+      "ai_interest": "quest",
+      "notes": ""
+    },
+    {
+      "id": "T04",
+      "zone_id": "town",
+      "name": "Corner shop",
+      "kind": "store",
+      "position_xz_m": [
+        14.2,
+        -10.23
+      ],
+      "footprint_m": [
+        32.95,
+        25.0
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": true,
+      "blockout_height_m": 3.4,
+      "loot_tier": "food",
+      "ai_interest": "loot",
+      "notes": ""
+    },
+    {
+      "id": "T05",
+      "zone_id": "town",
+      "name": "Small clinic",
+      "kind": "civic",
+      "position_xz_m": [
+        -131.25,
+        59.09
+      ],
+      "footprint_m": [
+        37.5,
+        31.82
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": true,
+      "blockout_height_m": 3.4,
+      "loot_tier": "medical",
+      "ai_interest": "medical_loot",
+      "notes": ""
+    },
+    {
+      "id": "T06",
+      "zone_id": "town",
+      "name": "Apartment block",
+      "kind": "apartment",
+      "position_xz_m": [
+        -82.39,
+        72.73
+      ],
+      "footprint_m": [
+        30.68,
+        40.91
+      ],
+      "rotation_y_deg": 0,
+      "floors": 2,
+      "enterable": true,
+      "blockout_height_m": 6.4,
+      "loot_tier": "mixed",
+      "ai_interest": "interior_patrol",
+      "notes": ""
+    },
+    {
+      "id": "T07",
+      "zone_id": "town",
+      "name": "Municipal offices",
+      "kind": "civic",
+      "position_xz_m": [
+        -25.57,
+        71.59
+      ],
+      "footprint_m": [
+        39.77,
+        36.36
+      ],
+      "rotation_y_deg": 0,
+      "floors": 2,
+      "enterable": true,
+      "blockout_height_m": 7,
+      "loot_tier": "valuable",
+      "ai_interest": "quest",
+      "notes": ""
+    },
+    {
+      "id": "T08",
+      "zone_id": "town",
+      "name": "Auto garage",
+      "kind": "garage",
+      "position_xz_m": [
+        17.61,
+        74.43
+      ],
+      "footprint_m": [
+        28.41,
+        30.68
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": true,
+      "blockout_height_m": 3.4,
+      "loot_tier": "tools",
+      "ai_interest": "loot",
+      "notes": ""
+    },
+    {
+      "id": "T09",
+      "zone_id": "town",
+      "name": "Damaged house",
+      "kind": "ruin",
+      "position_xz_m": [
+        -132.95,
+        122.16
+      ],
+      "footprint_m": [
+        34.09,
+        28.41
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 3.0,
+      "loot_tier": "common",
+      "ai_interest": "cover",
+      "notes": ""
+    },
+    {
+      "id": "T10",
+      "zone_id": "town",
+      "name": "Market courtyard",
+      "kind": "market",
+      "position_xz_m": [
+        -63.07,
+        112.5
+      ],
+      "footprint_m": [
+        21.59,
+        15.91
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 1.6,
+      "loot_tier": "food",
+      "ai_interest": "cover",
+      "notes": ""
+    },
+    {
+      "id": "T11",
+      "zone_id": "town",
+      "name": "Back-alley workshops",
+      "kind": "garage",
+      "position_xz_m": [
+        -23.3,
+        125.57
+      ],
+      "footprint_m": [
+        32.95,
+        23.86
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 3.4,
+      "loot_tier": "tools",
+      "ai_interest": "cover",
+      "notes": ""
+    },
+    {
+      "id": "T12",
+      "zone_id": "town",
+      "name": "Southern cottage",
+      "kind": "house",
+      "position_xz_m": [
+        21.02,
+        126.14
+      ],
+      "footprint_m": [
+        21.59,
+        29.55
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 3.4,
+      "loot_tier": "common",
+      "ai_interest": "cover",
+      "notes": ""
+    },
+    {
+      "id": "I01",
+      "zone_id": "industry",
+      "name": "Production warehouse",
+      "kind": "warehouse",
+      "position_xz_m": [
+        155.11,
+        -72.16
+      ],
+      "footprint_m": [
+        48.86,
+        51.14
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": true,
+      "blockout_height_m": 8,
+      "loot_tier": "industrial",
+      "ai_interest": "guard_patrol",
+      "notes": ""
+    },
+    {
+      "id": "I02",
+      "zone_id": "industry",
+      "name": "Dispatch office",
+      "kind": "civic",
+      "position_xz_m": [
+        191.48,
+        -78.41
+      ],
+      "footprint_m": [
+        19.32,
+        27.27
+      ],
+      "rotation_y_deg": 0,
+      "floors": 2,
+      "enterable": true,
+      "blockout_height_m": 6.5,
+      "loot_tier": "documents",
+      "ai_interest": "overwatch",
+      "notes": ""
+    },
+    {
+      "id": "I03",
+      "zone_id": "industry",
+      "name": "Fuel storage tanks",
+      "kind": "tank",
+      "position_xz_m": [
+        147.16,
+        -16.48
+      ],
+      "footprint_m": [
+        32.95,
+        21.59
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 5.5,
+      "loot_tier": "industrial",
+      "ai_interest": "hazard",
+      "notes": ""
+    },
+    {
+      "id": "I04",
+      "zone_id": "industry",
+      "name": "Container stack north",
+      "kind": "container",
+      "position_xz_m": [
+        179.55,
+        -23.86
+      ],
+      "footprint_m": [
+        25.0,
+        18.18
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 4.8,
+      "loot_tier": "tools",
+      "ai_interest": "cover",
+      "notes": ""
+    },
+    {
+      "id": "I05",
+      "zone_id": "industry",
+      "name": "Vehicle maintenance",
+      "kind": "warehouse",
+      "position_xz_m": [
+        150.0,
+        64.2
+      ],
+      "footprint_m": [
+        38.64,
+        28.41
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": true,
+      "blockout_height_m": 6,
+      "loot_tier": "mechanical",
+      "ai_interest": "guard_patrol",
+      "notes": ""
+    },
+    {
+      "id": "I06",
+      "zone_id": "industry",
+      "name": "Container stack south",
+      "kind": "container",
+      "position_xz_m": [
+        154.55,
+        34.66
+      ],
+      "footprint_m": [
+        45.45,
+        14.77
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 2.8,
+      "loot_tier": "industrial",
+      "ai_interest": "cover",
+      "notes": ""
+    },
+    {
+      "id": "I07",
+      "zone_id": "industry",
+      "name": "Rail control cabin",
+      "kind": "civic",
+      "position_xz_m": [
+        182.39,
+        73.3
+      ],
+      "footprint_m": [
+        19.32,
+        23.86
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 4.0,
+      "loot_tier": "keys",
+      "ai_interest": "quest",
+      "notes": ""
+    },
+    {
+      "id": "I08",
+      "zone_id": "industry",
+      "name": "Freight car north",
+      "kind": "railcar",
+      "position_xz_m": [
+        208.52,
+        -43.18
+      ],
+      "footprint_m": [
+        10.23,
+        29.55
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 3.6,
+      "loot_tier": "industrial",
+      "ai_interest": "cover",
+      "notes": ""
+    },
+    {
+      "id": "I09",
+      "zone_id": "industry",
+      "name": "Freight car south",
+      "kind": "railcar",
+      "position_xz_m": [
+        198.3,
+        59.09
+      ],
+      "footprint_m": [
+        10.23,
+        27.27
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 3.6,
+      "loot_tier": "mixed",
+      "ai_interest": "cover",
+      "notes": ""
+    },
+    {
+      "id": "B01",
+      "zone_id": "bunker",
+      "name": "Barracks",
+      "kind": "barracks",
+      "position_xz_m": [
+        -186.93,
+        -194.89
+      ],
+      "footprint_m": [
+        44.32,
+        28.41
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": true,
+      "blockout_height_m": 4.1,
+      "loot_tier": "military",
+      "ai_interest": "patrol",
+      "notes": ""
+    },
+    {
+      "id": "B02",
+      "zone_id": "bunker",
+      "name": "Armory",
+      "kind": "civic",
+      "position_xz_m": [
+        -138.07,
+        -195.45
+      ],
+      "footprint_m": [
+        30.68,
+        27.27
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": true,
+      "blockout_height_m": 4.4,
+      "loot_tier": "valuable",
+      "ai_interest": "guard",
+      "notes": ""
+    },
+    {
+      "id": "B03",
+      "zone_id": "bunker",
+      "name": "Command shed",
+      "kind": "civic",
+      "position_xz_m": [
+        -101.14,
+        -193.75
+      ],
+      "footprint_m": [
+        22.73,
+        30.68
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 4.5,
+      "loot_tier": "documents",
+      "ai_interest": "guard",
+      "notes": ""
+    },
+    {
+      "id": "B04",
+      "zone_id": "bunker",
+      "name": "Bunker entrance portal",
+      "kind": "bunker_entrance",
+      "position_xz_m": [
+        -148.86,
+        -151.7
+      ],
+      "footprint_m": [
+        43.18,
+        23.86
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": true,
+      "blockout_height_m": 4,
+      "loot_tier": "access",
+      "ai_interest": "high_priority",
+      "notes": "Portal leads to a separate underground scene; locked door placeholder, no invented underground plan."
+    },
+    {
+      "id": "B05",
+      "zone_id": "bunker",
+      "name": "Generator shed",
+      "kind": "garage",
+      "position_xz_m": [
+        -195.45,
+        -147.16
+      ],
+      "footprint_m": [
+        25.0,
+        19.32
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 3.2,
+      "loot_tier": "tools",
+      "ai_interest": "cover",
+      "notes": ""
+    },
+    {
+      "id": "B06",
+      "zone_id": "bunker",
+      "name": "South gate security",
+      "kind": "checkpoint",
+      "position_xz_m": [
+        -140.34,
+        -127.84
+      ],
+      "footprint_m": [
+        26.14,
+        10.23
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 2.7,
+      "loot_tier": "military",
+      "ai_interest": "guard",
+      "notes": "Only driveable gate on existing gravel road (x=127,y=144)."
+    },
+    {
+      "id": "B07",
+      "zone_id": "bunker",
+      "name": "Northwest watch tower",
+      "kind": "tower",
+      "position_xz_m": [
+        -213.07,
+        -214.2
+      ],
+      "footprint_m": [
+        10.23,
+        10.23
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 8,
+      "loot_tier": "none",
+      "ai_interest": "overwatch",
+      "notes": ""
+    },
+    {
+      "id": "B08",
+      "zone_id": "bunker",
+      "name": "Northeast watch tower",
+      "kind": "tower",
+      "position_xz_m": [
+        -90.34,
+        -214.2
+      ],
+      "footprint_m": [
+        10.23,
+        10.23
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 8,
+      "loot_tier": "none",
+      "ai_interest": "overwatch",
+      "notes": ""
+    },
+    {
+      "id": "H01",
+      "zone_id": "hills",
+      "name": "Ridge observation platform",
+      "kind": "tower",
+      "position_xz_m": [
+        -43.75,
+        -165.34
+      ],
+      "footprint_m": [
+        14.77,
+        14.77
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 7.5,
+      "loot_tier": "valuable",
+      "ai_interest": "overwatch",
+      "notes": ""
+    },
+    {
+      "id": "H02",
+      "zone_id": "hills",
+      "name": "Old concrete pillbox",
+      "kind": "bunker_entrance",
+      "position_xz_m": [
+        -62.5,
+        -105.68
+      ],
+      "footprint_m": [
+        15.91,
+        13.64
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 2.7,
+      "loot_tier": "tools",
+      "ai_interest": "cover",
+      "notes": ""
+    },
+    {
+      "id": "H03",
+      "zone_id": "hills",
+      "name": "Radio mast",
+      "kind": "tower",
+      "position_xz_m": [
+        -11.93,
+        -215.34
+      ],
+      "footprint_m": [
+        12.5,
+        12.5
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 13,
+      "loot_tier": "documents",
+      "ai_interest": "landmark",
+      "notes": ""
+    },
+    {
+      "id": "H04",
+      "zone_id": "hills",
+      "name": "Ruined stone shelter",
+      "kind": "ruin",
+      "position_xz_m": [
+        -218.18,
+        -94.89
+      ],
+      "footprint_m": [
+        20.45,
+        14.77
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 2.4,
+      "loot_tier": "common",
+      "ai_interest": "cover",
+      "notes": ""
+    },
+    {
+      "id": "F01",
+      "zone_id": "forest",
+      "name": "Ranger shelter",
+      "kind": "house",
+      "position_xz_m": [
+        117.61,
+        -190.91
+      ],
+      "footprint_m": [
+        23.86,
+        20.45
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 3.6,
+      "loot_tier": "common",
+      "ai_interest": "rest",
+      "notes": ""
+    },
+    {
+      "id": "F02",
+      "zone_id": "forest",
+      "name": "Logging camp",
+      "kind": "garage",
+      "position_xz_m": [
+        177.27,
+        -153.98
+      ],
+      "footprint_m": [
+        31.82,
+        21.59
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 3.5,
+      "loot_tier": "tools",
+      "ai_interest": "patrol",
+      "notes": ""
+    },
+    {
+      "id": "F03",
+      "zone_id": "forest",
+      "name": "Hunting stand",
+      "kind": "tower",
+      "position_xz_m": [
+        233.52,
+        -156.82
+      ],
+      "footprint_m": [
+        10.23,
+        11.36
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 6,
+      "loot_tier": "rare",
+      "ai_interest": "overwatch",
+      "notes": ""
+    },
+    {
+      "id": "F04",
+      "zone_id": "forest",
+      "name": "Greenbelt cache",
+      "kind": "crate",
+      "position_xz_m": [
+        102.27,
+        -67.61
+      ],
+      "footprint_m": [
+        11.36,
+        7.95
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 1.4,
+      "loot_tier": "mixed",
+      "ai_interest": "loot",
+      "notes": ""
+    },
+    {
+      "id": "A01",
+      "zone_id": "farmland",
+      "name": "Western farmhouse",
+      "kind": "house",
+      "position_xz_m": [
+        -215.91,
+        -25.57
+      ],
+      "footprint_m": [
+        31.82,
+        28.41
+      ],
+      "rotation_y_deg": 0,
+      "floors": 2,
+      "enterable": true,
+      "blockout_height_m": 5.8,
+      "loot_tier": "common",
+      "ai_interest": "loot",
+      "notes": ""
+    },
+    {
+      "id": "A02",
+      "zone_id": "farmland",
+      "name": "Farm equipment shed",
+      "kind": "garage",
+      "position_xz_m": [
+        -187.5,
+        -24.43
+      ],
+      "footprint_m": [
+        18.18,
+        19.32
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 3.3,
+      "loot_tier": "tools",
+      "ai_interest": "cover",
+      "notes": ""
+    },
+    {
+      "id": "A03",
+      "zone_id": "farmland",
+      "name": "Small wind pump",
+      "kind": "tower",
+      "position_xz_m": [
+        -197.16,
+        72.16
+      ],
+      "footprint_m": [
+        12.5,
+        12.5
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 7,
+      "loot_tier": "none",
+      "ai_interest": "landmark",
+      "notes": ""
+    },
+    {
+      "id": "A04",
+      "zone_id": "farmland",
+      "name": "West feed store",
+      "kind": "barn",
+      "position_xz_m": [
+        -211.93,
+        117.05
+      ],
+      "footprint_m": [
+        35.23,
+        20.45
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 5,
+      "loot_tier": "food",
+      "ai_interest": "loot",
+      "notes": ""
+    },
+    {
+      "id": "A05",
+      "zone_id": "farmland",
+      "name": "West chicken coop",
+      "kind": "house",
+      "position_xz_m": [
+        -190.91,
+        142.61
+      ],
+      "footprint_m": [
+        22.73,
+        14.77
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 2.5,
+      "loot_tier": "common",
+      "ai_interest": "cover",
+      "notes": ""
+    },
+    {
+      "id": "A06",
+      "zone_id": "farmland",
+      "name": "South barn",
+      "kind": "barn",
+      "position_xz_m": [
+        -117.61,
+        202.27
+      ],
+      "footprint_m": [
+        48.86,
+        36.36
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": true,
+      "blockout_height_m": 6,
+      "loot_tier": "farm",
+      "ai_interest": "loot",
+      "notes": ""
+    },
+    {
+      "id": "A07",
+      "zone_id": "farmland",
+      "name": "Southern farmhouse",
+      "kind": "house",
+      "position_xz_m": [
+        -53.41,
+        198.3
+      ],
+      "footprint_m": [
+        36.36,
+        28.41
+      ],
+      "rotation_y_deg": 0,
+      "floors": 2,
+      "enterable": true,
+      "blockout_height_m": 6.1,
+      "loot_tier": "common",
+      "ai_interest": "loot",
+      "notes": ""
+    },
+    {
+      "id": "A08",
+      "zone_id": "farmland",
+      "name": "Tractor shed",
+      "kind": "garage",
+      "position_xz_m": [
+        54.55,
+        204.55
+      ],
+      "footprint_m": [
+        38.64,
+        27.27
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 4.5,
+      "loot_tier": "mechanical",
+      "ai_interest": "cover",
+      "notes": ""
+    },
+    {
+      "id": "A09",
+      "zone_id": "farmland",
+      "name": "Water cistern",
+      "kind": "tank",
+      "position_xz_m": [
+        69.89,
+        234.09
+      ],
+      "footprint_m": [
+        17.05,
+        15.91
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 5,
+      "loot_tier": "none",
+      "ai_interest": "landmark",
+      "notes": ""
+    },
+    {
+      "id": "R01",
+      "zone_id": "river",
+      "name": "Main county-road bridge",
+      "kind": "bridge",
+      "position_xz_m": [
+        81.25,
+        28.41
+      ],
+      "footprint_m": [
+        26.14,
+        22.73
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 0.55,
+      "loot_tier": "none",
+      "ai_interest": "chokepoint",
+      "notes": "Passable deck, 8-9m wide. No blocking collision; guardrails at edges only."
+    },
+    {
+      "id": "R02",
+      "zone_id": "river",
+      "name": "Northern shallow ford",
+      "kind": "ford",
+      "position_xz_m": [
+        42.61,
+        -100.0
+      ],
+      "footprint_m": [
+        26.14,
+        13.64
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 0,
+      "loot_tier": "none",
+      "ai_interest": "crossing",
+      "notes": "Slow traversal; shallow water only in marked 12m strip."
+    },
+    {
+      "id": "R03",
+      "zone_id": "river",
+      "name": "Southern fallen-log crossing",
+      "kind": "log_bridge",
+      "position_xz_m": [
+        97.73,
+        104.55
+      ],
+      "footprint_m": [
+        25.0,
+        11.36
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 0.8,
+      "loot_tier": "none",
+      "ai_interest": "crossing",
+      "notes": "Single-file noisy foot crossing; alternative to road bridge."
+    },
+    {
+      "id": "L01",
+      "zone_id": "lake",
+      "name": "Lakeside pump station",
+      "kind": "civic",
+      "position_xz_m": [
+        124.43,
+        131.25
+      ],
+      "footprint_m": [
+        26.14,
+        21.59
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 4.8,
+      "loot_tier": "tools",
+      "ai_interest": "loot",
+      "notes": ""
+    },
+    {
+      "id": "L02",
+      "zone_id": "lake",
+      "name": "Fishing hut",
+      "kind": "house",
+      "position_xz_m": [
+        152.84,
+        149.43
+      ],
+      "footprint_m": [
+        23.86,
+        17.05
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 3.3,
+      "loot_tier": "food",
+      "ai_interest": "cover",
+      "notes": ""
+    },
+    {
+      "id": "L03",
+      "zone_id": "lake",
+      "name": "Weathered boat dock",
+      "kind": "pier",
+      "position_xz_m": [
+        175.57,
+        177.84
+      ],
+      "footprint_m": [
+        19.32,
+        32.95
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 0.6,
+      "loot_tier": "none",
+      "ai_interest": "chokepoint",
+      "notes": "Allow partial water overlap, floor navigable but water below nonwalkable."
+    },
+    {
+      "id": "L04",
+      "zone_id": "lake",
+      "name": "Lakeshore store shed",
+      "kind": "garage",
+      "position_xz_m": [
+        187.5,
+        136.36
+      ],
+      "footprint_m": [
+        25.0,
+        18.18
+      ],
+      "rotation_y_deg": 0,
+      "floors": 1,
+      "enterable": false,
+      "blockout_height_m": 3,
+      "loot_tier": "common",
+      "ai_interest": "cover",
+      "notes": ""
+    }
+  ],
+  "corridors": [
+    {
+      "id": "P01",
+      "name": "County road east-west",
+      "type": "county_road",
+      "width_m": 8,
+      "points_xz_m": [
+        [
+          -250.0,
+          14.77
+        ],
+        [
+          -160.23,
+          21.59
+        ],
+        [
+          -60.23,
+          10.23
+        ],
+        [
+          75.0,
+          29.55
+        ],
+        [
+          125.0,
+          10.23
+        ],
+        [
+          250.0,
+          0.0
+        ]
+      ],
+      "importance": "mandatory",
+      "rule": "keep open, car cover only on shoulders"
+    },
+    {
+      "id": "P02",
+      "name": "Bunker access gravel",
+      "type": "gravel_road",
+      "width_m": 4,
+      "points_xz_m": [
+        [
+          -60.23,
+          -39.77
+        ],
+        [
+          -85.23,
+          -85.23
+        ],
+        [
+          -120.45,
+          -110.23
+        ],
+        [
+          -139.77,
+          -120.45
+        ]
+      ],
+      "importance": "mandatory",
+      "rule": "south gate must align with route"
+    },
+    {
+      "id": "P03",
+      "name": "Southern farm track",
+      "type": "gravel_road",
+      "width_m": 3.5,
+      "points_xz_m": [
+        [
+          -20.45,
+          160.23
+        ],
+        [
+          0.0,
+          210.23
+        ],
+        [
+          10.23,
+          250.0
+        ]
+      ],
+      "importance": "mandatory",
+      "rule": "leave 3.5m clear"
+    },
+    {
+      "id": "P04",
+      "name": "Railway right-of-way",
+      "type": "rail",
+      "width_m": 5,
+      "points_xz_m": [
+        [
+          214.77,
+          -250.0
+        ],
+        [
+          214.77,
+          -129.55
+        ],
+        [
+          204.55,
+          -20.45
+        ],
+        [
+          195.45,
+          70.45
+        ],
+        [
+          214.77,
+          110.23
+        ],
+        [
+          250.0,
+          121.59
+        ]
+      ],
+      "importance": "mandatory",
+      "rule": "mark level crossing at road; rails can be crossed by foot"
+    },
+    {
+      "id": "P05",
+      "name": "Town south alley",
+      "type": "footpath",
+      "width_m": 2.5,
+      "points_xz_m": [
+        [
+          -80.68,
+          31.82
+        ],
+        [
+          -60.23,
+          44.32
+        ],
+        [
+          -60.23,
+          98.86
+        ],
+        [
+          -61.36,
+          152.27
+        ]
+      ],
+      "importance": "proposed",
+      "rule": "weave east of apartment, west of civic block"
+    },
+    {
+      "id": "P06",
+      "name": "Town east backstreet",
+      "type": "footpath",
+      "width_m": 2.6,
+      "points_xz_m": [
+        [
+          20.45,
+          34.09
+        ],
+        [
+          40.91,
+          39.77
+        ],
+        [
+          40.91,
+          125.0
+        ],
+        [
+          34.09,
+          157.95
+        ]
+      ],
+      "importance": "proposed",
+      "rule": "flank municipal office"
+    },
+    {
+      "id": "P07",
+      "name": "Forest extraction trail",
+      "type": "footpath",
+      "width_m": 3,
+      "points_xz_m": [
+        [
+          106.82,
+          -51.14
+        ],
+        [
+          113.64,
+          -120.45
+        ],
+        [
+          148.86,
+          -136.36
+        ],
+        [
+          211.36,
+          -164.77
+        ],
+        [
+          236.36,
+          -236.36
+        ]
+      ],
+      "importance": "proposed",
+      "rule": "keep foliage cutback 2m each side"
+    },
+    {
+      "id": "P08",
+      "name": "Hills ridgeline hike",
+      "type": "footpath",
+      "width_m": 2.5,
+      "points_xz_m": [
+        [
+          -82.95,
+          -81.82
+        ],
+        [
+          -51.14,
+          -119.32
+        ],
+        [
+          -38.64,
+          -156.82
+        ],
+        [
+          -4.55,
+          -204.55
+        ]
+      ],
+      "importance": "proposed",
+      "rule": "boulder cover every 30-45m"
+    },
+    {
+      "id": "P09",
+      "name": "Lake shore approach",
+      "type": "footpath",
+      "width_m": 2.5,
+      "points_xz_m": [
+        [
+          120.45,
+          109.09
+        ],
+        [
+          135.23,
+          138.64
+        ],
+        [
+          168.18,
+          142.05
+        ],
+        [
+          198.86,
+          145.45
+        ],
+        [
+          214.77,
+          147.73
+        ]
+      ],
+      "importance": "proposed",
+      "rule": "maintain walkable shoreline to E-C"
+    }
+  ],
+  "water": {
+    "river": {
+      "centerline_xz_m": [
+        [
+          29.55,
+          -250.0
+        ],
+        [
+          14.77,
+          -170.45
+        ],
+        [
+          45.45,
+          -100.0
+        ],
+        [
+          75.0,
+          -29.55
+        ],
+        [
+          79.55,
+          39.77
+        ],
+        [
+          95.45,
+          110.23
+        ],
+        [
+          110.23,
+          160.23
+        ],
+        [
+          129.55,
+          189.77
+        ]
+      ],
+      "proposed_width_m": 7.5,
+      "traversable_only_at": [
+        "R01",
+        "R02",
+        "R03"
+      ]
+    },
+    "lake": {
+      "polygon_xz_m": [
+        [
+          114.77,
+          170.45
+        ],
+        [
+          189.77,
+          150.0
+        ],
+        [
+          250.0,
+          164.77
+        ],
+        [
+          250.0,
+          250.0
+        ],
+        [
+          125.0,
+          250.0
+        ],
+        [
+          104.55,
+          214.77
+        ]
+      ],
+      "default_traversal": "blocked",
+      "boat_traversal": "not implemented"
+    }
+  },
+  "barriers": {
+    "bunker_fence": {
+      "polygon_xz_m": [
+        [
+          -220.45,
+          -220.45
+        ],
+        [
+          -79.55,
+          -220.45
+        ],
+        [
+          -79.55,
+          -120.45
+        ],
+        [
+          -220.45,
+          -120.45
+        ]
+      ],
+      "height_m": 2.6,
+      "gaps": [
+        "B06 south gate"
+      ]
+    },
+    "town_boundaries_are_not_walls": true
+  },
+  "cover_clusters": [
+    {
+      "id": "C01",
+      "zone_id": "town",
+      "kind": "wrecked_cars",
+      "height_m": 1.6,
+      "count": 2,
+      "rule": "outside 8m county road clear lane: position on shoulders only",
+      "centers_xz_m": [
+        [
+          -127.27,
+          11.36
+        ],
+        [
+          -10.23,
+          28.41
+        ]
+      ]
+    },
+    {
+      "id": "C02",
+      "zone_id": "town",
+      "kind": "low_walls",
+      "height_m": 1.4,
+      "count": 6,
+      "rule": "half-height and 1.5m walk gaps",
+      "centers_xz_m": [
+        [
+          -63.64,
+          65.91
+        ],
+        [
+          -2.27,
+          103.41
+        ],
+        [
+          -110.23,
+          104.55
+        ]
+      ]
+    },
+    {
+      "id": "C03",
+      "zone_id": "industry",
+      "kind": "pallets",
+      "height_m": 1.1,
+      "count": 9,
+      "rule": "retain forklift width cargo lanes",
+      "centers_xz_m": [
+        [
+          146.59,
+          -38.64
+        ],
+        [
+          170.45,
+          29.55
+        ],
+        [
+          152.27,
+          89.77
+        ]
+      ]
+    },
+    {
+      "id": "C04",
+      "zone_id": "bunker",
+      "kind": "sandbags",
+      "height_m": 1.05,
+      "count": 6,
+      "rule": "do not close entrance",
+      "centers_xz_m": [
+        [
+          -161.36,
+          -138.64
+        ],
+        [
+          -115.91,
+          -164.77
+        ]
+      ]
+    },
+    {
+      "id": "C05",
+      "zone_id": "hills",
+      "kind": "boulders",
+      "height_m": 2.3,
+      "count": 12,
+      "rule": "break overly long 250m sightlines",
+      "centers_xz_m": [
+        [
+          -56.82,
+          -196.59
+        ],
+        [
+          -23.86,
+          -136.36
+        ],
+        [
+          -100.0,
+          -104.55
+        ]
+      ]
+    },
+    {
+      "id": "C06",
+      "zone_id": "farmland",
+      "kind": "hay_bales",
+      "height_m": 1.3,
+      "count": 17,
+      "rule": "irregular intermittent cover, not full walls",
+      "centers_xz_m": [
+        [
+          -207.95,
+          46.59
+        ],
+        [
+          -189.77,
+          95.45
+        ],
+        [
+          -113.64,
+          232.95
+        ],
+        [
+          36.36,
+          234.09
+        ]
+      ]
+    },
+    {
+      "id": "C07",
+      "zone_id": "lake",
+      "kind": "reeds_and_rocks",
+      "height_m": 0.9,
+      "count": 12,
+      "rule": "stay on shoreline, no solid cover blocking E-C",
+      "centers_xz_m": [
+        [
+          118.18,
+          169.32
+        ],
+        [
+          195.45,
+          157.95
+        ],
+        [
+          236.36,
+          159.09
+        ]
+      ]
+    }
+  ],
+  "vegetation": {
+    "generation": "deterministic explicit instances",
+    "instances": [
+      {
+        "id": "F001",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          83.75,
+          -158.75
+        ],
+        "crown_radius_m": 4.6,
+        "height_m": 6.4
+      },
+      {
+        "id": "F002",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          87.95,
+          -112.05
+        ],
+        "crown_radius_m": 2.8,
+        "height_m": 5.6
+      },
+      {
+        "id": "F003",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          187.73,
+          -240.0
+        ],
+        "crown_radius_m": 3.2,
+        "height_m": 6.2
+      },
+      {
+        "id": "F004",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          92.16,
+          -131.02
+        ],
+        "crown_radius_m": 3.8,
+        "height_m": 6.6
+      },
+      {
+        "id": "F005",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          96.93,
+          -235.11
+        ],
+        "crown_radius_m": 4.1,
+        "height_m": 8.3
+      },
+      {
+        "id": "F006",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          84.09,
+          -67.27
+        ],
+        "crown_radius_m": 4.2,
+        "height_m": 5.9
+      },
+      {
+        "id": "F007",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          79.32,
+          -244.43
+        ],
+        "crown_radius_m": 4.2,
+        "height_m": 5.1
+      },
+      {
+        "id": "F008",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          114.89,
+          -240.11
+        ],
+        "crown_radius_m": 3.6,
+        "height_m": 8.8
+      },
+      {
+        "id": "F009",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          99.89,
+          -197.84
+        ],
+        "crown_radius_m": 4.2,
+        "height_m": 8.2
+      },
+      {
+        "id": "F010",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          73.07,
+          -135.45
+        ],
+        "crown_radius_m": 2.9,
+        "height_m": 7.3
+      },
+      {
+        "id": "F011",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          185.0,
+          -199.43
+        ],
+        "crown_radius_m": 4.3,
+        "height_m": 9.5
+      },
+      {
+        "id": "F012",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          138.52,
+          -184.89
+        ],
+        "crown_radius_m": 2.4,
+        "height_m": 6.4
+      },
+      {
+        "id": "F013",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          134.77,
+          -237.73
+        ],
+        "crown_radius_m": 2.5,
+        "height_m": 7.2
+      },
+      {
+        "id": "F014",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          101.59,
+          -216.7
+        ],
+        "crown_radius_m": 4.7,
+        "height_m": 6.1
+      },
+      {
+        "id": "F015",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          111.48,
+          -164.32
+        ],
+        "crown_radius_m": 4.6,
+        "height_m": 6.5
+      },
+      {
+        "id": "F016",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          99.2,
+          -185.45
+        ],
+        "crown_radius_m": 3.9,
+        "height_m": 5.2
+      },
+      {
+        "id": "F017",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          79.77,
+          -118.75
+        ],
+        "crown_radius_m": 2.7,
+        "height_m": 5.3
+      },
+      {
+        "id": "F018",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          158.41,
+          -132.5
+        ],
+        "crown_radius_m": 4.5,
+        "height_m": 8.5
+      },
+      {
+        "id": "F019",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          60.34,
+          -212.61
+        ],
+        "crown_radius_m": 3.4,
+        "height_m": 6.6
+      },
+      {
+        "id": "F020",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          159.89,
+          -179.2
+        ],
+        "crown_radius_m": 2.9,
+        "height_m": 8.6
+      },
+      {
+        "id": "F021",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          49.77,
+          -126.02
+        ],
+        "crown_radius_m": 4.3,
+        "height_m": 9.9
+      },
+      {
+        "id": "F022",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          228.41,
+          -213.86
+        ],
+        "crown_radius_m": 3.1,
+        "height_m": 6.5
+      },
+      {
+        "id": "F023",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          200.57,
+          -193.07
+        ],
+        "crown_radius_m": 3.6,
+        "height_m": 9.6
+      },
+      {
+        "id": "F024",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          236.93,
+          -211.02
+        ],
+        "crown_radius_m": 3.4,
+        "height_m": 7.2
+      },
+      {
+        "id": "F025",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          76.93,
+          -169.89
+        ],
+        "crown_radius_m": 2.6,
+        "height_m": 7.0
+      },
+      {
+        "id": "F026",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          173.98,
+          -230.45
+        ],
+        "crown_radius_m": 2.9,
+        "height_m": 7.0
+      },
+      {
+        "id": "F027",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          184.43,
+          -182.16
+        ],
+        "crown_radius_m": 4.1,
+        "height_m": 8.1
+      },
+      {
+        "id": "F028",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          78.98,
+          -186.14
+        ],
+        "crown_radius_m": 3.8,
+        "height_m": 8.6
+      },
+      {
+        "id": "F029",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          158.41,
+          -207.39
+        ],
+        "crown_radius_m": 4.2,
+        "height_m": 7.0
+      },
+      {
+        "id": "F030",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          63.86,
+          -222.95
+        ],
+        "crown_radius_m": 3.7,
+        "height_m": 8.6
+      },
+      {
+        "id": "F031",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          41.7,
+          -236.7
+        ],
+        "crown_radius_m": 3.8,
+        "height_m": 6.9
+      },
+      {
+        "id": "F032",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          127.05,
+          -232.16
+        ],
+        "crown_radius_m": 2.3,
+        "height_m": 9.1
+      },
+      {
+        "id": "F033",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          51.7,
+          -195.0
+        ],
+        "crown_radius_m": 4.6,
+        "height_m": 5.2
+      },
+      {
+        "id": "F034",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          157.16,
+          -233.64
+        ],
+        "crown_radius_m": 4.5,
+        "height_m": 9.5
+      },
+      {
+        "id": "F035",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          133.64,
+          -130.91
+        ],
+        "crown_radius_m": 4.6,
+        "height_m": 7.7
+      },
+      {
+        "id": "F036",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          148.3,
+          -194.55
+        ],
+        "crown_radius_m": 2.9,
+        "height_m": 7.0
+      },
+      {
+        "id": "F037",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          67.84,
+          -202.61
+        ],
+        "crown_radius_m": 4.4,
+        "height_m": 9.8
+      },
+      {
+        "id": "F038",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          54.2,
+          -176.25
+        ],
+        "crown_radius_m": 3.1,
+        "height_m": 9.2
+      },
+      {
+        "id": "F039",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          159.09,
+          -223.64
+        ],
+        "crown_radius_m": 3.6,
+        "height_m": 8.6
+      },
+      {
+        "id": "F040",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          103.18,
+          -163.3
+        ],
+        "crown_radius_m": 3.4,
+        "height_m": 5.6
+      },
+      {
+        "id": "F041",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          60.91,
+          -152.16
+        ],
+        "crown_radius_m": 2.4,
+        "height_m": 5.4
+      },
+      {
+        "id": "F042",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          90.45,
+          -202.84
+        ],
+        "crown_radius_m": 3.8,
+        "height_m": 7.1
+      },
+      {
+        "id": "F043",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          223.41,
+          -135.0
+        ],
+        "crown_radius_m": 2.5,
+        "height_m": 6.2
+      },
+      {
+        "id": "F044",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          146.36,
+          -170.91
+        ],
+        "crown_radius_m": 3.9,
+        "height_m": 9.8
+      },
+      {
+        "id": "F045",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          104.77,
+          -103.98
+        ],
+        "crown_radius_m": 4.3,
+        "height_m": 5.0
+      },
+      {
+        "id": "F046",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          201.7,
+          -130.0
+        ],
+        "crown_radius_m": 2.5,
+        "height_m": 7.2
+      },
+      {
+        "id": "F047",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          92.05,
+          -102.5
+        ],
+        "crown_radius_m": 2.5,
+        "height_m": 9.6
+      },
+      {
+        "id": "F048",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          160.68,
+          -193.64
+        ],
+        "crown_radius_m": 2.5,
+        "height_m": 5.7
+      },
+      {
+        "id": "G001",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          118.52,
+          -62.05
+        ],
+        "crown_radius_m": 2.6,
+        "height_m": 9.0
+      },
+      {
+        "id": "G002",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          93.18,
+          -79.66
+        ],
+        "crown_radius_m": 2.8,
+        "height_m": 8.8
+      },
+      {
+        "id": "G003",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          108.18,
+          6.02
+        ],
+        "crown_radius_m": 4.1,
+        "height_m": 6.2
+      },
+      {
+        "id": "G004",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          92.27,
+          -101.36
+        ],
+        "crown_radius_m": 3.7,
+        "height_m": 8.0
+      },
+      {
+        "id": "G005",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          80.45,
+          -101.93
+        ],
+        "crown_radius_m": 3.9,
+        "height_m": 7.8
+      },
+      {
+        "id": "G006",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          108.75,
+          55.57
+        ],
+        "crown_radius_m": 2.3,
+        "height_m": 6.8
+      },
+      {
+        "id": "G007",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          103.3,
+          -90.23
+        ],
+        "crown_radius_m": 4.3,
+        "height_m": 6.2
+      },
+      {
+        "id": "G008",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          112.84,
+          75.8
+        ],
+        "crown_radius_m": 4.0,
+        "height_m": 5.7
+      },
+      {
+        "id": "G009",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          87.05,
+          -57.84
+        ],
+        "crown_radius_m": 4.0,
+        "height_m": 9.8
+      },
+      {
+        "id": "G010",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          81.14,
+          -91.25
+        ],
+        "crown_radius_m": 2.3,
+        "height_m": 5.3
+      },
+      {
+        "id": "G011",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          109.77,
+          46.93
+        ],
+        "crown_radius_m": 2.5,
+        "height_m": 9.6
+      },
+      {
+        "id": "G012",
+        "kind": "pine",
+        "zone_id": "forest",
+        "position_xz_m": [
+          112.16,
+          -112.05
+        ],
+        "crown_radius_m": 4.4,
+        "height_m": 7.9
+      },
+      {
+        "id": "H001",
+        "kind": "broadleaf",
+        "zone_id": "hills",
+        "position_xz_m": [
+          -95.34,
+          -235.0
+        ],
+        "crown_radius_m": 3.4,
+        "height_m": 9.9
+      },
+      {
+        "id": "H002",
+        "kind": "broadleaf",
+        "zone_id": "hills",
+        "position_xz_m": [
+          -27.5,
+          -164.55
+        ],
+        "crown_radius_m": 3.0,
+        "height_m": 9.1
+      },
+      {
+        "id": "H003",
+        "kind": "broadleaf",
+        "zone_id": "hills",
+        "position_xz_m": [
+          -71.14,
+          -160.91
+        ],
+        "crown_radius_m": 3.0,
+        "height_m": 9.8
+      },
+      {
+        "id": "H004",
+        "kind": "broadleaf",
+        "zone_id": "hills",
+        "position_xz_m": [
+          -217.05,
+          -237.95
+        ],
+        "crown_radius_m": 3.4,
+        "height_m": 8.0
+      },
+      {
+        "id": "H005",
+        "kind": "broadleaf",
+        "zone_id": "hills",
+        "position_xz_m": [
+          -100.23,
+          -148.07
+        ],
+        "crown_radius_m": 4.2,
+        "height_m": 6.7
+      },
+      {
+        "id": "H006",
+        "kind": "broadleaf",
+        "zone_id": "hills",
+        "position_xz_m": [
+          -48.18,
+          -241.25
+        ],
+        "crown_radius_m": 3.6,
+        "height_m": 9.4
+      },
+      {
+        "id": "H007",
+        "kind": "broadleaf",
+        "zone_id": "hills",
+        "position_xz_m": [
+          -147.95,
+          -233.98
+        ],
+        "crown_radius_m": 3.1,
+        "height_m": 8.4
+      },
+      {
+        "id": "H008",
+        "kind": "broadleaf",
+        "zone_id": "hills",
+        "position_xz_m": [
+          -248.3,
+          -143.07
+        ],
+        "crown_radius_m": 3.6,
+        "height_m": 5.3
+      },
+      {
+        "id": "H009",
+        "kind": "broadleaf",
+        "zone_id": "hills",
+        "position_xz_m": [
+          -240.11,
+          -171.82
+        ],
+        "crown_radius_m": 4.0,
+        "height_m": 5.2
+      },
+      {
+        "id": "H010",
+        "kind": "broadleaf",
+        "zone_id": "hills",
+        "position_xz_m": [
+          -60.8,
+          -222.95
+        ],
+        "crown_radius_m": 4.7,
+        "height_m": 6.7
+      },
+      {
+        "id": "H011",
+        "kind": "broadleaf",
+        "zone_id": "hills",
+        "position_xz_m": [
+          -192.16,
+          -227.27
+        ],
+        "crown_radius_m": 4.7,
+        "height_m": 9.3
+      },
+      {
+        "id": "H012",
+        "kind": "broadleaf",
+        "zone_id": "hills",
+        "position_xz_m": [
+          -50.23,
+          -203.64
+        ],
+        "crown_radius_m": 3.5,
+        "height_m": 7.4
+      },
+      {
+        "id": "H013",
+        "kind": "broadleaf",
+        "zone_id": "hills",
+        "position_xz_m": [
+          -88.98,
+          -118.52
+        ],
+        "crown_radius_m": 4.6,
+        "height_m": 7.3
+      },
+      {
+        "id": "H014",
+        "kind": "broadleaf",
+        "zone_id": "hills",
+        "position_xz_m": [
+          -178.64,
+          -112.05
+        ],
+        "crown_radius_m": 4.1,
+        "height_m": 6.7
+      },
+      {
+        "id": "H015",
+        "kind": "broadleaf",
+        "zone_id": "hills",
+        "position_xz_m": [
+          -224.89,
+          -109.66
+        ],
+        "crown_radius_m": 4.4,
+        "height_m": 6.3
+      },
+      {
+        "id": "H016",
+        "kind": "broadleaf",
+        "zone_id": "hills",
+        "position_xz_m": [
+          -125.8,
+          -87.05
+        ],
+        "crown_radius_m": 3.7,
+        "height_m": 7.0
+      },
+      {
+        "id": "H017",
+        "kind": "broadleaf",
+        "zone_id": "hills",
+        "position_xz_m": [
+          -158.64,
+          -220.11
+        ],
+        "crown_radius_m": 3.2,
+        "height_m": 9.1
+      },
+      {
+        "id": "H018",
+        "kind": "broadleaf",
+        "zone_id": "hills",
+        "position_xz_m": [
+          -72.61,
+          -242.84
+        ],
+        "crown_radius_m": 3.1,
+        "height_m": 9.5
+      },
+      {
+        "id": "H019",
+        "kind": "broadleaf",
+        "zone_id": "hills",
+        "position_xz_m": [
+          -199.77,
+          -117.05
+        ],
+        "crown_radius_m": 4.2,
+        "height_m": 5.2
+      },
+      {
+        "id": "H020",
+        "kind": "broadleaf",
+        "zone_id": "hills",
+        "position_xz_m": [
+          -144.55,
+          -96.82
+        ],
+        "crown_radius_m": 3.9,
+        "height_m": 6.0
+      },
+      {
+        "id": "A001",
+        "kind": "orchard",
+        "zone_id": "farmland",
+        "position_xz_m": [
+          -237.84,
+          71.14
+        ],
+        "crown_radius_m": 2.7,
+        "height_m": 8.6
+      },
+      {
+        "id": "A002",
+        "kind": "orchard",
+        "zone_id": "farmland",
+        "position_xz_m": [
+          -231.7,
+          52.95
+        ],
+        "crown_radius_m": 3.4,
+        "height_m": 8.3
+      },
+      {
+        "id": "A003",
+        "kind": "orchard",
+        "zone_id": "farmland",
+        "position_xz_m": [
+          -214.55,
+          156.02
+        ],
+        "crown_radius_m": 3.4,
+        "height_m": 6.4
+      },
+      {
+        "id": "A004",
+        "kind": "orchard",
+        "zone_id": "farmland",
+        "position_xz_m": [
+          -191.36,
+          89.2
+        ],
+        "crown_radius_m": 3.1,
+        "height_m": 7.1
+      },
+      {
+        "id": "A005",
+        "kind": "orchard",
+        "zone_id": "farmland",
+        "position_xz_m": [
+          -205.23,
+          60.0
+        ],
+        "crown_radius_m": 3.1,
+        "height_m": 7.1
+      },
+      {
+        "id": "A006",
+        "kind": "orchard",
+        "zone_id": "farmland",
+        "position_xz_m": [
+          -178.18,
+          89.09
+        ],
+        "crown_radius_m": 4.4,
+        "height_m": 5.2
+      },
+      {
+        "id": "A007",
+        "kind": "orchard",
+        "zone_id": "farmland",
+        "position_xz_m": [
+          -180.0,
+          100.91
+        ],
+        "crown_radius_m": 3.4,
+        "height_m": 5.8
+      },
+      {
+        "id": "A008",
+        "kind": "orchard",
+        "zone_id": "farmland",
+        "position_xz_m": [
+          -236.82,
+          82.27
+        ],
+        "crown_radius_m": 3.6,
+        "height_m": 6.3
+      },
+      {
+        "id": "A009",
+        "kind": "orchard",
+        "zone_id": "farmland",
+        "position_xz_m": [
+          -213.64,
+          138.52
+        ],
+        "crown_radius_m": 4.3,
+        "height_m": 7.7
+      },
+      {
+        "id": "A010",
+        "kind": "orchard",
+        "zone_id": "farmland",
+        "position_xz_m": [
+          -183.52,
+          57.95
+        ],
+        "crown_radius_m": 2.5,
+        "height_m": 5.7
+      },
+      {
+        "id": "A011",
+        "kind": "orchard",
+        "zone_id": "farmland",
+        "position_xz_m": [
+          -239.43,
+          144.77
+        ],
+        "crown_radius_m": 3.9,
+        "height_m": 6.0
+      },
+      {
+        "id": "A012",
+        "kind": "orchard",
+        "zone_id": "farmland",
+        "position_xz_m": [
+          -219.77,
+          143.75
+        ],
+        "crown_radius_m": 4.3,
+        "height_m": 7.7
+      },
+      {
+        "id": "A013",
+        "kind": "orchard",
+        "zone_id": "farmland",
+        "position_xz_m": [
+          -227.61,
+          63.41
+        ],
+        "crown_radius_m": 3.9,
+        "height_m": 9.5
+      }
+    ],
+    "implementation": "use instancing or MultiMesh for trees; no mesh details required for first blockout"
+  },
+  "points": [
+    {
+      "id": "S1",
+      "type": "spawn",
+      "name": "West fields, south",
+      "position_xz_m": [
+        -236.36,
+        170.45
+      ],
+      "radius_m": 12,
+      "rules": "Spawn safe area: no initial line of sight from other spawns, no loot placement inside 18 m."
+    },
+    {
+      "id": "S2",
+      "type": "spawn",
+      "name": "West fields, north",
+      "position_xz_m": [
+        -236.36,
+        10.23
+      ],
+      "radius_m": 12,
+      "rules": "Spawn safe area: no initial line of sight from other spawns, no loot placement inside 18 m."
+    },
+    {
+      "id": "E-A",
+      "type": "extraction",
+      "name": "Northeast forest exit",
+      "position_xz_m": [
+        236.36,
+        -236.36
+      ],
+      "radius_m": 8,
+      "rules": "Keep navigation clear and mark extraction trigger."
+    },
+    {
+      "id": "E-B",
+      "type": "extraction",
+      "name": "Southeast rail service exit",
+      "position_xz_m": [
+        245.45,
+        123.86
+      ],
+      "radius_m": 8,
+      "rules": "Keep navigation clear and mark extraction trigger."
+    },
+    {
+      "id": "E-C",
+      "type": "extraction",
+      "name": "Lake shore exit",
+      "position_xz_m": [
+        214.77,
+        147.73
+      ],
+      "radius_m": 8,
+      "rules": "Keep navigation clear and mark extraction trigger."
+    },
+    {
+      "id": "E-D",
+      "type": "extraction",
+      "name": "Northwest perimeter exit",
+      "position_xz_m": [
+        -236.36,
+        -236.36
+      ],
+      "radius_m": 8,
+      "rules": "Keep navigation clear and mark extraction trigger; E-D may be conditional to avoid low-risk early exit."
+    }
+  ],
+  "ai_placement_rules": {
+    "patrol_paths": "Prefer baked waypoints per POI, not arbitrary wander through map obstacles",
+    "enemy_spawns": "No enemy within 35m of S1/S2; no direct line of sight into spawn on initial match start.",
+    "combat": "Use zone tags (close/medium/long) to tune behavior, not hardcoded AI per mesh.",
+    "navmesh": "Baked per chunk after graybox placement; maintain all intended crossings.",
+    "performance": "Use modular proxies, MultiMesh vegetation, sparse visible physics, occluders near town/industry, no per-prop scripts."
+  },
+  "design_risks": [
+    "Eastern exits E-B and E-C are close; give them different extract requirements or approach hazards.",
+    "E-D in northwest is on same side as both western spawns; consider a conditional extract with quest/key/timer.",
+    "River choke can cause repeated bridge camping: maintain shallow northern ford and southern log crossing.",
+    "All added locations and loot are proposals, not in the original sketch."
+  ]
+}

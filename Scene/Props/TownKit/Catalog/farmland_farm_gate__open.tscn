@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/farmland_farm_gate/assets/farmland_farm_gate_open.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/farmland_farm_gate/materials/town_farmland_farm_gate_open_used.tres" id="2_finish"]
+
+[node name="farmland_farm_gate__open" type="Node3D"]
+metadata/catalog_id = "farmland_farm_gate"
+metadata/catalog_variant = "open"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="FarmGateOpen" parent="Model/TownFarmGateOpen"]
+surface_material_override/0 = ExtResource("2_finish")

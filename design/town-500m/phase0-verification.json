@@ -1,0 +1,324 @@
+{
+  "date": "2026-10-08",
+  "status": "SPATIAL_PASS / LOS_HOLD / NATIVE_PENDING",
+  "baseline_commit": "4b8be66239d7929d1343dbe27c16e4807809e259",
+  "layout_sha256": "653D4136C93A643DE6DF52F7244741CFFE870059DD43DE495964170B2894DD12",
+  "counts": {
+    "source_objects": 53,
+    "town_plots": 12,
+    "town_structures": 32,
+    "all_structures": 76,
+    "town_ground_interiors": 15,
+    "town_upper_interiors": 4,
+    "bridges": 2,
+    "cover": 64,
+    "trees": 93
+  },
+  "checks": {
+    "spatial": {
+      "status": "PASS",
+      "errors": [],
+      "report": "layout-check.json",
+      "report_matches_layout": true
+    },
+    "geometry_self_check": "PASS including eight negative mutations",
+    "los_helper_self_check": "PASS",
+    "archives": {
+      "status": "PASS",
+      "files": [
+        {
+          "path": "reference/map_layout_godot.json",
+          "bytes": 62395,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        },
+        {
+          "path": "reference/README.txt",
+          "bytes": 2574,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        },
+        {
+          "path": "reference/godot_agent_implementation_prompt.txt",
+          "bytes": 5701,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        },
+        {
+          "path": "reference/detailed_master_map.svg",
+          "bytes": 55864,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        },
+        {
+          "path": "reference/detailed_master_map_preview.png",
+          "bytes": 310194,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        },
+        {
+          "path": "reference/zone_industry.svg",
+          "bytes": 55769,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        },
+        {
+          "path": "reference/zone_industry.png",
+          "bytes": 163720,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        },
+        {
+          "path": "reference/zone_lake.svg",
+          "bytes": 54239,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        },
+        {
+          "path": "reference/zone_lake.png",
+          "bytes": 103886,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        },
+        {
+          "path": "reference/zone_river.svg",
+          "bytes": 54200,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        },
+        {
+          "path": "reference/zone_river.png",
+          "bytes": 197887,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        },
+        {
+          "path": "reference/zone_town.svg",
+          "bytes": 56109,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        },
+        {
+          "path": "reference/zone_town.png",
+          "bytes": 137061,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        },
+        {
+          "path": "reference/zone_bunker.svg",
+          "bytes": 55240,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        },
+        {
+          "path": "reference/zone_bunker.png",
+          "bytes": 134400,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        },
+        {
+          "path": "reference/zone_farmland.svg",
+          "bytes": 55735,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        },
+        {
+          "path": "reference/zone_farmland.png",
+          "bytes": 175604,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        },
+        {
+          "path": "reference/zone_forest.svg",
+          "bytes": 54618,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        },
+        {
+          "path": "reference/zone_forest.png",
+          "bytes": 163611,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        },
+        {
+          "path": "reference/zone_hills.svg",
+          "bytes": 54472,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        },
+        {
+          "path": "reference/zone_hills.png",
+          "bytes": 146434,
+          "copy_matches": true,
+          "size_matches": true,
+          "original_available": true,
+          "original_matches": true
+        }
+      ]
+    },
+    "svg_xml": {
+      "status": "PASS",
+      "generated_count": 9,
+      "reference_count": 9
+    },
+    "protected_files": {
+      "status": "EXTERNAL_CHANGES",
+      "files": [
+        {
+          "path": "Scene/Town.tscn",
+          "unchanged": true,
+          "sha256": "275BD53376918812CCD6B1F5C28D2C6B8EBD59A62AA3AEA6A478356025E229FC"
+        },
+        {
+          "path": "project.godot",
+          "unchanged": false,
+          "sha256": "080BDB5A0067E222F77529C3DBE1DE6B539461103CBFA26C77A9376CA56DD59E"
+        },
+        {
+          "path": "addons/cogito/Theme/Cogito_Theme_A.tres",
+          "unchanged": true,
+          "sha256": "5379C0236FBFF9F90AA0DD6D92466B0F01E0E599335922DF1F3290496C31C296"
+        },
+        {
+          "path": "Scene/World/TownConceptB/terrain_roads.tscn",
+          "unchanged": true,
+          "sha256": "A8F89F7D529B156947491C19283C0539A1E048C6AE57EF334A925AAFE1476979"
+        },
+        {
+          "path": "Scene/World/TownConceptB/dressing.tscn",
+          "unchanged": true,
+          "sha256": "D42CE536D74E02C065804E5435A740ED1A0F4F3D56E3B425CF855CB22201430B"
+        }
+      ],
+      "note": "Town/terrain/dressing/Theme match task-start hashes; project.godot changed externally: restored MCP helper autoloads and InputHelper/Audio UID references. Preserved without agent edits."
+    },
+    "los": {
+      "status": "FAIL",
+      "report": "los-check.json",
+      "report_matches_layout": true,
+      "pass_groups": 38,
+      "failed_groups": [
+        {
+          "id": "M",
+          "witness_m": 201.36383010615577,
+          "target_m": 150
+        },
+        {
+          "id": "COUNTY_E",
+          "witness_m": 213.95241037111765,
+          "target_m": 200
+        },
+        {
+          "id": "P04",
+          "witness_m": 375.79160273567516,
+          "target_m": 200
+        },
+        {
+          "id": "P05",
+          "witness_m": 113.92141030474667,
+          "target_m": 80
+        },
+        {
+          "id": "P06",
+          "witness_m": 125.24344431296979,
+          "target_m": 80
+        },
+        {
+          "id": "P07",
+          "witness_m": 235.74091694942868,
+          "target_m": 120
+        },
+        {
+          "id": "P08",
+          "witness_m": 144.79094354381817,
+          "target_m": 120
+        },
+        {
+          "id": "P10",
+          "witness_m": 186.535404174184,
+          "target_m": 120
+        },
+        {
+          "id": "P11",
+          "witness_m": 171.18715106953823,
+          "target_m": 120
+        },
+        {
+          "id": "P12",
+          "witness_m": 156.16632217273835,
+          "target_m": 120
+        },
+        {
+          "id": "ROUTE_G19",
+          "witness_m": 122.15381865640217,
+          "target_m": 120
+        }
+      ],
+      "unresolved_groups": [],
+      "action_plan": "los-action-plan.txt"
+    }
+  },
+  "native": {
+    "status": "NOT_RUN",
+    "project_info": "FAILED: editor disconnected / later EADDRINUSE6506",
+    "host_inspection": "Read-only host query:6506 listener PID16720, node.exe from Codex bundled runtime; no Godot process observed. No processes terminated.",
+    "changes_to_processes_or_configs": false,
+    "not_performed": [
+      "scene import/open/save/play/stop",
+      "fresh baseline/regressions with isolated saves",
+      "navigation bake",
+      "actual player traversal/interiors/water death/glass",
+      "standing/ADS/lean/upper-floor3D LOS",
+      "rendered screenshots",
+      "1080p120FPS benchmark"
+    ]
+  },
+  "scope": {
+    "commit_push": false,
+    "new_modeling": false,
+    "old_saves_deleted": false,
+    "runtime_files_edited_by_this_phase": false,
+    "project_settings_edited_by_this_phase": false
+  },
+  "gate": "Resolve scoped LOS composition before full graybox acceptance; restore confirmed nested-project MCP for native pilots. Spatial or graph PASS is not runtime verification."
+}

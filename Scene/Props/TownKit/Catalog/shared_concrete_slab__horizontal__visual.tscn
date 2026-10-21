@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/concrete_slab/assets/concrete_slab_horizontal.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/concrete_slab/materials/town_concrete_slab_used.tres" id="2_finish"]
+
+[node name="shared_concrete_slab__horizontal" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "shared_concrete_slab"
+metadata/catalog_variant = "horizontal"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="ConcreteSlabHorizontal" parent="Model/TownConcreteSlabHorizontal"]
+surface_material_override/0 = ExtResource("2_finish")

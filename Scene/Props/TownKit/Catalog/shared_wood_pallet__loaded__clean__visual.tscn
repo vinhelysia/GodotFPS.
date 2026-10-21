@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/wood_pallet/assets/wood_pallet_loaded.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/wood_pallet/materials/town_wood_pallets_clean.tres" id="2_finish"]
+
+[node name="shared_wood_pallet__loaded" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "shared_wood_pallet"
+metadata/catalog_variant = "loaded"
+metadata/finish = "clean"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="WoodPalletLoaded" parent="Model/TownWoodPalletLoaded"]
+surface_material_override/0 = ExtResource("2_finish")

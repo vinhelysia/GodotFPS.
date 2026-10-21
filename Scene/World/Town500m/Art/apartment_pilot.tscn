@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/Buildings/soviet_apartment_worn.tscn" id="1_building"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/forest_birch_tree__A__late_autumn.tscn" id="2_birch"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wood_pallet__empty.tscn" id="3_pallet"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wooden_crate__medium.tscn" id="4_crate"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_oil_drum__dented.tscn" id="5_drum"]
+
+[node name="ApartmentPilot" type="Node3D"]
+metadata/apartment_pilot = "site_a_worn_unit"
+
+[node name="Building" parent="." instance=ExtResource("1_building")]
+position = Vector3(-165, 2, 60)
+rotation = Vector3(0, -1.57079632679, 0)
+
+[node name="PlotDressing" type="Node3D" parent="."]
+
+[node name="BirchWest" parent="PlotDressing" instance=ExtResource("2_birch")]
+position = Vector3(-179.5, 2, 77)
+rotation = Vector3(0, 0.35, 0)
+
+[node name="BirchNorth" parent="PlotDressing" instance=ExtResource("2_birch")]
+position = Vector3(-178.5, 2, 42.5)
+rotation = Vector3(0, -1.2, 0)
+
+[node name="BirchEast" parent="PlotDressing" instance=ExtResource("2_birch")]
+position = Vector3(-151, 2, 81)
+rotation = Vector3(0, 2.2, 0)
+
+[node name="ServicePallet" parent="PlotDressing" instance=ExtResource("3_pallet")]
+position = Vector3(-154, 2, 74)
+rotation = Vector3(0, 1.57079632679, 0)
+
+[node name="ServiceCrate" parent="PlotDressing" instance=ExtResource("4_crate")]
+position = Vector3(-154, 2.21, 74)
+rotation = Vector3(0, 1.57079632679, 0)
+
+[node name="ServiceDrum" parent="PlotDressing" instance=ExtResource("5_drum")]
+position = Vector3(-154, 2, 75.15)
+rotation = Vector3(0, 0.2, 0)

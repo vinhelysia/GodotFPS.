@@ -1,0 +1,17 @@
+{
+	"broad_range": [
+		0.0,
+		1.0
+	],
+	"dimensions": [
+		1024,
+		1024
+	],
+	"metres_per_texel": 0.48828125,
+	"path": "res://Scene/World/Town500m/Art/GroundArt/mask_variation.png",
+	"scope": "Linear RGB data, unique world500m field; red macro terrain, green local patches. No terrain vertices or gameplay changes.",
+	"seed": [
+		20261020,
+		20261021
+	]
+}

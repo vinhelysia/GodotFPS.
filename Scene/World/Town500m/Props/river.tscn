@@ -1,0 +1,130 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/river_bridge_deck__segment.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/river_bridge_parapet__end.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/river_bridge_support__pier.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/river_culvert_pipe_end__round.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/river_erosion_block__small.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/river_riverbank_rock__large.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/river_riverbank_rock__small.tscn" id="7"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/river_river_reeds__dense__visual.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/river_river_reeds__sparse__visual.tscn" id="9"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/river_driftwood__branch__visual.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/river_log_crossing__side__visual.tscn" id="11"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/river_bridge_litter__trash__visual.tscn" id="12"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/river_bridge_litter__sticks__visual.tscn" id="13"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wood_post_sign__warning__worn.tscn" id="14"]
+
+[node name="river" type="Node3D"]
+
+[node name="OR-deck-stock" parent="." instance=ExtResource("1")]
+position = Vector3(109, 2, 38)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OR-deck-stock"
+metadata/catalog_id = "river_bridge_deck"
+metadata/role = "Spare deck section in existing east-bank bridge maintenance patch"
+
+[node name="OR-parapet-stock" parent="." instance=ExtResource("2")]
+position = Vector3(111, 2, 45)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OR-parapet-stock"
+metadata/catalog_id = "river_bridge_parapet"
+metadata/role = "Spare parapet unit beside deck stock"
+
+[node name="OR-support-stock" parent="." instance=ExtResource("3")]
+position = Vector3(116, 2, 39)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OR-support-stock"
+metadata/catalog_id = "river_bridge_support"
+metadata/role = "Retired cast bridge pier stored upright on dry maintenance patch"
+
+[node name="OR-culvert" parent="." instance=ExtResource("4")]
+position = Vector3(116, 2, 46)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OR-culvert"
+metadata/catalog_id = "river_culvert_pipe_end"
+metadata/role = "Uninstalled culvert end in bridge repair stock"
+
+[node name="OR-block-01" parent="." instance=ExtResource("5")]
+position = Vector3(109, 2, 48)
+rotation = Vector3(0, 0.261799, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OR-block-01"
+metadata/catalog_id = "river_erosion_block"
+metadata/role = "Spare erosion-control block in repair stock"
+
+[node name="OR-rock-01" parent="." instance=ExtResource("6")]
+position = Vector3(47, 4.05012, -148)
+rotation = Vector3(0, 0.349066, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OR-rock-01"
+metadata/catalog_id = "river_riverbank_rock"
+metadata/role = "Dry high-bank rock outside six metre bank reserve"
+
+[node name="OR-rock-02" parent="." instance=ExtResource("7")]
+position = Vector3(49.2, 3.994497, -149.5)
+rotation = Vector3(0.129439, 1.485696, 0.016782)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OR-rock-02"
+metadata/catalog_id = "river_riverbank_rock"
+metadata/role = "Satellite high-bank stone"
+
+[node name="OR-reed-01" parent="." instance=ExtResource("8")]
+position = Vector3(46, 3.419759, -143)
+rotation = Vector3(0, 0.523599, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OR-reed-01"
+metadata/catalog_id = "river_river_reeds"
+metadata/role = "Dry-bank reed patch behind protected reserve"
+
+[node name="OR-reed-02" parent="." instance=ExtResource("9")]
+position = Vector3(48, 3.638053, -142)
+rotation = Vector3(0, 1.396263, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OR-reed-02"
+metadata/catalog_id = "river_river_reeds"
+metadata/role = "Second dry-bank reed patch"
+
+[node name="OR-driftwood" parent="." instance=ExtResource("10")]
+position = Vector3(50, 3.791603, -146)
+rotation = Vector3(0.061354, 0.343599, -0.088927)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OR-driftwood"
+metadata/catalog_id = "river_driftwood"
+metadata/role = "Driftwood left above flood line"
+
+[node name="OR-log-debris" parent="." instance=ExtResource("11")]
+position = Vector3(52, 3.505891, -143.5)
+rotation = Vector3(0, 1.308997, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OR-log-debris"
+metadata/catalog_id = "river_log_crossing"
+metadata/role = "Discarded log on dry upper bank, explicitly no crossing"
+
+[node name="OR-litter-01" parent="." instance=ExtResource("12")]
+position = Vector3(112, 2, 47)
+rotation = Vector3(0, 0.349066, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OR-litter-01"
+metadata/catalog_id = "river_bridge_litter"
+metadata/role = "Repair litter beside stored parapet"
+
+[node name="OR-litter-02" parent="." instance=ExtResource("13")]
+position = Vector3(50, 3.632258, -140.5)
+rotation = Vector3(0, 0.959931, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OR-litter-02"
+metadata/catalog_id = "river_bridge_litter"
+metadata/role = "Flood-carried sticks above reserve"
+
+[node name="S_RIVER_SIGN" parent="." instance=ExtResource("14")]
+position = Vector3(40.2, 2.293431, -58.5)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_RIVER_SIGN"
+metadata/catalog_id = "shared_wood_post_sign"
+metadata/role = "Riverbank warning beside the existing northern bridge approach"

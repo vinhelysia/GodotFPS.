@@ -1,0 +1,214 @@
+Town500m Phase1 — independent offline scene/collision audit
+2026-10-08. Phạm vi: read-only live text/GLB JSON/source inspection + hai report files.
+Không sửa Town, reusable scenes, models, scripts hoặc settings. Không Godot/Blender operation.
+
+Kết luận
+Giữ 18 existing editable template variants/14 types làm geometry authority, unit scale,
+floor-centred pivot, local front -Z. Phase1 có thể reuse cả năm functions; không cần
+rebuild framework hoặc biến plot envelopes thành physical meshes. Native acceptance
+ở new500m placements chưa có. Old33/17/4 check chỉ xác nhận baseline template outputs.
+Deficiency cần sửa trước native pilot: latest transparent glass export vẫn có combined
+opaque+pane collision helper; visible window frame/mullion không có collider trong
+helper đó. Alpha blend không thay đổi physics. Tag/exclude combined RID sẽ X-ray walls.
+
+Authority và trace đã đọc
+AGENTS.md; AI_CONTEXT.md; Project Index; relevant Architecture/Roadmap; Map locator;
+Dev Log Phase0 và prior baseline/native acceptance; Town Expansion references;
+design/town-500m/implementation-plan.txt Phase1 + catalogue + asset-handoff;
+Scene/Town.tscn; Assets/TownConceptB/Buildings/{author_buildings.cjs,building_contract.json,
+building_handoff.md}; 18 templates; facade_window/guard_booth wrappers + GLB JSON;
+source TownKit build_town_kit.py/polish_town_details.py/town_glass.py/handoff.
+Callers: facade_window wrapper -> T02 upper/ground, T03 apartment, T07 ground/shell;
+templates ->33 actual Town metadata roots and54 proposed catalogue scene instances.
+No runtime invokes author_buildings.cjs: its only run instruction is offline authoring.
+Scav.tscn -> Scripts/Enemies/scav_perception.gd -> _physics_process/_can_see/_los_clear
+-> existing Blackboard visibility/detection. HostileNPC shutdown stops that sensor.
+bt_shoot.gd casts separate physical ray mask1|2|16; Weapon_Resource damage ray mask3.
+Vision skip must stay sensor-only; do not change BT bullet ray or player collision.
+town_expansion_regression.gd discovers concept_b_id and hardcodes old33/17/4,
+old ground_contract/route graph, one spawn and two extracts. Updating those assertions
+belongs to new-map integration, not reinterpreting their historical PASS as500m PASS.
+
+Current ownership
+Town remains actual raid root; NavigationRegion3D/Level is authored nav source.
+Garage/G and Warehouse/W are direct instances outside TownExpansion architecture
+groups. The remaining31 building roots are under IndustrialArchitecture(5),
+CivicArchitecture(5), CheckpointArchitecture(1), AdditionalArchitecture(20).
+Each template has Architecture and Markers children; no script/Persist/NPC/loot.
+In .tscn this is saved PackedScene composition, no runtime generation.
+Godot editor get_owner/imported body hierarchy was not queried by this audit.
+Do not delete TownExpansion or OuterDetail to remove building roots: TownExpansion
+contains15 referenced lights, four provision pickups and architecture group parents;
+OuterDetail contains legacy dressing/GarageLamp in addition to Garage.
+Preserve Town/Player/Loot/three Scavs/patrols/RaidSpawn, raid script/connectors,
+DayNightCycle sun/environment/light paths and existing extract signal authority.
+
+Metric geometry checked from source/saved .tscn
+Root identity; pivot floor centre/localY0; front-Z. Ground slab thickness.2m,
+bottom-.2/top0. Catalogue instance root=pad+.2, not another foundation raise.
+T01 cottage10x8x3.2; T04 shop12x8x3.2; T05 clinic12x10x3.2;
+T06 garage14x10x4.5; T07 workshop8x16x3.2; T08 warehouse24.6x18.6x7;
+T09 shed6x4x3.2; T02 long house8x16x6.4 (ground variant height3.2).
+Generic central doorway1.2x2.4; garage4x3.2; warehouse6x4. Front lintel and
+side walls split around openings. Shell variants contain DoorSeal or facade front,
+without GFEntry/GFInterior markers. Do not silently convert shells to interiors.
+GFEntry is1.2m outside footprint, not door threshold; GFInterior1.2m inside.
+Box walls/floors/treads have layer1 mask0. Roof visuals/trusses have no collision.
+Ceilings are downward-facing one-sided ConcavePolygonShape3D at roof seat height;
+intended to block from below without rooftop nav source. Verify native above/below
+rays after import; textual winding assertions do not prove imported/runtime behavior.
+Warehouse intact roof24x9 is rear half localZ0..9, centredZ4.5; front trusses visual.
+East side breach localZ-3..1 is4m wide; retain that access/collider discontinuity.
+
+T02 stair geometry
+Finished upper floorY3.2, slab undersideY3.0. True cutoutX1..3.6/Z0..4.
+Two10-step flights: width1.2, riser.16, tread.28; lower flightX1..2.2/Z0..2.8,
+upper flightX2.4..3.6 travels back toward-Z. Turn landingX1..3.6/Z2.8..4,
+topY1.6. Upper guards touch cutout boundaries and leave upper flight exit open.
+CeilingY6.4 leaves3.2m above upper floor; ordinary covered ground clearance3.0m.
+Authoring asserts2.1m vertical clearance against authored boxes at tread centres;
+it does not account imported facade/roof collision or capsule sweep near railing.
+No invisible ramps/controller edits. Existing native standing BoxShape.6x1.7x.6,
+foot offset and stair stepping are owned by player, not by this template.
+
+Materials/windows and exact collider deficiency
+T01/T04/T05/T06/T08/T09 and small civic shells are graybox BoxMesh materials:
+wall(.43,.44,.4), floor(.31,.32,.3), roof(.18,.23,.22), trim(.22,.31,.29).
+They do not instantiate facade_window or have any window opening/glass. This is
+finished-art limitation, not broken declared gameplay access. Do not add arbitrary
+window/door placements simply to exercise glass; upper civic uses real facade windows.
+T02/T03/T07 override opaque facade surface0 with town_architecture_worn.tres;
+roof module surface0 gets town_roof_worn. Wrapper only overrides surface0, so latest
+embedded glass surface1 should survive. Batch GLBs + UV-matched atlases/variants;
+architecture solid/corner companion UVs also changed. Old geometry/new atlas unsafe.
+
+At read time local facade_window SHA62044EE53CCC2FFC2CC3ECCAE1F7869A5942568E1045073A7A95194D85EE3EE0
+has one opaque material, old360 visual tris. Source latest SHA3C9EC4D586D0B9AE21805629E53F136A23DEBB100B7BCF53BDBE6FB1B47510C4
+has708 visual tris, opaque0 + Town_WindowGlass1 alphaModeBLEND/alpha.22/roughness.18.
+Both GLBs have FacadeWindow-colonly combined helper. Latest booth similarly has
+GuardBooth-colonly combined helper. Source/export QA is distinct from native import.
+Import suffix settings are enabled; exact imported StaticBody child path/RID must be
+read from native scene before any tag/disable write, not invented from GLB node name.
+
+Decoded latest window helper POSITION accessor:120vertices/60tris, five box islands,
+all still one helper/body. GodotXYZ bounds (rounding to authored values):
+opaqueWest X0..1.2,Y0..3.2,Z0...244;
+opaqueEast X2.8..4,Y0..3.2,Z0...244;
+opaqueSill X1.2..2.8,Y0..1.05,Z0...244;
+opaqueLintel X1.2..2.8,Y2.4..3.2,Z0...244;
+glassProxy X1.278..2.722,Y1.123..2.327,Z.105...117.
+This permits exact offline partition of first4 opaque vs fifth pane, with no mesh
+remodel or new Blender dependency. Disable/remove combined helper when replacing it;
+otherwise opaque original pane collider still blocks LOS after the tagged pane skip.
+
+Visible frame lacks collision in those five boxes (source collision defaultfalse):
+jambs centre(1.235,1.725,.155)/(2.765,1.725,.155),size(.070,1.35,.13);
+rails centre(2,1.085,.155)/(2,2.365,.155),size(1.46,.070,.13);
+centre mullion centre(2,1.725,.155),size(.045,1.21,.115).
+Add these five opaque fitted shapes to untagged frame/wall body or precise hull.
+Specifically test rayX2/Y1.725 through mullion: must stay blocked after pane skip.
+Pane may contain multiple glass-only shapes sharing RID; never share RID with frame.
+Keep glass layer1 so player/Weapon_Resource/bt_shoot rays remain physically blocked.
+Tag actual glass-only StaticBody3D with ai_vision_transparent; not parent/root/mesh.
+The primary's concurrent ScavPerception edit was visible during audit: bounded4pane
+skip is present in _los_clear. This audit neither implemented nor validated it.
+
+Five minimal reuse pilots (all proposed new placements, native pending)
+1 cottage T01-A/sourceT01: t01_cottage,10x8,(-142,-17),yaw180,pad2/root2.2,
+  ground doorway/threshold/ceiling; shell candidate t01_cottage_shell stays closed.
+2 store T02-A/sourceT02: t04_shop,12x8,(-100,-15),yaw180,pad2/root2.2,
+  ground doorway/store frontage; no upper/glass promise from graybox.
+3 civic upper T03-A/sourceT03: t02_long_house,8x16,(-39,-13),yaw180,
+  pad2/root2.2; both stair directions/landing/headroom plus existing window module.
+4 warehouse I01-A/sourceI01: t08_warehouse,24.6x18.6,(155,-72),yaw180,
+  pad2/root2.2; wide entry/east breach/partial roof/ceiling. It is enterable industrial
+  room; include a closed industrial shell sample t07_workshop_shell as negative case.
+5 shed T01-B/sourceT01: t09_shed_shell,6x4,(-130,-25),yaw0,pad2/root2.2,
+  closed shell/collider negative. Open shed T02-B uses t09_shed when ground-room
+  contrast is required; do not make the selected T01-B enterable.
+Deck-floor native pilot belongs terrain/circulation ownership; no model created here.
+
+Smallest authoring change recommendation
+No template geometry rewrite needed for Phase1 pilots. Keep existing helper at
+Assets/TownConceptB/Buildings/author_buildings.cjs (the delegated design/... path does
+not exist). Its top source is old design/town-concept-b/town-layout.json and tail
+hard-asserts33/17/4. Do not run default rewrite to publish new500m mappings.
+If primary needs reusable regeneration, add a single templates-only guard around
+old instance mapping/asserts/contract publication; retain unchanged createScene,
+door/stair/ceiling assertions and18variant output checks. No runtime loader/new API.
+Prefer glass collision composition in two existing module wrappers; author_buildings
+already references them and callers inherit the correction. The guard is optional
+until template regeneration is needed; this audit does not request speculative code.
+
+Explicit safe legacy placement migration
+legacy-remap.json has all33 live roots: node_path, unique_id, metadata id/type/access,
+original template, literal transform, node-block hash, explicit descendant paths and
+same-template new actual/source_ref candidates. It also lists all54 new reusable
+catalogue placements with authored transforms/access/pads. This is retirement +
+asset reuse, not save migration. No chosen1:1 new ID is claimed because many old roots
+share templates and their gameplay meanings differ. Legacy H01 is cottage whereas
+new sourceH01 is observation_platform; oldI01 workshop vs newI01 warehouse; oldL01
+upper long house vs newL01 pump house. Never match unqualified source IDs by name.
+Before Phase3 deletion confirm live path+metadata+PackedScene/block against manifest;
+if changed, re-audit. Delete exact33 roots only, preserve their reusable assets and
+parent/gameplay siblings. Replace old TerrainRoads/ConceptBDressing separately after
+terrain/dressing payload acceptance. DayNightCycle references15 old light paths:
+move/reuse light nodes explicitly or update array together; no parent blanket delete.
+Fresh production Hub deploy is supported migration boundary. Keep old direct-debug
+Town saves, mark spatially incompatible, no automatic snapshot rewrite/deletion.
+Manifest is design-only; no Town scene change performed by this worker.
+
+Offline checks performed
+node Assets/TownConceptB/Buildings/author_buildings.cjs --check: PASS, saved18 outputs
+equal current authoring source;14types/33oldmappings/17ground/4upper checks.
+Manifest reconciles exact33 unique live concept_b_ids,54 catalogue reusable placements;
+every preserve_exact_path exists in inspected .tscn. GLB JSON read and buffer accessor
+decode prove five helper islands and material surfaces. Native get_owner/import/play,
+parser/material/collider suffix, physical doorway/stairs, nav bake, bullets/vision,
+rendered transparency sorting and120FPS were not executed or claimed by this audit.
+Primary must run one/two panes,pane->wall,untagged body,fivepane fail-closed,
+opaque frame/mullion rays and actual player/weapon paths, then stop owned runtime.
+
+Supplement — exact guard booth collision/native transform source
+Latest GLB hierarchy: glTF nodeTownGuardBooth childrenGuardBooth(mesh0) and
+GuardBooth-colonly(mesh1). All three nodes omit matrix/translation/rotation/scale:
+identity. Window equivalent hierarchyTownFacadeWindow childrenFacadeWindow(mesh0)
+andFacadeWindow-colonly(mesh1), also identity. Godot may add an import scene root;
+wrapper descendant paths must be confirmed in native imported PackedScene.
+Booth helper POSITION456vertices =>19box islands (24vertices each), all one helper.
+Below bounds are exact authored decimals rounded from float32 buffer, GodotXYZ:
+index role       minXYZ                   maxXYZ
+0 floor          (-.15,0,-2.85)           (2.85,.08,.15)
+1 frontWest      (-.15,.08,0)             (.75,3.04,.15)
+2 frontEast      (1.95,.08,0)             (2.85,3.04,.15)
+3 frontLintel    (.75,2.48,0)             (1.95,3.04,.15)
+4 leftFront      (-.15,.08,-.55)          (0,3.04,0)
+5 leftSill       (-.15,.08,-2.15)         (0,1.05,-.55)
+6 leftLintel     (-.15,2.45,-2.15)        (0,3.04,-.55)
+7 leftRear       (-.15,.08,-2.7)          (0,3.04,-2.15)
+8 leftPane       (-.027,1.0875,-2.0775)   (-.015,2.4125,-.6225)
+9 rightFront     (2.7,.08,-.55)           (2.85,3.04,0)
+10 rightSill     (2.7,.08,-2.15)          (2.85,1.05,-.55)
+11 rightLintel   (2.7,2.45,-2.15)         (2.85,3.04,-.55)
+12 rightRear     (2.7,.08,-2.7)           (2.85,3.04,-2.15)
+13 rightPane     (2.715,1.0875,-2.0775)    (2.727,2.4125,-.6225)
+14 rearWest      (0,.08,-2.85)            (.55,3.04,-2.7)
+15 rearSill      (.55,.08,-2.85)          (2.15,1.05,-2.7)
+16 rearLintel    (.55,2.45,-2.85)         (2.15,3.04,-2.7)
+17 rearEast      (2.15,.08,-2.85)         (2.7,3.04,-2.7)
+18 rearPane      (.6225,1.0875,-2.727)    (2.0775,2.4125,-2.715)
+Opaque helper indices0..7,9..12,14..17; glass-only8,13,18. No booth roof island.
+Native floor top.08/ceiling underside3.04 gives2.96m interior clearance; author
+separate downward ceiling if wrapper needs physics roof blocking/nonwalkable roof.
+
+Three window frames currently visual only. Derive each from flat front coordinates:
+jambs centres(.585,1.75,.07),(2.115,1.75,.07),size(.07,1.4,.12);
+rails centres(1.35,1.085,.07),(1.35,2.415,.07),size(1.46,.07,.12);
+mullion centre(1.35,1.75,.06),size(.04,1.26,.10).
+To Godot side placement: left centre[-Z,Y,-X];right[2.7+Z,Y,-X];
+rear[X,Y,-2.7-Z]. Swap sizeX/sizeZ for left/right; rear sizes unchanged.
+Each of15 frame boxes is opaque/untagged. The pane stays physically blocked while
+vision may skip its separateRID; test centre mullion and corner wall on each side.
+Latest polished front continuousU visual frame has interiorX.748..1.952/Y.079..2.483,
+where fitted original helpers leaveX.75..1.95/Y.08..2.48. Original physics aperture
+is conservatively~2mm tighter,1.2x2.4 clear; no need to widen for Phase1.

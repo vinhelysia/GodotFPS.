@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/bunker_floodlight_mast/assets/bunker_floodlight_mast_dual.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/bunker_floodlight_mast/materials/town_bunker_floodlight_mast_dual_used.tres" id="2_finish"]
+
+[node name="bunker_floodlight_mast__dual" type="Node3D"]
+metadata/catalog_id = "bunker_floodlight_mast"
+metadata/catalog_variant = "dual"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="FloodlightMast" parent="Model/TownBunkerFloodlightMast"]
+surface_material_override/0 = ExtResource("2_finish")

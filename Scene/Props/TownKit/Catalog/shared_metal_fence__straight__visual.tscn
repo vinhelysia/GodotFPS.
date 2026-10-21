@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/metal_fence/assets/metal_fence_straight.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/metal_fence/materials/town_metal_fences_used.tres" id="2_finish"]
+
+[node name="shared_metal_fence__straight" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "shared_metal_fence"
+metadata/catalog_variant = "straight"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="MetalFenceStraight" parent="Model/TownMetalFenceStraight"]
+surface_material_override/0 = ExtResource("2_finish")

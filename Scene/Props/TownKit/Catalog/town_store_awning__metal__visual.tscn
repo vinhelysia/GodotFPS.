@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/storefront_awning/assets/storefront_awning_metal.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/storefront_awning/materials/town_storefront_awning_metal_used.tres" id="2_finish"]
+
+[node name="town_store_awning__metal" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "town_store_awning"
+metadata/catalog_variant = "metal"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="StorefrontAwningMetal" parent="Model/TownStorefrontAwningMetal"]
+surface_material_override/0 = ExtResource("2_finish")

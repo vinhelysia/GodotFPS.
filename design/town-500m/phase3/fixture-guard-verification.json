@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-10",
+  "status": "SCRIPT_COMPILED_AND_ROUTE_BEHAVIOR_FUNCTIONS_BYTE_UNCHANGED",
+  "prior_fixture_sha256": "14a4e03fbfd82cc336a22a7ea1f9fd7fe3a59b0a45ff66d1130458ab48bf5b54",
+  "current_fixture_sha256": "33a93a9d9c41879b0a2fcfa675dc52c868d0496062f7068b12e2a9e504d4b8a3",
+  "walk_functions_byte_unchanged": [
+    "_route",
+    "_walk",
+    "_nav_path",
+    "_graph_point",
+    "_settle",
+    "_floor",
+    "_footprint_support",
+    "_slide_contacts",
+    "_release_actions"
+  ],
+  "prior_fixture_archive": "../.agent-snapshots/town500_phase3_20261010/composition-before-acceptance-guards.gd",
+  "current_scope": "After the8 full walks: source bindings/tail completion assertions added; seam query raw paths recorded and connectivity gate revised to a bounded local radius with physical follow-up for paths longer than the unchanged8m diagnostic target. Town/terrain/controller/full-walk functions remain unchanged. Raw full-walk receipts retain original hashes.",
+  "native_negative_guard": {
+    "status": "EXPECTED_REJECTION_PASS",
+    "receipt": "tests/artifacts/town500_phase3/capture-headless-rejection-native.json",
+    "checks": 516,
+    "expected_failed_checks": [
+      "Capture requires rendered Forward Plus",
+      "Native phase reached completion before reporting PASS",
+      "All8 production captures and2 open-edge classifications completed"
+    ],
+    "scope": "Headless capture rejected at renderer/tail/count guards; no Script Error or false PASS."
+  },
+  "seam_revision": {
+    "diagnostic": "tests/artifacts/town500_phase3/seams-native-funnel-diagnostic-attempt.json",
+    "original_forward_length_m": 8.68107450008392,
+    "original_reverse_length_m": 6.00509929656982,
+    "criterion": "Native start/end within0.6m; every XZ waypoint inside(run+2)m radius of seam center. Length target retained as diagnostic; longer local paths physically followed with unchanged health.",
+    "status": "NATIVE_PASS_980_CHECKS",
+    "final_receipt": "tests/artifacts/town500_phase3/seams-native.json",
+    "completed_lane_roundtrips": 45,
+    "strict_crossings": 15,
+    "longer_funnel_walk_completed": true
+  }
+}

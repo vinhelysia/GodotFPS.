@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/clinic_examination_bed/assets/clinic_examination_bed_with_sheet.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/clinic_examination_bed/materials/town_clinic_examination_bed_with_sheet_used.tres" id="2_finish"]
+
+[node name="town_clinic_examination_bed__with-sheet" type="Node3D"]
+metadata/catalog_id = "town_clinic_examination_bed"
+metadata/catalog_variant = "with-sheet"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="ClinicBedWithSheet" parent="Model/TownClinicBedWithSheet"]
+surface_material_override/0 = ExtResource("2_finish")

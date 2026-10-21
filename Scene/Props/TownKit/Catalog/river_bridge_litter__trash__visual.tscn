@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/river_bridge_litter/assets/river_bridge_litter_trash.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/river_bridge_litter/materials/town_river_bridge_litter_trash_used.tres" id="2_finish"]
+
+[node name="river_bridge_litter__trash" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "river_bridge_litter"
+metadata/catalog_variant = "trash"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="BridgeLitterTrash" parent="Model/TownBridgeLitterTrash"]
+surface_material_override/0 = ExtResource("2_finish")

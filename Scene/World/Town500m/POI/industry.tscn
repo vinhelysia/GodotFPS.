@@ -1,0 +1,178 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t02_long_house_ground.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t06_garage.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Graybox/fuel_tank.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Graybox/container.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Graybox/railcar.tscn" id="7"]
+
+[node name="industry" type="Node3D"]
+metadata/town500_zone = "industry"
+metadata/phase = 3
+
+[node name="I01-A" parent="." instance=ExtResource("1")]
+position = Vector3(155, 2.2, -72)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "I01-A"
+metadata/source_ref = "I01"
+metadata/zone = "industry"
+metadata/ground_access = true
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = false
+
+[node name="I02-A" parent="." instance=ExtResource("2")]
+position = Vector3(191, 2.2, -78)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "I02-A"
+metadata/source_ref = "I02"
+metadata/zone = "industry"
+metadata/ground_access = true
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = false
+
+[node name="I05-A" parent="." instance=ExtResource("3")]
+position = Vector3(150, 2.2, 64)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "I05-A"
+metadata/source_ref = "I05"
+metadata/zone = "industry"
+metadata/ground_access = true
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = false
+
+[node name="I07-A" parent="." instance=ExtResource("4")]
+position = Vector3(182, 2.2, 80)
+rotation = Vector3(0, 1.570796327, 0)
+metadata/town500_id = "I07-A"
+metadata/source_ref = "I07"
+metadata/zone = "industry"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = false
+
+[node name="I03-A" parent="." instance=ExtResource("5")]
+position = Vector3(140, 2.2, -18)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "I03-A"
+metadata/source_ref = "I03"
+metadata/zone = "industry"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = true
+
+[node name="I03-B" parent="." instance=ExtResource("5")]
+position = Vector3(148, 2.2, -18)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "I03-B"
+metadata/source_ref = "I03"
+metadata/zone = "industry"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = true
+
+[node name="I03-C" parent="." instance=ExtResource("5")]
+position = Vector3(156, 2.2, -18)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "I03-C"
+metadata/source_ref = "I03"
+metadata/zone = "industry"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = true
+
+[node name="I04-A" parent="." instance=ExtResource("6")]
+position = Vector3(171, 2.2, -24)
+rotation = Vector3(0, 1.570796327, 0)
+metadata/town500_id = "I04-A"
+metadata/source_ref = "I04"
+metadata/zone = "industry"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = true
+
+[node name="I04-B" parent="." instance=ExtResource("6")]
+position = Vector3(179, 2.2, -24)
+rotation = Vector3(0, 1.570796327, 0)
+metadata/town500_id = "I04-B"
+metadata/source_ref = "I04"
+metadata/zone = "industry"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = true
+
+[node name="I04-C" parent="." instance=ExtResource("6")]
+position = Vector3(187, 2.2, -24)
+rotation = Vector3(0, 1.570796327, 0)
+metadata/town500_id = "I04-C"
+metadata/source_ref = "I04"
+metadata/zone = "industry"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = true
+
+[node name="I06-A" parent="." instance=ExtResource("6")]
+position = Vector3(146, 2.2, 35)
+rotation = Vector3(0, 1.570796327, 0)
+metadata/town500_id = "I06-A"
+metadata/source_ref = "I06"
+metadata/zone = "industry"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = true
+
+[node name="I06-B" parent="." instance=ExtResource("6")]
+position = Vector3(154, 2.2, 35)
+rotation = Vector3(0, 1.570796327, 0)
+metadata/town500_id = "I06-B"
+metadata/source_ref = "I06"
+metadata/zone = "industry"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = true
+
+[node name="I06-C" parent="." instance=ExtResource("6")]
+position = Vector3(162, 2.2, 35)
+rotation = Vector3(0, 1.570796327, 0)
+metadata/town500_id = "I06-C"
+metadata/source_ref = "I06"
+metadata/zone = "industry"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = true
+
+[node name="I08-A" parent="." instance=ExtResource("7")]
+position = Vector3(208.52, 2.2, -43.18)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "I08-A"
+metadata/source_ref = "I08"
+metadata/zone = "industry"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = true
+
+[node name="I09-A" parent="." instance=ExtResource("7")]
+position = Vector3(198.3, 2.2, 59.09)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "I09-A"
+metadata/source_ref = "I09"
+metadata/zone = "industry"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = true

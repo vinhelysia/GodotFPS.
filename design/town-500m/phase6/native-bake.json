@@ -1,0 +1,78 @@
+{
+	"collision_winding": "Canonical clockwise Godot faces on all six replacement chunks; corrected from imported OBJ ordering",
+	"nonmanifold_edges": 0,
+	"polygons": 13920,
+	"runtime_links": 0,
+	"runtime_regions": 1,
+	"seams": {
+		"x": {
+			"joined_edge_pairs": 18,
+			"open_boundary_edges": [
+				{
+					"a": "(0.0, 2.2, 102.5)",
+					"b": "(0.0, 2.2, 105.1)"
+				},
+				{
+					"a": "(0.0, 2.2, 102.5)",
+					"b": "(0.0, 2.2, 101.8)"
+				}
+			]
+		},
+		"z": {
+			"joined_edge_pairs": 12,
+			"open_boundary_edges": []
+		}
+	},
+	"source_Town_before_save": "796a7662b76c00a56903dfd794e463f21c7bf2b519a898921e88292b44b10b2e",
+	"tiles": [
+		{
+			"bounds_xz": [
+				-250.0,
+				-250.0,
+				0.0,
+				0.0
+			],
+			"elapsed_ms": 1936,
+			"polygons": 4200,
+			"tile": 0,
+			"vertices": 3433
+		},
+		{
+			"bounds_xz": [
+				0.0,
+				-250.0,
+				250.0,
+				0.0
+			],
+			"elapsed_ms": 1545,
+			"polygons": 3551,
+			"tile": 1,
+			"vertices": 2791
+		},
+		{
+			"bounds_xz": [
+				-250.0,
+				0.0,
+				0.0,
+				250.0
+			],
+			"elapsed_ms": 1921,
+			"polygons": 4021,
+			"tile": 2,
+			"vertices": 3763
+		},
+		{
+			"bounds_xz": [
+				0.0,
+				0.0,
+				250.0,
+				250.0
+			],
+			"elapsed_ms": 1305,
+			"polygons": 2148,
+			"tile": 3,
+			"vertices": 1771
+		}
+	],
+	"vertices": 11714
+}

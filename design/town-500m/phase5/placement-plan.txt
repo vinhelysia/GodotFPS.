@@ -1,0 +1,540 @@
+# Town500m — kế hoạch placement từng prop
+
+Ngày 2026-10-20. 371 instances; 128 / 143 types sẽ đặt; 15 ngoại lệ có lý do.
+
+Tọa độ world XYZ (m), rotation XYZ (degrees; Godot Euler order YXZ); không đổi roads/buildings/spawn/extract. Toàn bộ TownKit props giữ native import scale (1,1,1). Mỗi dòng là một editable scene instance; JSON là nguồn tọa độ và rotation đã author. Revision này cần native acceptance mới.
+
+1. Coordinate/asset mapping: All143 types covered; source bounds, floors, routes, doors and pair overlaps checked.
+2. Selective import: Only selected geometry/dependencies copied with SHA checks; reusable finish/collision wrappers resolve natively.
+3. Static editable zone composition: Every listed individual transform authored, honest proxy replacements and supported furniture/clutter.
+4. Native acceptance: Imported materials/helpers, physical support, nav bake, existing full routes/interiors/ports/finite LOS and rendered views verified.
+5. Handoff: Source protection/isolated saves/editor cleanup, before-after evidence, coverage table and limits recorded.
+
+## Placement theo zone
+
+| ID | Prop / geometry | Finish | XYZ m | Rotation XYZ ° | Scale | Support / host | Collision | Vai trò |
+|---|---|---|---|---|---|---|---|---|
+| T_CLINIC_BED_A | town_clinic_examination_bed / with-sheet | clean | -140.8, 2.2, 59.8 | 0, 0, 0 | 1, 1, 1 | building_floor / T05-A | native | examination bay |
+| T_CLINIC_BED_B | town_clinic_examination_bed / bare | used | -133.2, 2.2, 59.8 | 0, 0, 0 | 1, 1, 1 | building_floor / T05-A | native | second examination bay |
+| T_CLINIC_SHELF_A | town_pharmacy_shelf / stocked | clean | -142.1, 2.2, 57.7 | 0, 90, 0 | 1, 1, 1 | building_floor / T05-A | native | medical storage against west wall |
+| T_CLINIC_SHELF_B | town_pharmacy_shelf / empty | used | -142.1, 2.2, 56.3 | 0, 90, 0 | 1, 1, 1 | building_floor / T05-A | native | matching partly cleared medical storage |
+| T_CLINIC_DESK | town_office_furniture / desk | clean | -133.6, 2.2, 55.2 | 0, 0, 0 | 1, 1, 1 | building_floor / T05-A | native | reception desk east of main aisle |
+| T_CLINIC_FILE_A | town_office_furniture / cabinet | used | -131.95, 2.2, 54.9 | 0, 0, 0 | 1, 1, 1 | building_floor / T05-A | native | reception filing bank |
+| T_CLINIC_FILE_B | town_office_furniture / cabinet | used | -131.95, 2.2, 55.65 | 0, 0, 0 | 1, 1, 1 | building_floor / T05-A | native | matching reception filing bank |
+| T_CLINIC_WAIT_A | town_waiting_room_chair / row | clean | -140.5, 2.2, 53.4 | 0, 0, 0 | 1, 1, 1 | building_floor / T05-A | native | waiting row clear of entry throat |
+| T_CLINIC_WAIT_B | town_waiting_room_chair / row | used | -133.5, 2.2, 53.4 | 0, 0, 0 | 1, 1, 1 | building_floor / T05-A | native | matching waiting row |
+| T_CLINIC_NOTICE | town_notice_board / wall | used | -140.4, 3.3, 52.255 | 0, 0, 0 | 1, 1, 1 | wall / T05-A | visual_only | clinic public notices facing room |
+| T_CLINIC_AC | town_air_conditioner / small | clean | -133.6, 4.62, 51.995 | 0, 180, 0 | 1, 1, 1 | wall / T05-A | visual_only | reception AC outdoors above frontage |
+| T_CLINIC_PAPER | shared_street_litter / paper | used | -133.6, 2.95, 55.2 | 0, 0, 0 | 1, 1, 1 | surface / T_CLINIC_DESK | visual_only | abandoned paperwork on desk; source paper footprint already0.70x0.57m |
+| T_PHARM_SHELF_A | town_pharmacy_shelf / stocked | clean | -95.5, 2.2, -18.1 | 0, 360, 0 | 1, 1, 1 | building_floor / T02-A | native | pharmacy rear shelf bank |
+| T_PHARM_SHELF_B | town_pharmacy_shelf / stocked | used | -96.9, 2.2, -18.1 | 0, 360, 0 | 1, 1, 1 | building_floor / T02-A | native | matching pharmacy shelf bank |
+| T_PHARM_SHELF_C | town_pharmacy_shelf / empty | used | -98.3, 2.2, -18.1 | 0, 360, 0 | 1, 1, 1 | building_floor / T02-A | native | cleared end of pharmacy bank |
+| T_PHARM_COUNTER_A | town_shop_counter / straight | clean | -96.3, 2.2, -15.6 | 0, 180, 0 | 1, 1, 1 | building_floor / T02-A | native | retail counter west bay |
+| T_PHARM_COUNTER_B | town_shop_counter / straight | used | -103.7, 2.2, -15.6 | 0, 180, 0 | 1, 1, 1 | building_floor / T02-A | native | retail counter east bay |
+| T_PHARM_FILE | town_office_furniture / cabinet | used | -105.1, 2.2, -17.8 | 0, 360, 0 | 1, 1, 1 | building_floor / T02-A | native | dispensary records |
+| T_PHARM_SIGN | town_shop_cyrillic_sign / pharmacy | clean | -96.8, 4.68, -10.995 | 0, 360, 0 | 1, 1, 1 | wall / T02-A | visual_only | Cyrillic pharmacy facade sign |
+| T_PHARM_AWNING | town_store_awning / canvas | used | -102.8, 4.7, -10.995 | 0, 360, 0 | 1, 1, 1 | wall / T02-A | visual_only | retained canvas retail awning |
+| T_PHARM_METER | town_wall_electric_meter / single | used | -94.8, 3.5, -19.005 | 0, 180, 0 | 1, 1, 1 | wall / T02-A | visual_only | rear service electric meter |
+| T_GROCERY_COUNTER | town_shop_counter / corner | clean | 13.7, 2.2, -13.4 | 0, 360, 0 | 1, 1, 1 | building_floor / T04-A | native | grocery cash counter opposite pickup area |
+| T_GROCERY_SHELF_A | town_pharmacy_shelf / empty | used | 15.1, 2.2, -10.8 | 0, 270, 0 | 1, 1, 1 | building_floor / T04-A | native | empty small-goods shelf bank |
+| T_GROCERY_SHELF_B | town_pharmacy_shelf / empty | used | 15.1, 2.2, -12.3 | 0, 270, 0 | 1, 1, 1 | building_floor / T04-A | native | matching cleared goods bank |
+| T_GROCERY_DESK | town_office_furniture / desk | used | 13.8, 2.2, -8.2 | 0, 180, 0 | 1, 1, 1 | building_floor / T04-A | native | shopkeeper accounts corner |
+| T_GROCERY_SIGN | town_shop_cyrillic_sign / grocery | clean | 13.2, 4.68, -6.995 | 0, 360, 0 | 1, 1, 1 | wall / T04-A | visual_only | Cyrillic grocery fascia |
+| T_GROCERY_AWNING | town_store_awning / metal | clean | 7.2, 4.7, -6.995 | 0, 360, 0 | 1, 1, 1 | wall / T04-A | visual_only | metal awning at retail bay |
+| T_GROCERY_AC | town_air_conditioner / large | used | 6.9, 4.37, -15.005 | 0, 180, 0 | 1, 1, 1 | wall / T04-A | visual_only | rear condenser over service side |
+| T_CIVIC_DESK_A | town_office_furniture / desk | clean | -36.2, 2.2, -9.2 | 0, 270, 0 | 1, 1, 1 | building_floor / T03-A | native | municipal clerk desk |
+| T_CIVIC_DESK_B | town_office_furniture / desk | used | -36.2, 2.2, -13 | 0, 270, 0 | 1, 1, 1 | building_floor / T03-A | native | matching clerk desk |
+| T_CIVIC_FILE_A | town_office_furniture / cabinet | used | -36.2, 2.2, -17.7 | 0, 180, 0 | 1, 1, 1 | building_floor / T03-A | native | records bank |
+| T_CIVIC_FILE_B | town_office_furniture / cabinet | used | -36.9, 2.2, -17.7 | 0, 180, 0 | 1, 1, 1 | building_floor / T03-A | native | matching records bank |
+| T_CIVIC_FILE_C | town_office_furniture / cabinet | clean | -37.6, 2.2, -17.7 | 0, 180, 0 | 1, 1, 1 | building_floor / T03-A | native | matching records bank end |
+| T_CIVIC_WAIT | town_waiting_room_chair / row | used | -37, 2.2, -7.4 | 0, 180, 0 | 1, 1, 1 | building_floor / T03-A | native | office waiting row west of foyer |
+| T_CIVIC_NOTICE | town_notice_board / wall | used | -36.7, 3.3, -4.995 | 0, 360, 0 | 1, 1, 1 | wall / T03-A | visual_only | municipal notice board outdoors |
+| T_COMMUNITY_DESK | town_office_furniture / desk | used | -36.6, 2.2, 72.8 | 0, 180, 0 | 1, 1, 1 | building_floor / T07-A | native | community services office |
+| T_COMMUNITY_FILE_A | town_office_furniture / cabinet | used | -27.6, 2.2, 72.8 | 0, 90, 0 | 1, 1, 1 | building_floor / T07-A | native | community archive bank |
+| T_COMMUNITY_FILE_B | town_office_furniture / cabinet | used | -27.6, 2.2, 72.1 | 0, 90, 0 | 1, 1, 1 | building_floor / T07-A | native | community archive bank |
+| T_COMMUNITY_WAIT | town_waiting_room_chair / row | clean | -38.7, 2.2, 72 | 0, 90, 0 | 1, 1, 1 | building_floor / T07-A | native | community waiting row |
+| T_SERVICES_SIGN | town_shop_cyrillic_sign / services | used | -16, 4.68, 86.005 | 0, 360, 0 | 1, 1, 1 | wall / T07-B | visual_only | small service-office sign |
+| T_SERVICES_DESK | town_office_furniture / desk | used | -14.8, 2.2, 79.3 | 0, 180, 0 | 1, 1, 1 | building_floor / T07-B | native | service counter administration |
+| T_SERVICES_FILES_A | town_office_furniture / cabinet | used | -23.8, 2.2, 79.3 | 0, 180, 0 | 1, 1, 1 | building_floor / T07-B | native | service office files |
+| T_SERVICES_FILES_B | town_office_furniture / cabinet | clean | -23.1, 2.2, 79.3 | 0, 180, 0 | 1, 1, 1 | building_floor / T07-B | native | matching files |
+| T_HOME_DESK | town_office_furniture / desk | used | -138.5, 2.2, -19.7 | 0, 180, 0 | 1, 1, 1 | building_floor / T01-A | native | household study corner |
+| T_HOME_CABINET | town_office_furniture / cabinet | used | -145.7, 2.2, -19.7 | 0, 180, 0 | 1, 1, 1 | building_floor / T01-A | native | household storage |
+| T_HOME_RADIATOR | town_apartment_radiator / small | clean | -145, 2.36, -20.745 | 0, 360, 0 | 1, 1, 1 | wall / T01-A | visual_only | domestic heating at rear wall |
+| T_HOME_METER | town_wall_electric_meter / single | used | -138.3, 3.5, -21.005 | 0, 180, 0 | 1, 1, 1 | wall / T01-A | visual_only | domestic service meter |
+| T_APARTMENT_MAIL | town_apartment_mailboxes / row | clean | -84, 3.3, 84.005 | 0, 0, 0 | 1, 1, 1 | wall / T06-A | visual_only | mail bank on solid rear facade panel |
+| T_APARTMENT_DISH | town_satellite_dish / angled | used | -76, 6.8, 84.005 | 0, 0, 0 | 1, 1, 1 | wall / T06-A | visual_only | single satellite dish on upper solid panel |
+| T_APARTMENT_METER | town_wall_electric_meter / double | used | -92, 3.5, 84.005 | 0, 0, 0 | 1, 1, 1 | wall / T06-A | visual_only | paired apartment electric service |
+| T_COURTYARD_SWING | town_playground_swing / with-seat | used | -87, 2, 69 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | abandoned shared courtyard playground |
+| T_COURTYARD_BENCH_A | town_courtyard_bench / painted | clean | -94, 2, 69 | 0, 90, 0 | 1, 1, 1 | terrain / terrain | native | courtyard bench facing playground |
+| T_COURTYARD_BENCH_B | town_courtyard_bench / painted | used | -79, 2, 69 | 0, -90, 0 | 1, 1, 1 | terrain / terrain | native | matching courtyard bench |
+| T_HOME_LONG_DESK | town_office_furniture / desk | used | -89.7, 2.2, 64.8 | 0, 180, 0 | 1, 1, 1 | building_floor / T06-B | native | residential study corner away from stair |
+| T_HOME_LONG_FILE | town_office_furniture / cabinet | used | -80.6, 2.2, 64.8 | 0, 90, 0 | 1, 1, 1 | building_floor / T06-B | native | residential utility cupboard |
+| T_HOME_LONG_RADIATOR | town_apartment_radiator / large | clean | -84.2, 2.36, 65.495 | 0, 180, 0 | 1, 1, 1 | wall / T06-B | visual_only | heating under west wall |
+| T_HOME_EAST_DESK | town_office_furniture / desk | used | 17.2, 2.2, 118.3 | 0, 90, 0 | 1, 1, 1 | building_floor / T12-A | native | residential study corner |
+| T_HOME_EAST_CABINET | town_office_furniture / cabinet | used | 17.2, 2.2, 127.4 | 0, 0, 0 | 1, 1, 1 | building_floor / T12-A | native | residential utility cupboard |
+| T_HOME_EAST_RADIATOR | town_apartment_radiator / large | used | 16.505, 2.36, 123.8 | 0, 90, 0 | 1, 1, 1 | wall / T12-A | visual_only | domestic perimeter heating |
+| T_GARAGE_BENCH_A | town_workshop_bench / tool-covered | used | 14, 2.2, 75.9 | 0, 180, 0 | 1, 1, 1 | building_floor / T08-A | native | repair bench on clear rear wall away from GunLocker |
+| T_GARAGE_BENCH_B | town_workshop_bench / plain | clean | 16.2, 2.2, 75.9 | 0, 180, 0 | 1, 1, 1 | building_floor / T08-A | native | matching repair bench away from M700 |
+| T_GARAGE_COMPRESSOR | industry_air_compressor / horizontal | used | 10.2, 2.2, 70.2 | 0, 0, 0 | 1, 1, 1 | building_floor / T08-A | native | portable compressor by repair zone |
+| T_GARAGE_TIRE_A | shared_tire_stack / stacked | used | 10.3, 2.2, 68.6 | 0, 0, 0 | 1, 1, 1 | building_floor / T08-A | native | matching spare tire bank |
+| T_GARAGE_TIRE_B | shared_tire_stack / stacked | used | 11.2, 2.2, 68.6 | 0, 0, 0 | 1, 1, 1 | building_floor / T08-A | native | matching spare tire bank |
+| T_WORKSHOP_BENCH_A | town_workshop_bench / plain | clean | -24.2, 2.2, 128 | 0, 270, 0 | 1, 1, 1 | building_floor / T11-A | native | workshop wall bench away from provisions |
+| T_WORKSHOP_BENCH_B | town_workshop_bench / tool-covered | used | -24.2, 2.2, 130.4 | 0, 270, 0 | 1, 1, 1 | building_floor / T11-A | native | matching repair station |
+| T_WORKSHOP_CART | industry_welding_cart / covered | used | -24.3, 2.2, 125 | 0, 270, 0 | 1, 1, 1 | building_floor / T11-A | native | welding supplies in repair strip |
+| T_WORKSHOP_LIGHT | industry_work_light / mounted | used | -23.505, 4.3, 129.2 | 0, 270, 0 | 1, 1, 1 | wall / T11-A | visual_only | unpowered mounted workshop task light |
+| T_MARKET_STALL_A | town_market_stall / empty | used | -48, 2, 108 | 0, 90, 0 | 1, 1, 1 | terrain / terrain | native | market stall beside kiosk group |
+| T_MARKET_STALL_B | town_market_stall / tarp-covered | clean | -48, 2, 112 | 0, 90, 0 | 1, 1, 1 | terrain / terrain | native | matching abandoned covered market stall |
+| T_MARKET_CRATE_A | shared_wooden_crate / medium | used | -47.8, 2, 116.5 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | produce freight stack behind stalls |
+| T_MARKET_CRATE_B | shared_wooden_crate / small | clean | -47.8, 2.6816, 116.5 | 0, 0, 0 | 1, 1, 1 | surface / T_MARKET_CRATE_A | native | stacked produce crate |
+| T_MARKET_CRATE_C | shared_wooden_crate / medium | clean | -46.7, 2, 116.5 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | matching produce freight stack |
+| T_BUS_SHELTER | town_soviet_bus_shelter / intact | clean | -125, 2, 29 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | county-road bus stop on north clinic shoulder |
+| T_BUS_BOARD | town_notice_board / freestanding | used | -120.7, 2, 29.2 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | public timetable board next to bus stop |
+| T_BUS_LITTER | shared_street_litter / paper | used | -123.6, 2, 27.3 | 0, 10, 0 | 1, 1, 1 | terrain / terrain | visual_only | small localized autumn bus-stop litter outside shelter slab |
+| T_ROAD_SEDAN_A | shared_old_sedan / abandoned | used | -127.27, 2, 9.36 | 0, 82, 0 | 1, 1, 1 | terrain / C01-01 | native | existing abandoned road sedan art candidate |
+| T_ROAD_SEDAN_B | shared_old_sedan / abandoned | worn | -11.23, 2, 28.66 | 0, 82, 0 | 1, 1, 1 | terrain / C01-02 | native | existing abandoned road sedan art candidate |
+| I_WAREHOUSE_CRANE | industry_gantry_crane / fixed | clean | 162.6, 2.2, -76.8 | 0, 180, 0 | 1, 1, 1 | building_floor / I01-A | native | static repair gantry in machinery bay |
+| I_WAREHOUSE_BENCH_A | town_workshop_bench / tool-covered | used | 165.6, 2.2, -72.8 | 0, 270, 0 | 1, 1, 1 | building_floor / I01-A | native | warehouse workshop west perimeter |
+| I_WAREHOUSE_BENCH_B | town_workshop_bench / plain | clean | 165.6, 2.2, -70.4 | 0, 270, 0 | 1, 1, 1 | building_floor / I01-A | native | matching warehouse bench |
+| I_WAREHOUSE_CART | industry_welding_cart / cylinders | used | 163.7, 2.2, -72.8 | 0, 180, 0 | 1, 1, 1 | building_floor / I01-A | native | welding cart next to gantry repair bay |
+| I_WAREHOUSE_COMPRESSOR | industry_air_compressor / vertical | used | 165.6, 2.2, -67.6 | 0, 180, 0 | 1, 1, 1 | building_floor / I01-A | native | fixed workshop compressor |
+| I_WAREHOUSE_TRIPOD | industry_work_light / tripod | used | 162.4, 2.2, -67.6 | 0, 225, 0 | 1, 1, 1 | building_floor / I01-A | visual_only | unpowered task light in maintenance bay |
+| I_WAREHOUSE_GAUGE | industry_industrial_gauge / multi | clean | 167.045, 3.5, -67.6 | 0, 270, 0 | 1, 1, 1 | wall / I01-A | visual_only | maintenance pressure gauge on solid west wall |
+| I_WAREHOUSE_PALLET_A | shared_wood_pallet / loaded | used | 147.8, 2.2, -77.7 | 0, 180, 0 | 1, 1, 1 | building_floor / I01-A | native | freight bank east warehouse bay |
+| I_WAREHOUSE_PALLET_B | shared_wood_pallet / loaded | clean | 146.3, 2.2, -77.7 | 0, 180, 0 | 1, 1, 1 | building_floor / I01-A | native | matching freight bank |
+| I_WAREHOUSE_PALLET_C | shared_wood_pallet / loaded | used | 144.8, 2.2, -77.7 | 0, 180, 0 | 1, 1, 1 | building_floor / I01-A | native | matching freight bank end |
+| I_WAREHOUSE_EMPTY_A | shared_wood_pallet / empty | clean | 147.8, 2.2, -75.8 | 0, 180, 0 | 1, 1, 1 | building_floor / I01-A | native | empty return pallet bank |
+| I_WAREHOUSE_EMPTY_B | shared_wood_pallet / empty | used | 146.3, 2.2, -75.8 | 0, 180, 0 | 1, 1, 1 | building_floor / I01-A | native | matching return pallets |
+| I_WAREHOUSE_CRATE_A | shared_wooden_crate / large | clean | 147.8, 2.2, -66.6 | 0, 180, 0 | 1, 1, 1 | building_floor / I01-A | native | sorted dispatch wooden cases |
+| I_WAREHOUSE_CRATE_B | shared_wooden_crate / large | used | 146.3, 2.2, -66.6 | 0, 180, 0 | 1, 1, 1 | building_floor / I01-A | native | matching dispatch wooden cases |
+| I_WAREHOUSE_CRATE_C | shared_wooden_crate / medium | clean | 147.8, 3.1916, -66.6 | 0, 180, 0 | 1, 1, 1 | surface / I_WAREHOUSE_CRATE_A | native | top case in dispatch stack |
+| I_WAREHOUSE_CRATE_D | shared_wooden_crate / medium | used | 146.3, 3.1916, -66.6 | 0, 180, 0 | 1, 1, 1 | surface / I_WAREHOUSE_CRATE_B | native | top case in matching dispatch stack |
+| I_WAREHOUSE_REEL_A | shared_cable_reel / wood | used | 147.5, 2.2, -69.7 | 0, 180, 0 | 1, 1, 1 | building_floor / I01-A | native | cable stock bank |
+| I_WAREHOUSE_REEL_B | shared_cable_reel / wood | clean | 145.7, 2.2, -69.7 | 0, 180, 0 | 1, 1, 1 | building_floor / I01-A | native | matching cable stock bank |
+| I_DISPATCH_DESK_A | town_office_furniture / desk | clean | 193.8, 2.2, -74.5 | 0, 270, 0 | 1, 1, 1 | building_floor / I02-A | native | dispatch administration desk |
+| I_DISPATCH_DESK_B | town_office_furniture / desk | used | 193.8, 2.2, -78 | 0, 270, 0 | 1, 1, 1 | building_floor / I02-A | native | matching freight scheduling desk |
+| I_DISPATCH_FILE_A | town_office_furniture / cabinet | used | 193.8, 2.2, -83.3 | 0, 180, 0 | 1, 1, 1 | building_floor / I02-A | native | dispatch file bank |
+| I_DISPATCH_FILE_B | town_office_furniture / cabinet | used | 193.1, 2.2, -83.3 | 0, 180, 0 | 1, 1, 1 | building_floor / I02-A | native | matching dispatch file bank |
+| I_DISPATCH_FILE_C | town_office_furniture / cabinet | clean | 192.4, 2.2, -83.3 | 0, 180, 0 | 1, 1, 1 | building_floor / I02-A | native | matching dispatch file bank end |
+| I_DISPATCH_WAIT | town_waiting_room_chair / row | used | 193, 2.2, -72.4 | 0, 180, 0 | 1, 1, 1 | building_floor / I02-A | native | driver waiting row |
+| I_DISPATCH_NOTICE | town_notice_board / wall | used | 193.3, 3.3, -69.995 | 0, 360, 0 | 1, 1, 1 | wall / I02-A | visual_only | warehouse work notices by office |
+| I_DISPATCH_PAPERS | shared_street_litter / paper | used | 193.8, 2.95, -74.5 | 0, 270, 0 | 1, 1, 1 | surface / I_DISPATCH_DESK_A | visual_only | abandoned scheduling paperwork on desktop; source footprint already0.70x0.57m |
+| I_SOUTH_BENCH_A | town_workshop_bench / tool-covered | used | 154.5, 2.2, 60.2 | 0, 360, 0 | 1, 1, 1 | building_floor / I05-A | native | south depot repair bench |
+| I_SOUTH_BENCH_B | town_workshop_bench / plain | clean | 152.3, 2.2, 60.2 | 0, 360, 0 | 1, 1, 1 | building_floor / I05-A | native | matching repair bench |
+| I_SOUTH_CART | industry_welding_cart / covered | used | 155.6, 2.2, 62.3 | 0, 180, 0 | 1, 1, 1 | building_floor / I05-A | native | repair cart near benches |
+| I_SOUTH_COMPRESSOR | industry_air_compressor / horizontal | used | 155.7, 2.2, 65.2 | 0, 180, 0 | 1, 1, 1 | building_floor / I05-A | native | repair bay portable compressor |
+| I_SOUTH_DRUM_A | shared_oil_drum / closed | clean | 144.7, 2.2, 60.3 | 0, 180, 0 | 1, 1, 1 | building_floor / I05-A | native | lubricant drum bank |
+| I_SOUTH_DRUM_B | shared_oil_drum / closed | used | 145.5, 2.2, 60.3 | 0, 180, 0 | 1, 1, 1 | building_floor / I05-A | native | matching lubricant bank |
+| I_SOUTH_TIRES_A | shared_tire_stack / stacked | used | 144.5, 2.2, 62.1 | 0, 180, 0 | 1, 1, 1 | building_floor / I05-A | native | spare tire service bank |
+| I_SOUTH_TIRES_B | shared_tire_stack / stacked | used | 145.4, 2.2, 62.1 | 0, 180, 0 | 1, 1, 1 | building_floor / I05-A | native | matching spare tire service bank |
+| I_SOUTH_TASKLIGHT | industry_work_light / mounted | clean | 154.3, 4.8, 59.255 | 0, 360, 0 | 1, 1, 1 | wall / I05-A | visual_only | unpowered rear task light |
+| I_YARD_FORKLIFT | industry_forklift / intact | used | 175, 3, -90.5 | 0, 90, 0 | 1, 1, 1 | terrain / terrain | native | forklift parked at warehouse loading yard edge |
+| I_YARD_PIPE_A | industry_steel_pipe_stack / large | clean | 176, 3, -95 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | pipe stock in aligned yard bank |
+| I_YARD_PIPE_B | industry_steel_pipe_stack / small | used | 176, 3, -98 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | matching pipe stock bank |
+| I_YARD_BEAM_A | industry_steel_beam_stack / large | used | 183, 2.977273, -95 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | steel beam bank alongside pipe stock |
+| I_YARD_BEAM_B | industry_steel_beam_stack / small | clean | 183, 2.99, -98 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | matching steel beam stock |
+| I_YARD_SLEEPERS_A | industry_rail_sleepers / short | used | 199.7, 3, -103 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | stored sleepers west of live rail corridor |
+| I_YARD_SLEEPERS_B | industry_rail_sleepers / short | clean | 199.7, 3, -101 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | matching sleeper stock bank |
+| I_RAIL_SIGNAL | industry_rail_signal / one | used | 205.7, 3, -106 | 0, 180, 0 | 1, 1, 1 | terrain / terrain | native | nonfunctional signal beside rail approach |
+| I_SERVICE_TANK | industry_fuel_tank / short | clean | 167, 2, -43 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | small workshop fuel service tank on ground |
+| I_SERVICE_PUMP | industry_fuel_pump / manual | used | 170, 2, -43 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | manual pump beside service tank |
+| I_SERVICE_DRUM_A | shared_oil_drum / closed | clean | 167, 2, -46 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | same-type spare drum bank |
+| I_SERVICE_DRUM_B | shared_oil_drum / closed | used | 168, 2, -46 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | same-type spare drum bank |
+| I_SERVICE_DRUM_C | shared_oil_drum / dented | worn | 169, 2, -46 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | single worn drum at bank end |
+| I_YARD_DUMPSTER | shared_industrial_dumpster / closed | used | 178, 2, -50 | 0, 90, 0 | 1, 1, 1 | terrain / terrain | native | controlled yard waste station |
+| I_YARD_SCRAP | shared_scrap_metal_pile / small | worn | 181, 2, -50 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | localized repair scrap beside waste station |
+| I_SOUTH_REEL_A | shared_cable_reel / metal | used | 167, 2, 57 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | south yard cable bank |
+| I_SOUTH_REEL_B | shared_cable_reel / metal | clean | 169, 2, 57 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | matching cable bank |
+| I_SOUTH_TIMBER_A | shared_timber_stack / boards | used | 174, 2, 57 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | packing board stock beside south workshop |
+| I_SOUTH_TIMBER_B | shared_timber_stack / boards | clean | 174, 2, 59 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | matching packing board stock |
+| I_SOUTH_CABINET | shared_electrical_cabinet / large | clean | 167, 2, 66 | 0, 90, 0 | 1, 1, 1 | terrain / terrain | native | standalone depot electrical service cabinet |
+| I_CONTAINER_I04-A | industry_shipping_container / single | used | 171, 2, -24 | 0, 180, 0 | 1, 1, 1 | terrain / I04-A | native | existing closed freight container art replacement candidate |
+| I_CONTAINER_I04-B | industry_shipping_container / single | clean | 179, 2, -24 | 0, 180, 0 | 1, 1, 1 | terrain / I04-B | native | existing closed freight container art replacement candidate |
+| I_CONTAINER_I04-C | industry_shipping_container / single | used | 187, 2, -24 | 0, 180, 0 | 1, 1, 1 | terrain / I04-C | native | existing closed freight container art replacement candidate |
+| I_CONTAINER_I06-A | industry_shipping_container / single | clean | 146, 2, 35 | 0, 180, 0 | 1, 1, 1 | terrain / I06-A | native | existing closed freight container art replacement candidate |
+| I_CONTAINER_I06-B | industry_shipping_container / single | used | 154, 2, 35 | 0, 180, 0 | 1, 1, 1 | terrain / I06-B | native | existing closed freight container art replacement candidate |
+| I_CONTAINER_I06-C | industry_shipping_container / single | worn | 162, 2, 35 | 0, 180, 0 | 1, 1, 1 | terrain / I06-C | native | existing closed freight container art replacement candidate |
+| I_RAIL_BOXCAR | industry_rail_boxcar / shut | used | 208.52, 2.035, -43.18 | 0, 90, 0 | 1, 1, 1 | terrain / I08-A | native | same-centre rail freight art replacement candidate |
+| I_RAIL_TANK | industry_rail_tank_wagon / plain | used | 198.3, 2.035, 59.09 | 0, 90, 0 | 1, 1, 1 | terrain / I09-A | native | same-centre rail freight art replacement candidate |
+| OB-B04-locker-01 | bunker_metal_locker / closed | used | -151.8, 10.2, -146.3 | 0, 0, 0 | 1, 1, 1 | building_floor / B04-ENTRY | native | Guard locker against west room wall |
+| OB-B04-locker-02 | bunker_metal_locker / closed | used | -151.8, 10.2, -147.1 | 0, 0, 0 | 1, 1, 1 | building_floor / B04-ENTRY | native | Second locker; central doorway/aisle stays open |
+| OB-B04-radio | bunker_radio_cabinet / with-controls | used | -151.8, 10.2, -149.8 | 0, 0, 0 | 1, 1, 1 | building_floor / B04-ENTRY | native | Radio cabinet in northwest guard office corner |
+| OB-B04-bed | bunker_bunk_bed / made-up | used | -146.4, 10.2, -148.3 | 0, 90, 0 | 1, 1, 1 | building_floor / B04-ENTRY | native | Rest bunk on east wall, away from south entry |
+| OB-B04-case | bunker_military_supply_crate / metal | used | -146.5, 10.2, -145.9 | 0, 15, 0 | 1, 1, 1 | building_floor / B04-ENTRY | native | Guard emergency equipment beside bunk |
+| OB-B04-phone | bunker_wall_phone / mounted | used | -149.8, 11.738491, -150.72 | 0, 0, 0 | 1, 1, 1 | wall / B04-ENTRY | visual_only | Rear wall duty telephone |
+| OB-B04-electric-sign | bunker_military_warning_sign / electric | used | -151.25, 12.17, -150.72 | 0, 0, 0 | 1, 1, 1 | wall / B04-ENTRY | visual_only | Electrical warning above radio corner |
+| OB-B05-breaker | bunker_breaker_panel / closed | used | -198.005, 11.56, -147 | 0, 270, 0 | 1, 1, 1 | wall / B05-A | visual_only | Closed external workshop breaker panel |
+| OB-B05-generator | bunker_diesel_generator / large | used | -207, 19.384013, -173 | 3.114038, -0.056156, -1.033628 | 1, 1, 1 | terrain / terrain | native | Generator on compound upper service shoulder above workshop |
+| OB-B05-shaft | bunker_ventilation_shaft / tall | used | -207, 19.22124, -170 | 3.841192, -0.068945, -1.029058 | 1, 1, 1 | terrain / terrain | native | Utility exhaust shaft beside upper service plant |
+| OB-B05-duct | bunker_ventilation_duct / straight | used | -198.505, 12.45, -145 | 0, 90, 0 | 1, 1, 1 | wall / B05-A | visual_only | External wall duct above utility equipment |
+| OB-B05-pipe | bunker_pipe_valve_kit / straight | used | -210, 19.479783, -172 | 0.012826, 90.000702, 3.120389 | 1, 1, 1 | terrain / terrain | native | Grounded utility pipe beside generator |
+| OB-B05-valve | bunker_pipe_valve_kit / wheel | used | -210, 19.347628, -169.7 | -0.497758, 89.966446, 3.855849 | 1, 1, 1 | terrain / terrain | native | Valve at utility pipe service end |
+| OB-B05-drum-01 | shared_oil_drum / closed | used | -204, 19.271743, -172 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Generator fuel drum |
+| OB-B05-drum-02 | shared_oil_drum / dented | used | -204, 19.222849, -171.1 | 0, 20, 0 | 1, 1, 1 | terrain / terrain | native | Retired fuel drum beside sealed stock |
+| OB-B05-reel | shared_cable_reel / wood | used | -204.4, 19.414712, -174.5 | 0, 30, 0 | 1, 1, 1 | terrain / terrain | native | Service cable stock |
+| OB-supply-net | bunker_camouflage_net / draped | used | -171, 16.840446, -184 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Covered external supply sorting bay |
+| OB-supply-wood-01 | bunker_military_supply_crate / wood | used | -172.3, 17.065851, -184.3 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Crate under covered bay edge |
+| OB-supply-wood-02 | bunker_military_supply_crate / wood | used | -169.7, 17.080735, -184.3 | 1.250109, -0.129809, -5.928717 | 1, 1, 1 | terrain / terrain | native | Second crate; centre of bay remains accessible |
+| OB-supply-wood-03 | bunker_military_supply_crate / wood | used | -172.6, 16.738246, -187 | -1.42511, 9.75413, 9.789735 | 1, 1, 1 | terrain / terrain | native | Inbound stock outside canopy |
+| OB-supply-metal-01 | bunker_military_supply_crate / metal | used | -170.8, 17.055279, -187.2 | 0.312315, 0.054538, 9.905404 | 1, 1, 1 | terrain / terrain | native | Sealed radio spares |
+| OB-supply-metal-02 | bunker_military_supply_crate / metal | used | -169.6, 17.134683, -187.2 | 0.314689, -0.047433, -8.571635 | 1, 1, 1 | terrain / terrain | native | Sealed communications spares |
+| OB-supply-pallet | shared_wood_pallet / loaded | used | -165.6, 16.489675, -184.5 | 8.133309, 90.143227, 1.012254 | 1, 1, 1 | terrain / terrain | native | Inbound pallet beside sorting bay |
+| OB-supply-dumpster | shared_industrial_dumpster / closed | used | -178, 17.924478, -180 | 6.595346, 89.098412, -7.801778 | 1, 1, 1 | terrain / terrain | native | Military supply packaging disposal |
+| OB-B06-light | bunker_floodlight_mast / dual | used | -154, 9.415987, -123.8 | 10.587305, -1.130515, -6.13031 | 1, 1, 1 | terrain / terrain | native | Gate-side floodlight, outside six metre gate and patrol reservation |
+| OB-B06-hedgehog-01 | bunker_anti_vehicle_hedgehog / single | used | -137, 10, -132.25 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Stored vehicle obstacle east of open checkpoint approach |
+| OB-B06-hedgehog-02 | bunker_anti_vehicle_hedgehog / single | used | -137, 10, -129 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Second stored obstacle, no gate blockage |
+| OB-B06-stop | bunker_military_warning_sign / stop | used | -146, 11.55, -126.495 | 0, 0, 0 | 1, 1, 1 | wall / B06-A | visual_only | Checkpoint warning on booth south face |
+| OB-bunker-wiretop | bunker_razorwire_fence_top / straight | used | -202.8375, 20.874749, -220.45 | 0, 0, 0 | 1, 1, 1 | surface / BUNKER-fence-north | visual_only | Short surviving razor-wire run on north compound fence |
+| OH-rock-01 | hills_rock_cluster / medium | used | -46, 12.722528, -194 | -7.593926, 14.930689, 0.524467 | 1, 1, 1 | terrain / terrain | native | Natural outcrop beside ridge relay service area |
+| OH-rock-02 | hills_rock_cluster / small | used | -43.4, 13.027883, -192.5 | -4.804927, 70.503372, -5.987684 | 1, 1, 1 | terrain / terrain | native | Satellite stone at outcrop toe |
+| OH-cliff-01 | hills_cliff_wedge / straight | used | -208, 7.030157, -90 | 9.628096, -0.079197, -0.473509 | 1, 1, 1 | terrain / terrain | native | Short exposed escarpment face east of old ruin |
+| OH-revetment | hills_trench_kit / straight | used | -57, 12.950602, -184 | 0, 25, 0 | 1, 1, 1 | terrain / terrain | native | Abandoned surface revetment; no terrain excavation or trench traversal |
+| OH-wall | hills_broken_retaining_wall / low | used | -209, 8.918801, -99.5 | 9.30476, -2.042399, -12.438113 | 1, 1, 1 | terrain / terrain | native | Detached ruined retaining-wall section beside H04 |
+| OH-case-01 | hills_field_equipment_case / closed | used | -51, 13.771835, -181 | -6.453992, 19.662899, 2.996273 | 1, 1, 1 | terrain / terrain | native | Abandoned survey equipment by revetment |
+| OH-case-02 | hills_field_equipment_case / closed | used | -52.5, 13.212677, -185.8 | -5.997222, 11.599003, 3.832344 | 1, 1, 1 | terrain / terrain | native | Second field case in abandoned observation cache |
+| OH-mast-spare | hills_radio_mast / antenna | used | -18, 7.909577, -225 | -7.416805, 0.22521, -1.744114 | 1, 1, 1 | terrain / terrain | native | Short retired relay antenna beside existing H03 service site |
+| OT-F001 | forest_pine_tree / C | source | 83.75, 2.005, -158.75 | 0, 0, 0 | 1, 1, 1 | terrain / F001 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F002 | forest_spruce_tree / C | source | 87.95, 2.005, -112.05 | 0, 47, 0 | 1, 1, 1 | terrain / F002 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F003 | forest_birch_tree / B | source | 187.73, 3.005, -240 | 0, 94, 0 | 1, 1, 1 | terrain / F003 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F004 | forest_pine_tree / C | source | 92.16, 2.198617, -131.02 | 0, 141, 0 | 1, 1, 1 | terrain / F004 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F005 | forest_spruce_tree / C | source | 96.93, 2.672057, -235.11 | 0, 188, 0 | 1, 1, 1 | terrain / F005 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F006 | forest_birch_tree / B | source | 84.09, 2.005, -67.27 | 0, 235, 0 | 1, 1, 1 | terrain / F006 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F007 | forest_pine_tree / C | source | 79.32, 2.005, -244.43 | 0, 282, 0 | 1, 1, 1 | terrain / F007 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F008 | forest_spruce_tree / C | source | 114.89, 3.005, -240.11 | 0, 329, 0 | 1, 1, 1 | terrain / F008 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F009 | forest_birch_tree / B | source | 99.89, 2.963072, -197.84 | 0, 16, 0 | 1, 1, 1 | terrain / F009 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F010 | forest_pine_tree / C | source | 73.07, 2.056043, -135.45 | 0, 63, 0 | 1, 1, 1 | terrain / F010 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F011 | forest_spruce_tree / C | source | 185, 2.691252, -199.43 | 0, 110, 0 | 1, 1, 1 | terrain / F011 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F012 | forest_birch_tree / B | source | 138.52, 3.005, -184.89 | 0, 157, 0 | 1, 1, 1 | terrain / F012 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F013 | forest_pine_tree / C | source | 134.77, 3.005, -237.73 | 0, 204, 0 | 1, 1, 1 | terrain / F013 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F014 | forest_spruce_tree / C | source | 101.59, 3.005, -216.7 | 0, 251, 0 | 1, 1, 1 | terrain / F014 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F015 | forest_birch_tree / B | source | 111.48, 3.005, -164.32 | 0, 298, 0 | 1, 1, 1 | terrain / F015 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F016 | forest_pine_tree / C | source | 99.2, 2.89718, -185.45 | 0, 345, 0 | 1, 1, 1 | terrain / F016 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F017 | forest_spruce_tree / C | source | 79.77, 2.005, -118.75 | 0, 32, 0 | 1, 1, 1 | terrain / F017 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F018 | forest_birch_tree / B | source | 158.41, 3.005, -132.5 | 0, 79, 0 | 1, 1, 1 | terrain / F018 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F019 | forest_pine_tree / C | source | 60.34, 2.17651, -212.61 | 0, 126, 0 | 1, 1, 1 | terrain / F019 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F020 | forest_spruce_tree / C | source | 159.89, 3.005, -179.2 | 0, 173, 0 | 1, 1, 1 | terrain / F020 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F021 | forest_birch_tree / B | source | 49.77, 3.005, -126.02 | 0, 220, 0 | 1, 1, 1 | terrain / F021 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F022 | forest_pine_tree / C | source | 228.41, 3.005, -213.86 | 0, 267, 0 | 1, 1, 1 | terrain / F022 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F023 | forest_spruce_tree / C | source | 200.57, 3.000391, -193.07 | 0, 314, 0 | 1, 1, 1 | terrain / F023 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F024 | forest_birch_tree / B | source | 236.93, 3.005, -211.02 | 0, 1, 0 | 1, 1, 1 | terrain / F024 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F025 | forest_pine_tree / C | source | 76.93, 2.032331, -169.89 | 0, 48, 0 | 1, 1, 1 | terrain / F025 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F026 | forest_spruce_tree / C | source | 173.98, 3.005, -230.45 | 0, 95, 0 | 1, 1, 1 | terrain / F026 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F027 | forest_birch_tree / B | source | 184.43, 3.005, -182.16 | 0, 142, 0 | 1, 1, 1 | terrain / F027 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F028 | forest_pine_tree / C | source | 78.98, 2.008779, -186.14 | 0, 189, 0 | 1, 1, 1 | terrain / F028 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F029 | forest_spruce_tree / C | source | 158.41, 3.005, -207.39 | 0, 236, 0 | 1, 1, 1 | terrain / F029 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F030 | forest_birch_tree / B | source | 63.86, 2.017936, -222.95 | 0, 283, 0 | 1, 1, 1 | terrain / F030 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F031 | forest_pine_tree / C | source | 41.7, 3.005, -236.7 | 0, 330, 0 | 1, 1, 1 | terrain / F031 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F032 | forest_spruce_tree / C | source | 127.05, 3.005, -232.16 | 0, 17, 0 | 1, 1, 1 | terrain / F032 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F033 | forest_birch_tree / B | source | 51.7, 3.242012, -195 | 0, 64, 0 | 1, 1, 1 | terrain / F033 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F034 | forest_pine_tree / C | source | 157.16, 3.005, -233.64 | 0, 111, 0 | 1, 1, 1 | terrain / F034 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F035 | forest_spruce_tree / C | source | 133.64, 3.005, -130.91 | 0, 158, 0 | 1, 1, 1 | terrain / F035 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F036 | forest_birch_tree / B | source | 148.3, 3.005, -194.55 | 0, 205, 0 | 1, 1, 1 | terrain / F036 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F037 | forest_pine_tree / C | source | 67.84, 2.087216, -202.61 | 0, 252, 0 | 1, 1, 1 | terrain / F037 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F038 | forest_spruce_tree / C | source | 54.2, 3.440504, -176.25 | 0, 299, 0 | 1, 1, 1 | terrain / F038 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F039 | forest_birch_tree / B | source | 159.09, 3.005, -223.64 | 0, 346, 0 | 1, 1, 1 | terrain / F039 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F040 | forest_pine_tree / C | source | 103.18, 3.005, -163.3 | 0, 33, 0 | 1, 1, 1 | terrain / F040 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F041 | forest_spruce_tree / C | source | 60.91, 2.785054, -152.16 | 0, 80, 0 | 1, 1, 1 | terrain / F041 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F042 | forest_birch_tree / B | source | 90.45, 2.030637, -202.84 | 0, 127, 0 | 1, 1, 1 | terrain / F042 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F043 | forest_pine_tree / C | source | 223.41, 3.005, -135 | 0, 174, 0 | 1, 1, 1 | terrain / F043 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F044 | forest_spruce_tree / C | source | 146.36, 3.005, -170.91 | 0, 221, 0 | 1, 1, 1 | terrain / F044 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F045 | forest_birch_tree / B | source | 110.77, 3.005, -103.98 | 0, 268, 0 | 1, 1, 1 | terrain / F045 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F046 | forest_pine_tree / C | source | 201.7, 3.005, -130 | 0, 315, 0 | 1, 1, 1 | terrain / F046 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F047 | forest_spruce_tree / C | source | 92.65, 2.728707, -102.5 | 0, 2, 0 | 1, 1, 1 | terrain / F047 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-F048 | forest_birch_tree / B | source | 160.68, 3.005, -193.64 | 0, 49, 0 | 1, 1, 1 | terrain / F048 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-G001 | forest_pine_tree / C | source | 116.672, 2.568321, -62.815 | 0, 96, 0 | 1, 1, 1 | terrain / G001 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-G002 | forest_spruce_tree / C | source | 93.18, 2.03314, -79.66 | 0, 143, 0 | 1, 1, 1 | terrain / G002 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-G003 | forest_birch_tree / B | source | 108.18, 2.005, 6.02 | 0, 190, 0 | 1, 1, 1 | terrain / G003 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-G004 | forest_pine_tree / C | source | 94.118, 3.005, -100.595 | 0, 237, 0 | 1, 1, 1 | terrain / G004 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-G005 | forest_spruce_tree / C | source | 80.45, 2.005, -101.93 | 0, 284, 0 | 1, 1, 1 | terrain / G005 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-G006 | forest_birch_tree / B | source | 108.75, 2.005, 55.57 | 0, 331, 0 | 1, 1, 1 | terrain / G006 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-G007 | forest_pine_tree / C | source | 102.535, 2.982988, -88.382 | 0, 18, 0 | 1, 1, 1 | terrain / G007 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-G008 | forest_spruce_tree / C | source | 112.84, 2.080998, 75.8 | 0, 65, 0 | 1, 1, 1 | terrain / G008 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-G009 | forest_birch_tree / B | source | 87.05, 2.005, -57.84 | 0, 112, 0 | 1, 1, 1 | terrain / G009 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-G010 | forest_pine_tree / C | source | 81.14, 2.005, -91.25 | 0, 159, 0 | 1, 1, 1 | terrain / G010 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-G011 | forest_spruce_tree / C | source | 109.77, 2.005, 46.93 | 0, 206, 0 | 1, 1, 1 | terrain / G011 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-G012 | forest_birch_tree / B | source | 112.16, 3.005, -112.05 | 0, 253, 0 | 1, 1, 1 | terrain / G012 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-H001 | forest_pine_tree / C | source | -95.34, 17.836943, -235 | 0, 300, 0 | 1, 1, 1 | terrain / H001 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-H002 | forest_spruce_tree / C | source | -27.5, 14.806804, -164.55 | 0, 347, 0 | 1, 1, 1 | terrain / H002 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-H003 | forest_birch_tree / B | source | -73.454, 11.690028, -163.724 | 0, 34, 0 | 1, 1, 1 | terrain / H003 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-H004 | forest_pine_tree / C | source | -217.05, 15.920746, -237.95 | 0, 81, 0 | 1, 1, 1 | terrain / H004 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-H005 | forest_spruce_tree / C | source | -100.23, 6.735407, -148.07 | 0, 128, 0 | 1, 1, 1 | terrain / H005 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-H006 | forest_birch_tree / B | source | -48.18, 13.13976, -241.25 | 0, 175, 0 | 1, 1, 1 | terrain / H006 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-H007 | forest_pine_tree / C | source | -147.95, 11.529855, -233.98 | 0, 222, 0 | 1, 1, 1 | terrain / H007 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-H008 | forest_pine_tree / C | source | -247.35, 14.080858, -143.07 | 0, 0, 0 | 1, 1, 1 | terrain / H008 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-H009 | forest_birch_tree / B | source | -240.11, 17.757395, -171.82 | 0, 316, 0 | 1, 1, 1 | terrain / H009 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-H010 | forest_pine_tree / C | source | -60.8, 15.105654, -222.95 | 0, 3, 0 | 1, 1, 1 | terrain / H010 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-H011 | forest_spruce_tree / C | source | -192.16, 16.946598, -227.27 | 0, 50, 0 | 1, 1, 1 | terrain / H011 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-H012 | forest_birch_tree / B | source | -50.23, 11.956039, -203.64 | 0, 97, 0 | 1, 1, 1 | terrain / H012 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-H013 | forest_pine_tree / C | source | -87.132, 6.212094, -117.755 | 0, 144, 0 | 1, 1, 1 | terrain / H013 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-H014 | forest_spruce_tree / C | source | -176.792, 9.711919, -111.285 | 0, 191, 0 | 1, 1, 1 | terrain / H014 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-H015 | forest_birch_tree / B | source | -220.89, 10.521904, -109.66 | 0, 238, 0 | 1, 1, 1 | terrain / H015 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-H016 | forest_pine_tree / C | source | -125.8, 2.877462, -87.05 | 0, 285, 0 | 1, 1, 1 | terrain / H016 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-H017 | forest_spruce_tree / C | source | -158.64, 14.309058, -218.11 | 0, 332, 0 | 1, 1, 1 | terrain / H017 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-H018 | forest_birch_tree / B | source | -72.61, 16.832264, -242.84 | 0, 19, 0 | 1, 1, 1 | terrain / H018 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-H019 | forest_pine_tree / C | source | -197.474, 10.48792, -111.507 | 0, 66, 0 | 1, 1, 1 | terrain / H019 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-H020 | forest_spruce_tree / C | source | -144.55, 4.932969, -96.82 | 0, 113, 0 | 1, 1, 1 | terrain / H020 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-A001 | forest_birch_tree / B | source | -237.84, 2.005, 71.14 | 0, 160, 0 | 1, 1, 1 | terrain / A001 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-A002 | forest_birch_tree / B | source | -231.7, 2.005, 52.95 | 0, 207, 0 | 1, 1, 1 | terrain / A002 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-A003 | forest_birch_tree / B | source | -214.55, 2.005, 156.02 | 0, 254, 0 | 1, 1, 1 | terrain / A003 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-A004 | forest_birch_tree / B | source | -194.188, 1.77059, 92.028 | 0, 301, 0 | 1, 1, 1 | terrain / A004 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-A005 | forest_birch_tree / B | source | -205.23, 1.999209, 60 | 0, 348, 0 | 1, 1, 1 | terrain / A005 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-A006 | forest_birch_tree / B | source | -178.18, 2.005, 89.09 | 0, 35, 0 | 1, 1, 1 | terrain / A006 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-A007 | forest_birch_tree / B | source | -180, 1.990728, 100.91 | 0, 82, 0 | 1, 1, 1 | terrain / A007 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-A008 | forest_birch_tree / B | source | -236.82, 2.005, 82.27 | 0, 129, 0 | 1, 1, 1 | terrain / A008 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-A009 | forest_birch_tree / B | source | -213.64, 2.005, 138.52 | 0, 176, 0 | 1, 1, 1 | terrain / A009 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-A010 | forest_birch_tree / B | source | -183.52, 1.938555, 57.95 | 0, 223, 0 | 1, 1, 1 | terrain / A010 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-A011 | forest_birch_tree / B | source | -240.195, 1.789875, 146.618 | 0, 270, 0 | 1, 1, 1 | terrain / A011 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-A012 | forest_birch_tree / B | source | -219.77, 2.005, 143.75 | 0, 317, 0 | 1, 1, 1 | terrain / A012 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OT-A013 | forest_birch_tree / B | source | -227.61, 2.005, 63.41 | 0, 4, 0 | 1, 1, 1 | terrain / A013 | native | Native-size tree replacing its named canonical vegetation proxy |
+| OF-tarp | forest_tarp_camp / intact | used | 117, 3, -178 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Ranger rest canopy in F01 southern yard |
+| OF-cot | forest_ranger_shelter_props / cot | used | 115.9, 3, -178 | 0, 90, 0 | 1, 1, 1 | terrain / terrain | native | Camp cot under west edge of tarp |
+| OF-table | forest_ranger_shelter_props / table | used | 118.1, 3, -178 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Ranger field table under east edge of tarp |
+| OF-shelf | forest_ranger_shelter_props / shelf | used | 118.2, 3, -179.15 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Small supply shelf below tarp rear edge |
+| OF-fire | forest_campfire_ring / ash | used | 121.5, 3, -174 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Cold campfire clear of fabric and access route |
+| OF-stump | forest_tree_stump / old | used | 123.2, 3, -174.6 | 0, 25, 0 | 1, 1, 1 | terrain / terrain | native | Natural sitting stump beside cold fire |
+| OF-log | forest_fallen_log / short | used | 124.8, 3, -173.7 | 0, 15, 0 | 1, 1, 1 | terrain / terrain | native | Fallen seating log outside camp approach |
+| OF-woodcrate | shared_wooden_crate / small | used | 118.1, 3.75, -178 | 0, 0, 0 | 1, 1, 1 | surface / OF-table | visual_only | Equipment crate on ranger table |
+| OF-undergrowth-01 | forest_undergrowth / A | source | 122, 2.848485, -181 | 0, 40, 0 | 1, 1, 1 | terrain / terrain | visual_only | Undergrowth beside cottage yard edge |
+| OF-undergrowth-02 | forest_undergrowth / B | source | 125, 3, -179 | 0, 75, 0 | 1, 1, 1 | terrain / terrain | visual_only | Undergrowth at camp perimeter |
+| OF-debris-01 | forest_small_forest_debris / A | used | 120.9, 3, -179.7 | 0, 110, 0 | 1, 1, 1 | terrain / terrain | visual_only | Leaf and twig litter outside camp |
+| OF-debris-02 | forest_small_forest_debris / C | used | 123.2, 2.946585, -180.4 | -8.145473, 25.416363, -2.936075 | 1, 1, 1 | terrain / terrain | visual_only | Broken branch litter outside camp |
+| OF-trail-sign | forest_forest_trail_sign / painted | used | 134, 3, -184 | 0, 40, 0 | 1, 1, 1 | terrain / terrain | native | Ranger route sign beside forest trail, outside its clear envelope |
+| OF-trailer | forest_logging_trailer / loaded | used | 177, 3, -139 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Loaded trailer parked south of F02 storage shed |
+| OF-logstock-01 | forest_log_stack / long | used | 172, 3, -139 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Cut logs waiting beside logging trailer |
+| OF-logstock-02 | forest_log_stack / short | used | 174, 3, -136 | 0, 90, 0 | 1, 1, 1 | terrain / terrain | native | Offcuts separate from long timber |
+| OF-timber | shared_timber_stack / boards | used | 179, 3, -136.5 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Sawn boards beside closed saw shed |
+| OA-tractor | farmland_farm_tractor / abandoned | used | -207, 1.975, 95 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Tractor parked north of A04 barn service wall |
+| OA-trailer | farmland_farm_trailer / empty | used | -212.4, 1.975, 95 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Unhitched trailer aligned beside tractor |
+| OA-plough | farmland_plough_attachment / multi-furrow | used | -205, 1.994, 91.2 | 0, 15, 0 | 1, 1, 1 | terrain / terrain | native | Detached plough in machinery service patch |
+| OA-cart | farmland_wood_cart / loaded | used | -216.5, 1.9725, 95.5 | 0, 90, 0 | 1, 1, 1 | terrain / terrain | native | Timber cart by barn west return |
+| OA-hopper | farmland_grain_hopper / tall | used | -205, 1.5, 115 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Grain hopper adjacent to A04 feed end |
+| OA-wheelbarrow | farmland_wheelbarrow / loaded | used | -207.6, 1.5, 115.5 | 0, 40, 0 | 1, 1, 1 | terrain / terrain | native | Feed handling wheelbarrow beside hopper |
+| OA-feed-01 | farmland_feed_sack_stack / stack | used | -202.8, 1.55, 115 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Bagged feed beside hopper, visibly hand-sized |
+| OA-feed-02 | farmland_feed_sack_stack / stack | used | -203.4, 1.5125, 117 | 0, 10, 0 | 1, 1, 1 | terrain / terrain | native | Separate second feed stack with access around it |
+| OA-trough | farmland_water_trough / filled | used | -196, 1.718336, 146.5 | -2.66715, 0.202203, -4.337011 | 1, 1, 1 | terrain / terrain | native | Livestock trough outside A05 shelter |
+| OA-pump | farmland_well_pump / hand | used | -196, 1.808333, 148 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Hand pump serving trough |
+| OA-firewood | farmland_firewood_stack / stack | used | -201.4, 3.236784, -28 | 13.603253, 89.999992, -0.000022 | 1, 1, 1 | terrain / terrain | native | Firewood beside farmhouse east side |
+| OA-milkcan | farmland_farm_small_clutter / milk-can | used | -202.2, 3.30743, -30.4 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Milk can beside farmhouse work corner |
+| OA-bucket | farmland_farm_small_clutter / bucket | used | -201.5, 3.27992, -30.4 | -0.473357, 10.116949, -13.877923 | 1, 1, 1 | terrain / terrain | native | Water bucket in farmhouse work corner |
+| OA-barn-feed-01 | farmland_feed_sack_stack / stack | used | -157, 1.7, 207.8 | 0, 0, 0 | 1, 1, 1 | building_floor / A06-A | native | Feed sacks in rear west barn storage bay |
+| OA-barn-feed-02 | farmland_feed_sack_stack / stack | used | -155.4, 1.7, 207.8 | 0, 0, 0 | 1, 1, 1 | building_floor / A06-A | native | Second feed stack in rear barn bay |
+| OA-barn-crate | shared_wooden_crate / large | used | -141, 1.7, 207.7 | 0, 0, 0 | 1, 1, 1 | building_floor / A06-A | native | Barn tools in rear east storage bay |
+| OA-barn-pallet | shared_wood_pallet / empty | used | -142, 1.7, 205.2 | 0, 90, 0 | 1, 1, 1 | building_floor / A06-A | native | Empty feed pallet beside barn storage |
+| OA-hay-01 | farmland_hay_bale / round | used | -163.5, 1.630004, 212.2 | -1.718992, 0.103585, -3.448949 | 1, 1, 1 | terrain / terrain | native | Round bale in side barn yard |
+| OA-hay-02 | farmland_hay_bale / round | used | -165.1, 1.732414, 212.4 | -0.966221, 12.06299, -3.730194 | 1, 1, 1 | terrain / terrain | native | Second round bale in barn stock cluster |
+| OA-hay-03 | farmland_hay_bale / rectangular | used | -163.8, 1.701807, 214 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Small square bale beside round stock |
+| OA-hay-04 | farmland_hay_bale / round | used | -55, 2, 210.5 | 0, 90, 0 | 1, 1, 1 | terrain / terrain | native | Hay stock on A07 southern service side |
+| OA-cart-02 | farmland_wood_cart / empty | used | -48, 2, 210.5 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Household cart beside A07 service yard |
+| OA-tools-02 | farmland_farm_small_clutter / bucket | used | -49.9, 2, 210.7 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Bucket near household cart |
+| OA-farmgate | farmland_farm_gate / open | used | -180, 2, -28 | 0, 90, 0 | 1, 1, 1 | terrain / terrain | native | Open loose-leaf gate at A02 tool-yard side, does not span a circulation route |
+| OR-deck-stock | river_bridge_deck / segment | used | 109, 2, 38 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Spare deck section in existing east-bank bridge maintenance patch |
+| OR-parapet-stock | river_bridge_parapet / end | used | 111, 2, 45 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Spare parapet unit beside deck stock |
+| OR-support-stock | river_bridge_support / pier | used | 116, 2, 39 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Retired cast bridge pier stored upright on dry maintenance patch |
+| OR-culvert | river_culvert_pipe_end / round | used | 116, 2, 46 | 0, 90, 0 | 1, 1, 1 | terrain / terrain | native | Uninstalled culvert end in bridge repair stock |
+| OR-block-01 | river_erosion_block / small | used | 109, 2, 48 | 0, 15, 0 | 1, 1, 1 | terrain / terrain | native | Spare erosion-control block in repair stock |
+| OR-rock-01 | river_riverbank_rock / large | used | 47, 4.05012, -148 | 0, 20, 0 | 1, 1, 1 | terrain / terrain | native | Dry high-bank rock outside six metre bank reserve |
+| OR-rock-02 | river_riverbank_rock / small | used | 49.2, 3.994497, -149.5 | 7.416304, 85.124123, 0.961553 | 1, 1, 1 | terrain / terrain | native | Satellite high-bank stone |
+| OR-reed-01 | river_river_reeds / dense | source | 46, 3.419759, -143 | 0, 30, 0 | 1, 1, 1 | terrain / terrain | visual_only | Dry-bank reed patch behind protected reserve |
+| OR-reed-02 | river_river_reeds / sparse | source | 48, 3.638053, -142 | 0, 80, 0 | 1, 1, 1 | terrain / terrain | visual_only | Second dry-bank reed patch |
+| OR-driftwood | river_driftwood / branch | used | 50, 3.791603, -146 | 3.515328, 19.686762, -5.09516 | 1, 1, 1 | terrain / terrain | visual_only | Driftwood left above flood line |
+| OR-log-debris | river_log_crossing / side | used | 52, 3.505891, -143.5 | 0, 75, 0 | 1, 1, 1 | terrain / terrain | visual_only | Discarded log on dry upper bank, explicitly no crossing |
+| OR-litter-01 | river_bridge_litter / trash | used | 112, 2, 47 | 0, 20, 0 | 1, 1, 1 | terrain / terrain | visual_only | Repair litter beside stored parapet |
+| OR-litter-02 | river_bridge_litter / sticks | used | 50, 3.632258, -140.5 | 0, 55, 0 | 1, 1, 1 | terrain / terrain | visual_only | Flood-carried sticks above reserve |
+| OL-pier-stock | lake_wood_pier / straight | used | 185, 2, 132.5 | 0, 90, 0 | 1, 1, 1 | terrain / terrain | native | Spare pier section stored beside L04 boat shed |
+| OL-boat | lake_rowboat / beached | used | 183, 2, 137 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Beached rowboat on boat-shed dry service apron |
+| OL-net | lake_fishing_net / rolled | used | 184, 2, 135 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Rolled fishing net beside beached boat |
+| OL-oars | lake_boat_toolkit / oars | used | 183, 2, 135.7 | 0, 90, 0 | 1, 1, 1 | terrain / terrain | visual_only | Oars stored beside beached boat |
+| OL-toolbox | lake_boat_toolkit / toolbox | used | 185.4, 2, 134.9 | 0, 10, 0 | 1, 1, 1 | terrain / terrain | native | Boat repair toolbox beside net |
+| OL-crate-01 | lake_fishing_crate / closed | used | 190, 2, 134 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Closed fishing crate by boat shed rear service side |
+| OL-crate-02 | lake_fishing_crate / closed | used | 191.2, 2, 134 | 0, 10, 0 | 1, 1, 1 | terrain / terrain | native | Second closed crate in fishing stock |
+| OL-trap-01 | lake_fishing_trap / basket | used | 190, 2, 132.5 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Basket trap drying beside crates |
+| OL-trap-02 | lake_fishing_trap / cage | used | 191.2, 2, 132.5 | 0, 15, 0 | 1, 1, 1 | terrain / terrain | native | Metal trap beside basket trap |
+| OL-rope | lake_rope_coil / large | used | 188, 2, 132.7 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | visual_only | Mooring rope stored at boat shed |
+| OL-lantern | lake_lantern / off | used | 190, 2.38, 134 | 0, 0, 0 | 1, 1, 1 | surface / OL-crate-01 | visual_only | Unlit lantern atop fishing crate |
+| OL-lifering | lake_life_ring / mounted | used | 188, 3.05, 135.995 | 0, 180, 0 | 1, 1, 1 | wall / L04-A | visual_only | Lifesaving ring mounted on boat shed north service wall |
+| OL-bollard | lake_mooring_bollard / timber | used | 169, 2.684142, 148.5 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Retired timber bollard stored above shoreline reserve |
+| OL-bench | lake_lakeside_bench / worn | used | 160, 2.306747, 138.3 | 7.086791, -179.924698, 0.610296 | 1, 1, 1 | terrain / terrain | native | Existing settlement shore overlook, back from path and bank |
+| OL-intake-stock | lake_water_intake_pipe / intake | used | 117.3, 2.29, 125.8 | 0, 90, 0 | 1, 1, 1 | building_floor / L01-A | visual_only | Spare intake pipe along pump-house rear wall |
+| OL-cattails-01 | lake_cattails / dense | source | 161, 2.440149, 151 | 0, 45, 0 | 1, 1, 1 | terrain / terrain | visual_only | Dry upper-shore cattail patch outside six metre bank reserve |
+| OL-cattails-02 | lake_cattails / sparse | source | 162, 2.566958, 151 | 0, 10, 0 | 1, 1, 1 | terrain / terrain | visual_only | Sparse cattails near upper shore patch |
+| OL-litter | shared_street_litter / tin | used | 192.5, 2, 132.8 | 0, 30, 0 | 1, 1, 1 | terrain / terrain | visual_only | Small discarded tin near fishing work stock |
+| S_SECURITY_BAGS_A | shared_sandbag_barrier / straight | used | -175, 10.710843, -119 | 6.058275, -0.468678, -4.432003 | 1, 1, 1 | terrain / terrain | native | Roadside guard position west of the existing south gate |
+| S_SECURITY_BAGS_B | shared_sandbag_barrier / straight | worn | -172.1, 10.511259, -119 | 3.607702, -0.219516, -3.484267 | 1, 1, 1 | terrain / terrain | native | Adjacent matching guard position, preserving the open approach |
+| S_SECURITY_JERSEY_A | shared_concrete_jersey_barrier / intact | used | -174.8, 11.438789, -123.8 | 8.99902, -0.742553, -4.736696 | 1, 1, 1 | terrain / terrain | native | Concrete protection behind the guard bag line |
+| S_SECURITY_JERSEY_B | shared_concrete_jersey_barrier / damaged | worn | -172.6, 11.254533, -123.8 | 8.804756, -0.75519, -4.921839 | 1, 1, 1 | terrain / terrain | native | Matching second barrier with selective damage |
+| S_T09_FENCE_1 | shared_wood_fence / plank | worn | -149, 2, 140 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Same-type remnants of the damaged residential garden boundary |
+| S_T09_FENCE_2 | shared_wood_fence / plank | used | -146.85, 2, 140 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Same-type remnants of the damaged residential garden boundary |
+| S_T09_FENCE_3 | shared_wood_fence / broken | worn | -144.7, 2, 140 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Same-type remnants of the damaged residential garden boundary |
+| S_DEPOT_FENCE_1 | shared_metal_fence / straight | used | -36, 2, 85 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Matching municipal depot yard boundary, leaving both ends open |
+| S_DEPOT_FENCE_2 | shared_metal_fence / straight | clean | -33.87, 2, 85 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Matching municipal depot yard boundary, leaving both ends open |
+| S_DEPOT_FENCE_3 | shared_metal_fence / straight | used | -31.74, 2, 85 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Matching municipal depot yard boundary, leaving both ends open |
+| S_FACTORY_FENCE_1 | shared_chainlink_fence / straight | used | 132, 3, -106 | 0, 90, 0 | 1, 1, 1 | terrain / terrain | native | Coherent factory utility-yard partition clear of the warehouse door |
+| S_FACTORY_FENCE_2 | shared_chainlink_fence / straight | used | 132, 3, -103.87 | 0, 90, 0 | 1, 1, 1 | terrain / terrain | native | Coherent factory utility-yard partition clear of the warehouse door |
+| S_FACTORY_FENCE_3 | shared_chainlink_fence / straight | used | 132, 3, -101.74 | 0, 90, 0 | 1, 1, 1 | terrain / terrain | native | Coherent factory utility-yard partition clear of the warehouse door |
+| S_POLE_W | shared_concrete_utility_pole / insulators | used | -175, 2, 5 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Remnant roadside utility line; no powered gameplay dependency |
+| S_POLE_T | shared_concrete_utility_pole / insulators | used | 0, 2, 12 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Remnant roadside utility line; no powered gameplay dependency |
+| S_POLE_I | shared_concrete_utility_pole / insulators | used | 125, 3, -104 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Remnant roadside utility line; no powered gameplay dependency |
+| S_UTILITY_TRUCK | shared_utility_truck / parked | worn | 167, 3, -102 | 0, 90, 0 | 1, 1, 1 | terrain / terrain | native | Abandoned maintenance truck parked in the north service yard |
+| S_REPAIR_SLAB | shared_concrete_slab / horizontal | used | 138, 3, -100 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Stored service slab on the utility-yard perimeter |
+| S_REPAIR_RUBBLE | shared_concrete_rubble / small | worn | 137, 3, -103 | 0, 15, 0 | 1, 1, 1 | terrain / terrain | native | Small demolished footing beside the stored service slab |
+| S_REPAIR_SHEET | shared_corrugated_sheet / bent | worn | 141, 3, -104 | 0, 8, 0 | 1, 1, 1 | terrain / terrain | visual_only | Removed damaged roofing sheet beside the utility repair stock |
+| S_HEAT_SUPPORT_L | shared_district_heating_pipe / support | used | 140, 3, -108 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Left pipe saddle on the service-yard perimeter |
+| S_HEAT_SUPPORT_R | shared_district_heating_pipe / support | used | 143, 3, -108 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Right matching pipe saddle |
+| S_HEAT_PIPE | shared_district_heating_pipe / straight | used | 139.5, 3.165, -108 | 0, 0, 0 | 1, 1, 1 | surface / S_HEAT_SUPPORT_L | native | Disconnected district-heating section seated on matching supports |
+| S_MANHOLE_T | shared_manhole_cover / round | used | -115, 2, 25 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | visual_only | Flush municipal drain cover; visual-only surface detail |
+| S_MANHOLE_I | shared_manhole_cover / rectangular | used | 135, 2, 45 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | visual_only | Flush municipal drain cover; visual-only surface detail |
+| S_FARM_SIGN | shared_wood_post_sign / direction | used | -175, 1.84375, 177 | 0, 90, 0 | 1, 1, 1 | terrain / terrain | native | Farm approach direction marker on the verge, outside the extraction pad |
+| S_RIVER_SIGN | shared_wood_post_sign / warning | worn | 40.2, 2.293431, -58.5 | 0, 0, 0 | 1, 1, 1 | terrain / terrain | native | Riverbank warning beside the existing northern bridge approach |
+| S_SHOP_NAMEPLATE | shared_cyrillic_signs / nameplate | used | 8, 3.55, -6.957 | 0, 0, 0 | 1, 1, 1 | wall / T04-A | visual_only | Cyrillic corner-shop identification fixed to front wall |
+
+## Coverage đủ 143 types
+
+| Prop type | Instance IDs hoặc lý do defer |
+|---|---|
+| shared_sandbag_barrier | S_SECURITY_BAGS_A, S_SECURITY_BAGS_B |
+| shared_oil_drum | I_SOUTH_DRUM_A, I_SOUTH_DRUM_B, I_SERVICE_DRUM_A, I_SERVICE_DRUM_B, I_SERVICE_DRUM_C, OB-B05-drum-01, OB-B05-drum-02 |
+| shared_concrete_jersey_barrier | S_SECURITY_JERSEY_A, S_SECURITY_JERSEY_B |
+| shared_wood_pallet | I_WAREHOUSE_PALLET_A, I_WAREHOUSE_PALLET_B, I_WAREHOUSE_PALLET_C, I_WAREHOUSE_EMPTY_A, I_WAREHOUSE_EMPTY_B, OB-supply-pallet, OA-barn-pallet |
+| shared_wooden_crate | T_MARKET_CRATE_A, T_MARKET_CRATE_B, T_MARKET_CRATE_C, I_WAREHOUSE_CRATE_A, I_WAREHOUSE_CRATE_B, I_WAREHOUSE_CRATE_C, I_WAREHOUSE_CRATE_D, OF-woodcrate, OA-barn-crate |
+| shared_metal_fence | S_DEPOT_FENCE_1, S_DEPOT_FENCE_2, S_DEPOT_FENCE_3 |
+| shared_wood_fence | S_T09_FENCE_1, S_T09_FENCE_2, S_T09_FENCE_3 |
+| lake_lantern | OL-lantern |
+| shared_chainlink_fence | S_FACTORY_FENCE_1, S_FACTORY_FENCE_2, S_FACTORY_FENCE_3 |
+| lake_life_ring | OL-lifering |
+| shared_concrete_utility_pole | S_POLE_W, S_POLE_T, S_POLE_I |
+| lake_fishing_trap | OL-trap-01, OL-trap-02 |
+| shared_electrical_cabinet | I_SOUTH_CABINET |
+| lake_lakeside_bench | OL-bench |
+| lake_boat_toolkit | OL-oars, OL-toolbox |
+| shared_old_sedan | T_ROAD_SEDAN_A, T_ROAD_SEDAN_B |
+| shared_tire_stack | T_GARAGE_TIRE_A, T_GARAGE_TIRE_B, I_SOUTH_TIRES_A, I_SOUTH_TIRES_B |
+| lake_fishing_crate | OL-crate-01, OL-crate-02 |
+| lake_rope_coil | OL-rope |
+| lake_cattails | OL-cattails-01, OL-cattails-02 |
+| shared_industrial_dumpster | I_YARD_DUMPSTER, OB-supply-dumpster |
+| shared_cyrillic_signs | S_SHOP_NAMEPLATE |
+| lake_water_intake_pipe | OL-intake-stock |
+| shared_scrap_metal_pile | I_YARD_SCRAP |
+| lake_fishing_net | OL-net |
+| lake_mooring_bollard | OL-bollard |
+| shared_concrete_rubble | S_REPAIR_RUBBLE |
+| lake_rowboat | OL-boat |
+| shared_timber_stack | I_SOUTH_TIMBER_A, I_SOUTH_TIMBER_B, OF-timber |
+| lake_wood_pier | OL-pier-stock |
+| shared_cable_reel | I_WAREHOUSE_REEL_A, I_WAREHOUSE_REEL_B, I_SOUTH_REEL_A, I_SOUTH_REEL_B, OB-B05-reel |
+| shared_district_heating_pipe | S_HEAT_SUPPORT_L, S_HEAT_SUPPORT_R, S_HEAT_PIPE |
+| river_bridge_litter | OR-litter-01, OR-litter-02 |
+| shared_corrugated_sheet | S_REPAIR_SHEET |
+| river_driftwood | OR-driftwood |
+| shared_utility_truck | S_UTILITY_TRUCK |
+| river_erosion_block | OR-block-01 |
+| river_culvert_pipe_end | OR-culvert |
+| shared_concrete_slab | S_REPAIR_SLAB |
+| river_log_crossing | OR-log-debris |
+| shared_street_litter | T_CLINIC_PAPER, T_BUS_LITTER, I_DISPATCH_PAPERS, OL-litter |
+| river_river_reeds | OR-reed-01, OR-reed-02 |
+| shared_manhole_cover | S_MANHOLE_T, S_MANHOLE_I |
+| river_riverbank_rock | OR-rock-01, OR-rock-02 |
+| shared_wood_post_sign | S_FARM_SIGN, S_RIVER_SIGN |
+| river_bridge_support | OR-support-stock |
+| town_soviet_bus_shelter | T_BUS_SHELTER |
+| river_bridge_parapet | OR-parapet-stock |
+| town_metal_garage_door | **DEFER:** Door library is static3.28m wide/2.62m high with open-leaf sweep; existing functional doors/garage port geometry do not match. No decorative second door, behavior change or blocked door port. |
+| town_entrance_steps | **DEFER:** Asset landing rises1.5m, while live ground-floor thresholds are0.2m over terrain; placing it at an entry breaks step/door contracts. It needs a deliberately redesigned stair entrance, outside furnishing scope. |
+| town_apartment_mailboxes | T_APARTMENT_MAIL |
+| river_bridge_deck | OR-deck-stock |
+| farmland_farm_small_clutter | OA-milkcan, OA-bucket, OA-tools-02 |
+| town_shop_cyrillic_sign | T_PHARM_SIGN, T_GROCERY_SIGN, T_SERVICES_SIGN |
+| town_market_stall | T_MARKET_STALL_A, T_MARKET_STALL_B |
+| town_wall_electric_meter | T_PHARM_METER, T_HOME_METER, T_APARTMENT_METER |
+| town_courtyard_bench | T_COURTYARD_BENCH_A, T_COURTYARD_BENCH_B |
+| town_notice_board | T_CLINIC_NOTICE, T_CIVIC_NOTICE, T_BUS_BOARD, I_DISPATCH_NOTICE |
+| town_satellite_dish | T_APARTMENT_DISH |
+| town_playground_swing | T_COURTYARD_SWING |
+| town_air_conditioner | T_CLINIC_AC, T_GROCERY_AC |
+| town_pharmacy_shelf | T_CLINIC_SHELF_A, T_CLINIC_SHELF_B, T_PHARM_SHELF_A, T_PHARM_SHELF_B, T_PHARM_SHELF_C, T_GROCERY_SHELF_A, T_GROCERY_SHELF_B |
+| town_shop_counter | T_PHARM_COUNTER_A, T_PHARM_COUNTER_B, T_GROCERY_COUNTER |
+| town_office_furniture | T_CLINIC_DESK, T_CLINIC_FILE_A, T_CLINIC_FILE_B, T_PHARM_FILE, T_GROCERY_DESK, T_CIVIC_DESK_A, T_CIVIC_DESK_B, T_CIVIC_FILE_A, T_CIVIC_FILE_B, T_CIVIC_FILE_C, T_COMMUNITY_DESK, T_COMMUNITY_FILE_A, T_COMMUNITY_FILE_B, T_SERVICES_DESK, T_SERVICES_FILES_A, T_SERVICES_FILES_B, T_HOME_DESK, T_HOME_CABINET, T_HOME_LONG_DESK, T_HOME_LONG_FILE, T_HOME_EAST_DESK, T_HOME_EAST_CABINET, I_DISPATCH_DESK_A, I_DISPATCH_DESK_B, I_DISPATCH_FILE_A, I_DISPATCH_FILE_B, I_DISPATCH_FILE_C |
+| town_clinic_examination_bed | T_CLINIC_BED_A, T_CLINIC_BED_B |
+| town_workshop_bench | T_GARAGE_BENCH_A, T_GARAGE_BENCH_B, T_WORKSHOP_BENCH_A, T_WORKSHOP_BENCH_B, I_WAREHOUSE_BENCH_A, I_WAREHOUSE_BENCH_B, I_SOUTH_BENCH_A, I_SOUTH_BENCH_B |
+| town_waiting_room_chair | T_CLINIC_WAIT_A, T_CLINIC_WAIT_B, T_CIVIC_WAIT, T_COMMUNITY_WAIT, I_DISPATCH_WAIT |
+| town_apartment_radiator | T_HOME_RADIATOR, T_HOME_LONG_RADIATOR, T_HOME_EAST_RADIATOR |
+| industry_rail_boxcar | I_RAIL_BOXCAR |
+| industry_rail_gondola | **DEFER:** 3.5m high asset cannot replace4m railcar or3.6m derailed opaque proxy honestly. No remaining canonical wagon host; adding another wagon would block rail/service corridor or require a new siding. |
+| bunker_metal_locker | OB-B04-locker-01, OB-B04-locker-02 |
+| bunker_floodlight_mast | OB-B06-light |
+| bunker_anti_vehicle_hedgehog | OB-B06-hedgehog-01, OB-B06-hedgehog-02 |
+| bunker_camouflage_net | OB-supply-net |
+| bunker_radio_cabinet | OB-B04-radio |
+| bunker_bunk_bed | OB-B04-bed |
+| bunker_breaker_panel | OB-B05-breaker |
+| bunker_pipe_valve_kit | OB-B05-pipe, OB-B05-valve |
+| bunker_ventilation_duct | OB-B05-duct |
+| bunker_military_warning_sign | OB-B04-electric-sign, OB-B06-stop |
+| bunker_wall_phone | OB-B04-phone |
+| hills_rock_cluster | OH-rock-01, OH-rock-02 |
+| hills_cliff_wedge | OH-cliff-01 |
+| hills_observation_platform | **DEFER:** H01 is4×4×5m closed proxy; finished platform including approach is4.06×8.23m and only3/4.1m high. Unit-scale use would consume protected ridge access and mismatch sealed physics. |
+| hills_pillbox | **DEFER:** H02 is6×5×2.7m closed proxy; finished closed shell is6.3×5.38×2.7m. Replacing a continuous opaque box with aperture geometry requires explicit shot/LOS/closed-access fit, so retain it. |
+| hills_radio_mast | OH-mast-spare |
+| hills_trench_kit | OH-revetment |
+| hills_broken_retaining_wall | OH-wall |
+| hills_hill_shelter | **DEFER:** No existing shelter footprint exists in the fixed hills building catalogue. Adding4.3×3.3m shelter would be a new building and cover landmark; keep finished source available for a later authored-layout decision. |
+| hills_field_equipment_case | OH-case-01, OH-case-02 |
+| forest_birch_tree | OT-F003, OT-F006, OT-F009, OT-F012, OT-F015, OT-F018, OT-F021, OT-F024, OT-F027, OT-F030, OT-F033, OT-F036, OT-F039, OT-F042, OT-F045, OT-F048, OT-G003, OT-G006, OT-G009, OT-G012, OT-H003, OT-H006, OT-H009, OT-H012, OT-H015, OT-H018, OT-A001, OT-A002, OT-A003, OT-A004, OT-A005, OT-A006, OT-A007, OT-A008, OT-A009, OT-A010, OT-A011, OT-A012, OT-A013 |
+| forest_pine_tree | OT-F001, OT-F004, OT-F007, OT-F010, OT-F013, OT-F016, OT-F019, OT-F022, OT-F025, OT-F028, OT-F031, OT-F034, OT-F037, OT-F040, OT-F043, OT-F046, OT-G001, OT-G004, OT-G007, OT-G010, OT-H001, OT-H004, OT-H007, OT-H008, OT-H010, OT-H013, OT-H016, OT-H019 |
+| forest_spruce_tree | OT-F002, OT-F005, OT-F008, OT-F011, OT-F014, OT-F017, OT-F020, OT-F023, OT-F026, OT-F029, OT-F032, OT-F035, OT-F038, OT-F041, OT-F044, OT-F047, OT-G002, OT-G005, OT-G008, OT-G011, OT-H002, OT-H005, OT-H011, OT-H014, OT-H017, OT-H020 |
+| farmland_barn_door | **DEFER:** A06 warehouse opening is6m wide×4m high; completed barn-door frame is5.45×3m. Unit-scale frame would narrow the verified entrance and leave unexplained gaps. Preserve original open portal, no door mechanics. |
+| farmland_farm_gate | OA-farmgate |
+| farmland_farm_tractor | OA-tractor |
+| farmland_farm_trailer | OA-trailer |
+| farmland_feed_sack_stack | OA-feed-01, OA-feed-02, OA-barn-feed-01, OA-barn-feed-02 |
+| farmland_firewood_stack | OA-firewood |
+| farmland_grain_hopper | OA-hopper |
+| farmland_hay_bale | OA-hay-01, OA-hay-02, OA-hay-03, OA-hay-04 |
+| farmland_plough_attachment | OA-plough |
+| farmland_water_trough | OA-trough |
+| farmland_well_pump | OA-pump |
+| farmland_wheelbarrow | OA-wheelbarrow |
+| farmland_wood_cart | OA-cart, OA-cart-02 |
+| forest_campfire_ring | OF-fire |
+| forest_forest_trail_sign | OF-trail-sign |
+| forest_hunting_stand | **DEFER:** Existing F03 is3×3×4.5m sealed opaque proxy. Enclosed finished stand is2.2×3.011×4.6m with open legs/ladder; hiding its solid box creates invisible obstruction, while a second stand is an unapproved landmark. |
+| forest_logging_trailer | OF-trailer |
+| forest_ranger_shelter_props | OF-cot, OF-table, OF-shelf |
+| forest_small_forest_debris | OF-debris-01, OF-debris-02 |
+| forest_tarp_camp | OF-tarp |
+| forest_log_stack | OF-logstock-01, OF-logstock-02 |
+| industry_rail_tank_wagon | I_RAIL_TANK |
+| bunker_military_supply_crate | OB-B04-case, OB-supply-wood-01, OB-supply-wood-02, OB-supply-wood-03, OB-supply-metal-01, OB-supply-metal-02 |
+| bunker_diesel_generator | OB-B05-generator |
+| industry_shipping_container | I_CONTAINER_I04-A, I_CONTAINER_I04-B, I_CONTAINER_I04-C, I_CONTAINER_I06-A, I_CONTAINER_I06-B, I_CONTAINER_I06-C |
+| bunker_ventilation_shaft | OB-B05-shaft |
+| industry_rail_signal | I_RAIL_SIGNAL |
+| bunker_watchtower_kit | **DEFER:** Existing B07/B08 are4×4×8m sealed opaque proxies; platform is4.06×4.06×4.1m and roof extends to5.8m. Unit-scale assembly cannot hide those proxies without invisible solid upper volume or changed silhouette. |
+| industry_rail_switch | **DEFER:** Existing authored rail is a continuous single line, with no matching branching track. Switch lever is not placed as unexplained debris and does not authorize track geometry changes. |
+| bunker_bunker_portal_trim | **DEFER:** Source frame is 2.8×3.2×.8m, while B04 lintel/clear opening are already fixed at 1.2×2.4m. Aperture and lintel contact must be native-fitted before replacing trim. |
+| bunker_checkpoint_gate | **DEFER:** Source gate is 8.8m wide; canonical compound gate is exactly6m. Unit-scale assembly cannot replace the protected gate and must not close its pedestrian/vehicle access. |
+| bunker_razorwire_fence_top | OB-bunker-wiretop |
+| forest_fallen_log | OF-log |
+| forest_tree_stump | OF-stump |
+| forest_undergrowth | OF-undergrowth-01, OF-undergrowth-02 |
+| bunker_blast_door | **DEFER:** Existing B04 door is 1.2×2.4m. Source closed assembly is 1.44×2.556m and open leaf has 1.56m depth; neither clearance nor leaf sweep is certified. Keep current doorway and no functional-door mechanics. |
+| industry_steel_pipe_stack | I_YARD_PIPE_A, I_YARD_PIPE_B |
+| industry_work_light | T_WORKSHOP_LIGHT, I_WAREHOUSE_TRIPOD, I_SOUTH_TASKLIGHT |
+| industry_industrial_gauge | I_WAREHOUSE_GAUGE |
+| industry_fuel_pump | I_SERVICE_PUMP |
+| industry_warehouse_shutter | **DEFER:** 4.28m width/3.75m height frame is not compatible with the current warehouse/garage aperture and lintel. Retrofitting or layering it over the functional opening would change access and door behavior. |
+| industry_steel_beam_stack | I_YARD_BEAM_A, I_YARD_BEAM_B |
+| industry_fuel_tank | I_SERVICE_TANK |
+| industry_rail_sleepers | I_YARD_SLEEPERS_A, I_YARD_SLEEPERS_B |
+| industry_forklift | I_YARD_FORKLIFT |
+| industry_rail_buffer_stop | **DEFER:** P04 rail is through-running at both map edges; there is no siding terminus to support a buffer stop. Blocking the live rail/service route for catalogue coverage is unjustified. |
+| industry_air_compressor | T_GARAGE_COMPRESSOR, I_WAREHOUSE_COMPRESSOR, I_SOUTH_COMPRESSOR |
+| industry_gantry_crane | I_WAREHOUSE_CRANE |
+| industry_welding_cart | T_WORKSHOP_CART, I_WAREHOUSE_CART, I_SOUTH_CART |
+| town_store_awning | T_PHARM_AWNING, T_GROCERY_AWNING |
+
+## Giới hạn và verify
+
+- A coordinate plan and source export QA do not prove native traversal, LOS or FPS.
+- Map Phase4 spawn/extraction transaction wiring and lighting/AI/gameplay tuning are separate tasks.

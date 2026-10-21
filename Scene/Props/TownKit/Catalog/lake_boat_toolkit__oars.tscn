@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/lake_boat_toolkit/assets/lake_boat_toolkit_oars.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/lake_boat_toolkit/materials/town_lake_boat_toolkit_oars_used.tres" id="2_finish"]
+
+[node name="lake_boat_toolkit__oars" type="Node3D"]
+metadata/catalog_id = "lake_boat_toolkit"
+metadata/catalog_variant = "oars"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="BoatToolkitOars" parent="Model/TownBoatToolkitOars"]
+surface_material_override/0 = ExtResource("2_finish")

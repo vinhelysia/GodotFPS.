@@ -1,0 +1,295 @@
+[gd_scene load_steps=28 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/bunker_metal_locker__closed.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/bunker_radio_cabinet__with-controls.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/bunker_bunk_bed__made-up.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/bunker_military_supply_crate__metal.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/bunker_wall_phone__mounted__visual.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/bunker_military_warning_sign__electric__visual.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/bunker_breaker_panel__closed__visual.tscn" id="7"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/bunker_diesel_generator__large.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/bunker_ventilation_shaft__tall.tscn" id="9"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/bunker_ventilation_duct__straight__visual.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/bunker_pipe_valve_kit__straight.tscn" id="11"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/bunker_pipe_valve_kit__wheel.tscn" id="12"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_oil_drum__closed.tscn" id="13"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_oil_drum__dented.tscn" id="14"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_cable_reel__wood.tscn" id="15"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/bunker_camouflage_net__draped.tscn" id="16"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/bunker_military_supply_crate__wood.tscn" id="17"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wood_pallet__loaded.tscn" id="18"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_industrial_dumpster__closed.tscn" id="19"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/bunker_floodlight_mast__dual.tscn" id="20"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/bunker_anti_vehicle_hedgehog__single.tscn" id="21"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/bunker_military_warning_sign__stop__visual.tscn" id="22"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/bunker_razorwire_fence_top__straight__visual.tscn" id="23"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_sandbag_barrier__straight.tscn" id="24"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_sandbag_barrier__straight__worn.tscn" id="25"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_concrete_jersey_barrier__intact.tscn" id="26"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_concrete_jersey_barrier__damaged__worn.tscn" id="27"]
+
+[node name="bunker" type="Node3D"]
+
+[node name="OB-B04-locker-01" parent="." instance=ExtResource("1")]
+position = Vector3(-151.8, 10.2, -146.3)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-B04-locker-01"
+metadata/catalog_id = "bunker_metal_locker"
+metadata/role = "Guard locker against west room wall"
+
+[node name="OB-B04-locker-02" parent="." instance=ExtResource("1")]
+position = Vector3(-151.8, 10.2, -147.1)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-B04-locker-02"
+metadata/catalog_id = "bunker_metal_locker"
+metadata/role = "Second locker; central doorway/aisle stays open"
+
+[node name="OB-B04-radio" parent="." instance=ExtResource("2")]
+position = Vector3(-151.8, 10.2, -149.8)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-B04-radio"
+metadata/catalog_id = "bunker_radio_cabinet"
+metadata/role = "Radio cabinet in northwest guard office corner"
+
+[node name="OB-B04-bed" parent="." instance=ExtResource("3")]
+position = Vector3(-146.4, 10.2, -148.3)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-B04-bed"
+metadata/catalog_id = "bunker_bunk_bed"
+metadata/role = "Rest bunk on east wall, away from south entry"
+
+[node name="OB-B04-case" parent="." instance=ExtResource("4")]
+position = Vector3(-146.5, 10.2, -145.9)
+rotation = Vector3(0, 0.261799, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-B04-case"
+metadata/catalog_id = "bunker_military_supply_crate"
+metadata/role = "Guard emergency equipment beside bunk"
+
+[node name="OB-B04-phone" parent="." instance=ExtResource("5")]
+position = Vector3(-149.8, 11.738491, -150.72)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-B04-phone"
+metadata/catalog_id = "bunker_wall_phone"
+metadata/role = "Rear wall duty telephone"
+
+[node name="OB-B04-electric-sign" parent="." instance=ExtResource("6")]
+position = Vector3(-151.25, 12.17, -150.72)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-B04-electric-sign"
+metadata/catalog_id = "bunker_military_warning_sign"
+metadata/role = "Electrical warning above radio corner"
+
+[node name="OB-B05-breaker" parent="." instance=ExtResource("7")]
+position = Vector3(-198.005, 11.56, -147)
+rotation = Vector3(0, 4.712389, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-B05-breaker"
+metadata/catalog_id = "bunker_breaker_panel"
+metadata/role = "Closed external workshop breaker panel"
+
+[node name="OB-B05-generator" parent="." instance=ExtResource("8")]
+position = Vector3(-207, 19.384013, -173)
+rotation = Vector3(0.05435, -0.00098, -0.01804)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-B05-generator"
+metadata/catalog_id = "bunker_diesel_generator"
+metadata/role = "Generator on compound upper service shoulder above workshop"
+
+[node name="OB-B05-shaft" parent="." instance=ExtResource("9")]
+position = Vector3(-207, 19.22124, -170)
+rotation = Vector3(0.067041, -0.001203, -0.01796)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-B05-shaft"
+metadata/catalog_id = "bunker_ventilation_shaft"
+metadata/role = "Utility exhaust shaft beside upper service plant"
+
+[node name="OB-B05-duct" parent="." instance=ExtResource("10")]
+position = Vector3(-198.505, 12.45, -145)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-B05-duct"
+metadata/catalog_id = "bunker_ventilation_duct"
+metadata/role = "External wall duct above utility equipment"
+
+[node name="OB-B05-pipe" parent="." instance=ExtResource("11")]
+position = Vector3(-210, 19.479783, -172)
+rotation = Vector3(0.000224, 1.570809, 0.054461)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-B05-pipe"
+metadata/catalog_id = "bunker_pipe_valve_kit"
+metadata/role = "Grounded utility pipe beside generator"
+
+[node name="OB-B05-valve" parent="." instance=ExtResource("12")]
+position = Vector3(-210, 19.347628, -169.7)
+rotation = Vector3(-0.008688, 1.570211, 0.067297)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-B05-valve"
+metadata/catalog_id = "bunker_pipe_valve_kit"
+metadata/role = "Valve at utility pipe service end"
+
+[node name="OB-B05-drum-01" parent="." instance=ExtResource("13")]
+position = Vector3(-204, 19.271743, -172)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-B05-drum-01"
+metadata/catalog_id = "shared_oil_drum"
+metadata/role = "Generator fuel drum"
+
+[node name="OB-B05-drum-02" parent="." instance=ExtResource("14")]
+position = Vector3(-204, 19.222849, -171.1)
+rotation = Vector3(0, 0.349066, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-B05-drum-02"
+metadata/catalog_id = "shared_oil_drum"
+metadata/role = "Retired fuel drum beside sealed stock"
+
+[node name="OB-B05-reel" parent="." instance=ExtResource("15")]
+position = Vector3(-204.4, 19.414712, -174.5)
+rotation = Vector3(0, 0.523599, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-B05-reel"
+metadata/catalog_id = "shared_cable_reel"
+metadata/role = "Service cable stock"
+
+[node name="OB-supply-net" parent="." instance=ExtResource("16")]
+position = Vector3(-171, 16.840446, -184)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-supply-net"
+metadata/catalog_id = "bunker_camouflage_net"
+metadata/role = "Covered external supply sorting bay"
+
+[node name="OB-supply-wood-01" parent="." instance=ExtResource("17")]
+position = Vector3(-172.3, 17.065851, -184.3)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-supply-wood-01"
+metadata/catalog_id = "bunker_military_supply_crate"
+metadata/role = "Crate under covered bay edge"
+
+[node name="OB-supply-wood-02" parent="." instance=ExtResource("17")]
+position = Vector3(-169.7, 17.080735, -184.3)
+rotation = Vector3(0.021819, -0.002266, -0.103476)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-supply-wood-02"
+metadata/catalog_id = "bunker_military_supply_crate"
+metadata/role = "Second crate; centre of bay remains accessible"
+
+[node name="OB-supply-wood-03" parent="." instance=ExtResource("17")]
+position = Vector3(-172.6, 16.738246, -187)
+rotation = Vector3(-0.024873, 0.170242, 0.170863)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-supply-wood-03"
+metadata/catalog_id = "bunker_military_supply_crate"
+metadata/role = "Inbound stock outside canopy"
+
+[node name="OB-supply-metal-01" parent="." instance=ExtResource("4")]
+position = Vector3(-170.8, 17.055279, -187.2)
+rotation = Vector3(0.005451, 0.000952, 0.172882)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-supply-metal-01"
+metadata/catalog_id = "bunker_military_supply_crate"
+metadata/role = "Sealed radio spares"
+
+[node name="OB-supply-metal-02" parent="." instance=ExtResource("4")]
+position = Vector3(-169.6, 17.134683, -187.2)
+rotation = Vector3(0.005492, -0.000828, -0.149603)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-supply-metal-02"
+metadata/catalog_id = "bunker_military_supply_crate"
+metadata/role = "Sealed communications spares"
+
+[node name="OB-supply-pallet" parent="." instance=ExtResource("18")]
+position = Vector3(-165.6, 16.489675, -184.5)
+rotation = Vector3(0.141953, 1.573296, 0.017667)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-supply-pallet"
+metadata/catalog_id = "shared_wood_pallet"
+metadata/role = "Inbound pallet beside sorting bay"
+
+[node name="OB-supply-dumpster" parent="." instance=ExtResource("19")]
+position = Vector3(-178, 17.924478, -180)
+rotation = Vector3(0.115111, 1.555061, -0.136167)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-supply-dumpster"
+metadata/catalog_id = "shared_industrial_dumpster"
+metadata/role = "Military supply packaging disposal"
+
+[node name="OB-B06-light" parent="." instance=ExtResource("20")]
+position = Vector3(-154, 9.415987, -123.8)
+rotation = Vector3(0.184783, -0.019731, -0.106994)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-B06-light"
+metadata/catalog_id = "bunker_floodlight_mast"
+metadata/role = "Gate-side floodlight, outside six metre gate and patrol reservation"
+
+[node name="OB-B06-hedgehog-01" parent="." instance=ExtResource("21")]
+position = Vector3(-137, 10, -132.25)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-B06-hedgehog-01"
+metadata/catalog_id = "bunker_anti_vehicle_hedgehog"
+metadata/role = "Stored vehicle obstacle east of open checkpoint approach"
+
+[node name="OB-B06-hedgehog-02" parent="." instance=ExtResource("21")]
+position = Vector3(-137, 10, -129)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-B06-hedgehog-02"
+metadata/catalog_id = "bunker_anti_vehicle_hedgehog"
+metadata/role = "Second stored obstacle, no gate blockage"
+
+[node name="OB-B06-stop" parent="." instance=ExtResource("22")]
+position = Vector3(-146, 11.55, -126.495)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-B06-stop"
+metadata/catalog_id = "bunker_military_warning_sign"
+metadata/role = "Checkpoint warning on booth south face"
+
+[node name="OB-bunker-wiretop" parent="." instance=ExtResource("23")]
+position = Vector3(-202.8375, 20.874749, -220.45)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OB-bunker-wiretop"
+metadata/catalog_id = "bunker_razorwire_fence_top"
+metadata/role = "Short surviving razor-wire run on north compound fence"
+
+[node name="S_SECURITY_BAGS_A" parent="." instance=ExtResource("24")]
+position = Vector3(-175, 10.710843, -119)
+rotation = Vector3(0.105737, -0.00818, -0.077353)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_SECURITY_BAGS_A"
+metadata/catalog_id = "shared_sandbag_barrier"
+metadata/role = "Roadside guard position west of the existing south gate"
+
+[node name="S_SECURITY_BAGS_B" parent="." instance=ExtResource("25")]
+position = Vector3(-172.1, 10.511259, -119)
+rotation = Vector3(0.062966, -0.003831, -0.060812)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_SECURITY_BAGS_B"
+metadata/catalog_id = "shared_sandbag_barrier"
+metadata/role = "Adjacent matching guard position, preserving the open approach"
+
+[node name="S_SECURITY_JERSEY_A" parent="." instance=ExtResource("26")]
+position = Vector3(-174.8, 11.438789, -123.8)
+rotation = Vector3(0.157063, -0.01296, -0.082671)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_SECURITY_JERSEY_A"
+metadata/catalog_id = "shared_concrete_jersey_barrier"
+metadata/role = "Concrete protection behind the guard bag line"
+
+[node name="S_SECURITY_JERSEY_B" parent="." instance=ExtResource("27")]
+position = Vector3(-172.6, 11.254533, -123.8)
+rotation = Vector3(0.153672, -0.013181, -0.085902)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_SECURITY_JERSEY_B"
+metadata/catalog_id = "shared_concrete_jersey_barrier"
+metadata/role = "Matching second barrier with selective damage"

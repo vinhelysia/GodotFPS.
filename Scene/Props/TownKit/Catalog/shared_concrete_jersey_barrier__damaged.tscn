@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/jersey_barrier/assets/jersey_barrier_damaged.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/jersey_barrier/materials/town_jersey_barriers_used.tres" id="2_finish"]
+
+[node name="shared_concrete_jersey_barrier__damaged" type="Node3D"]
+metadata/catalog_id = "shared_concrete_jersey_barrier"
+metadata/catalog_variant = "damaged"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="JerseyBarrierDamaged" parent="Model/TownJerseyBarrierDamaged"]
+surface_material_override/0 = ExtResource("2_finish")

@@ -1,0 +1,126 @@
+{
+	"batches": [
+		{
+			"height_m": 0.33,
+			"instanced_triangles": 504,
+			"instances": 42,
+			"mesh_kind": "dry",
+			"mesh_triangles": 12,
+			"name": "GrassNorthBirch",
+			"unit_scale": true,
+			"visibility_end_m": 75.0
+		},
+		{
+			"height_m": 0.18,
+			"instanced_triangles": 60,
+			"instances": 5,
+			"mesh_kind": "short",
+			"mesh_triangles": 12,
+			"name": "GrassNorthFoundation",
+			"unit_scale": true,
+			"visibility_end_m": 75.0
+		},
+		{
+			"height_m": 0.33,
+			"instanced_triangles": 1920,
+			"instances": 160,
+			"mesh_kind": "dry",
+			"mesh_triangles": 12,
+			"name": "GrassSouthFoundation",
+			"unit_scale": true,
+			"visibility_end_m": 75.0
+		},
+		{
+			"height_m": 0.18,
+			"instanced_triangles": 648,
+			"instances": 54,
+			"mesh_kind": "short",
+			"mesh_triangles": 12,
+			"name": "GrassRoadSouth",
+			"unit_scale": true,
+			"visibility_end_m": 75.0
+		},
+		{
+			"height_m": 0.55,
+			"instanced_triangles": 12,
+			"instances": 1,
+			"mesh_kind": "dry",
+			"mesh_triangles": 12,
+			"name": "GrassRoadNorth",
+			"unit_scale": true,
+			"visibility_end_m": 75.0
+		},
+		{
+			"height_m": 0.18,
+			"instanced_triangles": 18228,
+			"instances": 1519,
+			"mesh_kind": "short",
+			"mesh_triangles": 12,
+			"name": "V3Short",
+			"unit_scale": true,
+			"visibility_end_m": 75.0
+		},
+		{
+			"height_m": 0.33,
+			"instanced_triangles": 25092,
+			"instances": 2091,
+			"mesh_kind": "dry",
+			"mesh_triangles": 12,
+			"name": "V3Dry",
+			"unit_scale": true,
+			"visibility_end_m": 75.0
+		},
+		{
+			"height_m": 0.65,
+			"instanced_triangles": 10560,
+			"instances": 352,
+			"mesh_kind": "tall",
+			"mesh_triangles": 30,
+			"name": "V3Tall",
+			"unit_scale": true,
+			"visibility_end_m": 75.0
+		},
+		{
+			"height_m": 0.28,
+			"instanced_triangles": 12810,
+			"instances": 427,
+			"mesh_kind": "weed",
+			"mesh_triangles": 30,
+			"name": "V3Weed",
+			"unit_scale": true,
+			"visibility_end_m": 75.0
+		},
+		{
+			"instanced_triangles": 9888,
+			"instances": 12,
+			"mesh_triangles": 824,
+			"name": "LowShrubs",
+			"unit_scale": true,
+			"visibility_end_m": 110.0
+		},
+		{
+			"instanced_triangles": 5148,
+			"instances": 9,
+			"mesh_triangles": 572,
+			"name": "LeafBranchDebrisA",
+			"unit_scale": true,
+			"visibility_end_m": 110.0
+		},
+		{
+			"instanced_triangles": 4572,
+			"instances": 9,
+			"mesh_triangles": 508,
+			"name": "LeafStoneDebrisC",
+			"unit_scale": true,
+			"visibility_end_m": 110.0
+		}
+	],
+	"collision_objects": 0,
+	"grass_materials": 1,
+	"instanced_triangles": 89442,
+	"instances": 4681,
+	"native_support": "Pending primary runtime rays; placement heights use canonical terrain",
+	"plan_sha256": "f201c5702884cf07bb5a719ed172b6e46bc07f4f5795bf90adfd0c31bcb95a66",
+	"runtime_scripts": 0,
+	"scene": "res://Scene/World/Town500m/Art/GroundArt/ground_cover.tscn"
+}

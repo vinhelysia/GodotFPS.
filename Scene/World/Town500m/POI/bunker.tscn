@@ -1,0 +1,101 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t07_workshop_shell.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t03_apartment.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t13_guard_booth.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Graybox/bunker_entry.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Graybox/watch_tower.tscn" id="7"]
+
+[node name="bunker" type="Node3D"]
+metadata/town500_zone = "bunker"
+metadata/phase = 3
+
+[node name="B01-A" parent="." instance=ExtResource("1")]
+position = Vector3(-187, 10.2, -195)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "B01-A"
+metadata/source_ref = "B01"
+metadata/zone = "bunker"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 10
+metadata/graybox = false
+
+[node name="B02-A" parent="." instance=ExtResource("2")]
+position = Vector3(-138, 10.2, -195)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "B02-A"
+metadata/source_ref = "B02"
+metadata/zone = "bunker"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 10
+metadata/graybox = false
+
+[node name="B03-A" parent="." instance=ExtResource("3")]
+position = Vector3(-101, 10.2, -194)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "B03-A"
+metadata/source_ref = "B03"
+metadata/zone = "bunker"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 10
+metadata/graybox = false
+
+[node name="B05-A" parent="." instance=ExtResource("4")]
+position = Vector3(-195, 10.2, -147)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "B05-A"
+metadata/source_ref = "B05"
+metadata/zone = "bunker"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 10
+metadata/graybox = false
+
+[node name="B06-A" parent="." instance=ExtResource("5")]
+position = Vector3(-146, 10.2, -128)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "B06-A"
+metadata/source_ref = "B06"
+metadata/zone = "bunker"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 10
+metadata/graybox = false
+
+[node name="B04-ENTRY" parent="." instance=ExtResource("6")]
+position = Vector3(-149, 10.2, -147)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "B04-ENTRY"
+metadata/source_ref = "B04"
+metadata/zone = "bunker"
+metadata/ground_access = true
+metadata/upper_access = false
+metadata/pad_surface_y_m = 10
+metadata/graybox = true
+
+[node name="B07-A" parent="." instance=ExtResource("7")]
+position = Vector3(-213, 10.2, -214)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "B07-A"
+metadata/source_ref = "B07"
+metadata/zone = "bunker"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 10
+metadata/graybox = true
+
+[node name="B08-A" parent="." instance=ExtResource("7")]
+position = Vector3(-90, 10.2, -214)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "B08-A"
+metadata/source_ref = "B08"
+metadata/zone = "bunker"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 10
+metadata/graybox = true

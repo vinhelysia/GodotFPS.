@@ -1,0 +1,362 @@
+{
+  "status": "OFFLINE SOURCE TESSELLATION CHECK PASS; NATIVE REBAKE/TRAVERSAL PENDING",
+  "date": "2026-10-09",
+  "root_cause": "Convex pad clipping removed east shoulder cell before applying south pad edge; centroid fan crossed flat-side/corner height regimes and created47.771deg triangle despite authored7.125deg side blend.",
+  "change": "Split each of151pads' shoulder cells along all four supporting pad edge lines, limited to cells whose AABB overlaps pad4m blend AABB; before zone partition/conformEdges/fan triangulation. authoredHeight/baseHeight/canonical data and runtime ownership unchanged.",
+  "source_sha256": "94EFCF9500921EF2190E810B577A9C372E82917C84D46C6C03C33D04A8C51805",
+  "before": {
+    "triangles": 68933,
+    "vertices": 35553,
+    "dry_area_m2": 228627.0266094728,
+    "contact_triangle": [
+      [
+        -230.216,
+        1.518,
+        175.47
+      ],
+      [
+        -230,
+        1.9460259,
+        180
+      ],
+      [
+        -230,
+        1.545,
+        170.45
+      ]
+    ],
+    "contact_slope_deg": 47.77115841290745,
+    "contact_height_m": 1.5432302982969808
+  },
+  "after": {
+    "triangles": 75422,
+    "vertices": 38806,
+    "groups": 60,
+    "pads": 151,
+    "dry_area_m2": 228627.02660910191,
+    "wet_area_m2": 21372.973298545232,
+    "spawn_shoulder_regression": {
+      "contact_xz_m": [
+        -230.06922913,
+        172.22286987
+      ],
+      "physical_height_m": 1.5363463587500021,
+      "authored_height_m": 1.5363463587500021,
+      "slope_deg": 7.125016348901798
+    },
+    "road_visual_faces": 16793,
+    "bank_visual_faces": 754
+  },
+  "checks": {
+    "terrain_writer": true,
+    "terrain_deterministic_check": true,
+    "circulation_writer": true,
+    "circulation_deterministic_check": true,
+    "dressing_writer": true,
+    "dressing_deterministic_check": true,
+    "phase3_los_deterministic_check": "2D PROXY PASS; NATIVE PENDING",
+    "pad_max_error_m": 5.346834086594754e-13,
+    "road_profiles": 14,
+    "continuous_road_profiles": 14,
+    "dry_graph_profiles": 20,
+    "internal_open_edges": 0,
+    "duplicate_triangles": 0,
+    "signed_winding_and_edge_owner_checks_pass": true,
+    "wet_numerical_intersection_area_m2": 0.000007695715730449137,
+    "maximum_6m_bank_reservation_collision_y_m": 6.000000000000001,
+    "hill_anchors": [
+      {
+        "id": "HILL_W",
+        "xz_m": [
+          -210,
+          -190
+        ],
+        "target_y_m": 20,
+        "observed_y_m": 20
+      },
+      {
+        "id": "HILL_N",
+        "xz_m": [
+          -90,
+          -235
+        ],
+        "target_y_m": 18,
+        "observed_y_m": 18
+      },
+      {
+        "id": "HILL_E",
+        "xz_m": [
+          -35,
+          -165
+        ],
+        "target_y_m": 15,
+        "observed_y_m": 15
+      }
+    ]
+  },
+  "protected_hashes": {
+    "Scene/Town.tscn": {
+      "sha256": "691c6ac518482b21787e30eb77f0d79dc63733411172d0ab5352f364b85ac112",
+      "unchanged": true
+    },
+    "Scene/World/Town500m/terrain_payload.tscn": {
+      "sha256": "53ed26a4db8e518efe5fe54e85df9a1ac5432abcbd99b65522e878475e008aea",
+      "unchanged": true
+    },
+    "design/town-500m/layout.json": {
+      "sha256": "3eaf13391a1fd9781a20bb179bab8f60c88a9a4a14384f8a738b3b7539aab81b",
+      "unchanged": true
+    },
+    "design/town-500m/building-catalogue.json": {
+      "sha256": "271ac4c21013c72e063d5cb43850d6f0a8f20b3bfcc6269d60ee1f7780c9051b",
+      "unchanged": true
+    },
+    "design/town-500m/terrain-contract.json": {
+      "sha256": "b0221b5ea78784b24899a14696238dfd58441a8b04ec62434c267a1a7667a87a",
+      "unchanged": true
+    },
+    "design/town-500m/phase3/dressing-proposal.json": {
+      "sha256": "432134c590483a2b2de08ac0c8a735f907d0f49ce8146eb37d3e6a5279e36d79",
+      "unchanged": true
+    },
+    "design/town-500m/phase3/los-proposal-report.json": {
+      "sha256": "95f478adb00312e10ba2776f20b58a996dcfb1477837f34025f63c12ec2de9f4",
+      "unchanged": true
+    }
+  },
+  "changed_file_hashes": {
+    "design/town-500m/phase2/terrain-authoring.report.json": {
+      "before": "f389ad0299c0c6c4ee288d19ae112fc734d9b150fa480188241ff141c521577b",
+      "after": "3305449daedac775bc9481410dc13a6f703e980e77f4d965bd8be0950db8da7c"
+    },
+    "design/town-500m/phase2/circulation-authoring.report.json": {
+      "before": "612bfd86d122891d9556fe96bfc3d320dc5d3efd90242dd94b603700efbb3839",
+      "after": "9b254d39107ccd9a197fa006a97789e5b85ae47972606f81af75903242266fe2"
+    },
+    "design/town-500m/phase3/dressing-report.json": {
+      "before": "5b9c9605f8faeebe5f7fd032ca1e3b02b8cd5d4c5fe7bd0bba6a226728a80725",
+      "after": "12cff127336ff8e7574a26961709224019a1bf3efb5c5e19df546a45e7555ee1"
+    },
+    "Scene/World/Town500m/Terrain/bank_faces.obj": {
+      "before": "88c113838376470684b16766ea59ce7230ce6f0e80a0e40f9fc9f3238682818b",
+      "after": "f3b919aed8a91bdab85596233a7186e61bee5fdc18c5daaf6f23b7d7f088a203"
+    },
+    "Scene/World/Town500m/Terrain/chunk_0_0_bunker.obj": {
+      "before": "6ee5031b63f7b451905543088db3236e9e2f792befd5211faf52996f90bdf267",
+      "after": "da0f2d352ca185d90761cd6420ba1436858d39381cae8733383927a4da3e232f"
+    },
+    "Scene/World/Town500m/Terrain/chunk_0_0_hills.obj": {
+      "before": "3bef05da5ad010be47e8a7d58e817258b625d9e239e37d12412b96103ee969c6",
+      "after": "c6da4456929393ebbabc4bf91927e9fedcf4088291c486e1dcfdc059c903412a"
+    },
+    "Scene/World/Town500m/Terrain/chunk_0_1_bunker.obj": {
+      "before": "3d488959d848c50ddefe84b38785b455341f8743c0761e3c5b5d8838004c5e97",
+      "after": "92833be1303f385a6d88fe250160b6439f92b93664945a035d665f8b43c20ed7"
+    },
+    "Scene/World/Town500m/Terrain/chunk_0_1_hills.obj": {
+      "before": "945b119d42541d228e6e9dc487d8b81a12c8978e95663f3ffe98c4825c2d79d1",
+      "after": "1463db71b9562f843c925751c2e3c779e279486b32159def61e77e3792882b60"
+    },
+    "Scene/World/Town500m/Terrain/chunk_0_2_farmland.obj": {
+      "before": "817bcec0765b3746e80a0f6785cad48ddaa048d83029458739efe6a1ca0c1b47",
+      "after": "884c86e5bb574ea78a975a003736939fd8f8341116934b6aed638cc2ce97b360"
+    },
+    "Scene/World/Town500m/Terrain/chunk_0_2_shore.obj": {
+      "before": "8c3230e56b703216eeaca032e3751f8b8ae5de883c7bb2b3cf0b3530f6b6e4be",
+      "after": "486c06cc2eee6ede7fce7ab724bf3eea2ed66443032d51ebb7487f07bd758f5b"
+    },
+    "Scene/World/Town500m/Terrain/chunk_0_2_town.obj": {
+      "before": "5ab451ee6c49cead75669ae1a1fd3871529cfa538c8e70e7ab9e193595da8df9",
+      "after": "cffa0c292250de4aa9e6488b678e90ca020b2b39f9d475f4aa2a9af4bb1276e7"
+    },
+    "Scene/World/Town500m/Terrain/chunk_0_3_farmland.obj": {
+      "before": "51a2e390843d8786de02354b3dbbeddaae5b57a12737f3c39f1a3e0d7777a43c",
+      "after": "ffea06625528018fa1be4eeb6b67a83cdf7b081f36164ebbda198a389d11cb71"
+    },
+    "Scene/World/Town500m/Terrain/chunk_0_4_farmland.obj": {
+      "before": "6a3924246028d6528d59eac43aff520646a122e1ca5189d49c1259cd0b862442",
+      "after": "03ed8d7f99577e57965119b5ad4786813d060314d7e9b321ff6043b5cfcb1e34"
+    },
+    "Scene/World/Town500m/Terrain/chunk_1_0_bunker.obj": {
+      "before": "16377f05d478334d6f96250a34b192a6bf33fdfcd48b9f938991bdc9fdb8171c",
+      "after": "b83e5a735286856913d95a8c2f6bf31c311acdcbc65a6403c2daff0cf6f93b1b"
+    },
+    "Scene/World/Town500m/Terrain/chunk_1_0_hills.obj": {
+      "before": "8dbed3b5723de0f391b7a58de75795c96e8716005252b86899cdb4d037547a83",
+      "after": "ec1489301486a15e8343ad5937d73b3baaa0a1b919dddf9640cbdbd7d6e04587"
+    },
+    "Scene/World/Town500m/Terrain/chunk_1_1_bunker.obj": {
+      "before": "facc93ec7955db8aba0a208bd053844b1b401ea940fad6ca3e69075f954c9a80",
+      "after": "7aaea488e1f4fdc043ccaf41f9ae68d58839b48579e54362c62e5de5802094e7"
+    },
+    "Scene/World/Town500m/Terrain/chunk_1_1_hills.obj": {
+      "before": "5039b82ac6b6378d340dfcd66601add4c1bdd19ef14f866a26a9822be54df1ac",
+      "after": "b38b0ae694333c84cb9434628efe2822d97a6492458009f1d38ec6ecc31a316b"
+    },
+    "Scene/World/Town500m/Terrain/chunk_1_1_shore.obj": {
+      "before": "b43f34989bd957e897d3d6d5fe8db68aef577897d77d3058987900d2a8dae6ad",
+      "after": "53da13da1c5baebd6912ffd44c2818bbd610dac6496ad8c73093546471e102c5"
+    },
+    "Scene/World/Town500m/Terrain/chunk_1_2_shore.obj": {
+      "before": "8e59e230d75535bd2b87e19698031b7d437c361fa482093ee195bfae04b9a5dd",
+      "after": "db9842b6e5b3f95859f055491a476b7106a38da353bb6a2fa82ed97119f31414"
+    },
+    "Scene/World/Town500m/Terrain/chunk_1_2_town.obj": {
+      "before": "cf56312d7e5182685dfc646daa138e62113fdb013e174a77c54fe33f2fb7d402",
+      "after": "d2f7ee14b16d594cf61156026ae206ccdf37b0143d01f82f8535703299791278"
+    },
+    "Scene/World/Town500m/Terrain/chunk_1_3_town.obj": {
+      "before": "08b9de95aa20f2feae1c0de2dc8b44770ef1179de8d11fe020b8291abd48331b",
+      "after": "b9a206c59766721238c40e3ca069ae0f7e020610e2b62fa81dc91e51fc6da737"
+    },
+    "Scene/World/Town500m/Terrain/chunk_1_4_farmland.obj": {
+      "before": "e351852a443262edf95c4fb5309e36a17ca57f36e0f56d5082167504b2b0599f",
+      "after": "36afeef923cd43ae0b44e7aa63ace6e5c00bee901f44c405edd292bf4e41ba09"
+    },
+    "Scene/World/Town500m/Terrain/chunk_1_4_shore.obj": {
+      "before": "f48dfb39c6a234361abd67fc2b6f45e8f766ab08bb2543e4a9bb3ebc9f92551f",
+      "after": "3a0b2b8fd776b1d1dfa94be5dd7b0b77b7f0fbc6b354b50c18d22f67ee58fc6a"
+    },
+    "Scene/World/Town500m/Terrain/chunk_1_4_town.obj": {
+      "before": "f2c6036af70533c625e67a30b8e1e5dd9d9a8f0ff59428a440592fee307cf0fb",
+      "after": "2998c1b527886ebd4ac4662255070b4db868a34f400822e7dcac7cec8e6adea6"
+    },
+    "Scene/World/Town500m/Terrain/chunk_2_0_hills.obj": {
+      "before": "0c405d4dec259f06dfec906d13393b72a88fe9295a7e06282b517eada3171a1b",
+      "after": "89f77642fcacad97d3e9d7d1ca62032ba1da0a6a95d6d865bf5be6f783634731"
+    },
+    "Scene/World/Town500m/Terrain/chunk_2_1_shore.obj": {
+      "before": "95a76e86ebe302191c237a8e7bb93daba9cb36872290f0848a1271f07360bf2d",
+      "after": "501245e2cace4b3dbdcd357def459b19c6dfa75640f6a492c952b95b95843faf"
+    },
+    "Scene/World/Town500m/Terrain/chunk_2_2_shore.obj": {
+      "before": "c8af157e1836d5fe12611d3ccb594fe84677b27a62f18b0d0f5d8c3f859b1ecf",
+      "after": "210b27fd5c0be3009241f2d340c8b2257741705483fd15c759232d7d8624085a"
+    },
+    "Scene/World/Town500m/Terrain/chunk_2_2_town.obj": {
+      "before": "8e59d8e6953bfaf9ff20d3b5753373dbe402b685961de5d0691fa80511a06824",
+      "after": "29b9ff0f44b12a14e4786024008b01a17d0e55dd8d18a7a4c0880d7be1a0fa01"
+    },
+    "Scene/World/Town500m/Terrain/chunk_2_3_shore.obj": {
+      "before": "5de5a5acf8f65365951a69a796e2c16a7573981d51f348ae5d922e5952158cac",
+      "after": "f3ea504c55dd363d6ade6456c6c9bdec163ad7f55116fb3a5d773f32e7b83841"
+    },
+    "Scene/World/Town500m/Terrain/chunk_2_3_town.obj": {
+      "before": "6a2a5d2bbb90aa98b186c0c0e952dda551cc04d078bb570b4b946f1bf7883155",
+      "after": "2f6a6261b21873780cf877d57ae9be3f64cc66c58d9cef3c3f07090ac4ff6d62"
+    },
+    "Scene/World/Town500m/Terrain/chunk_2_4_farmland.obj": {
+      "before": "b1bcaefbc96ba9bacdedeff7cdd495ea0fdc8e8056a5a49d062b48cd0110e869",
+      "after": "00b76943788755e2b2bf3d40563ab473d2fda4ecad7164a090deffba3e1a20bb"
+    },
+    "Scene/World/Town500m/Terrain/chunk_2_4_town.obj": {
+      "before": "3207e387c2347e83935849527877275b620496dd6e936902139eb1f677635172",
+      "after": "72a5418c49b8e1803db586f0f280addfe23b0e5d279eeaf2c1965044ae694318"
+    },
+    "Scene/World/Town500m/Terrain/chunk_3_0_forest.obj": {
+      "before": "6679f58a992c938fc29571812ec1be5eefb1332d1d427d6bccb53f6048a97063",
+      "after": "7aeb08c74d1a32bdfe34928fa50e4fde4b786039a27970d21056dc6c236dcbd3"
+    },
+    "Scene/World/Town500m/Terrain/chunk_3_1_forest.obj": {
+      "before": "51bbb4843fe52b953de28b71810f168c7664300f894bde70ff3f61f73a162ad6",
+      "after": "4d7dc414060a7091c9363a8d9d445e22fe35dffc3672a1156879c1d46d6cce9e"
+    },
+    "Scene/World/Town500m/Terrain/chunk_3_1_industry.obj": {
+      "before": "c47c1aa31fc91f742a9f1d5246400d9d8c182348e8702b2a16dd78ee8ec8f318",
+      "after": "9af0aa2117940df2e364d8d2b0e9fbba8fff2d7f14c3820925c0c8a2e23d77a1"
+    },
+    "Scene/World/Town500m/Terrain/chunk_3_1_shore.obj": {
+      "before": "2a61af1ede812cce34ed0ca44cc611ba883a1ac6c0f7ea044b1954c4be2343d2",
+      "after": "a72781a367832c5ced711c8851d3d723d89be31056b146109e993d3256dc7a28"
+    },
+    "Scene/World/Town500m/Terrain/chunk_3_2_forest.obj": {
+      "before": "8e702355c8c3150690346e50e6dcbf93843e9f60bd7b5b08c43046698d0e3fd6",
+      "after": "f883589fbc0cd9745abc6e4088d32979372ebcc74a4137f98a9df61c8eb2214a"
+    },
+    "Scene/World/Town500m/Terrain/chunk_3_2_industry.obj": {
+      "before": "5a844d56310bd16fcded1fecb151e38e450ebd19aacfebb2250ef5285ef6bfb6",
+      "after": "820335020222c86750845287c8bbd2fe80c69dc99c04b98f54b5582ab15dcf05"
+    },
+    "Scene/World/Town500m/Terrain/chunk_3_2_shore.obj": {
+      "before": "360c7c261a744f35d688ea201941673c2e5e220fa81aee9f7bd8c2be27feb593",
+      "after": "f97ad1f097a8253553cdea050f09e3f1cf6dae5ea427ff5e4ea1c4428e61928d"
+    },
+    "Scene/World/Town500m/Terrain/chunk_3_3_forest.obj": {
+      "before": "fe90e26f3488fd721bfd92cdd50e541421721ab8eac6138575740235dfe19113",
+      "after": "d4cc74dbd47e76397f2b9d7cbc45b254a5f532c8ef092516057625f74e63786e"
+    },
+    "Scene/World/Town500m/Terrain/chunk_3_3_industry.obj": {
+      "before": "cb46002595af26fd87d99ba07e016e450a68b271aaab1ba72889b8373daff8af",
+      "after": "085803719a8a4db031e2f010d3cf5500c38abff4dfff7b27bfc9bb392354d2e4"
+    },
+    "Scene/World/Town500m/Terrain/chunk_3_3_shore.obj": {
+      "before": "269260f5e82d7db29593772acbc9a13dd4e5bb73f223ef924c43483a6efda608",
+      "after": "fe27bcd0ddc841d349d38eab6713120ee0d5b10fb85cb6099477ae3f9e1446fb"
+    },
+    "Scene/World/Town500m/Terrain/chunk_3_4_farmland.obj": {
+      "before": "977b0b62ac4a77630c1f22972a568d73c423a4b972d7451c7a371d9a4fe214de",
+      "after": "79d93cca79939fddf3cec16a828bc92554dc6bb504f418a09639a31a3698c8ee"
+    },
+    "Scene/World/Town500m/Terrain/chunk_3_4_shore.obj": {
+      "before": "c8819b2fcf39e2d82618845688eec6a0ec07ca5d838bd43fac4b30b9c6598703",
+      "after": "a223588a4fc1c17b1e508e10a18161e2c8f10b5bc02ea37d2dc69b4d72ed0264"
+    },
+    "Scene/World/Town500m/Terrain/chunk_4_0_forest.obj": {
+      "before": "9c43583af042b07edd0decb0b16bab41df74b009295d6f52f3112a89fb5086ce",
+      "after": "36908a20c61bc22a690e89601d8414167e648031e66a446c56f78a9c337508b7"
+    },
+    "Scene/World/Town500m/Terrain/chunk_4_1_forest.obj": {
+      "before": "51c1b81885e1bf65a3150e07f7f8357f1d982e2b0be2f71bf4b187b2ba94e63d",
+      "after": "30bcddaf880126f5d1056326e086b9dc57f281f4d792013f1e25d0ffeff6e52c"
+    },
+    "Scene/World/Town500m/Terrain/chunk_4_1_industry.obj": {
+      "before": "e5bfdc97746e523a52c77219cd8c2e4805139836a2fc022735349b39b1ecaae7",
+      "after": "dc53e7ac3a7262d6e2e888b139ad9621e644fb238b8210632adebd39710589f2"
+    },
+    "Scene/World/Town500m/Terrain/chunk_4_2_industry.obj": {
+      "before": "637299b1fd85819ef0ab0837b542d159d396124c6d24aa8e204e2518950917b5",
+      "after": "6cd0e2f7b24de40a09b0b61180a8c29d87ec901a940d3cf58f4fc5e1f51b0b71"
+    },
+    "Scene/World/Town500m/Terrain/chunk_4_3_industry.obj": {
+      "before": "c034c0c2ff7e9da26a9428ed68d502307fad152f1560a34c03ede16df5090406",
+      "after": "80ed26110e119bcac0f9ab0c4784b0fd90d747b854962fca15d23ad488649c0a"
+    },
+    "Scene/World/Town500m/Terrain/chunk_4_3_shore.obj": {
+      "before": "fab942eaa50e267820e292cdb792864f3ea869250fcaf6f0c6de72c1371d4be5",
+      "after": "c9bc19d3c8f953cdccfc3812a5508a678d5b68b60e921961a605e296d55f740c"
+    },
+    "Scene/World/Town500m/Terrain/chunk_4_4_shore.obj": {
+      "before": "e8f6d28147a629a46b4c7a9c89ddb349bea92234ca2d89634c9cb55fc0728390",
+      "after": "e38dea3c69deabffcf096471daa822404006ce12b951a2a38a6564861f94732a"
+    },
+    "Scene/World/Town500m/Terrain/dry_terrain.tscn": {
+      "before": "1910a06e0191f2d4fef577e8b966590bd0a6b57cc230ebf7f378cd9e4e8e7e80",
+      "after": "c8ceacb7eae63291679a078d3f0be4304a8e29d7dc22ace64ce9b8dad685e646"
+    },
+    "Scene/World/Town500m/Circulation/asphalt.obj": {
+      "before": "636c258df6a908159f0f75a00910efa51efbc7b7ea622ceff24df7adcfef09d9",
+      "after": "c82bf8e5be1d104ae78c86339e2b12807d25247e037d7928ad13e032d1f75ad8"
+    },
+    "Scene/World/Town500m/Circulation/gravel.obj": {
+      "before": "6b5e1d48294f77f97e214ae9e5cea8df3f7d861e4fc1451ff4ab17e046c2d1a6",
+      "after": "74d9e857fa4f024093f5c2d12d8aa490c263e1fba6020b7901ccb439976b6ed5"
+    },
+    "Scene/World/Town500m/Circulation/trail.obj": {
+      "before": "5033bebc794494b9e2a8ba67c219450a922b451153ed32ec794e542fb7e2c9a5",
+      "after": "8c0f708382c802948e3e6d1f1ea2b78bd530cfc87f737d51db60ba52a599dd09"
+    },
+    "Scene/World/Town500m/Dressing/c07_08_grounded.obj": {
+      "before": "3778b1d1423795e345904223809a55018b2ed0d8ef5629649eefd7ae4a794872",
+      "after": "2dfb89c4c09a7a2e0f176775b048590addfe545bf15c9e6037bd00a6743df605"
+    },
+    "Scene/World/Town500m/Dressing/dressing.tscn": {
+      "before": "3ea5028fbe5b0fda8d8f0996e42dddd5bd5a4a454823216d2226edae83b1bed8",
+      "after": "40eac759d12741c5b33777173375a9c43a45ffa2a1ac8b82fb87588d0ba96f71"
+    }
+  },
+  "limits": [
+    "Physical interpolation changes where prior coarse triangles crossed pad regimes; canonical heights, authored height function, flat pads and intended grade/peak/core/bank contracts remain unchanged.",
+    "No Godot MCP/CLI/native import, rendered view, navigation bake, Scav AI or physical route acceptance executed by this worker.",
+    "Existing native reports predate this regenerated mesh. Primary must reload and rerun native gates."
+  ]
+}

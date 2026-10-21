@@ -1,0 +1,4249 @@
+{
+  "date": "2026-10-20",
+  "scope": "Environment asset inventory for ChatGPT planning; read-only disk/report inspection, no runtime rerun.",
+  "counts": {
+    "town_types": 143,
+    "town_geometry_variants": 310,
+    "town_placed_types": 128,
+    "town_instances": 371,
+    "town_deferred_types": 15,
+    "bunker_source_families": 99,
+    "bunker_source_glbs": 100,
+    "bunker_families_copied_to_game": 54,
+    "bunker_source_only_families": 45,
+    "tree_silhouettes": 15,
+    "tree_originals_already_in_townkit": 3,
+    "tree_extra_silhouettes": 12,
+    "newest_apartment_family": 1,
+    "newest_apartment_profiles": 4
+  },
+  "townkit": [
+    {
+      "id": "shared_concrete_jersey_barrier",
+      "zone": "shared",
+      "model": "Concrete road barrier",
+      "variants": [
+        "intact",
+        "damaged"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_concrete_jersey_barrier",
+        "status": "planned",
+        "instances": [
+          "S_SECURITY_JERSEY_A",
+          "S_SECURITY_JERSEY_B"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_sandbag_barrier",
+      "zone": "shared",
+      "model": "Sandbag barricade",
+      "variants": [
+        "straight",
+        "corner",
+        "low"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_sandbag_barrier",
+        "status": "planned",
+        "instances": [
+          "S_SECURITY_BAGS_A",
+          "S_SECURITY_BAGS_B"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_wood_pallet",
+      "zone": "shared",
+      "model": "Wooden pallet",
+      "variants": [
+        "empty",
+        "loaded",
+        "broken"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_wood_pallet",
+        "status": "planned",
+        "instances": [
+          "I_WAREHOUSE_PALLET_A",
+          "I_WAREHOUSE_PALLET_B",
+          "I_WAREHOUSE_PALLET_C",
+          "I_WAREHOUSE_EMPTY_A",
+          "I_WAREHOUSE_EMPTY_B",
+          "OB-supply-pallet",
+          "OA-barn-pallet"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_wooden_crate",
+      "zone": "shared",
+      "model": "Wooden supply crate",
+      "variants": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_wooden_crate",
+        "status": "planned",
+        "instances": [
+          "T_MARKET_CRATE_A",
+          "T_MARKET_CRATE_B",
+          "T_MARKET_CRATE_C",
+          "I_WAREHOUSE_CRATE_A",
+          "I_WAREHOUSE_CRATE_B",
+          "I_WAREHOUSE_CRATE_C",
+          "I_WAREHOUSE_CRATE_D",
+          "OF-woodcrate",
+          "OA-barn-crate"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_oil_drum",
+      "zone": "shared",
+      "model": "Steel oil drum",
+      "variants": [
+        "closed",
+        "open",
+        "dented"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_oil_drum",
+        "status": "planned",
+        "instances": [
+          "I_SOUTH_DRUM_A",
+          "I_SOUTH_DRUM_B",
+          "I_SERVICE_DRUM_A",
+          "I_SERVICE_DRUM_B",
+          "I_SERVICE_DRUM_C",
+          "OB-B05-drum-01",
+          "OB-B05-drum-02"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_metal_fence",
+      "zone": "shared",
+      "model": "Corrugated metal fence",
+      "variants": [
+        "straight",
+        "corner",
+        "gate"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_metal_fence",
+        "status": "planned",
+        "instances": [
+          "S_DEPOT_FENCE_1",
+          "S_DEPOT_FENCE_2",
+          "S_DEPOT_FENCE_3"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_wood_fence",
+      "zone": "shared",
+      "model": "Wood fence",
+      "variants": [
+        "plank",
+        "picket",
+        "broken"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_wood_fence",
+        "status": "planned",
+        "instances": [
+          "S_T09_FENCE_1",
+          "S_T09_FENCE_2",
+          "S_T09_FENCE_3"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_chainlink_fence",
+      "zone": "shared",
+      "model": "Chain-link fence",
+      "variants": [
+        "straight",
+        "corner",
+        "gate"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_chainlink_fence",
+        "status": "planned",
+        "instances": [
+          "S_FACTORY_FENCE_1",
+          "S_FACTORY_FENCE_2",
+          "S_FACTORY_FENCE_3"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_concrete_utility_pole",
+      "zone": "shared",
+      "model": "Concrete power pole",
+      "variants": [
+        "plain",
+        "insulators"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_concrete_utility_pole",
+        "status": "planned",
+        "instances": [
+          "S_POLE_W",
+          "S_POLE_T",
+          "S_POLE_I"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_electrical_cabinet",
+      "zone": "shared",
+      "model": "Outdoor electrical cabinet",
+      "variants": [
+        "small",
+        "large"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_electrical_cabinet",
+        "status": "planned",
+        "instances": [
+          "I_SOUTH_CABINET"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_old_sedan",
+      "zone": "shared",
+      "model": "Post-Soviet compact sedan",
+      "variants": [
+        "parked",
+        "abandoned"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_old_sedan",
+        "status": "planned",
+        "instances": [
+          "T_ROAD_SEDAN_A",
+          "T_ROAD_SEDAN_B"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_tire_stack",
+      "zone": "shared",
+      "model": "Used tyre stack",
+      "variants": [
+        "single",
+        "stacked"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_tire_stack",
+        "status": "planned",
+        "instances": [
+          "T_GARAGE_TIRE_A",
+          "T_GARAGE_TIRE_B",
+          "I_SOUTH_TIRES_A",
+          "I_SOUTH_TIRES_B"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_industrial_dumpster",
+      "zone": "shared",
+      "model": "Metal dumpster",
+      "variants": [
+        "closed",
+        "open"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_industrial_dumpster",
+        "status": "planned",
+        "instances": [
+          "I_YARD_DUMPSTER",
+          "OB-supply-dumpster"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_cyrillic_signs",
+      "zone": "shared",
+      "model": "Cyrillic signage plates",
+      "variants": [
+        "direction",
+        "warning",
+        "nameplate"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_cyrillic_signs",
+        "status": "planned",
+        "instances": [
+          "S_SHOP_NAMEPLATE"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_scrap_metal_pile",
+      "zone": "shared",
+      "model": "Scrap metal pile",
+      "variants": [
+        "small",
+        "large"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_scrap_metal_pile",
+        "status": "planned",
+        "instances": [
+          "I_YARD_SCRAP"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_concrete_rubble",
+      "zone": "shared",
+      "model": "Concrete rubble pile",
+      "variants": [
+        "small",
+        "medium"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_concrete_rubble",
+        "status": "planned",
+        "instances": [
+          "S_REPAIR_RUBBLE"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_timber_stack",
+      "zone": "shared",
+      "model": "Stacked timber",
+      "variants": [
+        "lumber",
+        "boards"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_timber_stack",
+        "status": "planned",
+        "instances": [
+          "I_SOUTH_TIMBER_A",
+          "I_SOUTH_TIMBER_B",
+          "OF-timber"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_cable_reel",
+      "zone": "shared",
+      "model": "Industrial cable reel",
+      "variants": [
+        "wood",
+        "metal"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_cable_reel",
+        "status": "planned",
+        "instances": [
+          "I_WAREHOUSE_REEL_A",
+          "I_WAREHOUSE_REEL_B",
+          "I_SOUTH_REEL_A",
+          "I_SOUTH_REEL_B",
+          "OB-B05-reel"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_district_heating_pipe",
+      "zone": "shared",
+      "model": "Above-ground heating pipe kit",
+      "variants": [
+        "straight",
+        "bend",
+        "support"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_district_heating_pipe",
+        "status": "planned",
+        "instances": [
+          "S_HEAT_SUPPORT_L",
+          "S_HEAT_SUPPORT_R",
+          "S_HEAT_PIPE"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_corrugated_sheet",
+      "zone": "shared",
+      "model": "Corrugated sheet debris",
+      "variants": [
+        "flat",
+        "bent"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_corrugated_sheet",
+        "status": "planned",
+        "instances": [
+          "S_REPAIR_SHEET"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_utility_truck",
+      "zone": "shared",
+      "model": "Old utility truck",
+      "variants": [
+        "parked",
+        "broken"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_utility_truck",
+        "status": "planned",
+        "instances": [
+          "S_UTILITY_TRUCK"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_concrete_slab",
+      "zone": "shared",
+      "model": "Precast concrete slab",
+      "variants": [
+        "horizontal",
+        "leaning"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_concrete_slab",
+        "status": "planned",
+        "instances": [
+          "S_REPAIR_SLAB"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_street_litter",
+      "zone": "shared",
+      "model": "Street litter cluster",
+      "variants": [
+        "paper",
+        "tin",
+        "bag"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_street_litter",
+        "status": "planned",
+        "instances": [
+          "T_CLINIC_PAPER",
+          "T_BUS_LITTER",
+          "I_DISPATCH_PAPERS",
+          "OL-litter"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_manhole_cover",
+      "zone": "shared",
+      "model": "Manhole and drain cover",
+      "variants": [
+        "round",
+        "rectangular"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_manhole_cover",
+        "status": "planned",
+        "instances": [
+          "S_MANHOLE_T",
+          "S_MANHOLE_I"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "shared_wood_post_sign",
+      "zone": "shared",
+      "model": "Rural sign on timber post",
+      "variants": [
+        "warning",
+        "direction"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "shared_wood_post_sign",
+        "status": "planned",
+        "instances": [
+          "S_FARM_SIGN",
+          "S_RIVER_SIGN"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "town_soviet_bus_shelter",
+      "zone": "town",
+      "model": "Precast concrete bus stop shelter",
+      "variants": [
+        "intact",
+        "chipped"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "town_soviet_bus_shelter",
+        "status": "planned",
+        "instances": [
+          "T_BUS_SHELTER"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "town_metal_garage_door",
+      "zone": "town",
+      "model": "Two hinged steel garage door leaves",
+      "variants": [
+        "closed",
+        "open"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "town_metal_garage_door",
+        "status": "deferred",
+        "instances": [],
+        "reason": "Door library is static3.28m wide/2.62m high with open-leaf sweep; existing functional doors/garage port geometry do not match. No decorative second door, behavior change or blocked door port."
+      }
+    },
+    {
+      "id": "town_entrance_steps",
+      "zone": "town",
+      "model": "Apartment entrance steps and handrails",
+      "variants": [
+        "straight",
+        "corner"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "town_entrance_steps",
+        "status": "deferred",
+        "instances": [],
+        "reason": "Asset landing rises1.5m, while live ground-floor thresholds are0.2m over terrain; placing it at an entry breaks step/door contracts. It needs a deliberately redesigned stair entrance, outside furnishing scope."
+      }
+    },
+    {
+      "id": "town_apartment_mailboxes",
+      "zone": "town",
+      "model": "Six-compartment wall-mounted mailbox banks",
+      "variants": [
+        "row",
+        "stack"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "town_apartment_mailboxes",
+        "status": "planned",
+        "instances": [
+          "T_APARTMENT_MAIL"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "town_shop_cyrillic_sign",
+      "zone": "town",
+      "model": "Cyrillic shop sign kit",
+      "variants": [
+        "pharmacy",
+        "grocery",
+        "services"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "town_shop_cyrillic_sign",
+        "status": "planned",
+        "instances": [
+          "T_PHARM_SIGN",
+          "T_GROCERY_SIGN",
+          "T_SERVICES_SIGN"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "town_market_stall",
+      "zone": "town",
+      "model": "Outdoor market stall",
+      "variants": [
+        "empty",
+        "tarp-covered"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "town_market_stall",
+        "status": "planned",
+        "instances": [
+          "T_MARKET_STALL_A",
+          "T_MARKET_STALL_B"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "town_wall_electric_meter",
+      "zone": "town",
+      "model": "Exterior electric meter cabinet",
+      "variants": [
+        "single",
+        "double"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "town_wall_electric_meter",
+        "status": "planned",
+        "instances": [
+          "T_PHARM_METER",
+          "T_HOME_METER",
+          "T_APARTMENT_METER"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "town_courtyard_bench",
+      "zone": "town",
+      "model": "Slatted courtyard bench",
+      "variants": [
+        "painted",
+        "weathered"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "town_courtyard_bench",
+        "status": "planned",
+        "instances": [
+          "T_COURTYARD_BENCH_A",
+          "T_COURTYARD_BENCH_B"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "town_notice_board",
+      "zone": "town",
+      "model": "Community notice board",
+      "variants": [
+        "freestanding",
+        "wall"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "town_notice_board",
+        "status": "planned",
+        "instances": [
+          "T_CLINIC_NOTICE",
+          "T_CIVIC_NOTICE",
+          "T_BUS_BOARD",
+          "I_DISPATCH_NOTICE"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "town_satellite_dish",
+      "zone": "town",
+      "model": "Small satellite dish",
+      "variants": [
+        "straight",
+        "angled"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "town_satellite_dish",
+        "status": "planned",
+        "instances": [
+          "T_APARTMENT_DISH"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "town_playground_swing",
+      "zone": "town",
+      "model": "Old metal playground swing",
+      "variants": [
+        "frame",
+        "with-seat"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "town_playground_swing",
+        "status": "planned",
+        "instances": [
+          "T_COURTYARD_SWING"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "town_store_awning",
+      "zone": "town",
+      "model": "Storefront awning",
+      "variants": [
+        "canvas",
+        "metal"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "town_store_awning",
+        "status": "planned",
+        "instances": [
+          "T_PHARM_AWNING",
+          "T_GROCERY_AWNING"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "town_air_conditioner",
+      "zone": "town",
+      "model": "Exterior air-conditioning unit",
+      "variants": [
+        "small",
+        "large"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "town_air_conditioner",
+        "status": "planned",
+        "instances": [
+          "T_CLINIC_AC",
+          "T_GROCERY_AC"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "town_pharmacy_shelf",
+      "zone": "town",
+      "model": "Pharmacy retail shelf",
+      "variants": [
+        "empty",
+        "stocked"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "town_pharmacy_shelf",
+        "status": "planned",
+        "instances": [
+          "T_CLINIC_SHELF_A",
+          "T_CLINIC_SHELF_B",
+          "T_PHARM_SHELF_A",
+          "T_PHARM_SHELF_B",
+          "T_PHARM_SHELF_C",
+          "T_GROCERY_SHELF_A",
+          "T_GROCERY_SHELF_B"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "town_shop_counter",
+      "zone": "town",
+      "model": "Small shop counter",
+      "variants": [
+        "straight",
+        "corner"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "town_shop_counter",
+        "status": "planned",
+        "instances": [
+          "T_PHARM_COUNTER_A",
+          "T_PHARM_COUNTER_B",
+          "T_GROCERY_COUNTER"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "town_office_furniture",
+      "zone": "town",
+      "model": "Office desk and filing cabinet",
+      "variants": [
+        "desk",
+        "cabinet"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "town_office_furniture",
+        "status": "planned",
+        "instances": [
+          "T_CLINIC_DESK",
+          "T_CLINIC_FILE_A",
+          "T_CLINIC_FILE_B",
+          "T_PHARM_FILE",
+          "T_GROCERY_DESK",
+          "T_CIVIC_DESK_A",
+          "T_CIVIC_DESK_B",
+          "T_CIVIC_FILE_A",
+          "T_CIVIC_FILE_B",
+          "T_CIVIC_FILE_C",
+          "T_COMMUNITY_DESK",
+          "T_COMMUNITY_FILE_A",
+          "T_COMMUNITY_FILE_B",
+          "T_SERVICES_DESK",
+          "T_SERVICES_FILES_A",
+          "T_SERVICES_FILES_B",
+          "T_HOME_DESK",
+          "T_HOME_CABINET",
+          "T_HOME_LONG_DESK",
+          "T_HOME_LONG_FILE",
+          "T_HOME_EAST_DESK",
+          "T_HOME_EAST_CABINET",
+          "I_DISPATCH_DESK_A",
+          "I_DISPATCH_DESK_B",
+          "I_DISPATCH_FILE_A",
+          "I_DISPATCH_FILE_B",
+          "I_DISPATCH_FILE_C"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "town_clinic_examination_bed",
+      "zone": "town",
+      "model": "Clinic examination bed",
+      "variants": [
+        "bare",
+        "with-sheet"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "town_clinic_examination_bed",
+        "status": "planned",
+        "instances": [
+          "T_CLINIC_BED_A",
+          "T_CLINIC_BED_B"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "town_workshop_bench",
+      "zone": "town",
+      "model": "Garage workbench",
+      "variants": [
+        "plain",
+        "tool-covered"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "town_workshop_bench",
+        "status": "planned",
+        "instances": [
+          "T_GARAGE_BENCH_A",
+          "T_GARAGE_BENCH_B",
+          "T_WORKSHOP_BENCH_A",
+          "T_WORKSHOP_BENCH_B",
+          "I_WAREHOUSE_BENCH_A",
+          "I_WAREHOUSE_BENCH_B",
+          "I_SOUTH_BENCH_A",
+          "I_SOUTH_BENCH_B"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "town_waiting_room_chair",
+      "zone": "town",
+      "model": "Public waiting-room chair",
+      "variants": [
+        "single",
+        "row"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "town_waiting_room_chair",
+        "status": "planned",
+        "instances": [
+          "T_CLINIC_WAIT_A",
+          "T_CLINIC_WAIT_B",
+          "T_CIVIC_WAIT",
+          "T_COMMUNITY_WAIT",
+          "I_DISPATCH_WAIT"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "town_apartment_radiator",
+      "zone": "town",
+      "model": "Cast iron radiator",
+      "variants": [
+        "small",
+        "large"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "town_apartment_radiator",
+        "status": "planned",
+        "instances": [
+          "T_HOME_RADIATOR",
+          "T_HOME_LONG_RADIATOR",
+          "T_HOME_EAST_RADIATOR"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "industry_rail_boxcar",
+      "zone": "industry",
+      "model": "Covered freight wagon",
+      "variants": [
+        "shut",
+        "open"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "industry_rail_boxcar",
+        "status": "planned",
+        "instances": [
+          "I_RAIL_BOXCAR"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "industry_rail_gondola",
+      "zone": "industry",
+      "model": "Open-top rail wagon",
+      "variants": [
+        "empty",
+        "scrap-loaded"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "industry_rail_gondola",
+        "status": "deferred",
+        "instances": [],
+        "reason": "3.5m high asset cannot replace4m railcar or3.6m derailed opaque proxy honestly. No remaining canonical wagon host; adding another wagon would block rail/service corridor or require a new siding."
+      }
+    },
+    {
+      "id": "industry_rail_tank_wagon",
+      "zone": "industry",
+      "model": "Cylindrical fuel rail wagon",
+      "variants": [
+        "plain",
+        "weathered"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "industry_rail_tank_wagon",
+        "status": "planned",
+        "instances": [
+          "I_RAIL_TANK"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "industry_shipping_container",
+      "zone": "industry",
+      "model": "Cargo container modular kit",
+      "variants": [
+        "single",
+        "end-open",
+        "damaged"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "industry_shipping_container",
+        "status": "planned",
+        "instances": [
+          "I_CONTAINER_I04-A",
+          "I_CONTAINER_I04-B",
+          "I_CONTAINER_I04-C",
+          "I_CONTAINER_I06-A",
+          "I_CONTAINER_I06-B",
+          "I_CONTAINER_I06-C"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "industry_rail_signal",
+      "zone": "industry",
+      "model": "Railway signal",
+      "variants": [
+        "one",
+        "two-head"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "industry_rail_signal",
+        "status": "planned",
+        "instances": [
+          "I_RAIL_SIGNAL"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "industry_rail_switch",
+      "zone": "industry",
+      "model": "Railroad switch stand",
+      "variants": [
+        "left",
+        "right"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "industry_rail_switch",
+        "status": "deferred",
+        "instances": [],
+        "reason": "Existing authored rail is a continuous single line, with no matching branching track. Switch lever is not placed as unexplained debris and does not authorize track geometry changes."
+      }
+    },
+    {
+      "id": "industry_steel_pipe_stack",
+      "zone": "industry",
+      "model": "Industrial steel pipe bundle",
+      "variants": [
+        "small",
+        "large"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "industry_steel_pipe_stack",
+        "status": "planned",
+        "instances": [
+          "I_YARD_PIPE_A",
+          "I_YARD_PIPE_B"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "industry_warehouse_shutter",
+      "zone": "industry",
+      "model": "Warehouse rolling shutter",
+      "variants": [
+        "closed",
+        "open"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "industry_warehouse_shutter",
+        "status": "deferred",
+        "instances": [],
+        "reason": "4.28m width/3.75m height frame is not compatible with the current warehouse/garage aperture and lintel. Retrofitting or layering it over the functional opening would change access and door behavior."
+      }
+    },
+    {
+      "id": "industry_fuel_tank",
+      "zone": "industry",
+      "model": "Elevated or horizontal fuel tank",
+      "variants": [
+        "short",
+        "long"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "industry_fuel_tank",
+        "status": "planned",
+        "instances": [
+          "I_SERVICE_TANK"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "industry_rail_sleepers",
+      "zone": "industry",
+      "model": "Railway sleeper pile",
+      "variants": [
+        "short",
+        "long"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "industry_rail_sleepers",
+        "status": "planned",
+        "instances": [
+          "I_YARD_SLEEPERS_A",
+          "I_YARD_SLEEPERS_B"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "industry_welding_cart",
+      "zone": "industry",
+      "model": "Industrial welding cart",
+      "variants": [
+        "cylinders",
+        "covered"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "industry_welding_cart",
+        "status": "planned",
+        "instances": [
+          "T_WORKSHOP_CART",
+          "I_WAREHOUSE_CART",
+          "I_SOUTH_CART"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "industry_forklift",
+      "zone": "industry",
+      "model": "Parked diesel forklift",
+      "variants": [
+        "intact",
+        "broken"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "industry_forklift",
+        "status": "planned",
+        "instances": [
+          "I_YARD_FORKLIFT"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "industry_gantry_crane",
+      "zone": "industry",
+      "model": "Small gantry crane",
+      "variants": [
+        "fixed"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "industry_gantry_crane",
+        "status": "planned",
+        "instances": [
+          "I_WAREHOUSE_CRANE"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "industry_steel_beam_stack",
+      "zone": "industry",
+      "model": "Stacked I-beams",
+      "variants": [
+        "small",
+        "large"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "industry_steel_beam_stack",
+        "status": "planned",
+        "instances": [
+          "I_YARD_BEAM_A",
+          "I_YARD_BEAM_B"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "industry_air_compressor",
+      "zone": "industry",
+      "model": "Workshop air compressor",
+      "variants": [
+        "horizontal",
+        "vertical"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "industry_air_compressor",
+        "status": "planned",
+        "instances": [
+          "T_GARAGE_COMPRESSOR",
+          "I_WAREHOUSE_COMPRESSOR",
+          "I_SOUTH_COMPRESSOR"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "industry_fuel_pump",
+      "zone": "industry",
+      "model": "Service fuel pump",
+      "variants": [
+        "manual",
+        "motorized"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "industry_fuel_pump",
+        "status": "planned",
+        "instances": [
+          "I_SERVICE_PUMP"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "industry_rail_buffer_stop",
+      "zone": "industry",
+      "model": "Rail-end buffer stop",
+      "variants": [
+        "steel",
+        "concrete"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "industry_rail_buffer_stop",
+        "status": "deferred",
+        "instances": [],
+        "reason": "P04 rail is through-running at both map edges; there is no siding terminus to support a buffer stop. Blocking the live rail/service route for catalogue coverage is unjustified."
+      }
+    },
+    {
+      "id": "industry_industrial_gauge",
+      "zone": "industry",
+      "model": "Pressure-gauge assembly",
+      "variants": [
+        "single",
+        "multi"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "industry_industrial_gauge",
+        "status": "planned",
+        "instances": [
+          "I_WAREHOUSE_GAUGE"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "industry_work_light",
+      "zone": "industry",
+      "model": "Portable industrial work lamp",
+      "variants": [
+        "mounted",
+        "tripod"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "industry_work_light",
+        "status": "planned",
+        "instances": [
+          "T_WORKSHOP_LIGHT",
+          "I_WAREHOUSE_TRIPOD",
+          "I_SOUTH_TASKLIGHT"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "bunker_blast_door",
+      "zone": "bunker",
+      "model": "Heavy steel bunker door",
+      "variants": [
+        "closed",
+        "open"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "bunker_blast_door",
+        "status": "deferred",
+        "instances": [],
+        "reason": "Existing B04 door is 1.2×2.4m. Source closed assembly is 1.44×2.556m and open leaf has 1.56m depth; neither clearance nor leaf sweep is certified. Keep current doorway and no functional-door mechanics."
+      }
+    },
+    {
+      "id": "bunker_bunker_portal_trim",
+      "zone": "bunker",
+      "model": "Reinforced concrete bunker entrance trim",
+      "variants": [
+        "frame",
+        "overhang"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "bunker_bunker_portal_trim",
+        "status": "deferred",
+        "instances": [],
+        "reason": "Source frame is 2.8×3.2×.8m, while B04 lintel/clear opening are already fixed at 1.2×2.4m. Aperture and lintel contact must be native-fitted before replacing trim."
+      }
+    },
+    {
+      "id": "bunker_checkpoint_gate",
+      "zone": "bunker",
+      "model": "Vehicle checkpoint sliding gate",
+      "variants": [
+        "closed",
+        "open"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "bunker_checkpoint_gate",
+        "status": "deferred",
+        "instances": [],
+        "reason": "Source gate is 8.8m wide; canonical compound gate is exactly6m. Unit-scale assembly cannot replace the protected gate and must not close its pedestrian/vehicle access."
+      }
+    },
+    {
+      "id": "bunker_watchtower_kit",
+      "zone": "bunker",
+      "model": "Perimeter watchtower modular kit",
+      "variants": [
+        "stairs",
+        "platform",
+        "roof"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "bunker_watchtower_kit",
+        "status": "deferred",
+        "instances": [],
+        "reason": "Existing B07/B08 are4×4×8m sealed opaque proxies; platform is4.06×4.06×4.1m and roof extends to5.8m. Unit-scale assembly cannot hide those proxies without invisible solid upper volume or changed silhouette."
+      }
+    },
+    {
+      "id": "bunker_razorwire_fence_top",
+      "zone": "bunker",
+      "model": "Barbed wire fence topping",
+      "variants": [
+        "straight",
+        "corner"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "bunker_razorwire_fence_top",
+        "status": "planned",
+        "instances": [
+          "OB-bunker-wiretop"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "bunker_ventilation_shaft",
+      "zone": "bunker",
+      "model": "Bunker ventilation stack",
+      "variants": [
+        "short",
+        "tall"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "bunker_ventilation_shaft",
+        "status": "planned",
+        "instances": [
+          "OB-B05-shaft"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "bunker_diesel_generator",
+      "zone": "bunker",
+      "model": "Diesel generator enclosure",
+      "variants": [
+        "small",
+        "large"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "bunker_diesel_generator",
+        "status": "planned",
+        "instances": [
+          "OB-B05-generator"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "bunker_military_supply_crate",
+      "zone": "bunker",
+      "model": "Military storage crate",
+      "variants": [
+        "wood",
+        "metal"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "bunker_military_supply_crate",
+        "status": "planned",
+        "instances": [
+          "OB-B04-case",
+          "OB-supply-wood-01",
+          "OB-supply-wood-02",
+          "OB-supply-wood-03",
+          "OB-supply-metal-01",
+          "OB-supply-metal-02"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "bunker_metal_locker",
+      "zone": "bunker",
+      "model": "Military locker cabinet",
+      "variants": [
+        "closed",
+        "open"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "bunker_metal_locker",
+        "status": "planned",
+        "instances": [
+          "OB-B04-locker-01",
+          "OB-B04-locker-02"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "bunker_floodlight_mast",
+      "zone": "bunker",
+      "model": "Compound floodlight mast",
+      "variants": [
+        "single",
+        "dual"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "bunker_floodlight_mast",
+        "status": "planned",
+        "instances": [
+          "OB-B06-light"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "bunker_anti_vehicle_hedgehog",
+      "zone": "bunker",
+      "model": "Steel anti-vehicle obstacle",
+      "variants": [
+        "single",
+        "cluster"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "bunker_anti_vehicle_hedgehog",
+        "status": "planned",
+        "instances": [
+          "OB-B06-hedgehog-01",
+          "OB-B06-hedgehog-02"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "bunker_camouflage_net",
+      "zone": "bunker",
+      "model": "Camouflage net shelter",
+      "variants": [
+        "flat",
+        "draped"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "bunker_camouflage_net",
+        "status": "planned",
+        "instances": [
+          "OB-supply-net"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "bunker_radio_cabinet",
+      "zone": "bunker",
+      "model": "Communications equipment rack",
+      "variants": [
+        "closed",
+        "with-controls"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "bunker_radio_cabinet",
+        "status": "planned",
+        "instances": [
+          "OB-B04-radio"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "bunker_bunk_bed",
+      "zone": "bunker",
+      "model": "Barracks steel bunk bed",
+      "variants": [
+        "bare",
+        "made-up"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "bunker_bunk_bed",
+        "status": "planned",
+        "instances": [
+          "OB-B04-bed"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "bunker_breaker_panel",
+      "zone": "bunker",
+      "model": "Industrial breaker panel",
+      "variants": [
+        "closed",
+        "open"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "bunker_breaker_panel",
+        "status": "planned",
+        "instances": [
+          "OB-B05-breaker"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "bunker_pipe_valve_kit",
+      "zone": "bunker",
+      "model": "Interior pipe and valve modules",
+      "variants": [
+        "straight",
+        "bend",
+        "wheel"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "bunker_pipe_valve_kit",
+        "status": "planned",
+        "instances": [
+          "OB-B05-pipe",
+          "OB-B05-valve"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "bunker_ventilation_duct",
+      "zone": "bunker",
+      "model": "Bunker ventilation duct",
+      "variants": [
+        "straight",
+        "bend",
+        "grille"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "bunker_ventilation_duct",
+        "status": "planned",
+        "instances": [
+          "OB-B05-duct"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "bunker_military_warning_sign",
+      "zone": "bunker",
+      "model": "Compound warning plates",
+      "variants": [
+        "stop",
+        "no-entry",
+        "electric"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "bunker_military_warning_sign",
+        "status": "planned",
+        "instances": [
+          "OB-B04-electric-sign",
+          "OB-B06-stop"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "bunker_wall_phone",
+      "zone": "bunker",
+      "model": "Old industrial wall phone",
+      "variants": [
+        "mounted"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "bunker_wall_phone",
+        "status": "planned",
+        "instances": [
+          "OB-B04-phone"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "hills_rock_cluster",
+      "zone": "hills",
+      "model": "Granite boulder clusters",
+      "variants": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "hills_rock_cluster",
+        "status": "planned",
+        "instances": [
+          "OH-rock-01",
+          "OH-rock-02"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "hills_cliff_wedge",
+      "zone": "hills",
+      "model": "Low-poly rock cliff wedges",
+      "variants": [
+        "straight",
+        "corner"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "hills_cliff_wedge",
+        "status": "planned",
+        "instances": [
+          "OH-cliff-01"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "hills_observation_platform",
+      "zone": "hills",
+      "model": "Ridge observation platform",
+      "variants": [
+        "base",
+        "rails"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "hills_observation_platform",
+        "status": "deferred",
+        "instances": [],
+        "reason": "H01 is4×4×5m closed proxy; finished platform including approach is4.06×8.23m and only3/4.1m high. Unit-scale use would consume protected ridge access and mismatch sealed physics."
+      }
+    },
+    {
+      "id": "hills_pillbox",
+      "zone": "hills",
+      "model": "Small reinforced concrete pillbox",
+      "variants": [
+        "closed",
+        "enterable"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "hills_pillbox",
+        "status": "deferred",
+        "instances": [],
+        "reason": "H02 is6×5×2.7m closed proxy; finished closed shell is6.3×5.38×2.7m. Replacing a continuous opaque box with aperture geometry requires explicit shot/LOS/closed-access fit, so retain it."
+      }
+    },
+    {
+      "id": "hills_radio_mast",
+      "zone": "hills",
+      "model": "Steel radio antenna mast",
+      "variants": [
+        "section",
+        "antenna"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "hills_radio_mast",
+        "status": "planned",
+        "instances": [
+          "OH-mast-spare"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "hills_trench_kit",
+      "zone": "hills",
+      "model": "Dug-out defensive trench",
+      "variants": [
+        "straight",
+        "corner"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "hills_trench_kit",
+        "status": "planned",
+        "instances": [
+          "OH-revetment"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "hills_broken_retaining_wall",
+      "zone": "hills",
+      "model": "Damaged concrete retaining wall",
+      "variants": [
+        "low",
+        "high"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "hills_broken_retaining_wall",
+        "status": "planned",
+        "instances": [
+          "OH-wall"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "hills_hill_shelter",
+      "zone": "hills",
+      "model": "Small rough stone shelter",
+      "variants": [
+        "intact",
+        "ruined"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "hills_hill_shelter",
+        "status": "deferred",
+        "instances": [],
+        "reason": "No existing shelter footprint exists in the fixed hills building catalogue. Adding4.3×3.3m shelter would be a new building and cover landmark; keep finished source available for a later authored-layout decision."
+      }
+    },
+    {
+      "id": "hills_field_equipment_case",
+      "zone": "hills",
+      "model": "Old instrument case",
+      "variants": [
+        "closed",
+        "open"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "hills_field_equipment_case",
+        "status": "planned",
+        "instances": [
+          "OH-case-01",
+          "OH-case-02"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "forest_birch_tree",
+      "zone": "forest",
+      "model": "Birch tree",
+      "variants": [
+        "A",
+        "B",
+        "C"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "forest_birch_tree",
+        "status": "planned",
+        "instances": [
+          "OT-F003",
+          "OT-F006",
+          "OT-F009",
+          "OT-F012",
+          "OT-F015",
+          "OT-F018",
+          "OT-F021",
+          "OT-F024",
+          "OT-F027",
+          "OT-F030",
+          "OT-F033",
+          "OT-F036",
+          "OT-F039",
+          "OT-F042",
+          "OT-F045",
+          "OT-F048",
+          "OT-G003",
+          "OT-G006",
+          "OT-G009",
+          "OT-G012",
+          "OT-H003",
+          "OT-H006",
+          "OT-H009",
+          "OT-H012",
+          "OT-H015",
+          "OT-H018",
+          "OT-A001",
+          "OT-A002",
+          "OT-A003",
+          "OT-A004",
+          "OT-A005",
+          "OT-A006",
+          "OT-A007",
+          "OT-A008",
+          "OT-A009",
+          "OT-A010",
+          "OT-A011",
+          "OT-A012",
+          "OT-A013"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "forest_pine_tree",
+      "zone": "forest",
+      "model": "Pine tree",
+      "variants": [
+        "A",
+        "B",
+        "C"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "forest_pine_tree",
+        "status": "planned",
+        "instances": [
+          "OT-F001",
+          "OT-F004",
+          "OT-F007",
+          "OT-F010",
+          "OT-F013",
+          "OT-F016",
+          "OT-F019",
+          "OT-F022",
+          "OT-F025",
+          "OT-F028",
+          "OT-F031",
+          "OT-F034",
+          "OT-F037",
+          "OT-F040",
+          "OT-F043",
+          "OT-F046",
+          "OT-G001",
+          "OT-G004",
+          "OT-G007",
+          "OT-G010",
+          "OT-H001",
+          "OT-H004",
+          "OT-H007",
+          "OT-H008",
+          "OT-H010",
+          "OT-H013",
+          "OT-H016",
+          "OT-H019"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "forest_spruce_tree",
+      "zone": "forest",
+      "model": "Spruce tree",
+      "variants": [
+        "A",
+        "B",
+        "C"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "forest_spruce_tree",
+        "status": "planned",
+        "instances": [
+          "OT-F002",
+          "OT-F005",
+          "OT-F008",
+          "OT-F011",
+          "OT-F014",
+          "OT-F017",
+          "OT-F020",
+          "OT-F023",
+          "OT-F026",
+          "OT-F029",
+          "OT-F032",
+          "OT-F035",
+          "OT-F038",
+          "OT-F041",
+          "OT-F044",
+          "OT-F047",
+          "OT-G002",
+          "OT-G005",
+          "OT-G008",
+          "OT-G011",
+          "OT-H002",
+          "OT-H005",
+          "OT-H011",
+          "OT-H014",
+          "OT-H017",
+          "OT-H020"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "forest_undergrowth",
+      "zone": "forest",
+      "model": "Forest shrubs and low bushes",
+      "variants": [
+        "A",
+        "B",
+        "C"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "forest_undergrowth",
+        "status": "planned",
+        "instances": [
+          "OF-undergrowth-01",
+          "OF-undergrowth-02"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "forest_fallen_log",
+      "zone": "forest",
+      "model": "Fallen tree trunk",
+      "variants": [
+        "short",
+        "long"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "forest_fallen_log",
+        "status": "planned",
+        "instances": [
+          "OF-log"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "forest_tree_stump",
+      "zone": "forest",
+      "model": "Tree stump",
+      "variants": [
+        "fresh",
+        "old"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "forest_tree_stump",
+        "status": "planned",
+        "instances": [
+          "OF-stump"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "forest_log_stack",
+      "zone": "forest",
+      "model": "Cut log stack",
+      "variants": [
+        "short",
+        "long"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "forest_log_stack",
+        "status": "planned",
+        "instances": [
+          "OF-logstock-01",
+          "OF-logstock-02"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "forest_logging_trailer",
+      "zone": "forest",
+      "model": "Logging trailer",
+      "variants": [
+        "empty",
+        "loaded"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "forest_logging_trailer",
+        "status": "planned",
+        "instances": [
+          "OF-trailer"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "forest_ranger_shelter_props",
+      "zone": "forest",
+      "model": "Ranger shelter furnishing kit",
+      "variants": [
+        "cot",
+        "table",
+        "shelf"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "forest_ranger_shelter_props",
+        "status": "planned",
+        "instances": [
+          "OF-cot",
+          "OF-table",
+          "OF-shelf"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "forest_hunting_stand",
+      "zone": "forest",
+      "model": "Raised hunting stand",
+      "variants": [
+        "ladder",
+        "enclosed"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "forest_hunting_stand",
+        "status": "deferred",
+        "instances": [],
+        "reason": "Existing F03 is3×3×4.5m sealed opaque proxy. Enclosed finished stand is2.2×3.011×4.6m with open legs/ladder; hiding its solid box creates invisible obstruction, while a second stand is an unapproved landmark."
+      }
+    },
+    {
+      "id": "forest_forest_trail_sign",
+      "zone": "forest",
+      "model": "Trail direction post",
+      "variants": [
+        "plain",
+        "painted"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "forest_forest_trail_sign",
+        "status": "planned",
+        "instances": [
+          "OF-trail-sign"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "forest_campfire_ring",
+      "zone": "forest",
+      "model": "Campfire with stone ring",
+      "variants": [
+        "cold",
+        "ash"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "forest_campfire_ring",
+        "status": "planned",
+        "instances": [
+          "OF-fire"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "forest_tarp_camp",
+      "zone": "forest",
+      "model": "Makeshift tarp shelter",
+      "variants": [
+        "intact",
+        "torn"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "forest_tarp_camp",
+        "status": "planned",
+        "instances": [
+          "OF-tarp"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "forest_small_forest_debris",
+      "zone": "forest",
+      "model": "Branch leaf and stone debris",
+      "variants": [
+        "A",
+        "B",
+        "C"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "forest_small_forest_debris",
+        "status": "planned",
+        "instances": [
+          "OF-debris-01",
+          "OF-debris-02"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "farmland_farm_tractor",
+      "zone": "farmland",
+      "model": "Older Soviet-era farm tractor",
+      "variants": [
+        "operational",
+        "abandoned"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "farmland_farm_tractor",
+        "status": "planned",
+        "instances": [
+          "OA-tractor"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "farmland_farm_trailer",
+      "zone": "farmland",
+      "model": "Small agricultural trailer",
+      "variants": [
+        "empty",
+        "loaded"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "farmland_farm_trailer",
+        "status": "planned",
+        "instances": [
+          "OA-trailer"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "farmland_hay_bale",
+      "zone": "farmland",
+      "model": "Hay bale",
+      "variants": [
+        "round",
+        "rectangular"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "farmland_hay_bale",
+        "status": "planned",
+        "instances": [
+          "OA-hay-01",
+          "OA-hay-02",
+          "OA-hay-03",
+          "OA-hay-04"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "farmland_barn_door",
+      "zone": "farmland",
+      "model": "Barn sliding door modules",
+      "variants": [
+        "closed",
+        "open"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "farmland_barn_door",
+        "status": "deferred",
+        "instances": [],
+        "reason": "A06 warehouse opening is6m wide×4m high; completed barn-door frame is5.45×3m. Unit-scale frame would narrow the verified entrance and leave unexplained gaps. Preserve original open portal, no door mechanics."
+      }
+    },
+    {
+      "id": "farmland_farm_gate",
+      "zone": "farmland",
+      "model": "Timber farm gate",
+      "variants": [
+        "closed",
+        "open"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "farmland_farm_gate",
+        "status": "planned",
+        "instances": [
+          "OA-farmgate"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "farmland_water_trough",
+      "zone": "farmland",
+      "model": "Concrete livestock trough",
+      "variants": [
+        "empty",
+        "filled"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "farmland_water_trough",
+        "status": "planned",
+        "instances": [
+          "OA-trough"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "farmland_wood_cart",
+      "zone": "farmland",
+      "model": "Wooden farm cart",
+      "variants": [
+        "empty",
+        "loaded"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "farmland_wood_cart",
+        "status": "planned",
+        "instances": [
+          "OA-cart",
+          "OA-cart-02"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "farmland_plough_attachment",
+      "zone": "farmland",
+      "model": "Tractor plough",
+      "variants": [
+        "single",
+        "multi-furrow"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "farmland_plough_attachment",
+        "status": "planned",
+        "instances": [
+          "OA-plough"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "farmland_grain_hopper",
+      "zone": "farmland",
+      "model": "Farm grain storage hopper",
+      "variants": [
+        "small",
+        "tall"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "farmland_grain_hopper",
+        "status": "planned",
+        "instances": [
+          "OA-hopper"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "farmland_feed_sack_stack",
+      "zone": "farmland",
+      "model": "Feed and fertilizer sacks",
+      "variants": [
+        "bag",
+        "stack"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "farmland_feed_sack_stack",
+        "status": "planned",
+        "instances": [
+          "OA-feed-01",
+          "OA-feed-02",
+          "OA-barn-feed-01",
+          "OA-barn-feed-02"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "farmland_wheelbarrow",
+      "zone": "farmland",
+      "model": "Farm wheelbarrow",
+      "variants": [
+        "empty",
+        "loaded"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "farmland_wheelbarrow",
+        "status": "planned",
+        "instances": [
+          "OA-wheelbarrow"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "farmland_well_pump",
+      "zone": "farmland",
+      "model": "Manual farm water pump",
+      "variants": [
+        "hand",
+        "electric"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "farmland_well_pump",
+        "status": "planned",
+        "instances": [
+          "OA-pump"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "farmland_firewood_stack",
+      "zone": "farmland",
+      "model": "Chopped firewood stack",
+      "variants": [
+        "stack",
+        "leaning"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "farmland_firewood_stack",
+        "status": "planned",
+        "instances": [
+          "OA-firewood"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "farmland_farm_small_clutter",
+      "zone": "farmland",
+      "model": "Farm bucket milk can and tools",
+      "variants": [
+        "bucket",
+        "milk-can",
+        "ladder"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "farmland_farm_small_clutter",
+        "status": "planned",
+        "instances": [
+          "OA-milkcan",
+          "OA-bucket",
+          "OA-tools-02"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "river_bridge_deck",
+      "zone": "river",
+      "model": "Concrete road bridge deck modular kit",
+      "variants": [
+        "segment",
+        "end"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "river_bridge_deck",
+        "status": "planned",
+        "instances": [
+          "OR-deck-stock"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "river_bridge_parapet",
+      "zone": "river",
+      "model": "Bridge concrete parapet and rail",
+      "variants": [
+        "straight",
+        "end"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "river_bridge_parapet",
+        "status": "planned",
+        "instances": [
+          "OR-parapet-stock"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "river_bridge_support",
+      "zone": "river",
+      "model": "Bridge structural support",
+      "variants": [
+        "pier",
+        "abutment"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "river_bridge_support",
+        "status": "planned",
+        "instances": [
+          "OR-support-stock"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "river_riverbank_rock",
+      "zone": "river",
+      "model": "Riverbank stone clusters",
+      "variants": [
+        "small",
+        "large"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "river_riverbank_rock",
+        "status": "planned",
+        "instances": [
+          "OR-rock-01",
+          "OR-rock-02"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "river_river_reeds",
+      "zone": "river",
+      "model": "River reeds",
+      "variants": [
+        "dense",
+        "sparse"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "river_river_reeds",
+        "status": "planned",
+        "instances": [
+          "OR-reed-01",
+          "OR-reed-02"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "river_log_crossing",
+      "zone": "river",
+      "model": "Fallen-log traversal crossing",
+      "variants": [
+        "main",
+        "side"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "river_log_crossing",
+        "status": "planned",
+        "instances": [
+          "OR-log-debris"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "river_culvert_pipe_end",
+      "zone": "river",
+      "model": "Large culvert pipe end",
+      "variants": [
+        "round",
+        "concrete"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "river_culvert_pipe_end",
+        "status": "planned",
+        "instances": [
+          "OR-culvert"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "river_erosion_block",
+      "zone": "river",
+      "model": "Riverbank erosion concrete block",
+      "variants": [
+        "small",
+        "large"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "river_erosion_block",
+        "status": "planned",
+        "instances": [
+          "OR-block-01"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "river_driftwood",
+      "zone": "river",
+      "model": "River driftwood",
+      "variants": [
+        "branch",
+        "log"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "river_driftwood",
+        "status": "planned",
+        "instances": [
+          "OR-driftwood"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "river_bridge_litter",
+      "zone": "river",
+      "model": "Bridge and waterline debris",
+      "variants": [
+        "sticks",
+        "trash"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "river_bridge_litter",
+        "status": "planned",
+        "instances": [
+          "OR-litter-01",
+          "OR-litter-02"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "lake_wood_pier",
+      "zone": "lake",
+      "model": "Modular wooden pier",
+      "variants": [
+        "straight",
+        "end",
+        "stairs"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "lake_wood_pier",
+        "status": "planned",
+        "instances": [
+          "OL-pier-stock"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "lake_rowboat",
+      "zone": "lake",
+      "model": "Small wooden rowboat",
+      "variants": [
+        "moored",
+        "beached"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "lake_rowboat",
+        "status": "planned",
+        "instances": [
+          "OL-boat"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "lake_mooring_bollard",
+      "zone": "lake",
+      "model": "Mooring post",
+      "variants": [
+        "timber",
+        "metal"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "lake_mooring_bollard",
+        "status": "planned",
+        "instances": [
+          "OL-bollard"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "lake_fishing_net",
+      "zone": "lake",
+      "model": "Fishing net bundle",
+      "variants": [
+        "rolled",
+        "draped"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "lake_fishing_net",
+        "status": "planned",
+        "instances": [
+          "OL-net"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "lake_water_intake_pipe",
+      "zone": "lake",
+      "model": "Lakeside pump intake pipe",
+      "variants": [
+        "straight",
+        "intake",
+        "bend"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "lake_water_intake_pipe",
+        "status": "planned",
+        "instances": [
+          "OL-intake-stock"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "lake_cattails",
+      "zone": "lake",
+      "model": "Lakeside cattails and reeds",
+      "variants": [
+        "dense",
+        "sparse"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "lake_cattails",
+        "status": "planned",
+        "instances": [
+          "OL-cattails-01",
+          "OL-cattails-02"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "lake_rope_coil",
+      "zone": "lake",
+      "model": "Coiled dock rope",
+      "variants": [
+        "small",
+        "large"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "lake_rope_coil",
+        "status": "planned",
+        "instances": [
+          "OL-rope"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "lake_fishing_crate",
+      "zone": "lake",
+      "model": "Fishing storage box",
+      "variants": [
+        "closed",
+        "open"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "lake_fishing_crate",
+        "status": "planned",
+        "instances": [
+          "OL-crate-01",
+          "OL-crate-02"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "lake_boat_toolkit",
+      "zone": "lake",
+      "model": "Boat repair tools",
+      "variants": [
+        "oars",
+        "toolbox"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "lake_boat_toolkit",
+        "status": "planned",
+        "instances": [
+          "OL-oars",
+          "OL-toolbox"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "lake_lakeside_bench",
+      "zone": "lake",
+      "model": "Rough plank lakeside bench",
+      "variants": [
+        "new",
+        "worn"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "lake_lakeside_bench",
+        "status": "planned",
+        "instances": [
+          "OL-bench"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "lake_fishing_trap",
+      "zone": "lake",
+      "model": "Woven fish trap",
+      "variants": [
+        "basket",
+        "cage"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "lake_fishing_trap",
+        "status": "planned",
+        "instances": [
+          "OL-trap-01",
+          "OL-trap-02"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "lake_life_ring",
+      "zone": "lake",
+      "model": "Dock safety life ring",
+      "variants": [
+        "mounted",
+        "loose"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "lake_life_ring",
+        "status": "planned",
+        "instances": [
+          "OL-lifering"
+        ],
+        "reason": null
+      }
+    },
+    {
+      "id": "lake_lantern",
+      "zone": "lake",
+      "model": "Portable dock lantern",
+      "variants": [
+        "lit",
+        "off"
+      ],
+      "recorded_source_status": "verified_isolated",
+      "placement": {
+        "catalog_id": "lake_lantern",
+        "status": "planned",
+        "instances": [
+          "OL-lantern"
+        ],
+        "reason": null
+      }
+    }
+  ],
+  "bunkerkit": [
+    {
+      "id": "wall_4m",
+      "category": "Architecture",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/wall_4m.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/wall_4m_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "wall_doorway_4m",
+      "category": "Architecture",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/wall_doorway_4m.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/wall_doorway_4m_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "floor_4m",
+      "category": "Architecture",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/floor_4m.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/floor_4m_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "ceiling_4m",
+      "category": "Architecture",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/ceiling_4m.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/ceiling_4m_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "column_3m2",
+      "category": "Architecture",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/column_3m2.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/column_3m2_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "beam_4m",
+      "category": "Architecture",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/beam_4m.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/beam_4m_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "door_frame",
+      "category": "Architecture",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/door_frame.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/door_frame_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "door_leaf",
+      "category": "Architecture",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/door_leaf.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/door_leaf_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "hermetic_door",
+      "category": "Architecture",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/hermetic_door.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/hermetic_door_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "duct_straight_4m",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/duct_straight_4m.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/duct_straight_4m_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "duct_elbow_90",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/duct_elbow_90.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/duct_elbow_90_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "duct_grille",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/duct_grille.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/duct_grille_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "pipe_straight_4m",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/pipe_straight_4m.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/pipe_straight_4m_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "pipe_elbow_90",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/pipe_elbow_90.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/pipe_elbow_90_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "pipe_valve",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/pipe_valve.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/pipe_valve_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "cable_tray_4m",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/cable_tray_4m.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/cable_tray_4m_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "electrical_box",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/electrical_box.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/electrical_box_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "bulkhead_light",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/bulkhead_light.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/bulkhead_light_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "ceiling_strip_light",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/ceiling_strip_light.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/ceiling_strip_light_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "ceiling_bulb",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/ceiling_bulb.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/ceiling_bulb_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "control_console",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/control_console.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/control_console_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "portable_generator",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/portable_generator.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/portable_generator_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "fuel_jerrycan",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/fuel_jerrycan.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/fuel_jerrycan_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "improvised_water_filter",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/improvised_water_filter.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/improvised_water_filter_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "bunker_sink",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/bunker_sink.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/bunker_sink_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "wall_fire_extinguisher",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/wall_fire_extinguisher.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/wall_fire_extinguisher_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "barrel_stove",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/barrel_stove.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/barrel_stove_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "portable_air_compressor",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/portable_air_compressor.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/portable_air_compressor_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "industrial_battery_charger",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/industrial_battery_charger.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/industrial_battery_charger_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "industrial_cable_reel",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/industrial_cable_reel.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/industrial_cable_reel_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "hydraulic_bottle_jack",
+      "category": "Utilities / fixtures / maintenance",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/hydraulic_bottle_jack.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/hydraulic_bottle_jack_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "wood_crate",
+      "category": "Storage / containers / cases",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/wood_crate.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/wood_crate_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "wood_pallet",
+      "category": "Storage / containers / cases",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/wood_pallet.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/wood_pallet_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "gun_locker",
+      "category": "Storage / containers / cases",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/gun_locker.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/gun_locker_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "mesh_gun_locker",
+      "category": "Storage / containers / cases",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/mesh_gun_locker.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/mesh_gun_locker_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "simple_gun_locker",
+      "category": "Storage / containers / cases",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/simple_gun_locker.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/simple_gun_locker_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "steel_locker",
+      "category": "Storage / containers / cases",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/steel_locker.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/steel_locker_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "weapon_case",
+      "category": "Storage / containers / cases",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/weapon_case.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/weapon_case_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "pistol_case",
+      "category": "Storage / containers / cases",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/pistol_case.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/pistol_case_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "magazine_case",
+      "category": "Storage / containers / cases",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/magazine_case.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/magazine_case_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "field_equipment_case",
+      "category": "Storage / containers / cases",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/field_equipment_case.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/field_equipment_case_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "compact_steel_container",
+      "category": "Storage / containers / cases",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/compact_steel_container.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/compact_steel_container_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "olive_storage_box",
+      "category": "Storage / containers / cases",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/olive_storage_box.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/olive_storage_box_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "reinforced_wood_chest",
+      "category": "Storage / containers / cases",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/reinforced_wood_chest.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/reinforced_wood_chest_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "metal_toolbox",
+      "category": "Storage / containers / cases",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/metal_toolbox.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/metal_toolbox_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "anvil_stump",
+      "category": "Furniture / workshop",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/anvil_stump.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/anvil_stump_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "salvage_handcart",
+      "category": "Furniture / workshop",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/salvage_handcart.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/salvage_handcart_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "military_bunk_bed",
+      "category": "Furniture / workshop",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/military_bunk_bed.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/military_bunk_bed_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "steel_storage_shelf",
+      "category": "Furniture / workshop",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/steel_storage_shelf.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/steel_storage_shelf_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "gun_repair_workbench",
+      "category": "Furniture / workshop",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/gun_repair_workbench.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/gun_repair_workbench_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "workshop_stool",
+      "category": "Furniture / workshop",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/workshop_stool.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/workshop_stool_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "workshop_task_lamp",
+      "category": "Furniture / workshop",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/workshop_task_lamp.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/workshop_task_lamp_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "workshop_tool_board",
+      "category": "Furniture / workshop",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/workshop_tool_board.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/workshop_tool_board_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "medical_box",
+      "category": "Medical / ammunition",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/medical_box.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/medical_box_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "wall_medicine_cabinet",
+      "category": "Medical / ammunition",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/wall_medicine_cabinet.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/wall_medicine_cabinet_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "ammo_556x45",
+      "category": "Medical / ammunition",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/ammo_556x45.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/ammo_556x45_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "ammo_762x39",
+      "category": "Medical / ammunition",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/ammo_762x39.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/ammo_762x39_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "ammo_762x51",
+      "category": "Medical / ammunition",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/ammo_762x51.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/ammo_762x51_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "ammo_9x19",
+      "category": "Medical / ammunition",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/ammo_9x19.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/ammo_9x19_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    },
+    {
+      "id": "canned_food",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/canned_food.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/canned_food_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "canned_meat_rect",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/canned_meat_rect.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/canned_meat_rect_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "coffee_jar",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/coffee_jar.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/coffee_jar_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "kalo_cola",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/kalo_cola.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/kalo_cola_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "ration_biscuits",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/ration_biscuits.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/ration_biscuits_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "salt_bag",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/salt_bag.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/salt_bag_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "tea_carton",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/tea_carton.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/tea_carton_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "water_bottle",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/water_bottle.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/water_bottle_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "baked_beans_can",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/baked_beans_can.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/baked_beans_can_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "buckwheat_bag",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/buckwheat_bag.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/buckwheat_bag_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "carrot",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/carrot.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/carrot_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "cereal_carton",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/cereal_carton.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/cereal_carton_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "chocolate_bar",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/chocolate_bar.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/chocolate_bar_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "condensed_milk_can",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/condensed_milk_can.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/condensed_milk_can_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "cooked_borscht_bowl",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/cooked_borscht_bowl.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/cooked_borscht_bowl_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "cooked_buckwheat_mushroom_bowl",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/cooked_buckwheat_mushroom_bowl.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/cooked_buckwheat_mushroom_bowl_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "cooked_fish_potato_plate",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/cooked_fish_potato_plate.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/cooked_fish_potato_plate_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "cooked_golubtsy_plate",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/cooked_golubtsy_plate.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/cooked_golubtsy_plate_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "cooked_pelmeni_plate",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/cooked_pelmeni_plate.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/cooked_pelmeni_plate_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "cooked_potato_soup",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/cooked_potato_soup.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/cooked_potato_soup_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "cooked_sausage_potato_plate",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/cooked_sausage_potato_plate.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/cooked_sausage_potato_plate_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "egg_carton",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/egg_carton.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/egg_carton_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "instant_noodle_packet",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/instant_noodle_packet.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/instant_noodle_packet_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "jam_jar",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/jam_jar.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/jam_jar_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "ketchup_bottle",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/ketchup_bottle.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/ketchup_bottle_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "milk_carton",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/milk_carton.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/milk_carton_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "noodle_cup",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/noodle_cup.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/noodle_cup_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "pasta_packet",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/pasta_packet.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/pasta_packet_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "peanut_butter_jar",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/peanut_butter_jar.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/peanut_butter_jar_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "pickled_cucumber_jar",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/pickled_cucumber_jar.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/pickled_cucumber_jar_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "potato",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/potato.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/potato_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "rice_bag",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/rice_bag.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/rice_bag_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "rye_bread_loaf",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/rye_bread_loaf.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/rye_bread_loaf_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "sardine_tin",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/sardine_tin.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/sardine_tin_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "smoked_sausage",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/smoked_sausage.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/smoked_sausage_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "sour_cream_cup",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/sour_cream_cup.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/sour_cream_cup_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "sunflower_oil_bottle",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/sunflower_oil_bottle.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/sunflower_oil_bottle_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "sweetcorn_can",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/sweetcorn_can.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/sweetcorn_can_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "tomato_soup_can",
+      "category": "Food / drink",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/tomato_soup_can.glb",
+      "copied_to_active_game": false,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/tomato_soup_can_godot_verification.json",
+      "report_exists": true,
+      "recorded_pass": true
+    },
+    {
+      "id": "rubble_cluster",
+      "category": "Dressing",
+      "source_glb": "C:/Stuff/Blender/BunkerKit/godot/assets/rubble_cluster.glb",
+      "copied_to_active_game": true,
+      "existing_isolated_report": "C:/Stuff/Blender/BunkerKit/rubble_cluster_godot_verification.json",
+      "report_exists": false,
+      "recorded_pass": null
+    }
+  ],
+  "tree_kit": [
+    {
+      "id": "birch_compact_01",
+      "height_m": 5.830695629119873,
+      "visual_triangles": 2668,
+      "source": "C:\\Stuff\\Blender\\TreeKit\\source\\birch_compact_01.blend",
+      "glb": "C:\\Stuff\\Blender\\TreeKit\\godot\\assets\\birch_compact_01.glb",
+      "export_exists": true,
+      "duplicate_of_townkit_birch": false
+    },
+    {
+      "id": "birch_compact_02",
+      "height_m": 6.486138820648193,
+      "visual_triangles": 2436,
+      "source": "C:\\Stuff\\Blender\\TreeKit\\source\\birch_compact_02.blend",
+      "glb": "C:\\Stuff\\Blender\\TreeKit\\godot\\assets\\birch_compact_02.glb",
+      "export_exists": true,
+      "duplicate_of_townkit_birch": false
+    },
+    {
+      "id": "birch_damaged_01",
+      "height_m": 9.161331176757812,
+      "visual_triangles": 2070,
+      "source": "C:\\Stuff\\Blender\\TreeKit\\source\\birch_damaged_01.blend",
+      "glb": "C:\\Stuff\\Blender\\TreeKit\\godot\\assets\\birch_damaged_01.glb",
+      "export_exists": true,
+      "duplicate_of_townkit_birch": false
+    },
+    {
+      "id": "birch_damaged_02",
+      "height_m": 6.500725746154785,
+      "visual_triangles": 1676,
+      "source": "C:\\Stuff\\Blender\\TreeKit\\source\\birch_damaged_02.blend",
+      "glb": "C:\\Stuff\\Blender\\TreeKit\\godot\\assets\\birch_damaged_02.glb",
+      "export_exists": true,
+      "duplicate_of_townkit_birch": false
+    },
+    {
+      "id": "birch_leaning_01",
+      "height_m": 9.500736236572266,
+      "visual_triangles": 2662,
+      "source": "C:\\Stuff\\Blender\\TreeKit\\source\\birch_leaning_01.blend",
+      "glb": "C:\\Stuff\\Blender\\TreeKit\\godot\\assets\\birch_leaning_01.glb",
+      "export_exists": true,
+      "duplicate_of_townkit_birch": false
+    },
+    {
+      "id": "birch_leaning_02",
+      "height_m": 10.57795524597168,
+      "visual_triangles": 2434,
+      "source": "C:\\Stuff\\Blender\\TreeKit\\source\\birch_leaning_02.blend",
+      "glb": "C:\\Stuff\\Blender\\TreeKit\\godot\\assets\\birch_leaning_02.glb",
+      "export_exists": true,
+      "duplicate_of_townkit_birch": false
+    },
+    {
+      "id": "birch_mature",
+      "height_m": 9.919757843017578,
+      "visual_triangles": 2674,
+      "source": "C:\\Stuff\\Blender\\TreeKit\\source\\birch_mature.blend",
+      "glb": "C:\\Stuff\\Blender\\TreeKit\\godot\\assets\\birch_mature.glb",
+      "export_exists": true,
+      "duplicate_of_townkit_birch": true
+    },
+    {
+      "id": "birch_slender_01",
+      "height_m": 11.30114459991455,
+      "visual_triangles": 2436,
+      "source": "C:\\Stuff\\Blender\\TreeKit\\source\\birch_slender_01.blend",
+      "glb": "C:\\Stuff\\Blender\\TreeKit\\godot\\assets\\birch_slender_01.glb",
+      "export_exists": true,
+      "duplicate_of_townkit_birch": false
+    },
+    {
+      "id": "birch_slender_02",
+      "height_m": 12.735100746154785,
+      "visual_triangles": 2672,
+      "source": "C:\\Stuff\\Blender\\TreeKit\\source\\birch_slender_02.blend",
+      "glb": "C:\\Stuff\\Blender\\TreeKit\\godot\\assets\\birch_slender_02.glb",
+      "export_exists": true,
+      "duplicate_of_townkit_birch": false
+    },
+    {
+      "id": "birch_sparse_01",
+      "height_m": 9.424318313598633,
+      "visual_triangles": 2196,
+      "source": "C:\\Stuff\\Blender\\TreeKit\\source\\birch_sparse_01.blend",
+      "glb": "C:\\Stuff\\Blender\\TreeKit\\godot\\assets\\birch_sparse_01.glb",
+      "export_exists": true,
+      "duplicate_of_townkit_birch": false
+    },
+    {
+      "id": "birch_sparse_02",
+      "height_m": 8.218402862548828,
+      "visual_triangles": 1838,
+      "source": "C:\\Stuff\\Blender\\TreeKit\\source\\birch_sparse_02.blend",
+      "glb": "C:\\Stuff\\Blender\\TreeKit\\godot\\assets\\birch_sparse_02.glb",
+      "export_exists": true,
+      "duplicate_of_townkit_birch": false
+    },
+    {
+      "id": "birch_spreading_01",
+      "height_m": 8.531999588012695,
+      "visual_triangles": 2674,
+      "source": "C:\\Stuff\\Blender\\TreeKit\\source\\birch_spreading_01.blend",
+      "glb": "C:\\Stuff\\Blender\\TreeKit\\godot\\assets\\birch_spreading_01.glb",
+      "export_exists": true,
+      "duplicate_of_townkit_birch": false
+    },
+    {
+      "id": "birch_spreading_02",
+      "height_m": 8.84058952331543,
+      "visual_triangles": 2896,
+      "source": "C:\\Stuff\\Blender\\TreeKit\\source\\birch_spreading_02.blend",
+      "glb": "C:\\Stuff\\Blender\\TreeKit\\godot\\assets\\birch_spreading_02.glb",
+      "export_exists": true,
+      "duplicate_of_townkit_birch": false
+    },
+    {
+      "id": "birch_windscar",
+      "height_m": 9.035640716552734,
+      "visual_triangles": 2080,
+      "source": "C:\\Stuff\\Blender\\TreeKit\\source\\birch_windscar.blend",
+      "glb": "C:\\Stuff\\Blender\\TreeKit\\godot\\assets\\birch_windscar.glb",
+      "export_exists": true,
+      "duplicate_of_townkit_birch": true
+    },
+    {
+      "id": "birch_young",
+      "height_m": 8.719099998474121,
+      "visual_triangles": 2200,
+      "source": "C:\\Stuff\\Blender\\TreeKit\\source\\birch_young.blend",
+      "glb": "C:\\Stuff\\Blender\\TreeKit\\godot\\assets\\birch_young.glb",
+      "export_exists": true,
+      "duplicate_of_townkit_birch": true
+    }
+  ],
+  "soviet_apartment": {
+    "family": "soviet_apartment_block_01_overgrown",
+    "revision": "v5_visual_correction",
+    "recorded_status": "verified_isolated_delivery",
+    "not_tested": [
+      "player traversal/controller",
+      "Town placement",
+      "terrain",
+      "navmesh",
+      "FPS"
+    ],
+    "profiles": [
+      {
+        "name": "clean",
+        "source": "C:\\Stuff\\Blender\\Buildings\\soviet_apartment_block_01_overgrown\\source\\soviet_apartment_block_01_overgrown_clean.blend",
+        "glb": "C:\\Stuff\\Blender\\Buildings\\soviet_apartment_block_01_overgrown\\godot\\assets\\soviet_apartment_block_01_overgrown_clean.glb",
+        "export_exists": true,
+        "dimensions_blender_m": [
+          41.560001373291016,
+          19.526500701904297,
+          23.800000429153442
+        ],
+        "visual_triangles": 26712,
+        "collision_triangles": 11896,
+        "native_probes": 1705
+      },
+      {
+        "name": "used",
+        "source": "C:\\Stuff\\Blender\\Buildings\\soviet_apartment_block_01_overgrown\\source\\soviet_apartment_block_01_overgrown_used.blend",
+        "glb": "C:\\Stuff\\Blender\\Buildings\\soviet_apartment_block_01_overgrown\\godot\\assets\\soviet_apartment_block_01_overgrown_used.glb",
+        "export_exists": true,
+        "dimensions_blender_m": [
+          41.560001373291016,
+          19.526500701904297,
+          23.800000429153442
+        ],
+        "visual_triangles": 26712,
+        "collision_triangles": 11896,
+        "native_probes": 1705
+      },
+      {
+        "name": "worn",
+        "source": "C:\\Stuff\\Blender\\Buildings\\soviet_apartment_block_01_overgrown\\source\\soviet_apartment_block_01_overgrown.blend",
+        "glb": "C:\\Stuff\\Blender\\Buildings\\soviet_apartment_block_01_overgrown\\godot\\assets\\soviet_apartment_block_01_overgrown.glb",
+        "export_exists": true,
+        "dimensions_blender_m": [
+          41.560001373291016,
+          19.734871864318848,
+          23.800000429153442
+        ],
+        "visual_triangles": 32120,
+        "collision_triangles": 11980,
+        "native_probes": 1717
+      },
+      {
+        "name": "heavy_decay",
+        "source": "C:\\Stuff\\Blender\\Buildings\\soviet_apartment_block_01_overgrown\\source\\soviet_apartment_block_01_overgrown_heavy_decay.blend",
+        "glb": "C:\\Stuff\\Blender\\Buildings\\soviet_apartment_block_01_overgrown\\godot\\assets\\soviet_apartment_block_01_overgrown_heavy_decay.glb",
+        "export_exists": true,
+        "dimensions_blender_m": [
+          41.560001373291016,
+          19.754130363464355,
+          23.800000429153442
+        ],
+        "visual_triangles": 47890,
+        "collision_triangles": 12248,
+        "native_probes": 1741
+      }
+    ],
+    "native_town_import_found": false
+  },
+  "graybox_building_templates": [
+    {
+      "id": "t01_cottage",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage.tscn",
+      "footprint_m": [
+        10,
+        8
+      ],
+      "height_m": 3.2,
+      "door_local_xz": [
+        0,
+        -4
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t01_cottage_shell",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn",
+      "footprint_m": [
+        10,
+        8
+      ],
+      "height_m": 3.2,
+      "door_local_xz": null,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t02_long_house",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn",
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 6.4,
+      "door_local_xz": [
+        0,
+        -8
+      ],
+      "access": {
+        "ground": true,
+        "upper": true
+      },
+      "floors": 2
+    },
+    {
+      "id": "t02_long_house_ground",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t02_long_house_ground.tscn",
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 3.2,
+      "door_local_xz": [
+        0,
+        -8
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t03_apartment",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t03_apartment.tscn",
+      "footprint_m": [
+        24,
+        12
+      ],
+      "height_m": 6.4,
+      "door_local_xz": null,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 2
+    },
+    {
+      "id": "t04_shop",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn",
+      "footprint_m": [
+        12,
+        8
+      ],
+      "height_m": 3.2,
+      "door_local_xz": [
+        0,
+        -4
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t05_clinic",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t05_clinic.tscn",
+      "footprint_m": [
+        12,
+        10
+      ],
+      "height_m": 3.2,
+      "door_local_xz": [
+        0,
+        -5
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t06_garage",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn",
+      "footprint_m": [
+        14,
+        10
+      ],
+      "height_m": 4.5,
+      "door_local_xz": [
+        0,
+        -5
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t07_workshop",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t07_workshop.tscn",
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 3.2,
+      "door_local_xz": [
+        0,
+        -8
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t07_workshop_shell",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t07_workshop_shell.tscn",
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 3.2,
+      "door_local_xz": null,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t08_warehouse",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn",
+      "footprint_m": [
+        24.6,
+        18.6
+      ],
+      "height_m": 7,
+      "door_local_xz": [
+        0,
+        -9.3
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t09_shed",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed.tscn",
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "door_local_xz": [
+        0,
+        -2
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t09_shed_shell",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "door_local_xz": null,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t10_kiosk",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t10_kiosk.tscn",
+      "footprint_m": [
+        4,
+        4
+      ],
+      "height_m": 3.2,
+      "door_local_xz": null,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t11_substation",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t11_substation.tscn",
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "door_local_xz": null,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t12_bus_shelter",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t12_bus_shelter.tscn",
+      "footprint_m": [
+        6,
+        2
+      ],
+      "height_m": 3.2,
+      "door_local_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0
+    },
+    {
+      "id": "t13_guard_booth",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t13_guard_booth.tscn",
+      "footprint_m": [
+        3,
+        3
+      ],
+      "height_m": 3.2,
+      "door_local_xz": null,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t14_pump_house",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t14_pump_house.tscn",
+      "footprint_m": [
+        6,
+        5
+      ],
+      "height_m": 3.2,
+      "door_local_xz": [
+        0,
+        -2.5
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1
+    }
+  ],
+  "previous_placement_receipt": {
+    "date": "2026-10-19",
+    "status": "SCOPED_STATIC_PROP_PLACEMENT_PASS_WITH_LIMITS",
+    "source": "C:/Stuff/godot-fps-cogito-master/godot-fps-cogito-master/design/town-500m/phase5/verification.json"
+  },
+  "limits": [
+    "Do not sum overlapping kit entries into a unique-asset total.",
+    "Existing QA metadata is not refreshed hash/runtime acceptance.",
+    "Finished assets may need integration instead of more modeling."
+  ]
+}

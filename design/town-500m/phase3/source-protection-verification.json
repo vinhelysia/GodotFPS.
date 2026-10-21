@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "date": "2026-10-10T06:51:08.968Z",
+  "protected_task_start_sha256": {
+    "project.godot": "080bdb5a0067e222f77529c3dbe1de6b539461103cbfa26c77a9376ca56dd59e",
+    "Scene/Hideout/bunker_prototype_16x20.tscn": "b76a3b0903a88e247614aa7500f6dde6d19c734fd570ecdd8dc6510a2908d605",
+    "Scripts/Enemies/scav_perception.gd": "3b95b4f3bf601e0ccbf178a1df742fa01d4f46cf60edce77d3114cd652b56ec9",
+    "addons/cogito/Theme/Cogito_Theme_A.tres": "1c6e3c0f966acbdbdabfddf0c8c407493cdabd587001ce4f2dbbbf0bebcd95e6"
+  },
+  "final_sha256": {
+    "project.godot": "080bdb5a0067e222f77529c3dbe1de6b539461103cbfa26c77a9376ca56dd59e",
+    "Scene/Hideout/bunker_prototype_16x20.tscn": "b76a3b0903a88e247614aa7500f6dde6d19c734fd570ecdd8dc6510a2908d605",
+    "Scripts/Enemies/scav_perception.gd": "3b95b4f3bf601e0ccbf178a1df742fa01d4f46cf60edce77d3114cd652b56ec9",
+    "addons/cogito/Theme/Cogito_Theme_A.tres": "1c6e3c0f966acbdbdabfddf0c8c407493cdabd587001ce4f2dbbbf0bebcd95e6"
+  },
+  "theme_cleanup": "Only glyph advance cache entries differed. Archived current Theme and restored exact task-start bytes; pre-existing user changes preserved.",
+  "editor": "Owned runtime already self-quit; stop_scene confirms idle. Removed only the3 owned bake metadata keys; retained Town and current10161-polygon mesh.",
+  "limits": [
+    "Startup language.cfg writes are outside isolated kit/stash roots.",
+    "Git ignore policy excludes docs/tests; no policy changes, forced adds, reset, user-save migration or commit/push."
+  ]
+}

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/forest_ranger_shelter_props/assets/forest_ranger_shelter_props_cot.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/forest_ranger_shelter_props/materials/town_forest_ranger_shelter_props_cot_used.tres" id="2_finish"]
+
+[node name="forest_ranger_shelter_props__cot" type="Node3D"]
+metadata/catalog_id = "forest_ranger_shelter_props"
+metadata/catalog_variant = "cot"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="RangerPropsCot" parent="Model/TownRangerPropsCot"]
+surface_material_override/0 = ExtResource("2_finish")

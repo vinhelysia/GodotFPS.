@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-19",
+  "status": "SCOPED_STATIC_PROP_PLACEMENT_PASS_WITH_LIMITS",
+  "counts": {
+    "instances": 371,
+    "catalogue_types": 143,
+    "planned_types": 128,
+    "deferred_types": 15,
+    "by_zone": {
+      "town": 87,
+      "industry": 75,
+      "bunker": 33,
+      "hills": 28,
+      "forest": 77,
+      "farmland": 39,
+      "river": 14,
+      "lake": 18
+    }
+  },
+  "imported_files": 1256,
+  "imported_hash_mismatches": [],
+  "source_bindings_current": true,
+  "offline_errors": 0,
+  "physical_gates": [
+    {
+      "phase": "navigation",
+      "status": "PASS",
+      "checks": 9955,
+      "receipt": "tests/artifacts/town500_props/after/physical/navigation-native.json",
+      "sha256": "c37b4662622297f61d6461bf071305ddd229d07f986ab2447345b2eb71ab0ba6"
+    },
+    {
+      "phase": "interiors",
+      "status": "PASS",
+      "checks": 4386,
+      "receipt": "tests/artifacts/town500_props/after/physical/interiors-native.json",
+      "sha256": "7a246e39ce984c5d286004f7fff8188263fe255744c7837b418508d5362c2597"
+    },
+    {
+      "phase": "ports",
+      "status": "PASS",
+      "checks": 4304,
+      "receipt": "tests/artifacts/town500_props/after/physical/ports-native.json",
+      "sha256": "6158d7038ed355b8df5924e9de4c0a13fdb475d227f6afa3110eccbeef766b95"
+    },
+    {
+      "phase": "seams",
+      "status": "PASS",
+      "checks": 4692,
+      "receipt": "tests/artifacts/town500_props/after/physical/seams-native.json",
+      "sha256": "a4f9a3000f16b7c75660cd353822d2639676b833ad11a316cb0f844859bf0120"
+    },
+    {
+      "phase": "los",
+      "status": "PASS",
+      "checks": 4701,
+      "receipt": "tests/artifacts/town500_props/after/physical/los-native.json",
+      "sha256": "bb8ff6946b7842c8c51931cf2d04b7c3cab18b4645f48dd2a105eab75053705d"
+    },
+    {
+      "phase": "route0",
+      "status": "PASS",
+      "checks": 4434,
+      "receipt": "tests/artifacts/town500_props/after/physical/route0-native.json",
+      "sha256": "895197bb26d4eab8717395a6b2af4edb808eecaf150aa05e4f72ac43b27172f3"
+    },
+    {
+      "phase": "route1",
+      "status": "PASS",
+      "checks": 4283,
+      "receipt": "tests/artifacts/town500_props/after/physical/route1-native.json",
+      "sha256": "9b388d432da0058950ba4d59a30e749f334d5331b38efc51499a365d9ed8ab62"
+    },
+    {
+      "phase": "route2",
+      "status": "PASS",
+      "checks": 4429,
+      "receipt": "tests/artifacts/town500_props/after/physical/route2-native.json",
+      "sha256": "2f49b612a0e2216ecc0cd861d84b8693c8353542384f2006ca82c0ab45d8bbdd"
+    },
+    {
+      "phase": "route3",
+      "status": "PASS",
+      "checks": 4362,
+      "receipt": "tests/artifacts/town500_props/after/physical/route3-native.json",
+      "sha256": "8b72c52882db07c6bfa03e3a690b92b2f9b0a1ae800f6e28a32c27324796f544"
+    },
+    {
+      "phase": "route4",
+      "status": "PASS",
+      "checks": 4380,
+      "receipt": "tests/artifacts/town500_props/after/physical/route4-native.json",
+      "sha256": "026a68e57d50883747521d11c0a7692d2b92e946f65134b76b61ac87e2e0b983"
+    },
+    {
+      "phase": "route5",
+      "status": "PASS",
+      "checks": 4283,
+      "receipt": "tests/artifacts/town500_props/after/physical/route5-native.json",
+      "sha256": "79186180a38398bd91a97bd622fc6421b42fe3f8ad71be2129217a7c84f34df0"
+    },
+    {
+      "phase": "route6",
+      "status": "PASS",
+      "checks": 4377,
+      "receipt": "tests/artifacts/town500_props/after/physical/route6-native.json",
+      "sha256": "d9175da3eb0b0b3505160503e179c0060645a91e35370c5d5127fc3edb373994"
+    },
+    {
+      "phase": "route7",
+      "status": "PASS",
+      "checks": 4305,
+      "receipt": "tests/artifacts/town500_props/after/physical/route7-native.json",
+      "sha256": "69526fb499c12800264e54b05c291b79a592ebe67991e6a9bbbd6797e2c1c2c3"
+    }
+  ],
+  "physical_to_visual_revision": "design/town-500m/phase5/visual-revision.json",
+  "same_physical_geometry": true,
+  "geometry_signature": "cb20e96dc3015b05d4ee27a5d382d54391f0024a712e62b04045e0ed0ae6a409",
+  "final_navigation": {
+    "status": "PASS",
+    "checks": 9955,
+    "receipt": "tests/artifacts/town500_props/after/navigation-native.json"
+  },
+  "rendered_capture": {
+    "status": "PASS",
+    "checks": 10205,
+    "rendered": true,
+    "extra_views": 10,
+    "contacts": 250,
+    "receipt": "tests/artifacts/town500_props/after/capture-native.json"
+  },
+  "baselines": [
+    {
+      "name": "town_baseline",
+      "success": true,
+      "exit_code": 0,
+      "duration_sec": 30.6,
+      "receipt": "tests/artifacts/town500_props/town_baseline-tool.json"
+    },
+    {
+      "name": "day_night_cycle",
+      "success": true,
+      "exit_code": 0,
+      "duration_sec": 6.09,
+      "receipt": "tests/artifacts/town500_props/day_night_cycle-tool.json"
+    },
+    {
+      "name": "raid_deployment",
+      "success": true,
+      "exit_code": 0,
+      "duration_sec": 25.75,
+      "receipt": "tests/artifacts/town500_props/raid_deployment-tool.json"
+    }
+  ],
+  "protected_sources_unchanged": 9,
+  "expected_protected_edits": [
+    "Scene/Town.tscn",
+    "tools/town500_bake_navigation.gd"
+  ],
+  "limits": [
+    "Finite geometry/contact/LOS samples; no exhaustive all-angle certificate.",
+    "Composition fixtures disable Scav BT/process and lock stamina/hunger/thirst; no whole-map AI/encounter acceptance.",
+    "No 1080p120FPS benchmark, night balance, upper200m views or old spatial-save compatibility acceptance.",
+    "Phase4 S2/B/D transaction wiring and final building/terrain/lighting art remain pending.",
+    "Existing headless Jolt/icon/pause-screenshot and M700 unequip diagnostics remain; not zero-warning approval.",
+    "Startup language.cfg writes remain existing behavior; isolated save roots are used for gameplay fixtures."
+  ],
+  "scene_sha256": "9ebf3487db910891f05a85418a38046ab0c21a5fa58fb240104e027bc4201d2b"
+}

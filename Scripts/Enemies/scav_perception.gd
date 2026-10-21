@@ -13,6 +13,10 @@ class_name ScavPerception
 @export_flags_3d_physics var los_mask: int = 3
 @export var target_group: StringName = &"Player"
 
+# Tag only glass-only StaticBody3D colliders; excluding a RID skips all its shapes.
+const AI_VISION_TRANSPARENT_GROUP: StringName = &"ai_vision_transparent"
+const MAX_TRANSPARENT_PANES: int = 4
+
 @export_group("Debug")
 @export var debug_perception: bool = false
 
@@ -242,20 +246,26 @@ func _los_clear(from: Vector3, to: Vector3, target: Node3D) -> bool:
 	var params := PhysicsRayQueryParameters3D.create(from, to)
 	params.collision_mask = los_mask
 	params.exclude = [_host.get_rid()]
-	var hit := space.intersect_ray(params)
-	if hit.is_empty():
-		return true
-	var c: Object = hit["collider"]
-	# Accept the target itself, any node in target_group, or a child of the target
-	# (handles HitboxComponent Area3D children that may lack the group tag).
-	if c == target:
-		return true
-	if c is Node:
-		var cn := c as Node
-		if cn.is_in_group(target_group):
+	for pane_count in range(MAX_TRANSPARENT_PANES + 1):
+		var hit := space.intersect_ray(params)
+		if hit.is_empty():
 			return true
-		if target.is_ancestor_of(cn):
+		var c: Object = hit["collider"]
+		# Preserve target and hitbox-child acceptance after each skipped pane.
+		if c == target:
 			return true
+		if c is Node:
+			var cn := c as Node
+			if cn.is_in_group(target_group) or target.is_ancestor_of(cn):
+				return true
+		if c is StaticBody3D and c.is_in_group(AI_VISION_TRANSPARENT_GROUP):
+			if pane_count == MAX_TRANSPARENT_PANES:
+				return false
+			var excluded := params.exclude
+			excluded.append(hit["rid"])
+			params.exclude = excluded
+			continue
+		return false
 	return false
 
 

@@ -1,0 +1,670 @@
+{
+  "schema_version": "1.0.0",
+  "status": "Phase0 offline gameplay/spatial contract; positions proposed until canonical footprint/terrain checks; no native integration or PASS",
+  "authority": {
+    "scene": "res://Scene/Town.tscn",
+    "plan": "res://design/town-500m/implementation-plan.txt",
+    "runtime_json": false,
+    "world_bounds_xz_m": [
+      -250,
+      250,
+      -250,
+      250
+    ],
+    "axes": "+X east, +Z south, +Y up",
+    "root_identity_paths": [
+      "Town",
+      "Town/NavigationRegion3D",
+      "Town/NavigationRegion3D/Level"
+    ],
+    "source_layout_sha256": "5B00249B20F86BC36BCD773F410A6EF434EE084526A27F5777AE5676AA0DA55D"
+  },
+  "defaults": {
+    "spawn_pad_size_xz_m": [
+      12,
+      12
+    ],
+    "extraction_dry_pad_size_xz_m": [
+      10,
+      10
+    ],
+    "actor_reserved_radius_m": 2,
+    "patrol_corridor_clear_width_m": 1.2,
+    "spawn_hostile_min_distance_m": 60,
+    "spawn_initial_hostile_los_allowed": false,
+    "spawn_no_loot_radius_m": 18,
+    "marker_y_policy": "Derive from actual authored terrain pad. Spawn/NPC origin uses native collider feet offset +0.05m settle clearance. Extract Area root sits at finished ground Y; do not copy old Y or use marker height as terrain.",
+    "clearance_policy": "Pad/approach must have continuous static floor, no opaque footprint, vegetation trunk, props or deep-water volume. Extract10x10 reservation contains6x6 trigger with2m horizontal safety apron. Spawn12x12 is placement reservation; 18m no-loot ring is a separate proposal.",
+    "reserved_pad_flatness_policy": "Flat collider plane; authoritative numeric Y supplied by terrain contract; do not build flat overlays on sloped ground without matched floor collision"
+  },
+  "insertion": {
+    "policy": "Equal50/50 between S1 and S2; choose once per accepted fresh Hub departure, never reroll during fade/loading/countdown/duplicate Deploy; no raid resume",
+    "selection_owner": "res://Scripts/Raid/stash_hub_scene.gd::start_raid",
+    "pool_property_proposal": "raid_connectors",
+    "scalar_fallback_existing_property": "raid_connector",
+    "scalar_fallback_rule": "Only when pool is empty. Nonempty invalid/duplicate/not-two pool is configuration failure; keep Hub/kit, no silent fallback.",
+    "validation_order": [
+      "Reject existing departing/loading/dead/UI/paused guard",
+      "Validate Town res:// scene path, PackedScene and raid root script",
+      "Validate configured nonempty pool contains exactly two distinct allowed root connectors registered in Town.connectors; validate scalar only when pool empty",
+      "Choose once and retain selected connector in local variable across await fade",
+      "Commit prepared Hub kit snapshot; on failure keep current Hub",
+      "Stage existing raid_departure metadata/freeze; pass selected connector to FRESH_WITH_PLAYER"
+    ],
+    "markers": [
+      {
+        "id": "S1",
+        "scene_node_path": "RaidSpawn",
+        "position_xz_m": [
+          -236.36,
+          170.45
+        ],
+        "probability": 0.5,
+        "pad_size_xz_m": [
+          12,
+          12
+        ],
+        "debug_player_default": true,
+        "facing_yaw_deg_proposal": -90
+      },
+      {
+        "id": "S2",
+        "scene_node_path": "RaidSpawnNorth",
+        "position_xz_m": [
+          -236.36,
+          10.23
+        ],
+        "probability": 0.5,
+        "pad_size_xz_m": [
+          12,
+          12
+        ],
+        "debug_player_default": false,
+        "facing_yaw_deg_proposal": -90
+      }
+    ],
+    "registration": [
+      "RaidSpawn",
+      "RaidSpawnNorth"
+    ],
+    "native_connector_semantics": "CogitoScene.move_player_to_connector compares node.name in exported connectors, then assigns player.global_position and body.global_rotation. Keep markers direct under Town."
+  },
+  "extraction": {
+    "always_active": true,
+    "count": 4,
+    "packed_scene": "res://Scene/Raid/extraction_zone.tscn",
+    "script": "res://Scripts/Raid/extraction_zone.gd",
+    "input_action": "interact",
+    "default_keyboard_physical_keycode": 70,
+    "default_keyboard_label": "F",
+    "countdown_seconds": 5,
+    "single_press": true,
+    "release_cancels": false,
+    "cancel_conditions": [
+      "Leave zone",
+      "Dead or health<=0",
+      "Player UI showing",
+      "Movement paused",
+      "Scene transition loading"
+    ],
+    "collision": {
+      "area_layer": 0,
+      "area_mask": 16,
+      "box_size_xyz_m": [
+        6,
+        3,
+        6
+      ],
+      "box_center_local_xyz_m": [
+        0,
+        1.5,
+        0
+      ]
+    },
+    "signal": "extraction_completed",
+    "signal_target": ".",
+    "signal_method": "extract",
+    "markers": [
+      {
+        "id": "E-A",
+        "position_xz_m": [
+          236.36,
+          -236.36
+        ],
+        "native_scene_node_path": "NavigationRegion3D/Level/Extract/ExtractionZone",
+        "parent_path": "NavigationRegion3D/Level/Extract",
+        "integration": "Repurpose E1 path; move parent to E-A, keep child local origin",
+        "pad_size_xz_m": [
+          10,
+          10
+        ]
+      },
+      {
+        "id": "E-B",
+        "position_xz_m": [
+          -65,
+          235
+        ],
+        "native_scene_node_path": "NavigationRegion3D/Level/ExtractFarm/ExtractionZone",
+        "parent_path": "NavigationRegion3D/Level/ExtractFarm",
+        "integration": "Add new farm-service gate zone; retire source eastern E-B245.45,123.86",
+        "pad_size_xz_m": [
+          10,
+          10
+        ]
+      },
+      {
+        "id": "E-C",
+        "position_xz_m": [
+          214.77,
+          147.73
+        ],
+        "native_scene_node_path": "NavigationRegion3D/Level/ExtractSE/ExtractionZone",
+        "parent_path": "NavigationRegion3D/Level/ExtractSE",
+        "integration": "Repurpose E2 path; move parent to E-C, keep child local origin",
+        "pad_size_xz_m": [
+          10,
+          10
+        ]
+      },
+      {
+        "id": "E-D",
+        "position_xz_m": [
+          -236.36,
+          -236.36
+        ],
+        "native_scene_node_path": "NavigationRegion3D/Level/ExtractNW/ExtractionZone",
+        "parent_path": "NavigationRegion3D/Level/ExtractNW",
+        "integration": "Add new northwest zone; no conditional extraction",
+        "pad_size_xz_m": [
+          10,
+          10
+        ]
+      }
+    ],
+    "removed_activation_positions_xz_m": [
+      [
+        86,
+        -84
+      ],
+      [
+        86,
+        84
+      ]
+    ],
+    "native_total_rule": "Exactly four active Area3Ds with extraction_zone script; old E1/E2 locations have no active zone. Existing2 repurposed plus2new, not6."
+  },
+  "deployment": {
+    "seconds": 10,
+    "clock_cycle_minutes": 30,
+    "start_hour": 8,
+    "root_freeze": "Town PROCESS_MODE_DISABLED from _enter_tree when raid_departure exists until _complete_deployment",
+    "input_combat_clock_freeze": true,
+    "abandon_rule": "After incoming fallback commit, quit/force-stop/countdown quit loses carried kit and retains Hub stash; loading/commit failure before boundary keeps prepared kit",
+    "existing_flow": [
+      "Hub.start_raid",
+      "CogitoSceneManager.fade_out/load_next_scene",
+      "LoadingScreen.FRESH_WITH_PLAYER: player-only restore",
+      "Town.move_player_to_connector",
+      "Town._start_raid stages Hub abandon fallback",
+      "RaidDeploymentPanel countdown",
+      "Town._complete_deployment unfreeze"
+    ],
+    "no_new_loader_manager_autoload": true
+  },
+  "encounters": {
+    "count": 8,
+    "distribution": {
+      "town": 3,
+      "farmland": 1,
+      "factory": 2,
+      "rail": 1,
+      "bunker": 1
+    },
+    "packed_scene": "res://Scene/Enemies/Scav.tscn",
+    "combat_authority": "HostileNPC + LimboAI",
+    "patrol_api": "CogitoPatrolPath.patrol_points Array[Node3D]; NPC.patrol_path exported reference",
+    "y_policy": "Terrain/pad native feet offset; every point in native nav coverage",
+    "cross_water_policy": "Authored patrol routes stay on bank/zone unless canonical path explicitly uses one of two bridges; no straight waypoint segment over river",
+    "actors": [
+      {
+        "node_path": "Scav_Courtyard",
+        "zone_id": "town",
+        "patrol_node_path": "PatrolPath_Courtyard",
+        "position_xz_m": [
+          -128,
+          0
+        ],
+        "patrol_points_xz_m": [
+          [
+            -132,
+            0
+          ],
+          [
+            -128,
+            5
+          ],
+          [
+            -122,
+            5
+          ],
+          [
+            -122,
+            0
+          ]
+        ],
+        "preserve_existing_identity_loadout": true,
+        "status": "Proposed service-yard reservation from architecture worker; footprint/patrol swept-clearance checks pending",
+        "initial_yaw_deg_proposal": 0,
+        "patrol_root_identity": true,
+        "patrol_point_names": [
+          "P0",
+          "P1",
+          "P2",
+          "P3"
+        ]
+      },
+      {
+        "node_path": "Scav_Warehouse",
+        "zone_id": "town",
+        "patrol_node_path": "PatrolPath_Warehouse",
+        "position_xz_m": [
+          -42,
+          59
+        ],
+        "patrol_points_xz_m": [
+          [
+            -46,
+            59
+          ],
+          [
+            -42,
+            63
+          ],
+          [
+            -36,
+            63
+          ],
+          [
+            -36,
+            59
+          ]
+        ],
+        "preserve_existing_identity_loadout": true,
+        "status": "Proposed service-yard reservation from architecture worker; footprint/patrol swept-clearance checks pending",
+        "initial_yaw_deg_proposal": 0,
+        "patrol_root_identity": true,
+        "patrol_point_names": [
+          "P0",
+          "P1",
+          "P2",
+          "P3"
+        ]
+      },
+      {
+        "node_path": "Scav_OuterShed",
+        "zone_id": "town",
+        "patrol_node_path": "PatrolPath_OuterShed",
+        "position_xz_m": [
+          20,
+          95
+        ],
+        "patrol_points_xz_m": [
+          [
+            16,
+            95
+          ],
+          [
+            20,
+            99
+          ],
+          [
+            26,
+            99
+          ],
+          [
+            26,
+            95
+          ]
+        ],
+        "preserve_existing_identity_loadout": true,
+        "status": "Proposed service-yard reservation from architecture worker; footprint/patrol swept-clearance checks pending",
+        "initial_yaw_deg_proposal": 0,
+        "patrol_root_identity": true,
+        "patrol_point_names": [
+          "P0",
+          "P1",
+          "P2",
+          "P3"
+        ]
+      },
+      {
+        "node_path": "Scav_Farm",
+        "zone_id": "farmland",
+        "patrol_node_path": "PatrolPath_Farm",
+        "position_xz_m": [
+          -110,
+          186
+        ],
+        "patrol_points_xz_m": [
+          [
+            -114,
+            184
+          ],
+          [
+            -110,
+            186
+          ],
+          [
+            -104,
+            186
+          ],
+          [
+            -104,
+            182
+          ]
+        ],
+        "preserve_existing_identity_loadout": false,
+        "status": "Proposed service-yard reservation from architecture worker; footprint/patrol swept-clearance checks pending",
+        "initial_yaw_deg_proposal": 0,
+        "patrol_root_identity": true,
+        "patrol_point_names": [
+          "P0",
+          "P1",
+          "P2",
+          "P3"
+        ]
+      },
+      {
+        "node_path": "Scav_FactoryNorth",
+        "zone_id": "factory",
+        "patrol_node_path": "PatrolPath_FactoryNorth",
+        "position_xz_m": [
+          154,
+          -50
+        ],
+        "patrol_points_xz_m": [
+          [
+            150,
+            -50
+          ],
+          [
+            154,
+            -46
+          ],
+          [
+            160,
+            -46
+          ],
+          [
+            160,
+            -50
+          ]
+        ],
+        "preserve_existing_identity_loadout": false,
+        "status": "Proposed service-yard reservation from architecture worker; footprint/patrol swept-clearance checks pending",
+        "initial_yaw_deg_proposal": 0,
+        "patrol_root_identity": true,
+        "patrol_point_names": [
+          "P0",
+          "P1",
+          "P2",
+          "P3"
+        ]
+      },
+      {
+        "node_path": "Scav_FactorySouth",
+        "zone_id": "factory",
+        "patrol_node_path": "PatrolPath_FactorySouth",
+        "position_xz_m": [
+          166,
+          82
+        ],
+        "patrol_points_xz_m": [
+          [
+            162,
+            82
+          ],
+          [
+            166,
+            86
+          ],
+          [
+            172,
+            86
+          ],
+          [
+            172,
+            82
+          ]
+        ],
+        "preserve_existing_identity_loadout": false,
+        "status": "Proposed service-yard reservation from architecture worker; footprint/patrol swept-clearance checks pending",
+        "initial_yaw_deg_proposal": 0,
+        "patrol_root_identity": true,
+        "patrol_point_names": [
+          "P0",
+          "P1",
+          "P2",
+          "P3"
+        ]
+      },
+      {
+        "node_path": "Scav_Rail",
+        "zone_id": "rail",
+        "patrol_node_path": "PatrolPath_Rail",
+        "position_xz_m": [
+          190,
+          95
+        ],
+        "patrol_points_xz_m": [
+          [
+            186,
+            95
+          ],
+          [
+            190,
+            99
+          ],
+          [
+            196,
+            99
+          ],
+          [
+            196,
+            95
+          ]
+        ],
+        "preserve_existing_identity_loadout": false,
+        "status": "Proposed service-yard reservation from architecture worker; footprint/patrol swept-clearance checks pending",
+        "initial_yaw_deg_proposal": 0,
+        "patrol_root_identity": true,
+        "patrol_point_names": [
+          "P0",
+          "P1",
+          "P2",
+          "P3"
+        ]
+      },
+      {
+        "node_path": "Scav_Bunker",
+        "zone_id": "bunker",
+        "patrol_node_path": "PatrolPath_Bunker",
+        "position_xz_m": [
+          -149,
+          -132
+        ],
+        "patrol_points_xz_m": [
+          [
+            -156,
+            -132
+          ],
+          [
+            -152,
+            -136
+          ],
+          [
+            -145,
+            -136
+          ],
+          [
+            -145,
+            -132
+          ]
+        ],
+        "preserve_existing_identity_loadout": false,
+        "status": "Proposed service-yard reservation from architecture worker; footprint/patrol swept-clearance checks pending",
+        "initial_yaw_deg_proposal": 0,
+        "patrol_root_identity": true,
+        "patrol_point_names": [
+          "P0",
+          "P1",
+          "P2",
+          "P3"
+        ]
+      }
+    ]
+  },
+  "deep_water": {
+    "new_component_scope": "One small project-local Area3D handler only when existing native damage zone is unavailable; no swim/manager/save inventory logic",
+    "collision_layer": 0,
+    "collision_mask": 16,
+    "body_policy": "CogitoPlayer only; guard body valid/not dead and health>0; invoke body.take_damage(current health) once. Positive subtraction routes into native health death; repeated overlapping Areas cannot replay death.",
+    "authority_chain": [
+      "CogitoPlayer.take_damage -> decrease_attribute('health', amount)",
+      "CogitoHealthAttribute death -> raid_scene._on_player_death",
+      "raid_scene.finish_raid(false)",
+      "RaidSaveSnapshot.stage_scene(keep_carried_items=false)",
+      "TEMP Hub return and commit/result"
+    ],
+    "safe_exclusions": [
+      "All bank walkable pads and dry extract approach volumes",
+      "Both bridge floors/standing/crouch volumes including deck edge lean",
+      "Spawn pads",
+      "Bunker entryroom",
+      "Dock/gangway walkable deck"
+    ],
+    "no_direct_kit_clear_or_teleport": true,
+    "no_death_on_bridge": true,
+    "load_failure_policy": "Existing frozen death-return Retry/Quit; never restore carried kit to escape water"
+  },
+  "persistence": {
+    "schema_change": false,
+    "legacy_policy": "Keep old Town debug saves untouched. New placements are spatially incompatible; fresh Hub deployment is supported production entry. No coordinate migration or deletion.",
+    "why_root_identity": "NPCLootComponent sets corpse.position from NPC.global_position then adds it directly under Town; moved/scaled root would misplace corpse.",
+    "persist_rules": [
+      "Keep required Persist parents and save_object_state paths resolvable",
+      "Fresh deployment never restores old world NPC/pickup/corpse snapshots",
+      "Direct new-layout debug roundtrip preserves saved per-instance kit/health/ammo and corpse loot",
+      "Repurpose authored path wrappers instead of deleting parent needed by saved object records"
+    ],
+    "preserved_paths": [
+      "Player",
+      "RaidSpawn",
+      "Loot",
+      "Loot/Pickup_M700",
+      "Loot/Pickup_usp",
+      "Props",
+      "Props/GunLocker",
+      "Scav_Courtyard",
+      "Scav_Warehouse",
+      "Scav_OuterShed",
+      "PatrolPath_Courtyard",
+      "PatrolPath_Warehouse",
+      "PatrolPath_OuterShed",
+      "NavigationRegion3D/Level/OuterDetail/GarageLamp",
+      "NavigationRegion3D/Level/TownExpansion/IndustrialArchitecture",
+      "NavigationRegion3D/Level/TownExpansion/IndustrialArchitecture/Provision_water_bottle",
+      "NavigationRegion3D/Level/TownExpansion/IndustrialArchitecture/Provision_canned_meat_rect",
+      "NavigationRegion3D/Level/TownExpansion/CivicArchitecture",
+      "NavigationRegion3D/Level/TownExpansion/CivicArchitecture/Provision_canned_food",
+      "NavigationRegion3D/Level/TownExpansion/CivicArchitecture/Provision_ration_biscuits",
+      "DayNightCycle"
+    ]
+  },
+  "regression_reach": [
+    {
+      "fixture": "tests/raid_lifecycle_regression.gd",
+      "coverage": [
+        "Override nonempty pool for invalid/branch tests; scalar fallback only with empty pool",
+        "Deterministic both random branch outcomes, no statistical histogram",
+        "Kit/chamber/attachment preserve;8fresh NPCs/no corpses; loot reset",
+        "No commit on missing/unregistered/duplicate pool; keep stash/kit",
+        "Incoming fallback commit failure/abandon restart/process restart"
+      ]
+    },
+    {
+      "fixture": "tests/raid_deployment_regression.gd",
+      "coverage": [
+        "Selected root marker position/rotation before countdown",
+        "Duplicate Deploy does not reroll/dispatch twice",
+        "10s production duration; test override remains fixture-only",
+        "Combat/input/clock frozen08:00 until unlock",
+        "Quit after fallback loses kit, stash preserved"
+      ]
+    },
+    {
+      "fixture": "tests/raid_return_regression.gd",
+      "coverage": [
+        "Parameterize four authored zone paths, preserve legacy E1/E2 argument aliases if retained",
+        "Four native5s defaults and exactly4active",
+        "Single press followed by release continues; leave/UI/movement pause/death cancels",
+        "Extract retains equipment/pockets/ammo/attachments; death clears equipment/pockets/quickslots/PIC",
+        "Failed return recovery/Retry exact stash and kit rules"
+      ]
+    },
+    {
+      "fixture": "tests/town_expansion_regression.gd",
+      "coverage": [
+        "New approved catalogue count replaces old33/17/4 assumptions",
+        "2spawns/4extracts;8controller walks, dry pads/approaches",
+        "Each bridge independently plus water negative jump/bank/edge checks",
+        "Actor/nav reach, all authored patrol segments clear actual footprint",
+        "Updated500m ground heights/interiors/gangway/bounds, no roof/bed nav"
+      ]
+    },
+    {
+      "fixture": "tests/town_baseline_regression.gd",
+      "coverage": [
+        "Keep original player/loot/Scav identities",
+        "Pickup/equip/fire/ADS/reload conservation",
+        "NPC death exactly1corpse and same kit",
+        "New-layout debug save/load does not reroll/resurrect dead NPC/copy corpse"
+      ]
+    },
+    {
+      "fixture": "tests/day_night_cycle_regression.gd",
+      "coverage": [
+        "30min08:00 wrap/freeze/Environment isolation/options"
+      ]
+    },
+    {
+      "fixture": "tests/raid_fade_regression.gd; tests/raid_transition_regression.gd; tests/raid_result_regression.gd",
+      "coverage": [
+        "Await own fade; transition failure thaw; result Retry/Continue preserved"
+      ]
+    },
+    {
+      "fixture": "tests/corpse_loot_volume_regression.gd",
+      "coverage": [
+        "Identity-root corpse placement and native interactions"
+      ]
+    },
+    {
+      "fixture": "Existing raid-return fixture plus small native water assertion",
+      "coverage": [
+        "Entry submerged water produces one native death return",
+        "All5safe geometry kinds and bridge/crouch/lean negative cases",
+        "Stash retained; carried kit lost; failed return stays dead until Retry"
+      ]
+    }
+  ],
+  "graph_review": {
+    "status": "Pending terrain canonical graph and building catalogue; no graph/native reachability claim",
+    "required_pairs": 8,
+    "bridge_count": 2,
+    "bridge_cut_rule": "Remove either bridge: both banks remain connected through other. Remove both: banks disconnected. Shoreline/river mouth/map edges never introduce land bypass.",
+    "marker_requirement": "Each exact marker has an explicit dry-pad port and an approach edge to graph, not nearest-node existence alone",
+    "physical_gate": "Graph connection is not navmesh/controller PASS"
+  }
+}

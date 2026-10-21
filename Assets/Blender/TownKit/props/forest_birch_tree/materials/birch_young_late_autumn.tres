@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Blender/TownKit/props/forest_birch_tree/textures/birch_young_late_autumn_albedo.png" id="1_w4rbc"]
+[ext_resource type="Texture2D" path="res://Assets/Blender/TownKit/props/forest_birch_tree/textures/birch_young_late_autumn_orm.png" id="2_y6kr1"]
+
+[resource]
+resource_name = "birch_young_late_autumn"
+albedo_texture = ExtResource("1_w4rbc")
+metallic = 1.0
+metallic_texture = ExtResource("2_y6kr1")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_y6kr1")
+roughness_texture_channel = 1
+metadata/seed = 191
+metadata/moss_coverage_percent = 8.0

@@ -1,0 +1,2609 @@
+{
+  "status": "OFFLINE_REVIEW_1_XZ_CONFLICT_ACCEPTED_CEILING_MOUNT_NATIVE_PENDING",
+  "scope": "Read-only review of39 relocation entries:13 lamp bases,2 compound spots,GarageLamp,8 props/pickups,3Scavs,12waypoints; native import/contact/nav not performed.",
+  "source_sha256": {
+    "Scene/Town.tscn": "275bd53376918812ccd6b1f5c28d2c6b8ebd59a62aa3aea6a478356025e229fc",
+    "design/town-500m/building-catalogue.json": "271ac4c21013c72e063d5cb43850d6f0a8f20b3bfcc6269d60ee1f7780c9051b",
+    "design/town-500m/layout.json": "3eaf13391a1fd9781a20bb179bab8f60c88a9a4a14384f8a738b3b7539aab81b",
+    "design/town-500m/terrain-contract.json": "b0221b5ea78784b24899a14696238dfd58441a8b04ec62434c267a1a7667a87a",
+    "design/town-500m/gameplay-contract.json": "69608bd5625bb0069d6c3298bb0062b5c8780bd97412208a4d18f04361d18cd4",
+    "design/town-500m/phase2/terrain-authoring.cjs": "6195f4e5bb00517103356f671e4e89841df07c89565bace123e907b68829865c",
+    "design/town-500m/phase3/gameplay-placement-proposal.json": "3587d5514a60b7324142bedddb81581477e25150799ee2febb67c35913bcf3fe",
+    "design/town-500m/phase3/dressing-proposal.json": "432134c590483a2b2de08ac0c8a735f907d0f49ce8146eb37d3e6a5279e36d79",
+    "Scene/Props/TownKit/utility_street_lamp_5m.tscn": "feb0fe36da432b34041a8860a3b0aaec1fd57dce4fb1cc6a923f741ac6e01616",
+    "Assets/Blender/TownKit/assets/utility_street_lamp_5m.glb": "05c35222a3802f9497ef3449ac591656a85cf56b851d4957b594632779ead04a",
+    "Scene/Props/TownKit/Buildings/t06_garage.tscn": "c84215394bfe6c75deca1acd945b926b51f9d9e6ae23f45ee5d0e38b616e36d6"
+  },
+  "proposal_provenance": {
+    "Scene/Town.tscn": {
+      "proposal_sha256": "275bd53376918812ccd6b1f5c28d2c6b8ebd59a62aa3aea6a478356025e229fc",
+      "current_sha256": "275bd53376918812ccd6b1f5c28d2c6b8ebd59a62aa3aea6a478356025e229fc",
+      "matches": true
+    },
+    "design/town-500m/building-catalogue.json": {
+      "proposal_sha256": "f11a06463edcf958e32b0e06d5be1a9bf64790e44566c46151a14f01404a0738",
+      "current_sha256": "271ac4c21013c72e063d5cb43850d6f0a8f20b3bfcc6269d60ee1f7780c9051b",
+      "matches": false
+    },
+    "design/town-500m/layout.json": {
+      "proposal_sha256": "c4bceab4151b73d46a6a7fec607a0d4232e8e0296eb067211e2df9c6db2b1d82",
+      "current_sha256": "3eaf13391a1fd9781a20bb179bab8f60c88a9a4a14384f8a738b3b7539aab81b",
+      "matches": false
+    },
+    "design/town-500m/terrain-contract.json": {
+      "proposal_sha256": "ac3354b4886d56092043aa018a3f40362fedc1fb3e60cb40dac48594d2380f99",
+      "current_sha256": "b0221b5ea78784b24899a14696238dfd58441a8b04ec62434c267a1a7667a87a",
+      "matches": false
+    },
+    "design/town-500m/gameplay-contract.json": {
+      "proposal_sha256": "69608bd5625bb0069d6c3298bb0062b5c8780bd97412208a4d18f04361d18cd4",
+      "current_sha256": "69608bd5625bb0069d6c3298bb0062b5c8780bd97412208a4d18f04361d18cd4",
+      "matches": true
+    },
+    "design/town-500m/phase2/terrain-authoring.cjs": {
+      "proposal_sha256": "6195f4e5bb00517103356f671e4e89841df07c89565bace123e907b68829865c",
+      "current_sha256": "6195f4e5bb00517103356f671e4e89841df07c89565bace123e907b68829865c",
+      "matches": true
+    }
+  },
+  "canonical_counts": {
+    "cover": 83,
+    "vegetation": 93
+  },
+  "entries": [
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_00",
+      "kind": "streetlamp_base",
+      "position_m": [
+        -150,
+        2,
+        27.427872
+      ],
+      "collider_xz_bounds_local_m": [
+        [
+          -0.16,
+          -0.16
+        ],
+        [
+          0.16,
+          0.16
+        ]
+      ],
+      "clearances_m": {
+        "building": {
+          "id": "T05-A",
+          "clearance_m": 25.352269986894346
+        },
+        "solid_cover": {
+          "id": "C01-01",
+          "clearance_m": 26.627683174471336
+        },
+        "trunk": {
+          "id": "A010",
+          "clearance_m": 44.94921111752564
+        },
+        "fence": {
+          "id": "BUNKER:3",
+          "clearance_m": 147.617872
+        },
+        "corridor": {
+          "id": "P01",
+          "clearance_m": 2.778227821410442
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_01",
+      "kind": "streetlamp_base",
+      "position_m": [
+        -120,
+        2,
+        24.019872
+      ],
+      "collider_xz_bounds_local_m": [
+        [
+          -0.16,
+          -0.16
+        ],
+        [
+          0.16,
+          0.16
+        ]
+      ],
+      "clearances_m": {
+        "building": {
+          "id": "T05-B",
+          "clearance_m": 23.820128
+        },
+        "solid_cover": {
+          "id": "C01-01",
+          "clearance_m": 14.207099119551264
+        },
+        "trunk": {
+          "id": "A010",
+          "clearance_m": 71.62919294900406
+        },
+        "fence": {
+          "id": "BUNKER:2",
+          "clearance_m": 144.20987200000002
+        },
+        "corridor": {
+          "id": "P01",
+          "clearance_m": 2.7782278214104403
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_02",
+      "kind": "streetlamp_base",
+      "position_m": [
+        -90,
+        2,
+        20.611872
+      ],
+      "collider_xz_bounds_local_m": [
+        [
+          -0.16,
+          -0.16
+        ],
+        [
+          0.16,
+          0.16
+        ]
+      ],
+      "clearances_m": {
+        "building": {
+          "id": "T02-A",
+          "clearance_m": 31.6854201850691
+        },
+        "solid_cover": {
+          "id": "LOS_M_RETURN",
+          "clearance_m": 29.690000000000005
+        },
+        "trunk": {
+          "id": "A010",
+          "clearance_m": 100.31319364092084
+        },
+        "fence": {
+          "id": "BUNKER:2",
+          "clearance_m": 140.801872
+        },
+        "corridor": {
+          "id": "P01",
+          "clearance_m": 2.778227821410443
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_03",
+      "kind": "streetlamp_base",
+      "position_m": [
+        -60,
+        2,
+        17.274267
+      ],
+      "collider_xz_bounds_local_m": [
+        [
+          -0.16,
+          -0.16
+        ],
+        [
+          0.16,
+          0.16
+        ]
+      ],
+      "clearances_m": {
+        "building": {
+          "id": "T03-A",
+          "clearance_m": 27.796158096889737
+        },
+        "solid_cover": {
+          "id": "LOS_M_RETURN",
+          "clearance_m": 0
+        },
+        "trunk": {
+          "id": "H016",
+          "clearance_m": 122.95677185806635
+        },
+        "fence": {
+          "id": "BUNKER:2",
+          "clearance_m": 138.8250582634392
+        },
+        "corridor": {
+          "id": "P01",
+          "clearance_m": 2.686484205082932
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_04",
+      "kind": "streetlamp_base",
+      "position_m": [
+        -30,
+        2.064888137,
+        23.048733
+      ],
+      "collider_xz_bounds_local_m": [
+        [
+          -0.16,
+          -0.16
+        ],
+        [
+          0.16,
+          0.16
+        ]
+      ],
+      "clearances_m": {
+        "building": {
+          "id": "T03-A",
+          "clearance_m": 28.305600653321047
+        },
+        "solid_cover": {
+          "id": "C01-02",
+          "clearance_m": 17.614687083413322
+        },
+        "trunk": {
+          "id": "G003",
+          "clearance_m": 138.81532150289792
+        },
+        "fence": {
+          "id": "BUNKER:2",
+          "clearance_m": 151.51470797069598
+        },
+        "corridor": {
+          "id": "P01",
+          "clearance_m": 2.686909221508218
+        }
+      },
+      "corrected_terrain_y_m": 2.0648881367685723,
+      "terrain_y_delta_m": -2.3142776583995328e-10
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_05",
+      "kind": "streetlamp_base",
+      "position_m": [
+        0,
+        2.138610006,
+        28.823199
+      ],
+      "collider_xz_bounds_local_m": [
+        [
+          -0.16,
+          -0.16
+        ],
+        [
+          0.16,
+          0.16
+        ]
+      ],
+      "clearances_m": {
+        "building": {
+          "id": "T07-C",
+          "clearance_m": 33.56944360983067
+        },
+        "solid_cover": {
+          "id": "C01-02",
+          "clearance_m": 8.035584144137733
+        },
+        "trunk": {
+          "id": "G003",
+          "clearance_m": 110.14721724353234
+        },
+        "fence": {
+          "id": "DEPOT_NORTH:3",
+          "clearance_m": 145.43894984464652
+        },
+        "corridor": {
+          "id": "P01",
+          "clearance_m": 2.6873342379335057
+        }
+      },
+      "corrected_terrain_y_m": 2.1386100057948556,
+      "terrain_y_delta_m": -2.0514434595497733e-10
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_06",
+      "kind": "streetlamp_base",
+      "position_m": [
+        30,
+        2.091194432,
+        34.597665
+      ],
+      "collider_xz_bounds_local_m": [
+        [
+          -0.16,
+          -0.16
+        ],
+        [
+          0.16,
+          0.16
+        ]
+      ],
+      "clearances_m": {
+        "building": {
+          "id": "T08-A",
+          "clearance_m": 32.95988116259258
+        },
+        "solid_cover": {
+          "id": "C01-02",
+          "clearance_m": 38.57540521376546
+        },
+        "trunk": {
+          "id": "G011",
+          "clearance_m": 80.3076522611518
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 120.06451245477253
+        },
+        "corridor": {
+          "id": "P06",
+          "clearance_m": 0.5684731723354406
+        }
+      },
+      "corrected_terrain_y_m": 2.0911944319340345,
+      "terrain_y_delta_m": -6.596545532033815e-11
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_07",
+      "kind": "streetlamp_base",
+      "position_m": [
+        -64,
+        2,
+        56
+      ],
+      "collider_xz_bounds_local_m": [
+        [
+          -0.16,
+          -0.16
+        ],
+        [
+          0.16,
+          0.16
+        ]
+      ],
+      "clearances_m": {
+        "building": {
+          "id": "T06-B",
+          "clearance_m": 13.961776391276295
+        },
+        "solid_cover": {
+          "id": "C02-01",
+          "clearance_m": 6.250049999800002
+        },
+        "trunk": {
+          "id": "A006",
+          "clearance_m": 118.49317503646328
+        },
+        "fence": {
+          "id": "BUNKER:2",
+          "clearance_m": 176.8608724393273
+        },
+        "corridor": {
+          "id": "P05",
+          "clearance_m": 2.3600000000000065
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_08",
+      "kind": "streetlamp_base",
+      "position_m": [
+        -64,
+        2,
+        88
+      ],
+      "collider_xz_bounds_local_m": [
+        [
+          -0.16,
+          -0.16
+        ],
+        [
+          0.16,
+          0.16
+        ]
+      ],
+      "clearances_m": {
+        "building": {
+          "id": "T06-C",
+          "clearance_m": 3.8400000000000034
+        },
+        "solid_cover": {
+          "id": "LOS_P05_RETURN",
+          "clearance_m": 7.689999999999998
+        },
+        "trunk": {
+          "id": "A006",
+          "clearance_m": 113.80020263151438
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 195.1948790952263
+        },
+        "corridor": {
+          "id": "P05",
+          "clearance_m": 2.3600000000000065
+        }
+      },
+      "corrected_terrain_y_m": 1.9999999999999998,
+      "terrain_y_delta_m": -2.220446049250313e-16
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_09",
+      "kind": "streetlamp_base",
+      "position_m": [
+        -77,
+        2,
+        140
+      ],
+      "collider_xz_bounds_local_m": [
+        [
+          -0.16,
+          -0.16
+        ],
+        [
+          0.16,
+          0.16
+        ]
+      ],
+      "clearances_m": {
+        "building": {
+          "id": "T10-C",
+          "clearance_m": 21.877778680661354
+        },
+        "solid_cover": {
+          "id": "LOS_P05_KIOSK_RETURN",
+          "clearance_m": 31.63971712895044
+        },
+        "trunk": {
+          "id": "A007",
+          "clearance_m": 109.78318097799384
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 211.6098315887048
+        },
+        "corridor": {
+          "id": "P05",
+          "clearance_m": 2.0978581830666627
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_10",
+      "kind": "streetlamp_base",
+      "position_m": [
+        45,
+        2,
+        60
+      ],
+      "collider_xz_bounds_local_m": [
+        [
+          -0.16,
+          -0.16
+        ],
+        [
+          0.16,
+          0.16
+        ]
+      ],
+      "clearances_m": {
+        "building": {
+          "id": "T08-A",
+          "clearance_m": 22.886048151657818
+        },
+        "solid_cover": {
+          "id": "LOS_P06_RETURN",
+          "clearance_m": 35.69
+        },
+        "trunk": {
+          "id": "G006",
+          "clearance_m": 63.493735415075705
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 94.60317555452353
+        },
+        "corridor": {
+          "id": "P06",
+          "clearance_m": 2.630000000000007
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_11",
+      "kind": "streetlamp_base",
+      "position_m": [
+        45,
+        2,
+        100
+      ],
+      "collider_xz_bounds_local_m": [
+        [
+          -0.16,
+          -0.16
+        ],
+        [
+          0.16,
+          0.16
+        ]
+      ],
+      "clearances_m": {
+        "building": {
+          "id": "T08-B",
+          "clearance_m": 21.79750444431656
+        },
+        "solid_cover": {
+          "id": "LOS_P06_RETURN",
+          "clearance_m": 3.6899999999999977
+        },
+        "trunk": {
+          "id": "G008",
+          "clearance_m": 71.6171171157086
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 85.84
+        },
+        "corridor": {
+          "id": "P06",
+          "clearance_m": 1.5400000000000034
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_12",
+      "kind": "streetlamp_base",
+      "position_m": [
+        45,
+        2,
+        140
+      ],
+      "collider_xz_bounds_local_m": [
+        [
+          -0.16,
+          -0.16
+        ],
+        [
+          0.16,
+          0.16
+        ]
+      ],
+      "clearances_m": {
+        "building": {
+          "id": "T12-B",
+          "clearance_m": 16.840000000000003
+        },
+        "solid_cover": {
+          "id": "LOS_P06_RETURN",
+          "clearance_m": 43.69
+        },
+        "trunk": {
+          "id": "G008",
+          "clearance_m": 92.9918500887429
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 94.60317555452353
+        },
+        "corridor": {
+          "id": "P06",
+          "clearance_m": 5.5562633620123965
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "Scav_Courtyard",
+      "kind": "scav_capsule",
+      "position_m": [
+        -128,
+        2.05,
+        0
+      ],
+      "capsule_radius_m": 0.33,
+      "clearances_m": {
+        "building": {
+          "id": "T01-C",
+          "clearance_m": 9.171575655251392
+        },
+        "solid_cover": {
+          "id": "C01-01",
+          "clearance_m": 7.894798758796625
+        },
+        "trunk": {
+          "id": "A010",
+          "clearance_m": 79.69880302515266
+        },
+        "fence": {
+          "id": "BUNKER:2",
+          "clearance_m": 120.02000000000001
+        },
+        "corridor": {
+          "id": "ACCESS_T01-A",
+          "clearance_m": 11.55051284130799
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "Scav_Warehouse",
+      "kind": "scav_capsule",
+      "position_m": [
+        -42,
+        2.05,
+        59
+      ],
+      "capsule_radius_m": 0.33,
+      "clearances_m": {
+        "building": {
+          "id": "T07-A",
+          "clearance_m": 6.703566215082836
+        },
+        "solid_cover": {
+          "id": "C02-04",
+          "clearance_m": 20.820286117150264
+        },
+        "trunk": {
+          "id": "A006",
+          "clearance_m": 138.90969266448766
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 177.37779715905825
+        },
+        "corridor": {
+          "id": "ACCESS_T07-A",
+          "clearance_m": 9.95033640031497
+        }
+      },
+      "corrected_terrain_y_m": 1.9999999999999998,
+      "terrain_y_delta_m": -2.220446049250313e-16
+    },
+    {
+      "node_path": "Scav_OuterShed",
+      "kind": "scav_capsule",
+      "position_m": [
+        20,
+        2.05,
+        95
+      ],
+      "capsule_radius_m": 0.33,
+      "clearances_m": {
+        "building": {
+          "id": "T08-B",
+          "clearance_m": 8.829371438556656
+        },
+        "solid_cover": {
+          "id": "LOS_P06_RETURN",
+          "clearance_m": 7.687606909825711
+        },
+        "trunk": {
+          "id": "G008",
+          "clearance_m": 94.22456529091835
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 110.76535074200777
+        },
+        "corridor": {
+          "id": "ACCESS_T12-A",
+          "clearance_m": 14.470000000000004
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "PatrolPath_Courtyard/P0",
+      "kind": "patrol_waypoint_capsule_envelope",
+      "position_m": [
+        -132,
+        2,
+        0
+      ],
+      "capsule_radius_m": 0.33,
+      "clearances_m": {
+        "building": {
+          "id": "T01-C",
+          "clearance_m": 9.171575655251392
+        },
+        "solid_cover": {
+          "id": "C01-01",
+          "clearance_m": 8.15580940506108
+        },
+        "trunk": {
+          "id": "A010",
+          "clearance_m": 76.98539527884806
+        },
+        "fence": {
+          "id": "BUNKER:2",
+          "clearance_m": 120.02000000000001
+        },
+        "corridor": {
+          "id": "ACCESS_T01-A",
+          "clearance_m": 7.576075610789909
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "PatrolPath_Courtyard/P1",
+      "kind": "patrol_waypoint_capsule_envelope",
+      "position_m": [
+        -128,
+        2,
+        5
+      ],
+      "capsule_radius_m": 0.33,
+      "clearances_m": {
+        "building": {
+          "id": "T01-C",
+          "clearance_m": 14.171019723365005
+        },
+        "solid_cover": {
+          "id": "C01-01",
+          "clearance_m": 2.943256830010857
+        },
+        "trunk": {
+          "id": "A010",
+          "clearance_m": 76.16639792782716
+        },
+        "fence": {
+          "id": "BUNKER:2",
+          "clearance_m": 125.02000000000001
+        },
+        "corridor": {
+          "id": "P01",
+          "clearance_m": 8.480909337247002
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "PatrolPath_Courtyard/P2",
+      "kind": "patrol_waypoint_capsule_envelope",
+      "position_m": [
+        -122,
+        2,
+        5
+      ],
+      "capsule_radius_m": 0.33,
+      "clearances_m": {
+        "building": {
+          "id": "T01-C",
+          "clearance_m": 15.455025072771639
+        },
+        "solid_cover": {
+          "id": "C01-01",
+          "clearance_m": 4.313503591443667
+        },
+        "trunk": {
+          "id": "A010",
+          "clearance_m": 80.61403904814941
+        },
+        "fence": {
+          "id": "BUNKER:2",
+          "clearance_m": 125.02000000000001
+        },
+        "corridor": {
+          "id": "P01",
+          "clearance_m": 7.803665233166722
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "PatrolPath_Courtyard/P3",
+      "kind": "patrol_waypoint_capsule_envelope",
+      "position_m": [
+        -122,
+        2,
+        0
+      ],
+      "capsule_radius_m": 0.33,
+      "clearances_m": {
+        "building": {
+          "id": "T01-C",
+          "clearance_m": 11.052501979190051
+        },
+        "solid_cover": {
+          "id": "C01-01",
+          "clearance_m": 8.838851474389912
+        },
+        "trunk": {
+          "id": "A010",
+          "clearance_m": 83.96075533591357
+        },
+        "fence": {
+          "id": "BUNKER:2",
+          "clearance_m": 120.02000000000001
+        },
+        "corridor": {
+          "id": "P01",
+          "clearance_m": 12.771711771314326
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "PatrolPath_Warehouse/P0",
+      "kind": "patrol_waypoint_capsule_envelope",
+      "position_m": [
+        -46,
+        2,
+        59
+      ],
+      "capsule_radius_m": 0.33,
+      "clearances_m": {
+        "building": {
+          "id": "T07-A",
+          "clearance_m": 8.142346099251741
+        },
+        "solid_cover": {
+          "id": "C02-04",
+          "clearance_m": 17.01823474982056
+        },
+        "trunk": {
+          "id": "A006",
+          "clearance_m": 135.0066483375737
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 181.27394441838575
+        },
+        "corridor": {
+          "id": "ACCESS_T07-A",
+          "clearance_m": 9.770000000000001
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "PatrolPath_Warehouse/P1",
+      "kind": "patrol_waypoint_capsule_envelope",
+      "position_m": [
+        -42,
+        2,
+        63
+      ],
+      "capsule_radius_m": 0.33,
+      "clearances_m": {
+        "building": {
+          "id": "T07-A",
+          "clearance_m": 2.7527804126010507
+        },
+        "solid_cover": {
+          "id": "C02-04",
+          "clearance_m": 20.06799227625923
+        },
+        "trunk": {
+          "id": "A006",
+          "clearance_m": 138.10170016266792
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 176.50530565679892
+        },
+        "corridor": {
+          "id": "ACCESS_T07-A",
+          "clearance_m": 6.054840041294984
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "PatrolPath_Warehouse/P2",
+      "kind": "patrol_waypoint_capsule_envelope",
+      "position_m": [
+        -36,
+        2,
+        63
+      ],
+      "capsule_radius_m": 0.33,
+      "clearances_m": {
+        "building": {
+          "id": "T07-A",
+          "clearance_m": 2.6700000000000017
+        },
+        "solid_cover": {
+          "id": "C02-04",
+          "clearance_m": 26.048422485824364
+        },
+        "trunk": {
+          "id": "A006",
+          "clearance_m": 143.9989363006072
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 170.64021485277146
+        },
+        "corridor": {
+          "id": "ACCESS_T07-A",
+          "clearance_m": 9.49277633743746
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "PatrolPath_Warehouse/P3",
+      "kind": "patrol_waypoint_capsule_envelope",
+      "position_m": [
+        -36,
+        2,
+        59
+      ],
+      "capsule_radius_m": 0.33,
+      "clearances_m": {
+        "building": {
+          "id": "T07-A",
+          "clearance_m": 6.670000000000002
+        },
+        "solid_cover": {
+          "id": "C02-04",
+          "clearance_m": 26.63231709784187
+        },
+        "trunk": {
+          "id": "G006",
+          "clearance_m": 144.21063298431977
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 171.54253969496898
+        },
+        "corridor": {
+          "id": "ACCESS_T07-A",
+          "clearance_m": 12.418025379161884
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "PatrolPath_OuterShed/P0",
+      "kind": "patrol_waypoint_capsule_envelope",
+      "position_m": [
+        16,
+        2,
+        95
+      ],
+      "capsule_radius_m": 0.33,
+      "clearances_m": {
+        "building": {
+          "id": "T08-B",
+          "clearance_m": 10.359430486276745
+        },
+        "solid_cover": {
+          "id": "LOS_P06_RETURN",
+          "clearance_m": 11.681579516486632
+        },
+        "trunk": {
+          "id": "G008",
+          "clearance_m": 98.14499987338567
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 114.7620273653267
+        },
+        "corridor": {
+          "id": "ACCESS_T12-A",
+          "clearance_m": 14.90208214128759
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "PatrolPath_OuterShed/P1",
+      "kind": "patrol_waypoint_capsule_envelope",
+      "position_m": [
+        20,
+        2,
+        99
+      ],
+      "capsule_radius_m": 0.33,
+      "clearances_m": {
+        "building": {
+          "id": "T08-B",
+          "clearance_m": 12.779585282785982
+        },
+        "solid_cover": {
+          "id": "LOS_P06_RETURN",
+          "clearance_m": 8.073369804486846
+        },
+        "trunk": {
+          "id": "G008",
+          "clearance_m": 95.11485670609471
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 110.67159945080763
+        },
+        "corridor": {
+          "id": "ACCESS_T12-A",
+          "clearance_m": 10.470000000000004
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "PatrolPath_OuterShed/P2",
+      "kind": "patrol_waypoint_capsule_envelope",
+      "position_m": [
+        26,
+        2,
+        99
+      ],
+      "capsule_radius_m": 0.33,
+      "clearances_m": {
+        "building": {
+          "id": "T08-B",
+          "clearance_m": 12.670000000000002
+        },
+        "solid_cover": {
+          "id": "LOS_P06_RETURN",
+          "clearance_m": 3.0231275196392207
+        },
+        "trunk": {
+          "id": "G008",
+          "clearance_m": 89.30562510212631
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 104.6716911347094
+        },
+        "corridor": {
+          "id": "ACCESS_T12-A",
+          "clearance_m": 10.470000000000008
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "PatrolPath_OuterShed/P3",
+      "kind": "patrol_waypoint_capsule_envelope",
+      "position_m": [
+        26,
+        2,
+        95
+      ],
+      "capsule_radius_m": 0.33,
+      "clearances_m": {
+        "building": {
+          "id": "T08-B",
+          "clearance_m": 8.670000000000002
+        },
+        "solid_cover": {
+          "id": "LOS_P06_RETURN",
+          "clearance_m": 1.7490854753270357
+        },
+        "trunk": {
+          "id": "G008",
+          "clearance_m": 88.35720031572842
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 104.77081141711177
+        },
+        "corridor": {
+          "id": "ACCESS_T12-A",
+          "clearance_m": 14.470000000000008
+        }
+      },
+      "corrected_terrain_y_m": 2,
+      "terrain_y_delta_m": 0
+    },
+    {
+      "node_path": "Props/Crate5",
+      "kind": "interior_pickup_or_prop",
+      "position_m": [
+        20,
+        2.214561668,
+        73
+      ],
+      "host_building": "T08-A",
+      "collider_boxes_or_concave_parts": 6,
+      "world_collider_bounds_m": {
+        "min": [
+          19.26080693,
+          2.2099999997847126,
+          72.50703446236533
+        ],
+        "max": [
+          20.747490045000003,
+          3.109910579019878,
+          73.3115234375
+        ]
+      },
+      "current_host_floor_y_m": 2.2,
+      "current_host_ceiling_y_m": 6.7,
+      "support_floor_delta_m": 0,
+      "clearances_m": {
+        "building": {
+          "id": "T08-B",
+          "clearance_m": 9.219544456696335
+        },
+        "solid_cover": {
+          "id": "LOS_P06_RETURN",
+          "clearance_m": 24.209966955143702
+        },
+        "trunk": {
+          "id": "G006",
+          "clearance_m": 90.19538351955838
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 114.21889346715838
+        },
+        "corridor": {
+          "id": "ACCESS_T08-A",
+          "clearance_m": 8.399999999500002
+        }
+      },
+      "floor_clearance_m": 0.009999999784712443,
+      "host_rectangular_wall_inner_clearance_m": 2.002509954999997
+    },
+    {
+      "node_path": "Props/GunLocker",
+      "kind": "interior_pickup_or_prop",
+      "position_m": [
+        11,
+        2.21,
+        74
+      ],
+      "host_building": "T08-A",
+      "collider_boxes_or_concave_parts": 6,
+      "world_collider_bounds_m": {
+        "min": [
+          10.657270780637896,
+          2.21,
+          73.34730678654653
+        ],
+        "max": [
+          11.332401228530127,
+          4.7530748,
+          74.65269321452972
+        ]
+      },
+      "current_host_floor_y_m": 2.2,
+      "current_host_ceiling_y_m": 6.7,
+      "support_floor_delta_m": 0,
+      "clearances_m": {
+        "building": {
+          "id": "T08-B",
+          "clearance_m": 13.601470508036993
+        },
+        "solid_cover": {
+          "id": "LOS_P06_RETURN",
+          "clearance_m": 27.68433672604691
+        },
+        "trunk": {
+          "id": "G006",
+          "clearance_m": 99.22224436997487
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 122.76850420549269
+        },
+        "corridor": {
+          "id": "ACCESS_T08-A",
+          "clearance_m": 10.549454134791755
+        }
+      },
+      "floor_clearance_m": 0.009999999999999787,
+      "host_rectangular_wall_inner_clearance_m": 1.4072707806378961
+    },
+    {
+      "node_path": "Loot/Pickup_M700",
+      "kind": "interior_pickup_or_prop",
+      "position_m": [
+        20,
+        2.330665,
+        75
+      ],
+      "basis": [
+        0,
+        1,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "status": "NATIVE_BOUNDS_FLOOR_PICKUP_EQUIP_PASS",
+      "reason": "Instance-only 90-degree Z roll with unit scale: legacy root maps rifle long axis vertically and its transformed visual AABB penetrates the support floor despite grounded collider. Preserve shared pickup and every child transform.",
+      "host_building": "T08-A",
+      "collider_boxes_or_concave_parts": 1,
+      "world_collider_bounds_m": {
+        "min": [
+          19.707447052002,
+          2.22235488891602,
+          73.5621719360352
+        ],
+        "max": [
+          20.3000259399414,
+          2.43563270568848,
+          76.0864944458008
+        ]
+      },
+      "current_host_floor_y_m": 2.2,
+      "current_host_ceiling_y_m": 6.7,
+      "support_floor_delta_m": 0,
+      "clearances_m": null,
+      "floor_clearance_m": 0.0223546028137207,
+      "host_rectangular_wall_inner_clearance_m": null,
+      "planned_offline_pose_bounds": {
+        "collider_relative_y_m": [
+          -0.11066549026005833,
+          0.10732291506005832
+        ],
+        "visual_aabb_relative_y_m": [
+          -0.09891376131345762,
+          0.12612960105096202
+        ],
+        "expected_collider_floor_clearance_m": 0.01999950973994169,
+        "expected_visual_aabb_floor_clearance_m": 0.031751238686542387,
+        "source": "Offline shape/AABB corners against historical floor2.2; expected values only, native verification pending."
+      },
+      "historical_prior_pose": {
+        "position_m": [
+          20,
+          3.294223572,
+          75
+        ],
+        "world_collider_bounds_m": {
+          "min": [
+            19.71875682864881,
+            2.210000000163267,
+            74.73899771738404
+          ],
+          "max": [
+            20.289061522769675,
+            4.729788182300345,
+            75.26342400371315
+          ]
+        },
+        "clearances_m": {
+          "building": {
+            "id": "T08-B",
+            "clearance_m": 7.280109888662402
+          },
+          "solid_cover": {
+            "id": "LOS_P06_RETURN",
+            "clearance_m": 22.332095736207787
+          },
+          "trunk": {
+            "id": "G006",
+            "clearance_m": 90.60200823317007
+          },
+          "fence": {
+            "id": "DEPOT_SOUTH:0",
+            "clearance_m": 113.76403484785548
+          },
+          "corridor": {
+            "id": "ACCESS_T08-A",
+            "clearance_m": 10.399999999500002
+          }
+        },
+        "floor_clearance_m": 0.010000000163266964,
+        "host_rectangular_wall_inner_clearance_m": 1.4865759962868452,
+        "scope": "Original offline bounds/clearances for legacy upright basis; not current pose evidence or native PASS."
+      },
+      "native_verification": {
+        "date": "2026-10-10",
+        "receipt": "tests/artifacts/town500_phase3/capture-native.json",
+        "receipt_sha256": "01f0b5a3bf06c0ad52491c5379cf0970052d73ee67e622b08a4fdef5e7140a2d",
+        "source_town_sha256": "c9e1098da9285b83e17d795435f9a8e647fe3966caacb03720200d05b720221b",
+        "pose": {
+          "collider_max": [
+            20.3000259399414,
+            2.43563270568848,
+            76.0864944458008
+          ],
+          "collider_min": [
+            19.707447052002,
+            2.22235488891602,
+            73.5621719360352
+          ],
+          "collider_paths": [
+            "/root/Town/Loot/Pickup_M700/CollisionShape3D"
+          ],
+          "floor_probes": [
+            {
+              "collider": "/root/Town/NavigationRegion3D/Level/TownCore/T08/T08_A/Architecture/GroundFloor",
+              "collider_clearance_m": 0.0223546028137207,
+              "floor": [
+                19.7301940917969,
+                2.20000028610229,
+                73.5671539306641
+              ],
+              "from": [
+                19.7301940917969,
+                2.73370599746704,
+                73.5671539306641
+              ],
+              "visual_clearance_m": 0.0337057113647461
+            },
+            {
+              "collider": "/root/Town/NavigationRegion3D/Level/TownCore/T08/T08_A/Architecture/GroundFloor",
+              "collider_clearance_m": 0.0223546028137207,
+              "floor": [
+                19.7301940917969,
+                2.20000028610229,
+                74.8117828369141
+              ],
+              "from": [
+                19.7301940917969,
+                2.73370599746704,
+                74.8117828369141
+              ],
+              "visual_clearance_m": 0.0337057113647461
+            },
+            {
+              "collider": "/root/Town/NavigationRegion3D/Level/TownCore/T08/T08_A/Architecture/GroundFloor",
+              "collider_clearance_m": 0.0223546028137207,
+              "floor": [
+                19.7301940917969,
+                2.20000028610229,
+                76.0564117431641
+              ],
+              "from": [
+                19.7301940917969,
+                2.73370599746704,
+                76.0564117431641
+              ],
+              "visual_clearance_m": 0.0337057113647461
+            },
+            {
+              "collider": "/root/Town/NavigationRegion3D/Level/TownCore/T08/T08_A/Architecture/GroundFloor",
+              "collider_clearance_m": 0.0223546028137207,
+              "floor": [
+                20.0133209228516,
+                2.20000028610229,
+                73.5671539306641
+              ],
+              "from": [
+                20.0133209228516,
+                2.73370599746704,
+                73.5671539306641
+              ],
+              "visual_clearance_m": 0.0337057113647461
+            },
+            {
+              "collider": "/root/Town/NavigationRegion3D/Level/TownCore/T08/T08_A/Architecture/GroundFloor",
+              "collider_clearance_m": 0.0223546028137207,
+              "floor": [
+                20.0133209228516,
+                2.20000028610229,
+                74.8117828369141
+              ],
+              "from": [
+                20.0133209228516,
+                2.73370599746704,
+                74.8117828369141
+              ],
+              "visual_clearance_m": 0.0337057113647461
+            },
+            {
+              "collider": "/root/Town/NavigationRegion3D/Level/TownCore/T08/T08_A/Architecture/GroundFloor",
+              "collider_clearance_m": 0.0223546028137207,
+              "floor": [
+                20.0133209228516,
+                2.20000028610229,
+                76.0564117431641
+              ],
+              "from": [
+                20.0133209228516,
+                2.73370599746704,
+                76.0564117431641
+              ],
+              "visual_clearance_m": 0.0337057113647461
+            },
+            {
+              "collider": "/root/Town/NavigationRegion3D/Level/TownCore/T08/T08_A/Architecture/GroundFloor",
+              "collider_clearance_m": 0.0223546028137207,
+              "floor": [
+                20.2964477539063,
+                2.20000028610229,
+                73.5671539306641
+              ],
+              "from": [
+                20.2964477539063,
+                2.73370599746704,
+                73.5671539306641
+              ],
+              "visual_clearance_m": 0.0337057113647461
+            },
+            {
+              "collider": "/root/Town/NavigationRegion3D/Level/TownCore/T08/T08_A/Architecture/GroundFloor",
+              "collider_clearance_m": 0.0223546028137207,
+              "floor": [
+                20.2964477539063,
+                2.20000028610229,
+                74.8117828369141
+              ],
+              "from": [
+                20.2964477539063,
+                2.73370599746704,
+                74.8117828369141
+              ],
+              "visual_clearance_m": 0.0337057113647461
+            },
+            {
+              "collider": "/root/Town/NavigationRegion3D/Level/TownCore/T08/T08_A/Architecture/GroundFloor",
+              "collider_clearance_m": 0.0223546028137207,
+              "floor": [
+                20.2964477539063,
+                2.20000028610229,
+                76.0564117431641
+              ],
+              "from": [
+                20.2964477539063,
+                2.73370599746704,
+                76.0564117431641
+              ],
+              "visual_clearance_m": 0.0337057113647461
+            }
+          ],
+          "freeze": true,
+          "kind": "m700_native_pose_bounds",
+          "position": [
+            20,
+            2.33066511154175,
+            75
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "scope": "Native transformed eight-corner mesh AABB union and unchanged BoxShape3D corners; nine exact garage GF floor rays exclude player and frozen pickup RID. Conservative AABB proof, not exact rendered mesh vertices or pickup interaction.",
+          "visual_max": [
+            20.2964477539063,
+            2.44213891029358,
+            76.0564117431641
+          ],
+          "visual_min": [
+            19.7301940917969,
+            2.23370599746704,
+            73.5671539306641
+          ],
+          "visual_paths": [
+            "/root/Town/Loot/Pickup_M700/m700/Cube",
+            "/root/Town/Loot/Pickup_M700/m700/Cylinder_001",
+            "/root/Town/Loot/Pickup_M700/m700/Cylinder_002",
+            "/root/Town/Loot/Pickup_M700/m700/trigger",
+            "/root/Town/Loot/Pickup_M700/m700/Tac3014x24Riflescope/scope",
+            "/root/Town/Loot/Pickup_M700/m700/Tac3014x24Riflescope/MeshInstance3D"
+          ]
+        },
+        "pickup": {
+          "consumed_world_pickup": true,
+          "equipped_stored_instance": true,
+          "kind": "m700_native_pickup",
+          "scope": "Same ExtendedPickupInteraction.attempt_wield path as Town baseline, after all captures; verifies pickup/equip and resource separation, not hold UI, firing or reload.",
+          "weapon_scene": "res://Scene/Weapons/Firearms/Bolt-action/M700/m700.tscn",
+          "world_item_name": "M700"
+        },
+        "limits": [
+          "Shared item/scene unchanged; isolated fixture pickup API, not interactive hold HUD/fire/reload.",
+          "Historical surrounding obstacle clearances remain historical; not recomputed for rotated pickup.",
+          "Two existing M700 unequip-animation C++ diagnostics observed during fixture restoration; restoration assertion passed."
+        ]
+      },
+      "native_visual_aabb_m": {
+        "min": [
+          19.7301940917969,
+          2.23370599746704,
+          73.5671539306641
+        ],
+        "max": [
+          20.2964477539063,
+          2.44213891029358,
+          76.0564117431641
+        ]
+      },
+      "native_visual_floor_clearance_m": 0.0337057113647461
+    },
+    {
+      "node_path": "Loot/Pickup_usp",
+      "kind": "interior_pickup_or_prop",
+      "position_m": [
+        8,
+        2.513338918,
+        -12
+      ],
+      "host_building": "T04-A",
+      "collider_boxes_or_concave_parts": 1,
+      "world_collider_bounds_m": {
+        "min": [
+          7.8060697478439325,
+          2.210000000412306,
+          -12.192726312529334
+        ],
+        "max": [
+          8.208929643259365,
+          2.7914373092814544,
+          -11.822284196474303
+        ]
+      },
+      "current_host_floor_y_m": 2.2,
+      "current_host_ceiling_y_m": 5.4,
+      "support_floor_delta_m": 0,
+      "clearances_m": {
+        "building": {
+          "id": "T04-B",
+          "clearance_m": 14.317821062682686
+        },
+        "solid_cover": {
+          "id": "C01-02",
+          "clearance_m": 41.028286019415454
+        },
+        "trunk": {
+          "id": "G009",
+          "clearance_m": 91.12947307792926
+        },
+        "fence": {
+          "id": "DEPOT_NORTH:3",
+          "clearance_m": 125.05820894629058
+        },
+        "corridor": {
+          "id": "ACCESS_T04-A",
+          "clearance_m": 7.63756405479338
+        }
+      },
+      "floor_clearance_m": 0.010000000412305976,
+      "host_rectangular_wall_inner_clearance_m": 2.5572736874706656
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/IndustrialArchitecture/Provision_water_bottle",
+      "kind": "interior_pickup_or_prop",
+      "position_m": [
+        -29,
+        2.22,
+        122
+      ],
+      "host_building": "T11-A",
+      "collider_boxes_or_concave_parts": 1,
+      "world_collider_bounds_m": {
+        "min": [
+          -29.0595,
+          2.22,
+          121.9405
+        ],
+        "max": [
+          -28.9405,
+          2.57,
+          122.0595
+        ]
+      },
+      "current_host_floor_y_m": 2.2,
+      "current_host_ceiling_y_m": 5.4,
+      "support_floor_delta_m": 0,
+      "clearances_m": {
+        "building": {
+          "id": "T11-C",
+          "clearance_m": 13.152946437395693
+        },
+        "solid_cover": {
+          "id": "LOS_P05_KIOSK_RETURN",
+          "clearance_m": 32.372403370133796
+        },
+        "trunk": {
+          "id": "G008",
+          "clearance_m": 148.92448039125193
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 161.4952185819075
+        },
+        "corridor": {
+          "id": "ACCESS_T11-A",
+          "clearance_m": 13.53918280179666
+        }
+      },
+      "floor_clearance_m": 0.020000000000000018,
+      "host_rectangular_wall_inner_clearance_m": 1.6905000000000001
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/IndustrialArchitecture/Provision_canned_meat_rect",
+      "kind": "interior_pickup_or_prop",
+      "position_m": [
+        -25,
+        2.22,
+        122
+      ],
+      "host_building": "T11-A",
+      "collider_boxes_or_concave_parts": 1,
+      "world_collider_bounds_m": {
+        "min": [
+          -25.09,
+          2.22,
+          121.946
+        ],
+        "max": [
+          -24.91,
+          2.3729999999999998,
+          122.054
+        ]
+      },
+      "current_host_floor_y_m": 2.2,
+      "current_host_ceiling_y_m": 5.4,
+      "support_floor_delta_m": 0,
+      "clearances_m": {
+        "building": {
+          "id": "T11-C",
+          "clearance_m": 9.219544456696331
+        },
+        "solid_cover": {
+          "id": "C02-02",
+          "clearance_m": 29.549215301905317
+        },
+        "trunk": {
+          "id": "G008",
+          "clearance_m": 145.12642725008754
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 157.53318896290418
+        },
+        "corridor": {
+          "id": "ACCESS_T11-A",
+          "clearance_m": 13.53918280179666
+        }
+      },
+      "floor_clearance_m": 0.020000000000000018,
+      "host_rectangular_wall_inner_clearance_m": 1.6600000000000001
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/CivicArchitecture/Provision_canned_food",
+      "kind": "interior_pickup_or_prop",
+      "position_m": [
+        8,
+        2.22,
+        -13.5
+      ],
+      "host_building": "T04-A",
+      "collider_boxes_or_concave_parts": 1,
+      "world_collider_bounds_m": {
+        "min": [
+          7.9235,
+          2.22,
+          -13.5765
+        ],
+        "max": [
+          8.0765,
+          2.4180000000000006,
+          -13.4235
+        ]
+      },
+      "current_host_floor_y_m": 2.2,
+      "current_host_ceiling_y_m": 5.4,
+      "support_floor_delta_m": 0,
+      "clearances_m": {
+        "building": {
+          "id": "T04-B",
+          "clearance_m": 14.080127839778301
+        },
+        "solid_cover": {
+          "id": "LOS_P10_ROCK",
+          "clearance_m": 41.14000486082858
+        },
+        "trunk": {
+          "id": "G009",
+          "clearance_m": 90.38629570983139
+        },
+        "fence": {
+          "id": "DEPOT_NORTH:3",
+          "clearance_m": 124.79104785542741
+        },
+        "corridor": {
+          "id": "ACCESS_T04-A",
+          "clearance_m": 9.101999799450105
+        }
+      },
+      "floor_clearance_m": 0.020000000000000018,
+      "host_rectangular_wall_inner_clearance_m": 1.1735000000000007
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/CivicArchitecture/Provision_ration_biscuits",
+      "kind": "interior_pickup_or_prop",
+      "position_m": [
+        12,
+        2.22,
+        -13.5
+      ],
+      "host_building": "T04-A",
+      "collider_boxes_or_concave_parts": 1,
+      "world_collider_bounds_m": {
+        "min": [
+          11.8775,
+          2.22,
+          -13.52625
+        ],
+        "max": [
+          12.1225,
+          2.36875,
+          -13.47375
+        ]
+      },
+      "current_host_floor_y_m": 2.2,
+      "current_host_ceiling_y_m": 5.4,
+      "support_floor_delta_m": 0,
+      "clearances_m": {
+        "building": {
+          "id": "T04-B",
+          "clearance_m": 10.111874207509704
+        },
+        "solid_cover": {
+          "id": "LOS_P10_ROCK",
+          "clearance_m": 40.205720985364756
+        },
+        "trunk": {
+          "id": "G009",
+          "clearance_m": 86.91959389603693
+        },
+        "fence": {
+          "id": "DEPOT_NORTH:3",
+          "clearance_m": 120.85282630066858
+        },
+        "corridor": {
+          "id": "ACCESS_T04-A",
+          "clearance_m": 9.101999799450105
+        }
+      },
+      "floor_clearance_m": 0.020000000000000018,
+      "host_rectangular_wall_inner_clearance_m": 1.2237500000000008
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/OuterDetail/GarageLamp",
+      "kind": "garage_ceiling_lamp",
+      "position_m": [
+        16,
+        6.3,
+        72
+      ],
+      "host_building": "T08-A",
+      "collider_boxes_or_concave_parts": 1,
+      "world_collider_bounds_m": {
+        "min": [
+          16.00148275,
+          6.29868225,
+          71.642724
+        ],
+        "max": [
+          16.360158249999998,
+          6.74805975,
+          71.99967
+        ]
+      },
+      "current_host_floor_y_m": 2.2,
+      "current_host_ceiling_y_m": 6.7,
+      "support_floor_delta_m": 0,
+      "clearances_m": {
+        "building": {
+          "id": "T08-B",
+          "clearance_m": 11.661903789004613
+        },
+        "solid_cover": {
+          "id": "LOS_P06_RETURN",
+          "clearance_m": 26.69873592446185
+        },
+        "trunk": {
+          "id": "G006",
+          "clearance_m": 93.94398813087808
+        },
+        "fence": {
+          "id": "DEPOT_SOUTH:0",
+          "clearance_m": 118.34190139108412
+        },
+        "corridor": {
+          "id": "ACCESS_T08-A",
+          "clearance_m": 7.399999999500002
+        }
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/CompoundLight_13",
+      "kind": "compound_spotlight_no_collider",
+      "position_m": [
+        16,
+        6,
+        69
+      ],
+      "host_building": "T08-A",
+      "current_host_floor_y_m": 2.2,
+      "current_host_ceiling_y_m": 6.7,
+      "ceiling_clearance_m": 0.7000000000000002,
+      "support_floor_delta_m": 0
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/CompoundLight_14",
+      "kind": "compound_spotlight_no_collider",
+      "position_m": [
+        -27,
+        5,
+        125
+      ],
+      "host_building": "T11-A",
+      "current_host_floor_y_m": 2.2,
+      "current_host_ceiling_y_m": 5.4,
+      "ceiling_clearance_m": 0.40000000000000036,
+      "support_floor_delta_m": 0
+    }
+  ],
+  "patrol_segments": [
+    {
+      "actor": "Scav_Courtyard",
+      "from_xz_m": [
+        -132,
+        0
+      ],
+      "to_xz_m": [
+        -128,
+        5
+      ],
+      "nearest_solid": {
+        "id": "C01-01",
+        "clearance_m": 2.985972416012398
+      },
+      "nearest_trunk": {
+        "id": "A010",
+        "clearance_m": 76.16639792782716
+      }
+    },
+    {
+      "actor": "Scav_Courtyard",
+      "from_xz_m": [
+        -128,
+        5
+      ],
+      "to_xz_m": [
+        -122,
+        5
+      ],
+      "nearest_solid": {
+        "id": "C01-01",
+        "clearance_m": 2.985972416012398
+      },
+      "nearest_trunk": {
+        "id": "A010",
+        "clearance_m": 76.16639792782716
+      }
+    },
+    {
+      "actor": "Scav_Courtyard",
+      "from_xz_m": [
+        -122,
+        5
+      ],
+      "to_xz_m": [
+        -122,
+        0
+      ],
+      "nearest_solid": {
+        "id": "C01-01",
+        "clearance_m": 4.445934374699792
+      },
+      "nearest_trunk": {
+        "id": "A010",
+        "clearance_m": 80.61403904814941
+      }
+    },
+    {
+      "actor": "Scav_Courtyard",
+      "from_xz_m": [
+        -122,
+        0
+      ],
+      "to_xz_m": [
+        -132,
+        0
+      ],
+      "nearest_solid": {
+        "id": "C01-01",
+        "clearance_m": 7.825619260972438
+      },
+      "nearest_trunk": {
+        "id": "A010",
+        "clearance_m": 76.98539527884806
+      }
+    },
+    {
+      "actor": "Scav_Warehouse",
+      "from_xz_m": [
+        -46,
+        59
+      ],
+      "to_xz_m": [
+        -42,
+        63
+      ],
+      "nearest_solid": {
+        "id": "T07-A",
+        "clearance_m": 2.8322776601683795
+      },
+      "nearest_trunk": {
+        "id": "A006",
+        "clearance_m": 135.0066483375737
+      }
+    },
+    {
+      "actor": "Scav_Warehouse",
+      "from_xz_m": [
+        -42,
+        63
+      ],
+      "to_xz_m": [
+        -36,
+        63
+      ],
+      "nearest_solid": {
+        "id": "T07-A",
+        "clearance_m": 2.67
+      },
+      "nearest_trunk": {
+        "id": "A006",
+        "clearance_m": 138.10170016266792
+      }
+    },
+    {
+      "actor": "Scav_Warehouse",
+      "from_xz_m": [
+        -36,
+        63
+      ],
+      "to_xz_m": [
+        -36,
+        59
+      ],
+      "nearest_solid": {
+        "id": "T07-A",
+        "clearance_m": 2.67
+      },
+      "nearest_trunk": {
+        "id": "A006",
+        "clearance_m": 143.9989363006072
+      }
+    },
+    {
+      "actor": "Scav_Warehouse",
+      "from_xz_m": [
+        -36,
+        59
+      ],
+      "to_xz_m": [
+        -46,
+        59
+      ],
+      "nearest_solid": {
+        "id": "T07-A",
+        "clearance_m": 6.67
+      },
+      "nearest_trunk": {
+        "id": "A006",
+        "clearance_m": 135.0066483375737
+      }
+    },
+    {
+      "actor": "Scav_OuterShed",
+      "from_xz_m": [
+        16,
+        95
+      ],
+      "to_xz_m": [
+        20,
+        99
+      ],
+      "nearest_solid": {
+        "id": "LOS_P06_RETURN",
+        "clearance_m": 8.162496688253695
+      },
+      "nearest_trunk": {
+        "id": "G008",
+        "clearance_m": 95.11485670609471
+      }
+    },
+    {
+      "actor": "Scav_OuterShed",
+      "from_xz_m": [
+        20,
+        99
+      ],
+      "to_xz_m": [
+        26,
+        99
+      ],
+      "nearest_solid": {
+        "id": "LOS_P06_RETURN",
+        "clearance_m": 3.1517380717107324
+      },
+      "nearest_trunk": {
+        "id": "G008",
+        "clearance_m": 89.30562510212631
+      }
+    },
+    {
+      "actor": "Scav_OuterShed",
+      "from_xz_m": [
+        26,
+        99
+      ],
+      "to_xz_m": [
+        26,
+        95
+      ],
+      "nearest_solid": {
+        "id": "LOS_P06_RETURN",
+        "clearance_m": 1.67
+      },
+      "nearest_trunk": {
+        "id": "G008",
+        "clearance_m": 88.35720031572842
+      }
+    },
+    {
+      "actor": "Scav_OuterShed",
+      "from_xz_m": [
+        26,
+        95
+      ],
+      "to_xz_m": [
+        16,
+        95
+      ],
+      "nearest_solid": {
+        "id": "LOS_P06_RETURN",
+        "clearance_m": 1.8431313812100707
+      },
+      "nearest_trunk": {
+        "id": "G008",
+        "clearance_m": 88.35720031572842
+      }
+    }
+  ],
+  "actual_conflicts": [
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_03",
+      "kind": "solid_cover",
+      "other": "LOS_M_RETURN",
+      "issue": "Physical base overlaps footprint/reservation",
+      "minimal_fix": {
+        "position_m": [
+          -60.81,
+          2,
+          17.274267
+        ],
+        "preserve_basis_scale": true,
+        "verified_offline": {
+          "nearest_solid_cover": {
+            "id": "LOS_M_RETURN",
+            "clearance_m": 0.5000000000000071
+          },
+          "nearest_corridor": {
+            "id": "P01",
+            "clearance_m": 2.7567449945701803
+          }
+        },
+        "reason": "Move origin0.81m west for0.5m clearance from opaque return; all child/light transforms and tuning retained."
+      }
+    }
+  ],
+  "terrain_and_xz_validity": {
+    "xz": "Current canonical buildings/patrol footprints and new LOS/route/fence composition were recomputed; proposal source hashes are historical rather than current acceptance.",
+    "terrain_y_max_abs_delta_m": 2.3142776583995328e-10,
+    "host_floor_max_abs_delta_m": 0,
+    "assessment": "All13 streetlamp and15actor/waypoint terrain heights still match corrected terrain; indoor host floors unchanged. StreetLamp_03 requires the recorded0.81m west origin-only move because the newly merged opaque return occupies its base."
+  },
+  "limits": [
+    "Offline transformed collider AABBs and2D footprints are conservative proxies; native imported collision and gameplay contact remain primary-owned.",
+    "Interior pickups were checked against host floor/ceiling and non-host scene footprints; native door animation and weapon interaction require runtime acceptance.",
+    "CompoundMast_15/16 are outside these39 proposal entries and were not relocated or certified.",
+    "No canonical,scene,helper or project-setting writes. Only this report was written."
+  ],
+  "native_verified": false,
+  "minimum_streetlamp_road_envelope_clearance_m": 0.5684731723354406,
+  "notes": [
+    "Streetlamp colonly mesh accessor4 has localXZ±0.159999996m, Y0..4.699999809;0.32m square is the conservative base envelope.",
+    "Scav inherited native CapsuleShape3D_rgeym radius0.33,height1.8, centerY0.9.",
+    "Interior collider corners include preserved root basis and nested scales/transforms. Consumable CollisionShape position offsets were included.",
+    "Host interior boundary checks use0.25m wall thickness. All8 pickup/prop collider bounds clear rectangular host walls/floor/ceiling.",
+    "GarageLamp mounting overlap is an existing preservation pattern, not evidence of player obstruction; native visual/contact review can choose whether to lower it.",
+    "2026-10-10: M700 entry alone refreshed with source-bound rendered native bounds/nine floor rays and actual pickup/equip. Original top-level offline source/provenance and other historical measurements are unchanged."
+  ],
+  "expected_lamp_placements": [
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_00",
+      "position_m": [
+        -150,
+        2,
+        27.427872
+      ],
+      "pose_changed_from_proposal": false,
+      "preserve_basis_scale": true,
+      "offline_clearance_m": {
+        "building": 25.352269986894346,
+        "cover": 26.627683174471336,
+        "trunk": 44.88318569493108,
+        "door": 23.81006978315489,
+        "corridor": 2.778227821410442,
+        "fence": 147.617872
+      },
+      "nearest_ids": {
+        "building": "T05-A",
+        "cover": "C01-01",
+        "trunk": "A010",
+        "door": "T05-A",
+        "corridor": "P01",
+        "fence": "BUNKER:3"
+      },
+      "center_only_clearance_m": {
+        "building": 25.549745094947852,
+        "cover": 26.853297056571677,
+        "trunk": 45.1092111168193,
+        "door": 24.029970509691985,
+        "corridor": 2.9552651528534,
+        "fence": 147.7778719995
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_01",
+      "position_m": [
+        -120,
+        2,
+        24.019872
+      ],
+      "pose_changed_from_proposal": false,
+      "preserve_basis_scale": true,
+      "offline_clearance_m": {
+        "building": 23.820128,
+        "cover": 14.207099119551264,
+        "trunk": 71.57270988782572,
+        "door": 28.845962366956368,
+        "corridor": 2.7782278214104403,
+        "fence": 144.20987200000002
+      },
+      "nearest_ids": {
+        "building": "T05-B",
+        "cover": "C01-01",
+        "trunk": "A010",
+        "door": "T05-A",
+        "corridor": "P01",
+        "fence": "BUNKER:2"
+      },
+      "center_only_clearance_m": {
+        "building": 23.980127999500002,
+        "cover": 14.413525294709324,
+        "trunk": 71.78919294832747,
+        "door": 29.0684620568808,
+        "corridor": 2.955265152853398,
+        "fence": 144.36987199950002
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_02",
+      "position_m": [
+        -90,
+        2,
+        20.611872
+      ],
+      "pose_changed_from_proposal": false,
+      "preserve_basis_scale": true,
+      "offline_clearance_m": {
+        "building": 31.6854201850691,
+        "cover": 29.690000000000005,
+        "trunk": 100.26531197873948,
+        "door": 28.92203039875696,
+        "corridor": 2.778227821410443,
+        "fence": 140.801872
+      },
+      "nearest_ids": {
+        "building": "T02-A",
+        "cover": "LOS_M_RETURN",
+        "trunk": "A010",
+        "door": "T02-A",
+        "corridor": "P01",
+        "fence": "BUNKER:2"
+      },
+      "center_only_clearance_m": {
+        "building": 31.863936531897192,
+        "cover": 29.849999999500007,
+        "trunk": 100.47319364027108,
+        "door": 29.126023647930346,
+        "corridor": 2.9552651528534,
+        "fence": 140.9618719995
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_03",
+      "position_m": [
+        -60.81,
+        2,
+        17.274267
+      ],
+      "pose_changed_from_proposal": true,
+      "preserve_basis_scale": true,
+      "offline_clearance_m": {
+        "building": 28.294227413861105,
+        "cover": 0.5000000000000071,
+        "trunk": 122.46617091155048,
+        "door": 27.782732483975252,
+        "corridor": 2.7567449945701803,
+        "fence": 138.71424260632824
+      },
+      "nearest_ids": {
+        "building": "T03-A",
+        "cover": "LOS_M_RETURN",
+        "trunk": "H016",
+        "door": "T03-A",
+        "corridor": "P01",
+        "fence": "BUNKER:2"
+      },
+      "center_only_clearance_m": {
+        "building": 28.519100097078883,
+        "cover": 0.6599999995000019,
+        "trunk": 122.68656489491936,
+        "door": 28.008457380955225,
+        "corridor": 2.9337823260131373,
+        "fence": 138.8942996207221
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_04",
+      "position_m": [
+        -30,
+        2.064888137,
+        23.048733
+      ],
+      "pose_changed_from_proposal": false,
+      "preserve_basis_scale": true,
+      "offline_clearance_m": {
+        "building": 28.305600653321047,
+        "cover": 17.614687083413322,
+        "trunk": 138.7970228125194,
+        "door": 25.229511869632944,
+        "corridor": 2.686909221508218,
+        "fence": 151.51470797069598
+      },
+      "nearest_ids": {
+        "building": "T03-A",
+        "cover": "C01-02",
+        "trunk": "G003",
+        "door": "T03-A",
+        "corridor": "P01",
+        "fence": "BUNKER:2"
+      },
+      "center_only_clearance_m": {
+        "building": 28.4909007030708,
+        "cover": 17.795397670000867,
+        "trunk": 138.97532150234053,
+        "door": 25.43438408377041,
+        "corridor": 2.8742654231887697,
+        "fence": 151.7181568758741
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_05",
+      "position_m": [
+        0,
+        2.138610006,
+        28.823199
+      ],
+      "pose_changed_from_proposal": false,
+      "preserve_basis_scale": true,
+      "offline_clearance_m": {
+        "building": 33.56944360983067,
+        "cover": 8.035584144137733,
+        "trunk": 110.1177256309724,
+        "door": 32.92605873455554,
+        "corridor": 2.6873342379335057,
+        "fence": 145.43894984464652
+      },
+      "nearest_ids": {
+        "building": "T07-C",
+        "cover": "C01-02",
+        "trunk": "G003",
+        "door": "T04-A",
+        "corridor": "P01",
+        "fence": "DEPOT_NORTH:3"
+      },
+      "center_only_clearance_m": {
+        "building": 33.77858671628261,
+        "cover": 8.216559593330068,
+        "trunk": 110.30721724293996,
+        "door": 33.12585007242403,
+        "corridor": 2.8746904396140547,
+        "fence": 145.6528625032782
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_06",
+      "position_m": [
+        30,
+        2.091194432,
+        34.597665
+      ],
+      "pose_changed_from_proposal": false,
+      "preserve_basis_scale": true,
+      "offline_clearance_m": {
+        "building": 32.95988116259258,
+        "cover": 38.57540521376546,
+        "trunk": 80.28519627685912,
+        "door": 31.18121499027469,
+        "corridor": 0.5684731723354406,
+        "fence": 120.06451245477253
+      },
+      "nearest_ids": {
+        "building": "T08-A",
+        "cover": "C01-02",
+        "trunk": "G011",
+        "door": "T08-A",
+        "corridor": "P06",
+        "fence": "DEPOT_SOUTH:0"
+      },
+      "center_only_clearance_m": {
+        "building": 33.14983127276552,
+        "cover": 38.76139867404409,
+        "trunk": 80.46765226058129,
+        "door": 31.39467297263007,
+        "corridor": 0.7654422124579552,
+        "fence": 120.28574603017556
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_07",
+      "position_m": [
+        -64,
+        2,
+        56
+      ],
+      "pose_changed_from_proposal": false,
+      "preserve_basis_scale": true,
+      "offline_clearance_m": {
+        "building": 13.961776391276295,
+        "cover": 6.250049999800002,
+        "trunk": 118.45501221772774,
+        "door": 23.04487836678233,
+        "corridor": 2.3600000000000065,
+        "fence": 176.8608724393273
+      },
+      "nearest_ids": {
+        "building": "T06-B",
+        "cover": "C02-01",
+        "trunk": "A006",
+        "door": "T07-A",
+        "corridor": "P05",
+        "fence": "BUNKER:2"
+      },
+      "center_only_clearance_m": {
+        "building": 14.142135623165272,
+        "cover": 6.412669100569975,
+        "trunk": 118.65317503584387,
+        "door": 23.267953988004447,
+        "corridor": 2.5199999995000013,
+        "fence": 177.03424809851936
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_08",
+      "position_m": [
+        -64,
+        2,
+        88
+      ],
+      "pose_changed_from_proposal": false,
+      "preserve_basis_scale": true,
+      "offline_clearance_m": {
+        "building": 3.8400000000000034,
+        "cover": 7.689999999999998,
+        "trunk": 113.798792692578,
+        "door": 6.034349284539973,
+        "corridor": 2.3600000000000065,
+        "fence": 195.1948790952263
+      },
+      "nearest_ids": {
+        "building": "T06-C",
+        "cover": "LOS_P05_RETURN",
+        "trunk": "A006",
+        "door": "T06-C",
+        "corridor": "P05",
+        "fence": "DEPOT_SOUTH:0"
+      },
+      "center_only_clearance_m": {
+        "building": 3.9999999995000053,
+        "cover": 7.8499999995,
+        "trunk": 113.96020263100965,
+        "door": 6.219691003948139,
+        "corridor": 2.5199999995000013,
+        "fence": 195.36428953315155
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_09",
+      "position_m": [
+        -77,
+        2,
+        140
+      ],
+      "pose_changed_from_proposal": false,
+      "preserve_basis_scale": true,
+      "offline_clearance_m": {
+        "building": 21.877778680661354,
+        "cover": 31.63971712895044,
+        "trunk": 109.736859296758,
+        "door": 19.802734118951545,
+        "corridor": 2.0978581830666627,
+        "fence": 211.6098315887048
+      },
+      "nearest_ids": {
+        "building": "T10-C",
+        "cover": "LOS_P05_KIOSK_RETURN",
+        "trunk": "A007",
+        "door": "T10-C",
+        "corridor": "P05",
+        "fence": "DEPOT_SOUTH:0"
+      },
+      "center_only_clearance_m": {
+        "building": 22.09275899407542,
+        "cover": 31.85235470036164,
+        "trunk": 109.94318097734896,
+        "door": 20.02749387696961,
+        "corridor": 2.312784128317599,
+        "fence": 211.7970859685092
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_10",
+      "position_m": [
+        45,
+        2,
+        60
+      ],
+      "pose_changed_from_proposal": false,
+      "preserve_basis_scale": true,
+      "offline_clearance_m": {
+        "building": 22.886048151657818,
+        "cover": 35.69,
+        "trunk": 63.48320170837176,
+        "door": 28.15644850975426,
+        "corridor": 2.630000000000007,
+        "fence": 94.60317555452353
+      },
+      "nearest_ids": {
+        "building": "T08-A",
+        "cover": "LOS_P06_RETURN",
+        "trunk": "G006",
+        "door": "T08-A",
+        "corridor": "P06",
+        "fence": "DEPOT_SOUTH:0"
+      },
+      "center_only_clearance_m": {
+        "building": 23.08679276060233,
+        "cover": 35.84999999949999,
+        "trunk": 63.65373541454223,
+        "door": 28.335081665138205,
+        "corridor": 2.7899999995000018,
+        "fence": 94.81564019123678
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_11",
+      "position_m": [
+        45,
+        2,
+        100
+      ],
+      "pose_changed_from_proposal": false,
+      "preserve_basis_scale": true,
+      "offline_clearance_m": {
+        "building": 21.79750444431656,
+        "cover": 3.6899999999999977,
+        "trunk": 71.57272620835276,
+        "door": 26.083646899557525,
+        "corridor": 1.5400000000000034,
+        "fence": 85.84
+      },
+      "nearest_ids": {
+        "building": "T08-B",
+        "cover": "LOS_P06_RETURN",
+        "trunk": "G008",
+        "door": "T12-A",
+        "corridor": "P06",
+        "fence": "DEPOT_SOUTH:0"
+      },
+      "center_only_clearance_m": {
+        "building": 22.022715544841425,
+        "cover": 3.8499999994999996,
+        "trunk": 71.77711711506966,
+        "door": 26.29356541471346,
+        "corridor": 1.6999999995000052,
+        "fence": 85.9999999995
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_12",
+      "position_m": [
+        45,
+        2,
+        140
+      ],
+      "pose_changed_from_proposal": false,
+      "preserve_basis_scale": true,
+      "offline_clearance_m": {
+        "building": 16.840000000000003,
+        "cover": 43.69,
+        "trunk": 92.92566205828645,
+        "door": 35.16002218523999,
+        "corridor": 5.5562633620123965,
+        "fence": 94.60317555452353
+      },
+      "nearest_ids": {
+        "building": "T12-B",
+        "cover": "LOS_P06_RETURN",
+        "trunk": "G008",
+        "door": "T12-A",
+        "corridor": "P06",
+        "fence": "DEPOT_SOUTH:0"
+      },
+      "center_only_clearance_m": {
+        "building": 16.999999999499998,
+        "cover": 43.8499999995,
+        "trunk": 93.15185008803606,
+        "door": 35.3862232803126,
+        "corridor": 5.745371900977196,
+        "fence": 94.81564019123677
+      }
+    }
+  ],
+  "accepted_mount_contacts": [
+    {
+      "node_path": "NavigationRegion3D/Level/OuterDetail/GarageLamp",
+      "kind": "ceiling_mount_penetration",
+      "other": "T08-A",
+      "penetration_m": 0.04805975000000018,
+      "world_collider_top_y_m": 6.74805975,
+      "ceiling_y_m": 6.7,
+      "severity": "Mount/collider intersection; not a proven traversal blocker",
+      "policy": "Primary explicitly keeps original proposal mount pose(16,6.3,72) and1.5scale;4.805975cm ceiling intersection is accepted fixture mount contact. Native inspection pending."
+    }
+  ],
+  "post_proposed_fix_status": "M700_NATIVE_REFRESH_PASS_OTHER_OFFLINE_REVIEW_HISTORY_RETAINED",
+  "expected_lamp_metric_policy": "offline_clearance_m uses0.32m square nativecolonly base envelope; center_only_clearance_m follows historical point-only lamp metric convention. Copy physical metrics for collision acceptance.",
+  "expected_minimum_lamp_clearance_m": {
+    "building": 3.8400000000000034,
+    "cover": 0.5000000000000071,
+    "trunk": 44.88318569493108,
+    "door": 6.034349284539973,
+    "corridor": 0.5684731723354406,
+    "fence": 85.84
+  }
+}

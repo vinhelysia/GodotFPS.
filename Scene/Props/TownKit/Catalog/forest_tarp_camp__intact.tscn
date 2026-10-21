@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/forest_tarp_camp/assets/forest_tarp_camp_intact.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/forest_tarp_camp/materials/town_forest_tarp_camp_intact_used.tres" id="2_finish"]
+
+[node name="forest_tarp_camp__intact" type="Node3D"]
+metadata/catalog_id = "forest_tarp_camp"
+metadata/catalog_variant = "intact"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="TarpCampIntact" parent="Model/TownTarpCampIntact"]
+surface_material_override/0 = ExtResource("2_finish")

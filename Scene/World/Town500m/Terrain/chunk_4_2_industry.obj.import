@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b8kurb2o348jw"
+path="res://.godot/imported/chunk_4_2_industry.obj-026f25f4d43fb819be21c262f584aa70.mesh"
+
+[deps]
+
+files=["res://.godot/imported/chunk_4_2_industry.obj-026f25f4d43fb819be21c262f584aa70.mesh"]
+
+source_file="res://Scene/World/Town500m/Terrain/chunk_4_2_industry.obj"
+dest_files=["res://.godot/imported/chunk_4_2_industry.obj-026f25f4d43fb819be21c262f584aa70.mesh", "res://.godot/imported/chunk_4_2_industry.obj-026f25f4d43fb819be21c262f584aa70.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

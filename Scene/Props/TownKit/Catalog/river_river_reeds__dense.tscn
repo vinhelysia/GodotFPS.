@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/river_river_reeds/assets/river_river_reeds_dense.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/river_river_reeds/materials/town_river_river_reeds_dense_dusty.tres" id="2_finish"]
+
+[node name="river_river_reeds__dense" type="Node3D"]
+metadata/catalog_id = "river_river_reeds"
+metadata/catalog_variant = "dense"
+metadata/finish = "dusty"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="RiverReedsDense" parent="Model/TownRiverReedsDense"]
+surface_material_override/0 = ExtResource("2_finish")

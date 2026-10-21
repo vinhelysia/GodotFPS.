@@ -1,0 +1,112 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t01_cottage.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t07_workshop_shell.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t02_long_house_ground.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Graybox/wind_pump.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Graybox/water_cistern.tscn" id="7"]
+
+[node name="farmland" type="Node3D"]
+metadata/town500_zone = "farmland"
+metadata/phase = 3
+
+[node name="A01-A" parent="." instance=ExtResource("1")]
+position = Vector3(-207, 3.507430095, -26)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "A01-A"
+metadata/source_ref = "A01"
+metadata/zone = "farmland"
+metadata/ground_access = true
+metadata/upper_access = false
+metadata/pad_surface_y_m = 3.307430095
+metadata/graybox = false
+
+[node name="A02-A" parent="." instance=ExtResource("2")]
+position = Vector3(-188, 1.7, -24)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "A02-A"
+metadata/source_ref = "A02"
+metadata/zone = "farmland"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 1.5
+metadata/graybox = false
+
+[node name="A04-A" parent="." instance=ExtResource("3")]
+position = Vector3(-212, 1.7, 108)
+rotation = Vector3(0, 1.570796327, 0)
+metadata/town500_id = "A04-A"
+metadata/source_ref = "A04"
+metadata/zone = "farmland"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 1.5
+metadata/graybox = false
+
+[node name="A05-A" parent="." instance=ExtResource("2")]
+position = Vector3(-191, 1.7, 143)
+rotation = Vector3(0, 1.570796327, 0)
+metadata/town500_id = "A05-A"
+metadata/source_ref = "A05"
+metadata/zone = "farmland"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 1.5
+metadata/graybox = false
+
+[node name="A06-A" parent="." instance=ExtResource("4")]
+position = Vector3(-149, 1.7, 202)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "A06-A"
+metadata/source_ref = "A06"
+metadata/zone = "farmland"
+metadata/ground_access = true
+metadata/upper_access = false
+metadata/pad_surface_y_m = 1.5
+metadata/graybox = false
+
+[node name="A07-A" parent="." instance=ExtResource("5")]
+position = Vector3(-53, 1.7, 198)
+rotation = Vector3(0, 1.570796327, 0)
+metadata/town500_id = "A07-A"
+metadata/source_ref = "A07"
+metadata/zone = "farmland"
+metadata/ground_access = true
+metadata/upper_access = false
+metadata/pad_surface_y_m = 1.5
+metadata/graybox = false
+
+[node name="A08-A" parent="." instance=ExtResource("3")]
+position = Vector3(54, 1.7, 205)
+rotation = Vector3(0, 1.570796327, 0)
+metadata/town500_id = "A08-A"
+metadata/source_ref = "A08"
+metadata/zone = "farmland"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 1.5
+metadata/graybox = false
+
+[node name="A03-A" parent="." instance=ExtResource("6")]
+position = Vector3(-197, 1.7, 72)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "A03-A"
+metadata/source_ref = "A03"
+metadata/zone = "farmland"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 1.5
+metadata/graybox = true
+
+[node name="A09-A" parent="." instance=ExtResource("7")]
+position = Vector3(70, 1.7, 234)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "A09-A"
+metadata/source_ref = "A09"
+metadata/zone = "farmland"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 1.5
+metadata/graybox = true

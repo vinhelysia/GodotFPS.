@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/forest_fallen_log/assets/forest_fallen_log_short.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/forest_fallen_log/materials/town_forest_fallen_log_short_used.tres" id="2_finish"]
+
+[node name="forest_fallen_log__short" type="Node3D"]
+metadata/catalog_id = "forest_fallen_log"
+metadata/catalog_variant = "short"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="FallenLogShort" parent="Model/TownFallenLogShort"]
+surface_material_override/0 = ExtResource("2_finish")

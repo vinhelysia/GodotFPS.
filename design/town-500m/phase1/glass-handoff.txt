@@ -1,0 +1,69 @@
+Town500m Phase1 glass vision pilot — 2026-10-08
+
+Scope and integration
+- Only Scripts/Enemies/scav_perception.gd is changed in gameplay code.
+- _los_clear(from, to, target) retains its callers/API, mask3, target/group/child
+  acceptance and clear empty-ray policy. It repeats the same native ray with
+  excluded pane RIDs; no origin offset can tunnel through a wall behind a pane.
+- Tag actual glass-only StaticBody3D with group ai_vision_transparent.
+  Never tag parent/combined wall-frame bodies: Godot RID exclusion excludes all
+  shapes of that body. Mesh/material appearance does not assign transparency.
+- Four tagged static pane bodies may be skipped; a fifth fails closed. There are
+  at most five native ray queries per aim point. Untagged bodies and tagged
+  non-static bodies remain opaque. Existing ray-start-inside behavior is retained.
+- Do not change native collision layers/masks. Separate pane body stays layer1;
+  player collision, player damage mask3, and Scav hitscan mask19 still hit it.
+- No shared Cogito/BT combat/scene/settings/asset/manager/autoload changes.
+
+Caller and collision trace
+- Scene/Enemies/Scav.tscn overrides inherited Perception with ScavPerception;
+  HostileNPC disables legacy state machine before ready; BT remains authority.
+- _can_see uses _los_clear at head/chest/pelvis; _physics_process publishes the
+  result to existing blackboard/detection accumulator. Existing external caller
+  tests/combat_geometry_regression.gd calls _can_see. HUD polls detection APIs;
+  HostileNPC death calls shutdown. None of those APIs changed.
+- Scripts/Enemies/BT/Tasks/bt_shoot.gd keeps native _cast_ray and target-hit gating.
+- Player hitscan: Weapon_Resource._hitscan_fire -> native ray -> _deal_damage.
+  Player projectile: _projectile_fire -> authored CCD CogitoProjectile rigid body
+  -> body_entered -> native impact/damage/destroy logic. No solver was added.
+
+Verification fixture
+- res://tests/town_glass_regression.tscn uses actual CogitoPlayer/Scav scenes,
+  ScavPerception, BT shot ray, Weapon_Resource hitscan/projectile launch and the
+  actual authored 7.62x39 projectile. Only per-instance health/resource values
+  and individual processing callbacks are changed; no save directory, production
+  resource or scene. Actor process_mode stays enabled so default collision-body
+  disable_mode=REMOVE cannot silently remove targets/player physical colliders.
+- Checks one/two/overlapping/four panes, fifth fail-closed, pane then opaque wall,
+  ray start inside pane then wall, separate opaque frame, layer2 door, untagged
+  pane, parent-only tag, tagged dynamic body, empty ray, target body after pane,
+  target child/group hits and actual multi-point detection.
+- Physical checks: player test_move into pane, uncovered/blocked player hitscan,
+  uncovered/blocked Scav native shot ray, native player projectile first pane
+  impact, projectile destruction and no damage to NPC behind pane.
+- Actual facade_window_4m and guard_booth_3m wrappers are instanced after synthetic
+  cases. Their real panes pass vision, their exact separate glass RID blocks Scav
+  rays, their mullions/walls remain opaque and player movement/hitscan is blocked.
+  Native authored12mm pane CCD impacts are tested at60m/s and the explicitly loaded
+  AK47 resource's authored716m/s (independent of random NPC kit), retaining pane-first impact,
+  destroy-on-impact and no target damage. This is deterministic collision coverage,
+  not a whole-raid/performance benchmark or all-angle/high-speed calibration.
+- Before actors instantiate, CSM state directory is redirected to unique
+  user://town_glass_<ticks>/ with glass_test active slot. Even unsaved fixtures
+  need this: CSM deletes temp saves on shutdown. It remains redirected until quit.
+  Fixture verifies no unexpected save files/directories; only the empty owned root
+  is removed. Unexpected files cause FAIL with owned path retained for review.
+- All temporary nodes are freed and mouse mode restored before fixture quit.
+
+Actual evidence at worker handoff
+- Task-start owned gameplay/test paths were clean/absent.
+- git diff --check on owned tracked gameplay file: PASS.
+- Static inspection complete. No editor/runtime/CLI execution by worker.
+- Primary MCP expanded regression PASS62checks/exit0/7.09s, including real wrappers
+  and explicitly printed60/716m/s projectile impacts. Native compile PASS.
+  Two ObjectDB instances still warn at process exit; exploratory orphan report
+  identifies legacy NPC state nodes, but does not establish those as the cause of
+  the two leaked objects. No shared Cogito cleanup fix was made in this phase.
+- Rendered building fixture separately passes107checks and saves actual window/
+  booth views. All-angle CCD, extreme speeds, glass sorting in large compositions,
+  full500m nav/AI/performance remain outside this pilot's acceptance.

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/farmland_farm_trailer/assets/farmland_farm_trailer_empty.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/farmland_farm_trailer/materials/town_farmland_farm_trailer_empty_used.tres" id="2_finish"]
+
+[node name="farmland_farm_trailer__empty" type="Node3D"]
+metadata/catalog_id = "farmland_farm_trailer"
+metadata/catalog_variant = "empty"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="FarmTrailerEmpty" parent="Model/TownFarmTrailerEmpty"]
+surface_material_override/0 = ExtResource("2_finish")

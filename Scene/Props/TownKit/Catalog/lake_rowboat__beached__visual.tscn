@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/lake_rowboat/assets/lake_rowboat_beached.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/lake_rowboat/materials/town_lake_rowboat_used.tres" id="2_finish"]
+
+[node name="lake_rowboat__beached" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "lake_rowboat"
+metadata/catalog_variant = "beached"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="RowboatBeached" parent="Model/TownRowboatBeached"]
+surface_material_override/0 = ExtResource("2_finish")

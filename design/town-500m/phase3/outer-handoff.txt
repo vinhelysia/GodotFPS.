@@ -1,0 +1,15 @@
+Town500m Phase3 outer POI handoff
+OFFLINE AUTHORING PASS; NATIVE PENDING
+
+Six entry payloads: res://Scene/World/Town500m/POI/{industry,bunker,hills,forest,farmland,lake}.tscn
+Exact44 non-town catalogue placements:22 existing templates +22 dimensioned pending graybox instances in13 shared native primitive scenes. Identity payload roots; unit instance scales; canonical XZ/yaw and pad+.2m roots.
+
+B04-ENTRY is8x8x3.6m physical outer bounds,7.5x7.5m clear room,3.2m clear ceiling; south-facing1.2x2.4m door (local-Z), floor surfaceY10.2m, rear fully sealed. GFEntry=(0,0,-5.2), GFInterior=(0,0,-2.8), actual threshold=(0,0,-4). No teleport, underground or gameplay.
+Pending grayboxes use closed BoxShape3D volumes matching the visual primitives. B04 floor, walls, lintel and roof are closed boxes; its south doorway is the only passage. Top-down capsule entry cannot enter hollow proxy interiors. Tall landmarks have no authored stairs or ladders. Closed tops may generate rooftop nav polygons; primary must inspect/filter native bake polygons using catalogue footprints and physical ceiling bounds. Physics closure is retained. Exact overall height includes the.2m below-root base; contact at pad. Reused templates preserve their own floor/roof contract.
+
+Checks: node design/town-500m/phase3/author-outer-pois.cjs --check
+Asserts44/22/22 counts,13 families, template dimensions/height/floor/markers, unit pad offsets, world footprint bounds, no R01/R02/L03 duplicate, closed BoxShape3D for every pending body (eight entry boxes, one other-family box), no concave pending shell and exact entry doorway. Deterministic outputs are byte checked.
+Report: design/town-500m/phase3/outer-placement-report.json (all placements, template hashes, dimensions and output hashes).
+
+Inspected live TownKit/BunkerKit finished manifests: no exact pending family match. BunkerKit wood_crate dimensions differ from F04; no unauthorized rescale/import. Primitive art is intentionally temporary.
+Primary must merge into existing Town, import/inspect native scenes, bake navigation, ray-test sides/top/underside and rear seal, jump/step-test F04, remove any sealed rooftop nav polygons after native bake, walk entry/ground structures and check actual art bounds. This worker did not call Godot MCP or launch Godot. No Town/shared-template/terrain/settings/canonical-data edits, commit or push.

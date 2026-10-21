@@ -1,0 +1,266 @@
+{
+  "status": "SCOPED_TERRAIN_ROAD_ART_PASS_WITH_LIMITS",
+  "date": "2026-10-20",
+  "scope": "Full Town500m ground-material/road-shoulder rollout after pilot; localized static ground cover; Town-local ambient/sun readability. No layout, physics, navigation or gameplay change.",
+  "global_coverage": true,
+  "surface_states": [
+    "dry autumn grass",
+    "exposed soil",
+    "compacted dirt",
+    "leaf litter",
+    "moss",
+    "damp ground",
+    "road and shoulder"
+  ],
+  "receipts": {
+    "before": {
+      "path": "tests/artifacts/town500_ground_art/before/ground_before-native.json",
+      "status": "PASS",
+      "checks": 535,
+      "rendered": true,
+      "sha256": "74f210dc644c8275d7ecf36fb8feea5ef38db0ce5831a86dd03ea816db8f6006"
+    },
+    "after": {
+      "path": "tests/artifacts/town500_ground_art/after/ground_after-native.json",
+      "status": "PASS",
+      "checks": 561,
+      "rendered": true,
+      "sha256": "16366cf2a68ca9ceba3ad49e879fb4d27a7e5299ddb00621716f4333082bb78d"
+    },
+    "contact": {
+      "path": "tests/artifacts/town500_ground/after/ground_contact-native.json",
+      "status": "PASS",
+      "checks": 1419,
+      "rendered": true,
+      "sha256": "878fb118e985d1e96813138569825a57d00b73968e3e8708b5b8a62b093cd31d"
+    },
+    "ports": {
+      "path": "tests/artifacts/town500_ground/after/ground_ports-native.json",
+      "status": "PASS",
+      "checks": 550,
+      "rendered": false,
+      "sha256": "f04f14fbf7eac66626d9f71bd2895403835429189f630f5424338f222fc9270f"
+    },
+    "bank": {
+      "path": "tests/artifacts/town500_ground_art/bank_review/ground_bank_review-native.json",
+      "status": "PASS",
+      "checks": 521,
+      "rendered": true,
+      "sha256": "81f8e980f72cbe64773008f171b45252acac77bd31b251935c94d5bd974864fa"
+    }
+  },
+  "final_source_binding": {
+    "files": 297,
+    "unchanged_during_run": true,
+    "current_mismatches": [],
+    "shader_sha256": "53b0747b7952f2810ab030787547dbd5d0b260bb7504b77308fd5190c32457ba"
+  },
+  "geometry": {
+    "collision_sha256": "dcbdcd9b8d069607e49c27faf8ef244e77fbad1e2f0eea0d8b2be8670ba8d85a",
+    "collision_shapes": 3129,
+    "kind": "ground_geometry_signature",
+    "navigation_polygons": 13920,
+    "navigation_sha256": "744b61e3a63be2012df7aeef7618af1d1c6c72cf558c11a1501020120e8ffe02",
+    "scope": "World-space collision shapes and saved navigation topology; excludes visual materials and decorative non-colliding foliage."
+  },
+  "protected_files": [
+    {
+      "path": "Scene/Town.tscn",
+      "before": "15b6afa9163392c81e00dd864ed972ddf4b4d7e8a1d0cbe23d2b370403952939",
+      "after": "ee0b5a466aee208f679177540be110f87e9a4d84751d0da34329e2e28dc8bed4",
+      "unchanged": false
+    },
+    {
+      "path": "Scene/World/Town500m/terrain_payload.tscn",
+      "before": "1519cb0b9c255524ff4a1f600b2f07cb214b1c13c2ecb7aa2cc6a020379acdfd",
+      "after": "9e3c705847a20004f38c9b8611eea32a299b58b374201bb170fd7ccf6cdf1e14",
+      "unchanged": false
+    },
+    {
+      "path": "Scene/World/Town500m/Circulation/circulation.tscn",
+      "before": "09595161daace57c66a117f860a276f722c4b0902dd91fbd9cacadd2bb7f2bf7",
+      "after": "09595161daace57c66a117f860a276f722c4b0902dd91fbd9cacadd2bb7f2bf7",
+      "unchanged": true
+    },
+    {
+      "path": "Scripts/World/day_night_cycle.gd",
+      "before": "456df50ee053f4c0a67a7aeda0a1d88a524cf72038fa7dc4b12b96051b8f2c74",
+      "after": "456df50ee053f4c0a67a7aeda0a1d88a524cf72038fa7dc4b12b96051b8f2c74",
+      "unchanged": true
+    },
+    {
+      "path": "project.godot",
+      "before": "080bdb5a0067e222f77529c3dbe1de6b539461103cbfa26c77a9376ca56dd59e",
+      "after": "080bdb5a0067e222f77529c3dbe1de6b539461103cbfa26c77a9376ca56dd59e",
+      "unchanged": true
+    },
+    {
+      "path": "addons/cogito/Theme/Cogito_Theme_A.tres",
+      "before": "1c6e3c0f966acbdbdabfddf0c8c407493cdabd587001ce4f2dbbbf0bebcd95e6",
+      "after": "1c6e3c0f966acbdbdabfddf0c8c407493cdabd587001ce4f2dbbbf0bebcd95e6",
+      "unchanged": true
+    },
+    {
+      "path": "design/town-500m/layout.json",
+      "before": "3eaf13391a1fd9781a20bb179bab8f60c88a9a4a14384f8a738b3b7539aab81b",
+      "after": "3eaf13391a1fd9781a20bb179bab8f60c88a9a4a14384f8a738b3b7539aab81b",
+      "unchanged": true
+    },
+    {
+      "path": "design/town-500m/terrain-contract.json",
+      "before": "b0221b5ea78784b24899a14696238dfd58441a8b04ec62434c267a1a7667a87a",
+      "after": "b0221b5ea78784b24899a14696238dfd58441a8b04ec62434c267a1a7667a87a",
+      "unchanged": true
+    },
+    {
+      "path": "design/town-500m/building-catalogue.json",
+      "before": "271ac4c21013c72e063d5cb43850d6f0a8f20b3bfcc6269d60ee1f7780c9051b",
+      "after": "271ac4c21013c72e063d5cb43850d6f0a8f20b3bfcc6269d60ee1f7780c9051b",
+      "unchanged": true
+    },
+    {
+      "path": "Scene/World/Town500m/Art/apartment_pilot.tscn",
+      "before": "0543003d4145009ec81a77b19c34156d6a1e850754531b5c2f11735e3802dab1",
+      "after": "0543003d4145009ec81a77b19c34156d6a1e850754531b5c2f11735e3802dab1",
+      "unchanged": true
+    }
+  ],
+  "native_qa": "design/town-500m/phase7/native-material-qa.json",
+  "editor_state": "design/town-500m/phase7/editor-final-state.json",
+  "performance": {
+    "comparison_scope": "Same 1280x720 cameras/hour/exposure, 180 samples each; static scene with AI/survival disabled. No causal speedup/active-AI/1080p120FPS claim.",
+    "views": [
+      {
+        "view": "player",
+        "before": {
+          "draw_calls": 1242,
+          "engine_max_fps": 0,
+          "frames": 180,
+          "gpu_median_ms": 1.20799994468689,
+          "gpu_p95_ms": 1.96200001239777,
+          "kind": "ground_render_cost",
+          "primitives": 734883,
+          "render_cpu_median_ms": 0.971000015735626,
+          "scope": "Native viewport GPU/CPU timestamps on this GPU, no120FPS cap; static scene, BT/survival disabled. Not active-AI whole-map/1080p certification.",
+          "texture_bytes": 767812608,
+          "view": "player",
+          "viewport": [
+            1280,
+            720
+          ],
+          "wall_median_ms": 2.052
+        },
+        "after": {
+          "draw_calls": 1258,
+          "engine_max_fps": 0,
+          "frames": 180,
+          "gpu_median_ms": 1.15499997138977,
+          "gpu_p95_ms": 2.41000008583069,
+          "kind": "ground_render_cost",
+          "primitives": 744829,
+          "render_cpu_median_ms": 0.970000028610229,
+          "scope": "Native viewport GPU/CPU timestamps on this GPU, no120FPS cap; static scene, BT/survival disabled. Not active-AI whole-map/1080p certification.",
+          "texture_bytes": 820251136,
+          "view": "player",
+          "viewport": [
+            1280,
+            720
+          ],
+          "wall_median_ms": 2.349
+        }
+      },
+      {
+        "view": "road_edge",
+        "before": {
+          "draw_calls": 1377,
+          "engine_max_fps": 0,
+          "frames": 180,
+          "gpu_median_ms": 0.805999994277954,
+          "gpu_p95_ms": 1.3289999961853,
+          "kind": "ground_render_cost",
+          "primitives": 554403,
+          "render_cpu_median_ms": 0.91100001335144,
+          "scope": "Native viewport GPU/CPU timestamps on this GPU, no120FPS cap; static scene, BT/survival disabled. Not active-AI whole-map/1080p certification.",
+          "texture_bytes": 767812608,
+          "view": "road_edge",
+          "viewport": [
+            1280,
+            720
+          ],
+          "wall_median_ms": 1.797
+        },
+        "after": {
+          "draw_calls": 1388,
+          "engine_max_fps": 0,
+          "frames": 180,
+          "gpu_median_ms": 0.940999984741211,
+          "gpu_p95_ms": 1.61899995803833,
+          "kind": "ground_render_cost",
+          "primitives": 558961,
+          "render_cpu_median_ms": 0.920000016689301,
+          "scope": "Native viewport GPU/CPU timestamps on this GPU, no120FPS cap; static scene, BT/survival disabled. Not active-AI whole-map/1080p certification.",
+          "texture_bytes": 820251136,
+          "view": "road_edge",
+          "viewport": [
+            1280,
+            720
+          ],
+          "wall_median_ms": 1.876
+        }
+      }
+    ],
+    "texture_increase_bytes": 52438528
+  },
+  "visual_review": {
+    "status": "REVIEWED",
+    "pilot": [
+      "player",
+      "overview",
+      "road_edge",
+      "foundation",
+      "tree_ground"
+    ],
+    "hours": [
+      12,
+      17,
+      22
+    ],
+    "outer": [
+      "town",
+      "farm",
+      "forest",
+      "industry",
+      "hills",
+      "lake",
+      "riverbank",
+      "two bridges"
+    ],
+    "observations": [
+      "Continuous material response replaces flat zone colors; no earlier checker plates or leaf grids in reviewed views.",
+      "Recognizable roads and connected junction surfaces with irregular dirt/grass shoulders.",
+      "Apartment entrance/steps clear; sparse grass and localized leaf/soil contact around existing trees/foundation.",
+      "Reduced-direct-light check under existing gray sky; no weather system added."
+    ],
+    "comparisons": [
+      "tests/artifacts/town500_ground_art/comparison_overview.png",
+      "tests/artifacts/town500_ground_art/comparison_road_edge.png",
+      "tests/artifacts/town500_ground_art/comparison_foundation.png"
+    ]
+  },
+  "cleanup": {
+    "isolated_saves": "Each completed fixture checked no save writes and removed its empty owned root.",
+    "theme_restored_sha256": "1c6e3c0f966acbdbdabfddf0c8c407493cdabd587001ce4f2dbbbf0bebcd95e6",
+    "playing": false,
+    "run_args": "",
+    "unsaved_scenes": [],
+    "codebase_map_regenerated": true,
+    "no_commit_or_push": true
+  },
+  "limits": [
+    "Sampled art/route review, not exhaustive all-angle foliage/visibility or whole-raid gameplay acceptance.",
+    "Existing graybox structures and steep terrain geometry intentionally retained.",
+    "720p static GPU samples do not certify 1080p/120 FPS or active AI; measured p95 costs are higher.",
+    "Editor reload/import diagnostics are in editor-postreload-log.json; editor idle and completed native runtime receipts are separate evidence.",
+    "Failed headless MultiMesh readback, camera placement and stale-shader iterations are historical diagnostics, not final acceptance."
+  ]
+}

@@ -1,0 +1,3896 @@
+{
+  "schema_version": 1,
+  "status": "Phase0 catalogue with primary farmhouse elevation correction; native pending",
+  "coordinates": "metres; X east, Z south; Godot yaw rotates local -Z front to [-sin(yaw),-cos(yaw)]; template floor-centred origin, root pad+.2",
+  "source": {
+    "file": "reference/map_layout_godot.json",
+    "sha256": "5B00249B20F86BC36BCD773F410A6EF434EE084526A27F5777AE5676AA0DA55D"
+  },
+  "template_evidence": "Assets/TownConceptB/Buildings/building_contract.json; FrontLeft/FrontRight/FrontLintel at local -Z and GFEntry verified in live template files. Contract native_verified flags are historical pending and are not new-layout acceptance.",
+  "templates": [
+    {
+      "id": "t01_cottage",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage.tscn",
+      "footprint_m": [
+        10,
+        8
+      ],
+      "height_m": 3.2,
+      "door_local_xz": [
+        0,
+        -4
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t01_cottage_shell",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn",
+      "footprint_m": [
+        10,
+        8
+      ],
+      "height_m": 3.2,
+      "door_local_xz": null,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t02_long_house",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn",
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 6.4,
+      "door_local_xz": [
+        0,
+        -8
+      ],
+      "access": {
+        "ground": true,
+        "upper": true
+      },
+      "floors": 2
+    },
+    {
+      "id": "t02_long_house_ground",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t02_long_house_ground.tscn",
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 3.2,
+      "door_local_xz": [
+        0,
+        -8
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t03_apartment",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t03_apartment.tscn",
+      "footprint_m": [
+        24,
+        12
+      ],
+      "height_m": 6.4,
+      "door_local_xz": null,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 2
+    },
+    {
+      "id": "t04_shop",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn",
+      "footprint_m": [
+        12,
+        8
+      ],
+      "height_m": 3.2,
+      "door_local_xz": [
+        0,
+        -4
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t05_clinic",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t05_clinic.tscn",
+      "footprint_m": [
+        12,
+        10
+      ],
+      "height_m": 3.2,
+      "door_local_xz": [
+        0,
+        -5
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t06_garage",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn",
+      "footprint_m": [
+        14,
+        10
+      ],
+      "height_m": 4.5,
+      "door_local_xz": [
+        0,
+        -5
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t07_workshop",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t07_workshop.tscn",
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 3.2,
+      "door_local_xz": [
+        0,
+        -8
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t07_workshop_shell",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t07_workshop_shell.tscn",
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 3.2,
+      "door_local_xz": null,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t08_warehouse",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn",
+      "footprint_m": [
+        24.6,
+        18.6
+      ],
+      "height_m": 7,
+      "door_local_xz": [
+        0,
+        -9.3
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t09_shed",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed.tscn",
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "door_local_xz": [
+        0,
+        -2
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t09_shed_shell",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "door_local_xz": null,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t10_kiosk",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t10_kiosk.tscn",
+      "footprint_m": [
+        4,
+        4
+      ],
+      "height_m": 3.2,
+      "door_local_xz": null,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t11_substation",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t11_substation.tscn",
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "door_local_xz": null,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t12_bus_shelter",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t12_bus_shelter.tscn",
+      "footprint_m": [
+        6,
+        2
+      ],
+      "height_m": 3.2,
+      "door_local_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0
+    },
+    {
+      "id": "t13_guard_booth",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t13_guard_booth.tscn",
+      "footprint_m": [
+        3,
+        3
+      ],
+      "height_m": 3.2,
+      "door_local_xz": null,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1
+    },
+    {
+      "id": "t14_pump_house",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t14_pump_house.tscn",
+      "footprint_m": [
+        6,
+        5
+      ],
+      "height_m": 3.2,
+      "door_local_xz": [
+        0,
+        -2.5
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1
+    }
+  ],
+  "plots": [
+    {
+      "id": "T01",
+      "position_xz_m": [
+        -137.5,
+        -17.61
+      ],
+      "footprint_m": [
+        29.55,
+        26.14
+      ]
+    },
+    {
+      "id": "T02",
+      "position_xz_m": [
+        -97.16,
+        -14.2
+      ],
+      "footprint_m": [
+        30.68,
+        23.86
+      ]
+    },
+    {
+      "id": "T03",
+      "position_xz_m": [
+        -32.95,
+        -13.07
+      ],
+      "footprint_m": [
+        34.09,
+        26.14
+      ]
+    },
+    {
+      "id": "T04",
+      "position_xz_m": [
+        14.2,
+        -10.23
+      ],
+      "footprint_m": [
+        32.95,
+        25
+      ]
+    },
+    {
+      "id": "T05",
+      "position_xz_m": [
+        -131.25,
+        59.09
+      ],
+      "footprint_m": [
+        37.5,
+        31.82
+      ]
+    },
+    {
+      "id": "T06",
+      "position_xz_m": [
+        -82.39,
+        72.73
+      ],
+      "footprint_m": [
+        30.68,
+        40.91
+      ]
+    },
+    {
+      "id": "T07",
+      "position_xz_m": [
+        -25.57,
+        71.59
+      ],
+      "footprint_m": [
+        39.77,
+        36.36
+      ]
+    },
+    {
+      "id": "T08",
+      "position_xz_m": [
+        17.61,
+        74.43
+      ],
+      "footprint_m": [
+        28.41,
+        30.68
+      ]
+    },
+    {
+      "id": "T09",
+      "position_xz_m": [
+        -132.95,
+        122.16
+      ],
+      "footprint_m": [
+        34.09,
+        28.41
+      ]
+    },
+    {
+      "id": "T10",
+      "position_xz_m": [
+        -63.07,
+        112.5
+      ],
+      "footprint_m": [
+        21.59,
+        15.91
+      ]
+    },
+    {
+      "id": "T11",
+      "position_xz_m": [
+        -23.3,
+        125.57
+      ],
+      "footprint_m": [
+        32.95,
+        23.86
+      ]
+    },
+    {
+      "id": "T12",
+      "position_xz_m": [
+        21.02,
+        126.14
+      ],
+      "footprint_m": [
+        21.59,
+        29.55
+      ]
+    }
+  ],
+  "structures": [
+    {
+      "id": "T01-A",
+      "source_ref": "T01",
+      "zone_id": "town",
+      "kind": "house",
+      "position_xz_m": [
+        -142,
+        -17
+      ],
+      "footprint_m": [
+        10,
+        8
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": [
+        -142,
+        -13
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          -142,
+          -12.7
+        ],
+        "to_xz_m": [
+          -142,
+          -9.7
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T01-B",
+      "source_ref": "T01",
+      "zone_id": "town",
+      "kind": "house",
+      "position_xz_m": [
+        -130,
+        -25
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T01-C",
+      "source_ref": "T01",
+      "zone_id": "town",
+      "kind": "house",
+      "position_xz_m": [
+        -130,
+        -11
+      ],
+      "footprint_m": [
+        3,
+        3
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t13_guard_booth.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T02-A",
+      "source_ref": "T02",
+      "zone_id": "town",
+      "kind": "store",
+      "position_xz_m": [
+        -100,
+        -15
+      ],
+      "footprint_m": [
+        12,
+        8
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": [
+        -100,
+        -11
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          -100,
+          -10.7
+        ],
+        "to_xz_m": [
+          -100,
+          -7.7
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T02-B",
+      "source_ref": "T02",
+      "zone_id": "town",
+      "kind": "store",
+      "position_xz_m": [
+        -88,
+        -19
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": [
+        -88,
+        -17
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          -88,
+          -16.7
+        ],
+        "to_xz_m": [
+          -88,
+          -13.7
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T02-C",
+      "source_ref": "T02",
+      "zone_id": "town",
+      "kind": "store",
+      "position_xz_m": [
+        -104,
+        -23
+      ],
+      "footprint_m": [
+        4,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t10_kiosk.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T03-A",
+      "source_ref": "T03",
+      "zone_id": "town",
+      "kind": "civic",
+      "position_xz_m": [
+        -39,
+        -13
+      ],
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 6.4,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": true,
+        "upper": true
+      },
+      "floors": 2,
+      "door_threshold_xz_m": [
+        -39,
+        -5
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          -39,
+          -4.7
+        ],
+        "to_xz_m": [
+          -39,
+          -1.7
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T03-B",
+      "source_ref": "T03",
+      "zone_id": "town",
+      "kind": "civic",
+      "position_xz_m": [
+        -24,
+        -19
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T03-C",
+      "source_ref": "T03",
+      "zone_id": "town",
+      "kind": "civic",
+      "position_xz_m": [
+        -24,
+        -9
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t11_substation.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T04-A",
+      "source_ref": "T04",
+      "zone_id": "town",
+      "kind": "store",
+      "position_xz_m": [
+        10,
+        -11
+      ],
+      "footprint_m": [
+        12,
+        8
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": [
+        10,
+        -7
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          10,
+          -6.7
+        ],
+        "to_xz_m": [
+          10,
+          -3.7
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T04-B",
+      "source_ref": "T04",
+      "zone_id": "town",
+      "kind": "store",
+      "position_xz_m": [
+        25,
+        -17
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T05-A",
+      "source_ref": "T05",
+      "zone_id": "town",
+      "kind": "civic",
+      "position_xz_m": [
+        -137,
+        57
+      ],
+      "footprint_m": [
+        12,
+        10
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": [
+        -137,
+        52
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          -137,
+          51.7
+        ],
+        "to_xz_m": [
+          -137,
+          48.7
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t05_clinic.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T05-B",
+      "source_ref": "T05",
+      "zone_id": "town",
+      "kind": "civic",
+      "position_xz_m": [
+        -120,
+        50
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T05-C",
+      "source_ref": "T05",
+      "zone_id": "town",
+      "kind": "civic",
+      "position_xz_m": [
+        -120,
+        68
+      ],
+      "footprint_m": [
+        3,
+        3
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t13_guard_booth.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T06-A",
+      "source_ref": "T06",
+      "zone_id": "town",
+      "kind": "apartment",
+      "position_xz_m": [
+        -84,
+        78
+      ],
+      "footprint_m": [
+        24,
+        12
+      ],
+      "height_m": 6.4,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 2,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t03_apartment.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T06-B",
+      "source_ref": "T06",
+      "zone_id": "town",
+      "kind": "apartment",
+      "position_xz_m": [
+        -86,
+        62
+      ],
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 6.4,
+      "yaw_deg": 90,
+      "front_xz": [
+        -1,
+        0
+      ],
+      "access": {
+        "ground": true,
+        "upper": true
+      },
+      "floors": 2,
+      "door_threshold_xz_m": [
+        -94,
+        62
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          -94.3,
+          62
+        ],
+        "to_xz_m": [
+          -97.3,
+          62
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T06-C",
+      "source_ref": "T06",
+      "zone_id": "town",
+      "kind": "apartment",
+      "position_xz_m": [
+        -71,
+        87
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": [
+        -71,
+        89
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          -71,
+          89.3
+        ],
+        "to_xz_m": [
+          -71,
+          92.3
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T07-A",
+      "source_ref": "T07",
+      "zone_id": "town",
+      "kind": "civic",
+      "position_xz_m": [
+        -33,
+        70
+      ],
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 6.4,
+      "yaw_deg": 90,
+      "front_xz": [
+        -1,
+        0
+      ],
+      "access": {
+        "ground": true,
+        "upper": true
+      },
+      "floors": 2,
+      "door_threshold_xz_m": [
+        -41,
+        70
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          -41.3,
+          70
+        ],
+        "to_xz_m": [
+          -44.3,
+          70
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T07-B",
+      "source_ref": "T07",
+      "zone_id": "town",
+      "kind": "civic",
+      "position_xz_m": [
+        -19,
+        82
+      ],
+      "footprint_m": [
+        12,
+        8
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": [
+        -19,
+        86
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          -19,
+          86.3
+        ],
+        "to_xz_m": [
+          -19,
+          89.3
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T07-C",
+      "source_ref": "T07",
+      "zone_id": "town",
+      "kind": "civic",
+      "position_xz_m": [
+        -16,
+        61
+      ],
+      "footprint_m": [
+        6,
+        2
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t12_bus_shelter.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T08-A",
+      "source_ref": "T08",
+      "zone_id": "town",
+      "kind": "garage",
+      "position_xz_m": [
+        16,
+        72
+      ],
+      "footprint_m": [
+        14,
+        10
+      ],
+      "height_m": 4.5,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": [
+        16,
+        67
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          16,
+          66.7
+        ],
+        "to_xz_m": [
+          16,
+          63.7
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T08-B",
+      "source_ref": "T08",
+      "zone_id": "town",
+      "kind": "garage",
+      "position_xz_m": [
+        25,
+        84
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T09-A",
+      "source_ref": "T09",
+      "zone_id": "town",
+      "kind": "ruin",
+      "position_xz_m": [
+        -138,
+        122
+      ],
+      "footprint_m": [
+        10,
+        8
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T09-B",
+      "source_ref": "T09",
+      "zone_id": "town",
+      "kind": "ruin",
+      "position_xz_m": [
+        -121,
+        130
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T10-A",
+      "source_ref": "T10",
+      "zone_id": "town",
+      "kind": "market",
+      "position_xz_m": [
+        -57,
+        108
+      ],
+      "footprint_m": [
+        4,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t10_kiosk.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T10-B",
+      "source_ref": "T10",
+      "zone_id": "town",
+      "kind": "market",
+      "position_xz_m": [
+        -57,
+        116
+      ],
+      "footprint_m": [
+        4,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t10_kiosk.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T10-C",
+      "source_ref": "T10",
+      "zone_id": "town",
+      "kind": "market",
+      "position_xz_m": [
+        -64,
+        118.3
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": [
+        -64,
+        120.3
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          -64,
+          120.6
+        ],
+        "to_xz_m": [
+          -64,
+          123.6
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T11-A",
+      "source_ref": "T11",
+      "zone_id": "town",
+      "kind": "garage",
+      "position_xz_m": [
+        -27,
+        125
+      ],
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": [
+        -27,
+        133
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          -27,
+          133.3
+        ],
+        "to_xz_m": [
+          -27,
+          136.3
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t07_workshop.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T11-B",
+      "source_ref": "T11",
+      "zone_id": "town",
+      "kind": "garage",
+      "position_xz_m": [
+        -14,
+        131
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": [
+        -14,
+        133
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          -14,
+          133.3
+        ],
+        "to_xz_m": [
+          -14,
+          136.3
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T11-C",
+      "source_ref": "T11",
+      "zone_id": "town",
+      "kind": "garage",
+      "position_xz_m": [
+        -14,
+        118
+      ],
+      "footprint_m": [
+        4,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t10_kiosk.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T12-A",
+      "source_ref": "T12",
+      "zone_id": "town",
+      "kind": "house",
+      "position_xz_m": [
+        20,
+        122
+      ],
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 6.4,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": true,
+        "upper": true
+      },
+      "floors": 2,
+      "door_threshold_xz_m": [
+        20,
+        114
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          20,
+          113.7
+        ],
+        "to_xz_m": [
+          20,
+          110.7
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "T12-B",
+      "source_ref": "T12",
+      "zone_id": "town",
+      "kind": "house",
+      "position_xz_m": [
+        25,
+        138
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "I01-A",
+      "source_ref": "I01",
+      "zone_id": "industry",
+      "kind": "warehouse",
+      "position_xz_m": [
+        155,
+        -72
+      ],
+      "footprint_m": [
+        24.6,
+        18.6
+      ],
+      "height_m": 7,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": [
+        155,
+        -62.7
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          155,
+          -62.4
+        ],
+        "to_xz_m": [
+          155,
+          -59.4
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "I02-A",
+      "source_ref": "I02",
+      "zone_id": "industry",
+      "kind": "civic",
+      "position_xz_m": [
+        191,
+        -78
+      ],
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": [
+        191,
+        -70
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          191,
+          -69.7
+        ],
+        "to_xz_m": [
+          191,
+          -66.7
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t02_long_house_ground.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "I05-A",
+      "source_ref": "I05",
+      "zone_id": "industry",
+      "kind": "warehouse",
+      "position_xz_m": [
+        150,
+        64
+      ],
+      "footprint_m": [
+        14,
+        10
+      ],
+      "height_m": 4.5,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": [
+        150,
+        69
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          150,
+          69.3
+        ],
+        "to_xz_m": [
+          150,
+          72.3
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "I07-A",
+      "source_ref": "I07",
+      "zone_id": "industry",
+      "kind": "civic",
+      "position_xz_m": [
+        182,
+        80
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 90,
+      "front_xz": [
+        -1,
+        0
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "B01-A",
+      "source_ref": "B01",
+      "zone_id": "bunker",
+      "kind": "barracks",
+      "position_xz_m": [
+        -187,
+        -195
+      ],
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t07_workshop_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 10,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "B02-A",
+      "source_ref": "B02",
+      "zone_id": "bunker",
+      "kind": "civic",
+      "position_xz_m": [
+        -138,
+        -195
+      ],
+      "footprint_m": [
+        24,
+        12
+      ],
+      "height_m": 6.4,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 2,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t03_apartment.tscn",
+      "pad_intent": {
+        "surface_y_m": 10,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "B03-A",
+      "source_ref": "B03",
+      "zone_id": "bunker",
+      "kind": "civic",
+      "position_xz_m": [
+        -101,
+        -194
+      ],
+      "footprint_m": [
+        10,
+        8
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 10,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "B05-A",
+      "source_ref": "B05",
+      "zone_id": "bunker",
+      "kind": "garage",
+      "position_xz_m": [
+        -195,
+        -147
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 10,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "B06-A",
+      "source_ref": "B06",
+      "zone_id": "bunker",
+      "kind": "checkpoint",
+      "position_xz_m": [
+        -146,
+        -128
+      ],
+      "footprint_m": [
+        3,
+        3
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t13_guard_booth.tscn",
+      "pad_intent": {
+        "surface_y_m": 10,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "F01-A",
+      "source_ref": "F01",
+      "zone_id": "forest",
+      "kind": "house",
+      "position_xz_m": [
+        118,
+        -191
+      ],
+      "footprint_m": [
+        10,
+        8
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "F02-A",
+      "source_ref": "F02",
+      "zone_id": "forest",
+      "kind": "garage",
+      "position_xz_m": [
+        174,
+        -151
+      ],
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 90,
+      "front_xz": [
+        -1,
+        0
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t07_workshop_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "F02-B",
+      "source_ref": "F02",
+      "zone_id": "forest",
+      "kind": "garage",
+      "position_xz_m": [
+        190,
+        -160
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 90,
+      "front_xz": [
+        -1,
+        0
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "A01-A",
+      "source_ref": "A01",
+      "zone_id": "farmland",
+      "kind": "house",
+      "position_xz_m": [
+        -207,
+        -26
+      ],
+      "footprint_m": [
+        10,
+        8
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": [
+        -207,
+        -22
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          -207,
+          -21.7
+        ],
+        "to_xz_m": [
+          -207,
+          -18.7
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage.tscn",
+      "pad_intent": {
+        "surface_y_m": 3.307430095,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4,
+        "reason": "NW farmhouse pad meets nearby ascending hill route; avoids27.49% short door ramp"
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "A02-A",
+      "source_ref": "A02",
+      "zone_id": "farmland",
+      "kind": "garage",
+      "position_xz_m": [
+        -188,
+        -24
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 1.5,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "A04-A",
+      "source_ref": "A04",
+      "zone_id": "farmland",
+      "kind": "barn",
+      "position_xz_m": [
+        -212,
+        108
+      ],
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 90,
+      "front_xz": [
+        -1,
+        0
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t07_workshop_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 1.5,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "A05-A",
+      "source_ref": "A05",
+      "zone_id": "farmland",
+      "kind": "house",
+      "position_xz_m": [
+        -191,
+        143
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 90,
+      "front_xz": [
+        -1,
+        0
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 1.5,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "A06-A",
+      "source_ref": "A06",
+      "zone_id": "farmland",
+      "kind": "barn",
+      "position_xz_m": [
+        -149,
+        202
+      ],
+      "footprint_m": [
+        24.6,
+        18.6
+      ],
+      "height_m": 7,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": [
+        -149,
+        192.7
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          -149,
+          192.4
+        ],
+        "to_xz_m": [
+          -149,
+          189.4
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn",
+      "pad_intent": {
+        "surface_y_m": 1.5,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "A07-A",
+      "source_ref": "A07",
+      "zone_id": "farmland",
+      "kind": "house",
+      "position_xz_m": [
+        -53,
+        198
+      ],
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 90,
+      "front_xz": [
+        -1,
+        0
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": [
+        -61,
+        198
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          -61.3,
+          198
+        ],
+        "to_xz_m": [
+          -64.3,
+          198
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t02_long_house_ground.tscn",
+      "pad_intent": {
+        "surface_y_m": 1.5,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "A08-A",
+      "source_ref": "A08",
+      "zone_id": "farmland",
+      "kind": "garage",
+      "position_xz_m": [
+        54,
+        205
+      ],
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 90,
+      "front_xz": [
+        -1,
+        0
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t07_workshop_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 1.5,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "L01-A",
+      "source_ref": "L01",
+      "zone_id": "lake",
+      "kind": "civic",
+      "position_xz_m": [
+        119,
+        127
+      ],
+      "footprint_m": [
+        6,
+        5
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": [
+        119,
+        129.5
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          119,
+          129.8
+        ],
+        "to_xz_m": [
+          119,
+          132.8
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t14_pump_house.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted walls/floor; passable door; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "L02-A",
+      "source_ref": "L02",
+      "zone_id": "lake",
+      "kind": "house",
+      "position_xz_m": [
+        153,
+        149
+      ],
+      "footprint_m": [
+        10,
+        8
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "L04-A",
+      "source_ref": "L04",
+      "zone_id": "lake",
+      "kind": "garage",
+      "position_xz_m": [
+        188,
+        138
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "closed fitted shell; nonwalkable roof",
+      "model_status": "existing editable TownKit template; new placement native pending"
+    },
+    {
+      "id": "I03-A",
+      "source_ref": "I03",
+      "zone_id": "industry",
+      "kind": "fuel_tank",
+      "position_xz_m": [
+        140,
+        -18
+      ],
+      "footprint_m": [
+        5,
+        5
+      ],
+      "height_m": 5,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "I03-B",
+      "source_ref": "I03",
+      "zone_id": "industry",
+      "kind": "fuel_tank",
+      "position_xz_m": [
+        148,
+        -18
+      ],
+      "footprint_m": [
+        5,
+        5
+      ],
+      "height_m": 5,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "I03-C",
+      "source_ref": "I03",
+      "zone_id": "industry",
+      "kind": "fuel_tank",
+      "position_xz_m": [
+        156,
+        -18
+      ],
+      "footprint_m": [
+        5,
+        5
+      ],
+      "height_m": 5,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "I04-A",
+      "source_ref": "I04",
+      "zone_id": "industry",
+      "kind": "container",
+      "position_xz_m": [
+        171,
+        -24
+      ],
+      "footprint_m": [
+        6.06,
+        2.44
+      ],
+      "height_m": 2.59,
+      "yaw_deg": 90,
+      "front_xz": [
+        -1,
+        0
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "I04-B",
+      "source_ref": "I04",
+      "zone_id": "industry",
+      "kind": "container",
+      "position_xz_m": [
+        179,
+        -24
+      ],
+      "footprint_m": [
+        6.06,
+        2.44
+      ],
+      "height_m": 2.59,
+      "yaw_deg": 90,
+      "front_xz": [
+        -1,
+        0
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "I04-C",
+      "source_ref": "I04",
+      "zone_id": "industry",
+      "kind": "container",
+      "position_xz_m": [
+        187,
+        -24
+      ],
+      "footprint_m": [
+        6.06,
+        2.44
+      ],
+      "height_m": 2.59,
+      "yaw_deg": 90,
+      "front_xz": [
+        -1,
+        0
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "I06-A",
+      "source_ref": "I06",
+      "zone_id": "industry",
+      "kind": "container",
+      "position_xz_m": [
+        146,
+        35
+      ],
+      "footprint_m": [
+        6.06,
+        2.44
+      ],
+      "height_m": 2.59,
+      "yaw_deg": 90,
+      "front_xz": [
+        -1,
+        0
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "I06-B",
+      "source_ref": "I06",
+      "zone_id": "industry",
+      "kind": "container",
+      "position_xz_m": [
+        154,
+        35
+      ],
+      "footprint_m": [
+        6.06,
+        2.44
+      ],
+      "height_m": 2.59,
+      "yaw_deg": 90,
+      "front_xz": [
+        -1,
+        0
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "I06-C",
+      "source_ref": "I06",
+      "zone_id": "industry",
+      "kind": "container",
+      "position_xz_m": [
+        162,
+        35
+      ],
+      "footprint_m": [
+        6.06,
+        2.44
+      ],
+      "height_m": 2.59,
+      "yaw_deg": 90,
+      "front_xz": [
+        -1,
+        0
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "I08-A",
+      "source_ref": "I08",
+      "zone_id": "industry",
+      "kind": "railcar",
+      "position_xz_m": [
+        208.52,
+        -43.18
+      ],
+      "footprint_m": [
+        3.1,
+        14
+      ],
+      "height_m": 4,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "I09-A",
+      "source_ref": "I09",
+      "zone_id": "industry",
+      "kind": "railcar",
+      "position_xz_m": [
+        198.3,
+        59.09
+      ],
+      "footprint_m": [
+        3.1,
+        14
+      ],
+      "height_m": 4,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "B04-ENTRY",
+      "source_ref": "B04",
+      "zone_id": "bunker",
+      "kind": "bunker_entry",
+      "position_xz_m": [
+        -149,
+        -147
+      ],
+      "footprint_m": [
+        8,
+        8
+      ],
+      "height_m": 3.6,
+      "yaw_deg": 180,
+      "front_xz": [
+        0,
+        1
+      ],
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "floors": 1,
+      "door_threshold_xz_m": [
+        -149,
+        -143
+      ],
+      "door_apron": {
+        "from_xz_m": [
+          -149,
+          -142.7
+        ],
+        "to_xz_m": [
+          -149,
+          -139.7
+        ],
+        "width_m": 1.8
+      },
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 10,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted entry walls/floor; passable door; deep rear doorway sealed",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "B07-A",
+      "source_ref": "B07",
+      "zone_id": "bunker",
+      "kind": "watch_tower",
+      "position_xz_m": [
+        -213,
+        -214
+      ],
+      "footprint_m": [
+        4,
+        4
+      ],
+      "height_m": 8,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 10,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "B08-A",
+      "source_ref": "B08",
+      "zone_id": "bunker",
+      "kind": "watch_tower",
+      "position_xz_m": [
+        -90,
+        -214
+      ],
+      "footprint_m": [
+        4,
+        4
+      ],
+      "height_m": 8,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 10,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "H01-A",
+      "source_ref": "H01",
+      "zone_id": "hills",
+      "kind": "observation_platform",
+      "position_xz_m": [
+        -44,
+        -165
+      ],
+      "footprint_m": [
+        4,
+        4
+      ],
+      "height_m": 5,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 15,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "H02-A",
+      "source_ref": "H02",
+      "zone_id": "hills",
+      "kind": "sealed_pillbox",
+      "position_xz_m": [
+        -62.5,
+        -105.68
+      ],
+      "footprint_m": [
+        6,
+        5
+      ],
+      "height_m": 2.7,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 15,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "H03-A",
+      "source_ref": "H03",
+      "zone_id": "hills",
+      "kind": "radio_mast",
+      "position_xz_m": [
+        -12,
+        -215
+      ],
+      "footprint_m": [
+        2,
+        2
+      ],
+      "height_m": 13,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 15,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "H04-A",
+      "source_ref": "H04",
+      "zone_id": "hills",
+      "kind": "stone_ruin",
+      "position_xz_m": [
+        -218.8,
+        -95
+      ],
+      "footprint_m": [
+        8,
+        6
+      ],
+      "height_m": 2.4,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 15,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "F03-A",
+      "source_ref": "F03",
+      "zone_id": "forest",
+      "kind": "hunting_stand",
+      "position_xz_m": [
+        233,
+        -157
+      ],
+      "footprint_m": [
+        3,
+        3
+      ],
+      "height_m": 4.5,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "F04-A",
+      "source_ref": "F04",
+      "zone_id": "forest",
+      "kind": "cache_crate",
+      "position_xz_m": [
+        99,
+        -69
+      ],
+      "footprint_m": [
+        1.2,
+        0.8
+      ],
+      "height_m": 0.75,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "A03-A",
+      "source_ref": "A03",
+      "zone_id": "farmland",
+      "kind": "wind_pump",
+      "position_xz_m": [
+        -197,
+        72
+      ],
+      "footprint_m": [
+        3,
+        3
+      ],
+      "height_m": 7,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 1.5,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    },
+    {
+      "id": "A09-A",
+      "source_ref": "A09",
+      "zone_id": "farmland",
+      "kind": "water_cistern",
+      "position_xz_m": [
+        70,
+        234
+      ],
+      "footprint_m": [
+        4,
+        4
+      ],
+      "height_m": 4,
+      "yaw_deg": 0,
+      "front_xz": [
+        0,
+        -1
+      ],
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "floors": 0,
+      "door_threshold_xz_m": null,
+      "door_apron": null,
+      "scene_ref": null,
+      "pad_intent": {
+        "surface_y_m": 1.5,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "collider_role": "fitted solid physical asset; no enterable or navigable upper floor",
+      "model_status": "dimensioned physical asset; native scene/modeling budget pending"
+    }
+  ],
+  "source_mapping": [
+    {
+      "source_id": "T01",
+      "action": "split",
+      "actual_ids": [
+        "T01-A",
+        "T01-B",
+        "T01-C"
+      ],
+      "reason": "Plot envelope becomes real-scale buildings and yard; source bounds are not physical collision."
+    },
+    {
+      "source_id": "T02",
+      "action": "split",
+      "actual_ids": [
+        "T02-A",
+        "T02-B",
+        "T02-C"
+      ],
+      "reason": "Plot envelope becomes real-scale buildings and yard; source bounds are not physical collision."
+    },
+    {
+      "source_id": "T03",
+      "action": "split",
+      "actual_ids": [
+        "T03-A",
+        "T03-B",
+        "T03-C"
+      ],
+      "reason": "Plot envelope becomes real-scale buildings and yard; source bounds are not physical collision."
+    },
+    {
+      "source_id": "T04",
+      "action": "split",
+      "actual_ids": [
+        "T04-A",
+        "T04-B"
+      ],
+      "reason": "Plot envelope becomes real-scale buildings and yard; source bounds are not physical collision."
+    },
+    {
+      "source_id": "T05",
+      "action": "split",
+      "actual_ids": [
+        "T05-A",
+        "T05-B",
+        "T05-C"
+      ],
+      "reason": "Plot envelope becomes real-scale buildings and yard; source bounds are not physical collision."
+    },
+    {
+      "source_id": "T06",
+      "action": "split",
+      "actual_ids": [
+        "T06-A",
+        "T06-B",
+        "T06-C"
+      ],
+      "reason": "Plot envelope becomes real-scale buildings and yard; source bounds are not physical collision."
+    },
+    {
+      "source_id": "T07",
+      "action": "split",
+      "actual_ids": [
+        "T07-A",
+        "T07-B",
+        "T07-C"
+      ],
+      "reason": "Plot envelope becomes real-scale buildings and yard; source bounds are not physical collision."
+    },
+    {
+      "source_id": "T08",
+      "action": "split",
+      "actual_ids": [
+        "T08-A",
+        "T08-B"
+      ],
+      "reason": "Plot envelope becomes real-scale buildings and yard; source bounds are not physical collision."
+    },
+    {
+      "source_id": "T09",
+      "action": "split",
+      "actual_ids": [
+        "T09-A",
+        "T09-B"
+      ],
+      "reason": "Plot envelope becomes real-scale buildings and yard; source bounds are not physical collision."
+    },
+    {
+      "source_id": "T10",
+      "action": "split",
+      "actual_ids": [
+        "T10-A",
+        "T10-B",
+        "T10-C"
+      ],
+      "reason": "Plot envelope becomes real-scale buildings and yard; source bounds are not physical collision."
+    },
+    {
+      "source_id": "T11",
+      "action": "split",
+      "actual_ids": [
+        "T11-A",
+        "T11-B",
+        "T11-C"
+      ],
+      "reason": "Plot envelope becomes real-scale buildings and yard; source bounds are not physical collision."
+    },
+    {
+      "source_id": "T12",
+      "action": "split",
+      "actual_ids": [
+        "T12-A",
+        "T12-B"
+      ],
+      "reason": "Plot envelope becomes real-scale buildings and yard; source bounds are not physical collision."
+    },
+    {
+      "source_id": "I01",
+      "action": "resize",
+      "actual_ids": [
+        "I01-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "I02",
+      "action": "resize",
+      "actual_ids": [
+        "I02-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "I03",
+      "action": "split",
+      "actual_ids": [
+        "I03-A",
+        "I03-B",
+        "I03-C"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "I04",
+      "action": "split",
+      "actual_ids": [
+        "I04-A",
+        "I04-B",
+        "I04-C"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "I05",
+      "action": "resize",
+      "actual_ids": [
+        "I05-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "I06",
+      "action": "split",
+      "actual_ids": [
+        "I06-A",
+        "I06-B",
+        "I06-C"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "I07",
+      "action": "resize",
+      "actual_ids": [
+        "I07-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "I08",
+      "action": "resize",
+      "actual_ids": [
+        "I08-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "I09",
+      "action": "resize",
+      "actual_ids": [
+        "I09-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "B01",
+      "action": "resize",
+      "actual_ids": [
+        "B01-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "B02",
+      "action": "resize",
+      "actual_ids": [
+        "B02-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "B03",
+      "action": "resize",
+      "actual_ids": [
+        "B03-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "B04",
+      "action": "resize",
+      "actual_ids": [
+        "B04-ENTRY"
+      ],
+      "reason": "Exactly one contiguous 8x8 entry room; deep doorway sealed, no underground transition."
+    },
+    {
+      "source_id": "B05",
+      "action": "resize",
+      "actual_ids": [
+        "B05-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "B06",
+      "action": "resize",
+      "actual_ids": [
+        "B06-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "B07",
+      "action": "resize",
+      "actual_ids": [
+        "B07-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "B08",
+      "action": "resize",
+      "actual_ids": [
+        "B08-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "H01",
+      "action": "resize",
+      "actual_ids": [
+        "H01-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "H02",
+      "action": "resize",
+      "actual_ids": [
+        "H02-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "H03",
+      "action": "resize",
+      "actual_ids": [
+        "H03-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "H04",
+      "action": "resize",
+      "actual_ids": [
+        "H04-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "F01",
+      "action": "resize",
+      "actual_ids": [
+        "F01-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "F02",
+      "action": "split",
+      "actual_ids": [
+        "F02-A",
+        "F02-B"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "F03",
+      "action": "resize",
+      "actual_ids": [
+        "F03-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "F04",
+      "action": "resize",
+      "actual_ids": [
+        "F04-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "A01",
+      "action": "resize",
+      "actual_ids": [
+        "A01-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "A02",
+      "action": "resize",
+      "actual_ids": [
+        "A02-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "A03",
+      "action": "resize",
+      "actual_ids": [
+        "A03-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "A04",
+      "action": "resize",
+      "actual_ids": [
+        "A04-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "A05",
+      "action": "resize",
+      "actual_ids": [
+        "A05-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "A06",
+      "action": "resize",
+      "actual_ids": [
+        "A06-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "A07",
+      "action": "resize",
+      "actual_ids": [
+        "A07-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "A08",
+      "action": "resize",
+      "actual_ids": [
+        "A08-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "A09",
+      "action": "resize",
+      "actual_ids": [
+        "A09-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "R01",
+      "action": "resize",
+      "actual_ids": [
+        "R01"
+      ],
+      "reason": "County deck span/approaches owned by terrain-contract.json."
+    },
+    {
+      "source_id": "R02",
+      "action": "replace",
+      "actual_ids": [
+        "R02"
+      ],
+      "reason": "Replace ford with northern footbridge; geometry owned by terrain-contract.json."
+    },
+    {
+      "source_id": "R03",
+      "action": "retire",
+      "actual_ids": [],
+      "reason": "Remove log crossing; exactly two bank connections."
+    },
+    {
+      "source_id": "L01",
+      "action": "resize",
+      "actual_ids": [
+        "L01-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "L02",
+      "action": "resize",
+      "actual_ids": [
+        "L02-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    },
+    {
+      "source_id": "L03",
+      "action": "replace",
+      "actual_ids": [
+        "DOCK"
+      ],
+      "reason": "Physical deck+gangway owned by terrain-contract.json; do not instance source envelope."
+    },
+    {
+      "source_id": "L04",
+      "action": "resize",
+      "actual_ids": [
+        "L04-A"
+      ],
+      "reason": "Replace oversized source envelope with real-scale physical models; retain POI purpose."
+    }
+  ],
+  "native_pending": [
+    "Every new placement/door/stair traversal and ground/upper access",
+    "Finished art/hash alignment and glass-specific collider ownership",
+    "Physical tower/pillbox/container/tank/railcar/cistern/cache assets; no modelling performed"
+  ],
+  "offline_self_check": {
+    "status": "PASS",
+    "scope": "76 oriented physical rectangles,12 plot bounds,all corrected non-rail corridors+route graph,water polygons,all door aprons;8 patrol loops swept with1m radius. Pure offline design only.",
+    "terrain_contract_sha256": "05563bb27db2544e8f0afbe3226645751ea55e168b941ab00322832c45b34f17",
+    "gameplay_contract_sha256": "69608bd5625bb0069d6c3298bb0062b5c8780bd97412208a4d18f04361d18cd4",
+    "minimum_physical_gap_m": 1,
+    "minimum_swept_corridor_clearance_m": 0.563075513,
+    "minimum_water_clearance_m": 4.244482788,
+    "minimum_patrol_clearance_m": 1.5,
+    "errors": [],
+    "exclusions": [
+      "Railcar/rail alignment intended; P04 rail corridor does not demand empty physical footprint",
+      "R01/R02 and DOCK/gangway owned by terrain contract, not duplicate catalogue objects",
+      "Model silhouettes,roof/eave outsets,terrain heights/native collision/navigation/glass LOS/performance not measured"
+    ],
+    "native_verified": false
+  },
+  "summary": {
+    "town_plots": 12,
+    "town_structures": 32,
+    "town_ground_interiors": 15,
+    "town_upper_interiors": 4,
+    "all_physical_objects": 76,
+    "reused_scene_instances": 54,
+    "dimensioned_asset_instances_pending": 22,
+    "template_types": 14,
+    "template_variants": 18,
+    "source_objects_mapped": 53
+  }
+}

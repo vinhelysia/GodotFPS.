@@ -1,0 +1,29 @@
+Town500m Phase3 Town core — static payload only
+
+Entry: res://Scene/World/Town500m/POI/town_core.tscn
+Attach at identity under Town NavigationRegion3D/Level.
+TownCore/T01..T12 remain identity; instance node names replace '-' with '_'.
+32 catalogue structures / 12 plots / 14 reusable scenes / 15 ground / 4 upper.
+Every root = exact catalogue XZ, pad surface + .2m (currently all Y2.2),
+authored yaw, unit scale. Metadata: town500_id, source_ref, zone.
+Native Markers/GFEntry/GFInterior/stair/upper marker nodes stay in templates.
+No plot-sized geometry, runtime parser, script, settings or template changes.
+
+Reproduce: node design/town-500m/phase3/author-town-core.cjs
+Check: node design/town-500m/phase3/author-town-core.cjs --check
+Checks assert canonical provenance hashes/data, exact counts, scene/dependency
+existence, floor footprints/origins, marker access, front/yaw and byte outputs.
+core-placement-report.json records 32 exact poses/world markers and hashes.
+
+Template compatibility: floor localY[-.2,0], enclosed ceiling/eave=nominal.
+Enclosed slab roof top=nominal+.2; imported roof ridge
+=nominal+.859000027179718 (T02 local7.259000027; T07 local4.059000027).
+These extend beyond catalogue nominal height: preserve full geometry,
+compute native bake Y bounds from actual colliders, inspect high-ground LOS.
+T07-C bus shelter catalogue height3.2 differs from native ceiling2.6/roof2.75.
+It keeps open-shelter GF markers but is not counted as an enclosed interior.
+No incompatible footprint or floor origin was found in the 14 live templates.
+
+Native Godot import/load, terrain alignment/traversal, nav/routes and LOS are
+NOT verified here; primary owns all editor/runtime operations and integration.
+No commit/push. No gameplay/settings/Town/terrain/canonical JSON edits.

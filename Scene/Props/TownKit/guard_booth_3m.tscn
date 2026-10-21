@@ -1,9 +1,275 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=38 format=3]
 
 [ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/assets/guard_booth_3m.glb" id="1_model"]
 [ext_resource type="Material" path="res://Assets/Blender/TownKit/materials/town_architecture_clean.tres" id="2_finish"]
 
+[sub_resource type="BoxShape3D" id="OpaqueCollision_Floor"]
+size = Vector3(3, 0.08, 3)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_FrontWest"]
+size = Vector3(0.9, 2.96, 0.15)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_FrontEast"]
+size = Vector3(0.9, 2.96, 0.15)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_FrontLintel"]
+size = Vector3(1.2, 0.56, 0.15)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_LeftFront"]
+size = Vector3(0.15, 2.96, 0.55)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_LeftSill"]
+size = Vector3(0.15, 0.97, 1.6)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_LeftLintel"]
+size = Vector3(0.15, 0.59, 1.6)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_LeftRear"]
+size = Vector3(0.15, 2.96, 0.55)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_RightFront"]
+size = Vector3(0.15, 2.96, 0.55)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_RightSill"]
+size = Vector3(0.15, 0.97, 1.6)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_RightLintel"]
+size = Vector3(0.15, 0.59, 1.6)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_RightRear"]
+size = Vector3(0.15, 2.96, 0.55)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_RearWest"]
+size = Vector3(0.55, 2.96, 0.15)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_RearSill"]
+size = Vector3(1.6, 0.97, 0.15)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_RearLintel"]
+size = Vector3(1.6, 0.59, 0.15)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_RearEast"]
+size = Vector3(0.55, 2.96, 0.15)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_Left_LeftFrame"]
+size = Vector3(0.12, 1.4, 0.07)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_Right_LeftFrame"]
+size = Vector3(0.12, 1.4, 0.07)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_Rear_LeftFrame"]
+size = Vector3(0.07, 1.4, 0.12)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_Left_RightFrame"]
+size = Vector3(0.12, 1.4, 0.07)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_Right_RightFrame"]
+size = Vector3(0.12, 1.4, 0.07)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_Rear_RightFrame"]
+size = Vector3(0.07, 1.4, 0.12)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_Left_LowerFrame"]
+size = Vector3(0.12, 0.07, 1.46)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_Right_LowerFrame"]
+size = Vector3(0.12, 0.07, 1.46)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_Rear_LowerFrame"]
+size = Vector3(1.46, 0.07, 0.12)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_Left_UpperFrame"]
+size = Vector3(0.12, 0.07, 1.46)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_Right_UpperFrame"]
+size = Vector3(0.12, 0.07, 1.46)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_Rear_UpperFrame"]
+size = Vector3(1.46, 0.07, 0.12)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_Left_Mullion"]
+size = Vector3(0.1, 1.26, 0.04)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_Right_Mullion"]
+size = Vector3(0.1, 1.26, 0.04)
+
+[sub_resource type="BoxShape3D" id="OpaqueCollision_Rear_Mullion"]
+size = Vector3(0.04, 1.26, 0.1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ceiling"]
+data = PackedVector3Array(0,3.04,-2.7, 2.7,3.04,0, 2.7,3.04,-2.7, 0,3.04,-2.7, 0,3.04,0, 2.7,3.04,0)
+backface_collision = false
+
+[sub_resource type="BoxShape3D" id="GlassLeft_Shape"]
+size = Vector3(0.012, 1.325, 1.455)
+
+[sub_resource type="BoxShape3D" id="GlassRight_Shape"]
+size = Vector3(0.012, 1.325, 1.455)
+
+[sub_resource type="BoxShape3D" id="GlassRear_Shape"]
+size = Vector3(1.455, 1.325, 0.012)
+
 [node name="TownGuardBooth" instance=ExtResource("1_model")]
+process_mode = 4
 
 [node name="GuardBooth" parent="TownGuardBooth" index="0"]
 surface_material_override/0 = ExtResource("2_finish")
+
+[node name="OpaqueCollision" type="StaticBody3D" parent="."]
+process_mode = 3
+collision_layer = 1
+collision_mask = 0
+
+[node name="Floor" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(1.35, 0.04, -1.35)
+shape = SubResource("OpaqueCollision_Floor")
+
+[node name="FrontWest" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(0.3, 1.56, 0.075)
+shape = SubResource("OpaqueCollision_FrontWest")
+
+[node name="FrontEast" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(2.4, 1.56, 0.075)
+shape = SubResource("OpaqueCollision_FrontEast")
+
+[node name="FrontLintel" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(1.35, 2.76, 0.075)
+shape = SubResource("OpaqueCollision_FrontLintel")
+
+[node name="LeftFront" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(-0.075, 1.56, -0.275)
+shape = SubResource("OpaqueCollision_LeftFront")
+
+[node name="LeftSill" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(-0.075, 0.565, -1.35)
+shape = SubResource("OpaqueCollision_LeftSill")
+
+[node name="LeftLintel" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(-0.075, 2.745, -1.35)
+shape = SubResource("OpaqueCollision_LeftLintel")
+
+[node name="LeftRear" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(-0.075, 1.56, -2.425)
+shape = SubResource("OpaqueCollision_LeftRear")
+
+[node name="RightFront" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(2.775, 1.56, -0.275)
+shape = SubResource("OpaqueCollision_RightFront")
+
+[node name="RightSill" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(2.775, 0.565, -1.35)
+shape = SubResource("OpaqueCollision_RightSill")
+
+[node name="RightLintel" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(2.775, 2.745, -1.35)
+shape = SubResource("OpaqueCollision_RightLintel")
+
+[node name="RightRear" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(2.775, 1.56, -2.425)
+shape = SubResource("OpaqueCollision_RightRear")
+
+[node name="RearWest" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(0.275, 1.56, -2.775)
+shape = SubResource("OpaqueCollision_RearWest")
+
+[node name="RearSill" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(1.35, 0.565, -2.775)
+shape = SubResource("OpaqueCollision_RearSill")
+
+[node name="RearLintel" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(1.35, 2.745, -2.775)
+shape = SubResource("OpaqueCollision_RearLintel")
+
+[node name="RearEast" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(2.425, 1.56, -2.775)
+shape = SubResource("OpaqueCollision_RearEast")
+
+[node name="Left_LeftFrame" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(-0.07, 1.75, -0.585)
+shape = SubResource("OpaqueCollision_Left_LeftFrame")
+
+[node name="Right_LeftFrame" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(2.77, 1.75, -0.585)
+shape = SubResource("OpaqueCollision_Right_LeftFrame")
+
+[node name="Rear_LeftFrame" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(0.585, 1.75, -2.77)
+shape = SubResource("OpaqueCollision_Rear_LeftFrame")
+
+[node name="Left_RightFrame" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(-0.07, 1.75, -2.115)
+shape = SubResource("OpaqueCollision_Left_RightFrame")
+
+[node name="Right_RightFrame" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(2.77, 1.75, -2.115)
+shape = SubResource("OpaqueCollision_Right_RightFrame")
+
+[node name="Rear_RightFrame" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(2.115, 1.75, -2.77)
+shape = SubResource("OpaqueCollision_Rear_RightFrame")
+
+[node name="Left_LowerFrame" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(-0.07, 1.085, -1.35)
+shape = SubResource("OpaqueCollision_Left_LowerFrame")
+
+[node name="Right_LowerFrame" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(2.77, 1.085, -1.35)
+shape = SubResource("OpaqueCollision_Right_LowerFrame")
+
+[node name="Rear_LowerFrame" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(1.35, 1.085, -2.77)
+shape = SubResource("OpaqueCollision_Rear_LowerFrame")
+
+[node name="Left_UpperFrame" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(-0.07, 2.415, -1.35)
+shape = SubResource("OpaqueCollision_Left_UpperFrame")
+
+[node name="Right_UpperFrame" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(2.77, 2.415, -1.35)
+shape = SubResource("OpaqueCollision_Right_UpperFrame")
+
+[node name="Rear_UpperFrame" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(1.35, 2.415, -2.77)
+shape = SubResource("OpaqueCollision_Rear_UpperFrame")
+
+[node name="Left_Mullion" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(-0.06, 1.75, -1.35)
+shape = SubResource("OpaqueCollision_Left_Mullion")
+
+[node name="Right_Mullion" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(2.76, 1.75, -1.35)
+shape = SubResource("OpaqueCollision_Right_Mullion")
+
+[node name="Rear_Mullion" type="CollisionShape3D" parent="OpaqueCollision"]
+position = Vector3(1.35, 1.75, -2.76)
+shape = SubResource("OpaqueCollision_Rear_Mullion")
+
+[node name="Ceiling" type="CollisionShape3D" parent="OpaqueCollision"]
+shape = SubResource("ceiling")
+
+[node name="GlassLeft" type="StaticBody3D" parent="." groups=["ai_vision_transparent"]]
+process_mode = 3
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shape" type="CollisionShape3D" parent="GlassLeft"]
+position = Vector3(-0.021, 1.75, -1.35)
+shape = SubResource("GlassLeft_Shape")
+
+[node name="GlassRight" type="StaticBody3D" parent="." groups=["ai_vision_transparent"]]
+process_mode = 3
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shape" type="CollisionShape3D" parent="GlassRight"]
+position = Vector3(2.721, 1.75, -1.35)
+shape = SubResource("GlassRight_Shape")
+
+[node name="GlassRear" type="StaticBody3D" parent="." groups=["ai_vision_transparent"]]
+process_mode = 3
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shape" type="CollisionShape3D" parent="GlassRear"]
+position = Vector3(1.35, 1.75, -2.721)
+shape = SubResource("GlassRear_Shape")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/rail_signal/assets/rail_signal_one.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/rail_signal/materials/town_rail_signal_one_used.tres" id="2_finish"]
+
+[node name="industry_rail_signal__one" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "industry_rail_signal"
+metadata/catalog_variant = "one"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="RailSignalOne" parent="Model/TownRailSignalOne"]
+surface_material_override/0 = ExtResource("2_finish")

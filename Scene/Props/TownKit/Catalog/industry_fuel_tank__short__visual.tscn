@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/fuel_tank/assets/fuel_tank_short.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/fuel_tank/materials/town_fuel_tank_short_used.tres" id="2_finish"]
+
+[node name="industry_fuel_tank__short" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "industry_fuel_tank"
+metadata/catalog_variant = "short"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="FuelTankShort" parent="Model/TownFuelTankShort"]
+surface_material_override/0 = ExtResource("2_finish")

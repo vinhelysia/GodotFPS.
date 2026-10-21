@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/shop_cyrillic_signs/assets/shop_cyrillic_signs_pharmacy.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/shop_cyrillic_signs/materials/town_shop_cyrillic_signs_pharmacy_clean.tres" id="2_finish"]
+
+[node name="town_shop_cyrillic_sign__pharmacy" type="Node3D"]
+metadata/catalog_id = "town_shop_cyrillic_sign"
+metadata/catalog_variant = "pharmacy"
+metadata/finish = "clean"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="ShopSignPharmacy" parent="Model/TownShopSignPharmacy"]
+surface_material_override/0 = ExtResource("2_finish")

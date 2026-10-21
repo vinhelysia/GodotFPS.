@@ -1,0 +1,1370 @@
+{
+  "status": "REVIEWED_RELOCATION_PLAN_NATIVE_PENDING",
+  "scope": "Existing gameplay nodes; no new actor,pickup,clock,save schema or interaction behavior",
+  "source_hashes": {
+    "Scene/Town.tscn": "275bd53376918812ccd6b1f5c28d2c6b8ebd59a62aa3aea6a478356025e229fc",
+    "design/town-500m/building-catalogue.json": "271ac4c21013c72e063d5cb43850d6f0a8f20b3bfcc6269d60ee1f7780c9051b",
+    "design/town-500m/layout.json": "3eaf13391a1fd9781a20bb179bab8f60c88a9a4a14384f8a738b3b7539aab81b",
+    "design/town-500m/terrain-contract.json": "b0221b5ea78784b24899a14696238dfd58441a8b04ec62434c267a1a7667a87a",
+    "design/town-500m/gameplay-contract.json": "69608bd5625bb0069d6c3298bb0062b5c8780bd97412208a4d18f04361d18cd4",
+    "design/town-500m/phase2/terrain-authoring.cjs": "6195f4e5bb00517103356f671e4e89841df07c89565bace123e907b68829865c"
+  },
+  "preserve_identity_parents": [
+    "Props",
+    "Loot",
+    "NavigationRegion3D/Level/OuterDetail",
+    "NavigationRegion3D/Level/TownExpansion",
+    "NavigationRegion3D/Level/TownExpansion/IndustrialArchitecture",
+    "NavigationRegion3D/Level/TownExpansion/CivicArchitecture",
+    "NavigationRegion3D/Level/TownExpansion/NightLighting"
+  ],
+  "save_evidence": [
+    "cogito_object.gd::save serializes parent; _ready adds Persist",
+    "cogito_door.gd::save serializes full node_path; keep entire GunLocker subtree",
+    "HostileNPC::save serializes parent and patrol_path.get_path; keep direct Scav/patrol roots",
+    "DayNightCycle.night_lights stores15existing paths; preserve13Light children and2compound nodes"
+  ],
+  "counts": {
+    "props": 2,
+    "loot": 2,
+    "provisions": 4,
+    "night_lights": 15,
+    "garage_lamp": 1,
+    "scavs": 3,
+    "patrol_roots": 3,
+    "patrol_points": 12
+  },
+  "props": [
+    {
+      "node_path": "Props/Crate5",
+      "old_position_m": [
+        54,
+        1.7,
+        72
+      ],
+      "position_m": [
+        20,
+        2.214561668,
+        73
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "Existing object along open building side; keep full subtree and authored orientation",
+      "building_id": "T08-A",
+      "terrain_surface_y_m": 2,
+      "support_floor_y_m": 2.2,
+      "collider_bounds_after_preserved_basis": {
+        "min_y_m": -0.004561668215287001,
+        "max_y_m": 0.8953489110198785,
+        "box_colliders": 6
+      },
+      "contact_clearance_m": 0.01
+    },
+    {
+      "node_path": "Props/GunLocker",
+      "old_position_m": [
+        44,
+        0.7,
+        72
+      ],
+      "position_m": [
+        11,
+        2.21,
+        74
+      ],
+      "basis": [
+        -4.371139e-8,
+        0,
+        1,
+        0,
+        1,
+        0,
+        -1,
+        0,
+        -4.371139e-8
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "Existing object along open building side; keep full subtree and authored orientation",
+      "building_id": "T08-A",
+      "terrain_surface_y_m": 2,
+      "support_floor_y_m": 2.2,
+      "collider_bounds_after_preserved_basis": {
+        "min_y_m": 0,
+        "max_y_m": 2.5430748,
+        "evidence": "Body concave points minY0, nested scales1.2*.01; existing yaw preserves Y"
+      },
+      "contact_clearance_m": 0.01
+    },
+    {
+      "node_path": "Loot/Pickup_M700",
+      "old_position_m": [
+        71,
+        1.4,
+        59
+      ],
+      "position_m": [
+        20,
+        2.330665,
+        75
+      ],
+      "basis": [
+        0,
+        1,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": false,
+      "reason": "Instance-only 90-degree Z roll with unit scale: legacy root maps rifle long axis vertically and its transformed visual AABB penetrates the support floor despite grounded collider. Preserve shared pickup and every child transform.",
+      "building_id": "T08-A",
+      "terrain_surface_y_m": 2,
+      "support_floor_y_m": 2.2,
+      "contact_clearance_m": 0.01999950973994169,
+      "preserve_parent_children_and_child_transforms": true,
+      "allow_instance_orientation_change": true,
+      "collider_bounds_after_instance_pose": {
+        "min_y_m": -0.11066549026005833,
+        "max_y_m": 0.10732291506005832,
+        "box_colliders": 1,
+        "source": "Offline unchanged BoxShape3D corners through instance rollZ90; native verification pending."
+      },
+      "source_bounds": {
+        "legacy_visual_aabb_world_y_m": [
+          1.8613741746266974,
+          4.350631506279157
+        ],
+        "legacy_collider_world_y_m": [
+          2.209999928163267,
+          4.729788110300345
+        ],
+        "roll_z90_visual_aabb_local_y_m": [
+          -0.09891376131345762,
+          0.12612960105096202
+        ],
+        "source": "Offline composed MeshInstance3D surface AABB corners including scope and unchanged collider corners; conservative bounds, not native contacts."
+      },
+      "native_verification": "PENDING: primary instance-only native whole-footprint support, visual bounds, pickup interaction and rendered checks."
+    },
+    {
+      "node_path": "Loot/Pickup_usp",
+      "old_position_m": [
+        -83,
+        1.8757895,
+        71
+      ],
+      "position_m": [
+        8,
+        2.513338918,
+        -12
+      ],
+      "basis": [
+        2.081203e-8,
+        -0.47612375,
+        0.87937826,
+        -1,
+        -4.371139e-8,
+        2.1175822e-22,
+        3.8438845e-8,
+        -0.87937826,
+        -0.47612375
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "Existing object along open building side; keep full subtree and authored orientation",
+      "building_id": "T04-A",
+      "terrain_surface_y_m": 2,
+      "support_floor_y_m": 2.2,
+      "collider_bounds_after_preserved_basis": {
+        "min_y_m": -0.3033389175876938,
+        "max_y_m": 0.27809839128145447,
+        "box_colliders": 1
+      },
+      "contact_clearance_m": 0.01
+    }
+  ],
+  "provisions": [
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/IndustrialArchitecture/Provision_water_bottle",
+      "old_position_m": [
+        -66,
+        2.8336844,
+        -64
+      ],
+      "position_m": [
+        -29,
+        2.22,
+        122
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "Retain native Slot/Persist/parent path, settle onto open floor away from entry",
+      "building_id": "T11-A",
+      "terrain_surface_y_m": 2,
+      "support_floor_y_m": 2.2,
+      "collider_bottom_local_y_m": 0,
+      "settle_clearance_m": 0.02
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/IndustrialArchitecture/Provision_canned_meat_rect",
+      "old_position_m": [
+        -66,
+        2.8336844,
+        -62
+      ],
+      "position_m": [
+        -25,
+        2.22,
+        122
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "Retain native Slot/Persist/parent path, settle onto open floor away from entry",
+      "building_id": "T11-A",
+      "terrain_surface_y_m": 2,
+      "support_floor_y_m": 2.2,
+      "collider_bottom_local_y_m": 0,
+      "settle_clearance_m": 0.02
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/CivicArchitecture/Provision_canned_food",
+      "old_position_m": [
+        -9.115402,
+        2.052111,
+        39.759804
+      ],
+      "position_m": [
+        8,
+        2.22,
+        -13.5
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "Retain native Slot/Persist/parent path, settle onto open floor away from entry",
+      "building_id": "T04-A",
+      "terrain_surface_y_m": 2,
+      "support_floor_y_m": 2.2,
+      "collider_bottom_local_y_m": 0,
+      "settle_clearance_m": 0.02
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/CivicArchitecture/Provision_ration_biscuits",
+      "old_position_m": [
+        -9,
+        1.8294737,
+        42
+      ],
+      "position_m": [
+        12,
+        2.22,
+        -13.5
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "Retain native Slot/Persist/parent path, settle onto open floor away from entry",
+      "building_id": "T04-A",
+      "terrain_surface_y_m": 2,
+      "support_floor_y_m": 2.2,
+      "collider_bottom_local_y_m": 0,
+      "settle_clearance_m": 0.02
+    }
+  ],
+  "night_lights": [
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_00",
+      "old_position_m": [
+        -83,
+        1.9705263,
+        -39
+      ],
+      "position_m": [
+        -150,
+        2,
+        27.427872
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "County-road/P05/P06 shoulder; keep complete lamp assembly and tuning",
+      "light_node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_00/Light",
+      "terrain_surface_y_m": 2,
+      "native_light_local_y_m": 4.789,
+      "offline_clearance_m": {
+        "building": 25.352269986894346,
+        "cover": 26.627683174471336,
+        "trunk": 44.88318569493108,
+        "door": 23.81006978315489,
+        "corridor": 2.778227821410442,
+        "fence": 147.617872
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_01",
+      "old_position_m": [
+        -55,
+        1.7431579,
+        -31
+      ],
+      "position_m": [
+        -120,
+        2,
+        24.019872
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "County-road/P05/P06 shoulder; keep complete lamp assembly and tuning",
+      "light_node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_01/Light",
+      "terrain_surface_y_m": 2,
+      "native_light_local_y_m": 4.789,
+      "offline_clearance_m": {
+        "building": 23.820128,
+        "cover": 14.207099119551264,
+        "trunk": 71.57270988782572,
+        "door": 28.845962366956368,
+        "corridor": 2.7782278214104403,
+        "fence": 144.20987200000002
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_02",
+      "old_position_m": [
+        -28,
+        1.510406,
+        -21
+      ],
+      "position_m": [
+        -90,
+        2,
+        20.611872
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "County-road/P05/P06 shoulder; keep complete lamp assembly and tuning",
+      "light_node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_02/Light",
+      "terrain_surface_y_m": 2,
+      "native_light_local_y_m": 4.789,
+      "offline_clearance_m": {
+        "building": 31.6854201850691,
+        "cover": 29.690000000000005,
+        "trunk": 100.26531197873948,
+        "door": 28.92203039875696,
+        "corridor": 2.778227821410443,
+        "fence": 140.801872
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_03",
+      "old_position_m": [
+        3,
+        1.3578948,
+        -28
+      ],
+      "position_m": [
+        -60.81,
+        2,
+        17.274267
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "County-road/P05/P06 shoulder; keep complete lamp assembly and tuning",
+      "light_node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_03/Light",
+      "terrain_surface_y_m": 2,
+      "native_light_local_y_m": 4.789,
+      "offline_clearance_m": {
+        "building": 28.294227413861105,
+        "cover": 0.5000000000000071,
+        "trunk": 122.46617091155048,
+        "door": 27.782732483975252,
+        "corridor": 2.7567449945701803,
+        "fence": 138.71424260632824
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_04",
+      "old_position_m": [
+        26,
+        1.2063158,
+        -27
+      ],
+      "position_m": [
+        -30,
+        2.064888137,
+        23.048733
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "County-road/P05/P06 shoulder; keep complete lamp assembly and tuning",
+      "light_node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_04/Light",
+      "terrain_surface_y_m": 2.064888137,
+      "native_light_local_y_m": 4.789,
+      "offline_clearance_m": {
+        "building": 28.305600653321047,
+        "cover": 17.614687083413322,
+        "trunk": 138.7970228125194,
+        "door": 25.229511869632944,
+        "corridor": 2.686909221508218,
+        "fence": 151.51470797069598
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_05",
+      "old_position_m": [
+        52,
+        1.1747369,
+        -48
+      ],
+      "position_m": [
+        0,
+        2.138610006,
+        28.823199
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "County-road/P05/P06 shoulder; keep complete lamp assembly and tuning",
+      "light_node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_05/Light",
+      "terrain_surface_y_m": 2.138610006,
+      "native_light_local_y_m": 4.789,
+      "offline_clearance_m": {
+        "building": 33.56944360983067,
+        "cover": 8.035584144137733,
+        "trunk": 110.1177256309724,
+        "door": 32.92605873455554,
+        "corridor": 2.6873342379335057,
+        "fence": 145.43894984464652
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_06",
+      "old_position_m": [
+        75,
+        1.0926316,
+        -58
+      ],
+      "position_m": [
+        30,
+        2.091194432,
+        34.597665
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "County-road/P05/P06 shoulder; keep complete lamp assembly and tuning",
+      "light_node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_06/Light",
+      "terrain_surface_y_m": 2.091194432,
+      "native_light_local_y_m": 4.789,
+      "offline_clearance_m": {
+        "building": 32.95988116259258,
+        "cover": 38.57540521376546,
+        "trunk": 80.28519627685912,
+        "door": 31.18121499027469,
+        "corridor": 0.5684731723354406,
+        "fence": 120.06451245477253
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_07",
+      "old_position_m": [
+        -13,
+        1.2063158,
+        12
+      ],
+      "position_m": [
+        -64,
+        2,
+        56
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "County-road/P05/P06 shoulder; keep complete lamp assembly and tuning",
+      "light_node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_07/Light",
+      "terrain_surface_y_m": 2,
+      "native_light_local_y_m": 4.789,
+      "offline_clearance_m": {
+        "building": 13.961776391276295,
+        "cover": 6.250049999800002,
+        "trunk": 118.45501221772774,
+        "door": 23.04487836678233,
+        "corridor": 2.3600000000000065,
+        "fence": 176.8608724393273
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_08",
+      "old_position_m": [
+        5,
+        0.9157895,
+        40
+      ],
+      "position_m": [
+        -64,
+        2,
+        88
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "County-road/P05/P06 shoulder; keep complete lamp assembly and tuning",
+      "light_node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_08/Light",
+      "terrain_surface_y_m": 2,
+      "native_light_local_y_m": 4.789,
+      "offline_clearance_m": {
+        "building": 3.8400000000000034,
+        "cover": 7.689999999999998,
+        "trunk": 113.798792692578,
+        "door": 6.034349284539973,
+        "corridor": 2.3600000000000065,
+        "fence": 195.1948790952263
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_09",
+      "old_position_m": [
+        21,
+        0.54263157,
+        78
+      ],
+      "position_m": [
+        -77,
+        2,
+        140
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "County-road/P05/P06 shoulder; keep complete lamp assembly and tuning",
+      "light_node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_09/Light",
+      "terrain_surface_y_m": 2,
+      "native_light_local_y_m": 4.789,
+      "offline_clearance_m": {
+        "building": 21.877778680661354,
+        "cover": 31.63971712895044,
+        "trunk": 109.736859296758,
+        "door": 19.802734118951545,
+        "corridor": 2.0978581830666627,
+        "fence": 211.6098315887048
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_10",
+      "old_position_m": [
+        -67,
+        1.6168422,
+        1
+      ],
+      "position_m": [
+        45,
+        2,
+        60
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "County-road/P05/P06 shoulder; keep complete lamp assembly and tuning",
+      "light_node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_10/Light",
+      "terrain_surface_y_m": 2,
+      "native_light_local_y_m": 4.789,
+      "offline_clearance_m": {
+        "building": 22.886048151657818,
+        "cover": 35.69,
+        "trunk": 63.48320170837176,
+        "door": 28.15644850975426,
+        "corridor": 2.630000000000007,
+        "fence": 94.60317555452353
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_11",
+      "old_position_m": [
+        -66,
+        1.3594601,
+        40
+      ],
+      "position_m": [
+        45,
+        2,
+        100
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "County-road/P05/P06 shoulder; keep complete lamp assembly and tuning",
+      "light_node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_11/Light",
+      "terrain_surface_y_m": 2,
+      "native_light_local_y_m": 4.789,
+      "offline_clearance_m": {
+        "building": 21.79750444431656,
+        "cover": 3.6899999999999977,
+        "trunk": 71.57272620835276,
+        "door": 26.083646899557525,
+        "corridor": 1.5400000000000034,
+        "fence": 85.84
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_12",
+      "old_position_m": [
+        33,
+        0.87157893,
+        19
+      ],
+      "position_m": [
+        45,
+        2,
+        140
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "County-road/P05/P06 shoulder; keep complete lamp assembly and tuning",
+      "light_node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/StreetLamp_12/Light",
+      "terrain_surface_y_m": 2,
+      "native_light_local_y_m": 4.789,
+      "offline_clearance_m": {
+        "building": 16.840000000000003,
+        "cover": 43.69,
+        "trunk": 92.92566205828645,
+        "door": 35.16002218523999,
+        "corridor": 5.5562633620123965,
+        "fence": 94.60317555452353
+      }
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/CompoundLight_13",
+      "old_position_m": [
+        25.3,
+        5.289,
+        35
+      ],
+      "position_m": [
+        16,
+        6,
+        69
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        -4.371139e-8,
+        1,
+        0,
+        -1,
+        -4.371139e-8
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "Preserve downward basis/tuning; mount below real ceiling",
+      "light_node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/CompoundLight_13",
+      "building_id": "T08-A",
+      "support_floor_y_m": 2.2,
+      "mount_height_above_floor_m": 3.8
+    },
+    {
+      "node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/CompoundLight_14",
+      "old_position_m": [
+        84.3,
+        5.289,
+        75
+      ],
+      "position_m": [
+        -27,
+        5,
+        125
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        -4.371139e-8,
+        1,
+        0,
+        -1,
+        -4.371139e-8
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "Preserve downward basis/tuning; mount below real ceiling",
+      "light_node_path": "NavigationRegion3D/Level/TownExpansion/NightLighting/CompoundLight_14",
+      "building_id": "T11-A",
+      "support_floor_y_m": 2.2,
+      "mount_height_above_floor_m": 2.8
+    }
+  ],
+  "garage_lamp": {
+    "node_path": "NavigationRegion3D/Level/OuterDetail/GarageLamp",
+    "old_position_m": [
+      49,
+      4.7999997,
+      70
+    ],
+    "position_m": [
+      16,
+      6.3,
+      72
+    ],
+    "basis": [
+      1.5,
+      0,
+      0,
+      0,
+      1.5,
+      0,
+      0,
+      0,
+      1.5
+    ],
+    "preserve_parent_children_basis_scale": true,
+    "reason": "Preserve1.5scale and switch paths, same .4m below garage ceiling",
+    "building_id": "T08-A",
+    "support_floor_y_m": 2.2,
+    "ceiling_y_m": 6.7
+  },
+  "actors": [
+    {
+      "node_path": "Scav_Courtyard",
+      "old_position_m": [
+        -58,
+        1.8810526,
+        -34
+      ],
+      "position_m": [
+        -128,
+        2.05,
+        0
+      ],
+      "basis": [
+        -1,
+        0,
+        -8.742278e-8,
+        0,
+        1,
+        0,
+        8.742278e-8,
+        0,
+        -1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "Canonical existing actor service yard; preserve loadout/profile/BT/patrol binding",
+      "terrain_surface_y_m": 2,
+      "native_capsule_bottom_local_y_m": 0,
+      "settle_clearance_m": 0.05,
+      "yaw_policy": "Preserve authored yaw for relocation; canonical initial_yaw_deg_proposal0 is optional later encounter tuning",
+      "patrol_root_path": "PatrolPath_Courtyard",
+      "patrol_root_identity": true,
+      "patrol_points": [
+        {
+          "node_path": "PatrolPath_Courtyard/P0",
+          "old_position_m": [
+            -55,
+            1.7997369,
+            -36
+          ],
+          "position_m": [
+            -132,
+            2,
+            0
+          ],
+          "basis": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "preserve_parent_children_basis_scale": true,
+          "reason": "Exact canonical waypoint, actual terrain surface",
+          "terrain_surface_y_m": 2
+        },
+        {
+          "node_path": "PatrolPath_Courtyard/P1",
+          "old_position_m": [
+            -58,
+            1.6321522,
+            -8
+          ],
+          "position_m": [
+            -128,
+            2,
+            5
+          ],
+          "basis": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "preserve_parent_children_basis_scale": true,
+          "reason": "Exact canonical waypoint, actual terrain surface",
+          "terrain_surface_y_m": 2
+        },
+        {
+          "node_path": "PatrolPath_Courtyard/P2",
+          "old_position_m": [
+            -62,
+            1.4397368,
+            28
+          ],
+          "position_m": [
+            -122,
+            2,
+            5
+          ],
+          "basis": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "preserve_parent_children_basis_scale": true,
+          "reason": "Exact canonical waypoint, actual terrain surface",
+          "terrain_surface_y_m": 2
+        },
+        {
+          "node_path": "PatrolPath_Courtyard/P3",
+          "old_position_m": [
+            -35,
+            1.3323684,
+            18
+          ],
+          "position_m": [
+            -122,
+            2,
+            0
+          ],
+          "basis": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "preserve_parent_children_basis_scale": true,
+          "reason": "Exact canonical waypoint, actual terrain surface",
+          "terrain_surface_y_m": 2
+        }
+      ]
+    },
+    {
+      "node_path": "Scav_Warehouse",
+      "old_position_m": [
+        50,
+        0.6,
+        38
+      ],
+      "position_m": [
+        -42,
+        2.05,
+        59
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "Canonical existing actor service yard; preserve loadout/profile/BT/patrol binding",
+      "terrain_surface_y_m": 2,
+      "native_capsule_bottom_local_y_m": 0,
+      "settle_clearance_m": 0.05,
+      "yaw_policy": "Preserve authored yaw for relocation; canonical initial_yaw_deg_proposal0 is optional later encounter tuning",
+      "patrol_root_path": "PatrolPath_Warehouse",
+      "patrol_root_identity": true,
+      "patrol_points": [
+        {
+          "node_path": "PatrolPath_Warehouse/P0",
+          "old_position_m": [
+            43,
+            0.525,
+            32
+          ],
+          "position_m": [
+            -46,
+            2,
+            59
+          ],
+          "basis": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "preserve_parent_children_basis_scale": true,
+          "reason": "Exact canonical waypoint, actual terrain surface",
+          "terrain_surface_y_m": 2
+        },
+        {
+          "node_path": "PatrolPath_Warehouse/P1",
+          "old_position_m": [
+            46,
+            0.525,
+            50
+          ],
+          "position_m": [
+            -42,
+            2,
+            63
+          ],
+          "basis": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "preserve_parent_children_basis_scale": true,
+          "reason": "Exact canonical waypoint, actual terrain surface",
+          "terrain_surface_y_m": 2
+        },
+        {
+          "node_path": "PatrolPath_Warehouse/P2",
+          "old_position_m": [
+            57.5,
+            0.525,
+            60
+          ],
+          "position_m": [
+            -36,
+            2,
+            63
+          ],
+          "basis": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "preserve_parent_children_basis_scale": true,
+          "reason": "Exact canonical waypoint, actual terrain surface",
+          "terrain_surface_y_m": 2
+        },
+        {
+          "node_path": "PatrolPath_Warehouse/P3",
+          "old_position_m": [
+            57.8,
+            0.525,
+            68
+          ],
+          "position_m": [
+            -36,
+            2,
+            59
+          ],
+          "basis": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "preserve_parent_children_basis_scale": true,
+          "reason": "Exact canonical waypoint, actual terrain surface",
+          "terrain_surface_y_m": 2
+        }
+      ]
+    },
+    {
+      "node_path": "Scav_OuterShed",
+      "old_position_m": [
+        -49,
+        2.0484211,
+        -69.5
+      ],
+      "position_m": [
+        20,
+        2.05,
+        95
+      ],
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "preserve_parent_children_basis_scale": true,
+      "reason": "Canonical existing actor service yard; preserve loadout/profile/BT/patrol binding",
+      "terrain_surface_y_m": 2,
+      "native_capsule_bottom_local_y_m": 0,
+      "settle_clearance_m": 0.05,
+      "yaw_policy": "Preserve authored yaw for relocation; canonical initial_yaw_deg_proposal0 is optional later encounter tuning",
+      "patrol_root_path": "PatrolPath_OuterShed",
+      "patrol_root_identity": true,
+      "patrol_points": [
+        {
+          "node_path": "PatrolPath_OuterShed/P0",
+          "old_position_m": [
+            -52,
+            1.9828948,
+            -68
+          ],
+          "position_m": [
+            16,
+            2,
+            95
+          ],
+          "basis": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "preserve_parent_children_basis_scale": true,
+          "reason": "Exact canonical waypoint, actual terrain surface",
+          "terrain_surface_y_m": 2
+        },
+        {
+          "node_path": "PatrolPath_OuterShed/P1",
+          "old_position_m": [
+            -18,
+            1.8818421,
+            -86
+          ],
+          "position_m": [
+            20,
+            2,
+            99
+          ],
+          "basis": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "preserve_parent_children_basis_scale": true,
+          "reason": "Exact canonical waypoint, actual terrain surface",
+          "terrain_surface_y_m": 2
+        },
+        {
+          "node_path": "PatrolPath_OuterShed/P2",
+          "old_position_m": [
+            30,
+            1.528158,
+            -78
+          ],
+          "position_m": [
+            26,
+            2,
+            99
+          ],
+          "basis": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "preserve_parent_children_basis_scale": true,
+          "reason": "Exact canonical waypoint, actual terrain surface",
+          "terrain_surface_y_m": 2
+        },
+        {
+          "node_path": "PatrolPath_OuterShed/P3",
+          "old_position_m": [
+            70,
+            1.1113158,
+            -52
+          ],
+          "position_m": [
+            26,
+            2,
+            95
+          ],
+          "basis": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "preserve_parent_children_basis_scale": true,
+          "reason": "Exact canonical waypoint, actual terrain surface",
+          "terrain_surface_y_m": 2
+        }
+      ]
+    }
+  ],
+  "reuse_tests": [
+    {
+      "file": "tests/bunker_prototype_regression.gd",
+      "function": "_walk_to(player,destination)",
+      "line": 87,
+      "note": "Actual forward Input/controller walk;600physics-frame limit, grounded endpoint; inherited by town_expansion_regression"
+    },
+    {
+      "file": "tests/town_expansion_regression.gd",
+      "function": "_walk_to_floor(player,target)",
+      "line": 245,
+      "note": "Inherited walk + native feet height tolerance.15m"
+    },
+    {
+      "file": "tests/town_expansion_regression.gd",
+      "function": "_navigation_reaches(map,start,target)",
+      "line": 311,
+      "note": "Native map_get_path plus endpoint<.75m; this alone does not prove physical walk"
+    },
+    {
+      "file": "tests/town500_terrain_regression.gd",
+      "function": "_walk(target,label)",
+      "line": 470,
+      "note": "Actual fixture-stepped controller/lean;1000frames, grounded every tick, floorerror<.06m; reuse _step/_floor/_feet_y/_release_actions"
+    }
+  ],
+  "verification": {
+    "surface_heights": "Every numerical terrainY from phase2 heightAt; in-memory generation only",
+    "interior_floors": "Catalogue pad+.2 plus live native local floor top0; all positions inside intended footprint/pad",
+    "lamp_bases": "13 shoulder bases check catalogue footprints,canonical cover,trunks,door aprons,all corridor widths; pole GLB minY0",
+    "collider_support": "Crate/weapon transformed8corners per native BoxShape, including preserved root orientation; locker concave minY0/nested1.2*.01",
+    "not_verified": [
+      "Live native fitting/collision/interactions",
+      "GarageLamp visual fit at retained scale",
+      "Dressing-worker LOS screens/fences versus proposed lamp bases",
+      "Native nav/patrol coverage",
+      "Production save/raid regression",
+      "Whole-map night coverage/FPS"
+    ]
+  },
+  "limits": [
+    "Proposal only; primary applies edits and owns native verification",
+    "Preserved node paths do not migrate legacy spatial Town saves; never delete user saves",
+    "15existing night slots are not full500m lighting coverage"
+  ],
+  "clearance_review": "phase3/gameplay-clearance-review.json"
+}

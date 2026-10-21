@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/industry_gantry_crane/assets/industry_gantry_crane_fixed.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/industry_gantry_crane/materials/town_industry_gantry_crane_fixed_clean.tres" id="2_finish"]
+
+[node name="industry_gantry_crane__fixed" type="Node3D"]
+metadata/catalog_id = "industry_gantry_crane"
+metadata/catalog_variant = "fixed"
+metadata/finish = "clean"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="GantryCrane" parent="Model/TownGantryCrane"]
+surface_material_override/0 = ExtResource("2_finish")

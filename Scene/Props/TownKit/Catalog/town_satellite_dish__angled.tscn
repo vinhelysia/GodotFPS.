@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/satellite_dish/assets/satellite_dish_angled.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/satellite_dish/materials/town_satellite_dish_angled_used.tres" id="2_finish"]
+
+[node name="town_satellite_dish__angled" type="Node3D"]
+metadata/catalog_id = "town_satellite_dish"
+metadata/catalog_variant = "angled"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="SatelliteDishAngled" parent="Model/TownSatelliteDishAngled"]
+surface_material_override/0 = ExtResource("2_finish")

@@ -1,0 +1,1073 @@
+{
+  "schema_version": 1,
+  "canonical_cover_count": 64,
+  "canonical_vegetation_count": 93,
+  "structure_moves": [
+    {
+      "id": "H04-A",
+      "position_xz_m": [
+        -218.8,
+        -95
+      ],
+      "reason": "Ruin west return closes witnessed G19 diagonal without changing route"
+    }
+  ],
+  "corridor_replacements": [
+    {
+      "id": "P06",
+      "points_xz_m": [
+        [
+          20.45,
+          34.09
+        ],
+        [
+          40.91,
+          39.77
+        ],
+        [
+          40.91,
+          82
+        ],
+        [
+          51,
+          82
+        ],
+        [
+          51,
+          103
+        ],
+        [
+          40.91,
+          103
+        ],
+        [
+          40.91,
+          125
+        ],
+        [
+          34.09,
+          157.95
+        ]
+      ],
+      "surface_y_m": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "reason": "Real garage-yard boundary return at Z96; east service detour preserves original door access junctions at63.7/110.7"
+    },
+    {
+      "id": "P07",
+      "points_xz_m": [
+        [
+          94.153593,
+          22.14905
+        ],
+        [
+          106.82,
+          -51.14
+        ],
+        [
+          106.82,
+          -74
+        ],
+        [
+          88,
+          -74
+        ],
+        [
+          88,
+          -94
+        ],
+        [
+          106.82,
+          -94
+        ],
+        [
+          106.82,
+          -120.45
+        ],
+        [
+          130,
+          -136.36
+        ],
+        [
+          145,
+          -136.36
+        ],
+        [
+          145,
+          -156
+        ],
+        [
+          140,
+          -180
+        ],
+        [
+          200,
+          -200
+        ],
+        [
+          236.36,
+          -236.36
+        ]
+      ],
+      "surface_y_m": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2
+      ],
+      "reason": "Forest extraction trail follows the west end of an opaque forestry-service boundary and skirts the east side of a granite outcrop; fixed tree trunks and cache remain clear."
+    },
+    {
+      "id": "GR_G13",
+      "points_xz_m": [
+        [
+          94.153593,
+          22.14905
+        ],
+        [
+          106.82,
+          -51.14
+        ],
+        [
+          106.82,
+          -74
+        ],
+        [
+          88,
+          -74
+        ],
+        [
+          88,
+          -94
+        ],
+        [
+          106.82,
+          -94
+        ],
+        [
+          106.82,
+          -120.45
+        ]
+      ],
+      "surface_y_m": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "reason": "Forest extraction trail follows the west end of an opaque forestry-service boundary and skirts the east side of a granite outcrop; fixed tree trunks and cache remain clear."
+    },
+    {
+      "id": "GR_G14",
+      "points_xz_m": [
+        [
+          106.82,
+          -120.45
+        ],
+        [
+          130,
+          -136.36
+        ],
+        [
+          145,
+          -136.36
+        ],
+        [
+          145,
+          -156
+        ],
+        [
+          140,
+          -180
+        ],
+        [
+          200,
+          -200
+        ],
+        [
+          236.36,
+          -236.36
+        ]
+      ],
+      "surface_y_m": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2
+      ],
+      "reason": "Forest extraction trail follows the west end of an opaque forestry-service boundary and skirts the east side of a granite outcrop; fixed tree trunks and cache remain clear."
+    },
+    {
+      "id": "P11",
+      "points_xz_m": [
+        [
+          -190,
+          120
+        ],
+        [
+          -179,
+          160
+        ],
+        [
+          -179,
+          183
+        ],
+        [
+          -130,
+          183
+        ],
+        [
+          -104,
+          183
+        ],
+        [
+          -104,
+          205
+        ],
+        [
+          -100,
+          210
+        ],
+        [
+          -65,
+          220
+        ],
+        [
+          -65,
+          235
+        ]
+      ],
+      "surface_y_m": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "reason": "Farm extraction path follows the east end of a feed-yard property return north of A06, then rejoins the original southwest extraction approach; no extra route group or extraction changes."
+    },
+    {
+      "id": "GR_G17",
+      "points_xz_m": [
+        [
+          -190,
+          120
+        ],
+        [
+          -179,
+          160
+        ],
+        [
+          -179,
+          183
+        ],
+        [
+          -130,
+          183
+        ],
+        [
+          -104,
+          183
+        ],
+        [
+          -104,
+          205
+        ],
+        [
+          -100,
+          210
+        ],
+        [
+          -65,
+          220
+        ],
+        [
+          -65,
+          235
+        ]
+      ],
+      "surface_y_m": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "reason": "Farm extraction path follows the east end of a feed-yard property return north of A06, then rejoins the original southwest extraction approach; no extra route group or extraction changes."
+    },
+    {
+      "id": "P01",
+      "points_xz_m": [
+        [
+          -250,
+          14.77
+        ],
+        [
+          -160.23,
+          21.59
+        ],
+        [
+          -60.23,
+          10.23
+        ],
+        [
+          63.412871,
+          34.027268
+        ],
+        [
+          94.153593,
+          22.14905
+        ],
+        [
+          125,
+          10.23
+        ],
+        [
+          130,
+          -8
+        ],
+        [
+          170,
+          -8
+        ],
+        [
+          180,
+          5.73
+        ],
+        [
+          250,
+          0
+        ]
+      ],
+      "surface_y_m": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "reason": "Full8m service-road bypass south of abandoned delivery wreck; road reservation follows actual passable asphalt, original east/west extents retained."
+    }
+  ],
+  "additional_cover": [
+    {
+      "id": "LOS_M_RETURN",
+      "los_group": "M",
+      "position_xz_m": [
+        -60,
+        26
+      ],
+      "size_xyz_m": [
+        0.3,
+        2.6,
+        22
+      ],
+      "yaw_deg": 0,
+      "kind": "opaque_property_return",
+      "solid": true,
+      "opaque_proxy": true,
+      "collider_role": "solid_cover",
+      "source_ref": "PHASE3_LOS",
+      "model_status": "native dimensioned graybox; finished art pending",
+      "reason": "Town garden boundary behind county carriageway",
+      "grounding": "terrain_conforming_wall"
+    },
+    {
+      "id": "LOS_COUNTY_E_SCREEN",
+      "los_group": "COUNTY_E",
+      "position_xz_m": [
+        144,
+        12
+      ],
+      "size_xyz_m": [
+        0.3,
+        2.6,
+        30
+      ],
+      "yaw_deg": 0,
+      "kind": "opaque_yard_screen",
+      "solid": true,
+      "opaque_proxy": true,
+      "collider_role": "solid_cover",
+      "source_ref": "PHASE3_LOS",
+      "model_status": "native dimensioned graybox; finished art pending",
+      "reason": "Opaque loading-yard boundary crosses retired road alignment; full8m service road routes around its north end.",
+      "grounding": "terrain_conforming_wall"
+    },
+    {
+      "id": "LOS_P05_RETURN",
+      "los_group": "P05",
+      "position_xz_m": [
+        -67,
+        96
+      ],
+      "size_xyz_m": [
+        10,
+        2.6,
+        0.3
+      ],
+      "yaw_deg": 0,
+      "kind": "opaque_property_return",
+      "solid": true,
+      "opaque_proxy": true,
+      "collider_role": "solid_cover",
+      "source_ref": "PHASE3_LOS",
+      "model_status": "native dimensioned graybox; finished art pending",
+      "reason": "Clinic service garden return south of access at Z92.3"
+    },
+    {
+      "id": "LOS_P06_RETURN",
+      "los_group": "P06",
+      "position_xz_m": [
+        38,
+        96
+      ],
+      "size_xyz_m": [
+        20,
+        2.6,
+        0.3
+      ],
+      "yaw_deg": 0,
+      "kind": "opaque_property_return",
+      "solid": true,
+      "opaque_proxy": true,
+      "collider_role": "solid_cover",
+      "source_ref": "PHASE3_LOS",
+      "model_status": "native dimensioned graybox; finished art pending",
+      "reason": "Garage-yard return; straight85.23m east alley needs a real boundary detour"
+    },
+    {
+      "id": "LOS_P07_YARD",
+      "los_group": "P07",
+      "position_xz_m": [
+        118.75,
+        -82
+      ],
+      "size_xyz_m": [
+        45.5,
+        3,
+        0.5
+      ],
+      "yaw_deg": 0,
+      "kind": "opaque_yard_screen",
+      "solid": true,
+      "opaque_proxy": true,
+      "collider_role": "solid_cover",
+      "source_ref": "PHASE3_LOS",
+      "model_status": "native dimensioned graybox; finished art pending",
+      "reason": "Forest extraction trail follows the west end of an opaque forestry-service boundary and skirts the east side of a granite outcrop; fixed tree trunks and cache remain clear.",
+      "grounding": "terrain_conforming_wall"
+    },
+    {
+      "id": "LOS_P08_ROCK",
+      "los_group": "P08",
+      "position_xz_m": [
+        -46,
+        -146
+      ],
+      "size_xyz_m": [
+        7,
+        4,
+        9
+      ],
+      "yaw_deg": 0,
+      "kind": "rock_bluff",
+      "solid": true,
+      "opaque_proxy": true,
+      "collider_role": "solid_cover",
+      "source_ref": "PHASE3_LOS",
+      "model_status": "native dimensioned graybox; finished art pending",
+      "reason": "Ridge rock outcrop east of hill trail; actual3D rays still mandatory"
+    },
+    {
+      "id": "LOS_P10_ROCK",
+      "los_group": "P10",
+      "position_xz_m": [
+        24,
+        -70
+      ],
+      "size_xyz_m": [
+        9,
+        4,
+        34
+      ],
+      "yaw_deg": 0,
+      "kind": "rock_bluff",
+      "solid": true,
+      "opaque_proxy": true,
+      "collider_role": "solid_cover",
+      "source_ref": "PHASE3_LOS",
+      "model_status": "native dimensioned graybox; finished art pending",
+      "reason": "West-bank drainage bluff clear of footbridge apron"
+    },
+    {
+      "id": "LOS_P11_TRAILER",
+      "los_group": "P11",
+      "position_xz_m": [
+        -116,
+        191
+      ],
+      "size_xyz_m": [
+        16,
+        3.2,
+        5
+      ],
+      "yaw_deg": 0,
+      "kind": "farm_trailer",
+      "solid": true,
+      "opaque_proxy": true,
+      "collider_role": "solid_cover",
+      "source_ref": "PHASE3_LOS",
+      "model_status": "native dimensioned graybox; finished art pending",
+      "reason": "Feed trailer at farm property edge, preserving dry extraction approach"
+    },
+    {
+      "id": "LOS_P12_PANEL",
+      "los_group": "P12",
+      "position_xz_m": [
+        -167.5,
+        -121.3
+      ],
+      "size_xyz_m": [
+        49,
+        2.6,
+        0.2
+      ],
+      "yaw_deg": 0,
+      "kind": "opaque_fence_panel",
+      "solid": true,
+      "opaque_proxy": true,
+      "collider_role": "solid_cover",
+      "source_ref": "PHASE3_LOS",
+      "model_status": "native dimensioned graybox; finished art pending",
+      "reason": "Selective concrete south compound section inside wire perimeter; gate stays6m clear; residual bypass remains HOLD",
+      "grounding": "terrain_conforming_wall"
+    },
+    {
+      "id": "LOS_P05_KIOSK_RETURN",
+      "los_group": "P05",
+      "position_xz_m": [
+        -61.5,
+        111
+      ],
+      "size_xyz_m": [
+        4,
+        2.6,
+        0.3
+      ],
+      "yaw_deg": 0,
+      "kind": "opaque_property_return",
+      "solid": true,
+      "opaque_proxy": true,
+      "collider_role": "solid_cover",
+      "source_ref": "PHASE3_LOS",
+      "model_status": "native dimensioned graybox; finished art pending",
+      "reason": "Kiosk yard return closes diagonal east of garden wall"
+    },
+    {
+      "id": "LOS_P07_ROCK",
+      "los_group": "P07",
+      "position_xz_m": [
+        165.5,
+        -166
+      ],
+      "size_xyz_m": [
+        23,
+        5,
+        14
+      ],
+      "yaw_deg": 0,
+      "kind": "rock_bluff",
+      "solid": true,
+      "opaque_proxy": true,
+      "collider_role": "solid_cover",
+      "source_ref": "PHASE3_LOS",
+      "model_status": "native dimensioned graybox; finished art pending",
+      "reason": "Keep the existing bluff east edge and extend its west edge3m to close the final tangent extraction vista."
+    },
+    {
+      "id": "LOS_P12_ROCK",
+      "los_group": "P12",
+      "position_xz_m": [
+        -231,
+        -175
+      ],
+      "size_xyz_m": [
+        6,
+        4,
+        32
+      ],
+      "yaw_deg": 0,
+      "kind": "rock_bluff",
+      "solid": true,
+      "opaque_proxy": true,
+      "collider_role": "solid_cover",
+      "source_ref": "PHASE3_LOS",
+      "model_status": "native dimensioned graybox; finished art pending",
+      "reason": "West escarpment outcrop outside NW trail clear width",
+      "grounding": "terrain_conforming_wall"
+    },
+    {
+      "id": "LOS_P12_YARD_RETURN",
+      "los_group": "P12",
+      "position_xz_m": [
+        -199,
+        -178
+      ],
+      "size_xyz_m": [
+        14,
+        2.6,
+        0.3
+      ],
+      "yaw_deg": 0,
+      "kind": "opaque_fence_panel",
+      "solid": true,
+      "opaque_proxy": true,
+      "collider_role": "solid_cover",
+      "source_ref": "PHASE3_LOS",
+      "model_status": "native dimensioned graybox; finished art pending",
+      "reason": "Bunker workshop-yard return between barrack and gate yard, no gate occlusion",
+      "grounding": "terrain_conforming_wall"
+    },
+    {
+      "id": "LOS_P04_FREIGHT",
+      "los_group": "P04",
+      "position_xz_m": [
+        217.5,
+        -60
+      ],
+      "size_xyz_m": [
+        36,
+        3.6,
+        3.1
+      ],
+      "yaw_deg": 0,
+      "kind": "derailed_freight_wreck",
+      "solid": true,
+      "opaque_proxy": true,
+      "collider_role": "solid_cover",
+      "source_ref": "PHASE3_LOS",
+      "model_status": "dimensioned native graybox; finished asset pending",
+      "reason": "Two coupled derailed freight wagons form one continuous opaque assembly across rail reservation; unchanged track remains visible,2.5m service trail bypasses west.",
+      "allow_rail_overlap": true,
+      "assembly": "two coupled opaque freight wagons; combined36m length"
+    },
+    {
+      "id": "LOS_P07_GRANITE_RETURN",
+      "los_group": "P07",
+      "position_xz_m": [
+        130,
+        -146
+      ],
+      "size_xyz_m": [
+        20,
+        5,
+        8
+      ],
+      "kind": "rock_bluff",
+      "reason": "Granite outcrop closes the long cross-clearing bypass; extraction trail passes around its east side.",
+      "yaw_deg": 0,
+      "solid": true,
+      "opaque_proxy": true,
+      "collider_role": "solid_cover",
+      "source_ref": "PHASE3_LOS",
+      "model_status": "dimensioned graybox; native/finished art pending"
+    },
+    {
+      "id": "LOS_P11_PROPERTY_RETURN",
+      "los_group": "P11",
+      "position_xz_m": [
+        -141,
+        174
+      ],
+      "size_xyz_m": [
+        72,
+        3,
+        0.3
+      ],
+      "kind": "opaque_farm_property_return",
+      "reason": "Farm extraction path follows the east end of a feed-yard property return north of A06, then rejoins the original southwest extraction approach; no extra route group or extraction changes.",
+      "yaw_deg": 0,
+      "solid": true,
+      "opaque_proxy": true,
+      "collider_role": "solid_cover",
+      "source_ref": "PHASE3_LOS",
+      "model_status": "dimensioned graybox; native/finished art pending",
+      "grounding": "terrain_conforming_wall"
+    },
+    {
+      "id": "LOS_P11_FIELD_CORNER",
+      "los_group": "P11",
+      "position_xz_m": [
+        -173,
+        177.325
+      ],
+      "size_xyz_m": [
+        0.3,
+        3,
+        5.35
+      ],
+      "kind": "opaque_farm_property_return",
+      "reason": "Short feed-yard boundary corner closes the west diagonal; the path passes south of its end.",
+      "yaw_deg": 0,
+      "solid": true,
+      "opaque_proxy": true,
+      "collider_role": "solid_cover",
+      "source_ref": "PHASE3_LOS",
+      "model_status": "dimensioned graybox; native/finished art pending"
+    },
+    {
+      "yaw_deg": 0,
+      "solid": true,
+      "opaque_proxy": true,
+      "collider_role": "solid_cover",
+      "source_ref": "PHASE3_LOS",
+      "model_status": "dimensioned graybox; native/finished art pending",
+      "id": "LOS_P12_INNER_WEST_PANEL",
+      "los_group": "P12",
+      "position_xz_m": [
+        -219.5,
+        -170.05
+      ],
+      "size_xyz_m": [
+        0.3,
+        2.6,
+        97.9
+      ],
+      "kind": "opaque_fence_panel",
+      "grounding": "terrain_conforming_wall",
+      "reason": "Selective inner west compound opaque section; local1m terrain-conforming panels preserve at least2.6m exposure and6m gate."
+    },
+    {
+      "yaw_deg": 0,
+      "solid": true,
+      "opaque_proxy": true,
+      "collider_role": "solid_cover",
+      "source_ref": "PHASE3_LOS",
+      "model_status": "dimensioned graybox; native/finished art pending",
+      "id": "LOS_P12_ROCK_ABUTMENT",
+      "los_group": "P12",
+      "position_xz_m": [
+        -222.2,
+        -143
+      ],
+      "size_xyz_m": [
+        2,
+        4,
+        24
+      ],
+      "kind": "rock_bluff",
+      "grounding": "terrain_conforming_wall",
+      "reason": "Escarpment abutment east of trail, terrain-conforming segmented graybox; gate and route clearance preserved."
+    }
+  ],
+  "fences": [
+    {
+      "id": "DEPOT_NORTH",
+      "kind": "wire",
+      "height_m": 2.4,
+      "thickness_m": 0.15,
+      "segments_xz_m": [
+        [
+          [
+            131,
+            -104
+          ],
+          [
+            198,
+            -104
+          ]
+        ],
+        [
+          [
+            131,
+            -104
+          ],
+          [
+            131,
+            -83
+          ]
+        ],
+        [
+          [
+            131,
+            -81
+          ],
+          [
+            131,
+            -62.4
+          ]
+        ],
+        [
+          [
+            131,
+            -56.4
+          ],
+          [
+            131,
+            -35
+          ]
+        ]
+      ],
+      "reason": "North loading yard boundary; south/east service openings stay open",
+      "gate": {
+        "center_xz_m": [
+          131,
+          -59.4
+        ],
+        "clear_width_m": 6,
+        "access_id": "ACCESS_I01-A"
+      }
+    },
+    {
+      "id": "DEPOT_SOUTH",
+      "kind": "wire",
+      "height_m": 2.4,
+      "thickness_m": 0.15,
+      "segments_xz_m": [
+        [
+          [
+            131,
+            100
+          ],
+          [
+            182,
+            100
+          ]
+        ],
+        [
+          [
+            182,
+            100
+          ],
+          [
+            182,
+            90
+          ]
+        ]
+      ],
+      "reason": "South depot rear yard; county-road, rail and service frontage left open"
+    }
+  ],
+  "limits": "Opaque structures and >=2m solid cover only; trees and wire fence excluded. No native LOS/nav claim.",
+  "native_required": [
+    "Merge corridor replacements and regenerate terrain before composing dressing; P06 return intentionally occupies superseded straight alley",
+    "Wire fence graybox uses continuous player collision; native AI/weapon ray treatment remains unverified; not an opaque LOS certificate",
+    "3D ground/window/ADS/lean/high-ground verification owned by primary"
+  ],
+  "graph_edge_replacements": [
+    {
+      "id": "G13",
+      "points_xz_m": [
+        [
+          94.153593,
+          22.14905
+        ],
+        [
+          106.82,
+          -51.14
+        ],
+        [
+          106.82,
+          -74
+        ],
+        [
+          88,
+          -74
+        ],
+        [
+          88,
+          -94
+        ],
+        [
+          106.82,
+          -94
+        ],
+        [
+          106.82,
+          -120.45
+        ]
+      ],
+      "surface_y_m": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "reason": "Forest extraction trail follows the west end of an opaque forestry-service boundary and skirts the east side of a granite outcrop; fixed tree trunks and cache remain clear."
+    },
+    {
+      "id": "G14",
+      "points_xz_m": [
+        [
+          106.82,
+          -120.45
+        ],
+        [
+          130,
+          -136.36
+        ],
+        [
+          145,
+          -136.36
+        ],
+        [
+          145,
+          -156
+        ],
+        [
+          140,
+          -180
+        ],
+        [
+          200,
+          -200
+        ],
+        [
+          236.36,
+          -236.36
+        ]
+      ],
+      "surface_y_m": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2
+      ],
+      "reason": "Forest extraction trail follows the west end of an opaque forestry-service boundary and skirts the east side of a granite outcrop; fixed tree trunks and cache remain clear."
+    },
+    {
+      "id": "G17",
+      "points_xz_m": [
+        [
+          -190,
+          120
+        ],
+        [
+          -179,
+          160
+        ],
+        [
+          -179,
+          183
+        ],
+        [
+          -130,
+          183
+        ],
+        [
+          -104,
+          183
+        ],
+        [
+          -104,
+          205
+        ],
+        [
+          -100,
+          210
+        ],
+        [
+          -65,
+          220
+        ],
+        [
+          -65,
+          235
+        ]
+      ],
+      "surface_y_m": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "reason": "Farm extraction path follows the east end of a feed-yard property return north of A06, then rejoins the original southwest extraction approach; no extra route group or extraction changes."
+    }
+  ],
+  "additional_corridors": [
+    {
+      "id": "P04_SERVICE_BYPASS",
+      "name": "Derailed freight west service bypass",
+      "type": "footpath",
+      "surface": "gravel",
+      "width_m": 2.5,
+      "maximum_grade_percent": 15,
+      "reservation_margin_each_side_m": 1,
+      "points_xz_m": [
+        [
+          210.12837763519707,
+          -80
+        ],
+        [
+          197.5,
+          -80
+        ],
+        [
+          197.5,
+          -54
+        ],
+        [
+          207.69281393217233,
+          -54
+        ]
+      ],
+      "surface_y_m": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "connects_to_corridor": "P04",
+      "reason": "Physical2.5m trail around derailed railcar west end; track geometry is retained."
+    }
+  ],
+  "remove_cover_ids": []
+}

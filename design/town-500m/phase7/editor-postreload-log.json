@@ -1,0 +1,29 @@
+{
+  "count": 23,
+  "lines": [
+    "Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org",
+    "Vulkan 1.4.341 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU",
+    "",
+    "COGITO: cogito settings loaded: res://addons/cogito/CogitoSettings.tres",
+    "COGITO: cogito settings loaded: res://addons/cogito/CogitoSettings.tres",
+    "CogitoQuickSlots.gd: Set quickslot containers focus_all to false",
+    "Language changed to:  English(en) and saved to user://language.cfg",
+    "Embedded window can't be moved.",
+    "Embedded window can't be moved.",
+    "Town500 composition ground_bank_review: PASS checks=521 report=res://tests/artifacts/town500_ground_art/bank_review/ground_bank_review-native.json",
+    "--- Debugging process stopped ---",
+    "  ERROR: Path to node is invalid: 'Scope'.",
+    "  WARNING: core/io/image.cpp:2780 - Loaded resource as image file, this will not work on export: 'res://tests/artifacts/town500_ground_art/before/overview_12.png'. Instead, import the image file as an Image resource and load it normally as a resource.",
+    "  WARNING: core/io/image.cpp:2780 - Loaded resource as image file, this will not work on export: 'res://tests/artifacts/town500_ground_art/after/overview_12.png'. Instead, import the image file as an Image resource and load it normally as a resource.",
+    "  WARNING: core/io/image.cpp:2780 - Loaded resource as image file, this will not work on export: 'res://tests/artifacts/town500_ground_art/before/road_edge_12.png'. Instead, import the image file as an Image resource and load it normally as a resource.",
+    "  WARNING: core/io/image.cpp:2780 - Loaded resource as image file, this will not work on export: 'res://tests/artifacts/town500_ground_art/after/road_edge_12.png'. Instead, import the image file as an Image resource and load it normally as a resource.",
+    "  WARNING: core/io/image.cpp:2780 - Loaded resource as image file, this will not work on export: 'res://tests/artifacts/town500_ground_art/before/foundation_12.png'. Instead, import the image file as an Image resource and load it normally as a resource.",
+    "  WARNING: core/io/image.cpp:2780 - Loaded resource as image file, this will not work on export: 'res://tests/artifacts/town500_ground_art/after/foundation_12.png'. Instead, import the image file as an Image resource and load it normally as a resource.",
+    "  ERROR: editor/gui/progress_dialog.cpp:196 - Do not use progress dialog (task) while flushing the message queue or using call_deferred()!",
+    "  ERROR: editor/gui/progress_dialog.cpp:231 - Condition \"!tasks.has(p_task)\" is true. Returning: canceled",
+    "  ERROR: editor/gui/progress_dialog.cpp:231 - Condition \"!tasks.has(p_task)\" is true. Returning: canceled",
+    "  ERROR: editor/gui/progress_dialog.cpp:254 - Condition \"!tasks.has(p_task)\" is true.",
+    ""
+  ],
+  "source": "output_panel"
+}

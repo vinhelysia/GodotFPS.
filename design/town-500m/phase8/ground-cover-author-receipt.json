@@ -1,0 +1,63 @@
+{
+	"batches": [
+		{
+			"instances": 190,
+			"name": "GrassWestBirch",
+			"unit_scale": true,
+			"visibility_end_m": 75.0
+		},
+		{
+			"instances": 180,
+			"name": "GrassNorthBirch",
+			"unit_scale": true,
+			"visibility_end_m": 75.0
+		},
+		{
+			"instances": 150,
+			"name": "GrassNorthFoundation",
+			"unit_scale": true,
+			"visibility_end_m": 75.0
+		},
+		{
+			"instances": 160,
+			"name": "GrassSouthFoundation",
+			"unit_scale": true,
+			"visibility_end_m": 75.0
+		},
+		{
+			"instances": 180,
+			"name": "GrassRoadSouth",
+			"unit_scale": true,
+			"visibility_end_m": 75.0
+		},
+		{
+			"instances": 40,
+			"name": "GrassRoadNorth",
+			"unit_scale": true,
+			"visibility_end_m": 75.0
+		},
+		{
+			"instances": 12,
+			"name": "LowShrubs",
+			"unit_scale": true,
+			"visibility_end_m": 110.0
+		},
+		{
+			"instances": 9,
+			"name": "LeafBranchDebrisA",
+			"unit_scale": true,
+			"visibility_end_m": 110.0
+		},
+		{
+			"instances": 9,
+			"name": "LeafStoneDebrisC",
+			"unit_scale": true,
+			"visibility_end_m": 110.0
+		}
+	],
+	"collision_objects": 0,
+	"native_support": "Pending primary runtime rays; placement heights use canonical terrain",
+	"plan_sha256": "34b3b8b7fb69cbf9e283db0a5da225dc584f32782f64216c01c261879c191314",
+	"runtime_scripts": 0,
+	"scene": "res://Scene/World/Town500m/Art/GroundArt/ground_cover.tscn"
+}

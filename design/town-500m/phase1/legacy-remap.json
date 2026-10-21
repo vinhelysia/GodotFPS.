@@ -1,0 +1,2433 @@
+{
+  "schema_version": 1,
+  "status": "Offline proposed placement retirement/reuse manifest; no Town mutation",
+  "audit_scene_sha256": "275BD53376918812CCD6B1F5C28D2C6B8EBD59A62AA3AEA6A478356025E229FC",
+  "catalogue_sha256": "F11A06463EDCF958E32B0E06D5BE1A9BF64790E44566C46151A14F01404A0738",
+  "rules": [
+    "Verify node path plus concept_b_id plus PackedScene reference plus current block before deletion. If baseline differs, stop and re-audit.",
+    "Remove only 33 explicit placement roots at Phase3. Do not delete parent containers, gameplay siblings, reusable scene/assets or legacy saves.",
+    "Do not translate/scale old core. Instantiate catalogue roots at unit scale with authored yaw and root=pad surface+0.2.",
+    "Legacy IDs belong to concept-b namespace. New actual IDs/source_ref belong to town500 catalogue and are not aliases.",
+    "No 1:1 migration assignment exists: same-template candidates describe reuse, not copyable transforms or save-state targets."
+  ],
+  "legacy_retirement_count": 33,
+  "legacy_placements": [
+    {
+      "legacy_id": "G",
+      "legacy_source_ref": "concept-b:G",
+      "legacy_reuse_ref": "G",
+      "node_path": "NavigationRegion3D/Level/OuterDetail/Garage",
+      "unique_id": 1111316260,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn",
+      "old_type": "T06",
+      "access": "ground",
+      "transform_literal": "Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49, 0.7, 70)",
+      "node_block_sha256": "4501BA3C07CCAEE5ACEEF0C199DB7622885D74BE2AAE431552357906150938C4",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T08-A",
+          "source_ref": "T08",
+          "zone_id": "town"
+        },
+        {
+          "id": "I05-A",
+          "source_ref": "I05",
+          "zone_id": "industry"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "I01",
+      "legacy_source_ref": "concept-b:I01",
+      "legacy_reuse_ref": "I1",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/IndustrialArchitecture/Building_00",
+      "unique_id": 2060559984,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t07_workshop.tscn",
+      "old_type": "T07",
+      "access": "ground",
+      "transform_literal": "Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -69, 2.2336843, -63)",
+      "node_block_sha256": "984EDD333E30F258DF48A038A8F7A853A875AF4883D065569199DF0AACDB8D84",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T11-A",
+          "source_ref": "T11",
+          "zone_id": "town"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "I02",
+      "legacy_source_ref": "concept-b:I02",
+      "legacy_reuse_ref": "I2",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/IndustrialArchitecture/Building_01",
+      "unique_id": 910189432,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t07_workshop.tscn",
+      "old_type": "T07",
+      "access": "ground",
+      "transform_literal": "Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -66, 2.3410525, -83)",
+      "node_block_sha256": "95BBBDBC6048E44EC7ED9F4F6029476BEBE2DDE3DA4AF53A161A88F87188D53C",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T11-A",
+          "source_ref": "T11",
+          "zone_id": "town"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "I03",
+      "legacy_source_ref": "concept-b:I03",
+      "legacy_reuse_ref": "I3",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/IndustrialArchitecture/Building_02",
+      "unique_id": 2130808337,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t07_workshop_shell.tscn",
+      "old_type": "T07",
+      "access": "shell",
+      "transform_literal": "Transform3D(-0.90630776, 0, 0.42261833, 0, 1, 0, -0.42261833, 0, -0.90630776, 56, 1.5610527, -81.5)",
+      "node_block_sha256": "6481ED785F0ADCF3AB440E117EE5EB85C8393674D7AD3A7D6ABF028216F7FFB9",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "B01-A",
+          "source_ref": "B01",
+          "zone_id": "bunker"
+        },
+        {
+          "id": "F02-A",
+          "source_ref": "F02",
+          "zone_id": "forest"
+        },
+        {
+          "id": "A04-A",
+          "source_ref": "A04",
+          "zone_id": "farmland"
+        },
+        {
+          "id": "A08-A",
+          "source_ref": "A08",
+          "zone_id": "farmland"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "I04",
+      "legacy_source_ref": "concept-b:I04",
+      "legacy_reuse_ref": "I4",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/IndustrialArchitecture/Building_03",
+      "unique_id": 2049059931,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t07_workshop.tscn",
+      "old_type": "T07",
+      "access": "ground",
+      "transform_literal": "Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 59, 0.90105265, 20)",
+      "node_block_sha256": "99E840453FDC35860DF8EBC51AA63280830DD4DE6771216B22D6FAD99F1A64C1",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T11-A",
+          "source_ref": "T11",
+          "zone_id": "town"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "I05",
+      "legacy_source_ref": "concept-b:I05",
+      "legacy_reuse_ref": "I5",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/IndustrialArchitecture/Building_04",
+      "unique_id": 377413126,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t07_workshop_shell.tscn",
+      "old_type": "T07",
+      "access": "shell",
+      "transform_literal": "Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 0.7, 63)",
+      "node_block_sha256": "49D26B0BEF4CBF7FA80C00142E8E04B8CF76663AE2A043F7CD8962A353223C4C",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "B01-A",
+          "source_ref": "B01",
+          "zone_id": "bunker"
+        },
+        {
+          "id": "F02-A",
+          "source_ref": "F02",
+          "zone_id": "forest"
+        },
+        {
+          "id": "A04-A",
+          "source_ref": "A04",
+          "zone_id": "farmland"
+        },
+        {
+          "id": "A08-A",
+          "source_ref": "A08",
+          "zone_id": "farmland"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "L01",
+      "legacy_source_ref": "concept-b:L01",
+      "legacy_reuse_ref": "C1",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/CivicArchitecture/Building_00",
+      "unique_id": 542243998,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn",
+      "old_type": "T02",
+      "access": "upper",
+      "transform_literal": "Transform3D(0.10452842, 0, 0.9945219, 0, 1, 0, -0.9945219, 0, 0.10452842, -42, 1.6905264, -4)",
+      "node_block_sha256": "288E6EBFCE17E904DDC7221C99696D3AFF1B829774C254789117CA58F423A9F8",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T03-A",
+          "source_ref": "T03",
+          "zone_id": "town"
+        },
+        {
+          "id": "T06-B",
+          "source_ref": "T06",
+          "zone_id": "town"
+        },
+        {
+          "id": "T07-A",
+          "source_ref": "T07",
+          "zone_id": "town"
+        },
+        {
+          "id": "T12-A",
+          "source_ref": "T12",
+          "zone_id": "town"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "L02",
+      "legacy_source_ref": "concept-b:L02",
+      "legacy_reuse_ref": "C2",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/CivicArchitecture/Building_01",
+      "unique_id": 123079327,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn",
+      "old_type": "T02",
+      "access": "upper",
+      "transform_literal": "Transform3D(-0.9271838, 0, 0.3746067, 0, 1, 0, -0.3746067, 0, -0.9271838, -39, 1.9431579, -47)",
+      "node_block_sha256": "23B34CCD03F7CA2604ACD51D565432149733763050D277979C95D1C97A97EC47",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T03-A",
+          "source_ref": "T03",
+          "zone_id": "town"
+        },
+        {
+          "id": "T06-B",
+          "source_ref": "T06",
+          "zone_id": "town"
+        },
+        {
+          "id": "T07-A",
+          "source_ref": "T07",
+          "zone_id": "town"
+        },
+        {
+          "id": "T12-A",
+          "source_ref": "T12",
+          "zone_id": "town"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "L03",
+      "legacy_source_ref": "concept-b:L03",
+      "legacy_reuse_ref": "C3",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/CivicArchitecture/Building_02",
+      "unique_id": 956080632,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn",
+      "old_type": "T02",
+      "access": "upper",
+      "transform_literal": "Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -14, 1.2294737, 41)",
+      "node_block_sha256": "D1B5BAF4409777BE3C7F900AE225662861526885F74EC0B8F90A51EB47F88577",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T03-A",
+          "source_ref": "T03",
+          "zone_id": "town"
+        },
+        {
+          "id": "T06-B",
+          "source_ref": "T06",
+          "zone_id": "town"
+        },
+        {
+          "id": "T07-A",
+          "source_ref": "T07",
+          "zone_id": "town"
+        },
+        {
+          "id": "T12-A",
+          "source_ref": "T12",
+          "zone_id": "town"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "L04",
+      "legacy_source_ref": "concept-b:L04",
+      "legacy_reuse_ref": "C4",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/CivicArchitecture/Building_03",
+      "unique_id": 1992704706,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn",
+      "old_type": "T02",
+      "access": "upper",
+      "transform_literal": "Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 56, 1.0589473, -2)",
+      "node_block_sha256": "8322FAF702C8FD99C1E8626933D68871E5D204C3F5BD8D292094D51B340F17F3",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T03-A",
+          "source_ref": "T03",
+          "zone_id": "town"
+        },
+        {
+          "id": "T06-B",
+          "source_ref": "T06",
+          "zone_id": "town"
+        },
+        {
+          "id": "T07-A",
+          "source_ref": "T07",
+          "zone_id": "town"
+        },
+        {
+          "id": "T12-A",
+          "source_ref": "T12",
+          "zone_id": "town"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "L05",
+      "legacy_source_ref": "concept-b:L05",
+      "legacy_reuse_ref": "C5",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/CivicArchitecture/Building_04",
+      "unique_id": 1077024520,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t02_long_house_ground.tscn",
+      "old_type": "T02",
+      "access": "ground",
+      "transform_literal": "Transform3D(0.93969256, 0, 0.3420201, 0, 1, 0, -0.3420201, 0, 0.93969256, 60, 1.2105263, -30)",
+      "node_block_sha256": "FE06DDDFC3B5CA7E119C6485C05E0AA0A775C2CD1DD6DB6DEA0D580F187FC07A",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "I02-A",
+          "source_ref": "I02",
+          "zone_id": "industry"
+        },
+        {
+          "id": "A07-A",
+          "source_ref": "A07",
+          "zone_id": "farmland"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "CP",
+      "legacy_source_ref": "concept-b:CP",
+      "legacy_reuse_ref": "checkpoint",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/CheckpointArchitecture/guard_booth_3m_000",
+      "unique_id": 1246990766,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t13_guard_booth.tscn",
+      "old_type": "T13",
+      "access": "shell",
+      "transform_literal": "Transform3D(-0.97437006, 0, -0.22495104, 0, 1, 0, 0.22495104, 0, -0.97437006, 81, 1.311579, -67)",
+      "node_block_sha256": "238F15B97D448B2701B7725ECF5A617433954322305EFE04BA97C7D79C21558D",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T01-C",
+          "source_ref": "T01",
+          "zone_id": "town"
+        },
+        {
+          "id": "T05-C",
+          "source_ref": "T05",
+          "zone_id": "town"
+        },
+        {
+          "id": "B06-A",
+          "source_ref": "B06",
+          "zone_id": "bunker"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "H01",
+      "legacy_source_ref": "concept-b:H01",
+      "legacy_reuse_ref": "new",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/AdditionalArchitecture/H01",
+      "unique_id": 1660917619,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t01_cottage.tscn",
+      "old_type": "T01",
+      "access": "ground",
+      "transform_literal": "Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -78, 1.9178947, -4)",
+      "node_block_sha256": "B2B9633495B861398EEE1491A573FDEFC8540C0E0E1E066E3F94206EC577A585",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T01-A",
+          "source_ref": "T01",
+          "zone_id": "town"
+        },
+        {
+          "id": "A01-A",
+          "source_ref": "A01",
+          "zone_id": "farmland"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "H02",
+      "legacy_source_ref": "concept-b:H02",
+      "legacy_reuse_ref": "new",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/AdditionalArchitecture/H02",
+      "unique_id": 1563197964,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn",
+      "old_type": "T01",
+      "access": "shell",
+      "transform_literal": "Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -78, 1.7536842, 22)",
+      "node_block_sha256": "08DBB6A67ACABFF7FD6A7B1DDB4FAEE7BA611270A5A12FC3BF2EC1D819B93034",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T09-A",
+          "source_ref": "T09",
+          "zone_id": "town"
+        },
+        {
+          "id": "B03-A",
+          "source_ref": "B03",
+          "zone_id": "bunker"
+        },
+        {
+          "id": "F01-A",
+          "source_ref": "F01",
+          "zone_id": "forest"
+        },
+        {
+          "id": "L02-A",
+          "source_ref": "L02",
+          "zone_id": "lake"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "H03",
+      "legacy_source_ref": "concept-b:H03",
+      "legacy_reuse_ref": "new",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/AdditionalArchitecture/H03",
+      "unique_id": 1870900829,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t01_cottage.tscn",
+      "old_type": "T01",
+      "access": "ground",
+      "transform_literal": "Transform3D(0.34202006, 0, -0.93969256, 0, 1, 0, 0.93969256, 0, 0.34202006, -65.5, 1.4852631, 52)",
+      "node_block_sha256": "21ABF9F9D7485EC7B29856468272246D40B0502CA884C8408935F65584C41207",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T01-A",
+          "source_ref": "T01",
+          "zone_id": "town"
+        },
+        {
+          "id": "A01-A",
+          "source_ref": "A01",
+          "zone_id": "farmland"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "H04",
+      "legacy_source_ref": "concept-b:H04",
+      "legacy_reuse_ref": "new",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/AdditionalArchitecture/H04",
+      "unique_id": 606538074,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn",
+      "old_type": "T01",
+      "access": "shell",
+      "transform_literal": "Transform3D(0.9848077, 0, -0.17364845, 0, 1, 0, 0.17364845, 0, 0.9848077, -36, 1.16, 74)",
+      "node_block_sha256": "073172D509D0E0139D1138010BFA8CED2F0534ED2569D1D891E930B0E592D801",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T09-A",
+          "source_ref": "T09",
+          "zone_id": "town"
+        },
+        {
+          "id": "B03-A",
+          "source_ref": "B03",
+          "zone_id": "bunker"
+        },
+        {
+          "id": "F01-A",
+          "source_ref": "F01",
+          "zone_id": "forest"
+        },
+        {
+          "id": "L02-A",
+          "source_ref": "L02",
+          "zone_id": "lake"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "H05",
+      "legacy_source_ref": "concept-b:H05",
+      "legacy_reuse_ref": "new",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/AdditionalArchitecture/H05",
+      "unique_id": 326002125,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t01_cottage.tscn",
+      "old_type": "T01",
+      "access": "ground",
+      "transform_literal": "Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 1.4378947, 29)",
+      "node_block_sha256": "FC96C656ABAC9419488F01A88B8FBFD90B398B0B6EA568282761A9F90C9080E6",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T01-A",
+          "source_ref": "T01",
+          "zone_id": "town"
+        },
+        {
+          "id": "A01-A",
+          "source_ref": "A01",
+          "zone_id": "farmland"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "H06",
+      "legacy_source_ref": "concept-b:H06",
+      "legacy_reuse_ref": "new",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/AdditionalArchitecture/H06",
+      "unique_id": 1956906482,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn",
+      "old_type": "T01",
+      "access": "shell",
+      "transform_literal": "Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, 12, 1.5768421, -40)",
+      "node_block_sha256": "E7F68B6E4BC862C52950CB2FD88A623362A0FC8A736E083B1A9634ACA0DE4EA3",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T09-A",
+          "source_ref": "T09",
+          "zone_id": "town"
+        },
+        {
+          "id": "B03-A",
+          "source_ref": "B03",
+          "zone_id": "bunker"
+        },
+        {
+          "id": "F01-A",
+          "source_ref": "F01",
+          "zone_id": "forest"
+        },
+        {
+          "id": "L02-A",
+          "source_ref": "L02",
+          "zone_id": "lake"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "A01",
+      "legacy_source_ref": "concept-b:A01",
+      "legacy_reuse_ref": "new",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/AdditionalArchitecture/A01",
+      "unique_id": 1272806240,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t03_apartment.tscn",
+      "old_type": "T03",
+      "access": "shell",
+      "transform_literal": "Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 1.9368421, -65)",
+      "node_block_sha256": "F22DB3E97998A6F715E7E6C228D01F9283DFD333E5036B7FE7E087FA29A00612",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T06-A",
+          "source_ref": "T06",
+          "zone_id": "town"
+        },
+        {
+          "id": "B02-A",
+          "source_ref": "B02",
+          "zone_id": "bunker"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "A02",
+      "legacy_source_ref": "concept-b:A02",
+      "legacy_reuse_ref": "new",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/AdditionalArchitecture/A02",
+      "unique_id": 591546930,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t03_apartment.tscn",
+      "old_type": "T03",
+      "access": "shell",
+      "transform_literal": "Transform3D(0.9848077, 0, -0.17364845, 0, 1, 0, 0.17364845, 0, 0.9848077, 10, 1.7410526, -64)",
+      "node_block_sha256": "0488D242DBC94438CFF7169AA90712D83361DC6DB3D8218182642BF8E3C75ADC",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T06-A",
+          "source_ref": "T06",
+          "zone_id": "town"
+        },
+        {
+          "id": "B02-A",
+          "source_ref": "B02",
+          "zone_id": "bunker"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "V01",
+      "legacy_source_ref": "concept-b:V01",
+      "legacy_reuse_ref": "new",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/AdditionalArchitecture/V01",
+      "unique_id": 1602384279,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn",
+      "old_type": "T04",
+      "access": "ground",
+      "transform_literal": "Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -23, 1.5705264, -4)",
+      "node_block_sha256": "DC1E8D311586C464F696C227B0EB49880C31880DCCD4C2F3C48AF8FBAA196182",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T02-A",
+          "source_ref": "T02",
+          "zone_id": "town"
+        },
+        {
+          "id": "T04-A",
+          "source_ref": "T04",
+          "zone_id": "town"
+        },
+        {
+          "id": "T07-B",
+          "source_ref": "T07",
+          "zone_id": "town"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "V02",
+      "legacy_source_ref": "concept-b:V02",
+      "legacy_reuse_ref": "new",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/AdditionalArchitecture/V02",
+      "unique_id": 789673381,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t05_clinic.tscn",
+      "old_type": "T05",
+      "access": "ground",
+      "transform_literal": "Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 1.2642106, 6.5)",
+      "node_block_sha256": "1FEE19B05BCEEB8CED18141F7668A607D7DF816F64CCEA296B6159EC2C648F84",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T05-A",
+          "source_ref": "T05",
+          "zone_id": "town"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "D01",
+      "legacy_source_ref": "concept-b:D01",
+      "legacy_reuse_ref": "new",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/AdditionalArchitecture/D01",
+      "unique_id": 200751164,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "old_type": "T09",
+      "access": "shell",
+      "transform_literal": "Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -86, 1.8989474, 7)",
+      "node_block_sha256": "C124E2D45B7CE8A24CDD36E80C7CCF7A3F402FDFEF5B55D235C0B311FF06A430",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T01-B",
+          "source_ref": "T01",
+          "zone_id": "town"
+        },
+        {
+          "id": "T03-B",
+          "source_ref": "T03",
+          "zone_id": "town"
+        },
+        {
+          "id": "T04-B",
+          "source_ref": "T04",
+          "zone_id": "town"
+        },
+        {
+          "id": "T05-B",
+          "source_ref": "T05",
+          "zone_id": "town"
+        },
+        {
+          "id": "T08-B",
+          "source_ref": "T08",
+          "zone_id": "town"
+        },
+        {
+          "id": "T09-B",
+          "source_ref": "T09",
+          "zone_id": "town"
+        },
+        {
+          "id": "T12-B",
+          "source_ref": "T12",
+          "zone_id": "town"
+        },
+        {
+          "id": "I07-A",
+          "source_ref": "I07",
+          "zone_id": "industry"
+        },
+        {
+          "id": "B05-A",
+          "source_ref": "B05",
+          "zone_id": "bunker"
+        },
+        {
+          "id": "F02-B",
+          "source_ref": "F02",
+          "zone_id": "forest"
+        },
+        {
+          "id": "A02-A",
+          "source_ref": "A02",
+          "zone_id": "farmland"
+        },
+        {
+          "id": "A05-A",
+          "source_ref": "A05",
+          "zone_id": "farmland"
+        },
+        {
+          "id": "L04-A",
+          "source_ref": "L04",
+          "zone_id": "lake"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "D02",
+      "legacy_source_ref": "concept-b:D02",
+      "legacy_reuse_ref": "new",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/AdditionalArchitecture/D02",
+      "unique_id": 1513931344,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "old_type": "T09",
+      "access": "shell",
+      "transform_literal": "Transform3D(-0.17364813, 0, -0.9848078, 0, 1, 0, 0.9848078, 0, -0.17364813, -86, 1.7157894, 36)",
+      "node_block_sha256": "26F83CD73D767D982A64D7ED038C7ADF792C0B064CBC5B22E288B8332E37E0DE",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T01-B",
+          "source_ref": "T01",
+          "zone_id": "town"
+        },
+        {
+          "id": "T03-B",
+          "source_ref": "T03",
+          "zone_id": "town"
+        },
+        {
+          "id": "T04-B",
+          "source_ref": "T04",
+          "zone_id": "town"
+        },
+        {
+          "id": "T05-B",
+          "source_ref": "T05",
+          "zone_id": "town"
+        },
+        {
+          "id": "T08-B",
+          "source_ref": "T08",
+          "zone_id": "town"
+        },
+        {
+          "id": "T09-B",
+          "source_ref": "T09",
+          "zone_id": "town"
+        },
+        {
+          "id": "T12-B",
+          "source_ref": "T12",
+          "zone_id": "town"
+        },
+        {
+          "id": "I07-A",
+          "source_ref": "I07",
+          "zone_id": "industry"
+        },
+        {
+          "id": "B05-A",
+          "source_ref": "B05",
+          "zone_id": "bunker"
+        },
+        {
+          "id": "F02-B",
+          "source_ref": "F02",
+          "zone_id": "forest"
+        },
+        {
+          "id": "A02-A",
+          "source_ref": "A02",
+          "zone_id": "farmland"
+        },
+        {
+          "id": "A05-A",
+          "source_ref": "A05",
+          "zone_id": "farmland"
+        },
+        {
+          "id": "L04-A",
+          "source_ref": "L04",
+          "zone_id": "lake"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "D03",
+      "legacy_source_ref": "concept-b:D03",
+      "legacy_reuse_ref": "new",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/AdditionalArchitecture/D03",
+      "unique_id": 1910942177,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t09_shed.tscn",
+      "old_type": "T09",
+      "access": "ground",
+      "transform_literal": "Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 1.0842105, 88)",
+      "node_block_sha256": "014AEA6BB08BA5CCC180BD61F68D0D47D9FC77842B82D8D386706F3CAE8ABBCC",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T02-B",
+          "source_ref": "T02",
+          "zone_id": "town"
+        },
+        {
+          "id": "T06-C",
+          "source_ref": "T06",
+          "zone_id": "town"
+        },
+        {
+          "id": "T10-C",
+          "source_ref": "T10",
+          "zone_id": "town"
+        },
+        {
+          "id": "T11-B",
+          "source_ref": "T11",
+          "zone_id": "town"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "D04",
+      "legacy_source_ref": "concept-b:D04",
+      "legacy_reuse_ref": "new",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/AdditionalArchitecture/D04",
+      "unique_id": 1752819668,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "old_type": "T09",
+      "access": "shell",
+      "transform_literal": "Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 1.3684211, 43)",
+      "node_block_sha256": "C1875B8C4A906D67BC0E37B25BE69A6755891DF47613F21EDD539C6B287216B9",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T01-B",
+          "source_ref": "T01",
+          "zone_id": "town"
+        },
+        {
+          "id": "T03-B",
+          "source_ref": "T03",
+          "zone_id": "town"
+        },
+        {
+          "id": "T04-B",
+          "source_ref": "T04",
+          "zone_id": "town"
+        },
+        {
+          "id": "T05-B",
+          "source_ref": "T05",
+          "zone_id": "town"
+        },
+        {
+          "id": "T08-B",
+          "source_ref": "T08",
+          "zone_id": "town"
+        },
+        {
+          "id": "T09-B",
+          "source_ref": "T09",
+          "zone_id": "town"
+        },
+        {
+          "id": "T12-B",
+          "source_ref": "T12",
+          "zone_id": "town"
+        },
+        {
+          "id": "I07-A",
+          "source_ref": "I07",
+          "zone_id": "industry"
+        },
+        {
+          "id": "B05-A",
+          "source_ref": "B05",
+          "zone_id": "bunker"
+        },
+        {
+          "id": "F02-B",
+          "source_ref": "F02",
+          "zone_id": "forest"
+        },
+        {
+          "id": "A02-A",
+          "source_ref": "A02",
+          "zone_id": "farmland"
+        },
+        {
+          "id": "A05-A",
+          "source_ref": "A05",
+          "zone_id": "farmland"
+        },
+        {
+          "id": "L04-A",
+          "source_ref": "L04",
+          "zone_id": "lake"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "D05",
+      "legacy_source_ref": "concept-b:D05",
+      "legacy_reuse_ref": "new",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/AdditionalArchitecture/D05",
+      "unique_id": 1948695121,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "old_type": "T09",
+      "access": "shell",
+      "transform_literal": "Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -83, 2.448421, -83)",
+      "node_block_sha256": "9D606FF0F98D0AE633BE88E0B344311566AA4784AE8AF6AA0DCDD26B11B7DA75",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T01-B",
+          "source_ref": "T01",
+          "zone_id": "town"
+        },
+        {
+          "id": "T03-B",
+          "source_ref": "T03",
+          "zone_id": "town"
+        },
+        {
+          "id": "T04-B",
+          "source_ref": "T04",
+          "zone_id": "town"
+        },
+        {
+          "id": "T05-B",
+          "source_ref": "T05",
+          "zone_id": "town"
+        },
+        {
+          "id": "T08-B",
+          "source_ref": "T08",
+          "zone_id": "town"
+        },
+        {
+          "id": "T09-B",
+          "source_ref": "T09",
+          "zone_id": "town"
+        },
+        {
+          "id": "T12-B",
+          "source_ref": "T12",
+          "zone_id": "town"
+        },
+        {
+          "id": "I07-A",
+          "source_ref": "I07",
+          "zone_id": "industry"
+        },
+        {
+          "id": "B05-A",
+          "source_ref": "B05",
+          "zone_id": "bunker"
+        },
+        {
+          "id": "F02-B",
+          "source_ref": "F02",
+          "zone_id": "forest"
+        },
+        {
+          "id": "A02-A",
+          "source_ref": "A02",
+          "zone_id": "farmland"
+        },
+        {
+          "id": "A05-A",
+          "source_ref": "A05",
+          "zone_id": "farmland"
+        },
+        {
+          "id": "L04-A",
+          "source_ref": "L04",
+          "zone_id": "lake"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "D06",
+      "legacy_source_ref": "concept-b:D06",
+      "legacy_reuse_ref": "new",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/AdditionalArchitecture/D06",
+      "unique_id": 1863668381,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "old_type": "T09",
+      "access": "shell",
+      "transform_literal": "Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 74, 0.7747368, 25)",
+      "node_block_sha256": "2F5BC473A17EED641CDB8A5A7D366B3E0F714D4A105B33A10E8B36BD5EDFE727",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T01-B",
+          "source_ref": "T01",
+          "zone_id": "town"
+        },
+        {
+          "id": "T03-B",
+          "source_ref": "T03",
+          "zone_id": "town"
+        },
+        {
+          "id": "T04-B",
+          "source_ref": "T04",
+          "zone_id": "town"
+        },
+        {
+          "id": "T05-B",
+          "source_ref": "T05",
+          "zone_id": "town"
+        },
+        {
+          "id": "T08-B",
+          "source_ref": "T08",
+          "zone_id": "town"
+        },
+        {
+          "id": "T09-B",
+          "source_ref": "T09",
+          "zone_id": "town"
+        },
+        {
+          "id": "T12-B",
+          "source_ref": "T12",
+          "zone_id": "town"
+        },
+        {
+          "id": "I07-A",
+          "source_ref": "I07",
+          "zone_id": "industry"
+        },
+        {
+          "id": "B05-A",
+          "source_ref": "B05",
+          "zone_id": "bunker"
+        },
+        {
+          "id": "F02-B",
+          "source_ref": "F02",
+          "zone_id": "forest"
+        },
+        {
+          "id": "A02-A",
+          "source_ref": "A02",
+          "zone_id": "farmland"
+        },
+        {
+          "id": "A05-A",
+          "source_ref": "A05",
+          "zone_id": "farmland"
+        },
+        {
+          "id": "L04-A",
+          "source_ref": "L04",
+          "zone_id": "lake"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "K",
+      "legacy_source_ref": "concept-b:K",
+      "legacy_reuse_ref": "new",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/AdditionalArchitecture/K",
+      "unique_id": 1521721933,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t10_kiosk.tscn",
+      "old_type": "T10",
+      "access": "shell",
+      "transform_literal": "Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.4378947, -12)",
+      "node_block_sha256": "FA5D57401A74820D8ADD76E5573D7CFAB1ED83DCD305297B47A5A9F5ADD6AB07",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T02-C",
+          "source_ref": "T02",
+          "zone_id": "town"
+        },
+        {
+          "id": "T10-A",
+          "source_ref": "T10",
+          "zone_id": "town"
+        },
+        {
+          "id": "T10-B",
+          "source_ref": "T10",
+          "zone_id": "town"
+        },
+        {
+          "id": "T11-C",
+          "source_ref": "T11",
+          "zone_id": "town"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "U",
+      "legacy_source_ref": "concept-b:U",
+      "legacy_reuse_ref": "new",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/AdditionalArchitecture/U",
+      "unique_id": 469003356,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t11_substation.tscn",
+      "old_type": "T11",
+      "access": "shell",
+      "transform_literal": "Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 73, 0.87578946, 10)",
+      "node_block_sha256": "3EBB705E855B1AACA1A81C937E0114D303274C2F8D187FCBD60E749BD09599F6",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T03-C",
+          "source_ref": "T03",
+          "zone_id": "town"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "B",
+      "legacy_source_ref": "concept-b:B",
+      "legacy_reuse_ref": "new",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/AdditionalArchitecture/B",
+      "unique_id": 1564373007,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t12_bus_shelter.tscn",
+      "old_type": "T12",
+      "access": "open",
+      "transform_literal": "Transform3D(0.92718387, 0, -0.37460664, 0, 1, 0, 0.37460664, 0, 0.92718387, -34, 1.7221053, -17)",
+      "node_block_sha256": "6E309285A36A75E908F4494A4B62A7A6DC6DE413C2772F28B370F01938BDD079",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "T07-C",
+          "source_ref": "T07",
+          "zone_id": "town"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "P",
+      "legacy_source_ref": "concept-b:P",
+      "legacy_reuse_ref": "new",
+      "node_path": "NavigationRegion3D/Level/TownExpansion/AdditionalArchitecture/P",
+      "unique_id": 254174809,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t14_pump_house.tscn",
+      "old_type": "T14",
+      "access": "ground",
+      "transform_literal": "Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 79, 0.7, 36)",
+      "node_block_sha256": "91E77310796C6AEDCD21D7CD31130432CEF41BD80454B2A4BD41E9BE5CA7193D",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "L01-A",
+          "source_ref": "L01",
+          "zone_id": "lake"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    },
+    {
+      "legacy_id": "W",
+      "legacy_source_ref": "concept-b:W",
+      "legacy_reuse_ref": "W",
+      "node_path": "NavigationRegion3D/Level/Warehouse",
+      "unique_id": 1720804938,
+      "template_scene": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn",
+      "old_type": "T08",
+      "access": "ground",
+      "transform_literal": "Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 69, 0.7, 54)",
+      "node_block_sha256": "BD9B4824EE15EFED5CB847B03804BB04CF3870BC39B714558A56FF6E9D63A9A5",
+      "explicit_descendant_paths": [],
+      "action": "retire_old_placement_only_at_Phase3_merge",
+      "new_template_reuse_candidates": [
+        {
+          "id": "I01-A",
+          "source_ref": "I01",
+          "zone_id": "industry"
+        },
+        {
+          "id": "A06-A",
+          "source_ref": "A06",
+          "zone_id": "farmland"
+        }
+      ],
+      "chosen_new_actual_id": null,
+      "reason": "Template reuse only; no semantic 1:1 placement/save migration is inferred"
+    }
+  ],
+  "new_existing_scene_placement_count": 54,
+  "new_existing_scene_placements": [
+    {
+      "id": "T01-A",
+      "source_ref": "T01",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage.tscn",
+      "position_xz_m": [
+        -142,
+        -17
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": false
+      }
+    },
+    {
+      "id": "T01-B",
+      "source_ref": "T01",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "position_xz_m": [
+        -130,
+        -25
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "T01-C",
+      "source_ref": "T01",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t13_guard_booth.tscn",
+      "position_xz_m": [
+        -130,
+        -11
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "T02-A",
+      "source_ref": "T02",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn",
+      "position_xz_m": [
+        -100,
+        -15
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": false
+      }
+    },
+    {
+      "id": "T02-B",
+      "source_ref": "T02",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed.tscn",
+      "position_xz_m": [
+        -88,
+        -19
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": false
+      }
+    },
+    {
+      "id": "T02-C",
+      "source_ref": "T02",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t10_kiosk.tscn",
+      "position_xz_m": [
+        -104,
+        -23
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "T03-A",
+      "source_ref": "T03",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn",
+      "position_xz_m": [
+        -39,
+        -13
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": true
+      }
+    },
+    {
+      "id": "T03-B",
+      "source_ref": "T03",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "position_xz_m": [
+        -24,
+        -19
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "T03-C",
+      "source_ref": "T03",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t11_substation.tscn",
+      "position_xz_m": [
+        -24,
+        -9
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "T04-A",
+      "source_ref": "T04",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn",
+      "position_xz_m": [
+        10,
+        -11
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": false
+      }
+    },
+    {
+      "id": "T04-B",
+      "source_ref": "T04",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "position_xz_m": [
+        25,
+        -17
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "T05-A",
+      "source_ref": "T05",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t05_clinic.tscn",
+      "position_xz_m": [
+        -137,
+        57
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": false
+      }
+    },
+    {
+      "id": "T05-B",
+      "source_ref": "T05",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "position_xz_m": [
+        -120,
+        50
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "T05-C",
+      "source_ref": "T05",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t13_guard_booth.tscn",
+      "position_xz_m": [
+        -120,
+        68
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "T06-A",
+      "source_ref": "T06",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t03_apartment.tscn",
+      "position_xz_m": [
+        -84,
+        78
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "T06-B",
+      "source_ref": "T06",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn",
+      "position_xz_m": [
+        -86,
+        62
+      ],
+      "yaw_deg": 90,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": true
+      }
+    },
+    {
+      "id": "T06-C",
+      "source_ref": "T06",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed.tscn",
+      "position_xz_m": [
+        -71,
+        87
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": false
+      }
+    },
+    {
+      "id": "T07-A",
+      "source_ref": "T07",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn",
+      "position_xz_m": [
+        -33,
+        70
+      ],
+      "yaw_deg": 90,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": true
+      }
+    },
+    {
+      "id": "T07-B",
+      "source_ref": "T07",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn",
+      "position_xz_m": [
+        -19,
+        82
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": false
+      }
+    },
+    {
+      "id": "T07-C",
+      "source_ref": "T07",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t12_bus_shelter.tscn",
+      "position_xz_m": [
+        -16,
+        61
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "T08-A",
+      "source_ref": "T08",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn",
+      "position_xz_m": [
+        16,
+        72
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": false
+      }
+    },
+    {
+      "id": "T08-B",
+      "source_ref": "T08",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "position_xz_m": [
+        25,
+        84
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "T09-A",
+      "source_ref": "T09",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn",
+      "position_xz_m": [
+        -138,
+        122
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "T09-B",
+      "source_ref": "T09",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "position_xz_m": [
+        -121,
+        130
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "T10-A",
+      "source_ref": "T10",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t10_kiosk.tscn",
+      "position_xz_m": [
+        -57,
+        108
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "T10-B",
+      "source_ref": "T10",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t10_kiosk.tscn",
+      "position_xz_m": [
+        -57,
+        116
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "T10-C",
+      "source_ref": "T10",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed.tscn",
+      "position_xz_m": [
+        -64,
+        118.3
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": false
+      }
+    },
+    {
+      "id": "T11-A",
+      "source_ref": "T11",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t07_workshop.tscn",
+      "position_xz_m": [
+        -27,
+        125
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": false
+      }
+    },
+    {
+      "id": "T11-B",
+      "source_ref": "T11",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed.tscn",
+      "position_xz_m": [
+        -14,
+        131
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": false
+      }
+    },
+    {
+      "id": "T11-C",
+      "source_ref": "T11",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t10_kiosk.tscn",
+      "position_xz_m": [
+        -14,
+        118
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "T12-A",
+      "source_ref": "T12",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn",
+      "position_xz_m": [
+        20,
+        122
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": true
+      }
+    },
+    {
+      "id": "T12-B",
+      "source_ref": "T12",
+      "zone_id": "town",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "position_xz_m": [
+        25,
+        138
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "I01-A",
+      "source_ref": "I01",
+      "zone_id": "industry",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn",
+      "position_xz_m": [
+        155,
+        -72
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": false
+      }
+    },
+    {
+      "id": "I02-A",
+      "source_ref": "I02",
+      "zone_id": "industry",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t02_long_house_ground.tscn",
+      "position_xz_m": [
+        191,
+        -78
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": false
+      }
+    },
+    {
+      "id": "I05-A",
+      "source_ref": "I05",
+      "zone_id": "industry",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn",
+      "position_xz_m": [
+        150,
+        64
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": false
+      }
+    },
+    {
+      "id": "I07-A",
+      "source_ref": "I07",
+      "zone_id": "industry",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "position_xz_m": [
+        182,
+        80
+      ],
+      "yaw_deg": 90,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "B01-A",
+      "source_ref": "B01",
+      "zone_id": "bunker",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t07_workshop_shell.tscn",
+      "position_xz_m": [
+        -187,
+        -195
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 10,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "B02-A",
+      "source_ref": "B02",
+      "zone_id": "bunker",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t03_apartment.tscn",
+      "position_xz_m": [
+        -138,
+        -195
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 10,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "B03-A",
+      "source_ref": "B03",
+      "zone_id": "bunker",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn",
+      "position_xz_m": [
+        -101,
+        -194
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 10,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "B05-A",
+      "source_ref": "B05",
+      "zone_id": "bunker",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "position_xz_m": [
+        -195,
+        -147
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 10,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "B06-A",
+      "source_ref": "B06",
+      "zone_id": "bunker",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t13_guard_booth.tscn",
+      "position_xz_m": [
+        -146,
+        -128
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 10,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "F01-A",
+      "source_ref": "F01",
+      "zone_id": "forest",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn",
+      "position_xz_m": [
+        118,
+        -191
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "F02-A",
+      "source_ref": "F02",
+      "zone_id": "forest",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t07_workshop_shell.tscn",
+      "position_xz_m": [
+        174,
+        -151
+      ],
+      "yaw_deg": 90,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "F02-B",
+      "source_ref": "F02",
+      "zone_id": "forest",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "position_xz_m": [
+        190,
+        -160
+      ],
+      "yaw_deg": 90,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "A01-A",
+      "source_ref": "A01",
+      "zone_id": "farmland",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage.tscn",
+      "position_xz_m": [
+        -207,
+        -26
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 3.307430095,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4,
+        "reason": "NW farmhouse pad meets nearby ascending hill route; avoids27.49% short door ramp"
+      },
+      "access": {
+        "ground": true,
+        "upper": false
+      }
+    },
+    {
+      "id": "A02-A",
+      "source_ref": "A02",
+      "zone_id": "farmland",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "position_xz_m": [
+        -188,
+        -24
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 1.5,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "A04-A",
+      "source_ref": "A04",
+      "zone_id": "farmland",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t07_workshop_shell.tscn",
+      "position_xz_m": [
+        -212,
+        108
+      ],
+      "yaw_deg": 90,
+      "pad_intent": {
+        "surface_y_m": 1.5,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "A05-A",
+      "source_ref": "A05",
+      "zone_id": "farmland",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "position_xz_m": [
+        -191,
+        143
+      ],
+      "yaw_deg": 90,
+      "pad_intent": {
+        "surface_y_m": 1.5,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "A06-A",
+      "source_ref": "A06",
+      "zone_id": "farmland",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn",
+      "position_xz_m": [
+        -149,
+        202
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 1.5,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": false
+      }
+    },
+    {
+      "id": "A07-A",
+      "source_ref": "A07",
+      "zone_id": "farmland",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t02_long_house_ground.tscn",
+      "position_xz_m": [
+        -53,
+        198
+      ],
+      "yaw_deg": 90,
+      "pad_intent": {
+        "surface_y_m": 1.5,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": false
+      }
+    },
+    {
+      "id": "A08-A",
+      "source_ref": "A08",
+      "zone_id": "farmland",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t07_workshop_shell.tscn",
+      "position_xz_m": [
+        54,
+        205
+      ],
+      "yaw_deg": 90,
+      "pad_intent": {
+        "surface_y_m": 1.5,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "L01-A",
+      "source_ref": "L01",
+      "zone_id": "lake",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t14_pump_house.tscn",
+      "position_xz_m": [
+        119,
+        127
+      ],
+      "yaw_deg": 180,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": true,
+        "upper": false
+      }
+    },
+    {
+      "id": "L02-A",
+      "source_ref": "L02",
+      "zone_id": "lake",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn",
+      "position_xz_m": [
+        153,
+        149
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    },
+    {
+      "id": "L04-A",
+      "source_ref": "L04",
+      "zone_id": "lake",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "position_xz_m": [
+        188,
+        138
+      ],
+      "yaw_deg": 0,
+      "pad_intent": {
+        "surface_y_m": 2,
+        "root_above_pad_m": 0.2,
+        "flat_extension_m": 0.4
+      },
+      "access": {
+        "ground": false,
+        "upper": false
+      }
+    }
+  ],
+  "preserve_exact_paths": [
+    "Town",
+    "NavigationRegion3D",
+    "NavigationRegion3D/Level",
+    "Loot",
+    "Player",
+    "RaidSpawn",
+    "Scav_Courtyard",
+    "Scav_Warehouse",
+    "Scav_OuterShed",
+    "PatrolPath_Courtyard",
+    "PatrolPath_Warehouse",
+    "PatrolPath_OuterShed",
+    "DayNightCycle",
+    "NavigationRegion3D/Level/Extract/ExtractionZone",
+    "NavigationRegion3D/Level/ExtractSE/ExtractionZone",
+    "NavigationRegion3D/Level/TownExpansion/IndustrialArchitecture/Provision_water_bottle",
+    "NavigationRegion3D/Level/TownExpansion/IndustrialArchitecture/Provision_canned_meat_rect",
+    "NavigationRegion3D/Level/TownExpansion/CivicArchitecture/Provision_canned_food",
+    "NavigationRegion3D/Level/TownExpansion/CivicArchitecture/Provision_ration_biscuits"
+  ],
+  "superseded_nonbuilding_payloads": [
+    {
+      "path": "NavigationRegion3D/Level/TerrainRoads",
+      "action": "replace only at Phase2/3 native merge",
+      "note": "old200m slab/roads; preserve asset as reusable/historical"
+    },
+    {
+      "path": "NavigationRegion3D/Level/ConceptBDressing",
+      "action": "review all children before replacement",
+      "note": "old plot/fence/cover placements; not part of33 building deletion"
+    },
+    {
+      "path": "NavigationRegion3D/Level/TownExpansion/NightLighting",
+      "action": "primary explicit relocation preserving15 Light3D NodePaths",
+      "note": "do not delete TownExpansion parent"
+    },
+    {
+      "path": "NavigationRegion3D/Level/OuterDetail",
+      "action": "primary explicit review of legacy containers/pallets/barrels/GarageLamp",
+      "note": "do not delete parent to retire Garage only"
+    }
+  ],
+  "native_pending": [
+    "Editor ownership and imported suffix bodies",
+    "Native visual/collision/player/stair traversal at new placements",
+    "Navigation bake and production fresh Hub deploy",
+    "DayNightCycle resource/path readback after relocation"
+  ]
+}

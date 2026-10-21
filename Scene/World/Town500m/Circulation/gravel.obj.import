@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cvaiexi651ayd"
+path="res://.godot/imported/gravel.obj-fd42d2c9ee87ce6ca2c25fbfce0bce60.mesh"
+
+[deps]
+
+files=["res://.godot/imported/gravel.obj-fd42d2c9ee87ce6ca2c25fbfce0bce60.mesh"]
+
+source_file="res://Scene/World/Town500m/Circulation/gravel.obj"
+dest_files=["res://.godot/imported/gravel.obj-fd42d2c9ee87ce6ca2c25fbfce0bce60.mesh", "res://.godot/imported/gravel.obj-fd42d2c9ee87ce6ca2c25fbfce0bce60.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

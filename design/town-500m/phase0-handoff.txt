@@ -1,0 +1,37 @@
+Town 500m — Phase0 checkpoint, 2026-10-08
+Status: SPATIAL_PASS / LOS_HOLD / NATIVE_PENDING. This is editable authoring data, not a playable 500m Town.
+
+Deliverables
+- reference/ and reference-manifest.json: 21 original attachments, copied without changing bytes. Markdown is archived as .txt under existing Git policy.
+- layout.json: canonical merge of building-catalogue.json, terrain-contract.json and gameplay-contract.json. Original source remains separate.
+- 12 Town plots contain 32 physical structures, 15 ground interiors and four upper interiors. Whole map has 76 building/prop instances, plus two bridges and one dock; these are not 79 enterable buildings.
+- All 53 source entries have explicit mappings, including R02 replacement, R03 retirement and L03 dock ownership. Existing scenes cover 54 proposed instances; 22 dimensioned instances still need a compatible finished asset or approved modeling budget.
+- master-map.svg and eight zone SVGs use the same layout.json; they show actual footprints, river, bridges, dock, gate, circulation, cover, trees and markers.
+- check-layout.cjs and check-visibility.cjs reuse the prior portable LOS algorithm; no runtime generator, dependency, autoload or per-prop script added.
+
+Corrections completed in the offline layout
+- Treat T01–T12 as plots, use real building dimensions and road-facing doors.
+- One actual river polygon is the water authority; its northern edge no longer pinches closed. Minimum normal channel width is 20m, subject to measured player jump reach.
+- R01 county deck: 32.955778m long, 8m wide, Y3; R02 north footbridge: 26m long, 2.5m clear, Y3. Ports, axis, bank span and graph edge are bound to the same data.
+- E-B moved to (-65,235); four extracts stay unconditional with existing single-press F / five-second countdown.
+- L03 is a 4x14m dock with a 20m x 2.5m gangway and dry 6x6m shore landing. No third river crossing.
+- Ground doors have 23 explicit access paths. A01 pad is Y3.30743 to meet its hill-side approach without a 27% slope; ordinary farm pads remain Y1.5.
+- P08 stays east of bunker fence; P12/G20 stay outside its south/west edges. BUNKER_ENTRY reaches the single entry room through the 6m south gate. P02 approaches that gate perpendicular to the fence.
+- All 60 authored corridors have height profiles. G19 meets county road at Y2 instead of a 32cm mismatch; Town alley connectors interpolate their actual endpoint heights.
+- 64 cover pieces and 93 tree seeds were recomputed around roads, doors, pads, patrols, water and fence reservations. Counts are seed composition, not a final vegetation-density or FPS claim.
+
+Verification performed
+- Spatial checker PASS: bounds, oriented footprints, plot counts, scene references, road/door/fence reservations, height profiles, water clearance, bridge bindings, source aliases, dock connection and eight graph routes.
+- Minimum building gap 1m; minimum structure-to-corridor clearance 0.563076m. The highest corridor profile grade is 14.5298%, within its footpath limit.
+- All eight spawn-to-extract graph routes exist; removing either bridge retains them. Removing both disconnects the east extracts while west extracts remain connected. Nominal routes are 280.32–772.09m; these lengths are not playtest time or navigation proof.
+- Checker self-check and eight negative mutations PASS: moved bridge, wet cover, tree on spawn, fake source ID, missing mapping target, steep access, missing corridor profile and closed bunker gate are rejected.
+- LOS uses standing-height opaque footprint proxies, excluding terrain, trees, shrubs and mesh fence. P02 has a certified 2D upper bound 115.428m under its 120m target. Eleven other groups still have witnessed failures; los-action-plan.txt is the next design pass.
+- phase0-verification.json stores final layout/check hashes, archive reconciliation, protected-file comparison and native omissions.
+
+Native blocker and next dispatch
+MCP get_project_info failed with EADDRINUSE on 6506; read-only host inspection found a Node listener and no running Godot process. No editor open/save/play/stop, imports, bake, rendered captures, gameplay regression or FPS measurement occurred in this phase. Do not call the old 200m baseline PASS a test of this map.
+Resolve the 11 LOS witnesses with plausible property/yard/vehicle/terrain composition and rerun full groups before full graybox acceptance. Pilot scene/import checks can begin once MCP confirms the nested Cogito project; primary owns editor operations. Continue on the existing phase plan, with workers restricted to their own payload files.
+Before modeling new families, inspect finished TownKit/BunkerKit releases and agree per-prop triangle budgets. Do not dispatch a new asset batch from proxy dimensions alone.
+
+Scope preserved
+This phase did not edit Town.tscn, project.godot, existing terrain/dressing or Theme. Hashes confirm Town/terrain/dressing/Theme unchanged from the task-start snapshot. project.godot changed externally during this phase: MCP helpers were restored and InputHelper/Audio paths became UID references again. Those changes are preserved, not reverted; recheck import/clone closure via project-setting API when MCP works. No commit/push, old-save deletion/migration, gameplay/raid rewrite, final art or parallel Town scene.

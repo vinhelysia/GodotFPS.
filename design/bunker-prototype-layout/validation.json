@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "source_scene": "res://Scene/Hideout/bunker_prototype_16x20.tscn",
+  "source_sha256_before": "e3125ac5c52762ba6f1cfa3e9a85b753a65074e1203b5dcb5e72dc61a49955c3",
+  "source_sha256_after": "e3125ac5c52762ba6f1cfa3e9a85b753a65074e1203b5dcb5e72dc61a49955c3",
+  "scene_bytes_unchanged": true,
+  "resource_hashes_rechecked": 113,
+  "svg_xml_parse": "PASS",
+  "json_parse": "PASS",
+  "unique_svg_ids": 136,
+  "text_labels_checked": 179,
+  "font_metrics": "Arial/Arial Bold Windows; 1 px tolerance",
+  "clipped_text": [],
+  "overlapping_text": [],
+  "geometry_self_checks": "PASS: floor bounds; closed convex sections; 7 door clips; 6 stashes; 8 lockers; rough1.4m/frame1.2m; +-100deg sweeps; ID badges",
+  "png_size_px": [
+    1860,
+    1850
+  ],
+  "png_visual_inspection": "PASS: final layout.png inspected inline; room labels, ID badges, dimensions and legend readable; no clipping or overlapping text observed.",
+  "runtime_verification": "Not run: read-only scene-resource task; main chat owns runtime",
+  "artifacts_sha256": {
+    "layout.svg": "0b269307d5d14087b721b93144ebe3c7b7a7e93e8b09a688a80a09afa3f61d36",
+    "layout.png": "39dc8aeea09dc373d57c4a67dc6d2bcc61d8eff19370258e5ce02bcececc91c0",
+    "layout-data.json": "023d1c0304c1fe30a1b2e9828ccfc3cb52b7d228ec986ac232820ff254e0f2ac",
+    "brief.txt": "358aa4c84630c840d53ceb012354e99e170375418a8e591f5d36d4663a0b0336",
+    "scene-snapshot.json": "0043faea18ff27c29de0eecf3c50ffd0f646391ea16529bc3ff516f910ef0fcb"
+  },
+  "panel_open_status": "queued earlier; final open requested on current chat"
+}

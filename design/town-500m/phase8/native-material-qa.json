@@ -1,0 +1,30 @@
+{
+	"baked_tiles": [
+		{
+			"native_pixels_exact": true,
+			"path": "res://Scene/World/Town500m/Art/GroundArt/v2_ground_detail.png",
+			"sha256": "df1120072f773514e34030a27d3e8a208eed5e9bfd6d827f4d74b61677a71052",
+			"size": "(512, 512)"
+		},
+		{
+			"native_pixels_exact": true,
+			"path": "res://Scene/World/Town500m/Art/GroundArt/v2_road_detail.png",
+			"sha256": "6a7d238e1ad78a639d373d1c05ae1063dd0f4ad7885a45528a66af7e75aacece",
+			"size": "(512, 512)"
+		},
+		{
+			"native_pixels_exact": true,
+			"path": "res://Scene/World/Town500m/Art/GroundArt/v2_detail_normal.png",
+			"sha256": "152e664b3d1f42cd6db69c49db27065375c6ca8a9fc5271d8b0d69686ccd25d0",
+			"size": "(512, 512)"
+		}
+	],
+	"detail_author_sha256": "19394570f5b5e9fab06cf673206ef6635e6b0a380ca1ce4b561a67f7c519cf6a",
+	"global_lighting_changed": false,
+	"metres_per_texel": 0.0078125,
+	"scope": "V2 pilot-only albedo/roughness/normal response; native decoded data texture pixels exact; bake's range/unit normal/seam asserts completed before first render.",
+	"seed": 20261022,
+	"shader_sha256": "61d8f2039c13ec0c5433c478a32730df8ff7c5750237e70a9fb9a0f707af8424",
+	"status": "PASS",
+	"tile_world_metres": 4.0
+}

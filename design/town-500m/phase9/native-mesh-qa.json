@@ -1,0 +1,35 @@
+{
+	"meshes": [
+		{
+			"height_m": 0.180000007152557,
+			"kind": "short",
+			"shared_material": true,
+			"triangles": 12,
+			"vertices": 24
+		},
+		{
+			"height_m": 0.330000013113022,
+			"kind": "dry",
+			"shared_material": true,
+			"triangles": 12,
+			"vertices": 24
+		},
+		{
+			"height_m": 0.649999976158142,
+			"kind": "tall",
+			"shared_material": true,
+			"triangles": 30,
+			"vertices": 60
+		},
+		{
+			"height_m": 0.280000001192093,
+			"kind": "weed",
+			"shared_material": true,
+			"triangles": 30,
+			"vertices": 60
+		}
+	],
+	"scope": "Native editor mesh dimensions, finite normalized normals and triangle assertions; not art/collision/rendered acceptance.",
+	"status": "PASS",
+	"writer_sha256": "1c2fdea6ed189dfc329b74b9be4a0850a021f15b8d03b468e8cbd1c39a24679a"
+}

@@ -1,0 +1,21 @@
+Town500m — next LOS composition pass
+2026-10-08. HOLD: candidates below are not authored occluders and are not a LOS PASS. See exact witnessed endpoints and layout hash in los-check.json.
+
+The current 2D check treats >=2m buildings/solid cover as opaque footprints. It excludes terrain, trees, shrubs and chain-link fence. Road-envelope endpoints can see diagonally across open yards; a road bend alone does not certify a visibility break.
+Keep road/patrol/door/gate/water reserves clear. Candidate positions are starting points to inspect, not validated transforms. For each candidate: choose dimensions/material, rerun spatial checks, rerun whole-group LOS, then test actual standing/ADS/both lean/upstairs rays in graybox. Do not split a long road into short test groups to hide failures.
+
+Group       Witness(m) Target(m)  Candidate and rationale
+M             201.364     150     Near(-60,22): an opaque garden/property return fence south of the county road, north–south orientation. Break the diagonal shortcut across the plot setback while retaining the deliberate main-road vista and all carriageway width.
+COUNTY_E      213.952     200     Near(144,15): a selective 2.6m industrial loading-yard screen, connected to the yard boundary. Preserve the county crossing/bridge approach and a real escape route.
+P04 rail      375.792     200     Near(231,-63): a loading-yard container or freight loading structure beyond the rail corridor. The two existing freight cars do not block the diagonal railway bypass; test the whole rail group rather than only its centreline.
+P05 alley     113.921      80     Near(-68,96): a garden wall return, initially about4m long. It must respect the nearby door connector atZ92.3; connect to a plausible plot boundary instead of leaving a freestanding maze wall.
+P06 east      125.243      80     Near(29,96): an opaque garage-yard boundary return. Test both the long straight trail and diagonal routes around the screen; a short detour may be needed around the real property boundary.
+P07 forest    235.741     120     Near(138,-87): warehouse service-yard wall at its north/west edge, plus a terrain fold if the residual forest sightline remains. Trees supply concealment but cannot certify hard LOS cover.
+P08 ridge     144.791     120     Near(-46,-146): a ridge fold or rock escarpment with a terrain reason. Requires actual3D heights/rays; do not place an opaque wall across a hill trail merely to make a flat checker pass.
+P10 footbridge186.535     120     Near(24,-79): a west-bank rock bluff/stone drainage boundary. Keep bridge approaches and jump exclusion clear; high-ground bypass needs actual3D rays.
+P11 farm      171.187     120     Near(-127,178): a feed shed or tall abandoned farm trailer near the property boundary. Keep two routes to the southwest extraction and clear its dry pad.
+P12 NW exit   156.166     120     Near(-147,-120.45): a selective opaque perimeter panel about4m long, outside the6m south gate opening. Chain-link alone does not count; examine remaining bypass around both fence ends.
+ROUTE_G19     122.154     120     Reuse H04 ruin: test moving centre0.8m west to(-218.8,-95). An independent in-memory spatial check passed this candidate, but no LOS rerun or actual placement change is claimed.
+
+P02 is2D certified PASS: lower witness115.292m, conservative all-angle upper115.428m, target120m. It still needs native terrain/window/camera verification.
+These per-group targets do not constrain every off-road point or prove the absence of a spawn camping angle. Add spawn initial-LOS and representative field/high-ground rays to native acceptance.

@@ -1,0 +1,106 @@
+{
+	"bank_material_only": true,
+	"masks": [
+		{
+			"decoded_pixels_equal": true,
+			"lossless": true,
+			"path": "res://Scene/World/Town500m/Art/GroundArt/mask_roads_leaves.png",
+			"sha256": "ac4f0c76926f4881e239017ddea9b696c0b207ad74bcb153d795923f28fd9ef9",
+			"size": "(2048, 2048)"
+		},
+		{
+			"decoded_pixels_equal": true,
+			"lossless": true,
+			"path": "res://Scene/World/Town500m/Art/GroundArt/mask_ground_context.png",
+			"sha256": "e8bc1f61d844f93d773e42a79ae4b74596bc5be7312aee94e5c7e4bcd7b23343",
+			"size": "(2048, 2048)"
+		},
+		{
+			"decoded_pixels_equal": true,
+			"lossless": true,
+			"path": "res://Scene/World/Town500m/Art/GroundArt/mask_variation.png",
+			"sha256": "eda0c622074545bd50988bedbf5fc3cea111bc0091631e2babe78e4d6b11a3ec",
+			"size": "(1024, 1024)"
+		}
+	],
+	"materials": [
+		{
+			"global_coverage": true,
+			"material": "asphalt.tres",
+			"source_sha256": "856d94347de4849faa41436ce99f3e115b7b234173fb7a5917fcc5611a142e5e"
+		},
+		{
+			"global_coverage": true,
+			"material": "bunker.tres",
+			"source_sha256": "e1d957dfbdf321ad899b2b4b6f2886355cbd8752c84ffb67186d2dd8d6d6dd94"
+		},
+		{
+			"global_coverage": true,
+			"material": "farmland.tres",
+			"source_sha256": "e3ac03093dad57c8a94087e09aeecb69c1381a8bd5f8561d0bdfc4e1b69d5dd3"
+		},
+		{
+			"global_coverage": true,
+			"material": "forest.tres",
+			"source_sha256": "d79988ea4efbcfdb12fbfd20ad586105687218e19f9eda8539d8b6e6a4da6d5b"
+		},
+		{
+			"global_coverage": true,
+			"material": "gravel.tres",
+			"source_sha256": "ed7c59c21bd2eb334dc79f79130d20864414348e1a40797e0d1183342cf80f3c"
+		},
+		{
+			"global_coverage": true,
+			"material": "hills.tres",
+			"source_sha256": "79f4ca85853c2f74c84b286fe2a60fa1fa7f05882ddfe087239daa1194df2bd5"
+		},
+		{
+			"global_coverage": true,
+			"material": "industry.tres",
+			"source_sha256": "b1ec6a9aa65ae8ff5f6919e59be8e03cda1f6b528710d6624fce01e10a5caae9"
+		},
+		{
+			"global_coverage": true,
+			"material": "retaining.tres",
+			"source_sha256": "b76e446119defad2d7a5d962e412b01a8cf1a1d3ebc0c1a272ed5f2e4608dffa"
+		},
+		{
+			"global_coverage": true,
+			"material": "shore.tres",
+			"source_sha256": "b05da23361491fe50fb6f15bf7a0f7307506305cf62ffb3383f708dc6013e7c0"
+		},
+		{
+			"global_coverage": true,
+			"material": "town.tres",
+			"source_sha256": "d1abc373c856493be614c1ca6e4c5e2116188048feb4626e35208a3175bb7c8b"
+		},
+		{
+			"global_coverage": true,
+			"material": "trail.tres",
+			"source_sha256": "d4410640bb2fb5e9a6c57d71d45bd0cbc0b2733e7bbaa34a8297a70d41095869"
+		}
+	],
+	"normal_samples": [
+		{
+			"finite_unit": true,
+			"mean_y": 1.0,
+			"normals": 268,
+			"path": "res://Scene/World/Town500m/Terrain/chunk_0_2_town.obj"
+		},
+		{
+			"finite_unit": true,
+			"mean_y": 1.0,
+			"normals": 64,
+			"path": "res://Scene/World/Town500m/Art/ApartmentSite/chunk_0_3_town_cut.obj"
+		},
+		{
+			"finite_unit": true,
+			"mean_y": 0.999981194442544,
+			"normals": 1939,
+			"path": "res://Scene/World/Town500m/Circulation/asphalt.obj"
+		}
+	],
+	"scope": "Native resources/data-image fidelity and representative original/cut/road normals; final rendered fixture covers shader compilation and resource resolution.",
+	"shader_sha256": "53b0747b7952f2810ab030787547dbd5d0b260bb7504b77308fd5190c32457ba",
+	"status": "PASS"
+}

@@ -1,0 +1,28 @@
+[gd_resource type="ShaderMaterial" load_steps=11 format=3]
+
+[ext_resource type="Shader" path="res://Scene/World/Town500m/Art/GroundArt/ground_surface.gdshader" id="shader"]
+[ext_resource type="Texture2D" path="res://Scene/World/Town500m/Art/GroundArt/mask_roads_leaves.png" id="roads"]
+[ext_resource type="Texture2D" path="res://Scene/World/Town500m/Art/GroundArt/mask_ground_context.png" id="context"]
+[ext_resource type="Texture2D" path="res://Scene/World/Town500m/Art/GroundArt/mask_variation.png" id="variation"]
+[ext_resource type="Texture2D" path="res://Scene/World/Town500m/Art/GroundArt/v2_ground_detail.png" id="v2ground"]
+[ext_resource type="Texture2D" path="res://Scene/World/Town500m/Art/GroundArt/v2_road_detail.png" id="v2road"]
+[ext_resource type="Texture2D" path="res://Scene/World/Town500m/Art/GroundArt/v2_detail_normal.png" id="v2normal"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Grass/Grass_001_COLOR.jpg" id="detail"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Grass/Grass_001_NORM.jpg" id="normal"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Grass/Grass_001_ROUGH.jpg" id="rough"]
+
+[resource]
+resource_name = "Town hills ground art"
+shader = ExtResource("shader")
+shader_parameter/road_leaf_mask = ExtResource("roads")
+shader_parameter/ground_context_mask = ExtResource("context")
+shader_parameter/variation_mask = ExtResource("variation")
+shader_parameter/v2_ground_detail = ExtResource("v2ground")
+shader_parameter/v2_road_detail = ExtResource("v2road")
+shader_parameter/v2_detail_normal = ExtResource("v2normal")
+shader_parameter/detail_albedo = ExtResource("detail")
+shader_parameter/detail_normal = ExtResource("normal")
+shader_parameter/detail_roughness = ExtResource("rough")
+shader_parameter/original_color = Color(0.51, 0.48, 0.4, 1)
+shader_parameter/surface_is_road = false
+shader_parameter/global_coverage = true

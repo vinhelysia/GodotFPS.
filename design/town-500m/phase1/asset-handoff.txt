@@ -1,0 +1,14 @@
+Town500m Phase1 — TownKit asset batch, 2026-10-08
+Trạng thái: copy và source hash verification hoàn tất; native import/runtime pending, primary sở hữu acceptance.
+
+Đã copy đúng 6 finished GLBs + 12 external PNG maps vào res://Assets/Blender/TownKit/: facade_solid_4m, facade_window_4m, facade_doorway_4m, facade_corner_4m, guard_booth_3m và metal_roof_8x8. Maps gồm architecture/roof, mỗi nhóm có clean/used/worn albedo + ORM. Tổng 36,626,171 bytes. Trước overwrite đã kiểm tra source/destination vẫn khớp snapshot hashes; sau copy cả 18 destination SHA256 khớp current source release. Giữ 6 identical architecture/roof variants .tres; không ghi .import/.godot/project.godot/scenes/scripts hoặc source Blender. Utilities cũ được giữ nguyên cả geometry và maps; circulation không đổi. Không import barrier/lamp.
+
+Evidence: phase1/asset-import.json ghi exact paths, before/after/release hashes, dimensions/bounds/pivots, source report hashes và source QA claims. Toàn bộ 396 source release hashes khớp manifest. Đã independently decode visual vertex/index arrays của 6 GLBs: actual bounds khớp manifest, triangle indices hợp lệ và caps được giữ. Theo thứ tự batch ở trên: tris 60/708/204/68/1764/340; surfaces 1/2/1/1/2/1. Unit identity transforms, không cameras/animations; used embedded PNG hashes khớp external maps. Architecture 2048 px, roof 1024 px. Shared UV update cần solid/corner/booth companions; không restore riêng old GLB khi vẫn giữ new atlas.
+
+Material contract: opaque architecture surface0 tiếp tục dùng existing clean/used/worn override; window/booth embedded Town_WindowGlass surface1 dùng alpha BLEND .22, roughness .18, metallic 0. Existing wrappers chỉ override surface0. Đã inspect source glass comparison, gồm booth interior nhìn qua panes; đây chỉ là source preview.
+
+Collision gate: cả hai new GLBs vẫn có một combined -colonly helper gồm opaque wall/frame/floor và các thin pane blockers rời nhau. Delivered GLB chưa có glass-only helper/body. Primary/scene worker phải tách opaque và glass native StaticBody3D, chỉ group actual glass body ai_vision_transparent; không skip combined RID. Physical panes phải tiếp tục block player/bullets. Pane bounds trong asset-import.json được đo từ actual helper POSITION/index arrays theo Godot XYZ, có thể dùng để tách native wrapper; không remodel geometry.
+
+Latest source: C:/Stuff/Blender/TownKit/town_detail_polish_handoff_20261008.md + asset_manifest.json + release_files_sha256.json. Existing in-project Assets/Blender/TownKit/asset_manifest.json và verification/*.json được giữ nguyên như historical snapshots; chúng không còn là current visual triangle/material evidence của copied groups. Dùng phase1 report cho selective batch này.
+
+Chưa kiểm tra: Godot native import/suffix parser, glass sorting, native collider separation, AI/player/bullet runtime, traversal/nav hoặc performance. Không tuyên bố native PASS. Primary có source hashes và evidence để tiếp tục native pilot acceptance.

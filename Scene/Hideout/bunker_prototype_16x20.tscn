@@ -78,7 +78,7 @@
 [ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/ration_biscuits.tscn" id="70_xdrvh"]
 [ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/salt_bag.tscn" id="71_vsbfl"]
 [ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/kalo_cola.tscn" id="72_uklkh"]
-[ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/reinforced_wood_chest.tscn" id="73_wncsj"]
+[ext_resource type="PackedScene" uid="uid://c8o5wvy3c7w1f" path="res://Scene/Props/BunkerKit/reinforced_wood_chest.tscn" id="73_wncsj"]
 [ext_resource type="Resource" path="res://Scene/Items/Consumables/canned_food_item.tres" id="74_5yh5l"]
 [ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/wood_pallet.tscn" id="74_odr4c"]
 [ext_resource type="PackedScene" path="res://Scene/Props/BunkerKit/wood_crate.tscn" id="75_n1f7j"]
@@ -136,8 +136,38 @@
 [ext_resource type="PackedScene" path="res://Scene/Items/Consumables/pickup_canned_food.tscn" id="food_canned_food"]
 [ext_resource type="PackedScene" path="res://Scene/Items/Consumables/pickup_canned_meat_rect.tscn" id="food_canned_meat_rect"]
 [ext_resource type="PackedScene" path="res://Scene/Items/Consumables/pickup_kalo_cola.tscn" id="food_kalo_cola"]
-[ext_resource type="PackedScene" path="res://Scene/Items/Consumables/pickup_ration_biscuits.tscn" id="food_ration_biscuits"]
+[ext_resource type="PackedScene" uid="uid://cc1wdomhjsest" path="res://Scene/Items/Consumables/pickup_ration_biscuits.tscn" id="food_ration_biscuits"]
 [ext_resource type="PackedScene" path="res://Scene/Items/Consumables/pickup_water_bottle.tscn" id="food_water_bottle"]
+
+[sub_resource type="Resource" id="Resource_5yh5l"]
+resource_local_to_scene = true
+script = ExtResource("4_lu8v3")
+grid = true
+inventory_size = Vector2i(4, 2)
+
+[sub_resource type="Resource" id="Resource_u4uq7"]
+resource_local_to_scene = true
+script = ExtResource("4_lu8v3")
+grid = true
+inventory_size = Vector2i(4, 2)
+
+[sub_resource type="Resource" id="Resource_8fc3f"]
+resource_local_to_scene = true
+script = ExtResource("4_lu8v3")
+grid = true
+inventory_size = Vector2i(4, 3)
+
+[sub_resource type="Resource" id="Resource_my2k6"]
+resource_local_to_scene = true
+script = ExtResource("4_lu8v3")
+grid = true
+inventory_size = Vector2i(4, 2)
+
+[sub_resource type="Resource" id="Resource_ukdl6"]
+resource_local_to_scene = true
+script = ExtResource("4_lu8v3")
+grid = true
+inventory_size = Vector2i(6, 2)
 
 [sub_resource type="Resource" id="Resource_ojk44"]
 resource_local_to_scene = true
@@ -146,36 +176,6 @@ grid = true
 inventory_size = Vector2i(4, 2)
 
 [sub_resource type="Resource" id="Resource_5h5m4"]
-resource_local_to_scene = true
-script = ExtResource("4_lu8v3")
-grid = true
-inventory_size = Vector2i(4, 2)
-
-[sub_resource type="Resource" id="Resource_w3coq"]
-resource_local_to_scene = true
-script = ExtResource("4_lu8v3")
-grid = true
-inventory_size = Vector2i(4, 3)
-
-[sub_resource type="Resource" id="Resource_bw17n"]
-resource_local_to_scene = true
-script = ExtResource("4_lu8v3")
-grid = true
-inventory_size = Vector2i(4, 2)
-
-[sub_resource type="Resource" id="Resource_ncg0v"]
-resource_local_to_scene = true
-script = ExtResource("4_lu8v3")
-grid = true
-inventory_size = Vector2i(6, 2)
-
-[sub_resource type="Resource" id="Resource_cosv3"]
-resource_local_to_scene = true
-script = ExtResource("4_lu8v3")
-grid = true
-inventory_size = Vector2i(4, 2)
-
-[sub_resource type="Resource" id="Resource_7hyh7"]
 resource_local_to_scene = true
 script = ExtResource("6_2mfs2")
 grid = true
@@ -273,27 +273,27 @@ resource_name = "Locker identification plate"
 albedo_color = Color(0.7977378, 0.60971165, 0.24780053, 1)
 roughness = 0.75
 
-[sub_resource type="Resource" id="Resource_q5hia"]
+[sub_resource type="Resource" id="Resource_w3coq"]
 resource_local_to_scene = true
 script = ExtResource("3_ogm1b")
 inventory_item = ExtResource("74_5yh5l")
 
-[sub_resource type="Resource" id="Resource_1itac"]
+[sub_resource type="Resource" id="Resource_bw17n"]
 resource_local_to_scene = true
 script = ExtResource("3_ogm1b")
 inventory_item = ExtResource("76_u4uq7")
 
-[sub_resource type="Resource" id="Resource_k648w"]
+[sub_resource type="Resource" id="Resource_ncg0v"]
 resource_local_to_scene = true
 script = ExtResource("3_ogm1b")
 inventory_item = ExtResource("82_8fc3f")
 
-[sub_resource type="Resource" id="Resource_lluwo"]
+[sub_resource type="Resource" id="Resource_cosv3"]
 resource_local_to_scene = true
 script = ExtResource("3_ogm1b")
 inventory_item = ExtResource("86_my2k6")
 
-[sub_resource type="Resource" id="Resource_xdrvh"]
+[sub_resource type="Resource" id="Resource_7hyh7"]
 resource_local_to_scene = true
 script = ExtResource("3_ogm1b")
 inventory_item = ExtResource("88_ukdl6")
@@ -1436,7 +1436,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85, 0.208, -1.5)
 [node name="StashCrate_A" parent="." unique_id=1692639121 instance=ExtResource("2_f53px")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.65, 0.008, -4.8)
 display_name = "STASH A"
-inventory_data = SubResource("Resource_ojk44")
+inventory_data = SubResource("Resource_5yh5l")
 metadata/prototype_manifest_id = "wood_crate__001"
 metadata/prototype_asset = "wood_crate"
 metadata/stash_model = "reinforced_wood_chest"
@@ -1457,7 +1457,7 @@ text = "STASH A"
 [node name="StashCrate_B" parent="." unique_id=35274812 instance=ExtResource("6_nvq0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3, 0.008, -4.8)
 display_name = "STASH B"
-inventory_data = SubResource("Resource_5h5m4")
+inventory_data = SubResource("Resource_u4uq7")
 metadata/prototype_manifest_id = "wood_crate__002"
 metadata/prototype_asset = "wood_crate"
 metadata/stash_model = "compact_steel_container"
@@ -1478,7 +1478,7 @@ text = "STASH B"
 [node name="StashCrate_C" parent="." unique_id=380907368 instance=ExtResource("7_cn1sa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95, 0.008, -4.8)
 display_name = "STASH C"
-inventory_data = SubResource("Resource_w3coq")
+inventory_data = SubResource("Resource_8fc3f")
 metadata/prototype_manifest_id = "wood_crate__003"
 metadata/prototype_asset = "wood_crate"
 metadata/stash_model = "olive_storage_box"
@@ -1499,7 +1499,7 @@ text = "STASH C"
 [node name="StashCrate_D" parent="." unique_id=747516832 instance=ExtResource("2_f53px")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.65, 0.008, -6.5)
 display_name = "STASH D"
-inventory_data = SubResource("Resource_bw17n")
+inventory_data = SubResource("Resource_my2k6")
 metadata/prototype_manifest_id = "wood_crate__004"
 metadata/prototype_asset = "wood_crate"
 metadata/stash_model = "reinforced_wood_chest"
@@ -1520,7 +1520,7 @@ text = "STASH D"
 [node name="StashCrate_E" parent="." unique_id=533272791 instance=ExtResource("6_nvq0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3, 0.008, -6.5)
 display_name = "STASH E"
-inventory_data = SubResource("Resource_ncg0v")
+inventory_data = SubResource("Resource_ukdl6")
 metadata/prototype_manifest_id = "wood_crate__005"
 metadata/prototype_asset = "wood_crate"
 metadata/stash_model = "compact_steel_container"
@@ -1541,7 +1541,7 @@ text = "STASH E"
 [node name="StashCrate_F" parent="." unique_id=501536029 instance=ExtResource("7_cn1sa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95, 0.008, -6.5)
 display_name = "STASH F"
-inventory_data = SubResource("Resource_cosv3")
+inventory_data = SubResource("Resource_ojk44")
 metadata/prototype_manifest_id = "wood_crate__006"
 metadata/prototype_asset = "wood_crate"
 metadata/stash_model = "olive_storage_box"
@@ -1561,7 +1561,7 @@ text = "STASH F"
 
 [node name="Player" parent="." unique_id=1532385616 instance=ExtResource("5_6pynt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85, 0.208, -1.5)
-inventory_data = SubResource("Resource_7hyh7")
+inventory_data = SubResource("Resource_5h5m4")
 
 [node name="Architecture" type="Node3D" parent="." unique_id=1948836570]
 
@@ -2766,7 +2766,7 @@ transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 0, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.099, 0)
 
 [node name="PickupComponent" parent="Dressing/canned_food__001" index="2"]
-slot_data = SubResource("Resource_q5hia")
+slot_data = SubResource("Resource_w3coq")
 
 [node name="canned_meat_rect__001" parent="Dressing" unique_id=2006726032 instance=ExtResource("food_canned_meat_rect")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.2, 0.488, -7.16)
@@ -2780,7 +2780,7 @@ transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 0, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0765, 0)
 
 [node name="PickupComponent" parent="Dressing/canned_meat_rect__001" index="2"]
-slot_data = SubResource("Resource_1itac")
+slot_data = SubResource("Resource_bw17n")
 
 [node name="coffee_jar__001" parent="Dressing" unique_id=393458029 instance=ExtResource("68_k648w")]
 transform = Transform3D(-7.86805e-08, 0, 1.8, 0, 1.8, 0, -1.8, 0, -7.86805e-08, 7.2, 1.108, -6.5)
@@ -2803,14 +2803,8 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.2,
 metadata/prototype_manifest_id = "ration_biscuits__001"
 metadata/prototype_asset = "ration_biscuits"
 
-[node name="Model" parent="Dressing/ration_biscuits__001" index="0"]
-transform = Transform3D(1.75, 0, 0, 0, 1.75, 0, 0, 0, 1.75, 0, 0, 0)
-
-[node name="CollisionShape3D" parent="Dressing/ration_biscuits__001" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.074375, 0)
-
-[node name="PickupComponent" parent="Dressing/ration_biscuits__001" index="2"]
-slot_data = SubResource("Resource_k648w")
+[node name="PickupComponent" parent="Dressing/ration_biscuits__001" index="2" unique_id=1704991430]
+slot_data = SubResource("Resource_ncg0v")
 
 [node name="salt_bag__001" parent="Dressing" unique_id=255086471 instance=ExtResource("71_vsbfl")]
 transform = Transform3D(-7.649493e-08, 0, 1.75, 0, 1.75, 0, -1.75, 0, -7.649493e-08, 7.2, 0.488, -7.88)
@@ -2832,7 +2826,7 @@ transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 0, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10368, 0)
 
 [node name="PickupComponent" parent="Dressing/kalo_cola__001" index="2"]
-slot_data = SubResource("Resource_lluwo")
+slot_data = SubResource("Resource_cosv3")
 
 [node name="water_bottle__002" parent="Dressing" unique_id=1259071826 instance=ExtResource("food_water_bottle")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.2, 1.728, -7.3)
@@ -2846,7 +2840,7 @@ transform = Transform3D(1.75, 0, 0, 0, 1.75, 0, 0, 0, 1.75, 0, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.175, 0)
 
 [node name="PickupComponent" parent="Dressing/water_bottle__002" index="2"]
-slot_data = SubResource("Resource_xdrvh")
+slot_data = SubResource("Resource_7hyh7")
 
 [node name="canned_food__002" parent="Dressing" unique_id=1720327411 instance=ExtResource("66_q5hia")]
 transform = Transform3D(-7.86805e-08, 0, 1.8, 0, 1.8, 0, -1.8, 0, -7.86805e-08, 7.2, 0.488, -6.7)

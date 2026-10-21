@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-20",
+  "status": "FILE_WORK_STABLE_OFFLINE_PASS_NATIVE_PENDING",
+  "editor_operations_by_this_job": 0,
+  "native_town_verified": false,
+  "instances": 371,
+  "unit_scale_instances": 371,
+  "corrected_nonunit_instances": 113,
+  "exact_old_trunk_shapes_retired": 93,
+  "unchanged_imported_payloads": 1256,
+  "offline_conflicts": [],
+  "tree_root_contacts": {
+    "instances": 93,
+    "maximum_penetration_m": 0.134210620361217,
+    "maximum_float_m": 0.005000000000000782,
+    "penetration_limit_m": 0.15,
+    "float_tolerance_m": 0.02,
+    "ground_source": "canonical phase2 terrain; final pilot native rays pending"
+  },
+  "receipt_input_drift_at_handoff": [],
+  "scale_audit_input_drift_at_handoff": [],
+  "artifact_sha256": {
+    "design/town-500m/phase6/unit-scale-handoff.md": "b955f40d8fe7cc9a0932a1b24270401fb6482ecd1a91e89d09992a3125068925",
+    "design/town-500m/phase6/unit-scale-verification.json": "348550b95e98c7764023f8ece3d96ee3cb2c13077855fec87d98e5a59c683448",
+    "design/town-500m/phase6/unit-scale-changed-files.json": "1d5477ec4a8973bdfd3108ea7ff3370c02eef8752fa244d702028b994522ae6e",
+    "design/town-500m/phase6/scale-chain-audit.json": "fa3e9d05bce8dd7bc7300924342ab27e82a15c7552a99dc95d46b62cb41ecae8",
+    "design/town-500m/phase6/tree-collision-audit.json": "7746610742de1c3020f336c1700e273345089f40b6ea39a139b6b7178a230771",
+    "design/town-500m/phase6/check-unit-scale.cjs": "0bb20d6dd6a8dcfa9d5ccd0da01d1778ff728ed934b614184c82c0fa17007d18"
+  },
+  "next_owner": "Primary original chat owns live MCP/editor, final terrain/apartment native verification and navigation bake"
+}

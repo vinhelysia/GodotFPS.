@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="ArrayMesh" path="res://Scene/World/Town500m/Circulation/asphalt.obj" id="asphalt"]
+
+[ext_resource type="ArrayMesh" path="res://Scene/World/Town500m/Circulation/gravel.obj" id="gravel"]
+
+[ext_resource type="ArrayMesh" path="res://Scene/World/Town500m/Circulation/trail.obj" id="trail"]
+
+[sub_resource type="StandardMaterial3D" id="asphalt"]
+albedo_color = Color(0.16, 0.17, 0.17, 1)
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="gravel"]
+albedo_color = Color(0.37, 0.35, 0.3, 1)
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="trail"]
+albedo_color = Color(0.4, 0.33, 0.25, 1)
+roughness = 0.9
+cull_mode = 2
+
+[node name="Circulation" type="Node3D"]
+
+[node name="asphalt" type="MeshInstance3D" parent="."]
+mesh = ExtResource("asphalt")
+material_override = SubResource("asphalt")
+
+[node name="gravel" type="MeshInstance3D" parent="."]
+mesh = ExtResource("gravel")
+material_override = SubResource("gravel")
+
+[node name="trail" type="MeshInstance3D" parent="."]
+mesh = ExtResource("trail")
+material_override = SubResource("trail")

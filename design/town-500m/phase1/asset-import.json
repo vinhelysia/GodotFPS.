@@ -1,0 +1,960 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-10-08T20:07:54.040718+07:00",
+  "phase": "Town500m Phase1 asset batch",
+  "status": "copied_source_hashes_verified_native_pending",
+  "native_godot_import_runtime": "NOT RUN by asset worker; primary owns acceptance",
+  "source_root": "C:\\Stuff\\Blender\\TownKit",
+  "destination_root": "C:\\Stuff\\godot-fps-cogito-master\\godot-fps-cogito-master\\Assets\\Blender\\TownKit",
+  "source_handoff": "C:\\Stuff\\Blender\\TownKit\\town_detail_polish_handoff_20261008.md",
+  "source_handoff_sha256": "1ffb6de33e91882a0298b040490f4d6f324841c2c5aaf1635d0cf2a2d96382a4",
+  "release_manifest_sha256": "7a4ba9699242844cdd96ab9666dcc45304ca84e52e5d530dab6f3041f4247e7d",
+  "source_release_all_hashes_match": true,
+  "source_release_files_checked": 396,
+  "approved_batch": [
+    {
+      "source": "C:\\Stuff\\Blender\\TownKit\\godot\\assets\\facade_solid_4m.glb",
+      "destination": "res://Assets/Blender/TownKit/assets/facade_solid_4m.glb",
+      "source_sha256": "61952bc08c9065ffd248aaf81e983bb316d2cf7813d26cef483c409ef2fbe446",
+      "destination_before_sha256": "fdc9ee7cc5366f1bda96585e5db576554073c15c4903b39ec482c116bddb54eb",
+      "bytes": 4102328,
+      "destination_after_sha256": "61952bc08c9065ffd248aaf81e983bb316d2cf7813d26cef483c409ef2fbe446",
+      "copy_verified": true
+    },
+    {
+      "source": "C:\\Stuff\\Blender\\TownKit\\godot\\assets\\facade_window_4m.glb",
+      "destination": "res://Assets/Blender/TownKit/assets/facade_window_4m.glb",
+      "source_sha256": "3c9ec4d586d0b9ae21805629e53f136a23debb100b7bcf53bdbe6fb1b47510c4",
+      "destination_before_sha256": "62044ee53ccc2ffc2cc3eccae1f7869a5942568e1045073a7a95194d85ee3ee0",
+      "bytes": 4158948,
+      "destination_after_sha256": "3c9ec4d586d0b9ae21805629e53f136a23debb100b7bcf53bdbe6fb1b47510c4",
+      "copy_verified": true
+    },
+    {
+      "source": "C:\\Stuff\\Blender\\TownKit\\godot\\assets\\facade_doorway_4m.glb",
+      "destination": "res://Assets/Blender/TownKit/assets/facade_doorway_4m.glb",
+      "source_sha256": "7daec2d45057100fec4e0a6a4ffacbf9f9cf30b6fb95897a45e090f990eed4a5",
+      "destination_before_sha256": "11f72d685732d27296dcbdfcde9f033e916817f51c5a1aed1555025c5d20feaf",
+      "bytes": 4116036,
+      "destination_after_sha256": "7daec2d45057100fec4e0a6a4ffacbf9f9cf30b6fb95897a45e090f990eed4a5",
+      "copy_verified": true
+    },
+    {
+      "source": "C:\\Stuff\\Blender\\TownKit\\godot\\assets\\facade_corner_4m.glb",
+      "destination": "res://Assets/Blender/TownKit/assets/facade_corner_4m.glb",
+      "source_sha256": "5194aaee3cea099c548317c58274a7e24b48ae1d251f8f4fec0091f4211ecdf0",
+      "destination_before_sha256": "d2dbc9f9663816eaa9adca749222ba8879ac26d03b0a7475713ca8f21b472d9b",
+      "bytes": 4103224,
+      "destination_after_sha256": "5194aaee3cea099c548317c58274a7e24b48ae1d251f8f4fec0091f4211ecdf0",
+      "copy_verified": true
+    },
+    {
+      "source": "C:\\Stuff\\Blender\\TownKit\\godot\\assets\\guard_booth_3m.glb",
+      "destination": "res://Assets/Blender/TownKit/assets/guard_booth_3m.glb",
+      "source_sha256": "7796c34f3e9958f1e2948edf548c70946a36f238eed86cfb19e152eb9f5d945b",
+      "destination_before_sha256": "449ca0da296bb3569bd0c74e6e07bb693b4da67b6f4b3727f443d04848082fa1",
+      "bytes": 4256016,
+      "destination_after_sha256": "7796c34f3e9958f1e2948edf548c70946a36f238eed86cfb19e152eb9f5d945b",
+      "copy_verified": true
+    },
+    {
+      "source": "C:\\Stuff\\Blender\\TownKit\\godot\\assets\\metal_roof_8x8.glb",
+      "destination": "res://Assets/Blender/TownKit/assets/metal_roof_8x8.glb",
+      "source_sha256": "96497fb0a8a9500b9823821f7346da200c0cffe092bab3b3a130d7cb860b1d64",
+      "destination_before_sha256": "d6dd50748c9ac5d204a9ce17b5a1e7c11e2459104f9010995f1dc6ea7765e21e",
+      "bytes": 922600,
+      "destination_after_sha256": "96497fb0a8a9500b9823821f7346da200c0cffe092bab3b3a130d7cb860b1d64",
+      "copy_verified": true
+    },
+    {
+      "source": "C:\\Stuff\\Blender\\TownKit\\textures\\town_architecture_clean_albedo.png",
+      "destination": "res://Assets/Blender/TownKit/textures/town_architecture_clean_albedo.png",
+      "source_sha256": "4804fb900fd15907c6a49ef5c1d77f3e675afbae3cad0334cd6048c9f3c37fdb",
+      "destination_before_sha256": "eb684415fa2ad28038587f2ba8caef88cc04ab63c2e7481c923c927649ce50e0",
+      "bytes": 1545136,
+      "destination_after_sha256": "4804fb900fd15907c6a49ef5c1d77f3e675afbae3cad0334cd6048c9f3c37fdb",
+      "copy_verified": true
+    },
+    {
+      "source": "C:\\Stuff\\Blender\\TownKit\\textures\\town_architecture_clean_orm.png",
+      "destination": "res://Assets/Blender/TownKit/textures/town_architecture_clean_orm.png",
+      "source_sha256": "689a935cc9ede8144dca52adc134b805a846f8741ba8d823906932c84c0953d9",
+      "destination_before_sha256": "1af2fe800e194324e73ad8ece1140904cd1d18fc17e78ce8f0c375d3b75abae1",
+      "bytes": 2243501,
+      "destination_after_sha256": "689a935cc9ede8144dca52adc134b805a846f8741ba8d823906932c84c0953d9",
+      "copy_verified": true
+    },
+    {
+      "source": "C:\\Stuff\\Blender\\TownKit\\textures\\town_architecture_used_albedo.png",
+      "destination": "res://Assets/Blender/TownKit/textures/town_architecture_used_albedo.png",
+      "source_sha256": "00da07e1b02a643381b8aa78a4b1369906b6d44284d94bc5910a94df7748f429",
+      "destination_before_sha256": "01e9516a7cb0fa6ea711d872d927f90e484834153ffbfbf678f20d4bfb5d83b6",
+      "bytes": 1775875,
+      "destination_after_sha256": "00da07e1b02a643381b8aa78a4b1369906b6d44284d94bc5910a94df7748f429",
+      "copy_verified": true
+    },
+    {
+      "source": "C:\\Stuff\\Blender\\TownKit\\textures\\town_architecture_used_orm.png",
+      "destination": "res://Assets/Blender/TownKit/textures/town_architecture_used_orm.png",
+      "source_sha256": "c775894f9f8c5e0130c31fd03ea580e32a30fd12422adbf2c03ce7b8d1c1a642",
+      "destination_before_sha256": "350363300eb42b55b76a2f650a411856f527dbdbf53125c4bf1e1614f1442ae3",
+      "bytes": 2318351,
+      "destination_after_sha256": "c775894f9f8c5e0130c31fd03ea580e32a30fd12422adbf2c03ce7b8d1c1a642",
+      "copy_verified": true
+    },
+    {
+      "source": "C:\\Stuff\\Blender\\TownKit\\textures\\town_architecture_worn_albedo.png",
+      "destination": "res://Assets/Blender/TownKit/textures/town_architecture_worn_albedo.png",
+      "source_sha256": "f0f37637407cbc5d0210685fd33de5e944f27770214590e4d1a19ea512d6b967",
+      "destination_before_sha256": "6989b089034faa9255bd8925f6b19fb4d2959f8de08ba9dbcf7d0e1e083bc6d5",
+      "bytes": 2019007,
+      "destination_after_sha256": "f0f37637407cbc5d0210685fd33de5e944f27770214590e4d1a19ea512d6b967",
+      "copy_verified": true
+    },
+    {
+      "source": "C:\\Stuff\\Blender\\TownKit\\textures\\town_architecture_worn_orm.png",
+      "destination": "res://Assets/Blender/TownKit/textures/town_architecture_worn_orm.png",
+      "source_sha256": "0469ead8d333639dc8f90dc97d5dbd62105fd6dedba3c4fd281510e860510345",
+      "destination_before_sha256": "ed97810aaccb95242797978a83e5c964c9c301526b79de6303d4617eaad11d74",
+      "bytes": 2382932,
+      "destination_after_sha256": "0469ead8d333639dc8f90dc97d5dbd62105fd6dedba3c4fd281510e860510345",
+      "copy_verified": true
+    },
+    {
+      "source": "C:\\Stuff\\Blender\\TownKit\\textures\\town_roof_clean_albedo.png",
+      "destination": "res://Assets/Blender/TownKit/textures/town_roof_clean_albedo.png",
+      "source_sha256": "5d4929fdbed070df822fa5a091282305f521044bb6a92fd5963f6bf44eef4979",
+      "destination_before_sha256": "79b4adf9688c121647da54f962b1a0ea8626a39a76925f23ecd2d22aed2b06e4",
+      "bytes": 310934,
+      "destination_after_sha256": "5d4929fdbed070df822fa5a091282305f521044bb6a92fd5963f6bf44eef4979",
+      "copy_verified": true
+    },
+    {
+      "source": "C:\\Stuff\\Blender\\TownKit\\textures\\town_roof_clean_orm.png",
+      "destination": "res://Assets/Blender/TownKit/textures/town_roof_clean_orm.png",
+      "source_sha256": "2efde717de9f5e7f09096c2ead71c56ad569f1e8b6d17583ee1a20090da138de",
+      "destination_before_sha256": "f611d5d8459f347917b80bafc2872a874329078f21239e368dd248458473ff8d",
+      "bytes": 485322,
+      "destination_after_sha256": "2efde717de9f5e7f09096c2ead71c56ad569f1e8b6d17583ee1a20090da138de",
+      "copy_verified": true
+    },
+    {
+      "source": "C:\\Stuff\\Blender\\TownKit\\textures\\town_roof_used_albedo.png",
+      "destination": "res://Assets/Blender/TownKit/textures/town_roof_used_albedo.png",
+      "source_sha256": "c59673f353678a911bdf0476ed3da43f3adb2e02f4c2827d2adaff9f2ceea741",
+      "destination_before_sha256": "d5e53438ec10642bc01b20234359bbb29808a7da7654d77eb669e8d203ce6916",
+      "bytes": 371691,
+      "destination_after_sha256": "c59673f353678a911bdf0476ed3da43f3adb2e02f4c2827d2adaff9f2ceea741",
+      "copy_verified": true
+    },
+    {
+      "source": "C:\\Stuff\\Blender\\TownKit\\textures\\town_roof_used_orm.png",
+      "destination": "res://Assets/Blender/TownKit/textures/town_roof_used_orm.png",
+      "source_sha256": "12acc6b045fa733e42565b4c247265a477d7d1932627c599dbd868fc40d697f0",
+      "destination_before_sha256": "414a08e7d88eefba43267987a0e6f98b183aabe830ab38dc7b6fd7c05245cf6c",
+      "bytes": 523765,
+      "destination_after_sha256": "12acc6b045fa733e42565b4c247265a477d7d1932627c599dbd868fc40d697f0",
+      "copy_verified": true
+    },
+    {
+      "source": "C:\\Stuff\\Blender\\TownKit\\textures\\town_roof_worn_albedo.png",
+      "destination": "res://Assets/Blender/TownKit/textures/town_roof_worn_albedo.png",
+      "source_sha256": "dc3d134ac9f18e38b76922d539169ac875377442a62e412e2e8892a8d7ce9fb0",
+      "destination_before_sha256": "d468fefaeaefda4277de29f7237686249ff6620a3dbdf5a2aa01afa1961cbd56",
+      "bytes": 425564,
+      "destination_after_sha256": "dc3d134ac9f18e38b76922d539169ac875377442a62e412e2e8892a8d7ce9fb0",
+      "copy_verified": true
+    },
+    {
+      "source": "C:\\Stuff\\Blender\\TownKit\\textures\\town_roof_worn_orm.png",
+      "destination": "res://Assets/Blender/TownKit/textures/town_roof_worn_orm.png",
+      "source_sha256": "ffaa12d8070e313ec1ad2f39484b0f25bfecde9dc68725b3d372bbb2d3db0849",
+      "destination_before_sha256": "51a48ac00ae91ee87b7ccf29591a40f27760ceb630283cb305a3dd4ba8d8d3cb",
+      "bytes": 564941,
+      "destination_after_sha256": "ffaa12d8070e313ec1ad2f39484b0f25bfecde9dc68725b3d372bbb2d3db0849",
+      "copy_verified": true
+    }
+  ],
+  "approved_batch_file_count": 18,
+  "approved_batch_bytes": 36626171,
+  "assets": [
+    {
+      "asset": "facade_solid_4m",
+      "root": "TownFacadeSolid",
+      "origin_contract": "inner-bottom left grid point (0,0,0); X 0..4, outside Blender Y -0.25..0",
+      "dimensions_godot_m": [
+        4,
+        3.200000047683716,
+        0.25
+      ],
+      "bounds_godot_m": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          3.200000047683716,
+          0.25
+        ]
+      ],
+      "visual_triangles": 60,
+      "triangle_cap": 1200,
+      "visual_surfaces": 1,
+      "materials": [
+        {
+          "name": "town_architecture_used",
+          "alpha_mode": "OPAQUE",
+          "pbr": {
+            "baseColorTexture": {
+              "index": 0
+            },
+            "metallicRoughnessTexture": {
+              "index": 1
+            }
+          }
+        }
+      ],
+      "embedded_images": [
+        {
+          "name": "town_architecture_used_albedo",
+          "dimensions_px": [
+            2048,
+            2048
+          ],
+          "sha256": "00da07e1b02a643381b8aa78a4b1369906b6d44284d94bc5910a94df7748f429",
+          "external_used_map_match": true
+        },
+        {
+          "name": "town_architecture_used_orm",
+          "dimensions_px": [
+            2048,
+            2048
+          ],
+          "sha256": "c775894f9f8c5e0130c31fd03ea580e32a30fd12422adbf2c03ce7b8d1c1a642",
+          "external_used_map_match": true
+        }
+      ],
+      "collision_helper": "FacadeSolid-colonly",
+      "details": {
+        "nominal_dimensions_blender_m": [
+          4,
+          0.25,
+          3.2
+        ],
+        "ports_blender_m": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0
+          ]
+        ],
+        "wall_thickness_m": 0.25
+      },
+      "source_blend_sha256": "8a982979cdeebd70fa8d153d69b3ddb959edc0f44b68eaf05aa4fd335e4bab85",
+      "source_report": "C:\\Stuff\\Blender\\TownKit\\verification\\facade_solid_4m.json",
+      "source_report_sha256": "ee6831bd8069fc576e46e1c9a3827aad29f0a1bea2710b94086ae753d99aa68c",
+      "source_qa_claim": {
+        "pass_source_export": true,
+        "source_reopened": true,
+        "glb_reimport_dimensions_tris_pivots_materials": true
+      },
+      "inspected_binary_matches_manifest": true,
+      "decoded_visual_vertex_bounds_match_declared_accessors": true,
+      "decoded_visual_triangle_indices_valid": true
+    },
+    {
+      "asset": "facade_window_4m",
+      "root": "TownFacadeWindow",
+      "origin_contract": "inner-bottom left grid point (0,0,0); X 0..4, outside Blender Y -0.25..0",
+      "dimensions_godot_m": [
+        4,
+        3.200000047683716,
+        0.25
+      ],
+      "bounds_godot_m": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          3.200000047683716,
+          0.25
+        ]
+      ],
+      "visual_triangles": 708,
+      "triangle_cap": 1200,
+      "visual_surfaces": 2,
+      "materials": [
+        {
+          "name": "town_architecture_used",
+          "alpha_mode": "OPAQUE",
+          "pbr": {
+            "baseColorTexture": {
+              "index": 0
+            },
+            "metallicRoughnessTexture": {
+              "index": 1
+            }
+          }
+        },
+        {
+          "name": "Town_WindowGlass",
+          "alpha_mode": "BLEND",
+          "pbr": {
+            "baseColorFactor": [
+              0.20000000298023224,
+              0.2800000011920929,
+              0.28999999165534973,
+              0.2199999988079071
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.18000000715255737
+          }
+        }
+      ],
+      "embedded_images": [
+        {
+          "name": "town_architecture_used_albedo",
+          "dimensions_px": [
+            2048,
+            2048
+          ],
+          "sha256": "00da07e1b02a643381b8aa78a4b1369906b6d44284d94bc5910a94df7748f429",
+          "external_used_map_match": true
+        },
+        {
+          "name": "town_architecture_used_orm",
+          "dimensions_px": [
+            2048,
+            2048
+          ],
+          "sha256": "c775894f9f8c5e0130c31fd03ea580e32a30fd12422adbf2c03ce7b8d1c1a642",
+          "external_used_map_match": true
+        }
+      ],
+      "collision_helper": "FacadeWindow-colonly",
+      "details": {
+        "nominal_dimensions_blender_m": [
+          4,
+          0.25,
+          3.2
+        ],
+        "ports_blender_m": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0
+          ]
+        ],
+        "wall_thickness_m": 0.25,
+        "window_opening_m": [
+          1.6,
+          1.35
+        ],
+        "window_bottom_m": 1.05,
+        "window": "lightly tinted transparent glazing, alpha blend",
+        "collision": "fitted wall segments plus thin glazing proxy; window blocked, doorway variant remains open",
+        "detail_polish": [
+          "masonry reveal returns",
+          "cast lintel",
+          "folded metal sill/drip edge",
+          "glazing beads",
+          "mounted interior casement handle"
+        ],
+        "added_detail_attachment_check": "BVH surface contact graph, 0.5 mm tolerance; every added part reaches the original visual",
+        "glass": {
+          "material": "Town_WindowGlass",
+          "surface": 1,
+          "alpha": 0.22,
+          "roughness": 0.18,
+          "metallic": 0,
+          "refraction": false,
+          "backface_culling": true,
+          "pane_faces": 12
+        }
+      },
+      "source_blend_sha256": "d51e4cb6b5a86bb82393845974c44788a3e1c17985a6da925ecce194baf8f4b6",
+      "source_report": "C:\\Stuff\\Blender\\TownKit\\verification\\facade_window_4m.json",
+      "source_report_sha256": "19564224adaa71e5650817d96eca26157a3d02d5b6ae25b720f3a12a338d70ea",
+      "source_qa_claim": {
+        "pass_source_export": true,
+        "source_reopened": true,
+        "glb_reimport_dimensions_tris_pivots_materials": true
+      },
+      "inspected_binary_matches_manifest": true,
+      "decoded_visual_vertex_bounds_match_declared_accessors": true,
+      "decoded_visual_triangle_indices_valid": true
+    },
+    {
+      "asset": "facade_doorway_4m",
+      "root": "TownFacadeDoorway",
+      "origin_contract": "inner-bottom left grid point (0,0,0); X 0..4, outside Blender Y -0.25..0",
+      "dimensions_godot_m": [
+        4,
+        3.200000047683716,
+        0.25
+      ],
+      "bounds_godot_m": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          3.200000047683716,
+          0.25
+        ]
+      ],
+      "visual_triangles": 204,
+      "triangle_cap": 1200,
+      "visual_surfaces": 1,
+      "materials": [
+        {
+          "name": "town_architecture_used",
+          "alpha_mode": "OPAQUE",
+          "pbr": {
+            "baseColorTexture": {
+              "index": 0
+            },
+            "metallicRoughnessTexture": {
+              "index": 1
+            }
+          }
+        }
+      ],
+      "embedded_images": [
+        {
+          "name": "town_architecture_used_albedo",
+          "dimensions_px": [
+            2048,
+            2048
+          ],
+          "sha256": "00da07e1b02a643381b8aa78a4b1369906b6d44284d94bc5910a94df7748f429",
+          "external_used_map_match": true
+        },
+        {
+          "name": "town_architecture_used_orm",
+          "dimensions_px": [
+            2048,
+            2048
+          ],
+          "sha256": "c775894f9f8c5e0130c31fd03ea580e32a30fd12422adbf2c03ce7b8d1c1a642",
+          "external_used_map_match": true
+        }
+      ],
+      "collision_helper": "FacadeDoorway-colonly",
+      "details": {
+        "nominal_dimensions_blender_m": [
+          4,
+          0.25,
+          3.2
+        ],
+        "ports_blender_m": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0
+          ]
+        ],
+        "wall_thickness_m": 0.25,
+        "clear_opening_width_m": 1.2,
+        "clear_opening_height_m": 2.4,
+        "threshold": "none; open floor passage",
+        "trim_reveal_setback_m": 0.001,
+        "trim_junction_faces_separated": true,
+        "detail_polish": [
+          "4 mm chamfer on existing jambs/lintel",
+          "existing 1 mm reveal separation/open threshold retained"
+        ],
+        "added_detail_attachment_check": "BVH surface contact graph, 0.5 mm tolerance; every added part reaches the original visual"
+      },
+      "source_blend_sha256": "84e1f544c88b1f689abc02fa87627080b0ec4c85721655b3cdd5e101154caa24",
+      "source_report": "C:\\Stuff\\Blender\\TownKit\\verification\\facade_doorway_4m.json",
+      "source_report_sha256": "31aa5df48cb47202f17fe501dcb6680f758dc8e7ce0f76d5170071f5563da88a",
+      "source_qa_claim": {
+        "pass_source_export": true,
+        "source_reopened": true,
+        "glb_reimport_dimensions_tris_pivots_materials": true
+      },
+      "inspected_binary_matches_manifest": true,
+      "decoded_visual_vertex_bounds_match_declared_accessors": true,
+      "decoded_visual_triangle_indices_valid": true
+    },
+    {
+      "asset": "facade_corner_4m",
+      "root": "TownFacadeCorner",
+      "origin_contract": "inner-bottom L corner (0,0,0); inner runs +X and +Blender Y, ports 4 m",
+      "dimensions_godot_m": [
+        4.25,
+        3.200000047683716,
+        4.25
+      ],
+      "bounds_godot_m": [
+        [
+          -0.25,
+          0,
+          -4
+        ],
+        [
+          4,
+          3.200000047683716,
+          0.25
+        ]
+      ],
+      "visual_triangles": 68,
+      "triangle_cap": 1200,
+      "visual_surfaces": 1,
+      "materials": [
+        {
+          "name": "town_architecture_used",
+          "alpha_mode": "OPAQUE",
+          "pbr": {
+            "baseColorTexture": {
+              "index": 0
+            },
+            "metallicRoughnessTexture": {
+              "index": 1
+            }
+          }
+        }
+      ],
+      "embedded_images": [
+        {
+          "name": "town_architecture_used_albedo",
+          "dimensions_px": [
+            2048,
+            2048
+          ],
+          "sha256": "00da07e1b02a643381b8aa78a4b1369906b6d44284d94bc5910a94df7748f429",
+          "external_used_map_match": true
+        },
+        {
+          "name": "town_architecture_used_orm",
+          "dimensions_px": [
+            2048,
+            2048
+          ],
+          "sha256": "c775894f9f8c5e0130c31fd03ea580e32a30fd12422adbf2c03ce7b8d1c1a642",
+          "external_used_map_match": true
+        }
+      ],
+      "collision_helper": "FacadeCorner-colonly",
+      "details": {
+        "ports_blender_m": [
+          [
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ]
+        ],
+        "outer_dimensions_blender_m": [
+          4.25,
+          4.25,
+          3.2
+        ],
+        "alignment": "straight walls begin at either port, thickness extends outward; no duplicated corner volume"
+      },
+      "source_blend_sha256": "a875d8654da96058a4e599cf04cdeb2ccfd172ef6004ed45e060b453209a3422",
+      "source_report": "C:\\Stuff\\Blender\\TownKit\\verification\\facade_corner_4m.json",
+      "source_report_sha256": "caf375ebe7cbc8c3339bc94d11d909bcf7b33fe0c5b35fbc0a68814e55a25372",
+      "source_qa_claim": {
+        "pass_source_export": true,
+        "source_reopened": true,
+        "glb_reimport_dimensions_tris_pivots_materials": true
+      },
+      "inspected_binary_matches_manifest": true,
+      "decoded_visual_vertex_bounds_match_declared_accessors": true,
+      "decoded_visual_triangle_indices_valid": true
+    },
+    {
+      "asset": "metal_roof_8x8",
+      "root": "TownMetalRoof",
+      "origin_contract": "eave underside corner (0,0,0); footprint X/Y 0..8; seat at wall-top 3.2 m",
+      "dimensions_godot_m": [
+        8,
+        0.859000027179718,
+        8
+      ],
+      "bounds_godot_m": [
+        [
+          0,
+          0,
+          -8
+        ],
+        [
+          8,
+          0.859000027179718,
+          0
+        ]
+      ],
+      "visual_triangles": 340,
+      "triangle_cap": 1200,
+      "visual_surfaces": 1,
+      "materials": [
+        {
+          "name": "town_roof_used",
+          "alpha_mode": "OPAQUE",
+          "pbr": {
+            "baseColorTexture": {
+              "index": 0
+            },
+            "metallicRoughnessTexture": {
+              "index": 1
+            }
+          }
+        }
+      ],
+      "embedded_images": [
+        {
+          "name": "town_roof_used_albedo",
+          "dimensions_px": [
+            1024,
+            1024
+          ],
+          "sha256": "c59673f353678a911bdf0476ed3da43f3adb2e02f4c2827d2adaff9f2ceea741",
+          "external_used_map_match": true
+        },
+        {
+          "name": "town_roof_used_orm",
+          "dimensions_px": [
+            1024,
+            1024
+          ],
+          "sha256": "12acc6b045fa733e42565b4c247265a477d7d1932627c599dbd868fc40d697f0",
+          "external_used_map_match": true
+        }
+      ],
+      "collision_helper": null,
+      "details": {
+        "footprint_m": [
+          8,
+          8
+        ],
+        "half_span_m": 4,
+        "rise_m": 0.8,
+        "slope_degrees": 11.309932474020215,
+        "wall_seat_z": 0,
+        "ridge_top_z": 0.859,
+        "overhang_m": 0,
+        "connectors_blender_m": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            8,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            0
+          ],
+          [
+            8,
+            8,
+            0
+          ]
+        ],
+        "collision": "omitted; roof not intended as accessible gameplay surface",
+        "gable": "integrated end panels at X 0..0.04 and 7.96..8, 8 m span / .8 m rise; internal join gables may be occluded",
+        "detail_polish": [
+          "folded eave drip edges",
+          "gable edge weather flashings",
+          "existing ridge/standing seams retained"
+        ],
+        "added_detail_attachment_check": "BVH surface contact graph, 0.5 mm tolerance; every added part reaches the original visual"
+      },
+      "source_blend_sha256": "95411d2d1ed95f5ed0806e5b867403c0d6ac8c8201a6c59f7ffcc8d51d06f1d9",
+      "source_report": "C:\\Stuff\\Blender\\TownKit\\verification\\metal_roof_8x8.json",
+      "source_report_sha256": "aa5ab7954a899390bba796c66acb0b445135728b2819da737bd53fe5eef9d28c",
+      "source_qa_claim": {
+        "pass_source_export": true,
+        "source_reopened": true,
+        "glb_reimport_dimensions_tris_pivots_materials": true
+      },
+      "inspected_binary_matches_manifest": true,
+      "decoded_visual_vertex_bounds_match_declared_accessors": true,
+      "decoded_visual_triangle_indices_valid": true
+    },
+    {
+      "asset": "guard_booth_3m",
+      "root": "TownGuardBooth",
+      "origin_contract": "inner-bottom front-left (0,0,0); exterior X/Y -.15..2.85",
+      "dimensions_godot_m": [
+        3.000000149011612,
+        3.1999998092651367,
+        3.000000149011612
+      ],
+      "bounds_godot_m": [
+        [
+          -0.15000000596046448,
+          0,
+          -2.8500001430511475
+        ],
+        [
+          2.8500001430511475,
+          3.1999998092651367,
+          0.15000000596046448
+        ]
+      ],
+      "visual_triangles": 1764,
+      "triangle_cap": 3000,
+      "visual_surfaces": 2,
+      "materials": [
+        {
+          "name": "town_architecture_used",
+          "alpha_mode": "OPAQUE",
+          "pbr": {
+            "baseColorTexture": {
+              "index": 0
+            },
+            "metallicRoughnessTexture": {
+              "index": 1
+            }
+          }
+        },
+        {
+          "name": "Town_WindowGlass",
+          "alpha_mode": "BLEND",
+          "pbr": {
+            "baseColorFactor": [
+              0.20000000298023224,
+              0.2800000011920929,
+              0.28999999165534973,
+              0.2199999988079071
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.18000000715255737
+          }
+        }
+      ],
+      "embedded_images": [
+        {
+          "name": "town_architecture_used_albedo",
+          "dimensions_px": [
+            2048,
+            2048
+          ],
+          "sha256": "00da07e1b02a643381b8aa78a4b1369906b6d44284d94bc5910a94df7748f429",
+          "external_used_map_match": true
+        },
+        {
+          "name": "town_architecture_used_orm",
+          "dimensions_px": [
+            2048,
+            2048
+          ],
+          "sha256": "c775894f9f8c5e0130c31fd03ea580e32a30fd12422adbf2c03ce7b8d1c1a642",
+          "external_used_map_match": true
+        }
+      ],
+      "collision_helper": "GuardBooth-colonly",
+      "details": {
+        "nominal_exterior_dimensions_m": [
+          3,
+          3,
+          3.2
+        ],
+        "interior_floor_m": [
+          2.7,
+          2.7
+        ],
+        "floor_height_m": 0.08,
+        "door_clear_width_m": 1.2,
+        "door_clear_height_m": 2.4,
+        "window_openings_m": [
+          1.6,
+          1.4
+        ],
+        "collision": "fitted wall/floor plus glazing; doorway open, windows blocked; no full booth box",
+        "trim_reveal_setback_m": 0.006,
+        "trim_junction_faces_separated": true,
+        "detail_polish": [
+          "open entry steel jamb/header",
+          "rear corner structural posts",
+          "base weather/kick panels",
+          "three window reveal returns/folded sills",
+          "roof edge fascia"
+        ],
+        "added_detail_attachment_check": "BVH surface contact graph, 0.5 mm tolerance; every added part reaches the original visual",
+        "glass": {
+          "material": "Town_WindowGlass",
+          "surface": 1,
+          "alpha": 0.22,
+          "roughness": 0.18,
+          "metallic": 0,
+          "refraction": false,
+          "backface_culling": true,
+          "pane_faces": 18
+        }
+      },
+      "source_blend_sha256": "31f9ab9ad3d2200a8018ec39d29ef12f4d5f09268d1d9c592b55702d47a1ab0f",
+      "source_report": "C:\\Stuff\\Blender\\TownKit\\verification\\guard_booth_3m.json",
+      "source_report_sha256": "ca4fc4ad5de87c3d4eb3f40dbcfe34a4f1c292bbfbb063c513a938eb1c62ff86",
+      "source_qa_claim": {
+        "pass_source_export": true,
+        "source_reopened": true,
+        "glb_reimport_dimensions_tris_pivots_materials": true
+      },
+      "inspected_binary_matches_manifest": true,
+      "decoded_visual_vertex_bounds_match_declared_accessors": true,
+      "decoded_visual_triangle_indices_valid": true
+    }
+  ],
+  "retained_identical_material_variants": [
+    {
+      "path": "res://Assets/Blender/TownKit/materials/town_architecture_clean.tres",
+      "source_destination_sha256": "a94e628b381c2471ce2087036b1254eed9c6bbcedef64d7de395f281094d9533",
+      "already_identical": true,
+      "copy_required": false
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/materials/town_architecture_used.tres",
+      "source_destination_sha256": "23a26c0286a30dd218e02f14db0dc0bc59d6903e9eef75dbf84157519426fbc2",
+      "already_identical": true,
+      "copy_required": false
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/materials/town_architecture_worn.tres",
+      "source_destination_sha256": "1200570f81011299435f4c5d6f3b3d1ff3d4b37402f70b21fa9c2761c4388bf2",
+      "already_identical": true,
+      "copy_required": false
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/materials/town_roof_clean.tres",
+      "source_destination_sha256": "83be254179db4a2ac1406bd705b0ae06f4b2ef86b0e06028f86c2b65dfcd518b",
+      "already_identical": true,
+      "copy_required": false
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/materials/town_roof_used.tres",
+      "source_destination_sha256": "85a80f86dba17e5130082d38a8125d834209dfe1321ade80d50f3e4ee98d94d7",
+      "already_identical": true,
+      "copy_required": false
+    },
+    {
+      "path": "res://Assets/Blender/TownKit/materials/town_roof_worn.tres",
+      "source_destination_sha256": "abf803a84f4c39d4fb968f49796ffc1a56bf92dd33972d7584c326e6d46a341a",
+      "already_identical": true,
+      "copy_required": false
+    }
+  ],
+  "collision_gate": {
+    "combined_window_and_booth_helpers": true,
+    "physical_glass_and_opaque_separation_required": true,
+    "tag_only_actual_glass_static_body": "ai_vision_transparent",
+    "pane_bounds_godot_m": {
+      "facade_window_4m": [
+        [
+          [
+            1.278,
+            1.123,
+            0.105
+          ],
+          [
+            2.722,
+            2.327,
+            0.117
+          ]
+        ]
+      ],
+      "guard_booth_3m": [
+        [
+          [
+            -0.027,
+            1.0875,
+            -2.0775
+          ],
+          [
+            -0.015,
+            2.4125,
+            -0.6225
+          ]
+        ],
+        [
+          [
+            2.715,
+            1.0875,
+            -2.0775
+          ],
+          [
+            2.727,
+            2.4125,
+            -0.6225
+          ]
+        ],
+        [
+          [
+            0.6225,
+            1.0875,
+            -2.727
+          ],
+          [
+            2.0775,
+            2.4125,
+            -2.715
+          ]
+        ]
+      ]
+    },
+    "pane_bounds_method": "GLB binary POSITION/index accessor audit; disconnected thin helper components; scene/native split not performed here"
+  },
+  "historical_metadata_warning": "Assets/Blender/TownKit/asset_manifest.json and verification/*.json are retained historical files, not latest imported geometry authority. This phase1 report captures current source release. Utilities GLBs/maps deferred as one coherent old group; circulation unchanged.",
+  "excluded_writes": [
+    "project.godot",
+    ".godot",
+    "*.import",
+    "Scene/**",
+    "Scripts/**",
+    "source Blender files",
+    "utilities and circulation groups"
+  ],
+  "checks_not_run": [
+    "Blender source reopen or rendering in this worker",
+    "native Godot import parser",
+    "native suffix helper collision conversion",
+    "player traversal/navigation",
+    "glass sorting and AI/bullet runtime",
+    "performance"
+  ],
+  "source_preview_inspected": {
+    "path": "C:/Stuff/Blender/TownKit/previews/town_window_glass_before_after.png",
+    "observation": "Matched source renders show booth interior visible through panes; facade tint/frame retained. Source preview only; native engine sorting not verified."
+  },
+  "copied_date_utc": "2026-10-08T13:11:41.051355+00:00",
+  "primary_snapshot": "C:/Stuff/godot-fps-cogito-master/.agent-snapshots/town500_phase1_20261008",
+  "destination_source_hashes_match": true,
+  "copy_worker_wrote_import_sidecars": false,
+  "copy_worker_wrote_material_variants": false,
+  "material_variants_unchanged_after_copy": true,
+  "import_sidecars_unchanged_at_immediate_check": true,
+  "import_sidecars_before_count": 54
+}

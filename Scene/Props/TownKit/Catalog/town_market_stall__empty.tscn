@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/market_stall/assets/market_stall_empty.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/market_stall/materials/town_market_stall_empty_used.tres" id="2_finish"]
+
+[node name="town_market_stall__empty" type="Node3D"]
+metadata/catalog_id = "town_market_stall"
+metadata/catalog_variant = "empty"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="MarketStallEmpty" parent="Model/TownMarketStallEmpty"]
+surface_material_override/0 = ExtResource("2_finish")

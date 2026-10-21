@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Graybox/observation_platform.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Graybox/sealed_pillbox.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Graybox/radio_mast.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Graybox/stone_ruin.tscn" id="4"]
+
+[node name="hills" type="Node3D"]
+metadata/town500_zone = "hills"
+metadata/phase = 3
+
+[node name="H01-A" parent="." instance=ExtResource("1")]
+position = Vector3(-44, 15.2, -165)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "H01-A"
+metadata/source_ref = "H01"
+metadata/zone = "hills"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 15
+metadata/graybox = true
+
+[node name="H02-A" parent="." instance=ExtResource("2")]
+position = Vector3(-62.5, 15.2, -105.68)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "H02-A"
+metadata/source_ref = "H02"
+metadata/zone = "hills"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 15
+metadata/graybox = true
+
+[node name="H03-A" parent="." instance=ExtResource("3")]
+position = Vector3(-12, 15.2, -215)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "H03-A"
+metadata/source_ref = "H03"
+metadata/zone = "hills"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 15
+metadata/graybox = true
+
+[node name="H04-A" parent="." instance=ExtResource("4")]
+position = Vector3(-218.8, 15.2, -95)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "H04-A"
+metadata/source_ref = "H04"
+metadata/zone = "hills"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 15
+metadata/graybox = true

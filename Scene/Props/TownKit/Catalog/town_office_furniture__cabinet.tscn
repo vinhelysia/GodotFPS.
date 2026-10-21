@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/office_furniture/assets/office_furniture_cabinet.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/office_furniture/materials/town_office_furniture_cabinet_used.tres" id="2_finish"]
+
+[node name="town_office_furniture__cabinet" type="Node3D"]
+metadata/catalog_id = "town_office_furniture"
+metadata/catalog_variant = "cabinet"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="OfficeFurnitureCabinet" parent="Model/TownOfficeFurnitureCabinet"]
+surface_material_override/0 = ExtResource("2_finish")

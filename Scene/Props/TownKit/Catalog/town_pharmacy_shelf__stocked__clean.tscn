@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/pharmacy_shelf/assets/pharmacy_shelf_stocked.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/pharmacy_shelf/materials/town_pharmacy_shelf_stocked_clean.tres" id="2_finish"]
+
+[node name="town_pharmacy_shelf__stocked" type="Node3D"]
+metadata/catalog_id = "town_pharmacy_shelf"
+metadata/catalog_variant = "stocked"
+metadata/finish = "clean"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="PharmacyShelfStocked" parent="Model/TownPharmacyShelfStocked"]
+surface_material_override/0 = ExtResource("2_finish")

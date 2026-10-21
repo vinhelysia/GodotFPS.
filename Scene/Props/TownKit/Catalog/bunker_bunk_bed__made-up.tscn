@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/bunker_bunk_bed/assets/bunker_bunk_bed_made-up.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/bunker_bunk_bed/materials/town_bunker_bunk_bed_made-up_used.tres" id="2_finish"]
+
+[node name="bunker_bunk_bed__made-up" type="Node3D"]
+metadata/catalog_id = "bunker_bunk_bed"
+metadata/catalog_variant = "made-up"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="BunkBed" parent="Model/TownBunkerBunkBed"]
+surface_material_override/0 = ExtResource("2_finish")

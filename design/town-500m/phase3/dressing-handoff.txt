@@ -1,0 +1,87 @@
+Town500m Phase3 dressing handoff — 2026-10-08
+
+Entry: res://Scene/World/Town500m/Dressing/dressing.tscn
+Offline static checks PASS. LOS HOLD. No Godot/editor/runtime action by worker.
+
+Authored exactly64 canonical dimensioned cover pieces and93 vegetation seeds,
+plus14 explicitly proposed solid cover pieces. Native editable graybox boxes,
+conical pine/orchard silhouettes, trunk-only cylinder physics; no finished art.
+Nine pallet stacks reuse imported BunkerKit wood_pallet visual with process_mode4;
+the native dimensioned stack body owns collision. Primary must verify imported
+visual bodies stay out of physics. No runtime scatter, script per tree, new
+manager/dependency, or modeling. Original gameplay files untouched.
+
+Bunker fence follows all five canonical segments and preserves exact6m B06 gate.
+Depot fences enclose only rear/north loading yards, leave rail/county frontage
+open, and retain6m access gate at(131,-59.4). West-yard segments avoid the opaque
+warehouse return. Fences are transparent wire graybox with continuous layer1
+player collision. They are explicitly excluded from hard2D LOS certification;
+native AI/weapon wire-hit behavior remains unverified, including whether it
+needs the existing project-local transparent-vision policy in a later fix.
+
+Offline spatial checks run BEFORE LOS against proposed layout: road/door/patrol/
+marker/wet/fence/structure/cover/trunk reservations. Additional cover also has
+>=0.5m clearance to rail envelope, beyond the canonical checker rail exemption.
+New depot and bunker fence segments independently check roads, doors, actors,
+marker pads, water, buildings, cover and trunks. No whole-map wall authored.
+All171 fence panels are<=4m long for terrain grounding, with no runtime script.
+
+CRITICAL PRIMARY MERGE CONTRACT
+1. Apply P06 exact corridor replacement in dressing-proposal.json, preserving
+   its2.6m width and target80m. Detour east around actual garage-yard boundary:
+   (20.45,34.09),(40.91,39.77),(40.91,82),(51,82),(51,103),
+   (40.91,103),(40.91,125),(34.09,157.95), all canonical Y2m.
+   Existing door accesses atZ63.7/110.7 remain unchanged. Return is X28..48,Z96.
+   The original85.23m straight clear segment mathematically exceeds80m;
+   an off-corridor wall alone cannot certify it. Do not split the LOS group.
+2. Move H04-A centre to(-218.8,-95) and sync its canonical pad/outer composition.
+3. Merge proposal additional_cover by stable IDs, then regenerate canonical
+   embedded terrain/layout profiles and terrain/circulation. The existing road
+   visual still crosses P06 return until that regeneration: do not compose this
+   dressing payload against the old straight alley and call traversal PASS.
+4. Existing64 cover and93 seed transforms/dimensions are preserved byte values
+   in source, not moved for LOS. Candidate additions are listed separately.
+
+2D same-whole-group certificates (standing opaque footprint model only):
+M upper142.834/150m; P05 upper73.985/80m; P06 upper79.185/80m;
+P08 upper118.678/120m; P10 upper114.831/120m;
+ROUTE_G19 upper118.385/120m. Existing P02 certificate remains PASS.
+
+Five groups remain HOLD with witnessed failures, not just uncertain bounds:
+COUNTY_E213.952/200m; P04 rail375.792/200m; P07 forest160.471/120m;
+P11 farm164.588/120m; P12 northwest131.661/120m.
+Exact endpoints and all unchanged groups are in los-proposal-report.json.
+These are lower witnessed bounds, not exhaustive maxima.
+
+Next composition reasoning, not approved placement:
+COUNTY_E: off-road loading return misses a diagonal lying within the county
+road reservation. Consider staggered abandoned trucks taking different road
+lanes, preserving a real>=2m pedestrian bypass, then revise the actual route
+reservation through that bypass before any claim. Do not call full8m clear.
+P04: existing cars and off-rail proposed freight wreck leave a long bypass.
+A genuinely derailed car can occupy rail with service-side pedestrian passage;
+it needs canonical corridor/graph ownership and native collision acceptance.
+P07: warehouse return/outcrop reduce235.741 to160.471m, but a continuous service
+trail still sees a forest segment. Resolve with terrain fold plus native3D
+rays or a justified yard-boundary detour; trees cannot certify hard LOS.
+P11: farm trailer leaves164.588m bypass; keep Scav_Farm patrol and both southwest
+extract routes clear. Another shed/property return needs a new checked proposal.
+P12: selective compound panel and west escarpment/yard return leave131.661m.
+Never close6m gate. A genuine terrain fold/native3D ray may solve remaining
+sightline; extending wire or filling the gate is not acceptance.
+
+Grounding: offline phase2 terrain.heightAt only. Cover base is3cm beneath lowest
+centre/corner height; some sloped boxes expose less than2m on uphill side.
+Report records each sample/exposed height. This limits the2D certificates:
+actual opaque height, standing/ADS/lean/upstairs/high-ground rays are mandatory.
+Wire and tree crowns are never solid opaque proxy blockers. Primary owns native
+scene import, collider inspection, nav bake, gameplay/route walks and visual QA.
+
+Reproduce from active Godot project root:
+node design/town-500m/phase3/author-dressing.cjs
+node design/town-500m/phase3/author-dressing.cjs --check
+node design/town-500m/phase3/check-phase3-los.cjs
+node design/town-500m/phase3/check-phase3-los.cjs --check
+All reports record source hashes; authoring check compares exact scene/report
+bytes. This is offline proof only, no runtime/FPS/finished-art PASS.
+No canonical/settings/Town/terrain/other worker files edited. No commit/push.

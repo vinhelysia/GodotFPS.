@@ -1,0 +1,15 @@
+Town500m Phase3 — delivery2026-10-10
+STATUS: SCOPED NATIVE ACCEPTANCE PASS WITH LIMITS. Phase4/5 not started.
+Production: res://Scene/Town.tscn; SHA256 c9e1098da9285b83e17d795435f9a8e647fe3966caacb03720200d05b720221b.
+76 structures/10 static payloads;32 Town structures in12plots;23GF/four upper;75,422dry triangles/151pads;two bridges/dock/19water prisms;83cover/93trees/171wire panels.
+One navmesh10,161polygons/8,083vertices; cells0.1/radius0.5/height1.8/slope40/edgeerror1/detail16/maxerror3. Four-tile native bake6.542s,zero nonmanifold,16X/12Zjoined pairs. Two openXedges adjacentC02_05 are physically classified: correct floor and exact solid blocker contacts, local detours connected; no zero-open-seam claim.
+All8 full actual-player walks PASS on final geometry: S1A194/S1B72/S1C177/S1D137/S2A158/S2B81/S2C119/S2D91. Raw receipts retain original14a4... fixture SHA; its9 walking functions are byte unchanged. Remaining gates bind249/250 current files including71OBJ with start=end hashes.
+Fresh gates: navigation716/contact527/seams980/ports592/interiors674/LOS989/rendered952 PASS. Seams15strict crossings/45lane roundtrips; asymmetric local funnel8.681m physically followed. Gate uses0.6m endpoint+local(run+2)m radius;8m length remains diagnostic.
+LOS168native camera rays/12corridor witnesses/four upper instances use actual USP ADS/both lean andADS lean. Limits unchanged, P04/P08 insets recorded. Six upper rays clear200m; high-ground balance remains unresolved.
+Rendered ForwardPlus/RTX4060Laptop:8production+2temporary-light diagnostic views inspected. M700 native nine floor rays show collider clearance0.02235m/visual0.03371m and real pickup/equip/resource separation/restoration PASS. Production interiors remain dark; this is graybox acceptance, not lighting/art approval.
+First-party Town baseline/day-night/deployment PASS29.44s/4.98s/23.28s with isolated saves and unchanged source. Headless capture is correctly rejected by renderer/tail/count guards.
+Known diagnostics: M700 missing unequip produces2C++ errors during restore; headless pause screenshot uses null dummy texture; route4/6 shutdown11resources. No runtime Script Error observed; global editor-error-clean not claimed.
+Cleanup: owned runtime idle,3owned bake metas removed,Theme font-cache-only churn archived/restored to exacttask-start bytes; settings/bunker/perception/task-start userchanges preserved. Codebase Map regenerated. language.cfg startup writes remain.
+Evidence: phase3-verification.json;capture-manifest.json;fixture-guard-verification.json;source-protection-verification.json;tests/artifacts/town500_phase3/. Historical/failed receipts remain separate. Older docs-update-draft.txt is historical, not final acceptance.
+Next Phase4: S1/S2 fresh departure branch andallfour extract return/kit/stash transactions; production water-death→Hub/kit-loss. Phase5 finished models/materials/vegetation/lighting. AI budget4096,long chase/night perception,1080p120FPS,pacing,old spatial saves,fresh clone/export not verified.
+No commit/push,save migration/deletion or new framework/autoload/runtime generator.

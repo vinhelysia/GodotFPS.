@@ -1,0 +1,65 @@
+# IMPLEMENTATION TASK — Godot 4 Extraction Map Blockout
+
+You are implementing a **low-poly FPS/extraction-shooter map** in an existing Godot 4 project. User wants Tarkov-like tactical map flow but compact and readable. Read `README.md`, `map_layout_godot.json`, `detailed_master_map.svg`, and the 8 `zone_*.svg` sheets before changing code.
+
+## Hard constraints
+
+1. **DO NOT** change the 500×500 m world boundary, zone anchors, source-defined major road/rail/water routes, S1/S2, or E-A/E-B/E-C/E-D positions.
+2. Godot world coordinates: +X east, −Z north, +Y up. Origin `(0,0,0)` at map center. One unit = one meter.
+3. Do not replace existing player controller or gameplay architecture. Inspect current project first; adapt to its Godot version and existing scene structure.
+4. **Single responsibility per GDScript:** loader parses data, terrain builder builds land, road builder creates strips, water builder builds water, structure builder places blocks, vegetation builder instances trees, spawn/extract manager handles markers, nav builder bakes or configures navigation. No monolithic script.
+5. Make proxy geometry first. Reuse available project assets where appropriate, but don't block progress on artwork. Keep everything editable and deterministic.
+6. All object transforms, labels, footprint sizes and optional AI points originate from `map_layout_godot.json`; no manual retyping of coordinates in scripts.
+7. Build passable bridges and ford/log crossings; water elsewhere should block walking. Roads must have connected traversable surfaces.
+8. If terrain elevation conflicts with source geometry or access routes, prioritize a playable **flat blockout** and flag later elevation pass explicitly; avoid moving major features silently.
+
+## Deliverables in project
+
+- `res://data/maps/extraction_500m/map_layout_godot.json` (copied from pack)
+- `res://maps/extraction_500m/extraction_500m.tscn` main scene with organized child layers: Ground, Zones, Roads, Water, Structures, Vegetation, Cover, Navigation, PlayerSpawns, Extractions, DebugLabels.
+- Small single-purpose builder scripts under `res://scripts/map_generation/` with clear names.
+- Tagged modular proxy building scenes for common structure types; simple CollisionShape3D for blockers. Enterable buildings get real doorway opening or placeholder entrance nodes, not a solid box preventing entry.
+- Player spawn markers S1 and S2; Area3D triggers for E-A to E-D; debug visualization and sample activation messages, without writing a full extraction game mode.
+- `res://docs/map_validation.md` capturing assumptions, TODOs, and tested travel routes.
+
+## Implement in phases (finish + verify each)
+
+**Phase A: Data + coordinates.** Parse JSON with typed/validated values. Render 500m ground plane and distinct zone overlays. Place S1/S2 and E-A..E-D at correct world positions. Add in-game world coordinates debug mode.
+
+**Phase B: Corridors + water.** Generate county road, two gravel tracks, railway, nonwalkable river and lake, and three traversal features (R01 main bridge, R02 north ford, R03 south log). Confirm no gap or wall blocks S2-to-industry path over R01. The ford/log are proposal crossings, not source-defined routes.
+
+**Phase C: Structures + cover.** Spawn each `structures[]` box using `position_xz_m`, `footprint_m`, `blockout_height_m`, `kind`, `floors`, `enterable`. Map material palettes per zone. Place `cover_clusters[]` in controlled group patterns without blocking routes. Add doors to buildings tagged `enterable` (can be simple open passages). Instantiate trees with MultiMesh or equivalent from `vegetation.instances[]`.
+
+**Phase D: Gameplay and AI waypoints.** Add a `zone_id` to each landmark, patrol waypoints / interest points based on `ai_interest`, and minimal encounter ranges based on `zones[].combat_profile`. If existing AI exists, connect to its patrol interface; otherwise create waypoint markers only, not a new AI framework. Keep enemy activation away from the first 35m around S1/S2.
+
+**Phase E: Navigation and tests.** Chunk or partition navigation by area as needed. Confirm routes from both spawns to E-A/E-B/E-C and conditional route to E-D; player movement through townhouse alleys; crossing at bridge and both alternate crossings; minimum 2 routes around each high-value POI. Run basic runtime smoke test, report errors, and attach screenshots in top-down debug mode.
+
+## Suggested scene architecture
+
+```
+Extraction500m (Node3D)
+├── Ground (StaticBody3D / terrain)
+├── ZoneDebug (Node3D)
+├── Roads (Node3D)
+├── Water (Node3D)
+├── Buildings (Node3D)
+├── PropsAndCover (Node3D)
+├── Vegetation (Node3D)
+├── Navigation (NavigationRegion3D or project equivalent)
+├── PlayerSpawns (Node3D)
+├── Extractions (Node3D)
+└── DebugLabels (Node3D)
+```
+
+## Acceptance tests
+
+- Map covers exactly 500×500m; player/AI physics runs without errors.
+- Correct landmarks according to JSON; no important buildings are omitted.
+- Spawn at S1 and S2; all four extracts present and reachable as appropriate.
+- R01 road bridge traversable, R02/R03 deliberately traversable, other river/lake boundaries blocked.
+- Rail crossing never blocked; bunker entrance/gate reachable from existing gravel road.
+- No hard line of sight from a hostile spawn into S1/S2 at round start.
+- Strong visual separation between bunker, hills, forest, town, farms, industry, lake.
+- No single script handles terrain, roads, props, AI and extraction logic together.
+
+Finally, report: scripts/scenes created, which phase completed, build/test results, screenshots, and unresolved design decisions. Start by inspecting the repository before writing anything.

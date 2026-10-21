@@ -1,0 +1,666 @@
+[gd_scene load_steps=63 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_gantry_crane__fixed__clean.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_workshop_bench__tool-covered.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_workshop_bench__plain__clean.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_welding_cart__cylinders.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_air_compressor__vertical.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_work_light__tripod__visual.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_industrial_gauge__multi__clean__visual.tscn" id="7"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wood_pallet__loaded.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wood_pallet__loaded__clean.tscn" id="9"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wood_pallet__empty__clean.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wood_pallet__empty.tscn" id="11"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wooden_crate__large__clean.tscn" id="12"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wooden_crate__large.tscn" id="13"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wooden_crate__medium__clean.tscn" id="14"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wooden_crate__medium.tscn" id="15"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_cable_reel__wood.tscn" id="16"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_cable_reel__wood__clean.tscn" id="17"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_office_furniture__desk__clean.tscn" id="18"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_office_furniture__desk.tscn" id="19"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_office_furniture__cabinet.tscn" id="20"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_office_furniture__cabinet__clean.tscn" id="21"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_waiting_room_chair__row.tscn" id="22"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_notice_board__wall__visual.tscn" id="23"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_street_litter__paper__visual.tscn" id="24"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_welding_cart__covered.tscn" id="25"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_air_compressor__horizontal.tscn" id="26"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_oil_drum__closed__clean.tscn" id="27"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_oil_drum__closed.tscn" id="28"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_tire_stack__stacked.tscn" id="29"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_work_light__mounted__clean__visual.tscn" id="30"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_forklift__intact.tscn" id="31"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_steel_pipe_stack__large__clean.tscn" id="32"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_steel_pipe_stack__small.tscn" id="33"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_steel_beam_stack__large.tscn" id="34"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_steel_beam_stack__small__clean.tscn" id="35"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_rail_sleepers__short.tscn" id="36"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_rail_sleepers__short__clean.tscn" id="37"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_rail_signal__one.tscn" id="38"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_fuel_tank__short__clean.tscn" id="39"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_fuel_pump__manual.tscn" id="40"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_oil_drum__dented__worn.tscn" id="41"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_industrial_dumpster__closed.tscn" id="42"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_scrap_metal_pile__small__worn.tscn" id="43"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_cable_reel__metal.tscn" id="44"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_cable_reel__metal__clean.tscn" id="45"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_timber_stack__boards.tscn" id="46"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_timber_stack__boards__clean.tscn" id="47"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_electrical_cabinet__large__clean.tscn" id="48"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_shipping_container__single.tscn" id="49"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_shipping_container__single__clean.tscn" id="50"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_shipping_container__single__worn.tscn" id="51"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_rail_boxcar__shut.tscn" id="52"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_rail_tank_wagon__plain.tscn" id="53"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_chainlink_fence__straight.tscn" id="54"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_concrete_utility_pole__insulators.tscn" id="55"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_utility_truck__parked__worn.tscn" id="56"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_concrete_slab__horizontal.tscn" id="57"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_concrete_rubble__small__worn.tscn" id="58"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_corrugated_sheet__bent__worn__visual.tscn" id="59"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_district_heating_pipe__support.tscn" id="60"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_district_heating_pipe__straight.tscn" id="61"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_manhole_cover__rectangular__visual.tscn" id="62"]
+
+[node name="industry" type="Node3D"]
+
+[node name="I_WAREHOUSE_CRANE" parent="." instance=ExtResource("1")]
+position = Vector3(162.6, 2.2, -76.8)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_WAREHOUSE_CRANE"
+metadata/catalog_id = "industry_gantry_crane"
+metadata/role = "static repair gantry in machinery bay"
+
+[node name="I_WAREHOUSE_BENCH_A" parent="." instance=ExtResource("2")]
+position = Vector3(165.6, 2.2, -72.8)
+rotation = Vector3(0, 4.712389, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_WAREHOUSE_BENCH_A"
+metadata/catalog_id = "town_workshop_bench"
+metadata/role = "warehouse workshop west perimeter"
+
+[node name="I_WAREHOUSE_BENCH_B" parent="." instance=ExtResource("3")]
+position = Vector3(165.6, 2.2, -70.4)
+rotation = Vector3(0, 4.712389, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_WAREHOUSE_BENCH_B"
+metadata/catalog_id = "town_workshop_bench"
+metadata/role = "matching warehouse bench"
+
+[node name="I_WAREHOUSE_CART" parent="." instance=ExtResource("4")]
+position = Vector3(163.7, 2.2, -72.8)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_WAREHOUSE_CART"
+metadata/catalog_id = "industry_welding_cart"
+metadata/role = "welding cart next to gantry repair bay"
+
+[node name="I_WAREHOUSE_COMPRESSOR" parent="." instance=ExtResource("5")]
+position = Vector3(165.6, 2.2, -67.6)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_WAREHOUSE_COMPRESSOR"
+metadata/catalog_id = "industry_air_compressor"
+metadata/role = "fixed workshop compressor"
+
+[node name="I_WAREHOUSE_TRIPOD" parent="." instance=ExtResource("6")]
+position = Vector3(162.4, 2.2, -67.6)
+rotation = Vector3(0, 3.926991, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_WAREHOUSE_TRIPOD"
+metadata/catalog_id = "industry_work_light"
+metadata/role = "unpowered task light in maintenance bay"
+
+[node name="I_WAREHOUSE_GAUGE" parent="." instance=ExtResource("7")]
+position = Vector3(167.045, 3.5, -67.6)
+rotation = Vector3(0, 4.712389, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_WAREHOUSE_GAUGE"
+metadata/catalog_id = "industry_industrial_gauge"
+metadata/role = "maintenance pressure gauge on solid west wall"
+
+[node name="I_WAREHOUSE_PALLET_A" parent="." instance=ExtResource("8")]
+position = Vector3(147.8, 2.2, -77.7)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_WAREHOUSE_PALLET_A"
+metadata/catalog_id = "shared_wood_pallet"
+metadata/role = "freight bank east warehouse bay"
+
+[node name="I_WAREHOUSE_PALLET_B" parent="." instance=ExtResource("9")]
+position = Vector3(146.3, 2.2, -77.7)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_WAREHOUSE_PALLET_B"
+metadata/catalog_id = "shared_wood_pallet"
+metadata/role = "matching freight bank"
+
+[node name="I_WAREHOUSE_PALLET_C" parent="." instance=ExtResource("8")]
+position = Vector3(144.8, 2.2, -77.7)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_WAREHOUSE_PALLET_C"
+metadata/catalog_id = "shared_wood_pallet"
+metadata/role = "matching freight bank end"
+
+[node name="I_WAREHOUSE_EMPTY_A" parent="." instance=ExtResource("10")]
+position = Vector3(147.8, 2.2, -75.8)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_WAREHOUSE_EMPTY_A"
+metadata/catalog_id = "shared_wood_pallet"
+metadata/role = "empty return pallet bank"
+
+[node name="I_WAREHOUSE_EMPTY_B" parent="." instance=ExtResource("11")]
+position = Vector3(146.3, 2.2, -75.8)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_WAREHOUSE_EMPTY_B"
+metadata/catalog_id = "shared_wood_pallet"
+metadata/role = "matching return pallets"
+
+[node name="I_WAREHOUSE_CRATE_A" parent="." instance=ExtResource("12")]
+position = Vector3(147.8, 2.2, -66.6)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_WAREHOUSE_CRATE_A"
+metadata/catalog_id = "shared_wooden_crate"
+metadata/role = "sorted dispatch wooden cases"
+
+[node name="I_WAREHOUSE_CRATE_B" parent="." instance=ExtResource("13")]
+position = Vector3(146.3, 2.2, -66.6)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_WAREHOUSE_CRATE_B"
+metadata/catalog_id = "shared_wooden_crate"
+metadata/role = "matching dispatch wooden cases"
+
+[node name="I_WAREHOUSE_CRATE_C" parent="." instance=ExtResource("14")]
+position = Vector3(147.8, 3.1916, -66.6)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_WAREHOUSE_CRATE_C"
+metadata/catalog_id = "shared_wooden_crate"
+metadata/role = "top case in dispatch stack"
+
+[node name="I_WAREHOUSE_CRATE_D" parent="." instance=ExtResource("15")]
+position = Vector3(146.3, 3.1916, -66.6)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_WAREHOUSE_CRATE_D"
+metadata/catalog_id = "shared_wooden_crate"
+metadata/role = "top case in matching dispatch stack"
+
+[node name="I_WAREHOUSE_REEL_A" parent="." instance=ExtResource("16")]
+position = Vector3(147.5, 2.2, -69.7)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_WAREHOUSE_REEL_A"
+metadata/catalog_id = "shared_cable_reel"
+metadata/role = "cable stock bank"
+
+[node name="I_WAREHOUSE_REEL_B" parent="." instance=ExtResource("17")]
+position = Vector3(145.7, 2.2, -69.7)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_WAREHOUSE_REEL_B"
+metadata/catalog_id = "shared_cable_reel"
+metadata/role = "matching cable stock bank"
+
+[node name="I_DISPATCH_DESK_A" parent="." instance=ExtResource("18")]
+position = Vector3(193.8, 2.2, -74.5)
+rotation = Vector3(0, 4.712389, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_DISPATCH_DESK_A"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "dispatch administration desk"
+
+[node name="I_DISPATCH_DESK_B" parent="." instance=ExtResource("19")]
+position = Vector3(193.8, 2.2, -78)
+rotation = Vector3(0, 4.712389, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_DISPATCH_DESK_B"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "matching freight scheduling desk"
+
+[node name="I_DISPATCH_FILE_A" parent="." instance=ExtResource("20")]
+position = Vector3(193.8, 2.2, -83.3)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_DISPATCH_FILE_A"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "dispatch file bank"
+
+[node name="I_DISPATCH_FILE_B" parent="." instance=ExtResource("20")]
+position = Vector3(193.1, 2.2, -83.3)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_DISPATCH_FILE_B"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "matching dispatch file bank"
+
+[node name="I_DISPATCH_FILE_C" parent="." instance=ExtResource("21")]
+position = Vector3(192.4, 2.2, -83.3)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_DISPATCH_FILE_C"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "matching dispatch file bank end"
+
+[node name="I_DISPATCH_WAIT" parent="." instance=ExtResource("22")]
+position = Vector3(193, 2.2, -72.4)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_DISPATCH_WAIT"
+metadata/catalog_id = "town_waiting_room_chair"
+metadata/role = "driver waiting row"
+
+[node name="I_DISPATCH_NOTICE" parent="." instance=ExtResource("23")]
+position = Vector3(193.3, 3.3, -69.995)
+rotation = Vector3(0, 6.283185, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_DISPATCH_NOTICE"
+metadata/catalog_id = "town_notice_board"
+metadata/role = "warehouse work notices by office"
+
+[node name="I_DISPATCH_PAPERS" parent="." instance=ExtResource("24")]
+position = Vector3(193.8, 2.95, -74.5)
+rotation = Vector3(0, 4.712389, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_DISPATCH_PAPERS"
+metadata/catalog_id = "shared_street_litter"
+metadata/role = "abandoned scheduling paperwork on desktop; source footprint already0.70x0.57m"
+
+[node name="I_SOUTH_BENCH_A" parent="." instance=ExtResource("2")]
+position = Vector3(154.5, 2.2, 60.2)
+rotation = Vector3(0, 6.283185, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_SOUTH_BENCH_A"
+metadata/catalog_id = "town_workshop_bench"
+metadata/role = "south depot repair bench"
+
+[node name="I_SOUTH_BENCH_B" parent="." instance=ExtResource("3")]
+position = Vector3(152.3, 2.2, 60.2)
+rotation = Vector3(0, 6.283185, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_SOUTH_BENCH_B"
+metadata/catalog_id = "town_workshop_bench"
+metadata/role = "matching repair bench"
+
+[node name="I_SOUTH_CART" parent="." instance=ExtResource("25")]
+position = Vector3(155.6, 2.2, 62.3)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_SOUTH_CART"
+metadata/catalog_id = "industry_welding_cart"
+metadata/role = "repair cart near benches"
+
+[node name="I_SOUTH_COMPRESSOR" parent="." instance=ExtResource("26")]
+position = Vector3(155.7, 2.2, 65.2)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_SOUTH_COMPRESSOR"
+metadata/catalog_id = "industry_air_compressor"
+metadata/role = "repair bay portable compressor"
+
+[node name="I_SOUTH_DRUM_A" parent="." instance=ExtResource("27")]
+position = Vector3(144.7, 2.2, 60.3)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_SOUTH_DRUM_A"
+metadata/catalog_id = "shared_oil_drum"
+metadata/role = "lubricant drum bank"
+
+[node name="I_SOUTH_DRUM_B" parent="." instance=ExtResource("28")]
+position = Vector3(145.5, 2.2, 60.3)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_SOUTH_DRUM_B"
+metadata/catalog_id = "shared_oil_drum"
+metadata/role = "matching lubricant bank"
+
+[node name="I_SOUTH_TIRES_A" parent="." instance=ExtResource("29")]
+position = Vector3(144.5, 2.2, 62.1)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_SOUTH_TIRES_A"
+metadata/catalog_id = "shared_tire_stack"
+metadata/role = "spare tire service bank"
+
+[node name="I_SOUTH_TIRES_B" parent="." instance=ExtResource("29")]
+position = Vector3(145.4, 2.2, 62.1)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_SOUTH_TIRES_B"
+metadata/catalog_id = "shared_tire_stack"
+metadata/role = "matching spare tire service bank"
+
+[node name="I_SOUTH_TASKLIGHT" parent="." instance=ExtResource("30")]
+position = Vector3(154.3, 4.8, 59.255)
+rotation = Vector3(0, 6.283185, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_SOUTH_TASKLIGHT"
+metadata/catalog_id = "industry_work_light"
+metadata/role = "unpowered rear task light"
+
+[node name="I_YARD_FORKLIFT" parent="." instance=ExtResource("31")]
+position = Vector3(175, 3, -90.5)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_YARD_FORKLIFT"
+metadata/catalog_id = "industry_forklift"
+metadata/role = "forklift parked at warehouse loading yard edge"
+
+[node name="I_YARD_PIPE_A" parent="." instance=ExtResource("32")]
+position = Vector3(176, 3, -95)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_YARD_PIPE_A"
+metadata/catalog_id = "industry_steel_pipe_stack"
+metadata/role = "pipe stock in aligned yard bank"
+
+[node name="I_YARD_PIPE_B" parent="." instance=ExtResource("33")]
+position = Vector3(176, 3, -98)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_YARD_PIPE_B"
+metadata/catalog_id = "industry_steel_pipe_stack"
+metadata/role = "matching pipe stock bank"
+
+[node name="I_YARD_BEAM_A" parent="." instance=ExtResource("34")]
+position = Vector3(183, 2.977273, -95)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_YARD_BEAM_A"
+metadata/catalog_id = "industry_steel_beam_stack"
+metadata/role = "steel beam bank alongside pipe stock"
+
+[node name="I_YARD_BEAM_B" parent="." instance=ExtResource("35")]
+position = Vector3(183, 2.99, -98)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_YARD_BEAM_B"
+metadata/catalog_id = "industry_steel_beam_stack"
+metadata/role = "matching steel beam stock"
+
+[node name="I_YARD_SLEEPERS_A" parent="." instance=ExtResource("36")]
+position = Vector3(199.7, 3, -103)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_YARD_SLEEPERS_A"
+metadata/catalog_id = "industry_rail_sleepers"
+metadata/role = "stored sleepers west of live rail corridor"
+
+[node name="I_YARD_SLEEPERS_B" parent="." instance=ExtResource("37")]
+position = Vector3(199.7, 3, -101)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_YARD_SLEEPERS_B"
+metadata/catalog_id = "industry_rail_sleepers"
+metadata/role = "matching sleeper stock bank"
+
+[node name="I_RAIL_SIGNAL" parent="." instance=ExtResource("38")]
+position = Vector3(205.7, 3, -106)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_RAIL_SIGNAL"
+metadata/catalog_id = "industry_rail_signal"
+metadata/role = "nonfunctional signal beside rail approach"
+
+[node name="I_SERVICE_TANK" parent="." instance=ExtResource("39")]
+position = Vector3(167, 2, -43)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_SERVICE_TANK"
+metadata/catalog_id = "industry_fuel_tank"
+metadata/role = "small workshop fuel service tank on ground"
+
+[node name="I_SERVICE_PUMP" parent="." instance=ExtResource("40")]
+position = Vector3(170, 2, -43)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_SERVICE_PUMP"
+metadata/catalog_id = "industry_fuel_pump"
+metadata/role = "manual pump beside service tank"
+
+[node name="I_SERVICE_DRUM_A" parent="." instance=ExtResource("27")]
+position = Vector3(167, 2, -46)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_SERVICE_DRUM_A"
+metadata/catalog_id = "shared_oil_drum"
+metadata/role = "same-type spare drum bank"
+
+[node name="I_SERVICE_DRUM_B" parent="." instance=ExtResource("28")]
+position = Vector3(168, 2, -46)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_SERVICE_DRUM_B"
+metadata/catalog_id = "shared_oil_drum"
+metadata/role = "same-type spare drum bank"
+
+[node name="I_SERVICE_DRUM_C" parent="." instance=ExtResource("41")]
+position = Vector3(169, 2, -46)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_SERVICE_DRUM_C"
+metadata/catalog_id = "shared_oil_drum"
+metadata/role = "single worn drum at bank end"
+
+[node name="I_YARD_DUMPSTER" parent="." instance=ExtResource("42")]
+position = Vector3(178, 2, -50)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_YARD_DUMPSTER"
+metadata/catalog_id = "shared_industrial_dumpster"
+metadata/role = "controlled yard waste station"
+
+[node name="I_YARD_SCRAP" parent="." instance=ExtResource("43")]
+position = Vector3(181, 2, -50)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_YARD_SCRAP"
+metadata/catalog_id = "shared_scrap_metal_pile"
+metadata/role = "localized repair scrap beside waste station"
+
+[node name="I_SOUTH_REEL_A" parent="." instance=ExtResource("44")]
+position = Vector3(167, 2, 57)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_SOUTH_REEL_A"
+metadata/catalog_id = "shared_cable_reel"
+metadata/role = "south yard cable bank"
+
+[node name="I_SOUTH_REEL_B" parent="." instance=ExtResource("45")]
+position = Vector3(169, 2, 57)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_SOUTH_REEL_B"
+metadata/catalog_id = "shared_cable_reel"
+metadata/role = "matching cable bank"
+
+[node name="I_SOUTH_TIMBER_A" parent="." instance=ExtResource("46")]
+position = Vector3(174, 2, 57)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_SOUTH_TIMBER_A"
+metadata/catalog_id = "shared_timber_stack"
+metadata/role = "packing board stock beside south workshop"
+
+[node name="I_SOUTH_TIMBER_B" parent="." instance=ExtResource("47")]
+position = Vector3(174, 2, 59)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_SOUTH_TIMBER_B"
+metadata/catalog_id = "shared_timber_stack"
+metadata/role = "matching packing board stock"
+
+[node name="I_SOUTH_CABINET" parent="." instance=ExtResource("48")]
+position = Vector3(167, 2, 66)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_SOUTH_CABINET"
+metadata/catalog_id = "shared_electrical_cabinet"
+metadata/role = "standalone depot electrical service cabinet"
+
+[node name="I_CONTAINER_I04-A" parent="." instance=ExtResource("49")]
+position = Vector3(171, 2, -24)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_CONTAINER_I04-A"
+metadata/catalog_id = "industry_shipping_container"
+metadata/role = "existing closed freight container art replacement candidate"
+
+[node name="I_CONTAINER_I04-B" parent="." instance=ExtResource("50")]
+position = Vector3(179, 2, -24)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_CONTAINER_I04-B"
+metadata/catalog_id = "industry_shipping_container"
+metadata/role = "existing closed freight container art replacement candidate"
+
+[node name="I_CONTAINER_I04-C" parent="." instance=ExtResource("49")]
+position = Vector3(187, 2, -24)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_CONTAINER_I04-C"
+metadata/catalog_id = "industry_shipping_container"
+metadata/role = "existing closed freight container art replacement candidate"
+
+[node name="I_CONTAINER_I06-A" parent="." instance=ExtResource("50")]
+position = Vector3(146, 2, 35)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_CONTAINER_I06-A"
+metadata/catalog_id = "industry_shipping_container"
+metadata/role = "existing closed freight container art replacement candidate"
+
+[node name="I_CONTAINER_I06-B" parent="." instance=ExtResource("49")]
+position = Vector3(154, 2, 35)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_CONTAINER_I06-B"
+metadata/catalog_id = "industry_shipping_container"
+metadata/role = "existing closed freight container art replacement candidate"
+
+[node name="I_CONTAINER_I06-C" parent="." instance=ExtResource("51")]
+position = Vector3(162, 2, 35)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_CONTAINER_I06-C"
+metadata/catalog_id = "industry_shipping_container"
+metadata/role = "existing closed freight container art replacement candidate"
+
+[node name="I_RAIL_BOXCAR" parent="." instance=ExtResource("52")]
+position = Vector3(208.52, 2.035, -43.18)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_RAIL_BOXCAR"
+metadata/catalog_id = "industry_rail_boxcar"
+metadata/role = "same-centre rail freight art replacement candidate"
+
+[node name="I_RAIL_TANK" parent="." instance=ExtResource("53")]
+position = Vector3(198.3, 2.035, 59.09)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "I_RAIL_TANK"
+metadata/catalog_id = "industry_rail_tank_wagon"
+metadata/role = "same-centre rail freight art replacement candidate"
+
+[node name="S_FACTORY_FENCE_1" parent="." instance=ExtResource("54")]
+position = Vector3(132, 3, -106)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_FACTORY_FENCE_1"
+metadata/catalog_id = "shared_chainlink_fence"
+metadata/role = "Coherent factory utility-yard partition clear of the warehouse door"
+
+[node name="S_FACTORY_FENCE_2" parent="." instance=ExtResource("54")]
+position = Vector3(132, 3, -103.87)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_FACTORY_FENCE_2"
+metadata/catalog_id = "shared_chainlink_fence"
+metadata/role = "Coherent factory utility-yard partition clear of the warehouse door"
+
+[node name="S_FACTORY_FENCE_3" parent="." instance=ExtResource("54")]
+position = Vector3(132, 3, -101.74)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_FACTORY_FENCE_3"
+metadata/catalog_id = "shared_chainlink_fence"
+metadata/role = "Coherent factory utility-yard partition clear of the warehouse door"
+
+[node name="S_POLE_I" parent="." instance=ExtResource("55")]
+position = Vector3(125, 3, -104)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_POLE_I"
+metadata/catalog_id = "shared_concrete_utility_pole"
+metadata/role = "Remnant roadside utility line; no powered gameplay dependency"
+
+[node name="S_UTILITY_TRUCK" parent="." instance=ExtResource("56")]
+position = Vector3(167, 3, -102)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_UTILITY_TRUCK"
+metadata/catalog_id = "shared_utility_truck"
+metadata/role = "Abandoned maintenance truck parked in the north service yard"
+
+[node name="S_REPAIR_SLAB" parent="." instance=ExtResource("57")]
+position = Vector3(138, 3, -100)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_REPAIR_SLAB"
+metadata/catalog_id = "shared_concrete_slab"
+metadata/role = "Stored service slab on the utility-yard perimeter"
+
+[node name="S_REPAIR_RUBBLE" parent="." instance=ExtResource("58")]
+position = Vector3(137, 3, -103)
+rotation = Vector3(0, 0.261799, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_REPAIR_RUBBLE"
+metadata/catalog_id = "shared_concrete_rubble"
+metadata/role = "Small demolished footing beside the stored service slab"
+
+[node name="S_REPAIR_SHEET" parent="." instance=ExtResource("59")]
+position = Vector3(141, 3, -104)
+rotation = Vector3(0, 0.139626, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_REPAIR_SHEET"
+metadata/catalog_id = "shared_corrugated_sheet"
+metadata/role = "Removed damaged roofing sheet beside the utility repair stock"
+
+[node name="S_HEAT_SUPPORT_L" parent="." instance=ExtResource("60")]
+position = Vector3(140, 3, -108)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_HEAT_SUPPORT_L"
+metadata/catalog_id = "shared_district_heating_pipe"
+metadata/role = "Left pipe saddle on the service-yard perimeter"
+
+[node name="S_HEAT_SUPPORT_R" parent="." instance=ExtResource("60")]
+position = Vector3(143, 3, -108)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_HEAT_SUPPORT_R"
+metadata/catalog_id = "shared_district_heating_pipe"
+metadata/role = "Right matching pipe saddle"
+
+[node name="S_HEAT_PIPE" parent="." instance=ExtResource("61")]
+position = Vector3(139.5, 3.165, -108)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_HEAT_PIPE"
+metadata/catalog_id = "shared_district_heating_pipe"
+metadata/role = "Disconnected district-heating section seated on matching supports"
+
+[node name="S_MANHOLE_I" parent="." instance=ExtResource("62")]
+position = Vector3(135, 2, 45)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_MANHOLE_I"
+metadata/catalog_id = "shared_manhole_cover"
+metadata/role = "Flush municipal drain cover; visual-only surface detail"

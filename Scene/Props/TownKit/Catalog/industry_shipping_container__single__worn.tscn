@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/shipping_container/assets/shipping_container_single.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/shipping_container/materials/town_shipping_container_worn.tres" id="2_finish"]
+
+[node name="industry_shipping_container__single" type="Node3D"]
+metadata/catalog_id = "industry_shipping_container"
+metadata/catalog_variant = "single"
+metadata/finish = "worn"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="ShippingContainerSingle" parent="Model/TownShippingContainerSingle"]
+surface_material_override/0 = ExtResource("2_finish")

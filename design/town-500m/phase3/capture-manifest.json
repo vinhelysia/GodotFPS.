@@ -1,0 +1,213 @@
+{
+  "date": "2026-10-10",
+  "status": "ALL10_IMAGES_OPENED_AND_INSPECTED",
+  "source_town_sha256": "c9e1098da9285b83e17d795435f9a8e647fe3966caacb03720200d05b720221b",
+  "capture_receipt_sha256": "01f0b5a3bf06c0ad52491c5379cf0970052d73ee67e622b08a4fdef5e7140a2d",
+  "images": [
+    {
+      "id": "overview",
+      "path": "res://tests/artifacts/town500_phase3/overview.png",
+      "sha256": "80f69619cf863ba10dd764c8d78a759b0de263f98e04384e6e7c11ae6a430a6a",
+      "role": "production_lighting",
+      "eye": [
+        0,
+        650,
+        1
+      ],
+      "look_at": [
+        0,
+        0,
+        0
+      ],
+      "temporary_light": null
+    },
+    {
+      "id": "town",
+      "path": "res://tests/artifacts/town500_phase3/town.png",
+      "sha256": "46314eaa465d9e87d90f2fa001c802cb010a762ef6c03387bb44c70c4438e5bf",
+      "role": "production_lighting",
+      "eye": [
+        -60,
+        65,
+        190
+      ],
+      "look_at": [
+        -60,
+        2,
+        60
+      ],
+      "temporary_light": null
+    },
+    {
+      "id": "bunker",
+      "path": "res://tests/artifacts/town500_phase3/bunker.png",
+      "sha256": "0c3ffbc3b41f9b1f7a56904358751b488d3cbb892846ef66603eb32b4a43a2bb",
+      "role": "production_lighting",
+      "eye": [
+        -110,
+        45,
+        -92
+      ],
+      "look_at": [
+        -149,
+        10,
+        -158
+      ],
+      "temporary_light": null
+    },
+    {
+      "id": "industry",
+      "path": "res://tests/artifacts/town500_phase3/industry.png",
+      "sha256": "7c4e45de3e4b6e13cd79bc8110b3bdcbf24d798c0fc15d41e3458fd68bd8657d",
+      "role": "production_lighting",
+      "eye": [
+        110,
+        35,
+        108
+      ],
+      "look_at": [
+        173,
+        2,
+        -25
+      ],
+      "temporary_light": null
+    },
+    {
+      "id": "m700_eye",
+      "path": "res://tests/artifacts/town500_phase3/m700_eye.png",
+      "sha256": "f961c2e0a582b62fd4d6af2fbb3f88815a2a48c83eba66a8e400e9f50cae0909",
+      "role": "production_lighting",
+      "eye": [
+        19,
+        3.79999995231628,
+        73
+      ],
+      "look_at": [
+        20,
+        2.90000009536743,
+        75
+      ],
+      "temporary_light": null
+    },
+    {
+      "id": "m700_eye_inspection",
+      "path": "res://tests/artifacts/town500_phase3/m700_eye_inspection.png",
+      "sha256": "ec09fe79db2616beb176142b842b21dc7e417a490277563522d56fdbaddbe66f",
+      "role": "diagnostic_only_camera_light",
+      "eye": [
+        19,
+        3.79999995231628,
+        73
+      ],
+      "look_at": [
+        20,
+        2.90000009536743,
+        75
+      ],
+      "temporary_light": {
+        "energy": 2,
+        "position": [
+          19,
+          3.79999995231628,
+          73
+        ],
+        "range_m": 6,
+        "shadows": false,
+        "type": "OmniLight3D"
+      }
+    },
+    {
+      "id": "usp_eye",
+      "path": "res://tests/artifacts/town500_phase3/usp_eye.png",
+      "sha256": "90efe7024d21e3f5cf7ba7ac8c777269473c0808f59c59945169d07e13ecb026",
+      "role": "production_lighting",
+      "eye": [
+        9,
+        3.79999995231628,
+        -8.80000019073486
+      ],
+      "look_at": [
+        8,
+        2.29999995231628,
+        -12
+      ],
+      "temporary_light": null
+    },
+    {
+      "id": "usp_eye_inspection",
+      "path": "res://tests/artifacts/town500_phase3/usp_eye_inspection.png",
+      "sha256": "61ffc5c3a0162ee572790ec68b4ccb9ebc47409ca1d2bd3465337a2d750d346c",
+      "role": "diagnostic_only_camera_light",
+      "eye": [
+        9,
+        3.79999995231628,
+        -8.80000019073486
+      ],
+      "look_at": [
+        8,
+        2.29999995231628,
+        -12
+      ],
+      "temporary_light": {
+        "energy": 2,
+        "position": [
+          9,
+          3.79999995231628,
+          -8.80000019073486
+        ],
+        "range_m": 6,
+        "shadows": false,
+        "type": "OmniLight3D"
+      }
+    },
+    {
+      "id": "c05_09_eye",
+      "path": "res://tests/artifacts/town500_phase3/c05_09_eye.png",
+      "sha256": "b9813915914250a274ba97b81fbaff9b634a1054dbb8060aeb1fb0aad83fbc06",
+      "role": "production_lighting",
+      "eye": [
+        -101,
+        5.30913496017456,
+        -107
+      ],
+      "look_at": [
+        -101,
+        5.58310890197754,
+        -102.550003051758
+      ],
+      "temporary_light": null
+    },
+    {
+      "id": "c07_02_eye",
+      "path": "res://tests/artifacts/town500_phase3/c07_02_eye.png",
+      "sha256": "9231f3c35c991842ee5a7b013fd840d0d3cb2755439a997b0d9d7f10d22f19b2",
+      "role": "production_lighting",
+      "eye": [
+        195.449996948242,
+        4.09999990463257,
+        146
+      ],
+      "look_at": [
+        195.449996948242,
+        2.51229810714722,
+        149.949996948242
+      ],
+      "temporary_light": null
+    }
+  ],
+  "before": {
+    "path": "tests/artifacts/town500_phase3/before_overview.png",
+    "sha256": "11b161aeb0ade779cc7a85ae47b251286ba18cdc8478a88bfb2878a64780b5a2",
+    "role": "Historical pre-Phase3 scene image; not a current source-bound capture."
+  },
+  "observations": [
+    "Overview/zone captures show composed500m graybox with both crossings; no missing-texture magenta observed.",
+    "M700 silhouette lies flat; conservative native AABB/floor rays certify clearance separately.",
+    "Production interiors and dark weapon materials remain low contrast; diagnostic light is not production lighting approval.",
+    "C05_09/C07_02 are visible cover proxies; finished materials/model replacements remain Phase5."
+  ],
+  "limits": [
+    "No FPS, photometric realism, texture-completeness or all-angle visibility approval.",
+    "Only the8 fixed production views and2 temporary-lit diagnostic views were inspected."
+  ]
+}

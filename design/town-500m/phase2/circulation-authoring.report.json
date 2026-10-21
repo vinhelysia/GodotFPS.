@@ -1,0 +1,80 @@
+{
+  "status": "OFFLINE CHECKED; NATIVE PENDING",
+  "road_visual_faces": 16793,
+  "road_collision": "none; dry terrain is sole road floor",
+  "bank_visual_faces": 754,
+  "bank_collision": false,
+  "bridge_count": 2,
+  "water_triangular_prisms": 19,
+  "wet_top_y_m": -0.35,
+  "wet_bottom_y_m": -50,
+  "water_or_bed_floor_collision": false,
+  "road_collapses": [
+    {
+      "id": "CountyWest",
+      "size": [
+        6,
+        5,
+        20
+      ],
+      "at": [
+        -247,
+        2,
+        15
+      ]
+    },
+    {
+      "id": "CountyEast",
+      "size": [
+        6,
+        5,
+        20
+      ],
+      "at": [
+        247,
+        2,
+        0
+      ]
+    },
+    {
+      "id": "RailNorth",
+      "size": [
+        18,
+        5,
+        6
+      ],
+      "at": [
+        214.77,
+        2,
+        -247
+      ]
+    },
+    {
+      "id": "RailEast",
+      "size": [
+        6,
+        5,
+        18
+      ],
+      "at": [
+        247,
+        2,
+        121.59
+      ]
+    },
+    {
+      "id": "FarmSouth",
+      "size": [
+        16,
+        5,
+        6
+      ],
+      "at": [
+        10.23,
+        1.5,
+        247
+      ]
+    }
+  ],
+  "integration": "Static child payload for Town Phase3; production Town unchanged in Phase2"
+}

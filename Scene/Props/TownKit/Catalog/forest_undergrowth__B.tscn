@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/forest_undergrowth/assets/forest_undergrowth_B.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/forest_undergrowth/materials/town_forest_undergrowth_B_dusty.tres" id="2_finish"]
+
+[node name="forest_undergrowth__B" type="Node3D"]
+metadata/catalog_id = "forest_undergrowth"
+metadata/catalog_variant = "B"
+metadata/finish = "dusty"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="UndergrowthB" parent="Model/TownUndergrowthB"]
+surface_material_override/0 = ExtResource("2_finish")

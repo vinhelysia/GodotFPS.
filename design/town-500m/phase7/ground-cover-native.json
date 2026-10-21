@@ -1,0 +1,70 @@
+{
+  "batches": [
+    {
+      "instances": 48,
+      "name": "GrassWestBirch",
+      "unit_scale": true,
+      "visibility_end_m": 75
+    },
+    {
+      "instances": 48,
+      "name": "GrassNorthBirch",
+      "unit_scale": true,
+      "visibility_end_m": 75
+    },
+    {
+      "instances": 40,
+      "name": "GrassNorthFoundation",
+      "unit_scale": true,
+      "visibility_end_m": 75
+    },
+    {
+      "instances": 44,
+      "name": "GrassSouthFoundation",
+      "unit_scale": true,
+      "visibility_end_m": 75
+    },
+    {
+      "instances": 40,
+      "name": "GrassRoadSouth",
+      "unit_scale": true,
+      "visibility_end_m": 75
+    },
+    {
+      "instances": 30,
+      "name": "GrassRoadNorth",
+      "unit_scale": true,
+      "visibility_end_m": 75
+    },
+    {
+      "instances": 12,
+      "name": "LowShrubs",
+      "unit_scale": true,
+      "visibility_end_m": 110
+    },
+    {
+      "instances": 9,
+      "name": "LeafBranchDebrisA",
+      "unit_scale": true,
+      "visibility_end_m": 110
+    },
+    {
+      "instances": 9,
+      "name": "LeafStoneDebrisC",
+      "unit_scale": true,
+      "visibility_end_m": 110
+    }
+  ],
+  "collision_objects": 0,
+  "native_support": {
+    "status": "PASS",
+    "receipt": "tests/artifacts/town500_ground/after/ground_contact-native.json",
+    "instances": 280,
+    "max_error_m": 0.00000113974,
+    "scope": "Native root support only; visual clearance reviewed separately."
+  },
+  "plan_sha256": "adc5cb72b577e3d1887b178ad9355f96795fb078b3d5d28ae03d789accfa7cfa",
+  "runtime_scripts": 0,
+  "scene": "res://Scene/World/Town500m/Art/GroundArt/ground_cover.tscn",
+  "native_support_at_authoring": "Pending primary runtime rays; placement heights use canonical terrain"
+}

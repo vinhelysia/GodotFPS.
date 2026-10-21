@@ -1,0 +1,742 @@
+{
+  "schema_version": 1,
+  "placements": [
+    {
+      "id": "S_SECURITY_BAGS_A",
+      "zone": "bunker",
+      "catalog_id": "shared_sandbag_barrier",
+      "variant": "straight",
+      "finish": "used",
+      "position_m": [
+        -175,
+        10.70434,
+        -119
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 10.704340032084316
+      },
+      "collision_policy": "native",
+      "role": "Roadside guard position west of the existing south gate",
+      "rationale": "Roadside guard position west of the existing south gate",
+      "assembly_group": "south-gate-security"
+    },
+    {
+      "id": "S_SECURITY_BAGS_B",
+      "zone": "bunker",
+      "catalog_id": "shared_sandbag_barrier",
+      "variant": "straight",
+      "finish": "worn",
+      "position_m": [
+        -172.1,
+        10.499243,
+        -119
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 10.49924305320976
+      },
+      "collision_policy": "native",
+      "role": "Adjacent matching guard position, preserving the open approach",
+      "rationale": "Adjacent matching guard position, preserving the open approach",
+      "assembly_group": "south-gate-security"
+    },
+    {
+      "id": "S_SECURITY_JERSEY_A",
+      "zone": "bunker",
+      "catalog_id": "shared_concrete_jersey_barrier",
+      "variant": "intact",
+      "finish": "used",
+      "position_m": [
+        -174.8,
+        10.982355,
+        -121
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 10.982355098450101
+      },
+      "collision_policy": "native",
+      "role": "Concrete protection behind the guard bag line",
+      "rationale": "Concrete protection behind the guard bag line",
+      "assembly_group": "south-gate-security"
+    },
+    {
+      "id": "S_SECURITY_JERSEY_B",
+      "zone": "bunker",
+      "catalog_id": "shared_concrete_jersey_barrier",
+      "variant": "damaged",
+      "finish": "worn",
+      "position_m": [
+        -172.6,
+        10.802322,
+        -121
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 10.802322466829859
+      },
+      "collision_policy": "native",
+      "role": "Matching second barrier with selective damage",
+      "rationale": "Matching second barrier with selective damage",
+      "assembly_group": "south-gate-security"
+    },
+    {
+      "id": "S_T09_FENCE_1",
+      "zone": "town",
+      "catalog_id": "shared_wood_fence",
+      "variant": "plank",
+      "finish": "worn",
+      "position_m": [
+        -149,
+        2,
+        140
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2
+      },
+      "collision_policy": "native",
+      "role": "Same-type remnants of the damaged residential garden boundary",
+      "rationale": "Same-type remnants of the damaged residential garden boundary",
+      "assembly_group": "T09-garden-boundary"
+    },
+    {
+      "id": "S_T09_FENCE_2",
+      "zone": "town",
+      "catalog_id": "shared_wood_fence",
+      "variant": "plank",
+      "finish": "used",
+      "position_m": [
+        -146.85,
+        2,
+        140
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2
+      },
+      "collision_policy": "native",
+      "role": "Same-type remnants of the damaged residential garden boundary",
+      "rationale": "Same-type remnants of the damaged residential garden boundary",
+      "assembly_group": "T09-garden-boundary"
+    },
+    {
+      "id": "S_T09_FENCE_3",
+      "zone": "town",
+      "catalog_id": "shared_wood_fence",
+      "variant": "broken",
+      "finish": "worn",
+      "position_m": [
+        -144.7,
+        2,
+        140
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2
+      },
+      "collision_policy": "native",
+      "role": "Same-type remnants of the damaged residential garden boundary",
+      "rationale": "Same-type remnants of the damaged residential garden boundary",
+      "assembly_group": "T09-garden-boundary"
+    },
+    {
+      "id": "S_DEPOT_FENCE_1",
+      "zone": "town",
+      "catalog_id": "shared_metal_fence",
+      "variant": "straight",
+      "finish": "used",
+      "position_m": [
+        -36,
+        2,
+        85
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2
+      },
+      "collision_policy": "native",
+      "role": "Matching municipal depot yard boundary, leaving both ends open",
+      "rationale": "Matching municipal depot yard boundary, leaving both ends open",
+      "assembly_group": "depot-yard-boundary"
+    },
+    {
+      "id": "S_DEPOT_FENCE_2",
+      "zone": "town",
+      "catalog_id": "shared_metal_fence",
+      "variant": "straight",
+      "finish": "clean",
+      "position_m": [
+        -33.87,
+        2,
+        85
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2
+      },
+      "collision_policy": "native",
+      "role": "Matching municipal depot yard boundary, leaving both ends open",
+      "rationale": "Matching municipal depot yard boundary, leaving both ends open",
+      "assembly_group": "depot-yard-boundary"
+    },
+    {
+      "id": "S_DEPOT_FENCE_3",
+      "zone": "town",
+      "catalog_id": "shared_metal_fence",
+      "variant": "straight",
+      "finish": "used",
+      "position_m": [
+        -31.740000000000002,
+        2,
+        85
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2
+      },
+      "collision_policy": "native",
+      "role": "Matching municipal depot yard boundary, leaving both ends open",
+      "rationale": "Matching municipal depot yard boundary, leaving both ends open",
+      "assembly_group": "depot-yard-boundary"
+    },
+    {
+      "id": "S_FACTORY_FENCE_1",
+      "zone": "industry",
+      "catalog_id": "shared_chainlink_fence",
+      "variant": "straight",
+      "finish": "used",
+      "position_m": [
+        132,
+        3,
+        -106
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 3
+      },
+      "collision_policy": "native",
+      "role": "Coherent factory utility-yard partition clear of the warehouse door",
+      "rationale": "Coherent factory utility-yard partition clear of the warehouse door",
+      "assembly_group": "factory-utility"
+    },
+    {
+      "id": "S_FACTORY_FENCE_2",
+      "zone": "industry",
+      "catalog_id": "shared_chainlink_fence",
+      "variant": "straight",
+      "finish": "used",
+      "position_m": [
+        132,
+        3,
+        -103.87
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 3
+      },
+      "collision_policy": "native",
+      "role": "Coherent factory utility-yard partition clear of the warehouse door",
+      "rationale": "Coherent factory utility-yard partition clear of the warehouse door",
+      "assembly_group": "factory-utility"
+    },
+    {
+      "id": "S_FACTORY_FENCE_3",
+      "zone": "industry",
+      "catalog_id": "shared_chainlink_fence",
+      "variant": "straight",
+      "finish": "used",
+      "position_m": [
+        132,
+        3,
+        -101.74
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 3
+      },
+      "collision_policy": "native",
+      "role": "Coherent factory utility-yard partition clear of the warehouse door",
+      "rationale": "Coherent factory utility-yard partition clear of the warehouse door",
+      "assembly_group": "factory-utility"
+    },
+    {
+      "id": "S_POLE_W",
+      "zone": "farmland",
+      "catalog_id": "shared_concrete_utility_pole",
+      "variant": "insulators",
+      "finish": "used",
+      "position_m": [
+        -175,
+        2,
+        5
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2
+      },
+      "collision_policy": "native",
+      "role": "Remnant roadside utility line; no powered gameplay dependency",
+      "rationale": "Remnant roadside utility line; no powered gameplay dependency",
+      "assembly_group": "roadside-utilities"
+    },
+    {
+      "id": "S_POLE_T",
+      "zone": "town",
+      "catalog_id": "shared_concrete_utility_pole",
+      "variant": "insulators",
+      "finish": "used",
+      "position_m": [
+        0,
+        2,
+        12
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2.0000000010796177
+      },
+      "collision_policy": "native",
+      "role": "Remnant roadside utility line; no powered gameplay dependency",
+      "rationale": "Remnant roadside utility line; no powered gameplay dependency",
+      "assembly_group": "roadside-utilities"
+    },
+    {
+      "id": "S_POLE_I",
+      "zone": "industry",
+      "catalog_id": "shared_concrete_utility_pole",
+      "variant": "insulators",
+      "finish": "used",
+      "position_m": [
+        125,
+        3,
+        -104
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 3
+      },
+      "collision_policy": "native",
+      "role": "Remnant roadside utility line; no powered gameplay dependency",
+      "rationale": "Remnant roadside utility line; no powered gameplay dependency",
+      "assembly_group": "roadside-utilities"
+    },
+    {
+      "id": "S_UTILITY_TRUCK",
+      "zone": "industry",
+      "catalog_id": "shared_utility_truck",
+      "variant": "parked",
+      "finish": "worn",
+      "position_m": [
+        167,
+        3,
+        -102
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 3
+      },
+      "collision_policy": "native",
+      "role": "Abandoned maintenance truck parked in the north service yard",
+      "rationale": "Abandoned maintenance truck parked in the north service yard",
+      "assembly_group": "factory-utility"
+    },
+    {
+      "id": "S_REPAIR_SLAB",
+      "zone": "industry",
+      "catalog_id": "shared_concrete_slab",
+      "variant": "horizontal",
+      "finish": "used",
+      "position_m": [
+        138,
+        3,
+        -100
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 3
+      },
+      "collision_policy": "native",
+      "role": "Stored service slab on the utility-yard perimeter",
+      "rationale": "Stored service slab on the utility-yard perimeter",
+      "assembly_group": "factory-utility"
+    },
+    {
+      "id": "S_REPAIR_RUBBLE",
+      "zone": "industry",
+      "catalog_id": "shared_concrete_rubble",
+      "variant": "small",
+      "finish": "worn",
+      "position_m": [
+        137,
+        3,
+        -103
+      ],
+      "yaw_deg": 15,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 3
+      },
+      "collision_policy": "native",
+      "role": "Small demolished footing beside the stored service slab",
+      "rationale": "Small demolished footing beside the stored service slab",
+      "assembly_group": "factory-utility"
+    },
+    {
+      "id": "S_REPAIR_SHEET",
+      "zone": "industry",
+      "catalog_id": "shared_corrugated_sheet",
+      "variant": "bent",
+      "finish": "worn",
+      "position_m": [
+        141,
+        3,
+        -104
+      ],
+      "yaw_deg": 8,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 3
+      },
+      "collision_policy": "visual_only",
+      "role": "Removed damaged roofing sheet beside the utility repair stock",
+      "rationale": "Removed damaged roofing sheet beside the utility repair stock",
+      "assembly_group": "factory-utility"
+    },
+    {
+      "id": "S_HEAT_SUPPORT_L",
+      "zone": "industry",
+      "catalog_id": "shared_district_heating_pipe",
+      "variant": "support",
+      "finish": "used",
+      "position_m": [
+        140,
+        3,
+        -108
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 3
+      },
+      "collision_policy": "native",
+      "role": "Left pipe saddle on the service-yard perimeter",
+      "rationale": "Left pipe saddle on the service-yard perimeter",
+      "assembly_group": "district-heating-remnant"
+    },
+    {
+      "id": "S_HEAT_SUPPORT_R",
+      "zone": "industry",
+      "catalog_id": "shared_district_heating_pipe",
+      "variant": "support",
+      "finish": "used",
+      "position_m": [
+        143,
+        3,
+        -108
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 3
+      },
+      "collision_policy": "native",
+      "role": "Right matching pipe saddle",
+      "rationale": "Right matching pipe saddle",
+      "assembly_group": "district-heating-remnant"
+    },
+    {
+      "id": "S_HEAT_PIPE",
+      "zone": "industry",
+      "catalog_id": "shared_district_heating_pipe",
+      "variant": "straight",
+      "finish": "used",
+      "position_m": [
+        141.5,
+        3.165,
+        -108
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "surface",
+        "host_id": "S_HEAT_SUPPORT_L",
+        "surface_y_m": 3.9
+      },
+      "collision_policy": "native",
+      "role": "Disconnected district-heating section seated on matching supports",
+      "rationale": "Disconnected district-heating section seated on matching supports",
+      "assembly_group": "district-heating-remnant",
+      "contact_exception": {
+        "with_ids": [
+          "S_HEAT_SUPPORT_L",
+          "S_HEAT_SUPPORT_R"
+        ],
+        "reason": "Pipe rests on its two authored saddles; contact is intentional."
+      }
+    },
+    {
+      "id": "S_MANHOLE_T",
+      "zone": "town",
+      "catalog_id": "shared_manhole_cover",
+      "variant": "round",
+      "finish": "used",
+      "position_m": [
+        -115,
+        2,
+        25
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2
+      },
+      "collision_policy": "visual_only",
+      "role": "Flush municipal drain cover; visual-only surface detail",
+      "rationale": "Flush municipal drain cover; visual-only surface detail",
+      "assembly_group": "drainage"
+    },
+    {
+      "id": "S_MANHOLE_I",
+      "zone": "industry",
+      "catalog_id": "shared_manhole_cover",
+      "variant": "rectangular",
+      "finish": "used",
+      "position_m": [
+        135,
+        2,
+        45
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2
+      },
+      "collision_policy": "visual_only",
+      "role": "Flush municipal drain cover; visual-only surface detail",
+      "rationale": "Flush municipal drain cover; visual-only surface detail",
+      "assembly_group": "drainage"
+    },
+    {
+      "id": "S_FARM_SIGN",
+      "zone": "farmland",
+      "catalog_id": "shared_wood_post_sign",
+      "variant": "direction",
+      "finish": "used",
+      "position_m": [
+        -175,
+        1.84375,
+        177
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 1.84375
+      },
+      "collision_policy": "native",
+      "role": "Farm approach direction marker on the verge, outside the extraction pad",
+      "rationale": "Farm approach direction marker on the verge, outside the extraction pad",
+      "assembly_group": "farm-entry"
+    },
+    {
+      "id": "S_RIVER_SIGN",
+      "zone": "river",
+      "catalog_id": "shared_wood_post_sign",
+      "variant": "warning",
+      "finish": "worn",
+      "position_m": [
+        42,
+        2.882567,
+        -56
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2.8825673270598777
+      },
+      "collision_policy": "native",
+      "role": "Riverbank warning beside the existing northern bridge approach",
+      "rationale": "Riverbank warning beside the existing northern bridge approach",
+      "assembly_group": "bridge-warning"
+    },
+    {
+      "id": "S_SHOP_NAMEPLATE",
+      "zone": "town",
+      "catalog_id": "shared_cyrillic_signs",
+      "variant": "nameplate",
+      "finish": "used",
+      "position_m": [
+        8,
+        3.55,
+        -6.83
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "T04-A",
+        "evidence": "Town corner shop front exterior face: root(10,2.2,-11), yaw180, frontlocalZ=-4; plaque clear of door."
+      },
+      "collision_policy": "visual_only",
+      "role": "Cyrillic corner-shop identification fixed to front wall",
+      "rationale": "Sign follows the existing shop façade and keeps the central doorway clear."
+    }
+  ],
+  "deferred": []
+}

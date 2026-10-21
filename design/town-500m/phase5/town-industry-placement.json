@@ -1,0 +1,5293 @@
+{
+  "schema_version": 1,
+  "status": "HAND_AUTHORED_SPATIAL_PLAN_OFFLINE_CHECKED_NATIVE_PENDING",
+  "scope": "Town/Industry furnishing plus selected shared utility/freight; no gameplay, functional doors, AI, loot, patrol, extraction or access edits.",
+  "authoring": "Each XZ chosen by hand in this helper. Only coordinate transforms, catalogue support calculations and named stacks are evaluated. No grid/random scatter.",
+  "geometry_source": "phase5/asset-catalog.json actual GLB visual vertex bounds through full Y-up node transforms",
+  "floor_contract": "Live building GroundFloor collider top localY0 + canonical instance root2.2; terrain placements use exported-mesh heightAt; all support rootY subtracts asset minY*scale.",
+  "style": "Modern post-Soviet late-autumn abandonment: mostly maintained clean/used matched groups, selective worn waste/wrecks; all props retain native import scale1:1.",
+  "preserve": [
+    "23 ground/four upper marker-port contracts",
+    "all corridors with2m route clearance and1.4m local walks",
+    "existing door openings and stair volumes",
+    "original loot/Props/Persist parents and exact pickup positions",
+    "all existing actors/patrols",
+    "all opaque LOS geometry until native replacement acceptance"
+  ],
+  "counts": {
+    "placements": 141,
+    "town": 78,
+    "industry": 63,
+    "covered_town_industry_types": 33,
+    "deferred_town_industry_types": 6,
+    "shared_types_used": 11
+  },
+  "replacements_are_review_candidates": true,
+  "offline_verification": {
+    "status": "NEEDS_SPATIAL_REVIEW",
+    "coverage_complete": true,
+    "unique_ids": true,
+    "finite_uniform_transforms": true,
+    "route_reservation_each_side_m": 1,
+    "local_walk_width_m": 1.4,
+    "support_flatness_limit_m": 0.015,
+    "checked_route_pairs": 1830,
+    "checked_prop_pairs": 7606,
+    "checked_support_corners": 460,
+    "issues": [
+      {
+        "type": "sloped_support",
+        "id": "T_ROAD_SEDAN_B",
+        "range_m": 0.203252
+      },
+      {
+        "type": "sloped_support",
+        "id": "I_YARD_FORKLIFT",
+        "range_m": 0.09228
+      },
+      {
+        "type": "sloped_support",
+        "id": "I_YARD_BEAM_A",
+        "range_m": 0.035553
+      },
+      {
+        "type": "sloped_support",
+        "id": "I_RAIL_SIGNAL",
+        "range_m": 0.169865
+      },
+      {
+        "type": "existing_interaction_clearance",
+        "id": "T_GROCERY_COUNTER",
+        "node": "NavigationRegion3D/Level/TownExpansion/CivicArchitecture/Provision_ration_biscuits",
+        "edge_distance_m": 0.8
+      }
+    ],
+    "terrain_support": [
+      {
+        "id": "T_COURTYARD_SWING",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "T_COURTYARD_BENCH_A",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "T_COURTYARD_BENCH_B",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "T_MARKET_STALL_A",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "T_MARKET_STALL_B",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "T_MARKET_CRATE_A",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "T_MARKET_CRATE_C",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "T_BUS_SHELTER",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "T_BUS_BOARD",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "T_BUS_LITTER",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "T_ROAD_SEDAN_A",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "T_ROAD_SEDAN_B",
+        "corner_height_range_m": 0.203252,
+        "surface_y_m": 2.157228
+      },
+      {
+        "id": "I_YARD_FORKLIFT",
+        "corner_height_range_m": 0.09228,
+        "surface_y_m": 3
+      },
+      {
+        "id": "I_YARD_PIPE_A",
+        "corner_height_range_m": 0,
+        "surface_y_m": 3
+      },
+      {
+        "id": "I_YARD_PIPE_B",
+        "corner_height_range_m": 0,
+        "surface_y_m": 3
+      },
+      {
+        "id": "I_YARD_BEAM_A",
+        "corner_height_range_m": 0.035553,
+        "surface_y_m": 2.977273
+      },
+      {
+        "id": "I_YARD_BEAM_B",
+        "corner_height_range_m": 0.004,
+        "surface_y_m": 2.99
+      },
+      {
+        "id": "I_YARD_SLEEPERS_A",
+        "corner_height_range_m": 0,
+        "surface_y_m": 3
+      },
+      {
+        "id": "I_YARD_SLEEPERS_B",
+        "corner_height_range_m": 0,
+        "surface_y_m": 3
+      },
+      {
+        "id": "I_RAIL_SIGNAL",
+        "corner_height_range_m": 0.169865,
+        "surface_y_m": 2.834595
+      },
+      {
+        "id": "I_SERVICE_TANK",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "I_SERVICE_PUMP",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "I_SERVICE_DRUM_A",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "I_SERVICE_DRUM_B",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "I_SERVICE_DRUM_C",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "I_YARD_DUMPSTER",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "I_YARD_SCRAP",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "I_SOUTH_REEL_A",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "I_SOUTH_REEL_B",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "I_SOUTH_TIMBER_A",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "I_SOUTH_TIMBER_B",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "I_SOUTH_CABINET",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "I_CONTAINER_I04-A",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "I_CONTAINER_I04-B",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "I_CONTAINER_I04-C",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "I_CONTAINER_I06-A",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "I_CONTAINER_I06-B",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "I_CONTAINER_I06-C",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "I_RAIL_BOXCAR",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      },
+      {
+        "id": "I_RAIL_TANK",
+        "corner_height_range_m": 0,
+        "surface_y_m": 2
+      }
+    ],
+    "limits": "Conservative visual footprint/vertical interval checks. Host wall contact is intentional. No actual imported collision, physics, navmesh, LOS or render result."
+  },
+  "placements": [
+    {
+      "id": "T_CLINIC_BED_A",
+      "zone": "town",
+      "catalog_id": "town_clinic_examination_bed",
+      "variant": "with-sheet",
+      "finish": "clean",
+      "position_m": [
+        -140.8,
+        2.2,
+        59.8
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T05-A",
+        "local_position_m": [
+          -3.8,
+          0,
+          2.8
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t05_clinic.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "examination bay",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T05-clinic-exam"
+    },
+    {
+      "id": "T_CLINIC_BED_B",
+      "zone": "town",
+      "catalog_id": "town_clinic_examination_bed",
+      "variant": "bare",
+      "finish": "used",
+      "position_m": [
+        -133.2,
+        2.2,
+        59.8
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T05-A",
+        "local_position_m": [
+          3.8,
+          0,
+          2.8
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t05_clinic.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "second examination bay",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T05-clinic-exam"
+    },
+    {
+      "id": "T_CLINIC_SHELF_A",
+      "zone": "town",
+      "catalog_id": "town_pharmacy_shelf",
+      "variant": "stocked",
+      "finish": "clean",
+      "position_m": [
+        -142.1,
+        2.2,
+        57.7
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T05-A",
+        "local_position_m": [
+          -5.1,
+          0,
+          0.7
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t05_clinic.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "medical storage against west wall",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T05-clinic-storage"
+    },
+    {
+      "id": "T_CLINIC_SHELF_B",
+      "zone": "town",
+      "catalog_id": "town_pharmacy_shelf",
+      "variant": "empty",
+      "finish": "used",
+      "position_m": [
+        -142.1,
+        2.2,
+        56.3
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T05-A",
+        "local_position_m": [
+          -5.1,
+          0,
+          -0.7
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t05_clinic.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching partly cleared medical storage",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T05-clinic-storage"
+    },
+    {
+      "id": "T_CLINIC_DESK",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "desk",
+      "finish": "clean",
+      "position_m": [
+        -133.6,
+        2.2,
+        55.2
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T05-A",
+        "local_position_m": [
+          3.4,
+          0,
+          -1.8
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t05_clinic.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "reception desk east of main aisle",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T05-clinic-reception"
+    },
+    {
+      "id": "T_CLINIC_FILE_A",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "cabinet",
+      "finish": "used",
+      "position_m": [
+        -131.95,
+        2.2,
+        54.9
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T05-A",
+        "local_position_m": [
+          5.05,
+          0,
+          -2.1
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t05_clinic.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "reception filing bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T05-clinic-reception"
+    },
+    {
+      "id": "T_CLINIC_FILE_B",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "cabinet",
+      "finish": "used",
+      "position_m": [
+        -131.95,
+        2.2,
+        55.65
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T05-A",
+        "local_position_m": [
+          5.05,
+          0,
+          -1.35
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t05_clinic.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching reception filing bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T05-clinic-reception"
+    },
+    {
+      "id": "T_CLINIC_WAIT_A",
+      "zone": "town",
+      "catalog_id": "town_waiting_room_chair",
+      "variant": "row",
+      "finish": "clean",
+      "position_m": [
+        -140.5,
+        2.2,
+        53.4
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T05-A",
+        "local_position_m": [
+          -3.5,
+          0,
+          -3.6
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t05_clinic.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "waiting row clear of entry throat",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T05-clinic-waiting"
+    },
+    {
+      "id": "T_CLINIC_WAIT_B",
+      "zone": "town",
+      "catalog_id": "town_waiting_room_chair",
+      "variant": "row",
+      "finish": "used",
+      "position_m": [
+        -133.5,
+        2.2,
+        53.4
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T05-A",
+        "local_position_m": [
+          3.5,
+          0,
+          -3.6
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t05_clinic.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching waiting row",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T05-clinic-waiting"
+    },
+    {
+      "id": "T_CLINIC_NOTICE",
+      "zone": "town",
+      "catalog_id": "town_notice_board",
+      "variant": "wall",
+      "finish": "used",
+      "position_m": [
+        -140.4,
+        3.3,
+        52.255
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "T05-A",
+        "local_position_m": [
+          -3.4,
+          1.1,
+          -4.745
+        ],
+        "bottom_above_floor_m": 1.1,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "clinic public notices facing room",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "T05-clinic-waiting"
+    },
+    {
+      "id": "T_CLINIC_AC",
+      "zone": "town",
+      "catalog_id": "town_air_conditioner",
+      "variant": "small",
+      "finish": "clean",
+      "position_m": [
+        -133.6,
+        4.62,
+        51.995
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "T05-A",
+        "local_position_m": [
+          3.4,
+          2.42,
+          -5.005
+        ],
+        "bottom_above_floor_m": 2.35,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "reception AC outdoors above frontage",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "T05-clinic-reception"
+    },
+    {
+      "id": "T_CLINIC_PAPER",
+      "zone": "town",
+      "catalog_id": "shared_street_litter",
+      "variant": "paper",
+      "finish": "used",
+      "position_m": [
+        -133.6,
+        2.95,
+        55.2
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "surface",
+        "host_id": "T_CLINIC_DESK",
+        "surface_y_m": 2.95,
+        "host_local_top_y_m": 0.75,
+        "local_offset_xz_m": [
+          0,
+          0
+        ],
+        "evidence": "GLB visual top bounds for flat pallet/crate/table surface; no guessed vertical offset"
+      },
+      "collision_policy": "visual_only",
+      "role": "abandoned paperwork on desk; source paper footprint already0.70x0.57m",
+      "rationale": "Compact deliberate stack, physically supported by its named host; no loose floating clutter.",
+      "assembly_group": "T05-clinic-reception"
+    },
+    {
+      "id": "T_PHARM_SHELF_A",
+      "zone": "town",
+      "catalog_id": "town_pharmacy_shelf",
+      "variant": "stocked",
+      "finish": "clean",
+      "position_m": [
+        -95.5,
+        2.2,
+        -18.1
+      ],
+      "yaw_deg": 360,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T02-A",
+        "local_position_m": [
+          -4.5,
+          0,
+          3.1
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "pharmacy rear shelf bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T02-pharmacy-retail"
+    },
+    {
+      "id": "T_PHARM_SHELF_B",
+      "zone": "town",
+      "catalog_id": "town_pharmacy_shelf",
+      "variant": "stocked",
+      "finish": "used",
+      "position_m": [
+        -96.9,
+        2.2,
+        -18.1
+      ],
+      "yaw_deg": 360,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T02-A",
+        "local_position_m": [
+          -3.1,
+          0,
+          3.1
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching pharmacy shelf bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T02-pharmacy-retail"
+    },
+    {
+      "id": "T_PHARM_SHELF_C",
+      "zone": "town",
+      "catalog_id": "town_pharmacy_shelf",
+      "variant": "empty",
+      "finish": "used",
+      "position_m": [
+        -98.3,
+        2.2,
+        -18.1
+      ],
+      "yaw_deg": 360,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T02-A",
+        "local_position_m": [
+          -1.7,
+          0,
+          3.1
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "cleared end of pharmacy bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T02-pharmacy-retail"
+    },
+    {
+      "id": "T_PHARM_COUNTER_A",
+      "zone": "town",
+      "catalog_id": "town_shop_counter",
+      "variant": "straight",
+      "finish": "clean",
+      "position_m": [
+        -96.3,
+        2.2,
+        -15.6
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T02-A",
+        "local_position_m": [
+          -3.7,
+          0,
+          0.6
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "retail counter west bay",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T02-pharmacy-retail"
+    },
+    {
+      "id": "T_PHARM_COUNTER_B",
+      "zone": "town",
+      "catalog_id": "town_shop_counter",
+      "variant": "straight",
+      "finish": "used",
+      "position_m": [
+        -103.7,
+        2.2,
+        -15.6
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T02-A",
+        "local_position_m": [
+          3.7,
+          0,
+          0.6
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "retail counter east bay",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T02-pharmacy-retail"
+    },
+    {
+      "id": "T_PHARM_FILE",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "cabinet",
+      "finish": "used",
+      "position_m": [
+        -105.1,
+        2.2,
+        -17.8
+      ],
+      "yaw_deg": 360,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T02-A",
+        "local_position_m": [
+          5.1,
+          0,
+          2.8
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "dispensary records",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T02-pharmacy-admin"
+    },
+    {
+      "id": "T_PHARM_SIGN",
+      "zone": "town",
+      "catalog_id": "town_shop_cyrillic_sign",
+      "variant": "pharmacy",
+      "finish": "clean",
+      "position_m": [
+        -96.8,
+        4.68,
+        -10.995
+      ],
+      "yaw_deg": 360,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "T02-A",
+        "local_position_m": [
+          -3.2,
+          2.48,
+          -4.005
+        ],
+        "bottom_above_floor_m": 2.48,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "Cyrillic pharmacy facade sign",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "T02-pharmacy-frontage"
+    },
+    {
+      "id": "T_PHARM_AWNING",
+      "zone": "town",
+      "catalog_id": "town_store_awning",
+      "variant": "canvas",
+      "finish": "used",
+      "position_m": [
+        -102.8,
+        4.7,
+        -10.995
+      ],
+      "yaw_deg": 360,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "T02-A",
+        "local_position_m": [
+          2.8,
+          2.5,
+          -4.005
+        ],
+        "bottom_above_floor_m": 2.5,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "retained canvas retail awning",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "T02-pharmacy-frontage"
+    },
+    {
+      "id": "T_PHARM_METER",
+      "zone": "town",
+      "catalog_id": "town_wall_electric_meter",
+      "variant": "single",
+      "finish": "used",
+      "position_m": [
+        -94.8,
+        3.5,
+        -19.005
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "T02-A",
+        "local_position_m": [
+          -5.2,
+          1.3,
+          4.005
+        ],
+        "bottom_above_floor_m": 1.3,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "rear service electric meter",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "T02-pharmacy-service"
+    },
+    {
+      "id": "T_GROCERY_COUNTER",
+      "zone": "town",
+      "catalog_id": "town_shop_counter",
+      "variant": "corner",
+      "finish": "clean",
+      "position_m": [
+        13.7,
+        2.2,
+        -13.4
+      ],
+      "yaw_deg": 360,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T04-A",
+        "local_position_m": [
+          -3.7,
+          0,
+          2.4
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "grocery cash counter opposite pickup area",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T04-grocery-retail"
+    },
+    {
+      "id": "T_GROCERY_SHELF_A",
+      "zone": "town",
+      "catalog_id": "town_pharmacy_shelf",
+      "variant": "empty",
+      "finish": "used",
+      "position_m": [
+        15.1,
+        2.2,
+        -10.8
+      ],
+      "yaw_deg": 270,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T04-A",
+        "local_position_m": [
+          -5.1,
+          0,
+          -0.2
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "empty small-goods shelf bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T04-grocery-retail"
+    },
+    {
+      "id": "T_GROCERY_SHELF_B",
+      "zone": "town",
+      "catalog_id": "town_pharmacy_shelf",
+      "variant": "empty",
+      "finish": "used",
+      "position_m": [
+        15.1,
+        2.2,
+        -12.3
+      ],
+      "yaw_deg": 270,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T04-A",
+        "local_position_m": [
+          -5.1,
+          0,
+          1.3
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching cleared goods bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T04-grocery-retail"
+    },
+    {
+      "id": "T_GROCERY_DESK",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "desk",
+      "finish": "used",
+      "position_m": [
+        13.8,
+        2.2,
+        -8.2
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T04-A",
+        "local_position_m": [
+          -3.8,
+          0,
+          -2.8
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "shopkeeper accounts corner",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T04-grocery-admin"
+    },
+    {
+      "id": "T_GROCERY_SIGN",
+      "zone": "town",
+      "catalog_id": "town_shop_cyrillic_sign",
+      "variant": "grocery",
+      "finish": "clean",
+      "position_m": [
+        13.2,
+        4.68,
+        -6.995
+      ],
+      "yaw_deg": 360,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "T04-A",
+        "local_position_m": [
+          -3.2,
+          2.48,
+          -4.005
+        ],
+        "bottom_above_floor_m": 2.48,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "Cyrillic grocery fascia",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "T04-grocery-frontage"
+    },
+    {
+      "id": "T_GROCERY_AWNING",
+      "zone": "town",
+      "catalog_id": "town_store_awning",
+      "variant": "metal",
+      "finish": "clean",
+      "position_m": [
+        7.2,
+        4.7,
+        -6.995
+      ],
+      "yaw_deg": 360,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "T04-A",
+        "local_position_m": [
+          2.8,
+          2.5,
+          -4.005
+        ],
+        "bottom_above_floor_m": 2.5,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "metal awning at retail bay",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "T04-grocery-frontage"
+    },
+    {
+      "id": "T_GROCERY_AC",
+      "zone": "town",
+      "catalog_id": "town_air_conditioner",
+      "variant": "large",
+      "finish": "used",
+      "position_m": [
+        6.9,
+        4.37,
+        -15.005
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "T04-A",
+        "local_position_m": [
+          3.1,
+          2.17,
+          4.005
+        ],
+        "bottom_above_floor_m": 2.1,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "rear condenser over service side",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "T04-grocery-service"
+    },
+    {
+      "id": "T_CIVIC_DESK_A",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "desk",
+      "finish": "clean",
+      "position_m": [
+        -36.2,
+        2.2,
+        -9.2
+      ],
+      "yaw_deg": 270,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T03-A",
+        "local_position_m": [
+          -2.8,
+          0,
+          -3.8
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "municipal clerk desk",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T03-civic-office"
+    },
+    {
+      "id": "T_CIVIC_DESK_B",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "desk",
+      "finish": "used",
+      "position_m": [
+        -36.2,
+        2.2,
+        -13
+      ],
+      "yaw_deg": 270,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T03-A",
+        "local_position_m": [
+          -2.8,
+          0,
+          0
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching clerk desk",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T03-civic-office"
+    },
+    {
+      "id": "T_CIVIC_FILE_A",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "cabinet",
+      "finish": "used",
+      "position_m": [
+        -36.2,
+        2.2,
+        -17.7
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T03-A",
+        "local_position_m": [
+          -2.8,
+          0,
+          4.7
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "records bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T03-civic-files"
+    },
+    {
+      "id": "T_CIVIC_FILE_B",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "cabinet",
+      "finish": "used",
+      "position_m": [
+        -36.9,
+        2.2,
+        -17.7
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T03-A",
+        "local_position_m": [
+          -2.1,
+          0,
+          4.7
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching records bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T03-civic-files"
+    },
+    {
+      "id": "T_CIVIC_FILE_C",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "cabinet",
+      "finish": "clean",
+      "position_m": [
+        -37.6,
+        2.2,
+        -17.7
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T03-A",
+        "local_position_m": [
+          -1.4,
+          0,
+          4.7
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching records bank end",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T03-civic-files"
+    },
+    {
+      "id": "T_CIVIC_WAIT",
+      "zone": "town",
+      "catalog_id": "town_waiting_room_chair",
+      "variant": "row",
+      "finish": "used",
+      "position_m": [
+        -37,
+        2.2,
+        -7.4
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T03-A",
+        "local_position_m": [
+          -2,
+          0,
+          -5.6
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "office waiting row west of foyer",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T03-civic-office"
+    },
+    {
+      "id": "T_CIVIC_NOTICE",
+      "zone": "town",
+      "catalog_id": "town_notice_board",
+      "variant": "wall",
+      "finish": "used",
+      "position_m": [
+        -36.7,
+        3.3,
+        -4.995
+      ],
+      "yaw_deg": 360,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "T03-A",
+        "local_position_m": [
+          -2.3,
+          1.1,
+          -8.005
+        ],
+        "bottom_above_floor_m": 1.1,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "municipal notice board outdoors",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "T03-civic-frontage"
+    },
+    {
+      "id": "T_COMMUNITY_DESK",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "desk",
+      "finish": "used",
+      "position_m": [
+        -36.6,
+        2.2,
+        72.8
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T07-A",
+        "local_position_m": [
+          -2.8,
+          0,
+          -3.6
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "community services office",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T07-community-office"
+    },
+    {
+      "id": "T_COMMUNITY_FILE_A",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "cabinet",
+      "finish": "used",
+      "position_m": [
+        -27.6,
+        2.2,
+        72.8
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T07-A",
+        "local_position_m": [
+          -2.8,
+          0,
+          5.4
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "community archive bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T07-community-office"
+    },
+    {
+      "id": "T_COMMUNITY_FILE_B",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "cabinet",
+      "finish": "used",
+      "position_m": [
+        -27.6,
+        2.2,
+        72.1
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T07-A",
+        "local_position_m": [
+          -2.1,
+          0,
+          5.4
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "community archive bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T07-community-office"
+    },
+    {
+      "id": "T_COMMUNITY_WAIT",
+      "zone": "town",
+      "catalog_id": "town_waiting_room_chair",
+      "variant": "row",
+      "finish": "clean",
+      "position_m": [
+        -38.7,
+        2.2,
+        72
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T07-A",
+        "local_position_m": [
+          -2,
+          0,
+          -5.7
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "community waiting row",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T07-community-office"
+    },
+    {
+      "id": "T_SERVICES_SIGN",
+      "zone": "town",
+      "catalog_id": "town_shop_cyrillic_sign",
+      "variant": "services",
+      "finish": "used",
+      "position_m": [
+        -16,
+        4.68,
+        86.005
+      ],
+      "yaw_deg": 360,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "T07-B",
+        "local_position_m": [
+          -3,
+          2.48,
+          -4.005
+        ],
+        "bottom_above_floor_m": 2.48,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "small service-office sign",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "T07-services-frontage"
+    },
+    {
+      "id": "T_SERVICES_DESK",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "desk",
+      "finish": "used",
+      "position_m": [
+        -14.8,
+        2.2,
+        79.3
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T07-B",
+        "local_position_m": [
+          -4.2,
+          0,
+          2.7
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "service counter administration",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T07-services-office"
+    },
+    {
+      "id": "T_SERVICES_FILES_A",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "cabinet",
+      "finish": "used",
+      "position_m": [
+        -23.8,
+        2.2,
+        79.3
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T07-B",
+        "local_position_m": [
+          4.8,
+          0,
+          2.7
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "service office files",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T07-services-office"
+    },
+    {
+      "id": "T_SERVICES_FILES_B",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "cabinet",
+      "finish": "clean",
+      "position_m": [
+        -23.1,
+        2.2,
+        79.3
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T07-B",
+        "local_position_m": [
+          4.1,
+          0,
+          2.7
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching files",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T07-services-office"
+    },
+    {
+      "id": "T_HOME_DESK",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "desk",
+      "finish": "used",
+      "position_m": [
+        -138.5,
+        2.2,
+        -19.7
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T01-A",
+        "local_position_m": [
+          -3.5,
+          0,
+          2.7
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t01_cottage.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "household study corner",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T01-household"
+    },
+    {
+      "id": "T_HOME_CABINET",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "cabinet",
+      "finish": "used",
+      "position_m": [
+        -145.7,
+        2.2,
+        -19.7
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T01-A",
+        "local_position_m": [
+          3.7,
+          0,
+          2.7
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t01_cottage.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "household storage",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T01-household"
+    },
+    {
+      "id": "T_HOME_RADIATOR",
+      "zone": "town",
+      "catalog_id": "town_apartment_radiator",
+      "variant": "small",
+      "finish": "clean",
+      "position_m": [
+        -145,
+        2.36,
+        -20.745
+      ],
+      "yaw_deg": 360,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "T01-A",
+        "local_position_m": [
+          3,
+          0.16,
+          3.745
+        ],
+        "bottom_above_floor_m": 0.16,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "domestic heating at rear wall",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "T01-household"
+    },
+    {
+      "id": "T_HOME_METER",
+      "zone": "town",
+      "catalog_id": "town_wall_electric_meter",
+      "variant": "single",
+      "finish": "used",
+      "position_m": [
+        -138.3,
+        3.5,
+        -21.005
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "T01-A",
+        "local_position_m": [
+          -3.7,
+          1.3,
+          4.005
+        ],
+        "bottom_above_floor_m": 1.3,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "domestic service meter",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "T01-household"
+    },
+    {
+      "id": "T_APARTMENT_MAIL",
+      "zone": "town",
+      "catalog_id": "town_apartment_mailboxes",
+      "variant": "row",
+      "finish": "clean",
+      "position_m": [
+        -84,
+        3.3,
+        84.005
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "T06-A",
+        "local_position_m": [
+          0,
+          1.1,
+          6.005
+        ],
+        "bottom_above_floor_m": 1.1,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "mail bank on solid rear facade panel",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "T06-apartment-services"
+    },
+    {
+      "id": "T_APARTMENT_DISH",
+      "zone": "town",
+      "catalog_id": "town_satellite_dish",
+      "variant": "angled",
+      "finish": "used",
+      "position_m": [
+        -76,
+        6.8,
+        84.005
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "T06-A",
+        "local_position_m": [
+          8,
+          4.6,
+          6.005
+        ],
+        "bottom_above_floor_m": 4.6,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "single satellite dish on upper solid panel",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "T06-apartment-services"
+    },
+    {
+      "id": "T_APARTMENT_METER",
+      "zone": "town",
+      "catalog_id": "town_wall_electric_meter",
+      "variant": "double",
+      "finish": "used",
+      "position_m": [
+        -92,
+        3.5,
+        84.005
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "T06-A",
+        "local_position_m": [
+          -8,
+          1.3,
+          6.005
+        ],
+        "bottom_above_floor_m": 1.3,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "paired apartment electric service",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "T06-apartment-services"
+    },
+    {
+      "id": "T_COURTYARD_SWING",
+      "zone": "town",
+      "catalog_id": "town_playground_swing",
+      "variant": "with-seat",
+      "finish": "used",
+      "position_m": [
+        -87,
+        2,
+        69
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "abandoned shared courtyard playground",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "T06-courtyard"
+    },
+    {
+      "id": "T_COURTYARD_BENCH_A",
+      "zone": "town",
+      "catalog_id": "town_courtyard_bench",
+      "variant": "painted",
+      "finish": "clean",
+      "position_m": [
+        -94,
+        2,
+        69
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "courtyard bench facing playground",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "T06-courtyard"
+    },
+    {
+      "id": "T_COURTYARD_BENCH_B",
+      "zone": "town",
+      "catalog_id": "town_courtyard_bench",
+      "variant": "painted",
+      "finish": "used",
+      "position_m": [
+        -79,
+        2,
+        69
+      ],
+      "yaw_deg": -90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "matching courtyard bench",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "T06-courtyard"
+    },
+    {
+      "id": "T_HOME_LONG_DESK",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "desk",
+      "finish": "used",
+      "position_m": [
+        -89.7,
+        2.2,
+        64.8
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T06-B",
+        "local_position_m": [
+          -2.8,
+          0,
+          -3.7
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "residential study corner away from stair",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T06-residential"
+    },
+    {
+      "id": "T_HOME_LONG_FILE",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "cabinet",
+      "finish": "used",
+      "position_m": [
+        -80.6,
+        2.2,
+        64.8
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T06-B",
+        "local_position_m": [
+          -2.8,
+          0,
+          5.4
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "residential utility cupboard",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T06-residential"
+    },
+    {
+      "id": "T_HOME_LONG_RADIATOR",
+      "zone": "town",
+      "catalog_id": "town_apartment_radiator",
+      "variant": "large",
+      "finish": "clean",
+      "position_m": [
+        -84.2,
+        2.36,
+        65.495
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "T06-B",
+        "local_position_m": [
+          -3.495,
+          0.16,
+          1.8
+        ],
+        "bottom_above_floor_m": 0.16,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "heating under west wall",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "T06-residential"
+    },
+    {
+      "id": "T_HOME_EAST_DESK",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "desk",
+      "finish": "used",
+      "position_m": [
+        17.2,
+        2.2,
+        118.3
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T12-A",
+        "local_position_m": [
+          -2.8,
+          0,
+          -3.7
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "residential study corner",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T12-residential"
+    },
+    {
+      "id": "T_HOME_EAST_CABINET",
+      "zone": "town",
+      "catalog_id": "town_office_furniture",
+      "variant": "cabinet",
+      "finish": "used",
+      "position_m": [
+        17.2,
+        2.2,
+        127.4
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T12-A",
+        "local_position_m": [
+          -2.8,
+          0,
+          5.4
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "residential utility cupboard",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T12-residential"
+    },
+    {
+      "id": "T_HOME_EAST_RADIATOR",
+      "zone": "town",
+      "catalog_id": "town_apartment_radiator",
+      "variant": "large",
+      "finish": "used",
+      "position_m": [
+        16.505,
+        2.36,
+        123.8
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "T12-A",
+        "local_position_m": [
+          -3.495,
+          0.16,
+          1.8
+        ],
+        "bottom_above_floor_m": 0.16,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "domestic perimeter heating",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "T12-residential"
+    },
+    {
+      "id": "T_GARAGE_BENCH_A",
+      "zone": "town",
+      "catalog_id": "town_workshop_bench",
+      "variant": "tool-covered",
+      "finish": "used",
+      "position_m": [
+        14,
+        2.2,
+        75.9
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T08-A",
+        "local_position_m": [
+          -2,
+          0,
+          3.9
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "repair bench on clear rear wall away from GunLocker",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T08-garage-repair"
+    },
+    {
+      "id": "T_GARAGE_BENCH_B",
+      "zone": "town",
+      "catalog_id": "town_workshop_bench",
+      "variant": "plain",
+      "finish": "clean",
+      "position_m": [
+        16.2,
+        2.2,
+        75.9
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T08-A",
+        "local_position_m": [
+          0.2,
+          0,
+          3.9
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching repair bench away from M700",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T08-garage-repair"
+    },
+    {
+      "id": "T_GARAGE_COMPRESSOR",
+      "zone": "town",
+      "catalog_id": "industry_air_compressor",
+      "variant": "horizontal",
+      "finish": "used",
+      "position_m": [
+        10.2,
+        2.2,
+        70.2
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T08-A",
+        "local_position_m": [
+          -5.8,
+          0,
+          -1.8
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "portable compressor by repair zone",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T08-garage-repair"
+    },
+    {
+      "id": "T_GARAGE_TIRE_A",
+      "zone": "town",
+      "catalog_id": "shared_tire_stack",
+      "variant": "stacked",
+      "finish": "used",
+      "position_m": [
+        10.3,
+        2.2,
+        68.6
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T08-A",
+        "local_position_m": [
+          -5.7,
+          0,
+          -3.4
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching spare tire bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T08-garage-tires"
+    },
+    {
+      "id": "T_GARAGE_TIRE_B",
+      "zone": "town",
+      "catalog_id": "shared_tire_stack",
+      "variant": "stacked",
+      "finish": "used",
+      "position_m": [
+        11.2,
+        2.2,
+        68.6
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T08-A",
+        "local_position_m": [
+          -4.8,
+          0,
+          -3.4
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching spare tire bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T08-garage-tires"
+    },
+    {
+      "id": "T_WORKSHOP_BENCH_A",
+      "zone": "town",
+      "catalog_id": "town_workshop_bench",
+      "variant": "plain",
+      "finish": "clean",
+      "position_m": [
+        -24.2,
+        2.2,
+        128
+      ],
+      "yaw_deg": 270,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T11-A",
+        "local_position_m": [
+          -2.8,
+          0,
+          -3
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t07_workshop.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "workshop wall bench away from provisions",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T11-workshop-repair"
+    },
+    {
+      "id": "T_WORKSHOP_BENCH_B",
+      "zone": "town",
+      "catalog_id": "town_workshop_bench",
+      "variant": "tool-covered",
+      "finish": "used",
+      "position_m": [
+        -24.2,
+        2.2,
+        130.4
+      ],
+      "yaw_deg": 270,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T11-A",
+        "local_position_m": [
+          -2.8,
+          0,
+          -5.4
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t07_workshop.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching repair station",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T11-workshop-repair"
+    },
+    {
+      "id": "T_WORKSHOP_CART",
+      "zone": "town",
+      "catalog_id": "industry_welding_cart",
+      "variant": "covered",
+      "finish": "used",
+      "position_m": [
+        -24.3,
+        2.2,
+        125
+      ],
+      "yaw_deg": 270,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "T11-A",
+        "local_position_m": [
+          -2.7,
+          0,
+          0
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t07_workshop.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "welding supplies in repair strip",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "T11-workshop-repair"
+    },
+    {
+      "id": "T_WORKSHOP_LIGHT",
+      "zone": "town",
+      "catalog_id": "industry_work_light",
+      "variant": "mounted",
+      "finish": "used",
+      "position_m": [
+        -23.505,
+        4.3,
+        129.2
+      ],
+      "yaw_deg": 270,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "T11-A",
+        "local_position_m": [
+          -3.495,
+          2.1,
+          -4.2
+        ],
+        "bottom_above_floor_m": 2.1,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "unpowered mounted workshop task light",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "T11-workshop-repair"
+    },
+    {
+      "id": "T_MARKET_STALL_A",
+      "zone": "town",
+      "catalog_id": "town_market_stall",
+      "variant": "empty",
+      "finish": "used",
+      "position_m": [
+        -48,
+        2,
+        108
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "market stall beside kiosk group",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "T10-market"
+    },
+    {
+      "id": "T_MARKET_STALL_B",
+      "zone": "town",
+      "catalog_id": "town_market_stall",
+      "variant": "tarp-covered",
+      "finish": "clean",
+      "position_m": [
+        -48,
+        2,
+        112
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "matching abandoned covered market stall",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "T10-market"
+    },
+    {
+      "id": "T_MARKET_CRATE_A",
+      "zone": "town",
+      "catalog_id": "shared_wooden_crate",
+      "variant": "medium",
+      "finish": "used",
+      "position_m": [
+        -47.8,
+        2,
+        116.5
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "produce freight stack behind stalls",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "T10-market-freight"
+    },
+    {
+      "id": "T_MARKET_CRATE_B",
+      "zone": "town",
+      "catalog_id": "shared_wooden_crate",
+      "variant": "small",
+      "finish": "clean",
+      "position_m": [
+        -47.8,
+        2.6816,
+        116.5
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "surface",
+        "host_id": "T_MARKET_CRATE_A",
+        "surface_y_m": 2.6816,
+        "host_local_top_y_m": 0.6816,
+        "local_offset_xz_m": [
+          0,
+          0
+        ],
+        "evidence": "GLB visual top bounds for flat pallet/crate/table surface; no guessed vertical offset"
+      },
+      "collision_policy": "native",
+      "role": "stacked produce crate",
+      "rationale": "Compact deliberate stack, physically supported by its named host; no loose floating clutter.",
+      "assembly_group": "T10-market-freight"
+    },
+    {
+      "id": "T_MARKET_CRATE_C",
+      "zone": "town",
+      "catalog_id": "shared_wooden_crate",
+      "variant": "medium",
+      "finish": "clean",
+      "position_m": [
+        -46.7,
+        2,
+        116.5
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "matching produce freight stack",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "T10-market-freight"
+    },
+    {
+      "id": "T_BUS_SHELTER",
+      "zone": "town",
+      "catalog_id": "town_soviet_bus_shelter",
+      "variant": "intact",
+      "finish": "clean",
+      "position_m": [
+        -125,
+        2,
+        29
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "county-road bus stop on north clinic shoulder",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "T05-bus-stop"
+    },
+    {
+      "id": "T_BUS_BOARD",
+      "zone": "town",
+      "catalog_id": "town_notice_board",
+      "variant": "freestanding",
+      "finish": "used",
+      "position_m": [
+        -120.7,
+        2,
+        29.2
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "public timetable board next to bus stop",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "T05-bus-stop"
+    },
+    {
+      "id": "T_BUS_LITTER",
+      "zone": "town",
+      "catalog_id": "shared_street_litter",
+      "variant": "paper",
+      "finish": "used",
+      "position_m": [
+        -123.6,
+        2,
+        27.3
+      ],
+      "yaw_deg": 10,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "visual_only",
+      "role": "small localized autumn bus-stop litter outside shelter slab",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "T05-bus-stop"
+    },
+    {
+      "id": "T_ROAD_SEDAN_A",
+      "zone": "town",
+      "catalog_id": "shared_old_sedan",
+      "variant": "abandoned",
+      "finish": "used",
+      "position_m": [
+        -127.27,
+        2,
+        9.36
+      ],
+      "yaw_deg": 82,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "existing abandoned road sedan art candidate",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "town-road-wrecks",
+      "proxy_id": "C01-01",
+      "replacement_status": "candidate; keep original proxy until native LOS/readability acceptance",
+      "replacement_fit": {
+        "old_size_xyz_m": [
+          1.8,
+          1.6,
+          4.5
+        ],
+        "new_size_xyz_m": [
+          1.65,
+          1.45,
+          4.1
+        ],
+        "concern": "lower roof by0.15m; never retain invisible original cover collider after hiding mesh"
+      }
+    },
+    {
+      "id": "T_ROAD_SEDAN_B",
+      "zone": "town",
+      "catalog_id": "shared_old_sedan",
+      "variant": "abandoned",
+      "finish": "worn",
+      "position_m": [
+        -10.23,
+        2.157228,
+        26.41
+      ],
+      "yaw_deg": 82,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2.157228,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "existing abandoned road sedan art candidate",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "town-road-wrecks",
+      "proxy_id": "C01-02",
+      "replacement_status": "candidate; keep original proxy until native LOS/readability acceptance",
+      "replacement_fit": {
+        "old_size_xyz_m": [
+          1.8,
+          1.6,
+          4.5
+        ],
+        "new_size_xyz_m": [
+          1.65,
+          1.45,
+          4.1
+        ],
+        "concern": "lower roof by0.15m; never retain invisible original cover collider after hiding mesh"
+      }
+    },
+    {
+      "id": "I_WAREHOUSE_CRANE",
+      "zone": "industry",
+      "catalog_id": "industry_gantry_crane",
+      "variant": "fixed",
+      "finish": "clean",
+      "position_m": [
+        162.6,
+        2.2,
+        -76.8
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I01-A",
+        "local_position_m": [
+          -7.6,
+          0,
+          4.8
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "static repair gantry in machinery bay",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I01-machinery"
+    },
+    {
+      "id": "I_WAREHOUSE_BENCH_A",
+      "zone": "industry",
+      "catalog_id": "town_workshop_bench",
+      "variant": "tool-covered",
+      "finish": "used",
+      "position_m": [
+        165.6,
+        2.2,
+        -72.8
+      ],
+      "yaw_deg": 270,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I01-A",
+        "local_position_m": [
+          -10.6,
+          0,
+          0.8
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "warehouse workshop west perimeter",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I01-machinery"
+    },
+    {
+      "id": "I_WAREHOUSE_BENCH_B",
+      "zone": "industry",
+      "catalog_id": "town_workshop_bench",
+      "variant": "plain",
+      "finish": "clean",
+      "position_m": [
+        165.6,
+        2.2,
+        -70.4
+      ],
+      "yaw_deg": 270,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I01-A",
+        "local_position_m": [
+          -10.6,
+          0,
+          -1.6
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching warehouse bench",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I01-machinery"
+    },
+    {
+      "id": "I_WAREHOUSE_CART",
+      "zone": "industry",
+      "catalog_id": "industry_welding_cart",
+      "variant": "cylinders",
+      "finish": "used",
+      "position_m": [
+        163.7,
+        2.2,
+        -72.8
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I01-A",
+        "local_position_m": [
+          -8.7,
+          0,
+          0.8
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "welding cart next to gantry repair bay",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I01-machinery"
+    },
+    {
+      "id": "I_WAREHOUSE_COMPRESSOR",
+      "zone": "industry",
+      "catalog_id": "industry_air_compressor",
+      "variant": "vertical",
+      "finish": "used",
+      "position_m": [
+        165.6,
+        2.2,
+        -67.6
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I01-A",
+        "local_position_m": [
+          -10.6,
+          0,
+          -4.4
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "fixed workshop compressor",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I01-machinery"
+    },
+    {
+      "id": "I_WAREHOUSE_TRIPOD",
+      "zone": "industry",
+      "catalog_id": "industry_work_light",
+      "variant": "tripod",
+      "finish": "used",
+      "position_m": [
+        162.4,
+        2.2,
+        -67.6
+      ],
+      "yaw_deg": 225,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I01-A",
+        "local_position_m": [
+          -7.4,
+          0,
+          -4.4
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "visual_only",
+      "role": "unpowered task light in maintenance bay",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I01-machinery"
+    },
+    {
+      "id": "I_WAREHOUSE_GAUGE",
+      "zone": "industry",
+      "catalog_id": "industry_industrial_gauge",
+      "variant": "multi",
+      "finish": "clean",
+      "position_m": [
+        167.045,
+        3.5,
+        -67.6
+      ],
+      "yaw_deg": 270,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "I01-A",
+        "local_position_m": [
+          -12.045,
+          1.3,
+          -4.4
+        ],
+        "bottom_above_floor_m": 1.3,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "maintenance pressure gauge on solid west wall",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "I01-machinery"
+    },
+    {
+      "id": "I_WAREHOUSE_PALLET_A",
+      "zone": "industry",
+      "catalog_id": "shared_wood_pallet",
+      "variant": "loaded",
+      "finish": "used",
+      "position_m": [
+        147.8,
+        2.2,
+        -77.7
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I01-A",
+        "local_position_m": [
+          7.2,
+          0,
+          5.7
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "freight bank east warehouse bay",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I01-freight"
+    },
+    {
+      "id": "I_WAREHOUSE_PALLET_B",
+      "zone": "industry",
+      "catalog_id": "shared_wood_pallet",
+      "variant": "loaded",
+      "finish": "clean",
+      "position_m": [
+        146.3,
+        2.2,
+        -77.7
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I01-A",
+        "local_position_m": [
+          8.7,
+          0,
+          5.7
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching freight bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I01-freight"
+    },
+    {
+      "id": "I_WAREHOUSE_PALLET_C",
+      "zone": "industry",
+      "catalog_id": "shared_wood_pallet",
+      "variant": "loaded",
+      "finish": "used",
+      "position_m": [
+        144.8,
+        2.2,
+        -77.7
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I01-A",
+        "local_position_m": [
+          10.2,
+          0,
+          5.7
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching freight bank end",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I01-freight"
+    },
+    {
+      "id": "I_WAREHOUSE_EMPTY_A",
+      "zone": "industry",
+      "catalog_id": "shared_wood_pallet",
+      "variant": "empty",
+      "finish": "clean",
+      "position_m": [
+        147.8,
+        2.2,
+        -75.8
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I01-A",
+        "local_position_m": [
+          7.2,
+          0,
+          3.8
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "empty return pallet bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I01-freight"
+    },
+    {
+      "id": "I_WAREHOUSE_EMPTY_B",
+      "zone": "industry",
+      "catalog_id": "shared_wood_pallet",
+      "variant": "empty",
+      "finish": "used",
+      "position_m": [
+        146.3,
+        2.2,
+        -75.8
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I01-A",
+        "local_position_m": [
+          8.7,
+          0,
+          3.8
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching return pallets",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I01-freight"
+    },
+    {
+      "id": "I_WAREHOUSE_CRATE_A",
+      "zone": "industry",
+      "catalog_id": "shared_wooden_crate",
+      "variant": "large",
+      "finish": "clean",
+      "position_m": [
+        147.8,
+        2.2,
+        -66.6
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I01-A",
+        "local_position_m": [
+          7.2,
+          0,
+          -5.4
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "sorted dispatch wooden cases",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I01-cases"
+    },
+    {
+      "id": "I_WAREHOUSE_CRATE_B",
+      "zone": "industry",
+      "catalog_id": "shared_wooden_crate",
+      "variant": "large",
+      "finish": "used",
+      "position_m": [
+        146.3,
+        2.2,
+        -66.6
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I01-A",
+        "local_position_m": [
+          8.7,
+          0,
+          -5.4
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching dispatch wooden cases",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I01-cases"
+    },
+    {
+      "id": "I_WAREHOUSE_CRATE_C",
+      "zone": "industry",
+      "catalog_id": "shared_wooden_crate",
+      "variant": "medium",
+      "finish": "clean",
+      "position_m": [
+        147.8,
+        3.1916,
+        -66.6
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "surface",
+        "host_id": "I_WAREHOUSE_CRATE_A",
+        "surface_y_m": 3.1916,
+        "host_local_top_y_m": 0.9916,
+        "local_offset_xz_m": [
+          0,
+          0
+        ],
+        "evidence": "GLB visual top bounds for flat pallet/crate/table surface; no guessed vertical offset"
+      },
+      "collision_policy": "native",
+      "role": "top case in dispatch stack",
+      "rationale": "Compact deliberate stack, physically supported by its named host; no loose floating clutter.",
+      "assembly_group": "I01-cases"
+    },
+    {
+      "id": "I_WAREHOUSE_CRATE_D",
+      "zone": "industry",
+      "catalog_id": "shared_wooden_crate",
+      "variant": "medium",
+      "finish": "used",
+      "position_m": [
+        146.3,
+        3.1916,
+        -66.6
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "surface",
+        "host_id": "I_WAREHOUSE_CRATE_B",
+        "surface_y_m": 3.1916,
+        "host_local_top_y_m": 0.9916,
+        "local_offset_xz_m": [
+          0,
+          0
+        ],
+        "evidence": "GLB visual top bounds for flat pallet/crate/table surface; no guessed vertical offset"
+      },
+      "collision_policy": "native",
+      "role": "top case in matching dispatch stack",
+      "rationale": "Compact deliberate stack, physically supported by its named host; no loose floating clutter.",
+      "assembly_group": "I01-cases"
+    },
+    {
+      "id": "I_WAREHOUSE_REEL_A",
+      "zone": "industry",
+      "catalog_id": "shared_cable_reel",
+      "variant": "wood",
+      "finish": "used",
+      "position_m": [
+        147.5,
+        2.2,
+        -69.7
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I01-A",
+        "local_position_m": [
+          7.5,
+          0,
+          -2.3
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "cable stock bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I01-cable-stock"
+    },
+    {
+      "id": "I_WAREHOUSE_REEL_B",
+      "zone": "industry",
+      "catalog_id": "shared_cable_reel",
+      "variant": "wood",
+      "finish": "clean",
+      "position_m": [
+        145.7,
+        2.2,
+        -69.7
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I01-A",
+        "local_position_m": [
+          9.3,
+          0,
+          -2.3
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching cable stock bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I01-cable-stock"
+    },
+    {
+      "id": "I_DISPATCH_DESK_A",
+      "zone": "industry",
+      "catalog_id": "town_office_furniture",
+      "variant": "desk",
+      "finish": "clean",
+      "position_m": [
+        193.8,
+        2.2,
+        -74.5
+      ],
+      "yaw_deg": 270,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I02-A",
+        "local_position_m": [
+          -2.8,
+          0,
+          -3.5
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t02_long_house_ground.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "dispatch administration desk",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I02-dispatch-office"
+    },
+    {
+      "id": "I_DISPATCH_DESK_B",
+      "zone": "industry",
+      "catalog_id": "town_office_furniture",
+      "variant": "desk",
+      "finish": "used",
+      "position_m": [
+        193.8,
+        2.2,
+        -78
+      ],
+      "yaw_deg": 270,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I02-A",
+        "local_position_m": [
+          -2.8,
+          0,
+          0
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t02_long_house_ground.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching freight scheduling desk",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I02-dispatch-office"
+    },
+    {
+      "id": "I_DISPATCH_FILE_A",
+      "zone": "industry",
+      "catalog_id": "town_office_furniture",
+      "variant": "cabinet",
+      "finish": "used",
+      "position_m": [
+        193.8,
+        2.2,
+        -83.3
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I02-A",
+        "local_position_m": [
+          -2.8,
+          0,
+          5.3
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t02_long_house_ground.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "dispatch file bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I02-dispatch-files"
+    },
+    {
+      "id": "I_DISPATCH_FILE_B",
+      "zone": "industry",
+      "catalog_id": "town_office_furniture",
+      "variant": "cabinet",
+      "finish": "used",
+      "position_m": [
+        193.1,
+        2.2,
+        -83.3
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I02-A",
+        "local_position_m": [
+          -2.1,
+          0,
+          5.3
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t02_long_house_ground.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching dispatch file bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I02-dispatch-files"
+    },
+    {
+      "id": "I_DISPATCH_FILE_C",
+      "zone": "industry",
+      "catalog_id": "town_office_furniture",
+      "variant": "cabinet",
+      "finish": "clean",
+      "position_m": [
+        192.4,
+        2.2,
+        -83.3
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I02-A",
+        "local_position_m": [
+          -1.4,
+          0,
+          5.3
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t02_long_house_ground.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching dispatch file bank end",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I02-dispatch-files"
+    },
+    {
+      "id": "I_DISPATCH_WAIT",
+      "zone": "industry",
+      "catalog_id": "town_waiting_room_chair",
+      "variant": "row",
+      "finish": "used",
+      "position_m": [
+        193,
+        2.2,
+        -72.4
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I02-A",
+        "local_position_m": [
+          -2,
+          0,
+          -5.6
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t02_long_house_ground.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "driver waiting row",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I02-dispatch-office"
+    },
+    {
+      "id": "I_DISPATCH_NOTICE",
+      "zone": "industry",
+      "catalog_id": "town_notice_board",
+      "variant": "wall",
+      "finish": "used",
+      "position_m": [
+        193.3,
+        3.3,
+        -69.995
+      ],
+      "yaw_deg": 360,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "I02-A",
+        "local_position_m": [
+          -2.3,
+          1.1,
+          -8.005
+        ],
+        "bottom_above_floor_m": 1.1,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "warehouse work notices by office",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "I02-dispatch-frontage"
+    },
+    {
+      "id": "I_DISPATCH_PAPERS",
+      "zone": "industry",
+      "catalog_id": "shared_street_litter",
+      "variant": "paper",
+      "finish": "used",
+      "position_m": [
+        193.8,
+        2.95,
+        -74.5
+      ],
+      "yaw_deg": 270,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "surface",
+        "host_id": "I_DISPATCH_DESK_A",
+        "surface_y_m": 2.95,
+        "host_local_top_y_m": 0.75,
+        "local_offset_xz_m": [
+          0,
+          0
+        ],
+        "evidence": "GLB visual top bounds for flat pallet/crate/table surface; no guessed vertical offset"
+      },
+      "collision_policy": "visual_only",
+      "role": "abandoned scheduling paperwork on desktop; source footprint already0.70x0.57m",
+      "rationale": "Compact deliberate stack, physically supported by its named host; no loose floating clutter.",
+      "assembly_group": "I02-dispatch-office"
+    },
+    {
+      "id": "I_SOUTH_BENCH_A",
+      "zone": "industry",
+      "catalog_id": "town_workshop_bench",
+      "variant": "tool-covered",
+      "finish": "used",
+      "position_m": [
+        154.5,
+        2.2,
+        60.2
+      ],
+      "yaw_deg": 360,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I05-A",
+        "local_position_m": [
+          -4.5,
+          0,
+          3.8
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "south depot repair bench",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I05-repair"
+    },
+    {
+      "id": "I_SOUTH_BENCH_B",
+      "zone": "industry",
+      "catalog_id": "town_workshop_bench",
+      "variant": "plain",
+      "finish": "clean",
+      "position_m": [
+        152.3,
+        2.2,
+        60.2
+      ],
+      "yaw_deg": 360,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I05-A",
+        "local_position_m": [
+          -2.3,
+          0,
+          3.8
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching repair bench",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I05-repair"
+    },
+    {
+      "id": "I_SOUTH_CART",
+      "zone": "industry",
+      "catalog_id": "industry_welding_cart",
+      "variant": "covered",
+      "finish": "used",
+      "position_m": [
+        155.6,
+        2.2,
+        62.3
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I05-A",
+        "local_position_m": [
+          -5.6,
+          0,
+          1.7
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "repair cart near benches",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I05-repair"
+    },
+    {
+      "id": "I_SOUTH_COMPRESSOR",
+      "zone": "industry",
+      "catalog_id": "industry_air_compressor",
+      "variant": "horizontal",
+      "finish": "used",
+      "position_m": [
+        155.7,
+        2.2,
+        65.2
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I05-A",
+        "local_position_m": [
+          -5.7,
+          0,
+          -1.2
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "repair bay portable compressor",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I05-repair"
+    },
+    {
+      "id": "I_SOUTH_DRUM_A",
+      "zone": "industry",
+      "catalog_id": "shared_oil_drum",
+      "variant": "closed",
+      "finish": "clean",
+      "position_m": [
+        144.7,
+        2.2,
+        60.3
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I05-A",
+        "local_position_m": [
+          5.3,
+          0,
+          3.7
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "lubricant drum bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I05-service-stock"
+    },
+    {
+      "id": "I_SOUTH_DRUM_B",
+      "zone": "industry",
+      "catalog_id": "shared_oil_drum",
+      "variant": "closed",
+      "finish": "used",
+      "position_m": [
+        145.5,
+        2.2,
+        60.3
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I05-A",
+        "local_position_m": [
+          4.5,
+          0,
+          3.7
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching lubricant bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I05-service-stock"
+    },
+    {
+      "id": "I_SOUTH_TIRES_A",
+      "zone": "industry",
+      "catalog_id": "shared_tire_stack",
+      "variant": "stacked",
+      "finish": "used",
+      "position_m": [
+        144.5,
+        2.2,
+        62.1
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I05-A",
+        "local_position_m": [
+          5.5,
+          0,
+          1.9
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "spare tire service bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I05-service-stock"
+    },
+    {
+      "id": "I_SOUTH_TIRES_B",
+      "zone": "industry",
+      "catalog_id": "shared_tire_stack",
+      "variant": "stacked",
+      "finish": "used",
+      "position_m": [
+        145.4,
+        2.2,
+        62.1
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "building_floor",
+        "host_id": "I05-A",
+        "local_position_m": [
+          4.6,
+          0,
+          1.9
+        ],
+        "floor_y_m": 2.2,
+        "evidence": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn: Architecture/GroundFloor at localY=-0.1, BoxShape height0.2; native instance rootY=2.2"
+      },
+      "collision_policy": "native",
+      "role": "matching spare tire service bank",
+      "rationale": "Furniture follows a perimeter work/wait/storage zone; central door-to-interior and east stair circulation remain open.",
+      "assembly_group": "I05-service-stock"
+    },
+    {
+      "id": "I_SOUTH_TASKLIGHT",
+      "zone": "industry",
+      "catalog_id": "industry_work_light",
+      "variant": "mounted",
+      "finish": "clean",
+      "position_m": [
+        154.3,
+        4.8,
+        59.255
+      ],
+      "yaw_deg": 360,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "wall",
+        "host_id": "I05-A",
+        "local_position_m": [
+          -4.3,
+          2.6,
+          4.745
+        ],
+        "bottom_above_floor_m": 2.6,
+        "floor_y_m": 2.2,
+        "mounting_plane": "rear of GLB is localZ=0; local+Z faces away from its wall",
+        "evidence": "authored wall face in host .tscn; source GLB back plane atZ0"
+      },
+      "collision_policy": "visual_only",
+      "role": "unpowered rear task light",
+      "rationale": "Mount on a verified solid wall face; no frame crosses the door aperture or stair port.",
+      "assembly_group": "I05-repair"
+    },
+    {
+      "id": "I_YARD_FORKLIFT",
+      "zone": "industry",
+      "catalog_id": "industry_forklift",
+      "variant": "intact",
+      "finish": "used",
+      "position_m": [
+        175,
+        3,
+        -89
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 3,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "forklift parked at warehouse loading yard edge",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "I01-loading-yard"
+    },
+    {
+      "id": "I_YARD_PIPE_A",
+      "zone": "industry",
+      "catalog_id": "industry_steel_pipe_stack",
+      "variant": "large",
+      "finish": "clean",
+      "position_m": [
+        176,
+        3,
+        -95
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 3,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "pipe stock in aligned yard bank",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "I01-steel-stock"
+    },
+    {
+      "id": "I_YARD_PIPE_B",
+      "zone": "industry",
+      "catalog_id": "industry_steel_pipe_stack",
+      "variant": "small",
+      "finish": "used",
+      "position_m": [
+        176,
+        3,
+        -98
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 3,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "matching pipe stock bank",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "I01-steel-stock"
+    },
+    {
+      "id": "I_YARD_BEAM_A",
+      "zone": "industry",
+      "catalog_id": "industry_steel_beam_stack",
+      "variant": "large",
+      "finish": "used",
+      "position_m": [
+        183,
+        2.977273,
+        -95
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2.977273,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "steel beam bank alongside pipe stock",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "I01-steel-stock"
+    },
+    {
+      "id": "I_YARD_BEAM_B",
+      "zone": "industry",
+      "catalog_id": "industry_steel_beam_stack",
+      "variant": "small",
+      "finish": "clean",
+      "position_m": [
+        183,
+        2.99,
+        -98
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2.99,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "matching steel beam stock",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "I01-steel-stock"
+    },
+    {
+      "id": "I_YARD_SLEEPERS_A",
+      "zone": "industry",
+      "catalog_id": "industry_rail_sleepers",
+      "variant": "short",
+      "finish": "used",
+      "position_m": [
+        199.7,
+        3,
+        -103
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 3,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "stored sleepers west of live rail corridor",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "industry-rail-maintenance"
+    },
+    {
+      "id": "I_YARD_SLEEPERS_B",
+      "zone": "industry",
+      "catalog_id": "industry_rail_sleepers",
+      "variant": "short",
+      "finish": "clean",
+      "position_m": [
+        199.7,
+        3,
+        -101
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 3,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "matching sleeper stock bank",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "industry-rail-maintenance"
+    },
+    {
+      "id": "I_RAIL_SIGNAL",
+      "zone": "industry",
+      "catalog_id": "industry_rail_signal",
+      "variant": "one",
+      "finish": "used",
+      "position_m": [
+        206.7,
+        2.834595,
+        -106
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2.834595,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "nonfunctional signal beside rail approach",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "industry-rail-maintenance"
+    },
+    {
+      "id": "I_SERVICE_TANK",
+      "zone": "industry",
+      "catalog_id": "industry_fuel_tank",
+      "variant": "short",
+      "finish": "clean",
+      "position_m": [
+        167,
+        2,
+        -43
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "small workshop fuel service tank on ground",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "industry-fuel-service"
+    },
+    {
+      "id": "I_SERVICE_PUMP",
+      "zone": "industry",
+      "catalog_id": "industry_fuel_pump",
+      "variant": "manual",
+      "finish": "used",
+      "position_m": [
+        170,
+        2,
+        -43
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "manual pump beside service tank",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "industry-fuel-service"
+    },
+    {
+      "id": "I_SERVICE_DRUM_A",
+      "zone": "industry",
+      "catalog_id": "shared_oil_drum",
+      "variant": "closed",
+      "finish": "clean",
+      "position_m": [
+        167,
+        2,
+        -46
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "same-type spare drum bank",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "industry-fuel-service"
+    },
+    {
+      "id": "I_SERVICE_DRUM_B",
+      "zone": "industry",
+      "catalog_id": "shared_oil_drum",
+      "variant": "closed",
+      "finish": "used",
+      "position_m": [
+        168,
+        2,
+        -46
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "same-type spare drum bank",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "industry-fuel-service"
+    },
+    {
+      "id": "I_SERVICE_DRUM_C",
+      "zone": "industry",
+      "catalog_id": "shared_oil_drum",
+      "variant": "dented",
+      "finish": "worn",
+      "position_m": [
+        169,
+        2,
+        -46
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "single worn drum at bank end",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "industry-fuel-service"
+    },
+    {
+      "id": "I_YARD_DUMPSTER",
+      "zone": "industry",
+      "catalog_id": "shared_industrial_dumpster",
+      "variant": "closed",
+      "finish": "used",
+      "position_m": [
+        178,
+        2,
+        -50
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "controlled yard waste station",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "industry-waste"
+    },
+    {
+      "id": "I_YARD_SCRAP",
+      "zone": "industry",
+      "catalog_id": "shared_scrap_metal_pile",
+      "variant": "small",
+      "finish": "worn",
+      "position_m": [
+        181,
+        2,
+        -50
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "localized repair scrap beside waste station",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "industry-waste"
+    },
+    {
+      "id": "I_SOUTH_REEL_A",
+      "zone": "industry",
+      "catalog_id": "shared_cable_reel",
+      "variant": "metal",
+      "finish": "used",
+      "position_m": [
+        167,
+        2,
+        57
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "south yard cable bank",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "I05-yard-cable"
+    },
+    {
+      "id": "I_SOUTH_REEL_B",
+      "zone": "industry",
+      "catalog_id": "shared_cable_reel",
+      "variant": "metal",
+      "finish": "clean",
+      "position_m": [
+        169,
+        2,
+        57
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "matching cable bank",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "I05-yard-cable"
+    },
+    {
+      "id": "I_SOUTH_TIMBER_A",
+      "zone": "industry",
+      "catalog_id": "shared_timber_stack",
+      "variant": "boards",
+      "finish": "used",
+      "position_m": [
+        174,
+        2,
+        57
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "packing board stock beside south workshop",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "I05-yard-packing"
+    },
+    {
+      "id": "I_SOUTH_TIMBER_B",
+      "zone": "industry",
+      "catalog_id": "shared_timber_stack",
+      "variant": "boards",
+      "finish": "clean",
+      "position_m": [
+        174,
+        2,
+        59
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "matching packing board stock",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "I05-yard-packing"
+    },
+    {
+      "id": "I_SOUTH_CABINET",
+      "zone": "industry",
+      "catalog_id": "shared_electrical_cabinet",
+      "variant": "large",
+      "finish": "clean",
+      "position_m": [
+        167,
+        2,
+        66
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "standalone depot electrical service cabinet",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "I05-yard-service"
+    },
+    {
+      "id": "I_CONTAINER_I04-A",
+      "zone": "industry",
+      "catalog_id": "industry_shipping_container",
+      "variant": "single",
+      "finish": "used",
+      "position_m": [
+        171,
+        2,
+        -24
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "existing closed freight container art replacement candidate",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "I04-container-bank",
+      "proxy_id": "I04-A",
+      "replacement_status": "candidate; retain original proxy until parent verifies native collider/LOS fit",
+      "replacement_fit": {
+        "old_world_size_xyz_m": [
+          2.44,
+          2.59,
+          6.06
+        ],
+        "new_world_size_xyz_m": [
+          2.4,
+          2.6,
+          6
+        ],
+        "foot_y_m": 2,
+        "top_delta_m": 0.01,
+        "removal_rule": "No invisible old collider: accept native imported collider and remove old opaque proxy only after finite LOS/traversal checks."
+      }
+    },
+    {
+      "id": "I_CONTAINER_I04-B",
+      "zone": "industry",
+      "catalog_id": "industry_shipping_container",
+      "variant": "single",
+      "finish": "clean",
+      "position_m": [
+        179,
+        2,
+        -24
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "existing closed freight container art replacement candidate",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "I04-container-bank",
+      "proxy_id": "I04-B",
+      "replacement_status": "candidate; retain original proxy until parent verifies native collider/LOS fit",
+      "replacement_fit": {
+        "old_world_size_xyz_m": [
+          2.44,
+          2.59,
+          6.06
+        ],
+        "new_world_size_xyz_m": [
+          2.4,
+          2.6,
+          6
+        ],
+        "foot_y_m": 2,
+        "top_delta_m": 0.01,
+        "removal_rule": "No invisible old collider: accept native imported collider and remove old opaque proxy only after finite LOS/traversal checks."
+      }
+    },
+    {
+      "id": "I_CONTAINER_I04-C",
+      "zone": "industry",
+      "catalog_id": "industry_shipping_container",
+      "variant": "single",
+      "finish": "used",
+      "position_m": [
+        187,
+        2,
+        -24
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "existing closed freight container art replacement candidate",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "I04-container-bank",
+      "proxy_id": "I04-C",
+      "replacement_status": "candidate; retain original proxy until parent verifies native collider/LOS fit",
+      "replacement_fit": {
+        "old_world_size_xyz_m": [
+          2.44,
+          2.59,
+          6.06
+        ],
+        "new_world_size_xyz_m": [
+          2.4,
+          2.6,
+          6
+        ],
+        "foot_y_m": 2,
+        "top_delta_m": 0.01,
+        "removal_rule": "No invisible old collider: accept native imported collider and remove old opaque proxy only after finite LOS/traversal checks."
+      }
+    },
+    {
+      "id": "I_CONTAINER_I06-A",
+      "zone": "industry",
+      "catalog_id": "industry_shipping_container",
+      "variant": "single",
+      "finish": "clean",
+      "position_m": [
+        146,
+        2,
+        35
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "existing closed freight container art replacement candidate",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "I06-container-bank",
+      "proxy_id": "I06-A",
+      "replacement_status": "candidate; retain original proxy until parent verifies native collider/LOS fit",
+      "replacement_fit": {
+        "old_world_size_xyz_m": [
+          2.44,
+          2.59,
+          6.06
+        ],
+        "new_world_size_xyz_m": [
+          2.4,
+          2.6,
+          6
+        ],
+        "foot_y_m": 2,
+        "top_delta_m": 0.01,
+        "removal_rule": "No invisible old collider: accept native imported collider and remove old opaque proxy only after finite LOS/traversal checks."
+      }
+    },
+    {
+      "id": "I_CONTAINER_I06-B",
+      "zone": "industry",
+      "catalog_id": "industry_shipping_container",
+      "variant": "single",
+      "finish": "used",
+      "position_m": [
+        154,
+        2,
+        35
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "existing closed freight container art replacement candidate",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "I06-container-bank",
+      "proxy_id": "I06-B",
+      "replacement_status": "candidate; retain original proxy until parent verifies native collider/LOS fit",
+      "replacement_fit": {
+        "old_world_size_xyz_m": [
+          2.44,
+          2.59,
+          6.06
+        ],
+        "new_world_size_xyz_m": [
+          2.4,
+          2.6,
+          6
+        ],
+        "foot_y_m": 2,
+        "top_delta_m": 0.01,
+        "removal_rule": "No invisible old collider: accept native imported collider and remove old opaque proxy only after finite LOS/traversal checks."
+      }
+    },
+    {
+      "id": "I_CONTAINER_I06-C",
+      "zone": "industry",
+      "catalog_id": "industry_shipping_container",
+      "variant": "single",
+      "finish": "worn",
+      "position_m": [
+        162,
+        2,
+        35
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "existing closed freight container art replacement candidate",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "I06-container-bank",
+      "proxy_id": "I06-C",
+      "replacement_status": "candidate; retain original proxy until parent verifies native collider/LOS fit",
+      "replacement_fit": {
+        "old_world_size_xyz_m": [
+          2.44,
+          2.59,
+          6.06
+        ],
+        "new_world_size_xyz_m": [
+          2.4,
+          2.6,
+          6
+        ],
+        "foot_y_m": 2,
+        "top_delta_m": 0.01,
+        "removal_rule": "No invisible old collider: accept native imported collider and remove old opaque proxy only after finite LOS/traversal checks."
+      }
+    },
+    {
+      "id": "I_RAIL_BOXCAR",
+      "zone": "industry",
+      "catalog_id": "industry_rail_boxcar",
+      "variant": "shut",
+      "finish": "used",
+      "position_m": [
+        208.52,
+        2.035,
+        -43.18
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "same-centre rail freight art replacement candidate",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "industry-existing-rail-freight",
+      "proxy_id": "I08-A",
+      "contact_exception": "Intentional rail vehicle footprint occupies the existing railcar/track host; no new track blockage.",
+      "replacement_status": "candidate only; parent must accept finite LOS and real native collider before replacing current geometry",
+      "replacement_fit": {
+        "old_world_size_xyz_m": [
+          3.1,
+          4,
+          14
+        ],
+        "new_world_size_xyz_m": [
+          3.2,
+          4.2,
+          14
+        ],
+        "side_extension_each_m": 0.05,
+        "height_extension_m": 0.2,
+        "native_bottom_offset_m": 0.035,
+        "removal_rule": "Never hide old proxy while retaining its whole solid box; use native imported collision after required acceptance."
+      }
+    },
+    {
+      "id": "I_RAIL_TANK",
+      "zone": "industry",
+      "catalog_id": "industry_rail_tank_wagon",
+      "variant": "plain",
+      "finish": "used",
+      "position_m": [
+        198.3,
+        2.035,
+        59.09
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "support": {
+        "kind": "terrain",
+        "surface_y_m": 2,
+        "evidence": "phase2/terrain-authoring.cjs::heightAt on exported dry terrain"
+      },
+      "collision_policy": "native",
+      "role": "same-centre rail freight art replacement candidate",
+      "rationale": "Position selected on the service yard or courtyard perimeter, away from authored swept routes and existing patrols.",
+      "assembly_group": "industry-existing-rail-freight",
+      "proxy_id": "I09-A",
+      "contact_exception": "Intentional rail vehicle footprint occupies the existing railcar/track host; no new track blockage.",
+      "replacement_status": "candidate only; parent must accept finite LOS and real native collider before replacing current geometry",
+      "replacement_fit": {
+        "old_world_size_xyz_m": [
+          3.1,
+          4,
+          14
+        ],
+        "new_world_size_xyz_m": [
+          3.2,
+          4.5,
+          14
+        ],
+        "side_extension_each_m": 0.05,
+        "height_extension_m": 0.5,
+        "native_bottom_offset_m": 0.035,
+        "removal_rule": "Never hide old proxy while retaining its whole solid box; use native imported collision after required acceptance."
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "catalog_id": "town_soviet_bus_shelter",
+      "placement_ids": [
+        "T_BUS_SHELTER"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "town_metal_garage_door",
+      "placement_ids": [],
+      "deferred": {
+        "catalog_id": "town_metal_garage_door",
+        "reason": "Door library is static3.28m wide/2.62m high with open-leaf sweep; existing functional doors/garage port geometry do not match. No decorative second door, behavior change or blocked door port.",
+        "action": "Retain current geometry; do not hide/remove any original collider or opaque proxy."
+      }
+    },
+    {
+      "catalog_id": "town_entrance_steps",
+      "placement_ids": [],
+      "deferred": {
+        "catalog_id": "town_entrance_steps",
+        "reason": "Asset landing rises1.5m, while live ground-floor thresholds are0.2m over terrain; placing it at an entry breaks step/door contracts. It needs a deliberately redesigned stair entrance, outside furnishing scope.",
+        "action": "Retain current geometry; do not hide/remove any original collider or opaque proxy."
+      }
+    },
+    {
+      "catalog_id": "town_apartment_mailboxes",
+      "placement_ids": [
+        "T_APARTMENT_MAIL"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "town_shop_cyrillic_sign",
+      "placement_ids": [
+        "T_PHARM_SIGN",
+        "T_GROCERY_SIGN",
+        "T_SERVICES_SIGN"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "town_market_stall",
+      "placement_ids": [
+        "T_MARKET_STALL_A",
+        "T_MARKET_STALL_B"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "town_wall_electric_meter",
+      "placement_ids": [
+        "T_PHARM_METER",
+        "T_HOME_METER",
+        "T_APARTMENT_METER"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "town_courtyard_bench",
+      "placement_ids": [
+        "T_COURTYARD_BENCH_A",
+        "T_COURTYARD_BENCH_B"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "town_notice_board",
+      "placement_ids": [
+        "T_CLINIC_NOTICE",
+        "T_CIVIC_NOTICE",
+        "T_BUS_BOARD",
+        "I_DISPATCH_NOTICE"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "town_satellite_dish",
+      "placement_ids": [
+        "T_APARTMENT_DISH"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "town_playground_swing",
+      "placement_ids": [
+        "T_COURTYARD_SWING"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "town_air_conditioner",
+      "placement_ids": [
+        "T_CLINIC_AC",
+        "T_GROCERY_AC"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "town_pharmacy_shelf",
+      "placement_ids": [
+        "T_CLINIC_SHELF_A",
+        "T_CLINIC_SHELF_B",
+        "T_PHARM_SHELF_A",
+        "T_PHARM_SHELF_B",
+        "T_PHARM_SHELF_C",
+        "T_GROCERY_SHELF_A",
+        "T_GROCERY_SHELF_B"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "town_shop_counter",
+      "placement_ids": [
+        "T_PHARM_COUNTER_A",
+        "T_PHARM_COUNTER_B",
+        "T_GROCERY_COUNTER"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "town_office_furniture",
+      "placement_ids": [
+        "T_CLINIC_DESK",
+        "T_CLINIC_FILE_A",
+        "T_CLINIC_FILE_B",
+        "T_PHARM_FILE",
+        "T_GROCERY_DESK",
+        "T_CIVIC_DESK_A",
+        "T_CIVIC_DESK_B",
+        "T_CIVIC_FILE_A",
+        "T_CIVIC_FILE_B",
+        "T_CIVIC_FILE_C",
+        "T_COMMUNITY_DESK",
+        "T_COMMUNITY_FILE_A",
+        "T_COMMUNITY_FILE_B",
+        "T_SERVICES_DESK",
+        "T_SERVICES_FILES_A",
+        "T_SERVICES_FILES_B",
+        "T_HOME_DESK",
+        "T_HOME_CABINET",
+        "T_HOME_LONG_DESK",
+        "T_HOME_LONG_FILE",
+        "T_HOME_EAST_DESK",
+        "T_HOME_EAST_CABINET",
+        "I_DISPATCH_DESK_A",
+        "I_DISPATCH_DESK_B",
+        "I_DISPATCH_FILE_A",
+        "I_DISPATCH_FILE_B",
+        "I_DISPATCH_FILE_C"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "town_clinic_examination_bed",
+      "placement_ids": [
+        "T_CLINIC_BED_A",
+        "T_CLINIC_BED_B"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "town_workshop_bench",
+      "placement_ids": [
+        "T_GARAGE_BENCH_A",
+        "T_GARAGE_BENCH_B",
+        "T_WORKSHOP_BENCH_A",
+        "T_WORKSHOP_BENCH_B",
+        "I_WAREHOUSE_BENCH_A",
+        "I_WAREHOUSE_BENCH_B",
+        "I_SOUTH_BENCH_A",
+        "I_SOUTH_BENCH_B"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "town_waiting_room_chair",
+      "placement_ids": [
+        "T_CLINIC_WAIT_A",
+        "T_CLINIC_WAIT_B",
+        "T_CIVIC_WAIT",
+        "T_COMMUNITY_WAIT",
+        "I_DISPATCH_WAIT"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "town_apartment_radiator",
+      "placement_ids": [
+        "T_HOME_RADIATOR",
+        "T_HOME_LONG_RADIATOR",
+        "T_HOME_EAST_RADIATOR"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "industry_rail_boxcar",
+      "placement_ids": [
+        "I_RAIL_BOXCAR"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "industry_rail_gondola",
+      "placement_ids": [],
+      "deferred": {
+        "catalog_id": "industry_rail_gondola",
+        "reason": "3.5m high asset cannot replace4m railcar or3.6m derailed opaque proxy honestly. No remaining canonical wagon host; adding another wagon would block rail/service corridor or require a new siding.",
+        "action": "Retain current geometry; do not hide/remove any original collider or opaque proxy."
+      }
+    },
+    {
+      "catalog_id": "industry_rail_tank_wagon",
+      "placement_ids": [
+        "I_RAIL_TANK"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "industry_shipping_container",
+      "placement_ids": [
+        "I_CONTAINER_I04-A",
+        "I_CONTAINER_I04-B",
+        "I_CONTAINER_I04-C",
+        "I_CONTAINER_I06-A",
+        "I_CONTAINER_I06-B",
+        "I_CONTAINER_I06-C"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "industry_rail_signal",
+      "placement_ids": [
+        "I_RAIL_SIGNAL"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "industry_rail_switch",
+      "placement_ids": [],
+      "deferred": {
+        "catalog_id": "industry_rail_switch",
+        "reason": "Existing authored rail is a continuous single line, with no matching branching track. Switch lever is not placed as unexplained debris and does not authorize track geometry changes.",
+        "action": "Retain current geometry; do not hide/remove any original collider or opaque proxy."
+      }
+    },
+    {
+      "catalog_id": "industry_steel_pipe_stack",
+      "placement_ids": [
+        "I_YARD_PIPE_A",
+        "I_YARD_PIPE_B"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "industry_work_light",
+      "placement_ids": [
+        "T_WORKSHOP_LIGHT",
+        "I_WAREHOUSE_TRIPOD",
+        "I_SOUTH_TASKLIGHT"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "industry_industrial_gauge",
+      "placement_ids": [
+        "I_WAREHOUSE_GAUGE"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "industry_fuel_pump",
+      "placement_ids": [
+        "I_SERVICE_PUMP"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "industry_warehouse_shutter",
+      "placement_ids": [],
+      "deferred": {
+        "catalog_id": "industry_warehouse_shutter",
+        "reason": "4.28m width/3.75m height frame is not compatible with the current warehouse/garage aperture and lintel. Retrofitting or layering it over the functional opening would change access and door behavior.",
+        "action": "Retain current geometry; do not hide/remove any original collider or opaque proxy."
+      }
+    },
+    {
+      "catalog_id": "industry_steel_beam_stack",
+      "placement_ids": [
+        "I_YARD_BEAM_A",
+        "I_YARD_BEAM_B"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "industry_fuel_tank",
+      "placement_ids": [
+        "I_SERVICE_TANK"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "industry_rail_sleepers",
+      "placement_ids": [
+        "I_YARD_SLEEPERS_A",
+        "I_YARD_SLEEPERS_B"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "industry_forklift",
+      "placement_ids": [
+        "I_YARD_FORKLIFT"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "industry_rail_buffer_stop",
+      "placement_ids": [],
+      "deferred": {
+        "catalog_id": "industry_rail_buffer_stop",
+        "reason": "P04 rail is through-running at both map edges; there is no siding terminus to support a buffer stop. Blocking the live rail/service route for catalogue coverage is unjustified.",
+        "action": "Retain current geometry; do not hide/remove any original collider or opaque proxy."
+      }
+    },
+    {
+      "catalog_id": "industry_air_compressor",
+      "placement_ids": [
+        "T_GARAGE_COMPRESSOR",
+        "I_WAREHOUSE_COMPRESSOR",
+        "I_SOUTH_COMPRESSOR"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "industry_gantry_crane",
+      "placement_ids": [
+        "I_WAREHOUSE_CRANE"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "industry_welding_cart",
+      "placement_ids": [
+        "T_WORKSHOP_CART",
+        "I_WAREHOUSE_CART",
+        "I_SOUTH_CART"
+      ],
+      "deferred": null
+    },
+    {
+      "catalog_id": "town_store_awning",
+      "placement_ids": [
+        "T_PHARM_AWNING",
+        "T_GROCERY_AWNING"
+      ],
+      "deferred": null
+    }
+  ],
+  "deferred": [
+    {
+      "catalog_id": "town_metal_garage_door",
+      "reason": "Door library is static3.28m wide/2.62m high with open-leaf sweep; existing functional doors/garage port geometry do not match. No decorative second door, behavior change or blocked door port.",
+      "action": "Retain current geometry; do not hide/remove any original collider or opaque proxy."
+    },
+    {
+      "catalog_id": "town_entrance_steps",
+      "reason": "Asset landing rises1.5m, while live ground-floor thresholds are0.2m over terrain; placing it at an entry breaks step/door contracts. It needs a deliberately redesigned stair entrance, outside furnishing scope.",
+      "action": "Retain current geometry; do not hide/remove any original collider or opaque proxy."
+    },
+    {
+      "catalog_id": "industry_rail_gondola",
+      "reason": "3.5m high asset cannot replace4m railcar or3.6m derailed opaque proxy honestly. No remaining canonical wagon host; adding another wagon would block rail/service corridor or require a new siding.",
+      "action": "Retain current geometry; do not hide/remove any original collider or opaque proxy."
+    },
+    {
+      "catalog_id": "industry_rail_switch",
+      "reason": "Existing authored rail is a continuous single line, with no matching branching track. Switch lever is not placed as unexplained debris and does not authorize track geometry changes.",
+      "action": "Retain current geometry; do not hide/remove any original collider or opaque proxy."
+    },
+    {
+      "catalog_id": "industry_rail_buffer_stop",
+      "reason": "P04 rail is through-running at both map edges; there is no siding terminus to support a buffer stop. Blocking the live rail/service route for catalogue coverage is unjustified.",
+      "action": "Retain current geometry; do not hide/remove any original collider or opaque proxy."
+    },
+    {
+      "catalog_id": "industry_warehouse_shutter",
+      "reason": "4.28m width/3.75m height frame is not compatible with the current warehouse/garage aperture and lintel. Retrofitting or layering it over the functional opening would change access and door behavior.",
+      "action": "Retain current geometry; do not hide/remove any original collider or opaque proxy."
+    }
+  ],
+  "verification_limits": [
+    "Offline authored coordinates and exact source support only; not native collision/contact/navigation/LOS/render PASS.",
+    "Parent owns scene merge/editor acceptance and may reject/relocate any collision candidate.",
+    "Furnishing extents include full visual AABBs; native collider shape and wall mounting require final editor checks."
+  ]
+}

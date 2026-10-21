@@ -1,0 +1,2630 @@
+{
+  "OB-B05-generator": {
+    "rotation_deg": [
+      3.11403775215149,
+      -0.0561563037335873,
+      -1.03362762928009
+    ],
+    "y": 19.3840127170458,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OB-B05-shaft": {
+    "rotation_deg": [
+      3.84119153022766,
+      -0.0689452588558197,
+      -1.02905809879303
+    ],
+    "y": 19.2212396447919,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OB-B05-pipe": {
+    "rotation_deg": [
+      0.0128257041797042,
+      90.0007019042969,
+      3.12038946151733
+    ],
+    "y": 19.4797832018137,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OB-B05-valve": {
+    "rotation_deg": [
+      -0.49775829911232,
+      89.9664459228516,
+      3.85584878921509
+    ],
+    "y": 19.3476284260303,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OB-supply-wood-02": {
+    "rotation_deg": [
+      1.25010895729065,
+      -0.129808962345123,
+      -5.92871713638306
+    ],
+    "y": 17.0807346992567,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OB-supply-wood-03": {
+    "rotation_deg": [
+      -1.4251104593277,
+      9.75413036346436,
+      9.78973484039307
+    ],
+    "y": 16.738246181272,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OB-supply-metal-01": {
+    "rotation_deg": [
+      0.312315225601196,
+      0.054537795484066,
+      9.90540409088135
+    ],
+    "y": 17.0552790698037,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OB-supply-metal-02": {
+    "rotation_deg": [
+      0.3146892786026,
+      -0.0474326945841312,
+      -8.57163524627686
+    ],
+    "y": 17.134682571739,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OB-supply-pallet": {
+    "rotation_deg": [
+      8.13330936431885,
+      90.1432266235352,
+      1.01225399971008
+    ],
+    "y": 16.4896745572239,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OB-supply-dumpster": {
+    "rotation_deg": [
+      6.59534645080566,
+      89.0984115600586,
+      -7.8017783164978
+    ],
+    "y": 17.9244779468328,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OB-B06-light": {
+    "rotation_deg": [
+      10.5873050689697,
+      -1.13051450252533,
+      -6.13030958175659
+    ],
+    "y": 9.41598729578778,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OB-B06-hedgehog-01": {
+    "rotation_deg": [
+      -2.97079396247864,
+      0,
+      0
+    ],
+    "y": 9.95993352994788,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OH-rock-01": {
+    "rotation_deg": [
+      -7.59392595291138,
+      14.9306888580322,
+      0.524467468261719
+    ],
+    "y": 12.7225275160652,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OH-rock-02": {
+    "rotation_deg": [
+      -4.80492734909058,
+      70.5033721923828,
+      -5.98768377304077
+    ],
+    "y": 13.027883438617,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OH-cliff-01": {
+    "rotation_deg": [
+      9.62809562683105,
+      -0.0791972056031227,
+      -0.473509103059769
+    ],
+    "y": 7.03015748620033,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OH-wall": {
+    "rotation_deg": [
+      9.30475997924805,
+      -2.04239940643311,
+      -12.4381132125854
+    ],
+    "y": 8.9188010597229,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OH-case-01": {
+    "rotation_deg": [
+      -6.45399236679077,
+      19.662899017334,
+      2.99627280235291
+    ],
+    "y": 13.771834781342001,
+    "evidence": "Offline native-size low visual vertices on canonical phase2 terrain; retained previous native-normal rotation, fresh native support rays required.",
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  "OH-case-02": {
+    "rotation_deg": [
+      -5.99722242355347,
+      11.5990028381348,
+      3.8323438167572
+    ],
+    "y": 13.212676540490287,
+    "evidence": "Offline native-size low visual vertices on canonical phase2 terrain; retained previous native-normal rotation, fresh native support rays required.",
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  "OH-mast-spare": {
+    "rotation_deg": [
+      -7.41680526733398,
+      0.225209847092628,
+      -1.74411368370056
+    ],
+    "y": 7.90957686397247,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OF-debris-02": {
+    "rotation_deg": [
+      -8.14547348022461,
+      25.4163627624512,
+      -2.93607521057129
+    ],
+    "y": 2.94658547010273,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OA-trough": {
+    "rotation_deg": [
+      -2.66715025901794,
+      0.202202871441841,
+      -4.33701086044312
+    ],
+    "y": 1.71833570603281,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OA-firewood": {
+    "rotation_deg": [
+      13.603253364563,
+      89.9999923706055,
+      -0.0000223901988647413
+    ],
+    "y": 3.23678440617165,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OA-bucket": {
+    "rotation_deg": [
+      -0.473356902599335,
+      10.1169490814209,
+      -13.8779230117798
+    ],
+    "y": 3.279920283781566,
+    "evidence": "Offline native-size low visual vertices on canonical phase2 terrain; retained previous native-normal rotation, fresh native support rays required.",
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  "OA-hay-01": {
+    "rotation_deg": [
+      -1.71899175643921,
+      0.103585109114647,
+      -3.44894886016846
+    ],
+    "y": 1.63000370060559,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OA-hay-02": {
+    "rotation_deg": [
+      -0.966220617294312,
+      12.0629901885986,
+      -3.73019409179688
+    ],
+    "y": 1.73241388144903,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OR-rock-02": {
+    "rotation_deg": [
+      7.41630363464355,
+      85.1241226196289,
+      0.96155321598053
+    ],
+    "y": 3.99449658323079,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OR-driftwood": {
+    "rotation_deg": [
+      3.51532769203186,
+      19.6867618560791,
+      -5.09515953063965
+    ],
+    "y": 3.79160345926881,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OL-bench": {
+    "rotation_deg": [
+      7.08679103851318,
+      -179.924697875977,
+      0.610296308994293
+    ],
+    "y": 2.30674723185599,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "S_SECURITY_BAGS_A": {
+    "rotation_deg": [
+      6.05827522277832,
+      -0.468677997589111,
+      -4.43200349807739
+    ],
+    "y": 10.7108433481678,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "S_SECURITY_BAGS_B": {
+    "rotation_deg": [
+      3.60770153999329,
+      -0.219515919685364,
+      -3.48426675796509
+    ],
+    "y": 10.5112593925931,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "S_SECURITY_JERSEY_A": {
+    "rotation_deg": [
+      8.99901962280273,
+      -0.742553472518921,
+      -4.73669576644897
+    ],
+    "y": 11.438789133206,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "S_SECURITY_JERSEY_B": {
+    "rotation_deg": [
+      8.80475616455078,
+      -0.755190372467041,
+      -4.92183923721313
+    ],
+    "y": 11.2545331690833,
+    "evidence": "Native low-vertex rays and averaged terrain normal; must recheck after authoring"
+  },
+  "OT-F001": {
+    "position_xz_m": [
+      83.75,
+      -158.75
+    ],
+    "rotation_deg": [
+      0,
+      0,
+      0
+    ],
+    "y": 2.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F002": {
+    "position_xz_m": [
+      87.95,
+      -112.05
+    ],
+    "rotation_deg": [
+      0,
+      47,
+      0
+    ],
+    "y": 2.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F003": {
+    "position_xz_m": [
+      187.73,
+      -240
+    ],
+    "rotation_deg": [
+      0,
+      94,
+      0
+    ],
+    "y": 3.0049999999999994,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999449,
+      0.004999999999999449,
+      0.004999999999999449
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F004": {
+    "position_xz_m": [
+      92.16,
+      -131.02
+    ],
+    "rotation_deg": [
+      0,
+      141,
+      0
+    ],
+    "y": 2.1986170531322546,
+    "gaps_m": [
+      -0.03976589373549011,
+      0.004999999999999893,
+      0.001989273168212069,
+      -0.036755166903702285
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F005": {
+    "position_xz_m": [
+      96.93,
+      -235.11
+    ],
+    "rotation_deg": [
+      0,
+      188,
+      0
+    ],
+    "y": 2.672057119734123,
+    "gaps_m": [
+      -0.04688576053175497,
+      0.004999999999999893,
+      -0.024508559459475165,
+      -0.017377201072279913
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F006": {
+    "position_xz_m": [
+      84.09,
+      -67.27
+    ],
+    "rotation_deg": [
+      0,
+      235,
+      0
+    ],
+    "y": 2.0050000001692303,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999907696839,
+      0.004999999937375765,
+      0.0049999999703209674
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F007": {
+    "position_xz_m": [
+      79.32,
+      -244.43
+    ],
+    "rotation_deg": [
+      0,
+      282,
+      0
+    ],
+    "y": 2.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F008": {
+    "position_xz_m": [
+      114.89,
+      -240.11
+    ],
+    "rotation_deg": [
+      0,
+      329,
+      0
+    ],
+    "y": 3.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F009": {
+    "position_xz_m": [
+      99.89,
+      -197.84
+    ],
+    "rotation_deg": [
+      0,
+      16,
+      0
+    ],
+    "y": 2.963071529539791,
+    "gaps_m": [
+      0.004999999999999893,
+      -0.033440988129672,
+      -0.007936511282572223,
+      -0.035704877604122665
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F010": {
+    "position_xz_m": [
+      73.07,
+      -135.45
+    ],
+    "rotation_deg": [
+      0,
+      63,
+      0
+    ],
+    "y": 2.0560426320055365,
+    "gaps_m": [
+      0.0017333331089846027,
+      0.0005382069455066585,
+      -0.002728459945508188,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F011": {
+    "position_xz_m": [
+      185,
+      -199.43
+    ],
+    "rotation_deg": [
+      0,
+      110,
+      0
+    ],
+    "y": 2.6912517705241745,
+    "gaps_m": [
+      0.004999999999999893,
+      -0.09711049237760117,
+      -0.0478900183823896,
+      -0.04400834911026985
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F012": {
+    "position_xz_m": [
+      138.52,
+      -184.89
+    ],
+    "rotation_deg": [
+      0,
+      157,
+      0
+    ],
+    "y": 3.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F013": {
+    "position_xz_m": [
+      134.77,
+      -237.73
+    ],
+    "rotation_deg": [
+      0,
+      204,
+      0
+    ],
+    "y": 3.0049999999999994,
+    "gaps_m": [
+      0.004999999999999449,
+      0.004999999999999449,
+      0.004999999999999449,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F014": {
+    "position_xz_m": [
+      101.59,
+      -216.7
+    ],
+    "rotation_deg": [
+      0,
+      251,
+      0
+    ],
+    "y": 3.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F015": {
+    "position_xz_m": [
+      111.48,
+      -164.32
+    ],
+    "rotation_deg": [
+      0,
+      298,
+      0
+    ],
+    "y": 3.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999449,
+      0.004999999999999893,
+      0.004999999999999449
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F016": {
+    "position_xz_m": [
+      99.2,
+      -185.45
+    ],
+    "rotation_deg": [
+      0,
+      345,
+      0
+    ],
+    "y": 2.8971799153308626,
+    "gaps_m": [
+      0.004999999999999893,
+      -0.05064016933827542,
+      -0.030783255342549776,
+      -0.014856913995725751
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F017": {
+    "position_xz_m": [
+      79.77,
+      -118.75
+    ],
+    "rotation_deg": [
+      0,
+      32,
+      0
+    ],
+    "y": 2.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F018": {
+    "position_xz_m": [
+      158.41,
+      -132.5
+    ],
+    "rotation_deg": [
+      0,
+      79,
+      0
+    ],
+    "y": 3.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F019": {
+    "position_xz_m": [
+      60.34,
+      -212.61
+    ],
+    "rotation_deg": [
+      0,
+      126,
+      0
+    ],
+    "y": 2.1765104453927506,
+    "gaps_m": [
+      -0.004258460661604069,
+      -0.005934618381277623,
+      -0.015193079042881585,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F020": {
+    "position_xz_m": [
+      159.89,
+      -179.2
+    ],
+    "rotation_deg": [
+      0,
+      173,
+      0
+    ],
+    "y": 3.004999999985587,
+    "gaps_m": [
+      0.004999999985586978,
+      0.004999999999999893,
+      0.004999999991085691,
+      0.004999999988656967
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F021": {
+    "position_xz_m": [
+      49.77,
+      -126.02
+    ],
+    "rotation_deg": [
+      0,
+      220,
+      0
+    ],
+    "y": 3.0049999929576394,
+    "gaps_m": [
+      0.004999992614967752,
+      0.004999999635005192,
+      0.004999992637741979,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F022": {
+    "position_xz_m": [
+      228.41,
+      -213.86
+    ],
+    "rotation_deg": [
+      0,
+      267,
+      0
+    ],
+    "y": 3.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999449,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F023": {
+    "position_xz_m": [
+      200.57,
+      -193.07
+    ],
+    "rotation_deg": [
+      0,
+      314,
+      0
+    ],
+    "y": 3.0003910604160415,
+    "gaps_m": [
+      0.0016237635050559973,
+      0.002780081239043497,
+      0.004999999999999893,
+      0.0016168397179776584
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F024": {
+    "position_xz_m": [
+      236.93,
+      -211.02
+    ],
+    "rotation_deg": [
+      0,
+      1,
+      0
+    ],
+    "y": 3.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F025": {
+    "position_xz_m": [
+      76.93,
+      -169.89
+    ],
+    "rotation_deg": [
+      0,
+      48,
+      0
+    ],
+    "y": 2.032330638940157,
+    "gaps_m": [
+      0.0009407557066825056,
+      0.004678344138120405,
+      0.0006138473447507842,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F026": {
+    "position_xz_m": [
+      173.98,
+      -230.45
+    ],
+    "rotation_deg": [
+      0,
+      95,
+      0
+    ],
+    "y": 3.0049999999999994,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999449,
+      0.004999999999999005
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F027": {
+    "position_xz_m": [
+      184.43,
+      -182.16
+    ],
+    "rotation_deg": [
+      0,
+      142,
+      0
+    ],
+    "y": 3.0049999992514715,
+    "gaps_m": [
+      0.004999999847872694,
+      0.004999999968307023,
+      0.004999999816179823,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F028": {
+    "position_xz_m": [
+      78.98,
+      -186.14
+    ],
+    "rotation_deg": [
+      0,
+      189,
+      0
+    ],
+    "y": 2.008778989460854,
+    "gaps_m": [
+      0.004999999999999893,
+      0.0020769304012211443,
+      0.0037862486572777243,
+      0.0032906817439437575
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F029": {
+    "position_xz_m": [
+      158.41,
+      -207.39
+    ],
+    "rotation_deg": [
+      0,
+      236,
+      0
+    ],
+    "y": 3.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F030": {
+    "position_xz_m": [
+      63.86,
+      -222.95
+    ],
+    "rotation_deg": [
+      0,
+      283,
+      0
+    ],
+    "y": 2.017936003973188,
+    "gaps_m": [
+      0.00484504775845096,
+      0.0035741374789166613,
+      0.004999999999999893,
+      0.0034191852373672837
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F031": {
+    "position_xz_m": [
+      41.7,
+      -236.7
+    ],
+    "rotation_deg": [
+      0,
+      330,
+      0
+    ],
+    "y": 3.00499999829127,
+    "gaps_m": [
+      0.004999999424518897,
+      0.0049999997105878435,
+      0.0049999991351077355,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F032": {
+    "position_xz_m": [
+      127.05,
+      -232.16
+    ],
+    "rotation_deg": [
+      0,
+      17,
+      0
+    ],
+    "y": 3.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F033": {
+    "position_xz_m": [
+      51.7,
+      -195
+    ],
+    "rotation_deg": [
+      0,
+      64,
+      0
+    ],
+    "y": 3.2420119253312976,
+    "gaps_m": [
+      -0.04922169899143958,
+      -0.0001374435424534859,
+      -0.05435914253389296,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F034": {
+    "position_xz_m": [
+      157.16,
+      -233.64
+    ],
+    "rotation_deg": [
+      0,
+      111,
+      0
+    ],
+    "y": 3.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F035": {
+    "position_xz_m": [
+      133.64,
+      -130.91
+    ],
+    "rotation_deg": [
+      0,
+      158,
+      0
+    ],
+    "y": 3.0049999999999994,
+    "gaps_m": [
+      0.004999999999999449,
+      0.004999999999999449,
+      0.004999999999999449,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F036": {
+    "position_xz_m": [
+      148.3,
+      -194.55
+    ],
+    "rotation_deg": [
+      0,
+      205,
+      0
+    ],
+    "y": 3.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F037": {
+    "position_xz_m": [
+      67.84,
+      -202.61
+    ],
+    "rotation_deg": [
+      0,
+      252,
+      0
+    ],
+    "y": 2.0872161850973465,
+    "gaps_m": [
+      0.0018843261515244514,
+      -0.009347279727462077,
+      0.004999999999999893,
+      -0.012462953575937519
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F038": {
+    "position_xz_m": [
+      54.2,
+      -176.25
+    ],
+    "rotation_deg": [
+      0,
+      299,
+      0
+    ],
+    "y": 3.4405036886319067,
+    "gaps_m": [
+      -0.034737332947354815,
+      -0.010747082235170957,
+      0.004999999999999893,
+      -0.050484415182526554
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F039": {
+    "position_xz_m": [
+      159.09,
+      -223.64
+    ],
+    "rotation_deg": [
+      0,
+      346,
+      0
+    ],
+    "y": 3.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F040": {
+    "position_xz_m": [
+      103.18,
+      -163.3
+    ],
+    "rotation_deg": [
+      0,
+      33,
+      0
+    ],
+    "y": 3.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F041": {
+    "position_xz_m": [
+      60.91,
+      -152.16
+    ],
+    "rotation_deg": [
+      0,
+      80,
+      0
+    ],
+    "y": 2.785053945974564,
+    "gaps_m": [
+      -0.014298936254129035,
+      -0.013613864707139989,
+      -0.03291280096126936,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F042": {
+    "position_xz_m": [
+      90.45,
+      -202.84
+    ],
+    "rotation_deg": [
+      0,
+      127,
+      0
+    ],
+    "y": 2.0306366796422695,
+    "gaps_m": [
+      -0.033726640715461276,
+      0.004999999999999893,
+      0.004091541461326731,
+      -0.03281818217678856
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F043": {
+    "position_xz_m": [
+      223.41,
+      -135
+    ],
+    "rotation_deg": [
+      0,
+      174,
+      0
+    ],
+    "y": 3.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999449,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F044": {
+    "position_xz_m": [
+      146.36,
+      -170.91
+    ],
+    "rotation_deg": [
+      0,
+      221,
+      0
+    ],
+    "y": 3.0049999999999994,
+    "gaps_m": [
+      0.004999999999999449,
+      0.004999999999999449,
+      0.004999999999999449,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F045": {
+    "position_xz_m": [
+      110.77,
+      -103.98
+    ],
+    "rotation_deg": [
+      0,
+      268,
+      0
+    ],
+    "y": 3.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F046": {
+    "position_xz_m": [
+      201.7,
+      -130
+    ],
+    "rotation_deg": [
+      0,
+      315,
+      0
+    ],
+    "y": 3.0049999999979446,
+    "gaps_m": [
+      0.0049999999979446486,
+      0.0049999999979446486,
+      0.0049999999979446486,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F047": {
+    "position_xz_m": [
+      92.65,
+      -102.5
+    ],
+    "rotation_deg": [
+      0,
+      2,
+      0
+    ],
+    "y": 2.728706948322121,
+    "gaps_m": [
+      0.004999999999999893,
+      -0.117648736241585,
+      -0.03759151196419408,
+      -0.08723309035856319
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-F048": {
+    "position_xz_m": [
+      160.68,
+      -193.64
+    ],
+    "rotation_deg": [
+      0,
+      49,
+      0
+    ],
+    "y": 3.004999999011434,
+    "gaps_m": [
+      0.004999999886301065,
+      0.004999999936402766,
+      0.004999999822704382,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-G001": {
+    "position_xz_m": [
+      116.672,
+      -62.815
+    ],
+    "rotation_deg": [
+      0,
+      96,
+      0
+    ],
+    "y": 2.568320997858845,
+    "gaps_m": [
+      -0.04136044786800541,
+      0.004999999999999893,
+      -0.027215684647581728,
+      -0.009144763220423346
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-G002": {
+    "position_xz_m": [
+      93.18,
+      -79.66
+    ],
+    "rotation_deg": [
+      0,
+      143,
+      0
+    ],
+    "y": 2.033140313086,
+    "gaps_m": [
+      0.004999999999999893,
+      -0.134210620361217,
+      -0.08554326885918195,
+      -0.0654522660600323
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-G003": {
+    "position_xz_m": [
+      108.18,
+      6.02
+    ],
+    "rotation_deg": [
+      0,
+      190,
+      0
+    ],
+    "y": 2.0050000008848112,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999559436752,
+      0.004999999867258076,
+      0.004999999724566884
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-G004": {
+    "position_xz_m": [
+      94.118,
+      -100.595
+    ],
+    "rotation_deg": [
+      0,
+      237,
+      0
+    ],
+    "y": 3.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999005,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-G005": {
+    "position_xz_m": [
+      80.45,
+      -101.93
+    ],
+    "rotation_deg": [
+      0,
+      284,
+      0
+    ],
+    "y": 2.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-G006": {
+    "position_xz_m": [
+      108.75,
+      55.57
+    ],
+    "rotation_deg": [
+      0,
+      331,
+      0
+    ],
+    "y": 2.0050000001795474,
+    "gaps_m": [
+      0.004999999896037721,
+      0.004999999999999893,
+      0.004999999959216073,
+      0.004999999936455168
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-G007": {
+    "position_xz_m": [
+      102.535,
+      -88.382
+    ],
+    "rotation_deg": [
+      0,
+      18,
+      0
+    ],
+    "y": 2.9829880438054888,
+    "gaps_m": [
+      -0.0059205716847321455,
+      -0.015458178698399827,
+      -0.017011956194511235,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-G008": {
+    "position_xz_m": [
+      112.84,
+      75.8
+    ],
+    "rotation_deg": [
+      0,
+      65,
+      0
+    ],
+    "y": 2.080998248129312,
+    "gaps_m": [
+      0.004999999999999893,
+      -0.01634763884640389,
+      0.00354597631330833,
+      -0.014893615159712326
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-G009": {
+    "position_xz_m": [
+      87.05,
+      -57.84
+    ],
+    "rotation_deg": [
+      0,
+      112,
+      0
+    ],
+    "y": 2.005000000765086,
+    "gaps_m": [
+      0.004999999754800921,
+      0.004999999999999893,
+      0.004999999784558451,
+      0.004999999962394863
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-G010": {
+    "position_xz_m": [
+      81.14,
+      -91.25
+    ],
+    "rotation_deg": [
+      0,
+      159,
+      0
+    ],
+    "y": 2.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-G011": {
+    "position_xz_m": [
+      109.77,
+      46.93
+    ],
+    "rotation_deg": [
+      0,
+      206,
+      0
+    ],
+    "y": 2.005,
+    "gaps_m": [
+      0.004999999999837357,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-G012": {
+    "position_xz_m": [
+      112.16,
+      -112.05
+    ],
+    "rotation_deg": [
+      0,
+      253,
+      0
+    ],
+    "y": 3.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999449
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-H001": {
+    "position_xz_m": [
+      -95.34,
+      -235
+    ],
+    "rotation_deg": [
+      0,
+      300,
+      0
+    ],
+    "y": 17.83694250356308,
+    "gaps_m": [
+      0.0033260519365327923,
+      -0.006109564867362138,
+      -0.010268957720022343,
+      0.004999999999999005
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-H002": {
+    "position_xz_m": [
+      -27.5,
+      -164.55
+    ],
+    "rotation_deg": [
+      0,
+      347,
+      0
+    ],
+    "y": 14.806804175331246,
+    "gaps_m": [
+      -0.02078715220062577,
+      0.005000000000000782,
+      -0.008118091469830446,
+      -0.007669060730792765
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-H003": {
+    "position_xz_m": [
+      -73.454,
+      -163.724
+    ],
+    "rotation_deg": [
+      0,
+      34,
+      0
+    ],
+    "y": 11.690028194067208,
+    "gaps_m": [
+      0.005000000000000782,
+      -0.07715010148877077,
+      0.0016682807552417245,
+      -0.13369295131401238
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-H004": {
+    "position_xz_m": [
+      -217.05,
+      -237.95
+    ],
+    "rotation_deg": [
+      0,
+      81,
+      0
+    ],
+    "y": 15.92074578259245,
+    "gaps_m": [
+      -0.07810893621966386,
+      0.005000000000000782,
+      -0.024634010354381175,
+      -0.04847492586528368
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-H005": {
+    "position_xz_m": [
+      -100.23,
+      -148.07
+    ],
+    "rotation_deg": [
+      0,
+      128,
+      0
+    ],
+    "y": 6.735407371509825,
+    "gaps_m": [
+      -0.032546924477878214,
+      -0.017616351087593962,
+      0.004999999999999893,
+      -0.055163275565473846
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-H006": {
+    "position_xz_m": [
+      -48.18,
+      -241.25
+    ],
+    "rotation_deg": [
+      0,
+      175,
+      0
+    ],
+    "y": 13.139760052483581,
+    "gaps_m": [
+      0.005000000000000782,
+      -0.12396921268734573,
+      -0.05682104163025059,
+      -0.062148171057096135
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-H007": {
+    "position_xz_m": [
+      -147.95,
+      -233.98
+    ],
+    "rotation_deg": [
+      0,
+      222,
+      0
+    ],
+    "y": 11.529855018516235,
+    "gaps_m": [
+      -0.0039190054280560105,
+      -0.03180534212681785,
+      -0.03065621687479414,
+      0.005000000000000782
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-H008": {
+    "position_xz_m": [
+      -247.35,
+      -143.07
+    ],
+    "rotation_deg": [
+      0,
+      0,
+      0
+    ],
+    "y": 14.080858093863933,
+    "gaps_m": [
+      -0.011183307101736872,
+      -0.06178568245044502,
+      -0.0782442032793984,
+      0.005000000000000782
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-H009": {
+    "position_xz_m": [
+      -240.11,
+      -171.82
+    ],
+    "rotation_deg": [
+      0,
+      316,
+      0
+    ],
+    "y": 17.757395376879177,
+    "gaps_m": [
+      -0.011226420875470211,
+      -0.0367864520289487,
+      -0.055146211486491126,
+      0.004999999999999005
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-H010": {
+    "position_xz_m": [
+      -60.8,
+      -222.95
+    ],
+    "rotation_deg": [
+      0,
+      3,
+      0
+    ],
+    "y": 15.105654432757168,
+    "gaps_m": [
+      -0.07778644466072038,
+      0.005000000000000782,
+      -0.05487074667144931,
+      -0.01791569798926851
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-H011": {
+    "position_xz_m": [
+      -192.16,
+      -227.27
+    ],
+    "rotation_deg": [
+      0,
+      50,
+      0
+    ],
+    "y": 16.946597930083993,
+    "gaps_m": [
+      -0.058326748543816365,
+      0.004999999999999005,
+      -0.01737683647071009,
+      -0.03594991207310727
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-H012": {
+    "position_xz_m": [
+      -50.23,
+      -203.64
+    ],
+    "rotation_deg": [
+      0,
+      97,
+      0
+    ],
+    "y": 11.95603943899974,
+    "gaps_m": [
+      -0.0006148857012835407,
+      -0.03764679646896951,
+      -0.046676392956515045,
+      0.005000000000000782
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-H013": {
+    "position_xz_m": [
+      -87.132,
+      -117.755
+    ],
+    "rotation_deg": [
+      0,
+      144,
+      0
+    ],
+    "y": 6.212094146575809,
+    "gaps_m": [
+      -0.05367473364222075,
+      -0.03314725096196458,
+      0.004999999999999893,
+      -0.09182198460418611
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-H014": {
+    "position_xz_m": [
+      -176.792,
+      -111.285
+    ],
+    "rotation_deg": [
+      0,
+      191,
+      0
+    ],
+    "y": 9.711918876894478,
+    "gaps_m": [
+      -0.06942068138759083,
+      -0.06713872524807307,
+      0.005000000000000782,
+      -0.12761833192435112
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-H015": {
+    "position_xz_m": [
+      -220.89,
+      -109.66
+    ],
+    "rotation_deg": [
+      0,
+      238,
+      0
+    ],
+    "y": 10.521904442041658,
+    "gaps_m": [
+      -0.03472394348222885,
+      -0.0776402748398386,
+      0.005000000000000782,
+      -0.07414192531698127
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-H016": {
+    "position_xz_m": [
+      -125.8,
+      -87.05
+    ],
+    "rotation_deg": [
+      0,
+      285,
+      0
+    ],
+    "y": 2.8774617767208945,
+    "gaps_m": [
+      -0.04023996947566255,
+      0.004999999999999893,
+      -0.007933839554076005,
+      -0.02677737246040568
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-H017": {
+    "position_xz_m": [
+      -158.64,
+      -218.11
+    ],
+    "rotation_deg": [
+      0,
+      332,
+      0
+    ],
+    "y": 14.309058449564864,
+    "gaps_m": [
+      -0.057620734378229344,
+      -0.0033495811407320275,
+      0.005000000000000782,
+      -0.06597031551896393
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-H018": {
+    "position_xz_m": [
+      -72.61,
+      -242.84
+    ],
+    "rotation_deg": [
+      0,
+      19,
+      0
+    ],
+    "y": 16.832263578820893,
+    "gaps_m": [
+      -0.057373725325110314,
+      0.004999999999999005,
+      -0.031008825751410285,
+      -0.02136489957369747
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-H019": {
+    "position_xz_m": [
+      -197.474,
+      -111.507
+    ],
+    "rotation_deg": [
+      0,
+      66,
+      0
+    ],
+    "y": 10.487919895867762,
+    "gaps_m": [
+      0.005000000000000782,
+      -0.026941234119099988,
+      -0.02601648036903903,
+      0.004075246249939823
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-H020": {
+    "position_xz_m": [
+      -144.55,
+      -96.82
+    ],
+    "rotation_deg": [
+      0,
+      113,
+      0
+    ],
+    "y": 4.932969368774151,
+    "gaps_m": [
+      0.004999999999999893,
+      -0.06427857331352627,
+      -0.03832312078826927,
+      -0.0209554525252571
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-A001": {
+    "position_xz_m": [
+      -237.84,
+      71.14
+    ],
+    "rotation_deg": [
+      0,
+      160,
+      0
+    ],
+    "y": 2.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.0050000000000001155,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-A002": {
+    "position_xz_m": [
+      -231.7,
+      52.95
+    ],
+    "rotation_deg": [
+      0,
+      207,
+      0
+    ],
+    "y": 2.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-A003": {
+    "position_xz_m": [
+      -214.55,
+      156.02
+    ],
+    "rotation_deg": [
+      0,
+      254,
+      0
+    ],
+    "y": 2.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-A004": {
+    "position_xz_m": [
+      -194.188,
+      92.028
+    ],
+    "rotation_deg": [
+      0,
+      301,
+      0
+    ],
+    "y": 1.7705902408002512,
+    "gaps_m": [
+      -0.009445862072765543,
+      0.004712057958982996,
+      0.004999999999999893,
+      -0.009733804113782663
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-A005": {
+    "position_xz_m": [
+      -205.23,
+      60
+    ],
+    "rotation_deg": [
+      0,
+      348,
+      0
+    ],
+    "y": 1.999209303624793,
+    "gaps_m": [
+      -0.0007906963752069007,
+      0.00041988472080634054,
+      -0.0007906963752069007,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-A006": {
+    "position_xz_m": [
+      -178.18,
+      89.09
+    ],
+    "rotation_deg": [
+      0,
+      35,
+      0
+    ],
+    "y": 2.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-A007": {
+    "position_xz_m": [
+      -180,
+      100.91
+    ],
+    "rotation_deg": [
+      0,
+      82,
+      0
+    ],
+    "y": 1.9907283971379446,
+    "gaps_m": [
+      -0.007254746062179684,
+      -0.009271602862055417,
+      0.004999999999999893,
+      -0.009271602862055417
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-A008": {
+    "position_xz_m": [
+      -236.82,
+      82.27
+    ],
+    "rotation_deg": [
+      0,
+      129,
+      0
+    ],
+    "y": 2.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-A009": {
+    "position_xz_m": [
+      -213.64,
+      138.52
+    ],
+    "rotation_deg": [
+      0,
+      176,
+      0
+    ],
+    "y": 2.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.0050000000000001155,
+      0.004999999999999893,
+      0.0050000000000001155
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-A010": {
+    "position_xz_m": [
+      -183.52,
+      57.95
+    ],
+    "rotation_deg": [
+      0,
+      223,
+      0
+    ],
+    "y": 1.9385551564762382,
+    "gaps_m": [
+      -0.005183337841173863,
+      0.004999999999999893,
+      -0.00501852737908548,
+      0.004835189537911511
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-A011": {
+    "position_xz_m": [
+      -240.195,
+      146.618
+    ],
+    "rotation_deg": [
+      0,
+      270,
+      0
+    ],
+    "y": 1.7898747026920292,
+    "gaps_m": [
+      -0.033250297307968246,
+      -0.033250297307968246,
+      0.004999999999999893,
+      -0.07150059461593639
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-A012": {
+    "position_xz_m": [
+      -219.77,
+      143.75
+    ],
+    "rotation_deg": [
+      0,
+      317,
+      0
+    ],
+    "y": 2.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  },
+  "OT-A013": {
+    "position_xz_m": [
+      -227.61,
+      63.41
+    ],
+    "rotation_deg": [
+      0,
+      4,
+      0
+    ],
+    "y": 2.005,
+    "gaps_m": [
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893,
+      0.004999999999999893
+    ],
+    "ground_contact": "tree_root_embed",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "evidence": "Offline actual four low visual toes on canonical phase2 terrain; upright native-size trunk fitted into soil, penetration<=0.15m and float<=0.02m. Native final terrain rays pending."
+  }
+}

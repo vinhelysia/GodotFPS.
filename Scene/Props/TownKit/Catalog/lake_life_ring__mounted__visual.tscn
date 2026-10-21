@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/lake_life_ring/assets/lake_life_ring_mounted.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/lake_life_ring/materials/town_lake_life_ring_used.tres" id="2_finish"]
+
+[node name="lake_life_ring__mounted" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "lake_life_ring"
+metadata/catalog_variant = "mounted"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="LifeRingMounted" parent="Model/TownLifeRingMounted"]
+surface_material_override/0 = ExtResource("2_finish")

@@ -1,0 +1,481 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1030" viewBox="0 0 700 515">
+<rect width="700" height="515" fill="#f5f5eb"/>
+<g font-family="Arial,sans-serif"><text x="22" y="24" fill="#203d33" font-size="15" font-weight="bold">RIVER / CROSSINGS — GRAYBOX</text>
+<text x="22" y="38" fill="#587266" font-size="6">Phase3 canonical geometry • North=-Z • 1unit=1m • see phase3 native verification receipt</text>
+<svg x="22" y="48" width="450" height="450" viewBox="-15 -250 176.59 469.55" preserveAspectRatio="xMidYMid meet"><rect x="-250" y="-250" width="500" height="500" fill="#cbd8b8"><title>Unzoned dry land: open woodland and transition ground</title></rect>
+<polygon points="-160.23,-39.77 39.77,-39.77 39.77,160.23 -160.23,160.23" fill="#d9bfa0" fill-opacity=".55" stroke="none"/>
+<polygon points="120.45,-120.45 239.77,-120.45 239.77,110.23 125,110.23" fill="#9daab2" fill-opacity=".55" stroke="none"/>
+<polygon points="-220.45,-220.45 -79.55,-220.45 -79.55,-120.45 -220.45,-120.45" fill="#859892" fill-opacity=".55" stroke="none"/>
+<polygon points="-250,-250 10.23,-250 -10.23,-150 -79.55,-89.77 -250,-70.45" fill="#9aaa84" fill-opacity=".55" stroke="none"/>
+<polygon points="29.55,-250 250,-250 250,-120.45 120.45,-120.45 120.45,110.23 110.23,160.23 95.45,110.23 79.55,39.77 75,-29.55 45.45,-100 14.77,-170.45" fill="#bdd1a5" fill-opacity=".55" stroke="none"/>
+<polygon points="-170.45,-60.23 -250,-60.23 -250,250 100,250 100,170.45 -170.45,170.45" fill="#ddd7ae" fill-opacity=".55" stroke="none"/>
+<polygon points="10.23,-250 37.5,-250 31.82,-170.45 61.36,-102.27 89.77,-34.09 94.32,39.77 110.23,106.82 146.59,190.91 122.73,204.55 92.05,160.23 80.68,109.09 62.5,42.05 59.09,-23.86 29.55,-93.18 0,-165.91" fill="#66a8c7" fill-opacity=".55" stroke="none"/>
+<polygon points="96.59,109.09 250,109.09 250,250 125,250 92.05,214.77" fill="#82b5cd" fill-opacity=".55" stroke="none"/>
+<path d="M-200,-250 V250 M-250,-200 H250" stroke="#345048" stroke-opacity=".12" stroke-width=".4"/>
+<path d="M-100,-250 V250 M-250,-100 H250" stroke="#345048" stroke-opacity=".12" stroke-width=".4"/>
+<path d="M0,-250 V250 M-250,0 H250" stroke="#345048" stroke-opacity=".12" stroke-width=".4"/>
+<path d="M100,-250 V250 M-250,100 H250" stroke="#345048" stroke-opacity=".12" stroke-width=".4"/>
+<path d="M200,-250 V250 M-250,200 H250" stroke="#345048" stroke-opacity=".12" stroke-width=".4"/>
+<polygon points="-152.275,-30.68 -122.725,-30.68 -122.725,-4.539999999999999 -152.275,-4.539999999999999" fill="none" stroke="#7d674d" stroke-opacity=".6" stroke-width=".5" stroke-dasharray="2,2"><title>T01 plot envelope, not a building</title></polygon>
+<polygon points="-112.5,-26.13 -81.82,-26.13 -81.82,-2.2699999999999996 -112.5,-2.2699999999999996" fill="none" stroke="#7d674d" stroke-opacity=".6" stroke-width=".5" stroke-dasharray="2,2"><title>T02 plot envelope, not a building</title></polygon>
+<polygon points="-49.995000000000005,-26.14 -15.905000000000001,-26.14 -15.905000000000001,0 -49.995000000000005,0" fill="none" stroke="#7d674d" stroke-opacity=".6" stroke-width=".5" stroke-dasharray="2,2"><title>T03 plot envelope, not a building</title></polygon>
+<polygon points="-2.275000000000002,-22.73 30.675,-22.73 30.675,2.2699999999999996 -2.275000000000002,2.2699999999999996" fill="none" stroke="#7d674d" stroke-opacity=".6" stroke-width=".5" stroke-dasharray="2,2"><title>T04 plot envelope, not a building</title></polygon>
+<polygon points="-150,43.18000000000001 -112.5,43.18000000000001 -112.5,75 -150,75" fill="none" stroke="#7d674d" stroke-opacity=".6" stroke-width=".5" stroke-dasharray="2,2"><title>T05 plot envelope, not a building</title></polygon>
+<polygon points="-97.73,52.275000000000006 -67.05,52.275000000000006 -67.05,93.185 -97.73,93.185" fill="none" stroke="#7d674d" stroke-opacity=".6" stroke-width=".5" stroke-dasharray="2,2"><title>T06 plot envelope, not a building</title></polygon>
+<polygon points="-45.455,53.410000000000004 -5.684999999999999,53.410000000000004 -5.684999999999999,89.77000000000001 -45.455,89.77000000000001" fill="none" stroke="#7d674d" stroke-opacity=".6" stroke-width=".5" stroke-dasharray="2,2"><title>T07 plot envelope, not a building</title></polygon>
+<polygon points="3.4049999999999994,59.09 31.814999999999998,59.09 31.814999999999998,89.77000000000001 3.4049999999999994,89.77000000000001" fill="none" stroke="#7d674d" stroke-opacity=".6" stroke-width=".5" stroke-dasharray="2,2"><title>T08 plot envelope, not a building</title></polygon>
+<polygon points="-149.995,107.955 -115.90499999999999,107.955 -115.90499999999999,136.365 -149.995,136.365" fill="none" stroke="#7d674d" stroke-opacity=".6" stroke-width=".5" stroke-dasharray="2,2"><title>T09 plot envelope, not a building</title></polygon>
+<polygon points="-73.865,104.545 -52.275,104.545 -52.275,120.455 -73.865,120.455" fill="none" stroke="#7d674d" stroke-opacity=".6" stroke-width=".5" stroke-dasharray="2,2"><title>T10 plot envelope, not a building</title></polygon>
+<polygon points="-39.775000000000006,113.63999999999999 -6.824999999999999,113.63999999999999 -6.824999999999999,137.5 -39.775000000000006,137.5" fill="none" stroke="#7d674d" stroke-opacity=".6" stroke-width=".5" stroke-dasharray="2,2"><title>T11 plot envelope, not a building</title></polygon>
+<polygon points="10.225,111.365 31.814999999999998,111.365 31.814999999999998,140.915 10.225,140.915" fill="none" stroke="#7d674d" stroke-opacity=".6" stroke-width=".5" stroke-dasharray="2,2"><title>T12 plot envelope, not a building</title></polygon>
+<polygon points="19.378865,-250 4.378774,-169.265408 36.254586,-96.069484 65.131076,-27.225194 69.622795,41.206877 85.76737,112.750697 101.056732,164.473844 121.181003,195.243562 137.918997,184.296438 119.403268,155.986156 105.13263,107.709303 89.477205,38.333123 84.868924,-31.874806 54.645414,-103.930516 25.161226,-171.634592 39.381745,-248.17331 39.721135,-250" fill="#69a9c7" stroke="#477f98" stroke-width=".5"/>
+<polygon points="114.77,170.45 189.77,150 250,164.77 250,250 125,250 104.55,214.77" fill="#69a9c7" stroke="#477f98" stroke-width=".5"/>
+<polyline points="-60.23,-39.77 -85.23,-85.23 -120.45,-110.23 -139.77,-107 -139.77,-120.45" fill="none" stroke="#b0a489" stroke-width="4" stroke-linejoin="round"><title>P02 Bunker access gravel</title></polyline>
+<polyline points="-20.45,160.23 0,210.23 10.23,250" fill="none" stroke="#b0a489" stroke-width="3.5" stroke-linejoin="round"><title>P03 Southern farm track</title></polyline>
+<polyline points="-80.68,31.82 -60.23,44.32 -60.23,98.86 -82,142 -61.36,152.27" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>P05 Town south alley</title></polyline>
+<polyline points="20.45,34.09 40.91,39.77 40.91,82 51,82 51,103 40.91,103 40.91,125 34.09,157.95" fill="none" stroke="#b0a489" stroke-width="2.6" stroke-linejoin="round"><title>P06 Town east backstreet</title></polyline>
+<polyline points="94.153593,22.14905 106.82,-51.14 106.82,-74 88,-74 88,-94 106.82,-94 106.82,-120.45 130,-136.36 145,-136.36 145,-156 140,-180 200,-200 236.36,-236.36" fill="none" stroke="#b0a489" stroke-width="3" stroke-linejoin="round"><title>P07 Forest extraction trail</title></polyline>
+<polyline points="-85.23,-85.23 -75,-113 -75,-156 -4.55,-204.55" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>P08 Hills ridgeline hike</title></polyline>
+<polyline points="120.45,109.09 135.23,138.64 168.18,142.05 198.86,145.45 214.77,147.73" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>P09 Lake shore approach</title></polyline>
+<polyline points="-60.23,-39.77 -10,-55 30,-45 48.142396,-59.971842 72.118667,-70.028603 92,-85 106.82,-120.45" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>P10 North Town footbridge connection</title></polyline>
+<polyline points="-190,120 -179,160 -179,183 -130,183 -104,183 -104,205 -100,210 -65,220 -65,235" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>P11 Southwest farm extract approach</title></polyline>
+<polyline points="-139.77,-120.45 -139.77,-115 -225,-115 -225,-140 -225,-220 -236.36,-236.36" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>P12 Northwest extract route</title></polyline>
+<polyline points="-139.77,-120.45 -139.77,-137 -149,-139.7" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>BUNKER_ENTRY South gate to entry room apron</title></polyline>
+<polyline points="-236.36,170.45 -236.36,120 -190,120" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>GR_G01 S1 to W_S</title></polyline>
+<polyline points="-236.36,10.23 -190,30" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>GR_G02 S2 to W_J</title></polyline>
+<polyline points="-190,120 -190,30" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>GR_G03 W_S to W_J</title></polyline>
+<polyline points="-190,30 -190,19.328316 -160.23,21.59 -60.23,10.23" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>GR_G04 W_J to T_J</title></polyline>
+<polyline points="-60.23,10.23 63.412871,34.027268" fill="none" stroke="#b0a489" stroke-width="8" stroke-linejoin="round"><title>GR_G05 T_J to C_W</title></polyline>
+<polyline points="94.153593,22.14905 125,10.23" fill="none" stroke="#b0a489" stroke-width="8" stroke-linejoin="round"><title>GR_G07 C_E to E_J</title></polyline>
+<polyline points="-60.23,10.23 -60.23,-39.77" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>GR_G08 T_J to T_N</title></polyline>
+<polyline points="-60.23,-39.77 -10,-55 30,-45" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>GR_G09 T_N to T_NE</title></polyline>
+<polyline points="30,-45 48.142396,-59.971842" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>GR_G10 T_NE to F_W</title></polyline>
+<polyline points="72.118667,-70.028603 92,-85 106.82,-120.45" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>GR_G12 F_E to FOREST</title></polyline>
+<polyline points="94.153593,22.14905 106.82,-51.14 106.82,-74 88,-74 88,-94 106.82,-94 106.82,-120.45" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>GR_G13 C_E to FOREST</title></polyline>
+<polyline points="106.82,-120.45 130,-136.36 145,-136.36 145,-156 140,-180 200,-200 236.36,-236.36" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>GR_G14 FOREST to E_A</title></polyline>
+<polyline points="125,10.23 120.45,60 120.45,109.09" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>GR_G15 E_J to SHORE</title></polyline>
+<polyline points="120.45,109.09 135.23,138.64 168.18,142.05 198.86,145.45 214.77,147.73" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>GR_G16 SHORE to E_C</title></polyline>
+<polyline points="-190,120 -179,160 -179,183 -130,183 -104,183 -104,205 -100,210 -65,220 -65,235" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>GR_G17 W_S to E_B</title></polyline>
+<polyline points="-60.23,-39.77 -85.23,-85.23 -120.45,-110.23 -139.77,-107 -139.77,-120.45" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>GR_G18 T_N to B_GATE</title></polyline>
+<polyline points="-190,30 -195.54653253821215,18.90693492357573 -225,-40 -225,-110 -225,-140" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>GR_G19 W_J to H_W</title></polyline>
+<polyline points="-139.77,-120.45 -139.77,-115 -225,-115 -225,-140" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>GR_G20 B_GATE to H_W</title></polyline>
+<polyline points="-225,-140 -225,-220 -236.36,-236.36" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>GR_G21 H_W to E_D</title></polyline>
+<polyline points="120.45,109.09 135.23,138.64 168.18,142.05 175,147" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>GR_G22 SHORE to GANGWAY_SHORE</title></polyline>
+<polyline points="-80.68,31.82 -82.84083211597662,12.798590528374946" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>TOWN_ALLEY_N TOWN_ALLEY_N</title></polyline>
+<polyline points="20.45,34.09 21.996302762658836,26.055913355668785" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>TOWN_EAST_N TOWN_EAST_N</title></polyline>
+<polyline points="-61.36,152.27 -20.45,160.23" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>TOWN_ALLEY_S TOWN_ALLEY_S</title></polyline>
+<polyline points="34.09,157.95 -20.45,160.23" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>TOWN_EAST_S TOWN_EAST_S</title></polyline>
+<polyline points="-142,-9.7 -138.72300293682045,19.146805133622806" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_T01-A T01-A door access</title></polyline>
+<polyline points="-100,-7.7 -97.48241112453432,14.461873903747101" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_T02-A T02-A door access</title></polyline>
+<polyline points="-88,-13.7 -84.96238160468678,13.03959855029242" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_T02-B T02-B door access</title></polyline>
+<polyline points="-39,-1.7 -41.97246962791159,13.743986206958326" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_T03-A T03-A door access</title></polyline>
+<polyline points="10,-3.7 4.9060348409513,22.76658755277088" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_T04-A T04-A door access</title></polyline>
+<polyline points="-137,48.7 -140.33642183053382,19.330089519948643" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_T05-A T05-A door access</title></polyline>
+<polyline points="-97.3,62 -97.3,32.63318733924911 -79.34962551298845,32.63318733924911" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_T06-B T06-B door access</title></polyline>
+<polyline points="-71,92.3 -60.23,92.3" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_T06-C T06-C door access</title></polyline>
+<polyline points="-44.3,70 -60.23,70" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_T07-A T07-A door access</title></polyline>
+<polyline points="-19,89.3 -60.23,89.3" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_T07-B T07-B door access</title></polyline>
+<polyline points="16,63.7 40.91,63.7" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_T08-A T08-A door access</title></polyline>
+<polyline points="-64,123.6 -70.94587639146592,120.09486024473311" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_T10-C T10-C door access</title></polyline>
+<polyline points="-27,136.3 -31.247367078803045,158.12911899420013" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_T11-A T11-A door access</title></polyline>
+<polyline points="-14,136.3 -13.012623443776612,159.9190865686067" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_T11-B T11-B door access</title></polyline>
+<polyline points="20,110.7 40.91,110.70000000000002" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_T12-A T12-A door access</title></polyline>
+<polyline points="155,-59.4 106.82,-59.4" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_I01-A I01-A door access</title></polyline>
+<polyline points="191,-66.7 196.8149500616126,4.352664486957624" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_I02-A I02-A door access</title></polyline>
+<polyline points="150,72.3 120.45,72.3" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_I05-A I05-A door access</title></polyline>
+<polyline points="-207,-18.7 -212.88,-15.760000000000002" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_A01-A A01-A door access</title></polyline>
+<polyline points="-149,189.4 -145.52538860103627,183.44352331606217" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_A06-A A06-A door access</title></polyline>
+<polyline points="-64.3,198 -70.16415094339622,218.5245283018868" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_A07-A A07-A door access</title></polyline>
+<polyline points="119,132.8 129.64576818010227,127.475314595536" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_L01-A L01-A door access</title></polyline>
+<polyline points="-149,-139.7 -149,-139.7" fill="none" stroke="#b0a489" stroke-width="1.8" stroke-linejoin="round"><title>ACCESS_B04-ENTRY B04-ENTRY door access</title></polyline>
+<polyline points="210.12837763519707,-80 197.5,-80 197.5,-54 207.69281393217233,-54" fill="none" stroke="#b0a489" stroke-width="2.5" stroke-linejoin="round"><title>P04_SERVICE_BYPASS Derailed freight west service bypass</title></polyline>
+<polyline points="214.77,-250 214.77,-129.55 204.55,-20.45 195.45,70.45 214.77,110.23 250,121.59" fill="none" stroke="#8b8580" stroke-width="5" stroke-linejoin="round"><title>P04 Railway right-of-way</title></polyline>
+<polyline points="214.77,-250 214.77,-129.55 204.55,-20.45 195.45,70.45 214.77,110.23 250,121.59" fill="none" stroke="#343b36" stroke-width=".9" stroke-dasharray="4,3"/>
+<polyline points="-250,14.77 -160.23,21.59 -60.23,10.23 63.412871,34.027268 94.153593,22.14905 125,10.23 130,-8 170,-8 180,5.73 250,0" fill="none" stroke="#5b5e58" stroke-width="8" stroke-linejoin="round"><title>P01 County road east-west</title></polyline>
+<circle cx="83.75" cy="-158.75" r="4.6" fill="#6e9576" fill-opacity=".55"><title>F001 pine</title></circle>
+<circle cx="87.95" cy="-112.05" r="2.8" fill="#6e9576" fill-opacity=".55"><title>F002 pine</title></circle>
+<circle cx="187.73" cy="-240" r="3.2" fill="#6e9576" fill-opacity=".55"><title>F003 pine</title></circle>
+<circle cx="92.16" cy="-131.02" r="3.8" fill="#6e9576" fill-opacity=".55"><title>F004 pine</title></circle>
+<circle cx="96.93" cy="-235.11" r="4.1" fill="#6e9576" fill-opacity=".55"><title>F005 pine</title></circle>
+<circle cx="84.09" cy="-67.27" r="4.2" fill="#6e9576" fill-opacity=".55"><title>F006 pine</title></circle>
+<circle cx="79.32" cy="-244.43" r="4.2" fill="#6e9576" fill-opacity=".55"><title>F007 pine</title></circle>
+<circle cx="114.89" cy="-240.11" r="3.6" fill="#6e9576" fill-opacity=".55"><title>F008 pine</title></circle>
+<circle cx="99.89" cy="-197.84" r="4.2" fill="#6e9576" fill-opacity=".55"><title>F009 pine</title></circle>
+<circle cx="73.07" cy="-135.45" r="2.9" fill="#6e9576" fill-opacity=".55"><title>F010 pine</title></circle>
+<circle cx="185" cy="-199.43" r="4.3" fill="#6e9576" fill-opacity=".55"><title>F011 pine</title></circle>
+<circle cx="138.52" cy="-184.89" r="2.4" fill="#6e9576" fill-opacity=".55"><title>F012 pine</title></circle>
+<circle cx="134.77" cy="-237.73" r="2.5" fill="#6e9576" fill-opacity=".55"><title>F013 pine</title></circle>
+<circle cx="101.59" cy="-216.7" r="4.7" fill="#6e9576" fill-opacity=".55"><title>F014 pine</title></circle>
+<circle cx="111.48" cy="-164.32" r="4.6" fill="#6e9576" fill-opacity=".55"><title>F015 pine</title></circle>
+<circle cx="99.2" cy="-185.45" r="3.9" fill="#6e9576" fill-opacity=".55"><title>F016 pine</title></circle>
+<circle cx="79.77" cy="-118.75" r="2.7" fill="#6e9576" fill-opacity=".55"><title>F017 pine</title></circle>
+<circle cx="158.41" cy="-132.5" r="4.5" fill="#6e9576" fill-opacity=".55"><title>F018 pine</title></circle>
+<circle cx="60.34" cy="-212.61" r="3.4" fill="#6e9576" fill-opacity=".55"><title>F019 pine</title></circle>
+<circle cx="159.89" cy="-179.2" r="2.9" fill="#6e9576" fill-opacity=".55"><title>F020 pine</title></circle>
+<circle cx="49.77" cy="-126.02" r="4.3" fill="#6e9576" fill-opacity=".55"><title>F021 pine</title></circle>
+<circle cx="228.41" cy="-213.86" r="3.1" fill="#6e9576" fill-opacity=".55"><title>F022 pine</title></circle>
+<circle cx="200.57" cy="-193.07" r="3.6" fill="#6e9576" fill-opacity=".55"><title>F023 pine</title></circle>
+<circle cx="236.93" cy="-211.02" r="3.4" fill="#6e9576" fill-opacity=".55"><title>F024 pine</title></circle>
+<circle cx="76.93" cy="-169.89" r="2.6" fill="#6e9576" fill-opacity=".55"><title>F025 pine</title></circle>
+<circle cx="173.98" cy="-230.45" r="2.9" fill="#6e9576" fill-opacity=".55"><title>F026 pine</title></circle>
+<circle cx="184.43" cy="-182.16" r="4.1" fill="#6e9576" fill-opacity=".55"><title>F027 pine</title></circle>
+<circle cx="78.98" cy="-186.14" r="3.8" fill="#6e9576" fill-opacity=".55"><title>F028 pine</title></circle>
+<circle cx="158.41" cy="-207.39" r="4.2" fill="#6e9576" fill-opacity=".55"><title>F029 pine</title></circle>
+<circle cx="63.86" cy="-222.95" r="3.7" fill="#6e9576" fill-opacity=".55"><title>F030 pine</title></circle>
+<circle cx="41.7" cy="-236.7" r="3.8" fill="#6e9576" fill-opacity=".55"><title>F031 pine</title></circle>
+<circle cx="127.05" cy="-232.16" r="2.3" fill="#6e9576" fill-opacity=".55"><title>F032 pine</title></circle>
+<circle cx="51.7" cy="-195" r="4.6" fill="#6e9576" fill-opacity=".55"><title>F033 pine</title></circle>
+<circle cx="157.16" cy="-233.64" r="4.5" fill="#6e9576" fill-opacity=".55"><title>F034 pine</title></circle>
+<circle cx="133.64" cy="-130.91" r="4.6" fill="#6e9576" fill-opacity=".55"><title>F035 pine</title></circle>
+<circle cx="148.3" cy="-194.55" r="2.9" fill="#6e9576" fill-opacity=".55"><title>F036 pine</title></circle>
+<circle cx="67.84" cy="-202.61" r="4.4" fill="#6e9576" fill-opacity=".55"><title>F037 pine</title></circle>
+<circle cx="54.2" cy="-176.25" r="3.1" fill="#6e9576" fill-opacity=".55"><title>F038 pine</title></circle>
+<circle cx="159.09" cy="-223.64" r="3.6" fill="#6e9576" fill-opacity=".55"><title>F039 pine</title></circle>
+<circle cx="103.18" cy="-163.3" r="3.4" fill="#6e9576" fill-opacity=".55"><title>F040 pine</title></circle>
+<circle cx="60.91" cy="-152.16" r="2.4" fill="#6e9576" fill-opacity=".55"><title>F041 pine</title></circle>
+<circle cx="90.45" cy="-202.84" r="3.8" fill="#6e9576" fill-opacity=".55"><title>F042 pine</title></circle>
+<circle cx="223.41" cy="-135" r="2.5" fill="#6e9576" fill-opacity=".55"><title>F043 pine</title></circle>
+<circle cx="146.36" cy="-170.91" r="3.9" fill="#6e9576" fill-opacity=".55"><title>F044 pine</title></circle>
+<circle cx="110.77" cy="-103.98" r="4.3" fill="#6e9576" fill-opacity=".55"><title>F045 pine</title></circle>
+<circle cx="201.7" cy="-130" r="2.5" fill="#6e9576" fill-opacity=".55"><title>F046 pine</title></circle>
+<circle cx="92.05" cy="-102.5" r="2.5" fill="#6e9576" fill-opacity=".55"><title>F047 pine</title></circle>
+<circle cx="160.68" cy="-193.64" r="2.5" fill="#6e9576" fill-opacity=".55"><title>F048 pine</title></circle>
+<circle cx="116.672" cy="-62.815" r="2.6" fill="#6e9576" fill-opacity=".55"><title>G001 pine</title></circle>
+<circle cx="93.18" cy="-79.66" r="2.8" fill="#6e9576" fill-opacity=".55"><title>G002 pine</title></circle>
+<circle cx="108.18" cy="6.02" r="4.1" fill="#6e9576" fill-opacity=".55"><title>G003 pine</title></circle>
+<circle cx="94.118" cy="-100.595" r="3.7" fill="#6e9576" fill-opacity=".55"><title>G004 pine</title></circle>
+<circle cx="80.45" cy="-101.93" r="3.9" fill="#6e9576" fill-opacity=".55"><title>G005 pine</title></circle>
+<circle cx="108.75" cy="55.57" r="2.3" fill="#6e9576" fill-opacity=".55"><title>G006 pine</title></circle>
+<circle cx="102.535" cy="-88.382" r="4.3" fill="#6e9576" fill-opacity=".55"><title>G007 pine</title></circle>
+<circle cx="112.84" cy="75.8" r="4" fill="#6e9576" fill-opacity=".55"><title>G008 pine</title></circle>
+<circle cx="87.05" cy="-57.84" r="4" fill="#6e9576" fill-opacity=".55"><title>G009 pine</title></circle>
+<circle cx="81.14" cy="-91.25" r="2.3" fill="#6e9576" fill-opacity=".55"><title>G010 pine</title></circle>
+<circle cx="109.77" cy="46.93" r="2.5" fill="#6e9576" fill-opacity=".55"><title>G011 pine</title></circle>
+<circle cx="112.16" cy="-112.05" r="4.4" fill="#6e9576" fill-opacity=".55"><title>G012 pine</title></circle>
+<circle cx="-95.34" cy="-235" r="3.4" fill="#9a9c72" fill-opacity=".55"><title>H001 broadleaf</title></circle>
+<circle cx="-27.5" cy="-164.55" r="3" fill="#9a9c72" fill-opacity=".55"><title>H002 broadleaf</title></circle>
+<circle cx="-72.554" cy="-162.324" r="3" fill="#9a9c72" fill-opacity=".55"><title>H003 broadleaf</title></circle>
+<circle cx="-217.05" cy="-237.95" r="3.4" fill="#9a9c72" fill-opacity=".55"><title>H004 broadleaf</title></circle>
+<circle cx="-100.23" cy="-148.07" r="4.2" fill="#9a9c72" fill-opacity=".55"><title>H005 broadleaf</title></circle>
+<circle cx="-48.18" cy="-241.25" r="3.6" fill="#9a9c72" fill-opacity=".55"><title>H006 broadleaf</title></circle>
+<circle cx="-147.95" cy="-233.98" r="3.1" fill="#9a9c72" fill-opacity=".55"><title>H007 broadleaf</title></circle>
+<circle cx="-248.3" cy="-143.07" r="3.6" fill="#9a9c72" fill-opacity=".55"><title>H008 broadleaf</title></circle>
+<circle cx="-240.11" cy="-171.82" r="4" fill="#9a9c72" fill-opacity=".55"><title>H009 broadleaf</title></circle>
+<circle cx="-60.8" cy="-222.95" r="4.7" fill="#9a9c72" fill-opacity=".55"><title>H010 broadleaf</title></circle>
+<circle cx="-192.16" cy="-227.27" r="4.7" fill="#9a9c72" fill-opacity=".55"><title>H011 broadleaf</title></circle>
+<circle cx="-50.23" cy="-203.64" r="3.5" fill="#9a9c72" fill-opacity=".55"><title>H012 broadleaf</title></circle>
+<circle cx="-87.132" cy="-117.755" r="4.6" fill="#9a9c72" fill-opacity=".55"><title>H013 broadleaf</title></circle>
+<circle cx="-176.792" cy="-111.285" r="4.1" fill="#9a9c72" fill-opacity=".55"><title>H014 broadleaf</title></circle>
+<circle cx="-220.89" cy="-109.66" r="4.4" fill="#9a9c72" fill-opacity=".55"><title>H015 broadleaf</title></circle>
+<circle cx="-125.8" cy="-87.05" r="3.7" fill="#9a9c72" fill-opacity=".55"><title>H016 broadleaf</title></circle>
+<circle cx="-158.64" cy="-218.11" r="3.2" fill="#9a9c72" fill-opacity=".55"><title>H017 broadleaf</title></circle>
+<circle cx="-72.61" cy="-242.84" r="3.1" fill="#9a9c72" fill-opacity=".55"><title>H018 broadleaf</title></circle>
+<circle cx="-197.474" cy="-111.507" r="4.2" fill="#9a9c72" fill-opacity=".55"><title>H019 broadleaf</title></circle>
+<circle cx="-144.55" cy="-96.82" r="3.9" fill="#9a9c72" fill-opacity=".55"><title>H020 broadleaf</title></circle>
+<circle cx="-237.84" cy="71.14" r="2.7" fill="#9a9c72" fill-opacity=".55"><title>A001 orchard</title></circle>
+<circle cx="-231.7" cy="52.95" r="3.4" fill="#9a9c72" fill-opacity=".55"><title>A002 orchard</title></circle>
+<circle cx="-214.55" cy="156.02" r="3.4" fill="#9a9c72" fill-opacity=".55"><title>A003 orchard</title></circle>
+<circle cx="-194.188" cy="92.028" r="3.1" fill="#9a9c72" fill-opacity=".55"><title>A004 orchard</title></circle>
+<circle cx="-205.23" cy="60" r="3.1" fill="#9a9c72" fill-opacity=".55"><title>A005 orchard</title></circle>
+<circle cx="-178.18" cy="89.09" r="4.4" fill="#9a9c72" fill-opacity=".55"><title>A006 orchard</title></circle>
+<circle cx="-180" cy="100.91" r="3.4" fill="#9a9c72" fill-opacity=".55"><title>A007 orchard</title></circle>
+<circle cx="-236.82" cy="82.27" r="3.6" fill="#9a9c72" fill-opacity=".55"><title>A008 orchard</title></circle>
+<circle cx="-213.64" cy="138.52" r="4.3" fill="#9a9c72" fill-opacity=".55"><title>A009 orchard</title></circle>
+<circle cx="-183.52" cy="57.95" r="2.5" fill="#9a9c72" fill-opacity=".55"><title>A010 orchard</title></circle>
+<circle cx="-240.195" cy="146.618" r="3.9" fill="#9a9c72" fill-opacity=".55"><title>A011 orchard</title></circle>
+<circle cx="-219.77" cy="143.75" r="4.3" fill="#9a9c72" fill-opacity=".55"><title>A012 orchard</title></circle>
+<circle cx="-227.61" cy="63.41" r="3.9" fill="#9a9c72" fill-opacity=".55"><title>A013 orchard</title></circle>
+<polygon points="-129.6233589455326,9.938101784707266 -129.37284736380448,8.155619260972438 -124.9166410544674,8.781898215292733 -125.16715263619552,10.56438073902756" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C01-01 wrecked_cars 1.8x1.6x4.5m</title></polygon>
+<polygon points="-12.583358945532593,26.988101784707265 -12.332847363804474,25.205619260972437 -7.876641054467408,25.831898215292735 -8.127152636195527,27.614380739027563" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C01-02 wrecked_cars 1.8x1.6x4.5m</title></polygon>
+<polygon points="-63.815,65.41 -63.815,62.41 -63.465,62.41 -63.465,65.41" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C02-01 low_walls 3x1.4x0.35m</title></polygon>
+<polygon points="-2.445,102.91 -2.445,99.91 -2.095,99.91 -2.095,102.91" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C02-02 low_walls 3x1.4x0.35m</title></polygon>
+<polygon points="-110.405,104.05 -110.405,101.05 -110.055,101.05 -110.055,104.05" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C02-03 low_walls 3x1.4x0.35m</title></polygon>
+<polygon points="-62.663,68.175 -62.663,65.175 -62.313,65.175 -62.313,68.175" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C02-04 low_walls 3x1.4x0.35m</title></polygon>
+<polygon points="0.5549999999999999,104.91 0.5550000000000002,101.91 0.905,101.91 0.9049999999999998,104.91" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C02-05 low_walls 3x1.4x0.35m</title></polygon>
+<polygon points="-107.405,106.05 -107.405,103.05 -107.055,103.05 -107.055,106.05" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C02-06 low_walls 3x1.4x0.35m</title></polygon>
+<polygon points="145.99,-41.14 147.19,-41.14 147.19,-40.14 145.99,-40.14" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C03-01 pallets 1.2x1.1x1m</title></polygon>
+<polygon points="169.85,27.05 171.04999999999998,27.05 171.04999999999998,28.05 169.85,28.05" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C03-02 pallets 1.2x1.1x1m</title></polygon>
+<polygon points="151.67000000000002,87.27 152.87,87.27 152.87,88.27 151.67000000000002,88.27" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C03-03 pallets 1.2x1.1x1m</title></polygon>
+<polygon points="148.99,-39.14 150.19,-39.14 150.19,-38.14 148.99,-38.14" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C03-04 pallets 1.2x1.1x1m</title></polygon>
+<polygon points="172.85,29.05 174.04999999999998,29.05 174.04999999999998,30.05 172.85,30.05" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C03-05 pallets 1.2x1.1x1m</title></polygon>
+<polygon points="154.67000000000002,89.27 155.87,89.27 155.87,90.27 154.67000000000002,90.27" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C03-06 pallets 1.2x1.1x1m</title></polygon>
+<polygon points="142.99,-37.14 144.19,-37.14 144.19,-36.14 142.99,-36.14" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C03-07 pallets 1.2x1.1x1m</title></polygon>
+<polygon points="166.85,31.05 168.04999999999998,31.05 168.04999999999998,32.05 166.85,32.05" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C03-08 pallets 1.2x1.1x1m</title></polygon>
+<polygon points="148.67000000000002,91.27 149.87,91.27 149.87,92.27 148.67000000000002,92.27" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C03-09 pallets 1.2x1.1x1m</title></polygon>
+<polygon points="-162.36,-140.98999999999998 -160.36,-140.98999999999998 -160.36,-140.29 -162.36,-140.29" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C04-01 sandbags 2x1.05x0.7m</title></polygon>
+<polygon points="-116.91,-167.12 -114.91,-167.12 -114.91,-166.42000000000002 -116.91,-166.42000000000002" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C04-02 sandbags 2x1.05x0.7m</title></polygon>
+<polygon points="-159.36,-138.98999999999998 -157.36,-138.98999999999998 -157.36,-138.29 -159.36,-138.29" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C04-03 sandbags 2x1.05x0.7m</title></polygon>
+<polygon points="-113.91,-165.12 -111.91,-165.12 -111.91,-164.42000000000002 -113.91,-164.42000000000002" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C04-04 sandbags 2x1.05x0.7m</title></polygon>
+<polygon points="-165.36,-136.98999999999998 -163.36,-136.98999999999998 -163.36,-136.29 -165.36,-136.29" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C04-05 sandbags 2x1.05x0.7m</title></polygon>
+<polygon points="-119.91,-163.12 -117.91,-163.12 -117.91,-162.42000000000002 -119.91,-162.42000000000002" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C04-06 sandbags 2x1.05x0.7m</title></polygon>
+<polygon points="-58.32,-199.79 -55.32,-199.79 -55.32,-197.39000000000001 -58.32,-197.39000000000001" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C05-01 boulders 3x2.3x2.4m</title></polygon>
+<polygon points="-25.36,-139.56 -22.36,-139.56 -22.36,-137.16000000000003 -25.36,-137.16000000000003" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C05-02 boulders 3x2.3x2.4m</title></polygon>
+<polygon points="-101.5,-107.75 -98.5,-107.75 -98.5,-105.35 -101.5,-105.35" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C05-03 boulders 3x2.3x2.4m</title></polygon>
+<polygon points="-53.32,-197.79 -50.32,-197.79 -50.32,-195.39000000000001 -53.32,-195.39000000000001" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C05-04 boulders 3x2.3x2.4m</title></polygon>
+<polygon points="-20.36,-137.56 -17.36,-137.56 -17.36,-135.16000000000003 -20.36,-135.16000000000003" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C05-05 boulders 3x2.3x2.4m</title></polygon>
+<polygon points="-96.5,-105.75 -93.5,-105.75 -93.5,-103.35 -96.5,-103.35" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C05-06 boulders 3x2.3x2.4m</title></polygon>
+<polygon points="-61.32,-195.79 -58.32,-195.79 -58.32,-193.39000000000001 -61.32,-193.39000000000001" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C05-07 boulders 3x2.3x2.4m</title></polygon>
+<polygon points="-28.36,-135.56 -25.36,-135.56 -25.36,-133.16000000000003 -28.36,-133.16000000000003" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C05-08 boulders 3x2.3x2.4m</title></polygon>
+<polygon points="-102.5,-103.75 -99.5,-103.75 -99.5,-101.35 -102.5,-101.35" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C05-09 boulders 3x2.3x2.4m</title></polygon>
+<polygon points="-53.734,-201.20399999999998 -50.734,-201.20399999999998 -50.734,-198.804 -53.734,-198.804" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C05-10 boulders 3x2.3x2.4m</title></polygon>
+<polygon points="-20.774,-140.974 -17.774,-140.974 -17.774,-138.574 -20.774,-138.574" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C05-11 boulders 3x2.3x2.4m</title></polygon>
+<polygon points="-96.914,-109.164 -93.914,-109.164 -93.914,-106.764 -96.914,-106.764" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C05-12 boulders 3x2.3x2.4m</title></polygon>
+<polygon points="-208.7,43.84 -207.2,43.84 -207.2,45.34 -208.7,45.34" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C06-01 hay_bales 1.5x1.3x1.5m</title></polygon>
+<polygon points="-186.52,92.7 -185.02,92.7 -185.02,94.2 -186.52,94.2" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C06-02 hay_bales 1.5x1.3x1.5m</title></polygon>
+<polygon points="-114.39,230.2 -112.89,230.2 -112.89,231.7 -114.39,231.7" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C06-03 hay_bales 1.5x1.3x1.5m</title></polygon>
+<polygon points="35.61,231.34 37.11,231.34 37.11,232.84 35.61,232.84" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C06-04 hay_bales 1.5x1.3x1.5m</title></polygon>
+<polygon points="-205.7,45.84 -204.2,45.84 -204.2,47.34 -205.7,47.34" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C06-05 hay_bales 1.5x1.3x1.5m</title></polygon>
+<polygon points="-185.672,95.465 -184.172,95.465 -184.172,96.965 -185.672,96.965" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C06-06 hay_bales 1.5x1.3x1.5m</title></polygon>
+<polygon points="-111.39,232.2 -109.89,232.2 -109.89,233.7 -111.39,233.7" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C06-07 hay_bales 1.5x1.3x1.5m</title></polygon>
+<polygon points="38.61,233.34 40.11,233.34 40.11,234.84 38.61,234.84" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C06-08 hay_bales 1.5x1.3x1.5m</title></polygon>
+<polygon points="-211.7,47.84 -210.2,47.84 -210.2,49.34 -211.7,49.34" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C06-09 hay_bales 1.5x1.3x1.5m</title></polygon>
+<polygon points="-193.52,96.7 -192.02,96.7 -192.02,98.2 -193.52,98.2" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C06-10 hay_bales 1.5x1.3x1.5m</title></polygon>
+<polygon points="-117.39,234.2 -115.89,234.2 -115.89,235.7 -117.39,235.7" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C06-11 hay_bales 1.5x1.3x1.5m</title></polygon>
+<polygon points="32.61,235.34 34.11,235.34 34.11,236.84 32.61,236.84" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C06-12 hay_bales 1.5x1.3x1.5m</title></polygon>
+<polygon points="-202.7,43.84 -201.2,43.84 -201.2,45.34 -202.7,45.34" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C06-13 hay_bales 1.5x1.3x1.5m</title></polygon>
+<polygon points="-182.52,92.7 -181.02,92.7 -181.02,94.2 -182.52,94.2" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C06-14 hay_bales 1.5x1.3x1.5m</title></polygon>
+<polygon points="-108.39,230.2 -106.89,230.2 -106.89,231.7 -108.39,231.7" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C06-15 hay_bales 1.5x1.3x1.5m</title></polygon>
+<polygon points="41.61,231.34 43.11,231.34 43.11,232.84 41.61,232.84" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C06-16 hay_bales 1.5x1.3x1.5m</title></polygon>
+<polygon points="-214.7,45.84 -213.2,45.84 -213.2,47.34 -214.7,47.34" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C06-17 hay_bales 1.5x1.3x1.5m</title></polygon>
+<polygon points="124.65100000000001,159.649 125.851,159.649 125.851,160.849 124.65100000000001,160.849" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C07-01 reeds_and_rocks 1.2x0.9x1.2m</title></polygon>
+<polygon points="194.85,149.35 196.04999999999998,149.35 196.04999999999998,150.54999999999998 194.85,150.54999999999998" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C07-02 reeds_and_rocks 1.2x0.9x1.2m</title></polygon>
+<polygon points="235.76000000000002,156.49 236.96,156.49 236.96,157.69 235.76000000000002,157.69" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C07-03 reeds_and_rocks 1.2x0.9x1.2m</title></polygon>
+<polygon points="126.23700000000001,163.06300000000002 127.437,163.06300000000002 127.437,164.263 126.23700000000001,164.263" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C07-04 reeds_and_rocks 1.2x0.9x1.2m</title></polygon>
+<polygon points="197.85,149.35 199.04999999999998,149.35 199.04999999999998,150.54999999999998 197.85,150.54999999999998" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C07-05 reeds_and_rocks 1.2x0.9x1.2m</title></polygon>
+<polygon points="238.76000000000002,158.49 239.96,158.49 239.96,159.69 238.76000000000002,159.69" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C07-06 reeds_and_rocks 1.2x0.9x1.2m</title></polygon>
+<polygon points="107.509,177.791 108.70899999999999,177.791 108.70899999999999,178.99099999999999 107.509,178.99099999999999" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C07-07 reeds_and_rocks 1.2x0.9x1.2m</title></polygon>
+<polygon points="187.258,148.263 188.458,148.263 188.458,149.463 187.258,149.463" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C07-08 reeds_and_rocks 1.2x0.9x1.2m</title></polygon>
+<polygon points="232.76000000000002,158.49 233.96,158.49 233.96,159.69 232.76000000000002,159.69" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C07-09 reeds_and_rocks 1.2x0.9x1.2m</title></polygon>
+<polygon points="126.641,159.329 127.841,159.329 127.841,160.529 126.641,160.529" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C07-10 reeds_and_rocks 1.2x0.9x1.2m</title></polygon>
+<polygon points="200.85,149.35 202.04999999999998,149.35 202.04999999999998,150.54999999999998 200.85,150.54999999999998" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C07-11 reeds_and_rocks 1.2x0.9x1.2m</title></polygon>
+<polygon points="241.76000000000002,156.49 242.96,156.49 242.96,157.69 241.76000000000002,157.69" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>C07-12 reeds_and_rocks 1.2x0.9x1.2m</title></polygon>
+<polygon points="-60.15,15 -59.85,15 -59.85,37 -60.15,37" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>LOS_M_RETURN opaque_property_return 0.3x2.6x22m</title></polygon>
+<polygon points="143.85,-3 144.15,-3 144.15,27 143.85,27" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>LOS_COUNTY_E_SCREEN opaque_yard_screen 0.3x2.6x30m</title></polygon>
+<polygon points="-72,95.85 -62,95.85 -62,96.15 -72,96.15" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>LOS_P05_RETURN opaque_property_return 10x2.6x0.3m</title></polygon>
+<polygon points="28,95.85 48,95.85 48,96.15 28,96.15" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>LOS_P06_RETURN opaque_property_return 20x2.6x0.3m</title></polygon>
+<polygon points="96,-82.25 141.5,-82.25 141.5,-81.75 96,-81.75" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>LOS_P07_YARD opaque_yard_screen 45.5x3x0.5m</title></polygon>
+<polygon points="-49.5,-150.5 -42.5,-150.5 -42.5,-141.5 -49.5,-141.5" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>LOS_P08_ROCK rock_bluff 7x4x9m</title></polygon>
+<polygon points="19.5,-87 28.5,-87 28.5,-53 19.5,-53" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>LOS_P10_ROCK rock_bluff 9x4x34m</title></polygon>
+<polygon points="-124,188.5 -108,188.5 -108,193.5 -124,193.5" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>LOS_P11_TRAILER farm_trailer 16x3.2x5m</title></polygon>
+<polygon points="-192,-121.39999999999999 -143,-121.39999999999999 -143,-121.2 -192,-121.2" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>LOS_P12_PANEL opaque_fence_panel 49x2.6x0.2m</title></polygon>
+<polygon points="-63.5,110.85 -59.5,110.85 -59.5,111.15 -63.5,111.15" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>LOS_P05_KIOSK_RETURN opaque_property_return 4x2.6x0.3m</title></polygon>
+<polygon points="154,-173 177,-173 177,-159 154,-159" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>LOS_P07_ROCK rock_bluff 23x5x14m</title></polygon>
+<polygon points="-234,-191 -228,-191 -228,-159 -234,-159" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>LOS_P12_ROCK rock_bluff 6x4x32m</title></polygon>
+<polygon points="-206,-178.15 -192,-178.15 -192,-177.85 -206,-177.85" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>LOS_P12_YARD_RETURN opaque_fence_panel 14x2.6x0.3m</title></polygon>
+<polygon points="199.5,-61.55 235.5,-61.55 235.5,-58.45 199.5,-58.45" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>LOS_P04_FREIGHT derailed_freight_wreck 36x3.6x3.1m</title></polygon>
+<polygon points="120,-150 140,-150 140,-142 120,-142" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>LOS_P07_GRANITE_RETURN rock_bluff 20x5x8m</title></polygon>
+<polygon points="-177,173.85 -105,173.85 -105,174.15 -177,174.15" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>LOS_P11_PROPERTY_RETURN opaque_farm_property_return 72x3x0.3m</title></polygon>
+<polygon points="-173.15,174.64999999999998 -172.85,174.64999999999998 -172.85,180 -173.15,180" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>LOS_P11_FIELD_CORNER opaque_farm_property_return 0.3x3x5.35m</title></polygon>
+<polygon points="-219.65,-219 -219.35,-219 -219.35,-121.10000000000001 -219.65,-121.10000000000001" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>LOS_P12_INNER_WEST_PANEL opaque_fence_panel 0.3x2.6x97.9m</title></polygon>
+<polygon points="-223.2,-155 -221.2,-155 -221.2,-131 -223.2,-131" fill="#92815e" stroke="#4a5348" stroke-width=".25"><title>LOS_P12_ROCK_ABUTMENT rock_bluff 2x4x24m</title></polygon>
+<polygon points="-137,-13 -147,-13 -147,-21 -137,-21" fill="#edf0df" stroke="#314941" stroke-width=".6"><title>T01-A house 10x8m; ground true, upper false</title></polygon>
+<text x="-142" y="-16" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T01-A</text>
+<circle cx="-142" cy="-13" r=".65" fill="#166b57"/>
+<polygon points="-133,-27 -127,-27 -127,-23 -133,-23" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>T01-B house 6x4m; ground false, upper false</title></polygon>
+<text x="-130" y="-24" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T01-B</text>
+<polygon points="-131.5,-12.5 -128.5,-12.5 -128.5,-9.5 -131.5,-9.5" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>T01-C house 3x3m; ground false, upper false</title></polygon>
+<text x="-130" y="-10" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T01-C</text>
+<polygon points="-94,-11 -106,-11 -106,-19 -94,-19" fill="#edf0df" stroke="#314941" stroke-width=".6"><title>T02-A store 12x8m; ground true, upper false</title></polygon>
+<text x="-100" y="-14" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T02-A</text>
+<circle cx="-100" cy="-11" r=".65" fill="#166b57"/>
+<polygon points="-85,-17 -91,-17 -91,-21 -85,-21" fill="#edf0df" stroke="#314941" stroke-width=".6"><title>T02-B store 6x4m; ground true, upper false</title></polygon>
+<text x="-88" y="-18" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T02-B</text>
+<circle cx="-88" cy="-17" r=".65" fill="#166b57"/>
+<polygon points="-106,-25 -102,-25 -102,-21 -106,-21" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>T02-C store 4x4m; ground false, upper false</title></polygon>
+<text x="-104" y="-22" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T02-C</text>
+<polygon points="-35,-5 -43,-5 -43,-21 -35,-21" fill="#cad6db" stroke="#314941" stroke-width=".6"><title>T03-A civic 8x16m; ground true, upper true</title></polygon>
+<text x="-39" y="-12" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T03-A</text>
+<circle cx="-39" cy="-5" r=".65" fill="#166b57"/>
+<polygon points="-27,-21 -21,-21 -21,-17 -27,-17" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>T03-B civic 6x4m; ground false, upper false</title></polygon>
+<text x="-24" y="-18" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T03-B</text>
+<polygon points="-27,-11 -21,-11 -21,-7 -27,-7" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>T03-C civic 6x4m; ground false, upper false</title></polygon>
+<text x="-24" y="-8" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T03-C</text>
+<polygon points="16,-7 3.9999999999999996,-7 4.000000000000001,-15 16,-15" fill="#edf0df" stroke="#314941" stroke-width=".6"><title>T04-A store 12x8m; ground true, upper false</title></polygon>
+<text x="10" y="-10" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T04-A</text>
+<circle cx="10" cy="-7" r=".65" fill="#166b57"/>
+<polygon points="22,-19 28,-19 28,-15 22,-15" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>T04-B store 6x4m; ground false, upper false</title></polygon>
+<text x="25" y="-16" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T04-B</text>
+<polygon points="-143,52 -131,52 -131,62 -143,62" fill="#edf0df" stroke="#314941" stroke-width=".6"><title>T05-A civic 12x10m; ground true, upper false</title></polygon>
+<text x="-137" y="58" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T05-A</text>
+<circle cx="-137" cy="52" r=".65" fill="#166b57"/>
+<polygon points="-123,48 -117,48 -117,52 -123,52" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>T05-B civic 6x4m; ground false, upper false</title></polygon>
+<text x="-120" y="51" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T05-B</text>
+<polygon points="-121.5,66.5 -118.5,66.5 -118.5,69.5 -121.5,69.5" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>T05-C civic 3x3m; ground false, upper false</title></polygon>
+<text x="-120" y="69" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T05-C</text>
+<polygon points="-96,72 -72,72 -72,84 -96,84" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>T06-A apartment 24x12m; ground false, upper false</title></polygon>
+<text x="-84" y="79" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T06-A</text>
+<polygon points="-94,66 -94,58 -78,58 -78,66" fill="#cad6db" stroke="#314941" stroke-width=".6"><title>T06-B apartment 8x16m; ground true, upper true</title></polygon>
+<text x="-86" y="63" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T06-B</text>
+<circle cx="-94" cy="62" r=".65" fill="#166b57"/>
+<polygon points="-68,89 -74,89 -74,85 -68,85" fill="#edf0df" stroke="#314941" stroke-width=".6"><title>T06-C apartment 6x4m; ground true, upper false</title></polygon>
+<text x="-71" y="88" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T06-C</text>
+<circle cx="-71" cy="89" r=".65" fill="#166b57"/>
+<polygon points="-41,74 -41,66 -25,66 -25,74" fill="#cad6db" stroke="#314941" stroke-width=".6"><title>T07-A civic 8x16m; ground true, upper true</title></polygon>
+<text x="-33" y="71" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T07-A</text>
+<circle cx="-41" cy="70" r=".65" fill="#166b57"/>
+<polygon points="-13,86 -25,86 -25,78 -13,78" fill="#edf0df" stroke="#314941" stroke-width=".6"><title>T07-B civic 12x8m; ground true, upper false</title></polygon>
+<text x="-19" y="83" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T07-B</text>
+<circle cx="-19" cy="86" r=".65" fill="#166b57"/>
+<polygon points="-19,60 -13,60 -13,62 -19,62" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>T07-C civic 6x2m; ground false, upper false</title></polygon>
+<text x="-16" y="62" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T07-C</text>
+<polygon points="9,67 23,67 23,77 9,77" fill="#edf0df" stroke="#314941" stroke-width=".6"><title>T08-A garage 14x10m; ground true, upper false</title></polygon>
+<text x="16" y="73" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T08-A</text>
+<circle cx="16" cy="67" r=".65" fill="#166b57"/>
+<polygon points="22,82 28,82 28,86 22,86" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>T08-B garage 6x4m; ground false, upper false</title></polygon>
+<text x="25" y="85" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T08-B</text>
+<polygon points="-143,118 -133,118 -133,126 -143,126" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>T09-A ruin 10x8m; ground false, upper false</title></polygon>
+<text x="-138" y="123" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T09-A</text>
+<polygon points="-124,128 -118,128 -118,132 -124,132" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>T09-B ruin 6x4m; ground false, upper false</title></polygon>
+<text x="-121" y="131" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T09-B</text>
+<polygon points="-59,106 -55,106 -55,110 -59,110" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>T10-A market 4x4m; ground false, upper false</title></polygon>
+<text x="-57" y="109" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T10-A</text>
+<polygon points="-59,114 -55,114 -55,118 -59,118" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>T10-B market 4x4m; ground false, upper false</title></polygon>
+<text x="-57" y="117" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T10-B</text>
+<polygon points="-61,120.3 -67,120.3 -67,116.3 -61,116.3" fill="#edf0df" stroke="#314941" stroke-width=".6"><title>T10-C market 6x4m; ground true, upper false</title></polygon>
+<text x="-64" y="119.3" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T10-C</text>
+<circle cx="-64" cy="120.3" r=".65" fill="#166b57"/>
+<polygon points="-23,133 -31,133 -31,117 -23,117" fill="#edf0df" stroke="#314941" stroke-width=".6"><title>T11-A garage 8x16m; ground true, upper false</title></polygon>
+<text x="-27" y="126" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T11-A</text>
+<circle cx="-27" cy="133" r=".65" fill="#166b57"/>
+<polygon points="-11,133 -17,133 -17,129 -11,129" fill="#edf0df" stroke="#314941" stroke-width=".6"><title>T11-B garage 6x4m; ground true, upper false</title></polygon>
+<text x="-14" y="132" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T11-B</text>
+<circle cx="-14" cy="133" r=".65" fill="#166b57"/>
+<polygon points="-16,116 -12,116 -12,120 -16,120" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>T11-C garage 4x4m; ground false, upper false</title></polygon>
+<text x="-14" y="119" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T11-C</text>
+<polygon points="16,114 24,114 24,130 16,130" fill="#cad6db" stroke="#314941" stroke-width=".6"><title>T12-A house 8x16m; ground true, upper true</title></polygon>
+<text x="20" y="123" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T12-A</text>
+<circle cx="20" cy="114" r=".65" fill="#166b57"/>
+<polygon points="22,136 28,136 28,140 22,140" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>T12-B house 6x4m; ground false, upper false</title></polygon>
+<text x="25" y="139" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">T12-B</text>
+<polygon points="167.3,-62.7 142.7,-62.7 142.7,-81.3 167.3,-81.3" fill="#edf0df" stroke="#314941" stroke-width=".6"><title>I01-A warehouse 24.6x18.6m; ground true, upper false</title></polygon>
+<text x="155" y="-71" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">I01-A</text>
+<circle cx="155" cy="-62.7" r=".65" fill="#166b57"/>
+<polygon points="195,-70 187,-70 187,-86 195,-86" fill="#edf0df" stroke="#314941" stroke-width=".6"><title>I02-A civic 8x16m; ground true, upper false</title></polygon>
+<text x="191" y="-77" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">I02-A</text>
+<circle cx="191" cy="-70" r=".65" fill="#166b57"/>
+<polygon points="157,69 143,69 143,59 157,59" fill="#edf0df" stroke="#314941" stroke-width=".6"><title>I05-A warehouse 14x10m; ground true, upper false</title></polygon>
+<text x="150" y="65" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">I05-A</text>
+<circle cx="150" cy="69" r=".65" fill="#166b57"/>
+<polygon points="180,83 180,77 184,77 184,83" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>I07-A civic 6x4m; ground false, upper false</title></polygon>
+<text x="182" y="81" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">I07-A</text>
+<polygon points="-183,-187 -191,-187 -191,-203 -183,-203" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>B01-A barracks 8x16m; ground false, upper false</title></polygon>
+<text x="-187" y="-194" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">B01-A</text>
+<polygon points="-126,-189 -150,-189 -150,-201 -126,-201" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>B02-A civic 24x12m; ground false, upper false</title></polygon>
+<text x="-138" y="-194" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">B02-A</text>
+<polygon points="-96,-190 -106,-190 -106,-198 -96,-198" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>B03-A civic 10x8m; ground false, upper false</title></polygon>
+<text x="-101" y="-193" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">B03-A</text>
+<polygon points="-192,-145 -198,-145 -198,-149 -192,-149" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>B05-A garage 6x4m; ground false, upper false</title></polygon>
+<text x="-195" y="-146" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">B05-A</text>
+<polygon points="-144.5,-126.5 -147.5,-126.5 -147.5,-129.5 -144.5,-129.5" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>B06-A checkpoint 3x3m; ground false, upper false</title></polygon>
+<text x="-146" y="-127" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">B06-A</text>
+<polygon points="123,-187 113,-187 113,-195 123,-195" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>F01-A house 10x8m; ground false, upper false</title></polygon>
+<text x="118" y="-190" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">F01-A</text>
+<polygon points="166,-147 166,-155 182,-155 182,-147" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>F02-A garage 8x16m; ground false, upper false</title></polygon>
+<text x="174" y="-150" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">F02-A</text>
+<polygon points="188,-157 188,-163 192,-163 192,-157" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>F02-B garage 6x4m; ground false, upper false</title></polygon>
+<text x="190" y="-159" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">F02-B</text>
+<polygon points="-202,-22 -212,-22 -212,-30 -202,-30" fill="#edf0df" stroke="#314941" stroke-width=".6"><title>A01-A house 10x8m; ground true, upper false</title></polygon>
+<text x="-207" y="-25" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">A01-A</text>
+<circle cx="-207" cy="-22" r=".65" fill="#166b57"/>
+<polygon points="-185,-22 -191,-22 -191,-26 -185,-26" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>A02-A garage 6x4m; ground false, upper false</title></polygon>
+<text x="-188" y="-23" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">A02-A</text>
+<polygon points="-220,112 -220,104 -204,104 -204,112" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>A04-A barn 8x16m; ground false, upper false</title></polygon>
+<text x="-212" y="109" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">A04-A</text>
+<polygon points="-193,146 -193,140 -189,140 -189,146" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>A05-A house 6x4m; ground false, upper false</title></polygon>
+<text x="-191" y="144" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">A05-A</text>
+<polygon points="-161.3,192.7 -136.7,192.7 -136.7,211.3 -161.3,211.3" fill="#edf0df" stroke="#314941" stroke-width=".6"><title>A06-A barn 24.6x18.6m; ground true, upper false</title></polygon>
+<text x="-149" y="203" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">A06-A</text>
+<circle cx="-149" cy="192.7" r=".65" fill="#166b57"/>
+<polygon points="-61,202 -61,194 -45,194 -45,202" fill="#edf0df" stroke="#314941" stroke-width=".6"><title>A07-A house 8x16m; ground true, upper false</title></polygon>
+<text x="-53" y="199" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">A07-A</text>
+<circle cx="-61" cy="198" r=".65" fill="#166b57"/>
+<polygon points="46,209 46,201 62,201 62,209" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>A08-A garage 8x16m; ground false, upper false</title></polygon>
+<text x="54" y="206" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">A08-A</text>
+<polygon points="122,129.5 116,129.5 116,124.5 122,124.5" fill="#edf0df" stroke="#314941" stroke-width=".6"><title>L01-A civic 6x5m; ground true, upper false</title></polygon>
+<text x="119" y="128" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">L01-A</text>
+<circle cx="119" cy="129.5" r=".65" fill="#166b57"/>
+<polygon points="148,145 158,145 158,153 148,153" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>L02-A house 10x8m; ground false, upper false</title></polygon>
+<text x="153" y="150" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">L02-A</text>
+<polygon points="185,136 191,136 191,140 185,140" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>L04-A garage 6x4m; ground false, upper false</title></polygon>
+<text x="188" y="139" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">L04-A</text>
+<polygon points="137.5,-20.5 142.5,-20.5 142.5,-15.5 137.5,-15.5" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>I03-A fuel_tank 5x5m; ground false, upper false</title></polygon>
+<text x="140" y="-17" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">I03-A</text>
+<polygon points="145.5,-20.5 150.5,-20.5 150.5,-15.5 145.5,-15.5" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>I03-B fuel_tank 5x5m; ground false, upper false</title></polygon>
+<text x="148" y="-17" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">I03-B</text>
+<polygon points="153.5,-20.5 158.5,-20.5 158.5,-15.5 153.5,-15.5" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>I03-C fuel_tank 5x5m; ground false, upper false</title></polygon>
+<text x="156" y="-17" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">I03-C</text>
+<polygon points="169.78,-20.97 169.78,-27.03 172.22,-27.03 172.22,-20.97" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>I04-A container 6.06x2.44m; ground false, upper false</title></polygon>
+<text x="171" y="-23" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">I04-A</text>
+<polygon points="177.78,-20.97 177.78,-27.03 180.22,-27.03 180.22,-20.97" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>I04-B container 6.06x2.44m; ground false, upper false</title></polygon>
+<text x="179" y="-23" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">I04-B</text>
+<polygon points="185.78,-20.97 185.78,-27.03 188.22,-27.03 188.22,-20.97" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>I04-C container 6.06x2.44m; ground false, upper false</title></polygon>
+<text x="187" y="-23" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">I04-C</text>
+<polygon points="144.78,38.03 144.78,31.97 147.22,31.97 147.22,38.03" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>I06-A container 6.06x2.44m; ground false, upper false</title></polygon>
+<text x="146" y="36" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">I06-A</text>
+<polygon points="152.78,38.03 152.78,31.97 155.22,31.97 155.22,38.03" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>I06-B container 6.06x2.44m; ground false, upper false</title></polygon>
+<text x="154" y="36" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">I06-B</text>
+<polygon points="160.78,38.03 160.78,31.97 163.22,31.97 163.22,38.03" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>I06-C container 6.06x2.44m; ground false, upper false</title></polygon>
+<text x="162" y="36" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">I06-C</text>
+<polygon points="206.97,-50.18 210.07000000000002,-50.18 210.07000000000002,-36.18 206.97,-36.18" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>I08-A railcar 3.1x14m; ground false, upper false</title></polygon>
+<text x="208.52" y="-42.18" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">I08-A</text>
+<polygon points="196.75,52.09 199.85000000000002,52.09 199.85000000000002,66.09 196.75,66.09" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>I09-A railcar 3.1x14m; ground false, upper false</title></polygon>
+<text x="198.3" y="60.09" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">I09-A</text>
+<polygon points="-145,-143 -153,-143 -153,-151 -145,-151" fill="#edf0df" stroke="#314941" stroke-width=".6"><title>B04-ENTRY bunker_entry 8x8m; ground true, upper false</title></polygon>
+<text x="-149" y="-146" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">B04-ENTRY</text>
+<circle cx="-149" cy="-143" r=".65" fill="#166b57"/>
+<polygon points="-215,-216 -211,-216 -211,-212 -215,-212" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>B07-A watch_tower 4x4m; ground false, upper false</title></polygon>
+<text x="-213" y="-213" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">B07-A</text>
+<polygon points="-92,-216 -88,-216 -88,-212 -92,-212" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>B08-A watch_tower 4x4m; ground false, upper false</title></polygon>
+<text x="-90" y="-213" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">B08-A</text>
+<polygon points="-46,-167 -42,-167 -42,-163 -46,-163" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>H01-A observation_platform 4x4m; ground false, upper false</title></polygon>
+<text x="-44" y="-164" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">H01-A</text>
+<polygon points="-65.5,-108.18 -59.5,-108.18 -59.5,-103.18 -65.5,-103.18" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>H02-A sealed_pillbox 6x5m; ground false, upper false</title></polygon>
+<text x="-62.5" y="-104.68" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">H02-A</text>
+<polygon points="-13,-216 -11,-216 -11,-214 -13,-214" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>H03-A radio_mast 2x2m; ground false, upper false</title></polygon>
+<text x="-12" y="-214" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">H03-A</text>
+<polygon points="-222.8,-98 -214.8,-98 -214.8,-92 -222.8,-92" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>H04-A stone_ruin 8x6m; ground false, upper false</title></polygon>
+<text x="-218.8" y="-94" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">H04-A</text>
+<polygon points="231.5,-158.5 234.5,-158.5 234.5,-155.5 231.5,-155.5" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>F03-A hunting_stand 3x3m; ground false, upper false</title></polygon>
+<text x="233" y="-156" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">F03-A</text>
+<polygon points="98.4,-69.4 99.6,-69.4 99.6,-68.6 98.4,-68.6" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>F04-A cache_crate 1.2x0.8m; ground false, upper false</title></polygon>
+<text x="99" y="-68" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">F04-A</text>
+<polygon points="-198.5,70.5 -195.5,70.5 -195.5,73.5 -198.5,73.5" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>A03-A wind_pump 3x3m; ground false, upper false</title></polygon>
+<text x="-197" y="73" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">A03-A</text>
+<polygon points="68,232 72,232 72,236 68,236" fill="#aeb7a4" stroke="#314941" stroke-width=".6"><title>A09-A water_cistern 4x4m; ground false, upper false</title></polygon>
+<text x="70" y="235" text-anchor="middle" font-size="3.1" font-weight="bold" fill="#17382f">A09-A</text>
+<polyline points="-220.45,-220.45 -79.55,-220.45" fill="none" stroke="#485c4c" stroke-width=".6" stroke-dasharray="2,1.5"><title>Mesh fence; six metre south gate stays open</title></polyline>
+<polyline points="-79.55,-220.45 -79.55,-120.45" fill="none" stroke="#485c4c" stroke-width=".6" stroke-dasharray="2,1.5"><title>Mesh fence; six metre south gate stays open</title></polyline>
+<polyline points="-79.55,-120.45 -136.77,-120.45" fill="none" stroke="#485c4c" stroke-width=".6" stroke-dasharray="2,1.5"><title>Mesh fence; six metre south gate stays open</title></polyline>
+<polyline points="-142.77,-120.45 -220.45,-120.45" fill="none" stroke="#485c4c" stroke-width=".6" stroke-dasharray="2,1.5"><title>Mesh fence; six metre south gate stays open</title></polyline>
+<polyline points="-220.45,-120.45 -220.45,-220.45" fill="none" stroke="#485c4c" stroke-width=".6" stroke-dasharray="2,1.5"><title>Mesh fence; six metre south gate stays open</title></polyline>
+<polygon points="61.97116061704332,30.29611772033198 92.71187303890478,18.41790643320226 95.59530338295669,25.88020027966802 64.85459096109521,37.75841156679775" fill="#cec5ae" stroke="#395448" stroke-width=".5"/>
+<text x="78.783232" y="23.088159" font-size="4" font-weight="bold" fill="#224139">R01</text>
+<polygon points="47.658897954272874,-61.12454750058458 71.63516882843788,-71.18130816039283 72.60216504572713,-68.87589749941543 48.62589417156212,-58.81913683960718" fill="#cec5ae" stroke="#395448" stroke-width=".5"/>
+<text x="60.130531500000004" y="-70.0002225" font-size="4" font-weight="bold" fill="#224139">R02</text>
+<polygon points="173,166 177,166 177,180 173,180" fill="#a28a62" stroke="#395448" stroke-width=".5"><title>DOCK 4x14m at Y2.5m</title></polygon>
+<text x="175" y="174" text-anchor="middle" font-size="3.1" fill="#17382f">DOCK</text>
+<polyline points="175,147 175,167" stroke="#957f58" stroke-width="2.5"/>
+<polygon points="-242.36,164.45 -230.36,164.45 -230.36,176.45 -242.36,176.45" fill="none" stroke="#7552a5" stroke-width=".5" stroke-dasharray="1,1"/>
+<circle cx="-236.36" cy="170.45" r="3" fill="#8c77d7" stroke="#443d64" stroke-width=".6"/>
+<text x="-231.36" y="166.45" font-size="5.2" font-weight="bold" fill="#17382f">S1</text>
+<polygon points="-242.36,4.23 -230.36,4.23 -230.36,16.23 -242.36,16.23" fill="none" stroke="#7552a5" stroke-width=".5" stroke-dasharray="1,1"/>
+<circle cx="-236.36" cy="10.23" r="3" fill="#8c77d7" stroke="#443d64" stroke-width=".6"/>
+<text x="-231.36" y="6.23" font-size="5.2" font-weight="bold" fill="#17382f">S2</text>
+<polygon points="231.36,-241.36 241.36,-241.36 241.36,-231.36 231.36,-231.36" fill="none" stroke="#437f32" stroke-width=".5" stroke-dasharray="1,1"/>
+<polygon points="236.36,-240.36 240.36,-236.36 236.36,-232.36 232.36,-236.36" fill="#79a84b" stroke="#35602c" stroke-width=".6"/>
+<text x="241.36" y="-240.36" font-size="5.2" font-weight="bold" fill="#17382f">E-A</text>
+<polygon points="-70,230 -60,230 -60,240 -70,240" fill="none" stroke="#437f32" stroke-width=".5" stroke-dasharray="1,1"/>
+<polygon points="-65,231 -61,235 -65,239 -69,235" fill="#79a84b" stroke="#35602c" stroke-width=".6"/>
+<text x="-60" y="231" font-size="5.2" font-weight="bold" fill="#17382f">E-B</text>
+<polygon points="209.77,142.73 219.77,142.73 219.77,152.73 209.77,152.73" fill="none" stroke="#437f32" stroke-width=".5" stroke-dasharray="1,1"/>
+<polygon points="214.77,143.73 218.77,147.73 214.77,151.73 210.77,147.73" fill="#79a84b" stroke="#35602c" stroke-width=".6"/>
+<text x="219.77" y="143.73" font-size="5.2" font-weight="bold" fill="#17382f">E-C</text>
+<polygon points="-241.36,-241.36 -231.36,-241.36 -231.36,-231.36 -241.36,-231.36" fill="none" stroke="#437f32" stroke-width=".5" stroke-dasharray="1,1"/>
+<polygon points="-236.36,-240.36 -232.36,-236.36 -236.36,-232.36 -240.36,-236.36" fill="#79a84b" stroke="#35602c" stroke-width=".6"/>
+<text x="-231.36" y="-240.36" font-size="5.2" font-weight="bold" fill="#17382f">E-D</text>
+<rect x="-250" y="-250" width="500" height="500" fill="none" stroke="#314941" stroke-width=".7"/></svg>
+<g transform="translate(496,65)"><text font-size="10" font-weight="bold" fill="#203d33">CANONICAL CONTRACT</text>
+<text y="21" font-size="7" font-weight="bold" fill="#365548">Town plots</text><text y="29" font-size="6" fill="#647c70">12 envelopes; real buildings</text><text y="42" font-size="7" font-weight="bold" fill="#365548">Structures</text><text y="50" font-size="6" fill="#647c70">0 in this view scope</text><text y="63" font-size="7" font-weight="bold" fill="#365548">River</text><text y="71" font-size="6" fill="#647c70">2 bridges; no ford or log</text><text y="84" font-size="7" font-weight="bold" fill="#365548">E-B</text><text y="92" font-size="6" fill="#647c70">Southwest farm gate</text><text y="105" font-size="7" font-weight="bold" fill="#365548">Extracts</text><text y="113" font-size="6" fill="#647c70">4 active; F +5seconds</text><text y="126" font-size="7" font-weight="bold" fill="#365548">Spawn</text><text y="134" font-size="6" fill="#647c70">S1/S2 equal choice once</text><text y="147" font-size="7" font-weight="bold" fill="#365548">Interiors</text><text y="155" font-size="6" fill="#647c70">Green ground / blue upper</text><text y="168" font-size="7" font-weight="bold" fill="#365548">Gray fill</text><text y="176" font-size="6" fill="#647c70">Closed shell / solid prop</text><text y="189" font-size="7" font-weight="bold" fill="#365548">Small dots</text><text y="197" font-size="6" fill="#647c70">Door thresholds</text><text y="210" font-size="7" font-weight="bold" fill="#365548">Dashed pads</text><text y="218" font-size="6" fill="#647c70">Spawn/extraction reservations</text>
+<text y="265" font-size="7" font-weight="bold" fill="#365548">ZONES</text>
+<rect y="275" width="8" height="8" fill="#d9bfa0"/><text x="14" y="282" font-size="7" fill="#365548">Town Core</text><rect y="291" width="8" height="8" fill="#9daab2"/><text x="14" y="298" font-size="7" fill="#365548">Industry / Rail Yard</text><rect y="307" width="8" height="8" fill="#859892"/><text x="14" y="314" font-size="7" fill="#365548">Military Bunker</text><rect y="323" width="8" height="8" fill="#9aaa84"/><text x="14" y="330" font-size="7" fill="#365548">Hills</text><rect y="339" width="8" height="8" fill="#bdd1a5"/><text x="14" y="346" font-size="7" fill="#365548">Forest and Greenbelt</text><rect y="355" width="8" height="8" fill="#ddd7ae"/><text x="14" y="362" font-size="7" fill="#365548">West and South Farmland</text><rect y="371" width="8" height="8" fill="#66a8c7"/><text x="14" y="378" font-size="7" fill="#365548">River / Crossings</text><rect y="387" width="8" height="8" fill="#82b5cd"/><text x="14" y="394" font-size="7" fill="#365548">Lake Shore</text>
+</g><text x="22" y="510" font-size="5.5" fill="#587266">Same layout.json drives this diagram and spatial report. Footprints do not certify3D door/stair/collision/visibility or route pacing.</text></g></svg>

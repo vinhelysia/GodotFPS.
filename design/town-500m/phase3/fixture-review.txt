@@ -1,0 +1,224 @@
+Town500m Phase3 fixture review — 2026-10-09
+Scope: read-only audit of town500_integrate.gd, town500_composition_regression.gd/.tscn,
+town_expansion_regression.gd compatibility entry, placement proposal, catalogue,
+nav-roof-exclusion.json and directly referenced player/scene/terrain helpers.
+No MCP/runtime execution in this audit. No native PASS claim. Only this report was written.
+
+BLOCKERS FOUND IN INITIAL FIXTURE SNAPSHOT (primary was notified immediately)
+1. P1 — Structure lookup is overwritten by76 NavigationObstacle3D nodes.
+   tests/town500_composition_regression.gd:53-55 collects any Node3D carrying a
+   catalogue town500_id. Scene/World/Town500m/navigation_exclusions.tscn:5,14
+   gives T01-A's obstacle the same ID as the physical building; repeats for76.
+   town500_integrate.gd payload dictionary puts RoofNavigationExclusions last.
+   Therefore buildings[id] becomes an obstacle. Count remains76 and misleadingly
+   passes, but _navigation():94/98 and _interiors() ask these obstacles for Markers.
+   Minimum fix: exclude NavigationObstacle3D/roof_exclusion_only during lookup,
+   then assert uniqueness of actual structure IDs (not only dictionary size).
+
+2. P1 — Rotated Player ROOT makes world-space walking aim90 degrees wrong.
+   Initial town500_integrate.gd:72 copied RaidSpawn.transform to Player.transform;
+   line69 set RaidSpawn yaw to the contract's -90 degrees. Composition fixture
+   _walk():222 sets body.rotation.y with world-space atan2. Cogito movement uses
+   body.global_transform.basis (cogito_player.gd:1087,1093). Root yaw therefore
+   adds another -90 degrees to every steering direction.
+   Minimum fix: player.position=RaidSpawn.position; keep Player root rotation
+   identity; set player.body.global_rotation to marker rotation. This matches
+   cogito_scene.gd::move_player_to_connector. Alternatively aim global rotation,
+   but correcting composition also preserves native connector semantics.
+
+COVERAGE / FIXTURE LIMITS THAT STILL NEED PRIMARY ACCEPTANCE
+3. _navigation():111-131 tests vertices only. Zero wet/roof vertices does not
+   prove zero polygons crossing wet/roof interiors: an edge or large polygon
+   can span an excluded area with all vertices outside. Also does not prove
+   obstacles are included in the bake. Keep vertex residue as diagnostic, add
+   representative closest-point/reachability probes or polygon intersection
+   checks using actual baked polygon geometry. Do not delete polygons by centroid.
+
+4. _walk():206-229 checks grounding/floor only at its endpoint; transient airborne
+   motion, stair jumps or fall damage during interior walks can be missed.
+   Routes do compare initial/final health; interiors currently do not.
+   Reuse terrain fixture's _feet_y(), grounded tracking and health invariant;
+   retain allowance needed by native step behavior rather than inventing new
+   controller code. Existing terrain fixture also releases every movement action.
+
+5. Existing phase2 terrain regression owns actual bridge/deck/dock crossings,
+   rails walk+sprint-jump blockers, water overlap/death and perimeter checks.
+   New composition fixture has navigation/routes/interiors/capture phases only.
+   It does not itself exercise gate collision, rail negative attempts, bridge
+   approach continuity with new dressing, dock access, wet falling, sealed-roof
+   physical entry, or production LOS standing/ADS/lean/scope. A previous isolated
+   payload pass cannot certify changed production composition. Reuse scoped phase2
+   helpers / existing weapon probes against the actual composed Town.
+
+6. Compatibility town_expansion_regression.gd is now only an extends entry point.
+   Its default runs navigation queries; it no longer provides its old physical
+   traversal/deployment coverage. Eight route phases plus interiors must all run
+   and have fresh reports before calling full physical acceptance complete.
+   gameplay-placement-proposal.json reuse_tests references old line245/311 helpers
+   that no longer exist in this compatibility file; those references are historical.
+
+7. Prerequisite failures currently call _check then continue: missing76 physical
+   structures or unsynchronized navigation may lead to Dictionary/get_node errors
+   before _finish writes a report. Minimum fix: early return through _finish for
+   missing structure IDs; keep failed receipts separate from runtime exceptions.
+   Capture/report writing also assumes tests/artifacts/town500_phase3 exists;
+   create its owned directory once if not guaranteed by the primary workflow.
+
+CONFIRMED FROM LIVE FILES (static only)
+- Catalogue has23 ground-access instances and4 upper-access instances, all upper
+  use t02_long_house.tscn. Its five stair marker names match STAIRS exactly.
+- Native player HealthAttribute, HungerAttribute, ThirstAttribute, PlayerLean,
+  Body/Neck/Head and GUI paths exist; PlayerLean.reset() exists.
+- Standing BoxShape is0.6x1.7x0.6 at localY0.05: feet offset-0.8 is correct.
+- Terrain payload directly instances R01/R02/DockL03 and each requested Deck/
+  Gangway path exists; fixture local BoxShape dimensions are a valid technique.
+- Compose preserves direct RaidSpawn S1 and repurposes Extract/ExtractSE parents;
+  new ExtractFarm/ExtractNW markers have no trigger added here, matching Phase4
+  boundary. No fresh-departure connector-pool registration is done in Phase3.
+- Unique CogitoSceneManager save root is assigned before Town instantiate and
+  deliberately retained through engine shutdown. Avoid restoring real user://
+  before _exit_tree cleanup. Startup preference writes remain outside slot scope.
+- BTs/process are disabled for existing HostileNPCs; hunger/thirst/stamina locked.
+  This is geometry acceptance, not encounter/AI tuning or survival endurance.
+
+Skipped: runtime/MCP, native bake, production save/deploy/return transactions,
+LOS visual proof and performance. Main risks are the two deterministic fixture
+blockers above plus claiming geometry coverage from navigation-only reports.
+
+FOLLOW-UP IMPLEMENTATION — primary delegated fixture ownership
+Only tests/town500_composition_regression.gd was changed after the initial audit.
+- Existing primary fixes retained: ignore NavigationObstacle3D IDs; global body heading.
+- Explicit23GF/4upper and native mask/root/collider checks, early exit if76 missing.
+- Navigation includes polygon edge midpoints and centers plus76 sealed-roof reachability
+  negatives. Reports explicitly state finite sampling; no exhaustive clipping claim.
+- Interiors and every walk segment check unchanged health. Segments record airborne
+  frame count diagnostically; native stepping can temporarily leave is_on_floor.
+- phase=ports: both bridges, three lanes/two directions including3.1m dry approaches;
+  four exact rail contacts, dock roundtrip; depot and bunker gates three lanes/two
+  directions; B04 deep rear exact collider; low closedF04 exact collider.
+- phase=los: actual existing USP pickup/ADS path, current report witness groups at
+  actual terrain/deck support, four cardinal rays per4upper floors, six real poses
+  (standing, ADS, left/right hip lean, left/right ADS lean). Callback skips explicitly
+  tagged AI panes (native four-pane bound) and dressing wire metadata; reports actual
+  first opaque collider/distance, camera origin, ADS and lean amount.
+- Releases fixture movement actions, creates owned artifact directory, retains unique
+  save root through shutdown. Unexpected fixture saves remain intact and fail receipt.
+
+Static self-check ran: unique required helper names, global steering, new phases and
+polygon samples present. NO native compilation, runtime, bake or geometry PASS run.
+Parent owns those checks; fixture code ownership is handed back at this handoff.
+Remaining limits: finite polygons/rays are not exact polygon intersection/all-angle3D
+maxima; wire opacity callback is test policy and does not alter Scav gameplay rays.
+USP ADS is real but does not certify a magnified optics/scope render. Rail negatives
+use standing walk; sprint/jump over rails not covered. Water death intentionally not
+added to production fixture here because raid_scene death callback transitions/writes;
+existing isolated water test remains separate until primary isolates that transaction.
+
+READ-ONLY REVIEW — four-quadrant offline navigation bake proposal
+No MCP, bake, script edit or runtime execution performed for this review.
+Observed empty/full bake results and editor crash are primary-provided evidence;
+this review does not independently reproduce them or establish crash root cause.
+
+Assessment: defensible smallest workaround, PROVIDED seams are verified rather than
+assuming coordinate welding guarantees connectivity. Keep the exact parsed source,
+agent values, masks, roof obstacles and ledge/clearance flags in all four bakes.
+Nominal cells are2500x2500 per tile, with2520x2520 including1m apron per side;
+this reduces per-bake field size substantially while preserving0.1m resolution.
+Recast upstream rcCompactCell stores a24-bit span index. That is a plausible size
+limit for the reported5000x5000 field, not proof of this Godot crash or empty bake:
+actual compact span count depends on coverage/stacked layers and exact engine code.
+Primary source: https://raw.githubusercontent.com/recastnavigation/recastnavigation/main/Recast/Include/Recast.h
+
+Godot documents expanded baking bounds + inward border_size for aligned tile edges;
+border affectsXZ only; edge_max_error must be<=1 for that property combination.
+Thus quadrants [-250,0]/[0,250] in both axes, expanded1m on everyXZ side with border1,
+should produce nonoverlapping canonical250m outputs. Do not concatenate the apron
+as overlapping navigation surface, and do not approximate a crop by centroid deletion.
+Official references:
+https://docs.godotengine.org/en/stable/classes/class_navigationmesh.html#class-navigationmesh-property-border-size
+https://docs.godotengine.org/en/stable/tutorials/navigation/navigation_using_navigationmeshes.html#baking-navigation-mesh-chunks-for-large-worlds
+
+Minimal correctness assertions before assigning merged mesh to production Region:
+1. Every tile has finite vertices and >0 polygons. Record tileAABB, vertex/poly counts,
+   exact bake properties, parsed source hash/count and obstacle count. Await each bake
+   completion before reading/merging; never mutate a shared source/nav during its bake.
+2. Same world frame, cell grid and Y minimum/height for every tile. Tile origins/aprons
+   must be integer multiples of0.1m. Reset filter_baking_aabb_offset if inherited.
+   Region/root transforms stay identity. Confirm outputs in canonical tile bounds
+   (small float tolerance), not252m apron bounds; no double world translation.
+3. Vertex weld comparesXYZ, with tiny roundoff tolerance only; no0.1m rounding/snapping
+   of arbitraryY or wide epsilon merges. Different floors must remain different.
+   Assert valid polygon indices,>=3distinct indices, nonzero area, consistent winding;
+   deduplicate identical polygon cycles and reject nonmanifold edges (>2owners).
+4. Along internalX=0 andZ=0, coordinate coincidence alone is insufficient. A long edge
+   opposite two short edges is a T-junction; endpoint welding will not create matching
+   complete adjacency. Build undirected edge-pair diagnostics and identify unmatched
+   collinear seam intervals in intended dry walkable corridors. If present, repair
+   exact edge segmentation or reject merge; do not widen gameplay corridors or add
+   NavigationLinks to hide the defect. No need to force water/building-blocked intervals
+   to connect. Do not rely on cross-Region edge_connection_margin with onlyONE Region.
+5. Preserve source terrain/water exclusions/76roof obstacles and rerun existing23GF,
+   four upper, wet/roof samples, ports and8full physical routes after merge. >0polygons
+   and one route query are insufficient. Publish resource only once checks pass or
+   retain explicit pending status. Keep offline helper as reproducible bake owner;
+   an ordinary future full500m editor rebake would repeat the unresolved limitation.
+
+Concrete seam crossings from current canonical corridors/terrain route_graph:
+  X=0: G05/P01 z21.8223 clear8m; G09/P10 z-52.5000 clear2.5m;
+       TOWN_EAST_S z159.3751 clear2.5m.
+  Z=0: G08 x-60.2300 clear2.5m; G19 x-205.0000 clear2.5m;
+       G13/P07 x97.9816 clear2.5m/3m;
+       P01 x127.8058 and175.8267 clear8m; P04 x202.5028 clear5m.
+  Narrow1.8m access paths crossZ=0 at x-140.8981,-99.1253,-86.4437,
+       -39.3272,9.2879,196.4587 (ACCESS_T01-A/T02-A/T02-B/T03-A/T04-A/I02-A).
+These are computed live from layout.json corridor polylines and terrain-contract.json
+route_graph; primary should derive them in the helper rather than hardcode staleY.
+
+Minimal explicit native seam checks:
+- At EACH listed intended crossing, interpolate the actual segment tangent and take
+  points3m before/after the seam along that tangent; raycast actual static terrain forY.
+  Probe center and lateral +/-max(0,clearWidth/2-0.65)m, not a straight world-axis route
+  that leaves a diagonal corridor. Validate each floor normal against native slope.
+- Query paths both directions. Require endpoints near targets AND a local path length
+  close to the6m crossing (e.g.<=8m plus vertical grade), so a far detour through another
+  seam cannot disguise the disconnected edge. Inspect actual crossing points/owners.
+- Settle real native player on first floor and physically walk to second and back;
+  preserve health, native standing collider, grounded endpoint and report transient
+  airborne frames/maximum floor error. Do not teleport across seam during a walk.
+- Inspect four-way origin junction independently only if actual terrain and collider
+  clearance make it walkable; avoid inventing required routes through an authored wall.
+- Repeat seam checks after saving/reopening the merged NavigationMesh, then rerun all8
+  full routes. Physical walks alone cannot certify nav connectivity; queries alone
+  cannot certify player collision continuity, so keep both results.
+
+Skipped: native confirmation, exact engine-version Recast stack investigation,
+implementation and runtime seam passes. Risk: a mesh can contain many polygons and
+shared vertex coordinates yet remain disconnected at T-junctions or mismatchedY.
+
+PHASE=SEAMS IMPLEMENTED — delegated fixture ownership handoff
+Added only _seams(), _seam_support(), _path_length(), _seam_cliff_negative() and
+phase dispatch to tests/town500_composition_regression.gd; existing phases retained.
+- StrictX0/Z0 crossings derived from live layout.corridors + layout.access_paths.
+  Coordinate+unoriented-heading aliases deduplicated at1e-4 resolution, widest
+  reservation retained; source IDs retained for receipts.
+- Center and two side lanes at half-width minus0.65m. Side-lane intersection is
+  projected onto the actual seam using the route tangent. Each side is3m or shorter
+  only if the actual authored segment ends sooner; unusable lane extent fails.
+- Actual floor rays at both ends and every<=0.5m accept only native dry terrain or
+  explicit bridge/dock deck bodies with a native-walkable normal. Roof/prop/no-floor
+  probes fail explicitly instead of becoming an elevated synthetic path.
+- Native navigation queries both directions require start/end errors<0.6m and
+  length<=min(8m,2*run+2m), then actual _settle/_walk roundtrip on each lane.
+  Every lane and final negative preserve initial health. Failed queries do not
+  suppress physical probes; both types of evidence remain independently visible.
+- Explicit unmatchedX0z-176.5..-175.9 negative uses actual west/east floor positions
+  and normals atx-/+1,z-176.2; permits alternate nav detours, rejects nav path crossing
+  the open seam interval, and attempts actual standing uphill movement against the
+  native terrain collider. It does not force-connect or edit the unmatched boundary.
+
+Static required-helper uniqueness/phase check PASS; independently derived crossing
+counts from current canonical JSON printed in tool output. Primary must compile/run
+phase=seams through native engine; no native result claimed by this worker.
+Scope: all strict segment-interior canonical crossings, not tangent/endpoint contacts
+or an exhaustive seam walkaround. Negative classification remains pending actual
+native geometry/movement evidence. Ownership handed back to primary now.

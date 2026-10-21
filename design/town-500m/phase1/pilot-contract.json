@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "status": "native_pilots_pass_full_map_pending",
+  "fixture_scene": "res://tests/town500_building_pilots.tscn",
+  "fixture_script": "res://tests/town500_building_pilots.gd",
+  "catalogue_sha256": "f11a06463edcf958e32b0e06d5be1a9bf64790e44566c46151a14f01404a0738",
+  "pilots": [
+    {
+      "catalogue_id": "T01-A",
+      "node": "Cottage",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage.tscn",
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "dimensions_xz_m": [
+        10,
+        8
+      ],
+      "fixture_position": [
+        -55,
+        0,
+        -15
+      ],
+      "source_placement_native_verified": false
+    },
+    {
+      "catalogue_id": "T02-A",
+      "node": "Shop",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t04_shop.tscn",
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "dimensions_xz_m": [
+        12,
+        8
+      ],
+      "fixture_position": [
+        -30,
+        0,
+        -15
+      ],
+      "source_placement_native_verified": false
+    },
+    {
+      "catalogue_id": "T03-A",
+      "node": "Civic",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t02_long_house.tscn",
+      "access": {
+        "ground": true,
+        "upper": true
+      },
+      "dimensions_xz_m": [
+        8,
+        16
+      ],
+      "fixture_position": [
+        0,
+        0,
+        -15
+      ],
+      "source_placement_native_verified": false
+    },
+    {
+      "catalogue_id": "I01-A",
+      "node": "Warehouse",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn",
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "dimensions_xz_m": [
+        24.6,
+        18.6
+      ],
+      "fixture_position": [
+        35,
+        0,
+        -15
+      ],
+      "source_placement_native_verified": false
+    },
+    {
+      "catalogue_id": "T01-B",
+      "node": "Shed",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "dimensions_xz_m": [
+        6,
+        4
+      ],
+      "fixture_position": [
+        -55,
+        0,
+        20
+      ],
+      "source_placement_native_verified": false
+    }
+  ],
+  "traversal": "Actual CogitoPlayer input forward through 4 GFEntry/GFInterior routes and civic STAIRS in ascending then reversed descending order; retained unit scale, native 0.6x1.7x0.6 standing box. Closed T01-B tests actual DoorSeal collision and player contact. Fixture roots Y0, authored ground Y-0.2 retain catalogue root-above-pad0.2. No nav test here.",
+  "stairs_markers": [
+    "StairBottom",
+    "FirstFlightTop",
+    "MidLanding",
+    "UpperLanding",
+    "UpperInterior"
+  ],
+  "decks": [
+    {
+      "node": "CountyDeck",
+      "length_m": 32.955778,
+      "width_m": 8
+    },
+    {
+      "node": "FootbridgeDeck",
+      "length_m": 26,
+      "width_m": 2.5
+    }
+  ],
+  "deck_scope": "Level floor proxies only; 2.5m overhead clearance planes; centre/two edge lanes walked both directions. Deck must own sampled floor ray. No Phase2 terrain, approaches, hydrology, bridge rails/nav or newmap PASS.",
+  "glass_scope": "Actual wrappers: inactive imported helper; one/three ACTIVE tagged pane-only bodies; active untagged opaque body; pane/mullion/masonry rays including both booth side mullions; actual native crouched player exact slide collision with pane, raised test-only support prevents sill false PASS. Separate glass regression also verifies actual module AI/shot/CCD paths.",
+  "save_isolation": "Unique user://town500_building_pilots_<ticks>/ assigned before adding Player and kept through shutdown: CSM._exit_tree deletes temporary saves. No save calls/production slot writes; assert empty directory and delete only owned empty directory. Never restore previous user state directory before quitting.",
+  "render_capture": "Only if RenderingServer.get_rendering_device()!=null: HUD hidden, three rendered frames per stable CaptureCamera; window/booth PNGs under res://tests/artifacts/town500_phase1_20261008. Test environment uses COLOR ambient, no absent Sky dependency. Source/render snapshots are separate from assertions.",
+  "native_run": "Primary MCP: headless PASS101checks/exit0/115.08s before two extra side-mullion assertions; final rendered PASS107checks on RTX4060Laptop/ForwardPlus including those assertions and captures. User saves isolated and empty fixture root removed; process ended. See phase1-verification.json."
+}

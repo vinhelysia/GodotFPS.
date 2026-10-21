@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/apartment_mailboxes/assets/apartment_mailboxes_row.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/apartment_mailboxes/materials/town_apartment_mailboxes_row_used.tres" id="2_finish"]
+
+[node name="town_apartment_mailboxes__row" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "town_apartment_mailboxes"
+metadata/catalog_variant = "row"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="ApartmentMailboxesRow" parent="Model/TownApartmentMailboxesRow"]
+surface_material_override/0 = ExtResource("2_finish")

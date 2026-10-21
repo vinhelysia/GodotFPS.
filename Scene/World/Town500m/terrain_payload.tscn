@@ -1,0 +1,31 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Art/GroundArt/dry_terrain.tscn" id="s0"]
+
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Terrain/road_collapses.tscn" id="s1"]
+
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Art/GroundArt/circulation.tscn" id="s2"]
+
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Art/GroundArt/water.tscn" id="s3"]
+
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Circulation/r01_bridge.tscn" id="s4"]
+
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Circulation/r02_bridge.tscn" id="s5"]
+
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Circulation/dock_l03.tscn" id="s6"]
+
+[node name="Town500TerrainPayload" type="Node3D"]
+
+[node name="DryTerrain" parent="." instance=ExtResource("s0")]
+
+[node name="RoadCollapses" parent="." instance=ExtResource("s1")]
+
+[node name="Circulation" parent="." instance=ExtResource("s2")]
+
+[node name="Water" parent="." instance=ExtResource("s3")]
+
+[node name="R01" parent="." instance=ExtResource("s4")]
+
+[node name="R02" parent="." instance=ExtResource("s5")]
+
+[node name="DockL03" parent="." instance=ExtResource("s6")]

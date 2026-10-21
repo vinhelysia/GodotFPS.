@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/market_stall/assets/market_stall_covered.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/market_stall/materials/town_market_stall_covered_used.tres" id="2_finish"]
+
+[node name="town_market_stall__tarp-covered" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "town_market_stall"
+metadata/catalog_variant = "tarp-covered"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="MarketStallCovered" parent="Model/TownMarketStallCovered"]
+surface_material_override/0 = ExtResource("2_finish")

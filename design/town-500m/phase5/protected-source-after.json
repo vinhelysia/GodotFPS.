@@ -1,0 +1,68 @@
+[
+  {
+    "path": "Scene/Town.tscn",
+    "before": "c9e1098da9285b83e17d795435f9a8e647fe3966caacb03720200d05b720221b",
+    "after": "9ebf3487db910891f05a85418a38046ab0c21a5fa58fb240104e027bc4201d2b",
+    "unchanged": false
+  },
+  {
+    "path": "Scene/World/Town500m/Dressing/dressing.tscn",
+    "before": "28f0c74e09a9da799b9c706a5bcd3831044aba65eb342781287740e8709fb7a1",
+    "after": "28f0c74e09a9da799b9c706a5bcd3831044aba65eb342781287740e8709fb7a1",
+    "unchanged": true
+  },
+  {
+    "path": "project.godot",
+    "before": "080bdb5a0067e222f77529c3dbe1de6b539461103cbfa26c77a9376ca56dd59e",
+    "after": "080bdb5a0067e222f77529c3dbe1de6b539461103cbfa26c77a9376ca56dd59e",
+    "unchanged": true
+  },
+  {
+    "path": "Scene/Hideout/stash_hub.tscn",
+    "before": "9e391e6c6955188fc0eeab5fb06ad42c6fabacfa51503e4170eab09713900b97",
+    "after": "9e391e6c6955188fc0eeab5fb06ad42c6fabacfa51503e4170eab09713900b97",
+    "unchanged": true
+  },
+  {
+    "path": "Scene/Hideout/bunker_prototype_16x20.tscn",
+    "before": "b76a3b0903a88e247614aa7500f6dde6d19c734fd570ecdd8dc6510a2908d605",
+    "after": "b76a3b0903a88e247614aa7500f6dde6d19c734fd570ecdd8dc6510a2908d605",
+    "unchanged": true
+  },
+  {
+    "path": "Scripts/Enemies/scav_perception.gd",
+    "before": "3b95b4f3bf601e0ccbf178a1df742fa01d4f46cf60edce77d3114cd652b56ec9",
+    "after": "3b95b4f3bf601e0ccbf178a1df742fa01d4f46cf60edce77d3114cd652b56ec9",
+    "unchanged": true
+  },
+  {
+    "path": "addons/cogito/Theme/Cogito_Theme_A.tres",
+    "before": "1c6e3c0f966acbdbdabfddf0c8c407493cdabd587001ce4f2dbbbf0bebcd95e6",
+    "after": "1c6e3c0f966acbdbdabfddf0c8c407493cdabd587001ce4f2dbbbf0bebcd95e6",
+    "unchanged": true
+  },
+  {
+    "path": "design/town-500m/layout.json",
+    "before": "3eaf13391a1fd9781a20bb179bab8f60c88a9a4a14384f8a738b3b7539aab81b",
+    "after": "3eaf13391a1fd9781a20bb179bab8f60c88a9a4a14384f8a738b3b7539aab81b",
+    "unchanged": true
+  },
+  {
+    "path": "design/town-500m/building-catalogue.json",
+    "before": "271ac4c21013c72e063d5cb43850d6f0a8f20b3bfcc6269d60ee1f7780c9051b",
+    "after": "271ac4c21013c72e063d5cb43850d6f0a8f20b3bfcc6269d60ee1f7780c9051b",
+    "unchanged": true
+  },
+  {
+    "path": "design/town-500m/terrain-contract.json",
+    "before": "b0221b5ea78784b24899a14696238dfd58441a8b04ec62434c267a1a7667a87a",
+    "after": "b0221b5ea78784b24899a14696238dfd58441a8b04ec62434c267a1a7667a87a",
+    "unchanged": true
+  },
+  {
+    "path": "tools/town500_bake_navigation.gd",
+    "before": "7230155bac427bd291d243a8e99f24878f5db6668bb6cd767e0b50d123aa5e8d",
+    "after": "7ac4faf521f8eddb151ada5092ab12c767370bdbf3d848d8454d3cee230cb386",
+    "unchanged": false
+  }
+]

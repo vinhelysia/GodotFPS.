@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3]
+
+[sub_resource type="StandardMaterial3D" id="graybox"]
+albedo_color = Color(0.39, 0.41, 0.37, 1)
+roughness = 1.0
+
+[sub_resource type="BoxMesh" id="SolidShell_mesh"]
+material = SubResource("graybox")
+size = Vector3(4, 5, 4)
+
+[sub_resource type="BoxShape3D" id="SolidShell_shape"]
+size = Vector3(4, 5, 4)
+
+[node name="observation_platform" type="Node3D"]
+metadata/graybox = true
+metadata/finished_art = false
+metadata/footprint_m = Vector2(4, 4)
+metadata/height_m = 5
+metadata/ground_access = false
+metadata/upper_access = false
+
+[node name="Architecture" type="Node3D" parent="."]
+
+[node name="SolidShell" type="StaticBody3D" parent="Architecture"]
+position = Vector3(0, 2.3, 0)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Architecture/SolidShell"]
+mesh = SubResource("SolidShell_mesh")
+
+[node name="Collision" type="CollisionShape3D" parent="Architecture/SolidShell"]
+shape = SubResource("SolidShell_shape")

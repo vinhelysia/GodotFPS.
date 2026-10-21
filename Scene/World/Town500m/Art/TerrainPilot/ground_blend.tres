@@ -1,0 +1,30 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3]
+
+[ext_resource type="Shader" path="res://Scene/World/Town500m/Art/TerrainPilot/ground_blend.gdshader" id="1_shader"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Grass/Grass_001_COLOR.jpg" id="2_grass"]
+
+[resource]
+resource_name = "Town residential ground pilot"
+shader = ExtResource("1_shader")
+shader_parameter/grass_texture = ExtResource("2_grass")
+shader_parameter/original_color = Color(0.42, 0.39, 0.33, 1)
+shader_parameter/soil_color = Color(0.36, 0.32, 0.26, 1)
+shader_parameter/grass_color = Color(0.3, 0.335, 0.24, 1)
+shader_parameter/pilot_center = Vector2(-130, 10)
+shader_parameter/pilot_half_extents = Vector2(30, 35)
+shader_parameter/pilot_feather = 5.0
+shader_parameter/road_segment = Vector4(-160.23, 21.59, -60.23, 10.23)
+shader_parameter/road_half_width = 4.0
+shader_parameter/verge_width = 2.0
+shader_parameter/approach_segment = Vector4(-142, -9.7, -138.723, 19.1468)
+shader_parameter/approach_half_width = 0.9
+shader_parameter/foundation_center = Vector2(-142, -17)
+shader_parameter/foundation_half_extents = Vector2(5, 4)
+shader_parameter/foundation_apron = 1.0
+shader_parameter/apartment_center = Vector2(-172, 60)
+shader_parameter/apartment_half_extents = Vector2(24, 30)
+shader_parameter/apartment_foundation_center = Vector2(-165, 60)
+shader_parameter/apartment_foundation_half_extents = Vector2(8.1, 20.25)
+shader_parameter/apartment_approach_a = Vector4(-188.75, 63.5, -180, 63.5)
+shader_parameter/apartment_approach_b = Vector4(-180, 63.5, -175.4, 60)
+shader_parameter/apartment_approach_c = Vector4(-175.4, 60, -174.909, 60)

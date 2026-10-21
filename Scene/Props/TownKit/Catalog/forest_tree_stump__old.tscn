@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/forest_tree_stump/assets/forest_tree_stump_old.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/forest_tree_stump/materials/town_forest_tree_stump_old_used.tres" id="2_finish"]
+
+[node name="forest_tree_stump__old" type="Node3D"]
+metadata/catalog_id = "forest_tree_stump"
+metadata/catalog_variant = "old"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="TreeStumpOld" parent="Model/TownTreeStumpOld"]
+surface_material_override/0 = ExtResource("2_finish")

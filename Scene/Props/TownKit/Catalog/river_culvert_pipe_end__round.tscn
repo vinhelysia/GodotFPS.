@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/river_culvert_pipe_end/assets/river_culvert_pipe_end_round.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/river_culvert_pipe_end/materials/town_river_culvert_pipe_end_round_used.tres" id="2_finish"]
+
+[node name="river_culvert_pipe_end__round" type="Node3D"]
+metadata/catalog_id = "river_culvert_pipe_end"
+metadata/catalog_variant = "round"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="CulvertRound" parent="Model/TownCulvertRound"]
+surface_material_override/0 = ExtResource("2_finish")

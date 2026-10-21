@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3]
+
+[sub_resource type="StandardMaterial3D" id="concrete"]
+albedo_color = Color(0.45, 0.45, 0.4, 1)
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="metal"]
+albedo_color = Color(0.22, 0.25, 0.23, 1)
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="BoxMesh" id="mesh_Deck"]
+size = Vector3(26, 0.4, 2.5)
+
+[sub_resource type="BoxShape3D" id="shape_Deck"]
+size = Vector3(26, 0.4, 2.5)
+
+[sub_resource type="BoxMesh" id="mesh_RailNorth"]
+size = Vector3(26, 1.1, 0.12)
+
+[sub_resource type="BoxShape3D" id="shape_RailNorth"]
+size = Vector3(26, 1.1, 0.12)
+
+[sub_resource type="BoxMesh" id="mesh_RailSouth"]
+size = Vector3(26, 1.1, 0.12)
+
+[sub_resource type="BoxShape3D" id="shape_RailSouth"]
+size = Vector3(26, 1.1, 0.12)
+
+[node name="R02" type="Node3D" groups=["town500_bridge"]]
+position = Vector3(60.1305315, 0, -65.0002225)
+rotation = Vector3(0, 0.3971573, 0)
+
+[node name="Deck" type="StaticBody3D" parent="."]
+position = Vector3(0, 2.8, 0)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Visual" type="MeshInstance3D" parent="Deck"]
+mesh = SubResource("mesh_Deck")
+material_override = SubResource("concrete")
+
+[node name="Collision" type="CollisionShape3D" parent="Deck"]
+shape = SubResource("shape_Deck")
+
+[node name="RailNorth" type="StaticBody3D" parent="."]
+position = Vector3(0, 3.55, -1.31)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Visual" type="MeshInstance3D" parent="RailNorth"]
+mesh = SubResource("mesh_RailNorth")
+material_override = SubResource("metal")
+
+[node name="Collision" type="CollisionShape3D" parent="RailNorth"]
+shape = SubResource("shape_RailNorth")
+
+[node name="RailSouth" type="StaticBody3D" parent="."]
+position = Vector3(0, 3.55, 1.31)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Visual" type="MeshInstance3D" parent="RailSouth"]
+mesh = SubResource("mesh_RailSouth")
+material_override = SubResource("metal")
+
+[node name="Collision" type="CollisionShape3D" parent="RailSouth"]
+shape = SubResource("shape_RailSouth")
+
+[node name="WestPort" type="Marker3D" parent="."]
+position = Vector3(-13, 3, 0)
+
+[node name="EastPort" type="Marker3D" parent="."]
+position = Vector3(13, 3, 0)

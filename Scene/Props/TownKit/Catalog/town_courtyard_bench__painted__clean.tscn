@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/courtyard_bench/assets/courtyard_bench_painted.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/courtyard_bench/materials/town_courtyard_bench_painted_clean.tres" id="2_finish"]
+
+[node name="town_courtyard_bench__painted" type="Node3D"]
+metadata/catalog_id = "town_courtyard_bench"
+metadata/catalog_variant = "painted"
+metadata/finish = "clean"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="CourtyardBenchPainted" parent="Model/TownCourtyardBenchPainted"]
+surface_material_override/0 = ExtResource("2_finish")

@@ -1,0 +1,475 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-20",
+  "status": "SCOPED_TERRAIN_APARTMENT_PILOT_PASS_WITH_LIMITS",
+  "gates": [
+    {
+      "name": "props",
+      "status": "PASS",
+      "checks": 10512,
+      "rendered": false,
+      "receipt": "tests/artifacts/town500_apartment/props/navigation-native.json",
+      "sha256": "55261a14ee3ca2ac5d5b0d3609c71a002deba74c98d6820e2c93f2c90c6afad3",
+      "source_binding_unchanged_during_run": true,
+      "current_source_differences": []
+    },
+    {
+      "name": "walk",
+      "status": "PASS",
+      "checks": 1192,
+      "rendered": false,
+      "receipt": "tests/artifacts/town500_apartment/physical/apartment_interiors-native.json",
+      "sha256": "c4316d8e0b79ff448d24d163a6286e14eea76e3879f866872a2b3570c37977c9",
+      "source_binding_unchanged_during_run": true,
+      "current_source_differences": [
+        "res://tests/town500_apartment_regression.gd"
+      ]
+    },
+    {
+      "name": "capture",
+      "status": "PASS",
+      "checks": 576,
+      "rendered": true,
+      "receipt": "tests/artifacts/town500_apartment/apartment_capture-native.json",
+      "sha256": "7dadafbf0550083783c2dff9905afc091b5f39f0f324f2a3e720c632f4813d72",
+      "source_binding_unchanged_during_run": true,
+      "current_source_differences": []
+    }
+  ],
+  "controller": {
+    "basement_rooms": 6,
+    "down_flights": 12,
+    "kind": "apartment_interiors_complete",
+    "representative_apartments": 20,
+    "roof_loop": true,
+    "scope": "Native CogitoPlayer movement without jumping, controller changes, intermediate teleport, or nav rerouting. Representative rooms are not all40 main rooms.",
+    "up_flights": 12
+  },
+  "walk_fixture_proof": {
+    "receipt_fixture_sha256": "c736a8da56411b7afdc9d1f7ea3572c692fbf3f5e08bcf18883e4ab39f322b3e",
+    "archived_source": "tests/artifacts/town500_apartment/physical/town500_apartment_regression.gd.txt",
+    "current_fixture_change": "Only rendered capture/contact/roof-LOS helpers added after physical PASS. Removing exactly those additions reconstructs the full receipt-bound fixture SHA; walking methods are byte-identical."
+  },
+  "historical_terrain_gate": {
+    "receipt": "tests/artifacts/town500_terrain_pilot/after/capture-native.json",
+    "sha256": "2631f2190f472a84efbf5a15bc0e66e5bf04a41626171e1b3add403d84a182b7",
+    "checks": 1216,
+    "scope": "Three native road/house/verge roundtrips before apartment excavation. Current cut starts at Z39.75; those route waypoints end at Z27. Not a final whole-terrain rewalk."
+  },
+  "geometry": {
+    "source_obj_count": 60,
+    "excavation_report_sha256": "f6061cd30c028980fab6098d9831eafea1d2657d86123ddea97b97c91095e8e7",
+    "current_outputs_match_report": true,
+    "bake": {
+      "collision_winding": "Canonical clockwise Godot faces on all six replacement chunks; corrected from imported OBJ ordering",
+      "nonmanifold_edges": 0,
+      "polygons": 13920,
+      "runtime_links": 0,
+      "runtime_regions": 1,
+      "seams": {
+        "x": {
+          "joined_edge_pairs": 18,
+          "open_boundary_edges": [
+            {
+              "a": "(0.0, 2.2, 102.5)",
+              "b": "(0.0, 2.2, 105.1)"
+            },
+            {
+              "a": "(0.0, 2.2, 102.5)",
+              "b": "(0.0, 2.2, 101.8)"
+            }
+          ]
+        },
+        "z": {
+          "joined_edge_pairs": 12,
+          "open_boundary_edges": []
+        }
+      },
+      "source_Town_before_save": "796a7662b76c00a56903dfd794e463f21c7bf2b519a898921e88292b44b10b2e",
+      "tiles": [
+        {
+          "bounds_xz": [
+            -250,
+            -250,
+            0,
+            0
+          ],
+          "elapsed_ms": 1936,
+          "polygons": 4200,
+          "tile": 0,
+          "vertices": 3433
+        },
+        {
+          "bounds_xz": [
+            0,
+            -250,
+            250,
+            0
+          ],
+          "elapsed_ms": 1545,
+          "polygons": 3551,
+          "tile": 1,
+          "vertices": 2791
+        },
+        {
+          "bounds_xz": [
+            -250,
+            0,
+            0,
+            250
+          ],
+          "elapsed_ms": 1921,
+          "polygons": 4021,
+          "tile": 2,
+          "vertices": 3763
+        },
+        {
+          "bounds_xz": [
+            0,
+            0,
+            250,
+            250
+          ],
+          "elapsed_ms": 1305,
+          "polygons": 2148,
+          "tile": 3,
+          "vertices": 1771
+        }
+      ],
+      "vertices": 11714
+    }
+  },
+  "plot": {
+    "native_contacts": [
+      {
+        "gaps_m": [
+          -4.76837158203125e-7,
+          -4.76837158203125e-7,
+          -4.76837158203125e-7,
+          -4.76837158203125e-7
+        ],
+        "kind": "apartment_plot_contact",
+        "node": "BirchWest",
+        "pass": true
+      },
+      {
+        "gaps_m": [
+          4.76837158203125e-7,
+          4.76837158203125e-7,
+          4.76837158203125e-7,
+          4.76837158203125e-7
+        ],
+        "kind": "apartment_plot_contact",
+        "node": "BirchNorth",
+        "pass": true
+      },
+      {
+        "gaps_m": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "kind": "apartment_plot_contact",
+        "node": "BirchEast",
+        "pass": true
+      },
+      {
+        "gaps_m": [
+          0.00599861145019531,
+          0.00599861145019531,
+          0.00599861145019531,
+          0.00599861145019531
+        ],
+        "kind": "apartment_plot_contact",
+        "node": "ServicePallet",
+        "pass": true
+      },
+      {
+        "gaps_m": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "kind": "apartment_plot_contact",
+        "node": "ServiceCrate",
+        "pass": true
+      },
+      {
+        "gaps_m": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "kind": "apartment_plot_contact",
+        "node": "ServiceDrum",
+        "pass": true
+      }
+    ],
+    "selective_import_files_current_hashes_verified": 5,
+    "import_receipt_status_is_historical": true
+  },
+  "images": [
+    {
+      "id": "apartment_elevated",
+      "hour": 12,
+      "path": "tests/artifacts/town500_apartment/apartment_elevated_12.png",
+      "sha256": "48a997a1089176f9372a301093904bfb1e7c6f34b129d6753b241605038c6ef3"
+    },
+    {
+      "id": "apartment_approach",
+      "hour": 12,
+      "path": "tests/artifacts/town500_apartment/apartment_approach_12.png",
+      "sha256": "7e759de55607aaf0b6d06fed30adec366f77e94a073e8ea25ac88229a4370a43"
+    },
+    {
+      "id": "apartment_facade",
+      "hour": 12,
+      "path": "tests/artifacts/town500_apartment/apartment_facade_12.png",
+      "sha256": "b78ef870a8926cc17149a00e991c635e57094b176a2bcaa3b27d297ca8a687a5"
+    },
+    {
+      "id": "apartment_stairs",
+      "hour": 12,
+      "path": "tests/artifacts/town500_apartment/apartment_stairs_12.png",
+      "sha256": "72aaadee0428f698a6de161f9ea15a43bf7107b30fa4e222d4da81ef256112a3"
+    },
+    {
+      "id": "apartment_basement",
+      "hour": 12,
+      "path": "tests/artifacts/town500_apartment/apartment_basement_12.png",
+      "sha256": "97c9ccc3626ae5f8270f918e0cb37d0bb998fb4314cd952a04be3528c079a561"
+    },
+    {
+      "id": "apartment_roof",
+      "hour": 12,
+      "path": "tests/artifacts/town500_apartment/apartment_roof_12.png",
+      "sha256": "865576eb04de0cf57d5babc190bd0159c96f179a95e05d39168f7dd97ca023c0"
+    },
+    {
+      "id": "apartment_elevated",
+      "hour": 17,
+      "path": "tests/artifacts/town500_apartment/apartment_elevated_17.png",
+      "sha256": "36471a5003f84d9c1f66332c05871e736483eb2ff19be35af1676e0c6f911e34"
+    },
+    {
+      "id": "apartment_approach",
+      "hour": 17,
+      "path": "tests/artifacts/town500_apartment/apartment_approach_17.png",
+      "sha256": "b46b91c338f6322520fe7d93f923eaea9b426172391b90274afb0469e14beb74"
+    },
+    {
+      "id": "apartment_facade",
+      "hour": 17,
+      "path": "tests/artifacts/town500_apartment/apartment_facade_17.png",
+      "sha256": "88275dbf919dded35765ab8c5ca22e56282b2a4788b14421f548ee8a8e52741b"
+    },
+    {
+      "id": "apartment_stairs",
+      "hour": 17,
+      "path": "tests/artifacts/town500_apartment/apartment_stairs_17.png",
+      "sha256": "02110468624b15c3337fc4f2779324de0e1d08a4690b4997d9f0733f251e8098"
+    },
+    {
+      "id": "apartment_basement",
+      "hour": 17,
+      "path": "tests/artifacts/town500_apartment/apartment_basement_17.png",
+      "sha256": "3498740ae9f3e0d28a7729336d7a9bb5d9c732ebd8865a09176ba514001a03d3"
+    },
+    {
+      "id": "apartment_roof",
+      "hour": 17,
+      "path": "tests/artifacts/town500_apartment/apartment_roof_17.png",
+      "sha256": "47e54328e10b705611b09bded08734f8c396a375cfdaf783a84ab0d62faddded"
+    },
+    {
+      "id": "overview_noon",
+      "hour": 12,
+      "path": "tests/artifacts/town500_apartment/overview_noon.png",
+      "sha256": "0f1ed8877d28824b0bba40dc5a54a79d494f73326db09f98b6f4f47a6f8d269f"
+    },
+    {
+      "id": "street_noon",
+      "hour": 12,
+      "path": "tests/artifacts/town500_apartment/street_noon.png",
+      "sha256": "72fd6c6425b6576257460efed3afafa23bb3cc462c94b5c9812c6615c5d008d2"
+    },
+    {
+      "id": "approach_noon",
+      "hour": 12,
+      "path": "tests/artifacts/town500_apartment/approach_noon.png",
+      "sha256": "ca554a82be0c866501ac40facd1e15b4d84388ea8c9beeaabbf985691ae7e252"
+    },
+    {
+      "id": "street_dusk",
+      "hour": 17,
+      "path": "tests/artifacts/town500_apartment/street_dusk.png",
+      "sha256": "e200bad9d29cb90f22343993f988a4270bea0297611567b3b390599189204214"
+    }
+  ],
+  "performance": {
+    "observations": {
+      "engine_max_fps": 120,
+      "eye": [
+        -191,
+        3.70000004768372,
+        84
+      ],
+      "hour": 12,
+      "kind": "apartment_render_cost",
+      "limits": "Wall/process samples are not GPU timestamp measurements or1080p120FPS acceptance. BT and survival needs are disabled by the fixture. VSync/background throttling and other apps affect absolute frame time. Imported textures remain resident when hidden.",
+      "measurements": [
+        {
+          "building_visible": true,
+          "mean_draw_calls": 1848,
+          "mean_primitives": 845596,
+          "mean_process_ms": 154.5732,
+          "median_wall_frame_ms": 8.439,
+          "p95_wall_frame_ms": 9.3,
+          "sample_frames": 120,
+          "warmup_frames": 60
+        },
+        {
+          "building_visible": false,
+          "mean_draw_calls": 1832,
+          "mean_primitives": 749236,
+          "mean_process_ms": 4.04433333333334,
+          "median_wall_frame_ms": 8.406,
+          "p95_wall_frame_ms": 9.242,
+          "sample_frames": 120,
+          "warmup_frames": 60
+        },
+        {
+          "building_visible": false,
+          "mean_draw_calls": 1832,
+          "mean_primitives": 749236,
+          "mean_process_ms": 4.01746666666667,
+          "median_wall_frame_ms": 8.353,
+          "p95_wall_frame_ms": 9.37,
+          "sample_frames": 120,
+          "warmup_frames": 60
+        },
+        {
+          "building_visible": true,
+          "mean_draw_calls": 1848,
+          "mean_primitives": 845596,
+          "mean_process_ms": 4.86913333333333,
+          "median_wall_frame_ms": 8.395,
+          "p95_wall_frame_ms": 9.168,
+          "sample_frames": 120,
+          "warmup_frames": 60
+        }
+      ],
+      "texture_bytes_resident": 734258176,
+      "viewport": [
+        1280,
+        720,
+        0
+      ],
+      "vsync_mode": 0
+    },
+    "draw_call_delta": 16,
+    "primitive_delta": 96360,
+    "accepted_as_fps_benchmark": false,
+    "reason": "1280x720, max_fps120, editor unfocused/throttle flag; first TIME_PROCESS sample retains startup contamination. Wall medians are capped observations, not GPU cost or1080p120FPS certification."
+  },
+  "roof_los": {
+    "eye": [
+      -170,
+      22.0699996948242,
+      66
+    ],
+    "kind": "apartment_roof_los",
+    "rays": [
+      {
+        "clear_to_200m": true,
+        "collider": "",
+        "heading_deg": 0,
+        "range_m": 200
+      },
+      {
+        "clear_to_200m": false,
+        "collider": "/root/Town/NavigationRegion3D/Level/ApartmentPilot/Building/Model/Building",
+        "heading_deg": 45,
+        "range_m": 11.7499971389771
+      },
+      {
+        "clear_to_200m": true,
+        "collider": "",
+        "heading_deg": 90,
+        "range_m": 200
+      },
+      {
+        "clear_to_200m": true,
+        "collider": "",
+        "heading_deg": 135,
+        "range_m": 200
+      },
+      {
+        "clear_to_200m": true,
+        "collider": "",
+        "heading_deg": 180,
+        "range_m": 200
+      },
+      {
+        "clear_to_200m": true,
+        "collider": "",
+        "heading_deg": 225,
+        "range_m": 200
+      },
+      {
+        "clear_to_200m": true,
+        "collider": "",
+        "heading_deg": 270,
+        "range_m": 200
+      },
+      {
+        "clear_to_200m": true,
+        "collider": "",
+        "heading_deg": 315,
+        "range_m": 200
+      }
+    ],
+    "scope": "Eight horizontal200m solid-collider rays at one roof eye; not all-angle cover, AI vision or high-ground balance acceptance."
+  },
+  "source_protection": {
+    "report": "design/town-500m/phase6/protected-final.json",
+    "unchanged": 8,
+    "expected_composition_edits": 2,
+    "theme_cache_only_guarded_restore": true,
+    "project_settings_and_global_lighting_unchanged": true
+  },
+  "cleanup": {
+    "runtime_idle": true,
+    "run_args_restored_to": "",
+    "unsaved_scenes": [],
+    "original_open_scenes_retained": true,
+    "owned_empty_test_root_removed": true,
+    "real_save_writes_rejected_by_fixture": true
+  },
+  "current_files": {
+    "Scene/Town.tscn": "15b6afa9163392c81e00dd864ed972ddf4b4d7e8a1d0cbe23d2b370403952939",
+    "Scene/World/Town500m/terrain_payload.tscn": "1519cb0b9c255524ff4a1f600b2f07cb214b1c13c2ecb7aa2cc6a020379acdfd",
+    "Scene/World/Town500m/Art/apartment_pilot.tscn": "0543003d4145009ec81a77b19c34156d6a1e850754531b5c2f11735e3802dab1",
+    "Scene/Props/Buildings/soviet_apartment_worn.tscn": "491199bce0d3517a5105cbee4ca301d9fef001e164e0bce3d0136ead6ab54e13",
+    "Scene/World/Town500m/Art/TerrainPilot/ground_blend.gdshader": "a0fcb76e307bed78b3831a5f0b26bd1bd30e80489b66adabedb7aab6fcaca9d3",
+    "Scene/World/Town500m/Art/TerrainPilot/ground_blend.tres": "500484012e3e464f0aa1c9055255b91b0c336db256114eed841ccbcf731611ac",
+    "Scene/World/Town500m/Art/ApartmentSite/ground_finish.tscn": "ffa8dfab72409879e8873dab1bf937f1f2e0f8378e40013897cb53f581c1cdc5",
+    "Scene/World/Town500m/Art/ApartmentSite/ground_farmland.tres": "911d7e10fc7098ca657cc8cf6508c1294cec6b95ecd4a13d7c299738525d1114",
+    "Scene/World/Town500m/Art/ApartmentSite/ground_shore.tres": "702c9d20deeb1f156455b44884878a6b4c59ad2e44dfb209bc1f779d0a7e0ab1",
+    "tests/town500_apartment_regression.gd": "e3fb30facbc16d3a1faadd060134b269d6f704aca1bc9cecd9772a3c147684ca",
+    "tests/town500_apartment_regression.tscn": "f3b8e7b9273f7b8837717fc51118021df8176ca1a9c316a40440f68baba4a29d"
+  },
+  "limits": [
+    "All1717 source physics rays plus representative20/40 main rooms, six basement rooms and12 stair flights in both directions; not every room floor/roof edge.",
+    "Seven of eight horizontal roof rays remain clear200m; high-ground balance and AI navigation/tactics on apartment floors remain unapproved.",
+    "Prior rendered walk unexpectedly opened inventory; user reported no input. Cause unconfirmed; full headless walk did not reproduce it. No gameplay workaround applied.",
+    "MCP headless client timed out after300s; child continued and produced source-bound completion PASS. Tool exit code was not observed.",
+    "Global daylight remains dark; no global lighting/exposure change or whole-map art acceptance.",
+    "Scav BT/process and survival drain disabled in fixtures; no active-AI, old spatial-save,1080p/120FPS or whole-map rewalk claim.",
+    "Unit-scale job own manifest remains historical NATIVE_PENDING; final current native props/navigation acceptance is this report. A cross-chat request to revise that manifest was rejected by automatic approval review; those files were left unchanged.",
+    "Generated fixture/artifact/docs files retain existing ignore policy; no force-add, commit or push."
+  ]
+}

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/river_log_crossing/assets/river_log_crossing_side.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/river_log_crossing/materials/town_river_log_crossing_side_used.tres" id="2_finish"]
+
+[node name="river_log_crossing__side" type="Node3D"]
+metadata/catalog_id = "river_log_crossing"
+metadata/catalog_variant = "side"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="LogCrossingSide" parent="Model/TownLogCrossingSide"]
+surface_material_override/0 = ExtResource("2_finish")

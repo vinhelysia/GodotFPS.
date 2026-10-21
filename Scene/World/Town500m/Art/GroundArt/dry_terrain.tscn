@@ -1,0 +1,227 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Art/ApartmentSite/ground_finish.tscn" id="base"]
+
+[ext_resource type="Material" path="res://Scene/World/Town500m/Art/GroundArt/town.tres" id="town"]
+
+[ext_resource type="Material" path="res://Scene/World/Town500m/Art/GroundArt/industry.tres" id="industry"]
+
+[ext_resource type="Material" path="res://Scene/World/Town500m/Art/GroundArt/bunker.tres" id="bunker"]
+
+[ext_resource type="Material" path="res://Scene/World/Town500m/Art/GroundArt/hills.tres" id="hills"]
+
+[ext_resource type="Material" path="res://Scene/World/Town500m/Art/GroundArt/forest.tres" id="forest"]
+
+[ext_resource type="Material" path="res://Scene/World/Town500m/Art/GroundArt/farmland.tres" id="farmland"]
+
+[ext_resource type="Material" path="res://Scene/World/Town500m/Art/GroundArt/shore.tres" id="shore"]
+
+[ext_resource type="Material" path="res://Scene/World/Town500m/Art/GroundArt/trail.tres" id="trail"]
+
+[ext_resource type="Material" path="res://Scene/World/Town500m/Art/GroundArt/retaining.tres" id="retaining"]
+
+[node name="Town500mDryTerrain" instance=ExtResource("base")]
+
+[node name="chunk_0_0_hills" parent="."]
+material_override = ExtResource("hills")
+
+[node name="chunk_0_1_hills" parent="."]
+material_override = ExtResource("hills")
+
+[node name="chunk_0_1_shore" parent="."]
+material_override = ExtResource("shore")
+
+[node name="chunk_0_1_farmland" parent="."]
+material_override = ExtResource("farmland")
+
+[node name="chunk_0_2_farmland" parent="."]
+material_override = ExtResource("farmland")
+
+[node name="chunk_0_3_farmland" parent="."]
+material_override = ExtResource("farmland")
+
+[node name="chunk_0_4_farmland" parent="."]
+material_override = ExtResource("farmland")
+
+[node name="chunk_0_0_bunker" parent="."]
+material_override = ExtResource("bunker")
+
+[node name="chunk_0_1_bunker" parent="."]
+material_override = ExtResource("bunker")
+
+[node name="chunk_0_2_shore" parent="."]
+material_override = ExtResource("shore")
+
+[node name="chunk_0_3_shore" parent="."]
+material_override = ExtResource("shore")
+
+[node name="chunk_0_4_shore" parent="."]
+material_override = ExtResource("shore")
+
+[node name="chunk_0_2_town" parent="."]
+material_override = ExtResource("town")
+
+[node name="chunk_0_3_town" parent="."]
+material_override = ExtResource("town")
+
+[node name="chunk_0_4_town" parent="."]
+material_override = ExtResource("town")
+
+[node name="chunk_1_0_hills" parent="."]
+material_override = ExtResource("hills")
+
+[node name="chunk_1_0_bunker" parent="."]
+material_override = ExtResource("bunker")
+
+[node name="chunk_1_1_bunker" parent="."]
+material_override = ExtResource("bunker")
+
+[node name="chunk_1_1_hills" parent="."]
+material_override = ExtResource("hills")
+
+[node name="chunk_1_1_shore" parent="."]
+material_override = ExtResource("shore")
+
+[node name="chunk_1_2_shore" parent="."]
+material_override = ExtResource("shore")
+
+[node name="chunk_1_2_town" parent="."]
+material_override = ExtResource("town")
+
+[node name="chunk_1_3_town" parent="."]
+material_override = ExtResource("town")
+
+[node name="chunk_1_4_town" parent="."]
+material_override = ExtResource("town")
+
+[node name="chunk_1_4_shore" parent="."]
+material_override = ExtResource("shore")
+
+[node name="chunk_1_4_farmland" parent="."]
+material_override = ExtResource("farmland")
+
+[node name="chunk_2_0_hills" parent="."]
+material_override = ExtResource("hills")
+
+[node name="chunk_2_1_hills" parent="."]
+material_override = ExtResource("hills")
+
+[node name="chunk_2_1_shore" parent="."]
+material_override = ExtResource("shore")
+
+[node name="chunk_2_2_shore" parent="."]
+material_override = ExtResource("shore")
+
+[node name="chunk_2_2_town" parent="."]
+material_override = ExtResource("town")
+
+[node name="chunk_2_3_town" parent="."]
+material_override = ExtResource("town")
+
+[node name="chunk_2_4_town" parent="."]
+material_override = ExtResource("town")
+
+[node name="chunk_2_4_shore" parent="."]
+material_override = ExtResource("shore")
+
+[node name="chunk_2_4_farmland" parent="."]
+material_override = ExtResource("farmland")
+
+[node name="chunk_2_0_shore" parent="."]
+material_override = ExtResource("shore")
+
+[node name="chunk_2_0_forest" parent="."]
+material_override = ExtResource("forest")
+
+[node name="chunk_2_1_forest" parent="."]
+material_override = ExtResource("forest")
+
+[node name="chunk_2_3_shore" parent="."]
+material_override = ExtResource("shore")
+
+[node name="chunk_3_0_forest" parent="."]
+material_override = ExtResource("forest")
+
+[node name="chunk_3_1_forest" parent="."]
+material_override = ExtResource("forest")
+
+[node name="chunk_3_1_shore" parent="."]
+material_override = ExtResource("shore")
+
+[node name="chunk_3_2_shore" parent="."]
+material_override = ExtResource("shore")
+
+[node name="chunk_3_3_shore" parent="."]
+material_override = ExtResource("shore")
+
+[node name="chunk_3_4_shore" parent="."]
+material_override = ExtResource("shore")
+
+[node name="chunk_3_4_farmland" parent="."]
+material_override = ExtResource("farmland")
+
+[node name="chunk_3_2_forest" parent="."]
+material_override = ExtResource("forest")
+
+[node name="chunk_3_3_forest" parent="."]
+material_override = ExtResource("forest")
+
+[node name="chunk_3_1_industry" parent="."]
+material_override = ExtResource("industry")
+
+[node name="chunk_3_2_industry" parent="."]
+material_override = ExtResource("industry")
+
+[node name="chunk_3_3_industry" parent="."]
+material_override = ExtResource("industry")
+
+[node name="chunk_4_0_forest" parent="."]
+material_override = ExtResource("forest")
+
+[node name="chunk_4_1_forest" parent="."]
+material_override = ExtResource("forest")
+
+[node name="chunk_4_1_industry" parent="."]
+material_override = ExtResource("industry")
+
+[node name="chunk_4_2_industry" parent="."]
+material_override = ExtResource("industry")
+
+[node name="chunk_4_3_industry" parent="."]
+material_override = ExtResource("industry")
+
+[node name="chunk_4_3_shore" parent="."]
+material_override = ExtResource("shore")
+
+[node name="chunk_4_4_shore" parent="."]
+material_override = ExtResource("shore")
+
+[node name="chunk_4_1_shore" parent="."]
+material_override = ExtResource("shore")
+
+[node name="chunk_4_2_shore" parent="."]
+material_override = ExtResource("shore")
+
+[node name="chunk_0_2_farmland_cut" parent="ApartmentExcavation"]
+material_override = ExtResource("farmland")
+
+[node name="chunk_0_2_shore_cut" parent="ApartmentExcavation"]
+material_override = ExtResource("shore")
+
+[node name="chunk_0_2_town_cut" parent="ApartmentExcavation"]
+material_override = ExtResource("town")
+
+[node name="chunk_0_3_farmland_cut" parent="ApartmentExcavation"]
+material_override = ExtResource("farmland")
+
+[node name="chunk_0_3_shore_cut" parent="ApartmentExcavation"]
+material_override = ExtResource("shore")
+
+[node name="chunk_0_3_town_cut" parent="ApartmentExcavation"]
+material_override = ExtResource("town")
+
+[node name="entry_spur" parent="ApartmentExcavation"]
+material_override = ExtResource("trail")
+
+[node name="pit_retaining" parent="ApartmentExcavation"]
+material_override = ExtResource("retaining")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/industry_welding_cart/assets/industry_welding_cart_cylinders.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/industry_welding_cart/materials/town_industry_welding_cart_cylinders_used.tres" id="2_finish"]
+
+[node name="industry_welding_cart__cylinders" type="Node3D"]
+metadata/catalog_id = "industry_welding_cart"
+metadata/catalog_variant = "cylinders"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="WeldingCart" parent="Model/TownWeldingCart"]
+surface_material_override/0 = ExtResource("2_finish")

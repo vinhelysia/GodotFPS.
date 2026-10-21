@@ -1,0 +1,117 @@
+Town500m Phase2 — terrain, hydrology and physical crossings
+2026-10-08 — ISOLATED PAYLOAD NATIVE PASS; full composition/LOS/nav remain pending.
+Read phase2-verification.json for hashes, exact coverage and limits.
+
+Entry: res://Scene/World/Town500m/terrain_payload.tscn
+This is a static child payload for the existing Scene/Town.tscn at Phase3,
+not a second raid scene. Production Town composition remains unchanged.
+
+Ownership
+- DryTerrain: 64,975 dry triangles,60 zone/material groups within25 nominal100m
+  authoring chunks. Layer1 ConcavePolygonShape3D matches visible geometry.
+- Circulation:13,961 terrain-conforming visual faces, with one material owner
+  per face. No duplicate road floor collision; dry terrain owns walking floors.
+- R01/R02: exactly two bridges. Their deck bodies own the wet-span floor;
+  rails are outside the8m /2.5m clear width. Native physical landings, no navlinks.
+- DockL03:4x14m deck and2.5x20m gangway atY2.5. The dry gangway apron was
+  flattened after native traversal found an upstream terrain hump.
+- Water: two canonical outlines,19 triangular convex Area prisms ending at
+  Y-.35 and extending to-50. SurfaceY0 and bedY-4 are visual only.
+- BankFaces:720 vertical visual triangles close exposed shoreline down to the
+  bed, including raised bridge landings. No added water-floor collision/nav source.
+- Scripts/World/deep_water_zone.gd calls CogitoPlayer.take_damage with current
+  health. CogitoHealthAttribute owns death; raid_scene remains responsible for
+  carried-kit loss and return. No custom kit clearing, teleport or save API.
+- RoadCollapses: five visible graybox blockers close external county/rail/farm
+  road ends. Dry land edges use steep visible earth/rock profiles. These need
+  natural art treatment later; they are not finished environment props.
+
+Authoring
+node design/town-500m/phase2/terrain-authoring.cjs
+node design/town-500m/phase2/terrain-authoring.cjs --check
+node design/town-500m/phase2/circulation-authoring.cjs
+node design/town-500m/phase2/circulation-authoring.cjs --check
+
+No runtime world generation, added dependency, autoload or settings change.
+The Node scripts use the existing Concept B static OBJ/scene authoring pattern.
+Scene geometry remains inspectable and replaceable by finished art.
+
+Height corrections keep XZ layout and widths unchanged
+- G19 (-225,-110):9→11 to agree with P12/G20 at their junction.
+- P02/G18 (-139.77,-107):9→9.6, because exact gate/corner pads shorten the ramp.
+- P08 (-75,-113):10.3→9.8 for the ridge approach's full clear width.
+- P12/G21 (-225,-220):14→14.4 before the full-width extraction pad.
+prepare-layout.cjs regenerated embedded terrain profiles and provenance;
+check-layout.cjs passes all unchanged spatial counts/reservations.
+
+Offline acceptance
+-90 canonical/shore pads plus42 derived road/gangway patches are flat.
+- Hills20/18/15m; coreY.5..3.5; maximum authored height20m.
+- Continuous longitudinal triangle grades: county4.401%<6, gravel9.116%<10,
+  ridge14.948%<15, northwest14.257%<15. All13 primary corridors pass.
+  Centre/both-edge sampling at1m and dry route graph profiles also pass.
+-6m bank reservation collision height<=6m, including natural boundary mouths.
+-0 internal open/nonmanifold edges or duplicate triangles. Coordinate weld
+  tolerance1e-5m; wet intersection residual~8.03e-6m2 is recorded explicitly.
+- Numerical grade slivers below1e-5m2 are excluded from continuous bounds;
+  this is not a claim of bit-exact floating-point geometry.
+
+Native evidence and fixes
+- Jump fixture passes24 native flight cases plus2 air-step positive controls:
+  bank3m maximum10.0335m, high-bank6m maximum11.9002m. Both plus6m margin
+  fit20m. Hill20m stress17.9668m is separate, not a bank acceptance shortcut.
+- Live air-step is.5m; ground step.35m. Native slide-jump is blocked by the
+  actual scene's CAN_CROUCH_JUMP=false. No production movement tuning changed.
+- First native terrain run found a dock apron hump and smoothed perimeter
+  faces. Corrected exact gangway flat patch and subdivided only the outer2m
+  terrain strip to1m along the edge; post-bank/shoulder shaping preserves cliffs.
+- Second native run verified geometry/traversal but fixture stamina ran out
+  before later sprint probes. Final fixture locks only its own stamina for
+  worst-case full-stamina containment, as the jump fixture already does.
+- Third rendered run exposed a fixture assertion placed after boundary landing
+  stress. Final run checks ordinary traversal first: health80 remains80; boundary
+  stress then produces native10 fall damage, health70, without death. No fall
+  damage setting was disabled or changed for the terrain fixture.
+- Pad ray tests exclude authorized deck RIDs when checking terrain pad normals.
+  Exact deck-edge normals can be horizontal in Jolt; bridge walking stays strict.
+- Wet interior rays are strict beyond1cm from the canonical union boundary.
+  The1cm band is reported separately, without claiming an empty floor ray.
+  A0.062mm boundary sample hit the steep bank due to native contact precision.
+
+Final native status/captures: phase2-verification.json and
+res://tests/artifacts/town500_phase2/terrain-native.json.
+Rendered Forward Plus PASS2701checks on RTX4060Laptop. All12 bridge lane/direction
+walks and2 dock/gangway walks remained grounded; maximum floor error<0.01m.
+Standing/crouch/left-right lean pass on both decks and dock. All18 direct boundary
+probes contact blockers/berms and stay inside bounds; all9 sprint-jump runups reach
+~7m/s. Real water fall enters Area, health70→0, exactly one death signal. Native
+perimeter profiles are sampled every2m, not a complete adversarial walkaround.
+Owned CSM save directory stayed empty and was removed; editor runtime stopped.
+Native UI startup still writes language.cfg; isolation covers gameplay save slots,
+not all user preferences. No production raid/save behavior was rewritten.
+Viewed top-down, both bridges, bank and dock captures; these are graybox visuals,
+not finished art or a performance benchmark. Historical failed reports are retained
+as terrain-first-failed.json, terrain-second-failed.json and terrain-third-failed.json;
+none is counted as acceptance. One read-only MCP inspection probe used mixed
+indentation and failed to compile; corrected probe confirms all water normals face up.
+The pre-bank-face PASS2700 report is historical physics evidence only. Final image
+review found an exposed vertical gap beneath R01's raised landing; authored
+shoreline faces close it. Three formerly open camera rays now hit the faces and
+the final bank capture confirms closure. Final PASS2701 includes the new visual
+mesh ownership check; terrain/deck collision, water polygons and death API did not change.
+
+Next Phase3
+Back up Town again, retire only superseded33 legacy building roots/slab/roads,
+and compose the approved76 instances/32 Town structures around this payload.
+Preserve raid/player/Deploy/extract/return/save dependencies. Primary owns
+Town integration, native navigation bake, runtime tests and actual8 route walks;
+parallel workers own separate zone/dressing subscenes without touching editor.
+Resolve11 scoped LOS groups, then rerun the current layout hash and native
+standing/ADS/lean/upstairs checks. Current LOS report is historical HOLD.
+
+Still unverified
+Whole-edge adversarial walkaround after dressing, step chains, full-map nav,
+all8 spawn/extract walks, production water death→Hub kit loss, final art,
+1080p120FPS with encounters, fresh-clone/export closure. Existing raid behavior
+was deliberately not rewritten. Town/settings/bunker/preexisting changes are
+protected by the task-start hashes. No commit/push in this phase.

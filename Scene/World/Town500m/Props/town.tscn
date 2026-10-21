@@ -1,0 +1,756 @@
+[gd_scene load_steps=57 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_clinic_examination_bed__with-sheet__clean.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_clinic_examination_bed__bare.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_pharmacy_shelf__stocked__clean.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_pharmacy_shelf__empty.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_office_furniture__desk__clean.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_office_furniture__cabinet.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_waiting_room_chair__row__clean.tscn" id="7"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_waiting_room_chair__row.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_notice_board__wall__visual.tscn" id="9"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_air_conditioner__small__clean__visual.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_street_litter__paper__visual.tscn" id="11"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_pharmacy_shelf__stocked.tscn" id="12"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_shop_counter__straight__clean.tscn" id="13"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_shop_counter__straight.tscn" id="14"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_shop_cyrillic_sign__pharmacy__clean__visual.tscn" id="15"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_store_awning__canvas__visual.tscn" id="16"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_wall_electric_meter__single__visual.tscn" id="17"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_shop_counter__corner__clean.tscn" id="18"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_office_furniture__desk.tscn" id="19"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_shop_cyrillic_sign__grocery__clean__visual.tscn" id="20"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_store_awning__metal__clean__visual.tscn" id="21"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_air_conditioner__large__visual.tscn" id="22"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_office_furniture__cabinet__clean.tscn" id="23"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_shop_cyrillic_sign__services__visual.tscn" id="24"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_apartment_radiator__small__clean__visual.tscn" id="25"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_apartment_mailboxes__row__clean__visual.tscn" id="26"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_satellite_dish__angled__visual.tscn" id="27"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_wall_electric_meter__double__visual.tscn" id="28"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_playground_swing__with-seat.tscn" id="29"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_courtyard_bench__painted__clean.tscn" id="30"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_courtyard_bench__painted.tscn" id="31"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_apartment_radiator__large__clean__visual.tscn" id="32"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_apartment_radiator__large__visual.tscn" id="33"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_workshop_bench__tool-covered.tscn" id="34"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_workshop_bench__plain__clean.tscn" id="35"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_air_compressor__horizontal.tscn" id="36"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_tire_stack__stacked.tscn" id="37"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_welding_cart__covered.tscn" id="38"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/industry_work_light__mounted__visual.tscn" id="39"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_market_stall__empty.tscn" id="40"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_market_stall__tarp-covered__clean.tscn" id="41"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wooden_crate__medium.tscn" id="42"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wooden_crate__small__clean.tscn" id="43"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wooden_crate__medium__clean.tscn" id="44"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_soviet_bus_shelter__intact__clean.tscn" id="45"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/town_notice_board__freestanding.tscn" id="46"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_old_sedan__abandoned.tscn" id="47"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_old_sedan__abandoned__worn.tscn" id="48"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wood_fence__plank__worn.tscn" id="49"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wood_fence__plank.tscn" id="50"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wood_fence__broken__worn.tscn" id="51"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_metal_fence__straight.tscn" id="52"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_metal_fence__straight__clean.tscn" id="53"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_concrete_utility_pole__insulators.tscn" id="54"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_manhole_cover__round__visual.tscn" id="55"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_cyrillic_signs__nameplate__visual.tscn" id="56"]
+
+[node name="town" type="Node3D"]
+
+[node name="T_CLINIC_BED_A" parent="." instance=ExtResource("1")]
+position = Vector3(-140.8, 2.2, 59.8)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_CLINIC_BED_A"
+metadata/catalog_id = "town_clinic_examination_bed"
+metadata/role = "examination bay"
+
+[node name="T_CLINIC_BED_B" parent="." instance=ExtResource("2")]
+position = Vector3(-133.2, 2.2, 59.8)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_CLINIC_BED_B"
+metadata/catalog_id = "town_clinic_examination_bed"
+metadata/role = "second examination bay"
+
+[node name="T_CLINIC_SHELF_A" parent="." instance=ExtResource("3")]
+position = Vector3(-142.1, 2.2, 57.7)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_CLINIC_SHELF_A"
+metadata/catalog_id = "town_pharmacy_shelf"
+metadata/role = "medical storage against west wall"
+
+[node name="T_CLINIC_SHELF_B" parent="." instance=ExtResource("4")]
+position = Vector3(-142.1, 2.2, 56.3)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_CLINIC_SHELF_B"
+metadata/catalog_id = "town_pharmacy_shelf"
+metadata/role = "matching partly cleared medical storage"
+
+[node name="T_CLINIC_DESK" parent="." instance=ExtResource("5")]
+position = Vector3(-133.6, 2.2, 55.2)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_CLINIC_DESK"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "reception desk east of main aisle"
+
+[node name="T_CLINIC_FILE_A" parent="." instance=ExtResource("6")]
+position = Vector3(-131.95, 2.2, 54.9)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_CLINIC_FILE_A"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "reception filing bank"
+
+[node name="T_CLINIC_FILE_B" parent="." instance=ExtResource("6")]
+position = Vector3(-131.95, 2.2, 55.65)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_CLINIC_FILE_B"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "matching reception filing bank"
+
+[node name="T_CLINIC_WAIT_A" parent="." instance=ExtResource("7")]
+position = Vector3(-140.5, 2.2, 53.4)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_CLINIC_WAIT_A"
+metadata/catalog_id = "town_waiting_room_chair"
+metadata/role = "waiting row clear of entry throat"
+
+[node name="T_CLINIC_WAIT_B" parent="." instance=ExtResource("8")]
+position = Vector3(-133.5, 2.2, 53.4)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_CLINIC_WAIT_B"
+metadata/catalog_id = "town_waiting_room_chair"
+metadata/role = "matching waiting row"
+
+[node name="T_CLINIC_NOTICE" parent="." instance=ExtResource("9")]
+position = Vector3(-140.4, 3.3, 52.255)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_CLINIC_NOTICE"
+metadata/catalog_id = "town_notice_board"
+metadata/role = "clinic public notices facing room"
+
+[node name="T_CLINIC_AC" parent="." instance=ExtResource("10")]
+position = Vector3(-133.6, 4.62, 51.995)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_CLINIC_AC"
+metadata/catalog_id = "town_air_conditioner"
+metadata/role = "reception AC outdoors above frontage"
+
+[node name="T_CLINIC_PAPER" parent="." instance=ExtResource("11")]
+position = Vector3(-133.6, 2.95, 55.2)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_CLINIC_PAPER"
+metadata/catalog_id = "shared_street_litter"
+metadata/role = "abandoned paperwork on desk; source paper footprint already0.70x0.57m"
+
+[node name="T_PHARM_SHELF_A" parent="." instance=ExtResource("3")]
+position = Vector3(-95.5, 2.2, -18.1)
+rotation = Vector3(0, 6.283185, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_PHARM_SHELF_A"
+metadata/catalog_id = "town_pharmacy_shelf"
+metadata/role = "pharmacy rear shelf bank"
+
+[node name="T_PHARM_SHELF_B" parent="." instance=ExtResource("12")]
+position = Vector3(-96.9, 2.2, -18.1)
+rotation = Vector3(0, 6.283185, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_PHARM_SHELF_B"
+metadata/catalog_id = "town_pharmacy_shelf"
+metadata/role = "matching pharmacy shelf bank"
+
+[node name="T_PHARM_SHELF_C" parent="." instance=ExtResource("4")]
+position = Vector3(-98.3, 2.2, -18.1)
+rotation = Vector3(0, 6.283185, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_PHARM_SHELF_C"
+metadata/catalog_id = "town_pharmacy_shelf"
+metadata/role = "cleared end of pharmacy bank"
+
+[node name="T_PHARM_COUNTER_A" parent="." instance=ExtResource("13")]
+position = Vector3(-96.3, 2.2, -15.6)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_PHARM_COUNTER_A"
+metadata/catalog_id = "town_shop_counter"
+metadata/role = "retail counter west bay"
+
+[node name="T_PHARM_COUNTER_B" parent="." instance=ExtResource("14")]
+position = Vector3(-103.7, 2.2, -15.6)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_PHARM_COUNTER_B"
+metadata/catalog_id = "town_shop_counter"
+metadata/role = "retail counter east bay"
+
+[node name="T_PHARM_FILE" parent="." instance=ExtResource("6")]
+position = Vector3(-105.1, 2.2, -17.8)
+rotation = Vector3(0, 6.283185, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_PHARM_FILE"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "dispensary records"
+
+[node name="T_PHARM_SIGN" parent="." instance=ExtResource("15")]
+position = Vector3(-96.8, 4.68, -10.995)
+rotation = Vector3(0, 6.283185, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_PHARM_SIGN"
+metadata/catalog_id = "town_shop_cyrillic_sign"
+metadata/role = "Cyrillic pharmacy facade sign"
+
+[node name="T_PHARM_AWNING" parent="." instance=ExtResource("16")]
+position = Vector3(-102.8, 4.7, -10.995)
+rotation = Vector3(0, 6.283185, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_PHARM_AWNING"
+metadata/catalog_id = "town_store_awning"
+metadata/role = "retained canvas retail awning"
+
+[node name="T_PHARM_METER" parent="." instance=ExtResource("17")]
+position = Vector3(-94.8, 3.5, -19.005)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_PHARM_METER"
+metadata/catalog_id = "town_wall_electric_meter"
+metadata/role = "rear service electric meter"
+
+[node name="T_GROCERY_COUNTER" parent="." instance=ExtResource("18")]
+position = Vector3(13.7, 2.2, -13.4)
+rotation = Vector3(0, 6.283185, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_GROCERY_COUNTER"
+metadata/catalog_id = "town_shop_counter"
+metadata/role = "grocery cash counter opposite pickup area"
+
+[node name="T_GROCERY_SHELF_A" parent="." instance=ExtResource("4")]
+position = Vector3(15.1, 2.2, -10.8)
+rotation = Vector3(0, 4.712389, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_GROCERY_SHELF_A"
+metadata/catalog_id = "town_pharmacy_shelf"
+metadata/role = "empty small-goods shelf bank"
+
+[node name="T_GROCERY_SHELF_B" parent="." instance=ExtResource("4")]
+position = Vector3(15.1, 2.2, -12.3)
+rotation = Vector3(0, 4.712389, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_GROCERY_SHELF_B"
+metadata/catalog_id = "town_pharmacy_shelf"
+metadata/role = "matching cleared goods bank"
+
+[node name="T_GROCERY_DESK" parent="." instance=ExtResource("19")]
+position = Vector3(13.8, 2.2, -8.2)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_GROCERY_DESK"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "shopkeeper accounts corner"
+
+[node name="T_GROCERY_SIGN" parent="." instance=ExtResource("20")]
+position = Vector3(13.2, 4.68, -6.995)
+rotation = Vector3(0, 6.283185, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_GROCERY_SIGN"
+metadata/catalog_id = "town_shop_cyrillic_sign"
+metadata/role = "Cyrillic grocery fascia"
+
+[node name="T_GROCERY_AWNING" parent="." instance=ExtResource("21")]
+position = Vector3(7.2, 4.7, -6.995)
+rotation = Vector3(0, 6.283185, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_GROCERY_AWNING"
+metadata/catalog_id = "town_store_awning"
+metadata/role = "metal awning at retail bay"
+
+[node name="T_GROCERY_AC" parent="." instance=ExtResource("22")]
+position = Vector3(6.9, 4.37, -15.005)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_GROCERY_AC"
+metadata/catalog_id = "town_air_conditioner"
+metadata/role = "rear condenser over service side"
+
+[node name="T_CIVIC_DESK_A" parent="." instance=ExtResource("5")]
+position = Vector3(-36.2, 2.2, -9.2)
+rotation = Vector3(0, 4.712389, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_CIVIC_DESK_A"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "municipal clerk desk"
+
+[node name="T_CIVIC_DESK_B" parent="." instance=ExtResource("19")]
+position = Vector3(-36.2, 2.2, -13)
+rotation = Vector3(0, 4.712389, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_CIVIC_DESK_B"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "matching clerk desk"
+
+[node name="T_CIVIC_FILE_A" parent="." instance=ExtResource("6")]
+position = Vector3(-36.2, 2.2, -17.7)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_CIVIC_FILE_A"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "records bank"
+
+[node name="T_CIVIC_FILE_B" parent="." instance=ExtResource("6")]
+position = Vector3(-36.9, 2.2, -17.7)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_CIVIC_FILE_B"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "matching records bank"
+
+[node name="T_CIVIC_FILE_C" parent="." instance=ExtResource("23")]
+position = Vector3(-37.6, 2.2, -17.7)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_CIVIC_FILE_C"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "matching records bank end"
+
+[node name="T_CIVIC_WAIT" parent="." instance=ExtResource("8")]
+position = Vector3(-37, 2.2, -7.4)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_CIVIC_WAIT"
+metadata/catalog_id = "town_waiting_room_chair"
+metadata/role = "office waiting row west of foyer"
+
+[node name="T_CIVIC_NOTICE" parent="." instance=ExtResource("9")]
+position = Vector3(-36.7, 3.3, -4.995)
+rotation = Vector3(0, 6.283185, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_CIVIC_NOTICE"
+metadata/catalog_id = "town_notice_board"
+metadata/role = "municipal notice board outdoors"
+
+[node name="T_COMMUNITY_DESK" parent="." instance=ExtResource("19")]
+position = Vector3(-36.6, 2.2, 72.8)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_COMMUNITY_DESK"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "community services office"
+
+[node name="T_COMMUNITY_FILE_A" parent="." instance=ExtResource("6")]
+position = Vector3(-27.6, 2.2, 72.8)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_COMMUNITY_FILE_A"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "community archive bank"
+
+[node name="T_COMMUNITY_FILE_B" parent="." instance=ExtResource("6")]
+position = Vector3(-27.6, 2.2, 72.1)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_COMMUNITY_FILE_B"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "community archive bank"
+
+[node name="T_COMMUNITY_WAIT" parent="." instance=ExtResource("7")]
+position = Vector3(-38.7, 2.2, 72)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_COMMUNITY_WAIT"
+metadata/catalog_id = "town_waiting_room_chair"
+metadata/role = "community waiting row"
+
+[node name="T_SERVICES_SIGN" parent="." instance=ExtResource("24")]
+position = Vector3(-16, 4.68, 86.005)
+rotation = Vector3(0, 6.283185, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_SERVICES_SIGN"
+metadata/catalog_id = "town_shop_cyrillic_sign"
+metadata/role = "small service-office sign"
+
+[node name="T_SERVICES_DESK" parent="." instance=ExtResource("19")]
+position = Vector3(-14.8, 2.2, 79.3)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_SERVICES_DESK"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "service counter administration"
+
+[node name="T_SERVICES_FILES_A" parent="." instance=ExtResource("6")]
+position = Vector3(-23.8, 2.2, 79.3)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_SERVICES_FILES_A"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "service office files"
+
+[node name="T_SERVICES_FILES_B" parent="." instance=ExtResource("23")]
+position = Vector3(-23.1, 2.2, 79.3)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_SERVICES_FILES_B"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "matching files"
+
+[node name="T_HOME_DESK" parent="." instance=ExtResource("19")]
+position = Vector3(-138.5, 2.2, -19.7)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_HOME_DESK"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "household study corner"
+
+[node name="T_HOME_CABINET" parent="." instance=ExtResource("6")]
+position = Vector3(-145.7, 2.2, -19.7)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_HOME_CABINET"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "household storage"
+
+[node name="T_HOME_RADIATOR" parent="." instance=ExtResource("25")]
+position = Vector3(-145, 2.36, -20.745)
+rotation = Vector3(0, 6.283185, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_HOME_RADIATOR"
+metadata/catalog_id = "town_apartment_radiator"
+metadata/role = "domestic heating at rear wall"
+
+[node name="T_HOME_METER" parent="." instance=ExtResource("17")]
+position = Vector3(-138.3, 3.5, -21.005)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_HOME_METER"
+metadata/catalog_id = "town_wall_electric_meter"
+metadata/role = "domestic service meter"
+
+[node name="T_APARTMENT_MAIL" parent="." instance=ExtResource("26")]
+position = Vector3(-84, 3.3, 84.005)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_APARTMENT_MAIL"
+metadata/catalog_id = "town_apartment_mailboxes"
+metadata/role = "mail bank on solid rear facade panel"
+
+[node name="T_APARTMENT_DISH" parent="." instance=ExtResource("27")]
+position = Vector3(-76, 6.8, 84.005)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_APARTMENT_DISH"
+metadata/catalog_id = "town_satellite_dish"
+metadata/role = "single satellite dish on upper solid panel"
+
+[node name="T_APARTMENT_METER" parent="." instance=ExtResource("28")]
+position = Vector3(-92, 3.5, 84.005)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_APARTMENT_METER"
+metadata/catalog_id = "town_wall_electric_meter"
+metadata/role = "paired apartment electric service"
+
+[node name="T_COURTYARD_SWING" parent="." instance=ExtResource("29")]
+position = Vector3(-87, 2, 69)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_COURTYARD_SWING"
+metadata/catalog_id = "town_playground_swing"
+metadata/role = "abandoned shared courtyard playground"
+
+[node name="T_COURTYARD_BENCH_A" parent="." instance=ExtResource("30")]
+position = Vector3(-94, 2, 69)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_COURTYARD_BENCH_A"
+metadata/catalog_id = "town_courtyard_bench"
+metadata/role = "courtyard bench facing playground"
+
+[node name="T_COURTYARD_BENCH_B" parent="." instance=ExtResource("31")]
+position = Vector3(-79, 2, 69)
+rotation = Vector3(0, -1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_COURTYARD_BENCH_B"
+metadata/catalog_id = "town_courtyard_bench"
+metadata/role = "matching courtyard bench"
+
+[node name="T_HOME_LONG_DESK" parent="." instance=ExtResource("19")]
+position = Vector3(-89.7, 2.2, 64.8)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_HOME_LONG_DESK"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "residential study corner away from stair"
+
+[node name="T_HOME_LONG_FILE" parent="." instance=ExtResource("6")]
+position = Vector3(-80.6, 2.2, 64.8)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_HOME_LONG_FILE"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "residential utility cupboard"
+
+[node name="T_HOME_LONG_RADIATOR" parent="." instance=ExtResource("32")]
+position = Vector3(-84.2, 2.36, 65.495)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_HOME_LONG_RADIATOR"
+metadata/catalog_id = "town_apartment_radiator"
+metadata/role = "heating under west wall"
+
+[node name="T_HOME_EAST_DESK" parent="." instance=ExtResource("19")]
+position = Vector3(17.2, 2.2, 118.3)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_HOME_EAST_DESK"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "residential study corner"
+
+[node name="T_HOME_EAST_CABINET" parent="." instance=ExtResource("6")]
+position = Vector3(17.2, 2.2, 127.4)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_HOME_EAST_CABINET"
+metadata/catalog_id = "town_office_furniture"
+metadata/role = "residential utility cupboard"
+
+[node name="T_HOME_EAST_RADIATOR" parent="." instance=ExtResource("33")]
+position = Vector3(16.505, 2.36, 123.8)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_HOME_EAST_RADIATOR"
+metadata/catalog_id = "town_apartment_radiator"
+metadata/role = "domestic perimeter heating"
+
+[node name="T_GARAGE_BENCH_A" parent="." instance=ExtResource("34")]
+position = Vector3(14, 2.2, 75.9)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_GARAGE_BENCH_A"
+metadata/catalog_id = "town_workshop_bench"
+metadata/role = "repair bench on clear rear wall away from GunLocker"
+
+[node name="T_GARAGE_BENCH_B" parent="." instance=ExtResource("35")]
+position = Vector3(16.2, 2.2, 75.9)
+rotation = Vector3(0, 3.141593, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_GARAGE_BENCH_B"
+metadata/catalog_id = "town_workshop_bench"
+metadata/role = "matching repair bench away from M700"
+
+[node name="T_GARAGE_COMPRESSOR" parent="." instance=ExtResource("36")]
+position = Vector3(10.2, 2.2, 70.2)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_GARAGE_COMPRESSOR"
+metadata/catalog_id = "industry_air_compressor"
+metadata/role = "portable compressor by repair zone"
+
+[node name="T_GARAGE_TIRE_A" parent="." instance=ExtResource("37")]
+position = Vector3(10.3, 2.2, 68.6)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_GARAGE_TIRE_A"
+metadata/catalog_id = "shared_tire_stack"
+metadata/role = "matching spare tire bank"
+
+[node name="T_GARAGE_TIRE_B" parent="." instance=ExtResource("37")]
+position = Vector3(11.2, 2.2, 68.6)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_GARAGE_TIRE_B"
+metadata/catalog_id = "shared_tire_stack"
+metadata/role = "matching spare tire bank"
+
+[node name="T_WORKSHOP_BENCH_A" parent="." instance=ExtResource("35")]
+position = Vector3(-24.2, 2.2, 128)
+rotation = Vector3(0, 4.712389, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_WORKSHOP_BENCH_A"
+metadata/catalog_id = "town_workshop_bench"
+metadata/role = "workshop wall bench away from provisions"
+
+[node name="T_WORKSHOP_BENCH_B" parent="." instance=ExtResource("34")]
+position = Vector3(-24.2, 2.2, 130.4)
+rotation = Vector3(0, 4.712389, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_WORKSHOP_BENCH_B"
+metadata/catalog_id = "town_workshop_bench"
+metadata/role = "matching repair station"
+
+[node name="T_WORKSHOP_CART" parent="." instance=ExtResource("38")]
+position = Vector3(-24.3, 2.2, 125)
+rotation = Vector3(0, 4.712389, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_WORKSHOP_CART"
+metadata/catalog_id = "industry_welding_cart"
+metadata/role = "welding supplies in repair strip"
+
+[node name="T_WORKSHOP_LIGHT" parent="." instance=ExtResource("39")]
+position = Vector3(-23.505, 4.3, 129.2)
+rotation = Vector3(0, 4.712389, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_WORKSHOP_LIGHT"
+metadata/catalog_id = "industry_work_light"
+metadata/role = "unpowered mounted workshop task light"
+
+[node name="T_MARKET_STALL_A" parent="." instance=ExtResource("40")]
+position = Vector3(-48, 2, 108)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_MARKET_STALL_A"
+metadata/catalog_id = "town_market_stall"
+metadata/role = "market stall beside kiosk group"
+
+[node name="T_MARKET_STALL_B" parent="." instance=ExtResource("41")]
+position = Vector3(-48, 2, 112)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_MARKET_STALL_B"
+metadata/catalog_id = "town_market_stall"
+metadata/role = "matching abandoned covered market stall"
+
+[node name="T_MARKET_CRATE_A" parent="." instance=ExtResource("42")]
+position = Vector3(-47.8, 2, 116.5)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_MARKET_CRATE_A"
+metadata/catalog_id = "shared_wooden_crate"
+metadata/role = "produce freight stack behind stalls"
+
+[node name="T_MARKET_CRATE_B" parent="." instance=ExtResource("43")]
+position = Vector3(-47.8, 2.6816, 116.5)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_MARKET_CRATE_B"
+metadata/catalog_id = "shared_wooden_crate"
+metadata/role = "stacked produce crate"
+
+[node name="T_MARKET_CRATE_C" parent="." instance=ExtResource("44")]
+position = Vector3(-46.7, 2, 116.5)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_MARKET_CRATE_C"
+metadata/catalog_id = "shared_wooden_crate"
+metadata/role = "matching produce freight stack"
+
+[node name="T_BUS_SHELTER" parent="." instance=ExtResource("45")]
+position = Vector3(-125, 2, 29)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_BUS_SHELTER"
+metadata/catalog_id = "town_soviet_bus_shelter"
+metadata/role = "county-road bus stop on north clinic shoulder"
+
+[node name="T_BUS_BOARD" parent="." instance=ExtResource("46")]
+position = Vector3(-120.7, 2, 29.2)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_BUS_BOARD"
+metadata/catalog_id = "town_notice_board"
+metadata/role = "public timetable board next to bus stop"
+
+[node name="T_BUS_LITTER" parent="." instance=ExtResource("11")]
+position = Vector3(-123.6, 2, 27.3)
+rotation = Vector3(0, 0.174533, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_BUS_LITTER"
+metadata/catalog_id = "shared_street_litter"
+metadata/role = "small localized autumn bus-stop litter outside shelter slab"
+
+[node name="T_ROAD_SEDAN_A" parent="." instance=ExtResource("47")]
+position = Vector3(-127.27, 2, 9.36)
+rotation = Vector3(0, 1.43117, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_ROAD_SEDAN_A"
+metadata/catalog_id = "shared_old_sedan"
+metadata/role = "existing abandoned road sedan art candidate"
+
+[node name="T_ROAD_SEDAN_B" parent="." instance=ExtResource("48")]
+position = Vector3(-11.23, 2, 28.66)
+rotation = Vector3(0, 1.43117, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "T_ROAD_SEDAN_B"
+metadata/catalog_id = "shared_old_sedan"
+metadata/role = "existing abandoned road sedan art candidate"
+
+[node name="S_T09_FENCE_1" parent="." instance=ExtResource("49")]
+position = Vector3(-149, 2, 140)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_T09_FENCE_1"
+metadata/catalog_id = "shared_wood_fence"
+metadata/role = "Same-type remnants of the damaged residential garden boundary"
+
+[node name="S_T09_FENCE_2" parent="." instance=ExtResource("50")]
+position = Vector3(-146.85, 2, 140)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_T09_FENCE_2"
+metadata/catalog_id = "shared_wood_fence"
+metadata/role = "Same-type remnants of the damaged residential garden boundary"
+
+[node name="S_T09_FENCE_3" parent="." instance=ExtResource("51")]
+position = Vector3(-144.7, 2, 140)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_T09_FENCE_3"
+metadata/catalog_id = "shared_wood_fence"
+metadata/role = "Same-type remnants of the damaged residential garden boundary"
+
+[node name="S_DEPOT_FENCE_1" parent="." instance=ExtResource("52")]
+position = Vector3(-36, 2, 85)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_DEPOT_FENCE_1"
+metadata/catalog_id = "shared_metal_fence"
+metadata/role = "Matching municipal depot yard boundary, leaving both ends open"
+
+[node name="S_DEPOT_FENCE_2" parent="." instance=ExtResource("53")]
+position = Vector3(-33.87, 2, 85)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_DEPOT_FENCE_2"
+metadata/catalog_id = "shared_metal_fence"
+metadata/role = "Matching municipal depot yard boundary, leaving both ends open"
+
+[node name="S_DEPOT_FENCE_3" parent="." instance=ExtResource("52")]
+position = Vector3(-31.74, 2, 85)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_DEPOT_FENCE_3"
+metadata/catalog_id = "shared_metal_fence"
+metadata/role = "Matching municipal depot yard boundary, leaving both ends open"
+
+[node name="S_POLE_T" parent="." instance=ExtResource("54")]
+position = Vector3(0, 2, 12)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_POLE_T"
+metadata/catalog_id = "shared_concrete_utility_pole"
+metadata/role = "Remnant roadside utility line; no powered gameplay dependency"
+
+[node name="S_MANHOLE_T" parent="." instance=ExtResource("55")]
+position = Vector3(-115, 2, 25)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_MANHOLE_T"
+metadata/catalog_id = "shared_manhole_cover"
+metadata/role = "Flush municipal drain cover; visual-only surface detail"
+
+[node name="S_SHOP_NAMEPLATE" parent="." instance=ExtResource("56")]
+position = Vector3(8, 3.55, -6.957)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_SHOP_NAMEPLATE"
+metadata/catalog_id = "shared_cyrillic_signs"
+metadata/role = "Cyrillic corner-shop identification fixed to front wall"

@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t07_workshop_shell.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Graybox/hunting_stand.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Graybox/cache_crate.tscn" id="5"]
+
+[node name="forest" type="Node3D"]
+metadata/town500_zone = "forest"
+metadata/phase = 3
+
+[node name="F01-A" parent="." instance=ExtResource("1")]
+position = Vector3(118, 2.2, -191)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "F01-A"
+metadata/source_ref = "F01"
+metadata/zone = "forest"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = false
+
+[node name="F02-A" parent="." instance=ExtResource("2")]
+position = Vector3(174, 2.2, -151)
+rotation = Vector3(0, 1.570796327, 0)
+metadata/town500_id = "F02-A"
+metadata/source_ref = "F02"
+metadata/zone = "forest"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = false
+
+[node name="F02-B" parent="." instance=ExtResource("3")]
+position = Vector3(190, 2.2, -160)
+rotation = Vector3(0, 1.570796327, 0)
+metadata/town500_id = "F02-B"
+metadata/source_ref = "F02"
+metadata/zone = "forest"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = false
+
+[node name="F03-A" parent="." instance=ExtResource("4")]
+position = Vector3(233, 2.2, -157)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "F03-A"
+metadata/source_ref = "F03"
+metadata/zone = "forest"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = true
+
+[node name="F04-A" parent="." instance=ExtResource("5")]
+position = Vector3(99, 2.2, -69)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "F04-A"
+metadata/source_ref = "F04"
+metadata/zone = "forest"
+metadata/ground_access = false
+metadata/upper_access = false
+metadata/pad_surface_y_m = 2
+metadata/graybox = true

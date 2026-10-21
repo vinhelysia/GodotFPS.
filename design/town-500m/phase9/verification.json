@@ -1,0 +1,2217 @@
+{
+  "date": "2026-10-21",
+  "status": "NATIVE_PASS_PILOT_READY_FOR_VISUAL_REVIEW",
+  "scope": "V3 vegetation only; approximately40m county-road pilot and4 small tree/apartment pockets; no whole-map rollout.",
+  "seed": 20261023,
+  "counts": {
+    "grass_tufts": 4651,
+    "shrubs": 12,
+    "debris": 18,
+    "instances": 4681,
+    "multimeshes": 12,
+    "total_visual_triangles": 89442
+  },
+  "baseline": {
+    "path": "tests/artifacts/town500_ground_v3/before/ground_v3_before-native.json",
+    "sha256": "964d5506bddb185ebb3030fb26bdeac0fbc09967c78d220dc4f9b5d96c542bb0",
+    "status": "PASS",
+    "checks": 611
+  },
+  "native_receipts": [
+    {
+      "name": "after",
+      "path": "tests/artifacts/town500_ground_v3/after/ground_v3_after-native.json",
+      "sha256": "3f3965bf33b41302b6ff10033ba567e0b9c506252d0f88443a6462ab6ac62c4d",
+      "status": "PASS",
+      "checks": 19370,
+      "source_files": 315,
+      "current_disk_matches": true
+    },
+    {
+      "name": "walk",
+      "path": "tests/artifacts/town500_ground_v3/traversal/ground_contact-native.json",
+      "sha256": "f8e2c35882e4ed28051f946d9ce4e8cf83550a577ab0e78b23876d3919cd4b5d",
+      "status": "PASS",
+      "checks": 14630,
+      "source_files": 310,
+      "current_disk_matches": true
+    }
+  ],
+  "source_binding_current": true,
+  "cameras": {
+    "identical_to_latest_v2": true,
+    "matched_camera_rows": 17,
+    "captures_per_revision": 15,
+    "hero": {
+      "eye": [
+        -179,
+        3.69999241828918,
+        27.3999996185303
+      ],
+      "eye_height_m": 1.7,
+      "fov_degrees": 75,
+      "ground_target_distance_xz_m": 5,
+      "id": "shoulder_close",
+      "kind": "v2_fixed_camera",
+      "target": [
+        -175,
+        2.02001523971558,
+        24.3999996185303
+      ]
+    },
+    "native_eye": {
+      "kind": "v2_camera_scope",
+      "native_standing_eye_height_m": 1.50014090538025,
+      "player_camera_path": "Body/Neck/Head/Eyes/Camera",
+      "required_eye_height_m": 1.7,
+      "scope": "Required views use a temporary camera1.70m above native floor; an extra road view uses measured standing Cogito eye height. Player/controller unchanged."
+    }
+  },
+  "geometry": {
+    "collision_sha256": "dcbdcd9b8d069607e49c27faf8ef244e77fbad1e2f0eea0d8b2be8670ba8d85a",
+    "collision_shapes": 3129,
+    "kind": "ground_geometry_signature",
+    "navigation_polygons": 13920,
+    "navigation_sha256": "744b61e3a63be2012df7aeef7618af1d1c6c72cf558c11a1501020120e8ffe02",
+    "scope": "World-space collision shapes and saved navigation topology; excludes visual materials and decorative non-colliding foliage."
+  },
+  "geometry_identical": true,
+  "navigation_vertices": 11714,
+  "bridge_queries": [
+    {
+      "id": "R01",
+      "kind": "v2_crossing_navigation",
+      "reverse": false,
+      "waypoints": 28
+    },
+    {
+      "id": "R01",
+      "kind": "v2_crossing_navigation",
+      "reverse": true,
+      "waypoints": 28
+    },
+    {
+      "id": "R02",
+      "kind": "v2_crossing_navigation",
+      "reverse": false,
+      "waypoints": 5
+    },
+    {
+      "id": "R02",
+      "kind": "v2_crossing_navigation",
+      "reverse": true,
+      "waypoints": 5
+    }
+  ],
+  "native_vegetation": {
+    "batches": 12,
+    "instanced_triangles": 89442,
+    "instances": 4681,
+    "kind": "v3_cover_support",
+    "maximum_ground_error_m": 0.00000251321411148808,
+    "plan": "res://design/town-500m/phase9/vegetation-plan.json",
+    "scope": "Native rendered readback and one root support ray per placement; not exhaustive canopy/silhouette intersection.",
+    "types": {
+      "dry": 2294,
+      "short": 1578,
+      "tall": 352,
+      "weed": 427
+    }
+  },
+  "controller": {
+    "roundtrips": [
+      "county-road centre",
+      "road-verge-grass cross-section",
+      "apartment pedestrian spur and vestibule"
+    ],
+    "segments": 20,
+    "all_grounded": true,
+    "airborne_frames": 0,
+    "health_unchanged": true,
+    "modified": false
+  },
+  "performance": {
+    "baseline": [
+      {
+        "draw_calls": 1277,
+        "engine_max_fps": 0,
+        "frames": 180,
+        "gpu_median_ms": 1.01699995994568,
+        "gpu_p95_ms": 1.4559999704361,
+        "kind": "ground_render_cost",
+        "primitives": 749984,
+        "render_cpu_median_ms": 0.916000008583069,
+        "scope": "Native viewport GPU/CPU timestamps on this GPU, no120FPS cap; static scene, BT/survival disabled. Not active-AI whole-map/1080p certification.",
+        "texture_bytes": 790896128,
+        "view": "along_road",
+        "viewport": [
+          1280,
+          720
+        ],
+        "wall_median_ms": 1.816
+      },
+      {
+        "draw_calls": 1748,
+        "engine_max_fps": 0,
+        "frames": 180,
+        "gpu_median_ms": 1.2039999961853,
+        "gpu_p95_ms": 1.96300005912781,
+        "kind": "ground_render_cost",
+        "primitives": 895201,
+        "render_cpu_median_ms": 1.21200001239777,
+        "scope": "Native viewport GPU/CPU timestamps on this GPU, no120FPS cap; static scene, BT/survival disabled. Not active-AI whole-map/1080p certification.",
+        "texture_bytes": 790896128,
+        "view": "tree_contact",
+        "viewport": [
+          1280,
+          720
+        ],
+        "wall_median_ms": 2.439
+      }
+    ],
+    "final": [
+      {
+        "draw_calls": 1281,
+        "engine_max_fps": 0,
+        "frames": 180,
+        "gpu_median_ms": 1.08000004291534,
+        "gpu_p95_ms": 2.85500001907349,
+        "kind": "ground_render_cost",
+        "primitives": 813422,
+        "render_cpu_median_ms": 1.03400003910065,
+        "scope": "Native viewport GPU/CPU timestamps on this GPU, no120FPS cap; static scene, BT/survival disabled. Not active-AI whole-map/1080p certification.",
+        "texture_bytes": 790896128,
+        "view": "along_road",
+        "viewport": [
+          1280,
+          720
+        ],
+        "wall_median_ms": 2.153
+      },
+      {
+        "draw_calls": 1751,
+        "engine_max_fps": 0,
+        "frames": 180,
+        "gpu_median_ms": 1.53199994564056,
+        "gpu_p95_ms": 3.35400009155273,
+        "kind": "ground_render_cost",
+        "primitives": 954235,
+        "render_cpu_median_ms": 1.31099998950958,
+        "scope": "Native viewport GPU/CPU timestamps on this GPU, no120FPS cap; static scene, BT/survival disabled. Not active-AI whole-map/1080p certification.",
+        "texture_bytes": 790896128,
+        "view": "tree_contact",
+        "viewport": [
+          1280,
+          720
+        ],
+        "wall_median_ms": 2.655
+      }
+    ],
+    "scope": "Static720p180frames per view, no FPS cap, same camera/hour/exposure, fixture-only BT/survival disable; final sample has no overlapping offline generation check. Short sample, no1080p/active-AI/FPS guarantee."
+  },
+  "preservation": {
+    "task_start_files": 316,
+    "byte_identical": 313,
+    "intended_changes": 3,
+    "unexpected_changes": 0,
+    "material_shader_texture_files_identical": 18,
+    "rows": [
+      {
+        "path": "Assets/Blender/BunkerKit/assets/wood_pallet.glb",
+        "sha256": "3693880836326c72efaaa7cfedf6cabfae689c06a84557d5ce4d0f39fdb88dce",
+        "current_sha256": "3693880836326c72efaaa7cfedf6cabfae689c06a84557d5ce4d0f39fdb88dce",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/assets/facade_doorway_4m.glb",
+        "sha256": "7daec2d45057100fec4e0a6a4ffacbf9f9cf30b6fb95897a45e090f990eed4a5",
+        "current_sha256": "7daec2d45057100fec4e0a6a4ffacbf9f9cf30b6fb95897a45e090f990eed4a5",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/assets/facade_solid_4m.glb",
+        "sha256": "61952bc08c9065ffd248aaf81e983bb316d2cf7813d26cef483c409ef2fbe446",
+        "current_sha256": "61952bc08c9065ffd248aaf81e983bb316d2cf7813d26cef483c409ef2fbe446",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/assets/facade_window_4m.glb",
+        "sha256": "3c9ec4d586d0b9ae21805629e53f136a23debb100b7bcf53bdbe6fb1b47510c4",
+        "current_sha256": "3c9ec4d586d0b9ae21805629e53f136a23debb100b7bcf53bdbe6fb1b47510c4",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/assets/metal_roof_8x8.glb",
+        "sha256": "96497fb0a8a9500b9823821f7346da200c0cffe092bab3b3a130d7cb860b1d64",
+        "current_sha256": "96497fb0a8a9500b9823821f7346da200c0cffe092bab3b3a130d7cb860b1d64",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/materials/town_architecture_clean.tres",
+        "sha256": "a94e628b381c2471ce2087036b1254eed9c6bbcedef64d7de395f281094d9533",
+        "current_sha256": "a94e628b381c2471ce2087036b1254eed9c6bbcedef64d7de395f281094d9533",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/materials/town_architecture_used.tres",
+        "sha256": "23a26c0286a30dd218e02f14db0dc0bc59d6903e9eef75dbf84157519426fbc2",
+        "current_sha256": "23a26c0286a30dd218e02f14db0dc0bc59d6903e9eef75dbf84157519426fbc2",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/materials/town_architecture_worn.tres",
+        "sha256": "1200570f81011299435f4c5d6f3b3d1ff3d4b37402f70b21fa9c2761c4388bf2",
+        "current_sha256": "1200570f81011299435f4c5d6f3b3d1ff3d4b37402f70b21fa9c2761c4388bf2",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/materials/town_circulation_clean.tres",
+        "sha256": "a0e187749c582f98b785e6c76f0324f7092643f4bea64a525c83f01c88f378a7",
+        "current_sha256": "a0e187749c582f98b785e6c76f0324f7092643f4bea64a525c83f01c88f378a7",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/materials/town_circulation_used.tres",
+        "sha256": "fa8fedceb4046e6009dd02bf860b2d88c04ae6ea2ac35b5c0a5f4cf2fdebdfd4",
+        "current_sha256": "fa8fedceb4046e6009dd02bf860b2d88c04ae6ea2ac35b5c0a5f4cf2fdebdfd4",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/materials/town_circulation_worn.tres",
+        "sha256": "9071ca067203c6a63b9b42a1d18f722179acf3b8d5f6d87e250ebd7dee154ad7",
+        "current_sha256": "9071ca067203c6a63b9b42a1d18f722179acf3b8d5f6d87e250ebd7dee154ad7",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/materials/town_roof_clean.tres",
+        "sha256": "83be254179db4a2ac1406bd705b0ae06f4b2ef86b0e06028f86c2b65dfcd518b",
+        "current_sha256": "83be254179db4a2ac1406bd705b0ae06f4b2ef86b0e06028f86c2b65dfcd518b",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/materials/town_roof_used.tres",
+        "sha256": "85a80f86dba17e5130082d38a8125d834209dfe1321ade80d50f3e4ee98d94d7",
+        "current_sha256": "85a80f86dba17e5130082d38a8125d834209dfe1321ade80d50f3e4ee98d94d7",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/materials/town_roof_worn.tres",
+        "sha256": "abf803a84f4c39d4fb968f49796ffc1a56bf92dd33972d7584c326e6d46a341a",
+        "current_sha256": "abf803a84f4c39d4fb968f49796ffc1a56bf92dd33972d7584c326e6d46a341a",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/materials/town_utilities_clean.tres",
+        "sha256": "0724b14bc9791d1b91ccac19095002ec7353a06e4cc05f693e01ab52d73d1db1",
+        "current_sha256": "0724b14bc9791d1b91ccac19095002ec7353a06e4cc05f693e01ab52d73d1db1",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/materials/town_utilities_used.tres",
+        "sha256": "565d529d84f2cb26dd2694a907b7a3804a70d2124192c9a1a0a8f88d6066504a",
+        "current_sha256": "565d529d84f2cb26dd2694a907b7a3804a70d2124192c9a1a0a8f88d6066504a",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/materials/town_utilities_worn.tres",
+        "sha256": "d43a516b69ca8a2b355ead4246125329932229330641421ec433b6b55c5baabc",
+        "current_sha256": "d43a516b69ca8a2b355ead4246125329932229330641421ec433b6b55c5baabc",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_architecture_clean_albedo.png",
+        "sha256": "4804fb900fd15907c6a49ef5c1d77f3e675afbae3cad0334cd6048c9f3c37fdb",
+        "current_sha256": "4804fb900fd15907c6a49ef5c1d77f3e675afbae3cad0334cd6048c9f3c37fdb",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_architecture_clean_orm.png",
+        "sha256": "689a935cc9ede8144dca52adc134b805a846f8741ba8d823906932c84c0953d9",
+        "current_sha256": "689a935cc9ede8144dca52adc134b805a846f8741ba8d823906932c84c0953d9",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_architecture_used_albedo.png",
+        "sha256": "00da07e1b02a643381b8aa78a4b1369906b6d44284d94bc5910a94df7748f429",
+        "current_sha256": "00da07e1b02a643381b8aa78a4b1369906b6d44284d94bc5910a94df7748f429",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_architecture_used_orm.png",
+        "sha256": "c775894f9f8c5e0130c31fd03ea580e32a30fd12422adbf2c03ce7b8d1c1a642",
+        "current_sha256": "c775894f9f8c5e0130c31fd03ea580e32a30fd12422adbf2c03ce7b8d1c1a642",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_architecture_worn_albedo.png",
+        "sha256": "f0f37637407cbc5d0210685fd33de5e944f27770214590e4d1a19ea512d6b967",
+        "current_sha256": "f0f37637407cbc5d0210685fd33de5e944f27770214590e4d1a19ea512d6b967",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_architecture_worn_orm.png",
+        "sha256": "0469ead8d333639dc8f90dc97d5dbd62105fd6dedba3c4fd281510e860510345",
+        "current_sha256": "0469ead8d333639dc8f90dc97d5dbd62105fd6dedba3c4fd281510e860510345",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_circulation_clean_albedo.png",
+        "sha256": "c397a8fc039d798cce34e92a80421f5be328af9555e4de378a060c2a2bec5c52",
+        "current_sha256": "c397a8fc039d798cce34e92a80421f5be328af9555e4de378a060c2a2bec5c52",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_circulation_clean_orm.png",
+        "sha256": "5c728cac0675b8945fd5ce1a99b8ff113e4ad15f49dc344d3670043396987e9b",
+        "current_sha256": "5c728cac0675b8945fd5ce1a99b8ff113e4ad15f49dc344d3670043396987e9b",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_circulation_used_albedo.png",
+        "sha256": "e2bad9eb8336a93516775ad0edede1a5122121a066c44932cc5a6eb518e49e31",
+        "current_sha256": "e2bad9eb8336a93516775ad0edede1a5122121a066c44932cc5a6eb518e49e31",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_circulation_used_orm.png",
+        "sha256": "43805c0cec6db8310a77c7874d718102a983bff264091d4a2cd76c8b935aee59",
+        "current_sha256": "43805c0cec6db8310a77c7874d718102a983bff264091d4a2cd76c8b935aee59",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_circulation_worn_albedo.png",
+        "sha256": "aac19317b28a6c0d68d6eeea128db4bb51ecc5cb051559f1009b17dd7261c315",
+        "current_sha256": "aac19317b28a6c0d68d6eeea128db4bb51ecc5cb051559f1009b17dd7261c315",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_circulation_worn_orm.png",
+        "sha256": "2407ea84dc591847a553aa0e01501a250d4ea1f70294415a7de65b55b7498d9f",
+        "current_sha256": "2407ea84dc591847a553aa0e01501a250d4ea1f70294415a7de65b55b7498d9f",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_roof_clean_albedo.png",
+        "sha256": "5d4929fdbed070df822fa5a091282305f521044bb6a92fd5963f6bf44eef4979",
+        "current_sha256": "5d4929fdbed070df822fa5a091282305f521044bb6a92fd5963f6bf44eef4979",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_roof_clean_orm.png",
+        "sha256": "2efde717de9f5e7f09096c2ead71c56ad569f1e8b6d17583ee1a20090da138de",
+        "current_sha256": "2efde717de9f5e7f09096c2ead71c56ad569f1e8b6d17583ee1a20090da138de",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_roof_used_albedo.png",
+        "sha256": "c59673f353678a911bdf0476ed3da43f3adb2e02f4c2827d2adaff9f2ceea741",
+        "current_sha256": "c59673f353678a911bdf0476ed3da43f3adb2e02f4c2827d2adaff9f2ceea741",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_roof_used_orm.png",
+        "sha256": "12acc6b045fa733e42565b4c247265a477d7d1932627c599dbd868fc40d697f0",
+        "current_sha256": "12acc6b045fa733e42565b4c247265a477d7d1932627c599dbd868fc40d697f0",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_roof_worn_albedo.png",
+        "sha256": "dc3d134ac9f18e38b76922d539169ac875377442a62e412e2e8892a8d7ce9fb0",
+        "current_sha256": "dc3d134ac9f18e38b76922d539169ac875377442a62e412e2e8892a8d7ce9fb0",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_roof_worn_orm.png",
+        "sha256": "ffaa12d8070e313ec1ad2f39484b0f25bfecde9dc68725b3d372bbb2d3db0849",
+        "current_sha256": "ffaa12d8070e313ec1ad2f39484b0f25bfecde9dc68725b3d372bbb2d3db0849",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_utilities_clean_albedo.png",
+        "sha256": "909c1131231f5e950df5d1bd54f57a8a9a62d165a2fb47a820dbfd36e144e14a",
+        "current_sha256": "909c1131231f5e950df5d1bd54f57a8a9a62d165a2fb47a820dbfd36e144e14a",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_utilities_clean_orm.png",
+        "sha256": "edcda798cff607c5330c6c51dea23e451b34171ba341878a2f983a3dcc1af0b9",
+        "current_sha256": "edcda798cff607c5330c6c51dea23e451b34171ba341878a2f983a3dcc1af0b9",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_utilities_used_albedo.png",
+        "sha256": "db024f48d3b04b57469f13020696a62e5e6eecaa96c6793fce928f2e89fa31ee",
+        "current_sha256": "db024f48d3b04b57469f13020696a62e5e6eecaa96c6793fce928f2e89fa31ee",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_utilities_used_orm.png",
+        "sha256": "842026679f5adc72c754f3e8c3dbcca6e25ddb9404f98febb08b6ae8036cb22f",
+        "current_sha256": "842026679f5adc72c754f3e8c3dbcca6e25ddb9404f98febb08b6ae8036cb22f",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_utilities_worn_albedo.png",
+        "sha256": "d9de03c12448c9451238533adcbb59dc262ee3c3912d8e167072f7b7f9cd99ab",
+        "current_sha256": "d9de03c12448c9451238533adcbb59dc262ee3c3912d8e167072f7b7f9cd99ab",
+        "intended_change": false
+      },
+      {
+        "path": "Assets/Blender/TownKit/textures/town_utilities_worn_orm.png",
+        "sha256": "82dc584f7b246eb2d058ab917f324c2c36110c7f5e7abe679ab6dd8dc889b5d3",
+        "current_sha256": "82dc584f7b246eb2d058ab917f324c2c36110c7f5e7abe679ab6dd8dc889b5d3",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/BunkerKit/wood_pallet.tscn",
+        "sha256": "f0ec3edebb696eb4697e19392f98433b92126679904e8aff6be619db4b3a3fe5",
+        "current_sha256": "f0ec3edebb696eb4697e19392f98433b92126679904e8aff6be619db4b3a3fe5",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/Buildings/t01_cottage.tscn",
+        "sha256": "dd67f1263192f577b8e162557a7644a3f2697649a54458f7f1ab2297f913e9fd",
+        "current_sha256": "dd67f1263192f577b8e162557a7644a3f2697649a54458f7f1ab2297f913e9fd",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn",
+        "sha256": "f7293a4b35625aba375ef6a3efc2854e3d2695915eb51dd5e0c6fc481f50965f",
+        "current_sha256": "f7293a4b35625aba375ef6a3efc2854e3d2695915eb51dd5e0c6fc481f50965f",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/Buildings/t02_long_house.tscn",
+        "sha256": "62a27067438c919ffa25423b274d981bbb432687b552ffc4154b4a919e217537",
+        "current_sha256": "62a27067438c919ffa25423b274d981bbb432687b552ffc4154b4a919e217537",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/Buildings/t02_long_house_ground.tscn",
+        "sha256": "7f998653cd08a973f1d5af5a57beff4ba47d4d21476a4b6a538f499e7a2c1b36",
+        "current_sha256": "7f998653cd08a973f1d5af5a57beff4ba47d4d21476a4b6a538f499e7a2c1b36",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/Buildings/t03_apartment.tscn",
+        "sha256": "5282a2377d5899f75ad694cffcab21ae0ffb5f3c90d3b4a9c68ed91223e9c94d",
+        "current_sha256": "5282a2377d5899f75ad694cffcab21ae0ffb5f3c90d3b4a9c68ed91223e9c94d",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/Buildings/t04_shop.tscn",
+        "sha256": "258eece04e52ef1189ce98c299a33c32faf959465ef5b61db1e911dc9744c5ed",
+        "current_sha256": "258eece04e52ef1189ce98c299a33c32faf959465ef5b61db1e911dc9744c5ed",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/Buildings/t05_clinic.tscn",
+        "sha256": "d26113cc5c74861eb6933aeeda4c69045db09fd72fe4175e2c1bdcae9d7ad86c",
+        "current_sha256": "d26113cc5c74861eb6933aeeda4c69045db09fd72fe4175e2c1bdcae9d7ad86c",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/Buildings/t06_garage.tscn",
+        "sha256": "c84215394bfe6c75deca1acd945b926b51f9d9e6ae23f45ee5d0e38b616e36d6",
+        "current_sha256": "c84215394bfe6c75deca1acd945b926b51f9d9e6ae23f45ee5d0e38b616e36d6",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/Buildings/t07_workshop.tscn",
+        "sha256": "06b73afc32129cc46aad8a3ed61ed4719b6cc22e6ef60a907df14f94dd0918dc",
+        "current_sha256": "06b73afc32129cc46aad8a3ed61ed4719b6cc22e6ef60a907df14f94dd0918dc",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/Buildings/t07_workshop_shell.tscn",
+        "sha256": "34c9fef821bfcfeabf904294e0f15fd03c1bb2ee250026a48a35c1a802104980",
+        "current_sha256": "34c9fef821bfcfeabf904294e0f15fd03c1bb2ee250026a48a35c1a802104980",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/Buildings/t08_warehouse.tscn",
+        "sha256": "c251f2dc106844362bc983ff6fdd7ab22c4657133f71cf58340703fdb8263798",
+        "current_sha256": "c251f2dc106844362bc983ff6fdd7ab22c4657133f71cf58340703fdb8263798",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/Buildings/t09_shed.tscn",
+        "sha256": "7955edc5b5b13ac416ef6307b54f3ac93e9eda1146a81d14d8e1f6849e2d730c",
+        "current_sha256": "7955edc5b5b13ac416ef6307b54f3ac93e9eda1146a81d14d8e1f6849e2d730c",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+        "sha256": "1e68f08df7c69a1a08bb43504615854664aba3e9a87734b2be7ff9ac99ded159",
+        "current_sha256": "1e68f08df7c69a1a08bb43504615854664aba3e9a87734b2be7ff9ac99ded159",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/Buildings/t10_kiosk.tscn",
+        "sha256": "e662fa12463308cf272d502477e81086171f0c5002a964c7bda133a50e32096f",
+        "current_sha256": "e662fa12463308cf272d502477e81086171f0c5002a964c7bda133a50e32096f",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/Buildings/t11_substation.tscn",
+        "sha256": "400d3dc517dd7d4d787963c4b8171e3ce7d8f730c4a536f6f52d0bf9f8715648",
+        "current_sha256": "400d3dc517dd7d4d787963c4b8171e3ce7d8f730c4a536f6f52d0bf9f8715648",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/Buildings/t12_bus_shelter.tscn",
+        "sha256": "2496ab31cc44979b3e52574b4684cc0efa1fa7a75504a665fad825c571db9416",
+        "current_sha256": "2496ab31cc44979b3e52574b4684cc0efa1fa7a75504a665fad825c571db9416",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/Buildings/t13_guard_booth.tscn",
+        "sha256": "a95875ac7b2a5de5a825128a89c4bba9b9da7085f7a2cdba431bfdbe6c0d6f9f",
+        "current_sha256": "a95875ac7b2a5de5a825128a89c4bba9b9da7085f7a2cdba431bfdbe6c0d6f9f",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/Buildings/t14_pump_house.tscn",
+        "sha256": "3d20bf9ed4527c7a7a179c4fa3c90dc517210ff500902bd88621cc852b33b7fb",
+        "current_sha256": "3d20bf9ed4527c7a7a179c4fa3c90dc517210ff500902bd88621cc852b33b7fb",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/facade_doorway_4m.tscn",
+        "sha256": "7db3f5b65225511e9813722adac9d71ed392087ed3288a8f2ff86add3ce8ca79",
+        "current_sha256": "7db3f5b65225511e9813722adac9d71ed392087ed3288a8f2ff86add3ce8ca79",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/facade_solid_4m.tscn",
+        "sha256": "c2d0f3b8b3f5b2552f532e7a644f050aee8edd07287c0a57b94593527a74516b",
+        "current_sha256": "c2d0f3b8b3f5b2552f532e7a644f050aee8edd07287c0a57b94593527a74516b",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/facade_window_4m.tscn",
+        "sha256": "81b566bb8f0a02cb681c71ec86cec876df7eff2098a1c0d63a37759e0635a708",
+        "current_sha256": "81b566bb8f0a02cb681c71ec86cec876df7eff2098a1c0d63a37759e0635a708",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Props/TownKit/metal_roof_8x8.tscn",
+        "sha256": "b301f6144bd9de3e4a7ae04e66fd27d29c509f6aa04d8b8a8d12a15e90bc866d",
+        "current_sha256": "b301f6144bd9de3e4a7ae04e66fd27d29c509f6aa04d8b8a8d12a15e90bc866d",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/Town.tscn",
+        "sha256": "5c83f7fe36169819f3dd81b231b0eb79b3201c729d809032a270bc738cfe0876",
+        "current_sha256": "5c83f7fe36169819f3dd81b231b0eb79b3201c729d809032a270bc738cfe0876",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/ApartmentSite/chunk_0_2_farmland_cut.obj",
+        "sha256": "76f0a6f6cce75487ef7fd886cc94a62e10a7e428bc1303da2fe6a10bf20e51a4",
+        "current_sha256": "76f0a6f6cce75487ef7fd886cc94a62e10a7e428bc1303da2fe6a10bf20e51a4",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/ApartmentSite/chunk_0_2_farmland_cut.obj.import",
+        "sha256": "6f9e8ca03c171d4dd2198594d4db99d5f4dc784186c22283408728a683706160",
+        "current_sha256": "6f9e8ca03c171d4dd2198594d4db99d5f4dc784186c22283408728a683706160",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/ApartmentSite/chunk_0_2_shore_cut.obj",
+        "sha256": "a70c9122319a75b791e13976d8b0b121c1d07858957f0f376138f05e0842c20d",
+        "current_sha256": "a70c9122319a75b791e13976d8b0b121c1d07858957f0f376138f05e0842c20d",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/ApartmentSite/chunk_0_2_shore_cut.obj.import",
+        "sha256": "3804cd94428f924bef329f22d25ff9852de095286c3079e4b304cf99eb978940",
+        "current_sha256": "3804cd94428f924bef329f22d25ff9852de095286c3079e4b304cf99eb978940",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/ApartmentSite/chunk_0_2_town_cut.obj",
+        "sha256": "3ef559290dc4b9cedb0383da2bb0f0633e47d7bddc95cbee9ba0673178390652",
+        "current_sha256": "3ef559290dc4b9cedb0383da2bb0f0633e47d7bddc95cbee9ba0673178390652",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/ApartmentSite/chunk_0_2_town_cut.obj.import",
+        "sha256": "655692683b2f2d7e77d91ee60071c6d02547aec07af567b0185c907246aff72a",
+        "current_sha256": "655692683b2f2d7e77d91ee60071c6d02547aec07af567b0185c907246aff72a",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/ApartmentSite/chunk_0_3_farmland_cut.obj",
+        "sha256": "2f06e00d6af159c7aba4b25a3a663af847d64a9b602f3cc8bb4865cd456296a3",
+        "current_sha256": "2f06e00d6af159c7aba4b25a3a663af847d64a9b602f3cc8bb4865cd456296a3",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/ApartmentSite/chunk_0_3_farmland_cut.obj.import",
+        "sha256": "878b69f6a30ab87b89dbcc5b9acbe5f56971a705bf38c5580ee20d7202b90bb5",
+        "current_sha256": "878b69f6a30ab87b89dbcc5b9acbe5f56971a705bf38c5580ee20d7202b90bb5",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/ApartmentSite/chunk_0_3_shore_cut.obj",
+        "sha256": "a2fb92a2be5b59c9ba96c5ab12628cf8a1532aaf0baa7fa4322f333b6b8c6eb7",
+        "current_sha256": "a2fb92a2be5b59c9ba96c5ab12628cf8a1532aaf0baa7fa4322f333b6b8c6eb7",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/ApartmentSite/chunk_0_3_shore_cut.obj.import",
+        "sha256": "e2c695ff4c40b0968d0509b06c496a1a7b2e74b07c3378697d5a9e3d48414090",
+        "current_sha256": "e2c695ff4c40b0968d0509b06c496a1a7b2e74b07c3378697d5a9e3d48414090",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/ApartmentSite/chunk_0_3_town_cut.obj",
+        "sha256": "602885ee9fdd67ddc0eab65323eefb8db00c379f96d82b8885be72c3f1c3e89b",
+        "current_sha256": "602885ee9fdd67ddc0eab65323eefb8db00c379f96d82b8885be72c3f1c3e89b",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/ApartmentSite/chunk_0_3_town_cut.obj.import",
+        "sha256": "a10128abf5ef0d48fef95a5f3018ab59f3fd6d7a5fb8ff453d6a16cbe1ab09fc",
+        "current_sha256": "a10128abf5ef0d48fef95a5f3018ab59f3fd6d7a5fb8ff453d6a16cbe1ab09fc",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/ApartmentSite/dry_terrain.tscn",
+        "sha256": "5f52cd9813eb5f8fae80e7747606c55f055f492aa3b766513d9b12d22ed5982a",
+        "current_sha256": "5f52cd9813eb5f8fae80e7747606c55f055f492aa3b766513d9b12d22ed5982a",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/ApartmentSite/entry_spur.obj",
+        "sha256": "5e0d064f8b44b9c619c9407a8cdd7d22a760b857c8b6dd369c0e7046b85f2d56",
+        "current_sha256": "5e0d064f8b44b9c619c9407a8cdd7d22a760b857c8b6dd369c0e7046b85f2d56",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/ApartmentSite/entry_spur.obj.import",
+        "sha256": "b128c310bd39cc17f5d17c75a1cc7747e7d49e30f49a32dd574278c0411186b8",
+        "current_sha256": "b128c310bd39cc17f5d17c75a1cc7747e7d49e30f49a32dd574278c0411186b8",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/ApartmentSite/ground_farmland.tres",
+        "sha256": "911d7e10fc7098ca657cc8cf6508c1294cec6b95ecd4a13d7c299738525d1114",
+        "current_sha256": "911d7e10fc7098ca657cc8cf6508c1294cec6b95ecd4a13d7c299738525d1114",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/ApartmentSite/ground_finish.tscn",
+        "sha256": "ffa8dfab72409879e8873dab1bf937f1f2e0f8378e40013897cb53f581c1cdc5",
+        "current_sha256": "ffa8dfab72409879e8873dab1bf937f1f2e0f8378e40013897cb53f581c1cdc5",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/ApartmentSite/ground_shore.tres",
+        "sha256": "702c9d20deeb1f156455b44884878a6b4c59ad2e44dfb209bc1f779d0a7e0ab1",
+        "current_sha256": "702c9d20deeb1f156455b44884878a6b4c59ad2e44dfb209bc1f779d0a7e0ab1",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/ApartmentSite/pit_retaining.obj",
+        "sha256": "3d8c526a8f781367efa9373440d90745d8c2dd373fc232763ef4845fa38057c0",
+        "current_sha256": "3d8c526a8f781367efa9373440d90745d8c2dd373fc232763ef4845fa38057c0",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/ApartmentSite/pit_retaining.obj.import",
+        "sha256": "9fa7f8bee219a30fc2044ad934095e55458895d41b002673c92f7345db4ad7aa",
+        "current_sha256": "9fa7f8bee219a30fc2044ad934095e55458895d41b002673c92f7345db4ad7aa",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/asphalt.tres",
+        "sha256": "90efe35f8636145da28898015589e82df07fea6e4f9fdf691c1d1dd4d94f441e",
+        "current_sha256": "90efe35f8636145da28898015589e82df07fea6e4f9fdf691c1d1dd4d94f441e",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/bunker.tres",
+        "sha256": "759f071416a551d1eba30a42c64c0ccb0d8149dc73db124708a923f4d415c251",
+        "current_sha256": "759f071416a551d1eba30a42c64c0ccb0d8149dc73db124708a923f4d415c251",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/circulation.tscn",
+        "sha256": "b666bae6912793565c08f6791b6c1c00c7b2a02ce1b391a21cdaeaaea768958d",
+        "current_sha256": "b666bae6912793565c08f6791b6c1c00c7b2a02ce1b391a21cdaeaaea768958d",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/dry_terrain.tscn",
+        "sha256": "43a8c6e783e55de8d037724efc33e402438024077b8ecbc162103886795ffc68",
+        "current_sha256": "43a8c6e783e55de8d037724efc33e402438024077b8ecbc162103886795ffc68",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/farmland.tres",
+        "sha256": "8ebdb37edbd2a7c4ad60a576165e7afc937ec58e31217b84cbd41a75770003a2",
+        "current_sha256": "8ebdb37edbd2a7c4ad60a576165e7afc937ec58e31217b84cbd41a75770003a2",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/forest.tres",
+        "sha256": "8c0e3e91912830f33c48b1e4eb6abb7b4f7b4c2bb303111f8b4bd9b92294b5d6",
+        "current_sha256": "8c0e3e91912830f33c48b1e4eb6abb7b4f7b4c2bb303111f8b4bd9b92294b5d6",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/gravel.tres",
+        "sha256": "94b22ea84e5bc127e7ba07b567c4f6dadb412a766e0edf2bb1fb154b3c9a95eb",
+        "current_sha256": "94b22ea84e5bc127e7ba07b567c4f6dadb412a766e0edf2bb1fb154b3c9a95eb",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/ground_cover.tscn",
+        "sha256": "840d8a0dbe64794548eeb9842492af0533e9009805334d0e20494714fc3ee6c9",
+        "current_sha256": "7045ec9f7467c2876b2bcddf3a2549a334ada22ecbcddafd6e4fef4354c04d12",
+        "intended_change": true
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/ground_surface.gdshader",
+        "sha256": "61d8f2039c13ec0c5433c478a32730df8ff7c5750237e70a9fb9a0f707af8424",
+        "current_sha256": "61d8f2039c13ec0c5433c478a32730df8ff7c5750237e70a9fb9a0f707af8424",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/ground_surface.gdshader.uid",
+        "sha256": "0c093b4b0f01a62efb8a4faddad1bf024b18fbfbe212f56fbd213bfc72b68fa5",
+        "current_sha256": "0c093b4b0f01a62efb8a4faddad1bf024b18fbfbe212f56fbd213bfc72b68fa5",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/hills.tres",
+        "sha256": "83e7576a0ad7d63406d07ce995bf9c498e1330dfc597053c5cfba0dcc9c1be37",
+        "current_sha256": "83e7576a0ad7d63406d07ce995bf9c498e1330dfc597053c5cfba0dcc9c1be37",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/industry.tres",
+        "sha256": "3b98eda654fc2e54c37162767a3afdd4758995f27b2e28f33011ea1b1c7ca01e",
+        "current_sha256": "3b98eda654fc2e54c37162767a3afdd4758995f27b2e28f33011ea1b1c7ca01e",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/mask_ground_context.png",
+        "sha256": "e8bc1f61d844f93d773e42a79ae4b74596bc5be7312aee94e5c7e4bcd7b23343",
+        "current_sha256": "e8bc1f61d844f93d773e42a79ae4b74596bc5be7312aee94e5c7e4bcd7b23343",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/mask_ground_context.png.import",
+        "sha256": "9e2431d33160e25ed43fcd4824aa085f96245d4f7511458c96f840f3bff8f19e",
+        "current_sha256": "9e2431d33160e25ed43fcd4824aa085f96245d4f7511458c96f840f3bff8f19e",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/mask_roads_leaves.png",
+        "sha256": "ac4f0c76926f4881e239017ddea9b696c0b207ad74bcb153d795923f28fd9ef9",
+        "current_sha256": "ac4f0c76926f4881e239017ddea9b696c0b207ad74bcb153d795923f28fd9ef9",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/mask_roads_leaves.png.import",
+        "sha256": "a7a93ac1156f0a99ff0fc81713124191ddf596f5c526cb28bdaeb92200eb35be",
+        "current_sha256": "a7a93ac1156f0a99ff0fc81713124191ddf596f5c526cb28bdaeb92200eb35be",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/mask_variation.png",
+        "sha256": "eda0c622074545bd50988bedbf5fc3cea111bc0091631e2babe78e4d6b11a3ec",
+        "current_sha256": "eda0c622074545bd50988bedbf5fc3cea111bc0091631e2babe78e4d6b11a3ec",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/mask_variation.png.import",
+        "sha256": "6f283c3e88babe3f3c7a2161caec5fbf2e3b433812a79378f1d6749b213697f1",
+        "current_sha256": "6f283c3e88babe3f3c7a2161caec5fbf2e3b433812a79378f1d6749b213697f1",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/retaining.tres",
+        "sha256": "9e109c5ff8c77516afc4a744a3ad7b57c1bf5f19f7f54e6f8ebeb105f6a5bccf",
+        "current_sha256": "9e109c5ff8c77516afc4a744a3ad7b57c1bf5f19f7f54e6f8ebeb105f6a5bccf",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/shore.tres",
+        "sha256": "a959ebb3faf4b920615d127c4deba5201930223e1f65139263c6fa639d69f58e",
+        "current_sha256": "a959ebb3faf4b920615d127c4deba5201930223e1f65139263c6fa639d69f58e",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/town.tres",
+        "sha256": "9c0a490347be4589178e162a9a71c1e400aa46fc2e8e08c9a14af6bc4786c2a8",
+        "current_sha256": "9c0a490347be4589178e162a9a71c1e400aa46fc2e8e08c9a14af6bc4786c2a8",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/trail.tres",
+        "sha256": "4924842d7712898003559989d42ac81dd6bff47f9b16a81639aafb379872cb20",
+        "current_sha256": "4924842d7712898003559989d42ac81dd6bff47f9b16a81639aafb379872cb20",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/v2_detail_normal.png",
+        "sha256": "152e664b3d1f42cd6db69c49db27065375c6ca8a9fc5271d8b0d69686ccd25d0",
+        "current_sha256": "152e664b3d1f42cd6db69c49db27065375c6ca8a9fc5271d8b0d69686ccd25d0",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/v2_detail_normal.png.import",
+        "sha256": "96e565530b23ae4e8b65f3aed7eb32293bc6cbbbbedbb76f05d5a3c846417f18",
+        "current_sha256": "96e565530b23ae4e8b65f3aed7eb32293bc6cbbbbedbb76f05d5a3c846417f18",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/v2_ground_detail.png",
+        "sha256": "df1120072f773514e34030a27d3e8a208eed5e9bfd6d827f4d74b61677a71052",
+        "current_sha256": "df1120072f773514e34030a27d3e8a208eed5e9bfd6d827f4d74b61677a71052",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/v2_ground_detail.png.import",
+        "sha256": "9c25837571a6bfb0d929e18f1aadbfc6e92aa2348cbf2d41f510f72877585688",
+        "current_sha256": "9c25837571a6bfb0d929e18f1aadbfc6e92aa2348cbf2d41f510f72877585688",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/v2_road_detail.png",
+        "sha256": "6a7d238e1ad78a639d373d1c05ae1063dd0f4ad7885a45528a66af7e75aacece",
+        "current_sha256": "6a7d238e1ad78a639d373d1c05ae1063dd0f4ad7885a45528a66af7e75aacece",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/v2_road_detail.png.import",
+        "sha256": "1176e90146bacf3bcb5775d45ace98a16e7cae37abb4ed39eaa046a2bb73bafe",
+        "current_sha256": "1176e90146bacf3bcb5775d45ace98a16e7cae37abb4ed39eaa046a2bb73bafe",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/water.tscn",
+        "sha256": "57965d332c7cd40d1670ed31d62b9832f1dfed5e8c2179e70e7b9263fe1dce74",
+        "current_sha256": "57965d332c7cd40d1670ed31d62b9832f1dfed5e8c2179e70e7b9263fe1dce74",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/TerrainPilot/dry_terrain.tscn",
+        "sha256": "7f5d1a6dfec00c2e7f5de9e26c61883774cb57bbc97e3bfed4ba811154d190e3",
+        "current_sha256": "7f5d1a6dfec00c2e7f5de9e26c61883774cb57bbc97e3bfed4ba811154d190e3",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/TerrainPilot/ground_blend.gdshader",
+        "sha256": "a0fcb76e307bed78b3831a5f0b26bd1bd30e80489b66adabedb7aab6fcaca9d3",
+        "current_sha256": "a0fcb76e307bed78b3831a5f0b26bd1bd30e80489b66adabedb7aab6fcaca9d3",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/TerrainPilot/ground_blend.gdshader.uid",
+        "sha256": "d15eefbd65a1aa199d548d668e69b982466a5a2c198b26fd6b214670ee6a5795",
+        "current_sha256": "d15eefbd65a1aa199d548d668e69b982466a5a2c198b26fd6b214670ee6a5795",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/TerrainPilot/ground_blend.tres",
+        "sha256": "500484012e3e464f0aa1c9055255b91b0c336db256114eed841ccbcf731611ac",
+        "current_sha256": "500484012e3e464f0aa1c9055255b91b0c336db256114eed841ccbcf731611ac",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Circulation/asphalt.obj",
+        "sha256": "c82bf8e5be1d104ae78c86339e2b12807d25247e037d7928ad13e032d1f75ad8",
+        "current_sha256": "c82bf8e5be1d104ae78c86339e2b12807d25247e037d7928ad13e032d1f75ad8",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Circulation/asphalt.obj.import",
+        "sha256": "24536130ad93f2cfa3cf26e2b027583d334e3b8836c22d299182f59c3fb43778",
+        "current_sha256": "24536130ad93f2cfa3cf26e2b027583d334e3b8836c22d299182f59c3fb43778",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Circulation/circulation.tscn",
+        "sha256": "09595161daace57c66a117f860a276f722c4b0902dd91fbd9cacadd2bb7f2bf7",
+        "current_sha256": "09595161daace57c66a117f860a276f722c4b0902dd91fbd9cacadd2bb7f2bf7",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Circulation/dock_l03.tscn",
+        "sha256": "015851d285a9dec63c3e570010432790d7e6df8ab147e3ad26947ef056568925",
+        "current_sha256": "015851d285a9dec63c3e570010432790d7e6df8ab147e3ad26947ef056568925",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Circulation/gravel.obj",
+        "sha256": "56ff7574b3ef1f3987b995197bfa93cf8f6d6603c1e1503ae25e6341836c17c4",
+        "current_sha256": "56ff7574b3ef1f3987b995197bfa93cf8f6d6603c1e1503ae25e6341836c17c4",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Circulation/gravel.obj.import",
+        "sha256": "9fba8b232fb151bae86c16889ad6cc1cb4d502ffd4bd4f94a6d643182ac772d6",
+        "current_sha256": "9fba8b232fb151bae86c16889ad6cc1cb4d502ffd4bd4f94a6d643182ac772d6",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Circulation/r01_bridge.tscn",
+        "sha256": "330eb30356cb9f6ae410238deabd574aeb935d806a207686271500adc2eb5eda",
+        "current_sha256": "330eb30356cb9f6ae410238deabd574aeb935d806a207686271500adc2eb5eda",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Circulation/r02_bridge.tscn",
+        "sha256": "810cf7ea81acd9f394663891dddd31a373747ba2785f7fd590f331876bf901e3",
+        "current_sha256": "810cf7ea81acd9f394663891dddd31a373747ba2785f7fd590f331876bf901e3",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Circulation/trail.obj",
+        "sha256": "ebfe352dcf5e8c040ec7e9dbecdbcf26a78979a02d6b0a261d71369a3e4d15e9",
+        "current_sha256": "ebfe352dcf5e8c040ec7e9dbecdbcf26a78979a02d6b0a261d71369a3e4d15e9",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Circulation/trail.obj.import",
+        "sha256": "4fdf04be34929994056566f304e52859f3753f840a4203b43cf34c28c79a0c1a",
+        "current_sha256": "4fdf04be34929994056566f304e52859f3753f840a4203b43cf34c28c79a0c1a",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Dressing/c07_02_grounded.obj",
+        "sha256": "2ff4125b948a604d9a13e34d8b23191d240ce4a7299fe8aad3630c69021e2a50",
+        "current_sha256": "2ff4125b948a604d9a13e34d8b23191d240ce4a7299fe8aad3630c69021e2a50",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Dressing/c07_02_grounded.obj.import",
+        "sha256": "0463a778a9c10e25c4d8db6f705eb1ba9c8daf54a146c6e7b83063cac2ce4c19",
+        "current_sha256": "0463a778a9c10e25c4d8db6f705eb1ba9c8daf54a146c6e7b83063cac2ce4c19",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Dressing/c07_04_grounded.obj",
+        "sha256": "22f8f03f83b03fb214b0e8183a37d0e75c2150412e6dc1cfce92578171adeb16",
+        "current_sha256": "22f8f03f83b03fb214b0e8183a37d0e75c2150412e6dc1cfce92578171adeb16",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Dressing/c07_04_grounded.obj.import",
+        "sha256": "c3916349d230611d12dae694ee9ea83e55c986c460ba8d354d5a989cc440dba9",
+        "current_sha256": "c3916349d230611d12dae694ee9ea83e55c986c460ba8d354d5a989cc440dba9",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Dressing/c07_07_grounded.obj",
+        "sha256": "3102f497b8b576b6553b0a9d2f2d66329cacabcf14613d799cc00d3fabef2577",
+        "current_sha256": "3102f497b8b576b6553b0a9d2f2d66329cacabcf14613d799cc00d3fabef2577",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Dressing/c07_07_grounded.obj.import",
+        "sha256": "041e4d5a3d21a994a86530645c584c76121751d6a9a75f645c870716c5f04530",
+        "current_sha256": "041e4d5a3d21a994a86530645c584c76121751d6a9a75f645c870716c5f04530",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Dressing/c07_08_grounded.obj",
+        "sha256": "f239fbce9d3a0be56fcc5423ff42480a89a9c3dad8ed0f91770b700279cef8c1",
+        "current_sha256": "f239fbce9d3a0be56fcc5423ff42480a89a9c3dad8ed0f91770b700279cef8c1",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Dressing/c07_08_grounded.obj.import",
+        "sha256": "80f022a54fcf65f13b4a262c66452ccc72d04f8475e8e291ebc3b436dd8af0d4",
+        "current_sha256": "80f022a54fcf65f13b4a262c66452ccc72d04f8475e8e291ebc3b436dd8af0d4",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Dressing/c07_09_grounded.obj",
+        "sha256": "edfcba64762ca94ca9439cfef195554183fb1eb3327eb34630f78fd148d1d016",
+        "current_sha256": "edfcba64762ca94ca9439cfef195554183fb1eb3327eb34630f78fd148d1d016",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Dressing/c07_09_grounded.obj.import",
+        "sha256": "77c2c35bffcdcfeedf47e73214296dc38e62d92d6faa846ba80a3ee6a731f7d0",
+        "current_sha256": "77c2c35bffcdcfeedf47e73214296dc38e62d92d6faa846ba80a3ee6a731f7d0",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Dressing/dressing.tscn",
+        "sha256": "28f0c74e09a9da799b9c706a5bcd3831044aba65eb342781287740e8709fb7a1",
+        "current_sha256": "28f0c74e09a9da799b9c706a5bcd3831044aba65eb342781287740e8709fb7a1",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Graybox/bunker_entry.tscn",
+        "sha256": "5e4606b4d2329e33ed48d4fd1a830923603231b337502bc113a070a8fcbb82e2",
+        "current_sha256": "5e4606b4d2329e33ed48d4fd1a830923603231b337502bc113a070a8fcbb82e2",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Graybox/cache_crate.tscn",
+        "sha256": "b319a1b89115bba10c5518015b4be2bbc8d179bc6a35f8734fc903ff73621aee",
+        "current_sha256": "b319a1b89115bba10c5518015b4be2bbc8d179bc6a35f8734fc903ff73621aee",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Graybox/container.tscn",
+        "sha256": "586a8b0783f089e0e6e9ef977bd31bdde3ae397fedc9b587c64468a6bb855693",
+        "current_sha256": "586a8b0783f089e0e6e9ef977bd31bdde3ae397fedc9b587c64468a6bb855693",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Graybox/fuel_tank.tscn",
+        "sha256": "173fbd8f501d305c8a4ac15457378412ee8c91a4ef263e27e5f7e535706001a7",
+        "current_sha256": "173fbd8f501d305c8a4ac15457378412ee8c91a4ef263e27e5f7e535706001a7",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Graybox/hunting_stand.tscn",
+        "sha256": "cefe23592f488254e6db2247cad4a1ddfa159111a8771b86c83bc4eb7e1f274b",
+        "current_sha256": "cefe23592f488254e6db2247cad4a1ddfa159111a8771b86c83bc4eb7e1f274b",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Graybox/observation_platform.tscn",
+        "sha256": "e944b198d80af7e3f24ca0a85d3d1749c1bca5378fd765ddf0eabe361c5d0bd5",
+        "current_sha256": "e944b198d80af7e3f24ca0a85d3d1749c1bca5378fd765ddf0eabe361c5d0bd5",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Graybox/radio_mast.tscn",
+        "sha256": "b747ebb1e91ce3f47d254f26d8ca43589ddde5324431fffb6247d1d5cb28bf88",
+        "current_sha256": "b747ebb1e91ce3f47d254f26d8ca43589ddde5324431fffb6247d1d5cb28bf88",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Graybox/railcar.tscn",
+        "sha256": "51ad455a3eb0337b4c351c9b38b34c42b77b5a0b4f2fe2d5bb99d8511bc60c11",
+        "current_sha256": "51ad455a3eb0337b4c351c9b38b34c42b77b5a0b4f2fe2d5bb99d8511bc60c11",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Graybox/sealed_pillbox.tscn",
+        "sha256": "603ce76ab255202b2bccde0f3b6505c12d02d6900447fff17d20b3ea75ece884",
+        "current_sha256": "603ce76ab255202b2bccde0f3b6505c12d02d6900447fff17d20b3ea75ece884",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Graybox/stone_ruin.tscn",
+        "sha256": "761591cd920cf2c2f5d2aade5576e36fe0817d08a19e3ec09713ab0263dd6490",
+        "current_sha256": "761591cd920cf2c2f5d2aade5576e36fe0817d08a19e3ec09713ab0263dd6490",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Graybox/watch_tower.tscn",
+        "sha256": "370562e2143e9bdb122f69016f7c4c105e2efc51eb6ae5d72e943dcf351f8d73",
+        "current_sha256": "370562e2143e9bdb122f69016f7c4c105e2efc51eb6ae5d72e943dcf351f8d73",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Graybox/water_cistern.tscn",
+        "sha256": "453c8d7f8bfe94e482d4df1ec1ea77903d5df1244aaac685e262d2e9e55d737c",
+        "current_sha256": "453c8d7f8bfe94e482d4df1ec1ea77903d5df1244aaac685e262d2e9e55d737c",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Graybox/wind_pump.tscn",
+        "sha256": "626467de6998519d84d8fb41cfeab4ae4224e55050507171e90ed373e4f7abe2",
+        "current_sha256": "626467de6998519d84d8fb41cfeab4ae4224e55050507171e90ed373e4f7abe2",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/POI/bunker.tscn",
+        "sha256": "dc7b705c3c04b2bfc4f7d3e2a38b3cfada3b4774e069724890288bf2cebc68fd",
+        "current_sha256": "dc7b705c3c04b2bfc4f7d3e2a38b3cfada3b4774e069724890288bf2cebc68fd",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/POI/farmland.tscn",
+        "sha256": "4dea27339e4d40cd653688aa9cf607b98db9970ca85adf63f3e635d7154310cb",
+        "current_sha256": "4dea27339e4d40cd653688aa9cf607b98db9970ca85adf63f3e635d7154310cb",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/POI/forest.tscn",
+        "sha256": "6ebca4d00b21de3dcadbaca34dbc77aec3d74bea6b74242fcf569ab8f39f9e82",
+        "current_sha256": "6ebca4d00b21de3dcadbaca34dbc77aec3d74bea6b74242fcf569ab8f39f9e82",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/POI/hills.tscn",
+        "sha256": "9739add53073b83d7cc893edd3edd294ff8f60e05beea5591b44dc937474c524",
+        "current_sha256": "9739add53073b83d7cc893edd3edd294ff8f60e05beea5591b44dc937474c524",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/POI/industry.tscn",
+        "sha256": "1f40d359a7e47dd3dbdf6252c39d14d59e96d0335fada7ee6b958ead7dbe2ba4",
+        "current_sha256": "1f40d359a7e47dd3dbdf6252c39d14d59e96d0335fada7ee6b958ead7dbe2ba4",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/POI/lake.tscn",
+        "sha256": "97c63984a71c218ff8169361512541f80367ac80180495565698519d22a38c9c",
+        "current_sha256": "97c63984a71c218ff8169361512541f80367ac80180495565698519d22a38c9c",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/POI/town_core.tscn",
+        "sha256": "c258fb69e324b2c6ffe35ea58aee4fc9a3fd16c0ea963f113a0a6f8711720161",
+        "current_sha256": "c258fb69e324b2c6ffe35ea58aee4fc9a3fd16c0ea963f113a0a6f8711720161",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/bank_faces.obj",
+        "sha256": "f3b919aed8a91bdab85596233a7186e61bee5fdc18c5daaf6f23b7d7f088a203",
+        "current_sha256": "f3b919aed8a91bdab85596233a7186e61bee5fdc18c5daaf6f23b7d7f088a203",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/bank_faces.obj.import",
+        "sha256": "51a1579ec4aad9519f95fb1bbdad18eaaa618eff7020fe9f512b3a1278cad50a",
+        "current_sha256": "51a1579ec4aad9519f95fb1bbdad18eaaa618eff7020fe9f512b3a1278cad50a",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_0_bunker.obj",
+        "sha256": "1a110d3a573f349c0dbf06277da31f98465bbd89301cac337afc412d635e4464",
+        "current_sha256": "1a110d3a573f349c0dbf06277da31f98465bbd89301cac337afc412d635e4464",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_0_bunker.obj.import",
+        "sha256": "08e2f90d1bc412a8bcb06ba162dae25168a9eae054a057b227c9744b68d0fcc5",
+        "current_sha256": "08e2f90d1bc412a8bcb06ba162dae25168a9eae054a057b227c9744b68d0fcc5",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_0_hills.obj",
+        "sha256": "73760ea3ad715fdb2c9a7f7feee94a04ad1363ada1cec53a6fe1a0291b15f207",
+        "current_sha256": "73760ea3ad715fdb2c9a7f7feee94a04ad1363ada1cec53a6fe1a0291b15f207",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_0_hills.obj.import",
+        "sha256": "c633b9f9b7772b03ac193bc28ff85bd494bf26bd78eaf05403b7ba684bb6fdf1",
+        "current_sha256": "c633b9f9b7772b03ac193bc28ff85bd494bf26bd78eaf05403b7ba684bb6fdf1",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_1_bunker.obj",
+        "sha256": "86913b522431a3fb2e4ea213704dcb1d16c681f8d433ed43478c67021499ad3c",
+        "current_sha256": "86913b522431a3fb2e4ea213704dcb1d16c681f8d433ed43478c67021499ad3c",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_1_bunker.obj.import",
+        "sha256": "5ed9637603a542e06ac150a082b57fc15c4b9ec5ce86456340acb0c07c259439",
+        "current_sha256": "5ed9637603a542e06ac150a082b57fc15c4b9ec5ce86456340acb0c07c259439",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_1_farmland.obj",
+        "sha256": "84e540d1deefe8d15f864b1a133bf2f6d49b160251d528df1e2b20e0f05bcd34",
+        "current_sha256": "84e540d1deefe8d15f864b1a133bf2f6d49b160251d528df1e2b20e0f05bcd34",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_1_farmland.obj.import",
+        "sha256": "11676afc1927d6e57d1042a83fe9d61d7cacfde00b979d2717a184dde1722a1b",
+        "current_sha256": "11676afc1927d6e57d1042a83fe9d61d7cacfde00b979d2717a184dde1722a1b",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_1_hills.obj",
+        "sha256": "643d2ea012884b3f743519e86a4b0e95b663a028b8d314ea7c738f2ac75d4cab",
+        "current_sha256": "643d2ea012884b3f743519e86a4b0e95b663a028b8d314ea7c738f2ac75d4cab",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_1_hills.obj.import",
+        "sha256": "d74f0b774ef5787fdea73e1829af7a03cde8331b2d01a6fd5183fb1c42a85e02",
+        "current_sha256": "d74f0b774ef5787fdea73e1829af7a03cde8331b2d01a6fd5183fb1c42a85e02",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_1_shore.obj",
+        "sha256": "4c9136d06cb0d0d9a78c1304582248d16976e1e8a7693b8d3a08457dd4971bc4",
+        "current_sha256": "4c9136d06cb0d0d9a78c1304582248d16976e1e8a7693b8d3a08457dd4971bc4",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_1_shore.obj.import",
+        "sha256": "d4cc65d72673d45fd9518f947d913ea8eb1d3a7a91785b842b1a4c992869f2f8",
+        "current_sha256": "d4cc65d72673d45fd9518f947d913ea8eb1d3a7a91785b842b1a4c992869f2f8",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_2_farmland.obj",
+        "sha256": "fe3819d67457579fec8fb696ed8af3d0c8baddfb9fab66c52f75aad823b50ae3",
+        "current_sha256": "fe3819d67457579fec8fb696ed8af3d0c8baddfb9fab66c52f75aad823b50ae3",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_2_farmland.obj.import",
+        "sha256": "6b6e90f4b9237f257de221ccd029a86acf66715b3aba9bc957dd3aaaa5dfc661",
+        "current_sha256": "6b6e90f4b9237f257de221ccd029a86acf66715b3aba9bc957dd3aaaa5dfc661",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_2_shore.obj",
+        "sha256": "02f5a0581ab812ed5f30956800ea715ea72a96aea483856035bd6b0e688884da",
+        "current_sha256": "02f5a0581ab812ed5f30956800ea715ea72a96aea483856035bd6b0e688884da",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_2_shore.obj.import",
+        "sha256": "6d4afc28ee468b17508dea43a9d31ea234086080a787717058bd7608dbe0e291",
+        "current_sha256": "6d4afc28ee468b17508dea43a9d31ea234086080a787717058bd7608dbe0e291",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_2_town.obj",
+        "sha256": "cffa0c292250de4aa9e6488b678e90ca020b2b39f9d475f4aa2a9af4bb1276e7",
+        "current_sha256": "cffa0c292250de4aa9e6488b678e90ca020b2b39f9d475f4aa2a9af4bb1276e7",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_2_town.obj.import",
+        "sha256": "a7c094a18b1783ed60430f305f4ce68961441c12173bc2a883ebd4ff88df50af",
+        "current_sha256": "a7c094a18b1783ed60430f305f4ce68961441c12173bc2a883ebd4ff88df50af",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_3_farmland.obj",
+        "sha256": "da98532bfed1d76f43704b494a65a8f7b0698c714fef00895393447899b17e60",
+        "current_sha256": "da98532bfed1d76f43704b494a65a8f7b0698c714fef00895393447899b17e60",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_3_farmland.obj.import",
+        "sha256": "7c0971913027d86ed00cb28c6a54f982a0de7e590e90e3bc620fa89ece3999fb",
+        "current_sha256": "7c0971913027d86ed00cb28c6a54f982a0de7e590e90e3bc620fa89ece3999fb",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_3_shore.obj",
+        "sha256": "86ef5f3af4f9a5740ab92df9af2c86d8647ca4a2293f686281d3775911709af1",
+        "current_sha256": "86ef5f3af4f9a5740ab92df9af2c86d8647ca4a2293f686281d3775911709af1",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_3_shore.obj.import",
+        "sha256": "06f78f1bfb9f1f77fe77c9a884cad6f4c1b78cc565b813278fb66ccf54fa86a1",
+        "current_sha256": "06f78f1bfb9f1f77fe77c9a884cad6f4c1b78cc565b813278fb66ccf54fa86a1",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_3_town.obj",
+        "sha256": "9859b9502f5e82f7de8922bfd760a33fe8b8ae1009f5c0ed1a554e8f8a45f5b8",
+        "current_sha256": "9859b9502f5e82f7de8922bfd760a33fe8b8ae1009f5c0ed1a554e8f8a45f5b8",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_3_town.obj.import",
+        "sha256": "e4a88f5bc17c64945bf3ee88d788f0decf8249c967de493f7376d63a6ac5b2c3",
+        "current_sha256": "e4a88f5bc17c64945bf3ee88d788f0decf8249c967de493f7376d63a6ac5b2c3",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_4_farmland.obj",
+        "sha256": "3b421bf2db383f93587fdd5926a7ef481e14c898c5e45d49ee2aa586f4149dbf",
+        "current_sha256": "3b421bf2db383f93587fdd5926a7ef481e14c898c5e45d49ee2aa586f4149dbf",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_4_farmland.obj.import",
+        "sha256": "dd64b965c9e68b8e1305e51a2aa5a6322152c4ba0943b5aef45c29b82ebbd5a7",
+        "current_sha256": "dd64b965c9e68b8e1305e51a2aa5a6322152c4ba0943b5aef45c29b82ebbd5a7",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_4_shore.obj",
+        "sha256": "f0124f6b6f740d9d165a8e2b5e48dc6f2874268f86bedca0f39b0a54c6a925a3",
+        "current_sha256": "f0124f6b6f740d9d165a8e2b5e48dc6f2874268f86bedca0f39b0a54c6a925a3",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_4_shore.obj.import",
+        "sha256": "f444d87f5c24a1db3751a90405d4e636aaa3093466415fbc2e469c3c56cb3eeb",
+        "current_sha256": "f444d87f5c24a1db3751a90405d4e636aaa3093466415fbc2e469c3c56cb3eeb",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_4_town.obj",
+        "sha256": "082e60a0a8f90ae6a4f62f9ae6a95a6e06127617f8d2b51ae2a32bf9cc5f0369",
+        "current_sha256": "082e60a0a8f90ae6a4f62f9ae6a95a6e06127617f8d2b51ae2a32bf9cc5f0369",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_0_4_town.obj.import",
+        "sha256": "71f759026d731f8b2c1863848ca6fc02ba834d62e72266c8292206734f3e439b",
+        "current_sha256": "71f759026d731f8b2c1863848ca6fc02ba834d62e72266c8292206734f3e439b",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_0_bunker.obj",
+        "sha256": "b3f95eef8ee869701f6fc11cda8f5830a4d8ceb24dfe2d573c2c7a3ef399071c",
+        "current_sha256": "b3f95eef8ee869701f6fc11cda8f5830a4d8ceb24dfe2d573c2c7a3ef399071c",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_0_bunker.obj.import",
+        "sha256": "3a0f68dc0e4592b577b931bd097124f7b3cafdcb04bf9c60324aa8b0be25e557",
+        "current_sha256": "3a0f68dc0e4592b577b931bd097124f7b3cafdcb04bf9c60324aa8b0be25e557",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_0_hills.obj",
+        "sha256": "f365bb071c3e10cc5b979d02dd86a0899688a464f5ed905ceb020a415f71159d",
+        "current_sha256": "f365bb071c3e10cc5b979d02dd86a0899688a464f5ed905ceb020a415f71159d",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_0_hills.obj.import",
+        "sha256": "faeb8f350a9c2d5009f8042936df304d73998f291bc6d9434054fcc527600dc1",
+        "current_sha256": "faeb8f350a9c2d5009f8042936df304d73998f291bc6d9434054fcc527600dc1",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_1_bunker.obj",
+        "sha256": "b77fe43d885d02851cc34d52eb57030f0823e011f95f8315a6f908b04d8ec3fc",
+        "current_sha256": "b77fe43d885d02851cc34d52eb57030f0823e011f95f8315a6f908b04d8ec3fc",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_1_bunker.obj.import",
+        "sha256": "c1604f36417794c77f33a927ef81f7eb875878a230270de905ae1b95a4773e6f",
+        "current_sha256": "c1604f36417794c77f33a927ef81f7eb875878a230270de905ae1b95a4773e6f",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_1_hills.obj",
+        "sha256": "29a7cdb340acd96ff7003e7c4605bcfb3c78e0a53fc0dc52965dbc6ebf536fc0",
+        "current_sha256": "29a7cdb340acd96ff7003e7c4605bcfb3c78e0a53fc0dc52965dbc6ebf536fc0",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_1_hills.obj.import",
+        "sha256": "d456049c8881037b66f5bf075f5918d01459ff02d3583a63fc5272b18e973fd2",
+        "current_sha256": "d456049c8881037b66f5bf075f5918d01459ff02d3583a63fc5272b18e973fd2",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_1_shore.obj",
+        "sha256": "c62e2bd012a94f91f700a7d8cb6720d5262aabd89640f5c3bb87139359eb82e3",
+        "current_sha256": "c62e2bd012a94f91f700a7d8cb6720d5262aabd89640f5c3bb87139359eb82e3",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_1_shore.obj.import",
+        "sha256": "98c527f7c08a2571f16ef63eb2524d42056a978480f5ff66b594f034c6d4bdf7",
+        "current_sha256": "98c527f7c08a2571f16ef63eb2524d42056a978480f5ff66b594f034c6d4bdf7",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_2_shore.obj",
+        "sha256": "6711f676f6da5a08bf9a385427724d494eb7518346d2df93ff1971e2be8e0dfe",
+        "current_sha256": "6711f676f6da5a08bf9a385427724d494eb7518346d2df93ff1971e2be8e0dfe",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_2_shore.obj.import",
+        "sha256": "e31053ca4ab5669e66a842851a05cd65db5026f8f576a5e0bda5e7cbda86c1a2",
+        "current_sha256": "e31053ca4ab5669e66a842851a05cd65db5026f8f576a5e0bda5e7cbda86c1a2",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_2_town.obj",
+        "sha256": "a035f63cd246095495cde4bd62c0796a72bde976e5d131c74455ac03bed48abc",
+        "current_sha256": "a035f63cd246095495cde4bd62c0796a72bde976e5d131c74455ac03bed48abc",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_2_town.obj.import",
+        "sha256": "65eb6ebef7ba88107bbb4890e73569da06d9c8d0355649db6e15f46d8ae61643",
+        "current_sha256": "65eb6ebef7ba88107bbb4890e73569da06d9c8d0355649db6e15f46d8ae61643",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_3_town.obj",
+        "sha256": "b9a206c59766721238c40e3ca069ae0f7e020610e2b62fa81dc91e51fc6da737",
+        "current_sha256": "b9a206c59766721238c40e3ca069ae0f7e020610e2b62fa81dc91e51fc6da737",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_3_town.obj.import",
+        "sha256": "58ca73176dfc728f85494ca0c90e3ef3e128f50b71e62a68d89085dc036e8880",
+        "current_sha256": "58ca73176dfc728f85494ca0c90e3ef3e128f50b71e62a68d89085dc036e8880",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_4_farmland.obj",
+        "sha256": "3a71e3d3a66537de922c2b004e1e1815444d8f52f68050f14a30df17b8e47bdf",
+        "current_sha256": "3a71e3d3a66537de922c2b004e1e1815444d8f52f68050f14a30df17b8e47bdf",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_4_farmland.obj.import",
+        "sha256": "3db2da1f4a08a76c8adfd9df83f3383e357b7719311757657d8215adf405472c",
+        "current_sha256": "3db2da1f4a08a76c8adfd9df83f3383e357b7719311757657d8215adf405472c",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_4_shore.obj",
+        "sha256": "3a0b2b8fd776b1d1dfa94be5dd7b0b77b7f0fbc6b354b50c18d22f67ee58fc6a",
+        "current_sha256": "3a0b2b8fd776b1d1dfa94be5dd7b0b77b7f0fbc6b354b50c18d22f67ee58fc6a",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_4_shore.obj.import",
+        "sha256": "31a9c0629de426a162d3ab3dd7e0892bd8027753217bb39ae0024fca2dac1242",
+        "current_sha256": "31a9c0629de426a162d3ab3dd7e0892bd8027753217bb39ae0024fca2dac1242",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_4_town.obj",
+        "sha256": "2998c1b527886ebd4ac4662255070b4db868a34f400822e7dcac7cec8e6adea6",
+        "current_sha256": "2998c1b527886ebd4ac4662255070b4db868a34f400822e7dcac7cec8e6adea6",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_1_4_town.obj.import",
+        "sha256": "8fc4d78e9d9563196908d05f415fce4682f20221abfd29255911593e928cf768",
+        "current_sha256": "8fc4d78e9d9563196908d05f415fce4682f20221abfd29255911593e928cf768",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_0_forest.obj",
+        "sha256": "7a04237d2c4c5e4b3da48b53ac7e34c1a3390ec8b86c69587146a7d574af855e",
+        "current_sha256": "7a04237d2c4c5e4b3da48b53ac7e34c1a3390ec8b86c69587146a7d574af855e",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_0_forest.obj.import",
+        "sha256": "c596dffdf3bc7bba54f832354240a0539c419dbdd9f19a8be3f13af9ca0c57af",
+        "current_sha256": "c596dffdf3bc7bba54f832354240a0539c419dbdd9f19a8be3f13af9ca0c57af",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_0_hills.obj",
+        "sha256": "c109d60aebd0d6f95d9d6308b6e47093fb7b7960477e718c160e4aaaea64f941",
+        "current_sha256": "c109d60aebd0d6f95d9d6308b6e47093fb7b7960477e718c160e4aaaea64f941",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_0_hills.obj.import",
+        "sha256": "b53d230da5172e49c34dffe2216e04c207066a85b861758770da89b56c9d5b81",
+        "current_sha256": "b53d230da5172e49c34dffe2216e04c207066a85b861758770da89b56c9d5b81",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_0_shore.obj",
+        "sha256": "b3ce077766e333e08a24c087e99c3a89b011b598e0c9b1d0eb9e39b30ce9ce1c",
+        "current_sha256": "b3ce077766e333e08a24c087e99c3a89b011b598e0c9b1d0eb9e39b30ce9ce1c",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_0_shore.obj.import",
+        "sha256": "3c74bb83ea335a28ca5edcea84462a20490549faf3119a940c5497754f6005f2",
+        "current_sha256": "3c74bb83ea335a28ca5edcea84462a20490549faf3119a940c5497754f6005f2",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_1_forest.obj",
+        "sha256": "2c7dd314cafdf65ff4a800df957dde88692083c99566693d8ed988006302257f",
+        "current_sha256": "2c7dd314cafdf65ff4a800df957dde88692083c99566693d8ed988006302257f",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_1_forest.obj.import",
+        "sha256": "73ad588d28f7ca133378aff50cb89c30c4bd897a16c0992659c58416ac9f4bf8",
+        "current_sha256": "73ad588d28f7ca133378aff50cb89c30c4bd897a16c0992659c58416ac9f4bf8",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_1_hills.obj",
+        "sha256": "2a917d58d872146c2701f3a1caed578a41734928868d476f3cd31770985e1fce",
+        "current_sha256": "2a917d58d872146c2701f3a1caed578a41734928868d476f3cd31770985e1fce",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_1_hills.obj.import",
+        "sha256": "dd6cc816e111bd75caedf53c6aa2a6f2306a1f669b821a8570a2c791c537f012",
+        "current_sha256": "dd6cc816e111bd75caedf53c6aa2a6f2306a1f669b821a8570a2c791c537f012",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_1_shore.obj",
+        "sha256": "218892a118e23cfe31e2ee91925c77c1be3268e10f1a1f037a02b4aca4efe8d8",
+        "current_sha256": "218892a118e23cfe31e2ee91925c77c1be3268e10f1a1f037a02b4aca4efe8d8",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_1_shore.obj.import",
+        "sha256": "d2cd8a636693ee2f104b806a54d188338ac79f81caa0bd841c9f0717831e33dc",
+        "current_sha256": "d2cd8a636693ee2f104b806a54d188338ac79f81caa0bd841c9f0717831e33dc",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_2_shore.obj",
+        "sha256": "33809820fcb4c65214d459d3b89d3182682e8d2287bd99c2a0f775278451032a",
+        "current_sha256": "33809820fcb4c65214d459d3b89d3182682e8d2287bd99c2a0f775278451032a",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_2_shore.obj.import",
+        "sha256": "0def9387b5b7e94016c297817c14bbcdeb3662afdd81975950296d1f8e2eb7ef",
+        "current_sha256": "0def9387b5b7e94016c297817c14bbcdeb3662afdd81975950296d1f8e2eb7ef",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_2_town.obj",
+        "sha256": "ca7dc9d3f1e5ec9c29218d570dfadb49f2e36b010865f4dbd5fcb1b732c45402",
+        "current_sha256": "ca7dc9d3f1e5ec9c29218d570dfadb49f2e36b010865f4dbd5fcb1b732c45402",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_2_town.obj.import",
+        "sha256": "75f937742722bb8bd1d16a5d939dc41b5dd58d6b0022da2ae66b70b9c1210d23",
+        "current_sha256": "75f937742722bb8bd1d16a5d939dc41b5dd58d6b0022da2ae66b70b9c1210d23",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_3_shore.obj",
+        "sha256": "f3ea504c55dd363d6ade6456c6c9bdec163ad7f55116fb3a5d773f32e7b83841",
+        "current_sha256": "f3ea504c55dd363d6ade6456c6c9bdec163ad7f55116fb3a5d773f32e7b83841",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_3_shore.obj.import",
+        "sha256": "13078af4f5ba100a74a9226b4fd5c0487b4f8a7bdfc91f6d1115026d846d7316",
+        "current_sha256": "13078af4f5ba100a74a9226b4fd5c0487b4f8a7bdfc91f6d1115026d846d7316",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_3_town.obj",
+        "sha256": "84eb8dc1de3fceece130120533fef2f47a20c86feab3abd2ef638c827dd9d15a",
+        "current_sha256": "84eb8dc1de3fceece130120533fef2f47a20c86feab3abd2ef638c827dd9d15a",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_3_town.obj.import",
+        "sha256": "7b26f81c8d4f7b00de483e3c866d7f595760a286ded9db43392b201683ef34ef",
+        "current_sha256": "7b26f81c8d4f7b00de483e3c866d7f595760a286ded9db43392b201683ef34ef",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_4_farmland.obj",
+        "sha256": "1bab3574ece21eaa173a1d14584240876bba3ceddbc5e506f1931b68d743773e",
+        "current_sha256": "1bab3574ece21eaa173a1d14584240876bba3ceddbc5e506f1931b68d743773e",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_4_farmland.obj.import",
+        "sha256": "c599d65b042d744bcd7f320ac9db44efd2069360aedb144ac0bf185c0b95f7d6",
+        "current_sha256": "c599d65b042d744bcd7f320ac9db44efd2069360aedb144ac0bf185c0b95f7d6",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_4_shore.obj",
+        "sha256": "a0b62e0590346ef7234b8cac8633703545d93e499a4e2aad68f99ac810ee2278",
+        "current_sha256": "a0b62e0590346ef7234b8cac8633703545d93e499a4e2aad68f99ac810ee2278",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_4_shore.obj.import",
+        "sha256": "a1b1e34a49574ce0da06d186f8cc3b24e4b3c74edc6fbd942cd00227cf8eb721",
+        "current_sha256": "a1b1e34a49574ce0da06d186f8cc3b24e4b3c74edc6fbd942cd00227cf8eb721",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_4_town.obj",
+        "sha256": "24e0987752de5603eaba40b617a15581d36337e2f96e4923a7bb89ff1df83947",
+        "current_sha256": "24e0987752de5603eaba40b617a15581d36337e2f96e4923a7bb89ff1df83947",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_2_4_town.obj.import",
+        "sha256": "608a1d9971a8a6d5271bffeb35cc255500b31fa7e7af26bea7d21c5933a0b706",
+        "current_sha256": "608a1d9971a8a6d5271bffeb35cc255500b31fa7e7af26bea7d21c5933a0b706",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_0_forest.obj",
+        "sha256": "dfec1fe2856f7557c14c403605b0cd463c22b0e96b44d39122ac03fcec42f3b2",
+        "current_sha256": "dfec1fe2856f7557c14c403605b0cd463c22b0e96b44d39122ac03fcec42f3b2",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_0_forest.obj.import",
+        "sha256": "e079c2b86f776fcb052123ce954c208a654c3d174d27edf2dc2b3a393baf65b0",
+        "current_sha256": "e079c2b86f776fcb052123ce954c208a654c3d174d27edf2dc2b3a393baf65b0",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_1_forest.obj",
+        "sha256": "cea1756332cb497989fe4d582f535fd050a3c5c444f09635664ce6338d678205",
+        "current_sha256": "cea1756332cb497989fe4d582f535fd050a3c5c444f09635664ce6338d678205",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_1_forest.obj.import",
+        "sha256": "cd728a739a9161f76d216caceb23b5b96fb23724a2b6f02c417e87379add93db",
+        "current_sha256": "cd728a739a9161f76d216caceb23b5b96fb23724a2b6f02c417e87379add93db",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_1_industry.obj",
+        "sha256": "5fe0c0f107f65c668931eaa06338dd0ad3f49e816e0788f7d1867fa6148b4140",
+        "current_sha256": "5fe0c0f107f65c668931eaa06338dd0ad3f49e816e0788f7d1867fa6148b4140",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_1_industry.obj.import",
+        "sha256": "f630c55449517bdc4407f201f9cb1b3a634e1ee784923043969f676714a28d7d",
+        "current_sha256": "f630c55449517bdc4407f201f9cb1b3a634e1ee784923043969f676714a28d7d",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_1_shore.obj",
+        "sha256": "03ae54e474bbd79dc15e776a98aabbdd7f51d3ad71a770e0d38db76c21c1ac6d",
+        "current_sha256": "03ae54e474bbd79dc15e776a98aabbdd7f51d3ad71a770e0d38db76c21c1ac6d",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_1_shore.obj.import",
+        "sha256": "7895bed6d665b4d04007abf7a92fa68f8c8be5906c4ef20265d26731913b24dc",
+        "current_sha256": "7895bed6d665b4d04007abf7a92fa68f8c8be5906c4ef20265d26731913b24dc",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_2_forest.obj",
+        "sha256": "bac957fe2a2222c1abdd292128b7538e79aa547fa2c36c722ce946af489b00f9",
+        "current_sha256": "bac957fe2a2222c1abdd292128b7538e79aa547fa2c36c722ce946af489b00f9",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_2_forest.obj.import",
+        "sha256": "6b3fc45fbb7732b129755612d12505ac0ed6a113963e555fb90e84a6bdfdbc79",
+        "current_sha256": "6b3fc45fbb7732b129755612d12505ac0ed6a113963e555fb90e84a6bdfdbc79",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_2_industry.obj",
+        "sha256": "639725a1919cd19788e24cb9cd8e98fb5e60932c57f247e35cf06f1722146adf",
+        "current_sha256": "639725a1919cd19788e24cb9cd8e98fb5e60932c57f247e35cf06f1722146adf",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_2_industry.obj.import",
+        "sha256": "92d22ebc24f3ef06ee0887d35bcf738b41f9057607c8ec37d20680bd94bdd75d",
+        "current_sha256": "92d22ebc24f3ef06ee0887d35bcf738b41f9057607c8ec37d20680bd94bdd75d",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_2_shore.obj",
+        "sha256": "f53ee6c322202b584f8afbf37d9fe0d2d50323e81109ffd198fbf982e4fc4214",
+        "current_sha256": "f53ee6c322202b584f8afbf37d9fe0d2d50323e81109ffd198fbf982e4fc4214",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_2_shore.obj.import",
+        "sha256": "ecd6a67ca7452f6216c5e45128b7acf05b376a6559d9a5883deee1a3bb12f6ef",
+        "current_sha256": "ecd6a67ca7452f6216c5e45128b7acf05b376a6559d9a5883deee1a3bb12f6ef",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_3_forest.obj",
+        "sha256": "576ffb6c0aed4e5afa9da46fee2ac31d880a0999bb001cd60cbfcbc322cd0505",
+        "current_sha256": "576ffb6c0aed4e5afa9da46fee2ac31d880a0999bb001cd60cbfcbc322cd0505",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_3_forest.obj.import",
+        "sha256": "c3d3aa762e66ce1e21e9e017a1e5cb8dc5fcf89e68e81f664a953054892985a2",
+        "current_sha256": "c3d3aa762e66ce1e21e9e017a1e5cb8dc5fcf89e68e81f664a953054892985a2",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_3_industry.obj",
+        "sha256": "3ad75c8bdd248b4bfe39841bcbfc0ea65acaef65a8439a1db05ed99c4cfb0e03",
+        "current_sha256": "3ad75c8bdd248b4bfe39841bcbfc0ea65acaef65a8439a1db05ed99c4cfb0e03",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_3_industry.obj.import",
+        "sha256": "16153da3a5d3d23fa50a422603e984ad57f6835c7c1ba2abc65549f6b1191cd0",
+        "current_sha256": "16153da3a5d3d23fa50a422603e984ad57f6835c7c1ba2abc65549f6b1191cd0",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_3_shore.obj",
+        "sha256": "4ae50564400f9411f14082fb18786b2d44520699751ee892a86f3e3629c7390c",
+        "current_sha256": "4ae50564400f9411f14082fb18786b2d44520699751ee892a86f3e3629c7390c",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_3_shore.obj.import",
+        "sha256": "f3e17f443e64db23d0ee5d895edc40f3a6ba91e6ea3e4ea9f7e9b5ab3bf9673f",
+        "current_sha256": "f3e17f443e64db23d0ee5d895edc40f3a6ba91e6ea3e4ea9f7e9b5ab3bf9673f",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_4_farmland.obj",
+        "sha256": "e670149d3b02f0d95e50b18272e52332fbd62ae7510ac5f2d1386585b510a021",
+        "current_sha256": "e670149d3b02f0d95e50b18272e52332fbd62ae7510ac5f2d1386585b510a021",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_4_farmland.obj.import",
+        "sha256": "b1c32c9263b23edea92234a2c94db04c25344b0ab2fa94931b3a5f4812246162",
+        "current_sha256": "b1c32c9263b23edea92234a2c94db04c25344b0ab2fa94931b3a5f4812246162",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_4_shore.obj",
+        "sha256": "c1a07af117f2de17e1f20d17b789e42fee2da0d7417071b15b3b1361003cd2df",
+        "current_sha256": "c1a07af117f2de17e1f20d17b789e42fee2da0d7417071b15b3b1361003cd2df",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_3_4_shore.obj.import",
+        "sha256": "381af13b685b06bbdf46bf8ce6c98fc25150ba92ba02e8a81dfec792be72dd17",
+        "current_sha256": "381af13b685b06bbdf46bf8ce6c98fc25150ba92ba02e8a81dfec792be72dd17",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_4_0_forest.obj",
+        "sha256": "f44604a210ea135ffc82f2c4b0d1273c05216f460357a85307b25af6364ab625",
+        "current_sha256": "f44604a210ea135ffc82f2c4b0d1273c05216f460357a85307b25af6364ab625",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_4_0_forest.obj.import",
+        "sha256": "618bf3be3708584c38e30fbd38598068605556b01f086e07c0fe35a8f54da42d",
+        "current_sha256": "618bf3be3708584c38e30fbd38598068605556b01f086e07c0fe35a8f54da42d",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_4_1_forest.obj",
+        "sha256": "413a80d56d86044700b68c7348bc8e26060074cd650fb614ace53b4aad7025bc",
+        "current_sha256": "413a80d56d86044700b68c7348bc8e26060074cd650fb614ace53b4aad7025bc",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_4_1_forest.obj.import",
+        "sha256": "6458c44c452ec3268c7b40e156e76d6cdadc5a0b93d54c647874c69e22e70195",
+        "current_sha256": "6458c44c452ec3268c7b40e156e76d6cdadc5a0b93d54c647874c69e22e70195",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_4_1_industry.obj",
+        "sha256": "31c59bff0c07d863cc053c88b262e43f7d1bd45467145b6a88ca745b79bebfcb",
+        "current_sha256": "31c59bff0c07d863cc053c88b262e43f7d1bd45467145b6a88ca745b79bebfcb",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_4_1_industry.obj.import",
+        "sha256": "c42bd2d4fdcc8f58fa9f2565ef070ee38504547893ff6eb90050b8baf3cb8443",
+        "current_sha256": "c42bd2d4fdcc8f58fa9f2565ef070ee38504547893ff6eb90050b8baf3cb8443",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_4_1_shore.obj",
+        "sha256": "2071092d9979b1d062563a2dfbeb6775f84cd20154d7bff2b0046f0d86e7566d",
+        "current_sha256": "2071092d9979b1d062563a2dfbeb6775f84cd20154d7bff2b0046f0d86e7566d",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_4_1_shore.obj.import",
+        "sha256": "1026a37efda8abdb2b1fc3d9f23e78252faf9f6dd5571ac171cb63cb6ef17ee2",
+        "current_sha256": "1026a37efda8abdb2b1fc3d9f23e78252faf9f6dd5571ac171cb63cb6ef17ee2",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_4_2_industry.obj",
+        "sha256": "6cd0e2f7b24de40a09b0b61180a8c29d87ec901a940d3cf58f4fc5e1f51b0b71",
+        "current_sha256": "6cd0e2f7b24de40a09b0b61180a8c29d87ec901a940d3cf58f4fc5e1f51b0b71",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_4_2_industry.obj.import",
+        "sha256": "ea1e7fffa47a3ce8168a059139520d687d32c3dbd6d4aeb878a5c0dee9078b5f",
+        "current_sha256": "ea1e7fffa47a3ce8168a059139520d687d32c3dbd6d4aeb878a5c0dee9078b5f",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_4_2_shore.obj",
+        "sha256": "362e05cd2063a5b798ea8c388b3df8e8fca3460e7d737dffb27fd6307815eca7",
+        "current_sha256": "362e05cd2063a5b798ea8c388b3df8e8fca3460e7d737dffb27fd6307815eca7",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_4_2_shore.obj.import",
+        "sha256": "fca6c2f0546b2c8f3ab43ecee37e809097c5ea1413e877a2e5bee0670d9f30a2",
+        "current_sha256": "fca6c2f0546b2c8f3ab43ecee37e809097c5ea1413e877a2e5bee0670d9f30a2",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_4_3_industry.obj",
+        "sha256": "80ed26110e119bcac0f9ab0c4784b0fd90d747b854962fca15d23ad488649c0a",
+        "current_sha256": "80ed26110e119bcac0f9ab0c4784b0fd90d747b854962fca15d23ad488649c0a",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_4_3_industry.obj.import",
+        "sha256": "7a2f36c6fc859b9eb9932caf97ca7b9f5a7193d0f683396bbced8c1d99111ce6",
+        "current_sha256": "7a2f36c6fc859b9eb9932caf97ca7b9f5a7193d0f683396bbced8c1d99111ce6",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_4_3_shore.obj",
+        "sha256": "891d163b44ffa151fda79409746bb145bd836f5950ab70f6f8daa04a84aa55a0",
+        "current_sha256": "891d163b44ffa151fda79409746bb145bd836f5950ab70f6f8daa04a84aa55a0",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_4_3_shore.obj.import",
+        "sha256": "7b1d01563f6d44887462254a0fb6552072bb844dae051f3102ae1e65926ec0a7",
+        "current_sha256": "7b1d01563f6d44887462254a0fb6552072bb844dae051f3102ae1e65926ec0a7",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_4_4_shore.obj",
+        "sha256": "3915792227ed99ec6506bd6136a9d0508cbcc9be17ceab37d2cced394d798c53",
+        "current_sha256": "3915792227ed99ec6506bd6136a9d0508cbcc9be17ceab37d2cced394d798c53",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/chunk_4_4_shore.obj.import",
+        "sha256": "2139ea48cd9d5258121d3951cb69f8e8601bf78f661d41186d29683a5cc643a5",
+        "current_sha256": "2139ea48cd9d5258121d3951cb69f8e8601bf78f661d41186d29683a5cc643a5",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/dry_terrain.tscn",
+        "sha256": "6ac1fe47e054a60a435ad4a0257b216b5d4f7ac53589bbe8cea65d70486b156a",
+        "current_sha256": "6ac1fe47e054a60a435ad4a0257b216b5d4f7ac53589bbe8cea65d70486b156a",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Terrain/road_collapses.tscn",
+        "sha256": "7482687df4178992b452a8793c6a0e4ff2bc6a69daa564b6a4735caf4a264f89",
+        "current_sha256": "7482687df4178992b452a8793c6a0e4ff2bc6a69daa564b6a4735caf4a264f89",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Water/bed.obj",
+        "sha256": "3d279d3584450f8be310af8bdbf0942a017af03f88a44c246cc53fa65782e3a1",
+        "current_sha256": "3d279d3584450f8be310af8bdbf0942a017af03f88a44c246cc53fa65782e3a1",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Water/bed.obj.import",
+        "sha256": "18ec515cdeac303b9c8aabc17b1a696f1d9a515a31afe547be4db208c9cb3f84",
+        "current_sha256": "18ec515cdeac303b9c8aabc17b1a696f1d9a515a31afe547be4db208c9cb3f84",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Water/surface.obj",
+        "sha256": "033687e2f5380a0ea61bf54c83f2df204f763c30492a38b900b87ebd6932a825",
+        "current_sha256": "033687e2f5380a0ea61bf54c83f2df204f763c30492a38b900b87ebd6932a825",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Water/surface.obj.import",
+        "sha256": "7fa18ead8e00c5048d1dfeb8dddd8669d035bddd05b5042fc031e5791f1fa0c8",
+        "current_sha256": "7fa18ead8e00c5048d1dfeb8dddd8669d035bddd05b5042fc031e5791f1fa0c8",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Water/water.tscn",
+        "sha256": "650e5dda0d3f4ca3d218615b1768b529c5b7dcc612dcc86ab3376e1e52c665da",
+        "current_sha256": "650e5dda0d3f4ca3d218615b1768b529c5b7dcc612dcc86ab3376e1e52c665da",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/navigation_exclusions.tscn",
+        "sha256": "845bb201e91e4a9ea1fa973ade3f03e55a0bdd35908e5831eb01a25a5346b5de",
+        "current_sha256": "845bb201e91e4a9ea1fa973ade3f03e55a0bdd35908e5831eb01a25a5346b5de",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/terrain_payload.tscn",
+        "sha256": "9e3c705847a20004f38c9b8611eea32a299b58b374201bb170fd7ccf6cdf1e14",
+        "current_sha256": "9e3c705847a20004f38c9b8611eea32a299b58b374201bb170fd7ccf6cdf1e14",
+        "intended_change": false
+      },
+      {
+        "path": "Scripts/Player/player_lean.gd",
+        "sha256": "d13827bcf9fa772cbf4f3971bab6fb71e0685c72149a13f7e0a48acd1255387f",
+        "current_sha256": "d13827bcf9fa772cbf4f3971bab6fb71e0685c72149a13f7e0a48acd1255387f",
+        "intended_change": false
+      },
+      {
+        "path": "addons/cogito/CogitoObjects/cogito_player.gd",
+        "sha256": "d995d115b457cbf80c8a7f465b86734191be9eba625a81635087e5f43eee69b2",
+        "current_sha256": "d995d115b457cbf80c8a7f465b86734191be9eba625a81635087e5f43eee69b2",
+        "intended_change": false
+      },
+      {
+        "path": "addons/cogito/PackedScenes/cogito_player.tscn",
+        "sha256": "9719b072eface2219f63d6be74cf1cde4e3fbd5b29a3e2e1be84ad354202a2ce",
+        "current_sha256": "9719b072eface2219f63d6be74cf1cde4e3fbd5b29a3e2e1be84ad354202a2ce",
+        "intended_change": false
+      },
+      {
+        "path": "design/town-500m/building-catalogue.json",
+        "sha256": "271ac4c21013c72e063d5cb43850d6f0a8f20b3bfcc6269d60ee1f7780c9051b",
+        "current_sha256": "271ac4c21013c72e063d5cb43850d6f0a8f20b3bfcc6269d60ee1f7780c9051b",
+        "intended_change": false
+      },
+      {
+        "path": "design/town-500m/layout.json",
+        "sha256": "3eaf13391a1fd9781a20bb179bab8f60c88a9a4a14384f8a738b3b7539aab81b",
+        "current_sha256": "3eaf13391a1fd9781a20bb179bab8f60c88a9a4a14384f8a738b3b7539aab81b",
+        "intended_change": false
+      },
+      {
+        "path": "design/town-500m/phase2/terrain-authoring.cjs",
+        "sha256": "e64dbf2576fcdaa4f509e1e706bc7c3a173835209d7826afa27f9ecb4c0ef311",
+        "current_sha256": "e64dbf2576fcdaa4f509e1e706bc7c3a173835209d7826afa27f9ecb4c0ef311",
+        "intended_change": false
+      },
+      {
+        "path": "design/town-500m/phase3/dressing-proposal.json",
+        "sha256": "432134c590483a2b2de08ac0c8a735f907d0f49ce8146eb37d3e6a5279e36d79",
+        "current_sha256": "432134c590483a2b2de08ac0c8a735f907d0f49ce8146eb37d3e6a5279e36d79",
+        "intended_change": false
+      },
+      {
+        "path": "design/town-500m/phase3/los-proposal-report.json",
+        "sha256": "95f478adb00312e10ba2776f20b58a996dcfb1477837f34025f63c12ec2de9f4",
+        "current_sha256": "95f478adb00312e10ba2776f20b58a996dcfb1477837f34025f63c12ec2de9f4",
+        "intended_change": false
+      },
+      {
+        "path": "design/town-500m/phase3/nav-roof-exclusion.json",
+        "sha256": "ea84c00b20c0c058bb22c37509f96e91582fe008055b791ae1c69a1dc38e964a",
+        "current_sha256": "ea84c00b20c0c058bb22c37509f96e91582fe008055b791ae1c69a1dc38e964a",
+        "intended_change": false
+      },
+      {
+        "path": "design/town-500m/phase7/ground-materials.cjs",
+        "sha256": "5bc70935cd33b9ae2270a85f9bde44398416150d4048e83893690f17e4692d0d",
+        "current_sha256": "5bc70935cd33b9ae2270a85f9bde44398416150d4048e83893690f17e4692d0d",
+        "intended_change": false
+      },
+      {
+        "path": "design/town-500m/phase8/ground-cover-author-receipt.json",
+        "sha256": "ad160719298ac9e1f7a1bf68e036e9e85b16f4da42b4d780d36e65ca0ecc0247",
+        "current_sha256": "ad160719298ac9e1f7a1bf68e036e9e85b16f4da42b4d780d36e65ca0ecc0247",
+        "intended_change": false
+      },
+      {
+        "path": "design/town-500m/phase8/native-material-qa.json",
+        "sha256": "d5aeb6cb65ded6157ffca53f217ad60ae5b2ab47015f48ce73719594af4b10e7",
+        "current_sha256": "d5aeb6cb65ded6157ffca53f217ad60ae5b2ab47015f48ce73719594af4b10e7",
+        "intended_change": false
+      },
+      {
+        "path": "design/town-500m/phase8/vegetation-plan.json",
+        "sha256": "34b3b8b7fb69cbf9e283db0a5da225dc584f32782f64216c01c261879c191314",
+        "current_sha256": "34b3b8b7fb69cbf9e283db0a5da225dc584f32782f64216c01c261879c191314",
+        "intended_change": false
+      },
+      {
+        "path": "design/town-500m/terrain-contract.json",
+        "sha256": "b0221b5ea78784b24899a14696238dfd58441a8b04ec62434c267a1a7667a87a",
+        "current_sha256": "b0221b5ea78784b24899a14696238dfd58441a8b04ec62434c267a1a7667a87a",
+        "intended_change": false
+      },
+      {
+        "path": "tests/town500_composition_regression.gd",
+        "sha256": "2546397100af6946d61a29bc636f2a3417496f47fefea567506c5a7e68ec2262",
+        "current_sha256": "2546397100af6946d61a29bc636f2a3417496f47fefea567506c5a7e68ec2262",
+        "intended_change": false
+      },
+      {
+        "path": "tests/town500_ground_art_regression.gd",
+        "sha256": "277c73f12f4a4d62597be7a69befe91566f9851071080af288c8ae09444e7153",
+        "current_sha256": "277c73f12f4a4d62597be7a69befe91566f9851071080af288c8ae09444e7153",
+        "intended_change": false
+      },
+      {
+        "path": "tests/town500_ground_v2_regression.gd",
+        "sha256": "137886aee25fb967e4b2283084f03ea0613e8bef555e0b6f7d0b509992b37981",
+        "current_sha256": "137886aee25fb967e4b2283084f03ea0613e8bef555e0b6f7d0b509992b37981",
+        "intended_change": false
+      },
+      {
+        "path": "tests/town500_ground_v2_regression.tscn",
+        "sha256": "757e0b3249b0f094999ffcabdfce387806b6832d8c52202342bab6b8a77698a0",
+        "current_sha256": "757e0b3249b0f094999ffcabdfce387806b6832d8c52202342bab6b8a77698a0",
+        "intended_change": false
+      },
+      {
+        "path": "tools/town500_bake_navigation.gd",
+        "sha256": "7ac4faf521f8eddb151ada5092ab12c767370bdbf3d848d8454d3cee230cb386",
+        "current_sha256": "7ac4faf521f8eddb151ada5092ab12c767370bdbf3d848d8454d3cee230cb386",
+        "intended_change": false
+      },
+      {
+        "path": "tools/town500_ground_cover_author.gd",
+        "sha256": "2240e9653a51bfe996a3003e7bfe5fbac4bb8d07d3a8652306b25789cb4ffd85",
+        "current_sha256": "1c2fdea6ed189dfc329b74b9be4a0850a021f15b8d03b468e8cbd1c39a24679a",
+        "intended_change": true
+      },
+      {
+        "path": "tools/town500_ground_detail.gd",
+        "sha256": "19394570f5b5e9fab06cf673206ef6635e6b0a380ca1ce4b561a67f7c519cf6a",
+        "current_sha256": "19394570f5b5e9fab06cf673206ef6635e6b0a380ca1ce4b561a67f7c519cf6a",
+        "intended_change": false
+      },
+      {
+        "path": "tools/town500_ground_variation.gd",
+        "sha256": "0e83c5f78a86a70070748746d1c7761eb63e2f3623e8a1e3000e0d38d737d39f",
+        "current_sha256": "0e83c5f78a86a70070748746d1c7761eb63e2f3623e8a1e3000e0d38d737d39f",
+        "intended_change": false
+      },
+      {
+        "path": "project.godot",
+        "sha256": "080bdb5a0067e222f77529c3dbe1de6b539461103cbfa26c77a9376ca56dd59e",
+        "current_sha256": "080bdb5a0067e222f77529c3dbe1de6b539461103cbfa26c77a9376ca56dd59e",
+        "intended_change": false
+      },
+      {
+        "path": "addons/cogito/Theme/Cogito_Theme_A.tres",
+        "sha256": "adac40397eeb7b9a5e66254336910db3aa36e9082f0619c41f79bf8acfc2686e",
+        "current_sha256": "adac40397eeb7b9a5e66254336910db3aa36e9082f0619c41f79bf8acfc2686e",
+        "intended_change": false
+      },
+      {
+        "path": "tests/town500_ground_traversal_regression.gd",
+        "sha256": "cb5c9d7553af6af34b99c9c119351feeae83b6173d481d7f0d0be92b3c25c91f",
+        "current_sha256": "422015cdb13bf56c7487cf4a8342eaed13962d85e447859be491ec2f2b5224e0",
+        "intended_change": true
+      },
+      {
+        "path": "tests/town500_ground_traversal_regression.tscn",
+        "sha256": "4569d567cbdbd3b9af4f800cece925f820955570615dd4287b7a98cf8e1d914e",
+        "current_sha256": "4569d567cbdbd3b9af4f800cece925f820955570615dd4287b7a98cf8e1d914e",
+        "intended_change": false
+      }
+    ]
+  },
+  "author_receipt": {
+    "path": "design/town-500m/phase9/ground-cover-author-receipt.json",
+    "sha256": "4d28c9be71a4893b9e95811b8b45845c59810bcd862f19b7de0462cb401f73cd",
+    "plan_sha256": "f201c5702884cf07bb5a719ed172b6e46bc07f4f5795bf90adfd0c31bcb95a66"
+  },
+  "mesh_qa": {
+    "path": "design/town-500m/phase9/native-mesh-qa.json",
+    "sha256": "f5a2060e450703f795f2acc1ccb2a99a556e38813bc2d64d1dc3661bda31357f",
+    "status": "PASS"
+  },
+  "static_regeneration": {
+    "command": "node design/town-500m/phase9/vegetation-placement.cjs --check",
+    "exit_code": 0
+  },
+  "comparisons": [
+    "tests/artifacts/town500_ground_v3/comparison_shoulder_close.png",
+    "tests/artifacts/town500_ground_v3/comparison_along_road.png",
+    "tests/artifacts/town500_ground_v3/comparison_tree_contact.png",
+    "tests/artifacts/town500_ground_v3/comparison_entrance.png"
+  ],
+  "visual_review": {
+    "scope": "Matched noon/dusk hero, road, tree/ground contact and entrance; independent review before metadata-only refresh and primary review of final captures.",
+    "result": "Distinct broadleaf weeds/dry/short/tall silhouettes now visible in exacthero foreground, exposedsoil gaps and clear road/entrance/trunks. No obvious floating/asphalt intersections in reviewed frames. Not photorealism or user art approval.",
+    "limits": [
+      "Distantverges still read somewhat asparallel bands.",
+      "ground_5m liesoutsidepockets and remains barecontrol, not an improvedgrasslandview.",
+      "Onlysampledangles/timepairs reviewed, notexhaustiveblade/canopy/LOS proof."
+    ],
+    "final_images_byte_identical_to_independent_review": 15,
+    "image_sha256": {
+      "tests/artifacts/town500_ground_v3/after/along_road_12.png": "75f430a0e2a449010fb5122958d6fab62016ba4c7ca22c6e4c07ee866988885a",
+      "tests/artifacts/town500_ground_v3/after/along_road_17.png": "736868da6606b114cd83661a1c03b488ca938b2f5e06c3ac6be1cafeac2ad3c5",
+      "tests/artifacts/town500_ground_v3/after/along_road_native_eye_12.png": "b308a4494ef129ddfd7a18b326fc7550523fec563d44456fa9411a500dc3faf3",
+      "tests/artifacts/town500_ground_v3/after/elevated_12.png": "dd3e65dc50d0e7b371b664dd64c374563e93daae7fd925a1a0b0510039fb2209",
+      "tests/artifacts/town500_ground_v3/after/elevated_17.png": "ae0a844b9c69fd57bd428d602a4dbd371ec1822dd4f041eb89fd35411ce58783",
+      "tests/artifacts/town500_ground_v3/after/entrance_12.png": "d3168844d2e961887433f93a8095780fb6cd81bc1ed18caacba38b81625ab728",
+      "tests/artifacts/town500_ground_v3/after/entrance_17.png": "ab91e3525d44422612ae3c82550eeccbc08017e003e56b07546284073f434c42",
+      "tests/artifacts/town500_ground_v3/after/ground_20m_12.png": "99cc05d3699371c391253d73914084d348afce3f6d9c1ea78ae237064b103019",
+      "tests/artifacts/town500_ground_v3/after/ground_20m_17.png": "6c02a91ebd900bc75e17f231a64b129280a174acc0fc37bc8cc3c0515d3b2dae",
+      "tests/artifacts/town500_ground_v3/after/ground_5m_12.png": "7a535308dd0099fcae960056cba00e65270ead380487dbc6bd7f3e6cf975bff9",
+      "tests/artifacts/town500_ground_v3/after/ground_5m_17.png": "d4ef99caf473ee5648f5787bf15c19bee34b105537c807a2f6f95f7d972525e1",
+      "tests/artifacts/town500_ground_v3/after/shoulder_close_12.png": "3f11eda77815bd318eef00b1d79ebac62a95339bfa2b154ccc898b6606c83394",
+      "tests/artifacts/town500_ground_v3/after/shoulder_close_17.png": "bfc76d91d3df4fc1fd6a22b9a7a8c47818b5b50a81823070bfebcc76281581a6",
+      "tests/artifacts/town500_ground_v3/after/tree_contact_12.png": "832cf25d24f3e4380b8de6dad6040842aa334b79b25eead472ff04ba2fbd3a59",
+      "tests/artifacts/town500_ground_v3/after/tree_contact_17.png": "0531f337b9b820ab2348e470f7835dadabaeec70e663e90ae954e2dbb02461c2"
+    }
+  },
+  "attempts": [
+    {
+      "path": "tests/artifacts/town500_ground_v3/initial_metadata",
+      "status": "PASS19370 at run time",
+      "scope": "Archived before clearance metadata correction; not final source binding."
+    },
+    {
+      "path": "tests/artifacts/town500_ground_v3/generation_overlap",
+      "status": "PASS19370",
+      "scope": "Source-bound render overlapped offline --check; performance superseded by final after run."
+    }
+  ],
+  "editor_end": {
+    "scene": "res://Scene/Town.tscn",
+    "playing": true,
+    "session": "Separate non-fixture Town session PID27776 preserved after our fixtures exited; runtime root has no regression node.",
+    "run_args": "",
+    "open_scenes": [
+      "res://Scene/Hideout/stash_hub.tscn",
+      "res://Scene/Town.tscn",
+      "res://Scene/World/Town500m/terrain_payload.tscn"
+    ],
+    "unsaved_scenes": [],
+    "scanning": false
+  },
+  "cleanup": {
+    "fixture_saves": "All three receipts confirm no real/fixture save writes and owned empty isolated-root removal.",
+    "theme": "Exact task-start bytes restored after glyph-X-advance-only guard; cached bytes backed up.",
+    "other_session": "No stop of the separate Town play session after verifying runtime roots."
+  },
+  "diagnostics": {
+    "remaining": [
+      "Jolt solver-bias warning",
+      "Existing unused-signal/shadowed-variable/integer-division diagnostics; older Scope path diagnostic remains outside this visual scope."
+    ],
+    "tool_attempts": [
+      "Comparison composition editor script had one type-inference parse failure; corrected with explicit types, no production script failure.",
+      "CodebaseMap MSYS sandbox denial; retried approved native script outside sandbox."
+    ]
+  },
+  "limits": [
+    "No full-map grass rollout; request user visual review of boundedpilot first.",
+    "No active-AI1080p120FPS claim; both view p95 values increased and are not isolated causal proof.",
+    "No unrelated weapons/save/upper-apartment/full-crossing controller suite repeated.",
+    "No roadshader/material/lighting/terrainheight/building/physics/gameplay changes."
+  ],
+  "grass_geometry_variants": [
+    "short:0.18",
+    "dry:0.33",
+    "dry:0.55 retained",
+    "tall:0.65",
+    "weed:0.28"
+  ]
+}

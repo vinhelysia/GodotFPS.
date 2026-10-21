@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/utility_truck/assets/utility_truck_parked.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/utility_truck/materials/town_utility_truck_worn.tres" id="2_finish"]
+
+[node name="shared_utility_truck__parked" type="Node3D"]
+metadata/catalog_id = "shared_utility_truck"
+metadata/catalog_variant = "parked"
+metadata/finish = "worn"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="TruckAssemblyParked" parent="Model/TownUtilityTruckParked"]
+surface_material_override/0 = ExtResource("2_finish")

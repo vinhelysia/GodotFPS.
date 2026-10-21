@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/bunker_ventilation_shaft/assets/bunker_ventilation_shaft_tall.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/bunker_ventilation_shaft/materials/town_bunker_ventilation_shaft_tall_used.tres" id="2_finish"]
+
+[node name="bunker_ventilation_shaft__tall" type="Node3D"]
+metadata/catalog_id = "bunker_ventilation_shaft"
+metadata/catalog_variant = "tall"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="VentilationShaft" parent="Model/VentilationShaftRoot"]
+surface_material_override/0 = ExtResource("2_finish")

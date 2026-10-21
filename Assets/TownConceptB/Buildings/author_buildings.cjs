@@ -128,21 +128,21 @@ function createScene(type, access, floors, filename) {
   if (access === 'upper') {
     // Full opening above both flights and the turn; never reuse the sealed old C1-C4 slab.
     const slabY = 3.1;
-    box('UpperFloorWest', [5, 0.2, depth], [-1.5, slabY, 0], floorFinish);
+    box('UpperFloorWest', [4.6, 0.2, depth], [-1.7, slabY, 0], floorFinish);
     box('UpperFloorEast', [0.4, 0.2, depth], [3.8, slabY, 0], floorFinish);
-    box('UpperFloorFront', [2.6, 0.2, 8], [2.3, slabY, -4], floorFinish);
-    box('UpperFloorRear', [2.6, 0.2, 4], [2.3, slabY, 6], floorFinish);
+    box('UpperFloorFront', [3, 0.2, 8], [2.1, slabY, -4], floorFinish);
+    box('UpperFloorRear', [3, 0.2, 3.8], [2.1, slabY, 6.1], floorFinish);
     for (let step = 0; step < 10; step++) {
       const lowerTop = (step + 1) * 0.16;
-      box(`LowerStep_${step + 1}`, [1.2, lowerTop, 0.28], [1.6, lowerTop / 2, step * 0.28 + 0.14], floorFinish);
+      box(`LowerStep_${step + 1}`, [1.4, lowerTop, 0.28], [1.3, lowerTop / 2, step * 0.28 + 0.14], floorFinish);
       const upperTop = 1.6 + (step + 1) * 0.16;
-      box(`UpperStep_${step + 1}`, [1.2, upperTop - 1.6, 0.28], [3, (upperTop + 1.6) / 2, 2.8 - step * 0.28 - 0.14], floorFinish);
+      box(`UpperStep_${step + 1}`, [1.4, upperTop - 1.6, 0.28], [2.9, (upperTop + 1.6) / 2, 2.8 - step * 0.28 - 0.14], floorFinish);
     }
-    box('MidLanding', [2.6, 0.16, 1.2], [2.3, 1.52, 3.4], floorFinish);
-    box('UpperGuardWest', [0.06, 1, 4], [0.97, 3.7, 2], trimFinish);
-    box('UpperGuardEast', [0.06, 1, 4], [3.63, 3.7, 2], trimFinish);
-    box('UpperGuardRear', [2.6, 1, 0.06], [2.3, 3.7, 4.03], trimFinish);
-    box('UpperGuardFront', [1.2, 1, 0.06], [1.6, 3.7, -0.03], trimFinish);
+    box('MidLanding', [3, 0.16, 1.4], [2.1, 1.52, 3.5], floorFinish);
+    box('UpperGuardWest', [0.06, 1, 4.2], [0.57, 3.7, 2.1], trimFinish);
+    box('UpperGuardEast', [0.06, 1, 4.2], [3.63, 3.7, 2.1], trimFinish);
+    box('UpperGuardRear', [3, 1, 0.06], [2.1, 3.7, 4.23], trimFinish);
+    box('UpperGuardFront', [1.4, 1, 0.06], [1.3, 3.7, -0.03], trimFinish);
   }
 
   if (access !== 'open') {
@@ -173,10 +173,10 @@ function createScene(type, access, floors, filename) {
     marker('GFInterior', [0, 0, -depth / 2 + 1.2]);
   }
   if (access === 'upper') {
-    marker('StairBottom', [1.6, 0, -0.8]);
-    marker('FirstFlightTop', [1.6, 1.6, 3.35]);
-    marker('MidLanding', [3, 1.6, 3.35]);
-    marker('UpperLanding', [3, 3.2, -0.6]);
+    marker('StairBottom', [1.3, 0, -0.8]);
+    marker('FirstFlightTop', [1.3, 1.6, 3.35]);
+    marker('MidLanding', [2.9, 1.6, 3.35]);
+    marker('UpperLanding', [2.9, 3.2, -0.6]);
     marker('UpperInterior', [0, 3.2, -3]);
   }
   const extText = [...externals].map(([file, value]) => `[ext_resource type="${value.kind}" path="${file}" id="${value.id}"]\n`).join('\n');
@@ -198,7 +198,7 @@ function createScene(type, access, floors, filename) {
     const stairs = collisionBoxes.filter(box => box.name.startsWith('LowerStep_') || box.name.startsWith('UpperStep_'));
     assert.equal(stairs.length, 20);
     for (const step of stairs) {
-      assert.equal(step.size[0], 1.2);
+      assert.equal(step.size[0], 1.4);
       const foot = [step.position[0], step.position[1] + step.size[1] / 2, step.position[2]];
       assert(supportsPoint(foot));
       // Standing 2.1m vertical clearance along each flight, including upper floor strips.
@@ -222,6 +222,13 @@ function createScene(type, access, floors, filename) {
   manifest.push({ type: type.id, scene: `res://Scene/Props/TownKit/Buildings/${filename}`, footprint_m: [width, depth], access, floors, height_m: height, markers, collision: 'fitted walls/floors/steps layer1; visual roof has no collision; ceiling downward one-sided', native_verified: false });
 }
 
+// A template repair must not rewrite the other variants or legacy placement manifest.
+if (process.argv.includes('--t02-upper')) {
+  const type = layout.types.find(type => type.id === 'T02');
+  createScene(type, 'upper', type.floors, 't02_long_house.tscn');
+  console.log('PASS T02 upper static contracts; native stairs/nav pending.');
+  process.exit(0);
+}
 fs.mkdirSync(sceneDir, { recursive: true });
 for (const type of layout.types) {
   const access = type.id === 'T02' ? 'upper' : ['T03','T10','T11','T13'].includes(type.id) ? 'shell' : type.id === 'T12' ? 'open' : 'ground';
@@ -239,7 +246,7 @@ const assigned = layout.buildings.map(building => {
 assert.equal(assigned.length, 33);
 assert.equal(layout.buildings.filter(item => ['ground', 'upper'].includes(item.access)).length, 17);
 assert.equal(layout.buildings.filter(item => item.access === 'upper').length, 4);
-const report = JSON.stringify({ coordinates: 'metres; floor-centred origin; front -Z; GF0; upper3.2; root world pad+.2', templates: manifest, instances: assigned, stair_contract: { opening_xz: [1, 3.6, 0, 4], width_m: 1.2, landing_m: 1.2, riser_m: 0.16, tread_m: 0.28, risers: 20, upper_y: 3.2, minimum_clear_headroom_m: 3.2, native_controller_check: 'pending primary; existing Cogito stair stepping; no hidden ramps' } }, null, 2) + '\n';
+const report = JSON.stringify({ coordinates: 'metres; floor-centred origin; front -Z; GF0; upper3.2; root world pad+.2', templates: manifest, instances: assigned, stair_contract: { opening_xz: [0.6, 3.6, 0, 4.2], width_m: 1.4, landing_m: 1.4, riser_m: 0.16, tread_m: 0.28, risers: 20, upper_y: 3.2, minimum_clear_headroom_m: 3.2, native_controller_check: 'pending primary; existing Cogito stair stepping; no hidden ramps' } }, null, 2) + '\n';
 const manifestPath = path.join(__dirname, 'building_contract.json');
 if (checkOnly) assert.equal(fs.readFileSync(manifestPath, 'utf8'), report);
 else fs.writeFileSync(manifestPath, report);

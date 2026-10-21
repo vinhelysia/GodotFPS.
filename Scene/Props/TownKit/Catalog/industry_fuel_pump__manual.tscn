@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/industry_fuel_pump/assets/industry_fuel_pump_manual.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/industry_fuel_pump/materials/town_industry_fuel_pump_manual_used.tres" id="2_finish"]
+
+[node name="industry_fuel_pump__manual" type="Node3D"]
+metadata/catalog_id = "industry_fuel_pump"
+metadata/catalog_variant = "manual"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="FuelPump" parent="Model/ServiceFuelPump"]
+surface_material_override/0 = ExtResource("2_finish")

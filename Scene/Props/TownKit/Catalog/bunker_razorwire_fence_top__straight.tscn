@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/bunker_razorwire_fence_top/assets/bunker_razorwire_fence_top_straight.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/bunker_razorwire_fence_top/materials/town_bunker_razorwire_fence_top_straight_used.tres" id="2_finish"]
+
+[node name="bunker_razorwire_fence_top__straight" type="Node3D"]
+metadata/catalog_id = "bunker_razorwire_fence_top"
+metadata/catalog_variant = "straight"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="RazorwireStraight" parent="Model/TownRazorwireStraight"]
+surface_material_override/0 = ExtResource("2_finish")

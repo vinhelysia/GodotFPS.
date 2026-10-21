@@ -1,0 +1,1688 @@
+{
+  "status": "OFFLINE_AUTHORING_PASS_NATIVE_PENDING",
+  "source_sha256": {
+    "building-catalogue.json": "271ac4c21013c72e063d5cb43850d6f0a8f20b3bfcc6269d60ee1f7780c9051b",
+    "terrain-contract.json": "b0221b5ea78784b24899a14696238dfd58441a8b04ec62434c267a1a7667a87a"
+  },
+  "totals": {
+    "instances": 44,
+    "reused_templates": 22,
+    "pending_graybox_instances": 22,
+    "graybox_families": 13,
+    "zone_scenes": 6
+  },
+  "floor_convention": "Unit root = canonical pad + 0.2m. Reused room floor localY=-0.2..0; new primitive overall bounds localY=-0.2..height-0.2, exact physical overall height, bottom touches pad.",
+  "bunker_entry": {
+    "id": "B04-ENTRY",
+    "dimensions_m": [
+      8,
+      8,
+      3.6
+    ],
+    "clear_room_xz_m": [
+      7.5,
+      7.5
+    ],
+    "clear_ceiling_m": 3.2,
+    "door_clear_m": [
+      1.2,
+      2.4
+    ],
+    "local_front": "-Z",
+    "world_front": "south",
+    "floor_y_m": 10.2,
+    "ceiling_collision": "closed BoxShape3D roof slab; top and underside solid",
+    "deep_rear": "full solid wall; no transition"
+  },
+  "closed_collision": "Every pending solid uses a closed BoxShape3D matching its BoxMesh. Entry uses eight closed boxes for floor, walls, lintel and roof, leaving only its actual south doorway. This prevents top-down entry into hollow proxies, including the low F04 crate.",
+  "navigation_gate": "Closed boxes can produce rooftop navigation polygons. Primary must inspect the native bake and remove any sealed rooftop polygons using catalogue footprints and physical ceiling bounds; physics closure is not sacrificed to suppress navigation.",
+  "finished_reuse_audit": {
+    "files": [
+      "C:/Stuff/Blender/TownKit/asset_manifest.json",
+      "C:/Stuff/Blender/BunkerKit/asset_manifest.json"
+    ],
+    "finding": "Inspected live manifests before authoring. TownKit release covers architecture/circulation/booth/barrier/lamp; BunkerKit wood_crate is1x0.91x0.99m, incompatible with approved F04 1.2x0.8x0.75m. No exact pending-family match; retained dimensioned grayboxes, no scaled finished art or whole-kit copy."
+  },
+  "families": {
+    "fuel_tank": {
+      "dimensions_m": [
+        5,
+        5,
+        5
+      ],
+      "scene_ref": "res://Scene/World/Town500m/Graybox/fuel_tank.tscn",
+      "ids": [
+        "I03-A",
+        "I03-B",
+        "I03-C"
+      ]
+    },
+    "container": {
+      "dimensions_m": [
+        6.06,
+        2.44,
+        2.59
+      ],
+      "scene_ref": "res://Scene/World/Town500m/Graybox/container.tscn",
+      "ids": [
+        "I04-A",
+        "I04-B",
+        "I04-C",
+        "I06-A",
+        "I06-B",
+        "I06-C"
+      ]
+    },
+    "railcar": {
+      "dimensions_m": [
+        3.1,
+        14,
+        4
+      ],
+      "scene_ref": "res://Scene/World/Town500m/Graybox/railcar.tscn",
+      "ids": [
+        "I08-A",
+        "I09-A"
+      ]
+    },
+    "bunker_entry": {
+      "dimensions_m": [
+        8,
+        8,
+        3.6
+      ],
+      "scene_ref": "res://Scene/World/Town500m/Graybox/bunker_entry.tscn",
+      "ids": [
+        "B04-ENTRY"
+      ]
+    },
+    "watch_tower": {
+      "dimensions_m": [
+        4,
+        4,
+        8
+      ],
+      "scene_ref": "res://Scene/World/Town500m/Graybox/watch_tower.tscn",
+      "ids": [
+        "B07-A",
+        "B08-A"
+      ]
+    },
+    "observation_platform": {
+      "dimensions_m": [
+        4,
+        4,
+        5
+      ],
+      "scene_ref": "res://Scene/World/Town500m/Graybox/observation_platform.tscn",
+      "ids": [
+        "H01-A"
+      ]
+    },
+    "sealed_pillbox": {
+      "dimensions_m": [
+        6,
+        5,
+        2.7
+      ],
+      "scene_ref": "res://Scene/World/Town500m/Graybox/sealed_pillbox.tscn",
+      "ids": [
+        "H02-A"
+      ]
+    },
+    "radio_mast": {
+      "dimensions_m": [
+        2,
+        2,
+        13
+      ],
+      "scene_ref": "res://Scene/World/Town500m/Graybox/radio_mast.tscn",
+      "ids": [
+        "H03-A"
+      ]
+    },
+    "stone_ruin": {
+      "dimensions_m": [
+        8,
+        6,
+        2.4
+      ],
+      "scene_ref": "res://Scene/World/Town500m/Graybox/stone_ruin.tscn",
+      "ids": [
+        "H04-A"
+      ]
+    },
+    "hunting_stand": {
+      "dimensions_m": [
+        3,
+        3,
+        4.5
+      ],
+      "scene_ref": "res://Scene/World/Town500m/Graybox/hunting_stand.tscn",
+      "ids": [
+        "F03-A"
+      ]
+    },
+    "cache_crate": {
+      "dimensions_m": [
+        1.2,
+        0.8,
+        0.75
+      ],
+      "scene_ref": "res://Scene/World/Town500m/Graybox/cache_crate.tscn",
+      "ids": [
+        "F04-A"
+      ]
+    },
+    "wind_pump": {
+      "dimensions_m": [
+        3,
+        3,
+        7
+      ],
+      "scene_ref": "res://Scene/World/Town500m/Graybox/wind_pump.tscn",
+      "ids": [
+        "A03-A"
+      ]
+    },
+    "water_cistern": {
+      "dimensions_m": [
+        4,
+        4,
+        4
+      ],
+      "scene_ref": "res://Scene/World/Town500m/Graybox/water_cistern.tscn",
+      "ids": [
+        "A09-A"
+      ]
+    }
+  },
+  "placements": [
+    {
+      "id": "I01-A",
+      "source_ref": "I01",
+      "zone": "industry",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn",
+      "reused_template": true,
+      "position_m": [
+        155,
+        2.2,
+        -72
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        24.6,
+        18.6
+      ],
+      "height_m": 7,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "c251f2dc106844362bc983ff6fdd7ab22c4657133f71cf58340703fdb8263798",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": [
+          0,
+          0,
+          -10.5
+        ]
+      }
+    },
+    {
+      "id": "I02-A",
+      "source_ref": "I02",
+      "zone": "industry",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t02_long_house_ground.tscn",
+      "reused_template": true,
+      "position_m": [
+        191,
+        2.2,
+        -78
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 3.2,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "7f998653cd08a973f1d5af5a57beff4ba47d4d21476a4b6a538f499e7a2c1b36",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": [
+          0,
+          0,
+          -9.2
+        ]
+      }
+    },
+    {
+      "id": "I05-A",
+      "source_ref": "I05",
+      "zone": "industry",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t06_garage.tscn",
+      "reused_template": true,
+      "position_m": [
+        150,
+        2.2,
+        64
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        14,
+        10
+      ],
+      "height_m": 4.5,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "c84215394bfe6c75deca1acd945b926b51f9d9e6ae23f45ee5d0e38b616e36d6",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": [
+          0,
+          0,
+          -6.2
+        ]
+      }
+    },
+    {
+      "id": "I07-A",
+      "source_ref": "I07",
+      "zone": "industry",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "reused_template": true,
+      "position_m": [
+        182,
+        2.2,
+        80
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "1e68f08df7c69a1a08bb43504615854664aba3e9a87734b2be7ff9ac99ded159",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": null
+      }
+    },
+    {
+      "id": "I03-A",
+      "source_ref": "I03",
+      "zone": "industry",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/fuel_tank.tscn",
+      "reused_template": false,
+      "position_m": [
+        140,
+        2.2,
+        -18
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        5,
+        5
+      ],
+      "height_m": 5,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "I03-B",
+      "source_ref": "I03",
+      "zone": "industry",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/fuel_tank.tscn",
+      "reused_template": false,
+      "position_m": [
+        148,
+        2.2,
+        -18
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        5,
+        5
+      ],
+      "height_m": 5,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "I03-C",
+      "source_ref": "I03",
+      "zone": "industry",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/fuel_tank.tscn",
+      "reused_template": false,
+      "position_m": [
+        156,
+        2.2,
+        -18
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        5,
+        5
+      ],
+      "height_m": 5,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "I04-A",
+      "source_ref": "I04",
+      "zone": "industry",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/container.tscn",
+      "reused_template": false,
+      "position_m": [
+        171,
+        2.2,
+        -24
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        6.06,
+        2.44
+      ],
+      "height_m": 2.59,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "I04-B",
+      "source_ref": "I04",
+      "zone": "industry",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/container.tscn",
+      "reused_template": false,
+      "position_m": [
+        179,
+        2.2,
+        -24
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        6.06,
+        2.44
+      ],
+      "height_m": 2.59,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "I04-C",
+      "source_ref": "I04",
+      "zone": "industry",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/container.tscn",
+      "reused_template": false,
+      "position_m": [
+        187,
+        2.2,
+        -24
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        6.06,
+        2.44
+      ],
+      "height_m": 2.59,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "I06-A",
+      "source_ref": "I06",
+      "zone": "industry",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/container.tscn",
+      "reused_template": false,
+      "position_m": [
+        146,
+        2.2,
+        35
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        6.06,
+        2.44
+      ],
+      "height_m": 2.59,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "I06-B",
+      "source_ref": "I06",
+      "zone": "industry",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/container.tscn",
+      "reused_template": false,
+      "position_m": [
+        154,
+        2.2,
+        35
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        6.06,
+        2.44
+      ],
+      "height_m": 2.59,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "I06-C",
+      "source_ref": "I06",
+      "zone": "industry",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/container.tscn",
+      "reused_template": false,
+      "position_m": [
+        162,
+        2.2,
+        35
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        6.06,
+        2.44
+      ],
+      "height_m": 2.59,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "I08-A",
+      "source_ref": "I08",
+      "zone": "industry",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/railcar.tscn",
+      "reused_template": false,
+      "position_m": [
+        208.52,
+        2.2,
+        -43.18
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        3.1,
+        14
+      ],
+      "height_m": 4,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "I09-A",
+      "source_ref": "I09",
+      "zone": "industry",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/railcar.tscn",
+      "reused_template": false,
+      "position_m": [
+        198.3,
+        2.2,
+        59.09
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        3.1,
+        14
+      ],
+      "height_m": 4,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "B01-A",
+      "source_ref": "B01",
+      "zone": "bunker",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t07_workshop_shell.tscn",
+      "reused_template": true,
+      "position_m": [
+        -187,
+        10.2,
+        -195
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 3.2,
+      "pad_surface_y_m": 10,
+      "ground_contact_y_m": 10,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "34c9fef821bfcfeabf904294e0f15fd03c1bb2ee250026a48a35c1a802104980",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": null
+      }
+    },
+    {
+      "id": "B02-A",
+      "source_ref": "B02",
+      "zone": "bunker",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t03_apartment.tscn",
+      "reused_template": true,
+      "position_m": [
+        -138,
+        10.2,
+        -195
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        24,
+        12
+      ],
+      "height_m": 6.4,
+      "pad_surface_y_m": 10,
+      "ground_contact_y_m": 10,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "5282a2377d5899f75ad694cffcab21ae0ffb5f3c90d3b4a9c68ed91223e9c94d",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": null
+      }
+    },
+    {
+      "id": "B03-A",
+      "source_ref": "B03",
+      "zone": "bunker",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn",
+      "reused_template": true,
+      "position_m": [
+        -101,
+        10.2,
+        -194
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        10,
+        8
+      ],
+      "height_m": 3.2,
+      "pad_surface_y_m": 10,
+      "ground_contact_y_m": 10,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "f7293a4b35625aba375ef6a3efc2854e3d2695915eb51dd5e0c6fc481f50965f",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": null
+      }
+    },
+    {
+      "id": "B05-A",
+      "source_ref": "B05",
+      "zone": "bunker",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "reused_template": true,
+      "position_m": [
+        -195,
+        10.2,
+        -147
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "pad_surface_y_m": 10,
+      "ground_contact_y_m": 10,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "1e68f08df7c69a1a08bb43504615854664aba3e9a87734b2be7ff9ac99ded159",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": null
+      }
+    },
+    {
+      "id": "B06-A",
+      "source_ref": "B06",
+      "zone": "bunker",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t13_guard_booth.tscn",
+      "reused_template": true,
+      "position_m": [
+        -146,
+        10.2,
+        -128
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        3,
+        3
+      ],
+      "height_m": 3.2,
+      "pad_surface_y_m": 10,
+      "ground_contact_y_m": 10,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "a95875ac7b2a5de5a825128a89c4bba9b9da7085f7a2cdba431bfdbe6c0d6f9f",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": null
+      }
+    },
+    {
+      "id": "B04-ENTRY",
+      "source_ref": "B04",
+      "zone": "bunker",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/bunker_entry.tscn",
+      "reused_template": false,
+      "position_m": [
+        -149,
+        10.2,
+        -147
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        8,
+        8
+      ],
+      "height_m": 3.6,
+      "pad_surface_y_m": 10,
+      "ground_contact_y_m": 10,
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "B07-A",
+      "source_ref": "B07",
+      "zone": "bunker",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/watch_tower.tscn",
+      "reused_template": false,
+      "position_m": [
+        -213,
+        10.2,
+        -214
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        4,
+        4
+      ],
+      "height_m": 8,
+      "pad_surface_y_m": 10,
+      "ground_contact_y_m": 10,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "B08-A",
+      "source_ref": "B08",
+      "zone": "bunker",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/watch_tower.tscn",
+      "reused_template": false,
+      "position_m": [
+        -90,
+        10.2,
+        -214
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        4,
+        4
+      ],
+      "height_m": 8,
+      "pad_surface_y_m": 10,
+      "ground_contact_y_m": 10,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "H01-A",
+      "source_ref": "H01",
+      "zone": "hills",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/observation_platform.tscn",
+      "reused_template": false,
+      "position_m": [
+        -44,
+        15.2,
+        -165
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        4,
+        4
+      ],
+      "height_m": 5,
+      "pad_surface_y_m": 15,
+      "ground_contact_y_m": 15,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "H02-A",
+      "source_ref": "H02",
+      "zone": "hills",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/sealed_pillbox.tscn",
+      "reused_template": false,
+      "position_m": [
+        -62.5,
+        15.2,
+        -105.68
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        6,
+        5
+      ],
+      "height_m": 2.7,
+      "pad_surface_y_m": 15,
+      "ground_contact_y_m": 15,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "H03-A",
+      "source_ref": "H03",
+      "zone": "hills",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/radio_mast.tscn",
+      "reused_template": false,
+      "position_m": [
+        -12,
+        15.2,
+        -215
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        2,
+        2
+      ],
+      "height_m": 13,
+      "pad_surface_y_m": 15,
+      "ground_contact_y_m": 15,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "H04-A",
+      "source_ref": "H04",
+      "zone": "hills",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/stone_ruin.tscn",
+      "reused_template": false,
+      "position_m": [
+        -218.8,
+        15.2,
+        -95
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        8,
+        6
+      ],
+      "height_m": 2.4,
+      "pad_surface_y_m": 15,
+      "ground_contact_y_m": 15,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "F01-A",
+      "source_ref": "F01",
+      "zone": "forest",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn",
+      "reused_template": true,
+      "position_m": [
+        118,
+        2.2,
+        -191
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        10,
+        8
+      ],
+      "height_m": 3.2,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "f7293a4b35625aba375ef6a3efc2854e3d2695915eb51dd5e0c6fc481f50965f",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": null
+      }
+    },
+    {
+      "id": "F02-A",
+      "source_ref": "F02",
+      "zone": "forest",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t07_workshop_shell.tscn",
+      "reused_template": true,
+      "position_m": [
+        174,
+        2.2,
+        -151
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 3.2,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "34c9fef821bfcfeabf904294e0f15fd03c1bb2ee250026a48a35c1a802104980",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": null
+      }
+    },
+    {
+      "id": "F02-B",
+      "source_ref": "F02",
+      "zone": "forest",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "reused_template": true,
+      "position_m": [
+        190,
+        2.2,
+        -160
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "1e68f08df7c69a1a08bb43504615854664aba3e9a87734b2be7ff9ac99ded159",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": null
+      }
+    },
+    {
+      "id": "F03-A",
+      "source_ref": "F03",
+      "zone": "forest",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/hunting_stand.tscn",
+      "reused_template": false,
+      "position_m": [
+        233,
+        2.2,
+        -157
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        3,
+        3
+      ],
+      "height_m": 4.5,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "F04-A",
+      "source_ref": "F04",
+      "zone": "forest",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/cache_crate.tscn",
+      "reused_template": false,
+      "position_m": [
+        99,
+        2.2,
+        -69
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        1.2,
+        0.8
+      ],
+      "height_m": 0.75,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "A01-A",
+      "source_ref": "A01",
+      "zone": "farmland",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage.tscn",
+      "reused_template": true,
+      "position_m": [
+        -207,
+        3.507430095,
+        -26
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        10,
+        8
+      ],
+      "height_m": 3.2,
+      "pad_surface_y_m": 3.307430095,
+      "ground_contact_y_m": 3.307430095,
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "dd67f1263192f577b8e162557a7644a3f2697649a54458f7f1ab2297f913e9fd",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": [
+          0,
+          0,
+          -5.2
+        ]
+      }
+    },
+    {
+      "id": "A02-A",
+      "source_ref": "A02",
+      "zone": "farmland",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "reused_template": true,
+      "position_m": [
+        -188,
+        1.7,
+        -24
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "pad_surface_y_m": 1.5,
+      "ground_contact_y_m": 1.5,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "1e68f08df7c69a1a08bb43504615854664aba3e9a87734b2be7ff9ac99ded159",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": null
+      }
+    },
+    {
+      "id": "A04-A",
+      "source_ref": "A04",
+      "zone": "farmland",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t07_workshop_shell.tscn",
+      "reused_template": true,
+      "position_m": [
+        -212,
+        1.7,
+        108
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 3.2,
+      "pad_surface_y_m": 1.5,
+      "ground_contact_y_m": 1.5,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "34c9fef821bfcfeabf904294e0f15fd03c1bb2ee250026a48a35c1a802104980",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": null
+      }
+    },
+    {
+      "id": "A05-A",
+      "source_ref": "A05",
+      "zone": "farmland",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "reused_template": true,
+      "position_m": [
+        -191,
+        1.7,
+        143
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "pad_surface_y_m": 1.5,
+      "ground_contact_y_m": 1.5,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "1e68f08df7c69a1a08bb43504615854664aba3e9a87734b2be7ff9ac99ded159",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": null
+      }
+    },
+    {
+      "id": "A06-A",
+      "source_ref": "A06",
+      "zone": "farmland",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t08_warehouse.tscn",
+      "reused_template": true,
+      "position_m": [
+        -149,
+        1.7,
+        202
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        24.6,
+        18.6
+      ],
+      "height_m": 7,
+      "pad_surface_y_m": 1.5,
+      "ground_contact_y_m": 1.5,
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "c251f2dc106844362bc983ff6fdd7ab22c4657133f71cf58340703fdb8263798",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": [
+          0,
+          0,
+          -10.5
+        ]
+      }
+    },
+    {
+      "id": "A07-A",
+      "source_ref": "A07",
+      "zone": "farmland",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t02_long_house_ground.tscn",
+      "reused_template": true,
+      "position_m": [
+        -53,
+        1.7,
+        198
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 3.2,
+      "pad_surface_y_m": 1.5,
+      "ground_contact_y_m": 1.5,
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "7f998653cd08a973f1d5af5a57beff4ba47d4d21476a4b6a538f499e7a2c1b36",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": [
+          0,
+          0,
+          -9.2
+        ]
+      }
+    },
+    {
+      "id": "A08-A",
+      "source_ref": "A08",
+      "zone": "farmland",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t07_workshop_shell.tscn",
+      "reused_template": true,
+      "position_m": [
+        54,
+        1.7,
+        205
+      ],
+      "yaw_deg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        8,
+        16
+      ],
+      "height_m": 3.2,
+      "pad_surface_y_m": 1.5,
+      "ground_contact_y_m": 1.5,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "34c9fef821bfcfeabf904294e0f15fd03c1bb2ee250026a48a35c1a802104980",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": null
+      }
+    },
+    {
+      "id": "A03-A",
+      "source_ref": "A03",
+      "zone": "farmland",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/wind_pump.tscn",
+      "reused_template": false,
+      "position_m": [
+        -197,
+        1.7,
+        72
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        3,
+        3
+      ],
+      "height_m": 7,
+      "pad_surface_y_m": 1.5,
+      "ground_contact_y_m": 1.5,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "A09-A",
+      "source_ref": "A09",
+      "zone": "farmland",
+      "scene_ref": "res://Scene/World/Town500m/Graybox/water_cistern.tscn",
+      "reused_template": false,
+      "position_m": [
+        70,
+        1.7,
+        234
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        4,
+        4
+      ],
+      "height_m": 4,
+      "pad_surface_y_m": 1.5,
+      "ground_contact_y_m": 1.5,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": null
+    },
+    {
+      "id": "L01-A",
+      "source_ref": "L01",
+      "zone": "lake",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t14_pump_house.tscn",
+      "reused_template": true,
+      "position_m": [
+        119,
+        2.2,
+        127
+      ],
+      "yaw_deg": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        6,
+        5
+      ],
+      "height_m": 3.2,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": true,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "3d20bf9ed4527c7a7a179c4fa3c90dc517210ff500902bd88621cc852b33b7fb",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": [
+          0,
+          0,
+          -3.7
+        ]
+      }
+    },
+    {
+      "id": "L02-A",
+      "source_ref": "L02",
+      "zone": "lake",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn",
+      "reused_template": true,
+      "position_m": [
+        153,
+        2.2,
+        149
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        10,
+        8
+      ],
+      "height_m": 3.2,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "f7293a4b35625aba375ef6a3efc2854e3d2695915eb51dd5e0c6fc481f50965f",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": null
+      }
+    },
+    {
+      "id": "L04-A",
+      "source_ref": "L04",
+      "zone": "lake",
+      "scene_ref": "res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn",
+      "reused_template": true,
+      "position_m": [
+        188,
+        2.2,
+        138
+      ],
+      "yaw_deg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "footprint_m": [
+        6,
+        4
+      ],
+      "height_m": 3.2,
+      "pad_surface_y_m": 2,
+      "ground_contact_y_m": 2,
+      "access": {
+        "ground": false,
+        "upper": false
+      },
+      "template_evidence": {
+        "sha256": "1e68f08df7c69a1a08bb43504615854664aba3e9a87734b2be7ff9ac99ded159",
+        "floor_top_local_y_m": 0,
+        "floor_bottom_local_y_m": -0.2,
+        "approach_local_m": null
+      }
+    }
+  ],
+  "limits": [
+    "Native import/physics/rays/navigation/player traversal and visual review owned by primary and not run by this authoring worker.",
+    "Sealed roofs can generate rooftop nav; primary native bake inspection/filter and F04 jump/step checks remain required.",
+    "Primitives are dimensioned graybox cover silhouettes, not finished assets or approved art triangle budgets.",
+    "Reusable template height is its existing wall-height contract; roof/trim native bounds and new placement acceptance remain primary checks.",
+    "No terrain-owned R01/R02/dock, gameplay, teleport, scripts, Town merge, settings, shared templates or canonical data were edited."
+  ],
+  "output_sha256": {
+    "Scene/World/Town500m/Graybox/fuel_tank.tscn": "173fbd8f501d305c8a4ac15457378412ee8c91a4ef263e27e5f7e535706001a7",
+    "Scene/World/Town500m/Graybox/container.tscn": "586a8b0783f089e0e6e9ef977bd31bdde3ae397fedc9b587c64468a6bb855693",
+    "Scene/World/Town500m/Graybox/railcar.tscn": "51ad455a3eb0337b4c351c9b38b34c42b77b5a0b4f2fe2d5bb99d8511bc60c11",
+    "Scene/World/Town500m/Graybox/bunker_entry.tscn": "5e4606b4d2329e33ed48d4fd1a830923603231b337502bc113a070a8fcbb82e2",
+    "Scene/World/Town500m/Graybox/watch_tower.tscn": "370562e2143e9bdb122f69016f7c4c105e2efc51eb6ae5d72e943dcf351f8d73",
+    "Scene/World/Town500m/Graybox/observation_platform.tscn": "e944b198d80af7e3f24ca0a85d3d1749c1bca5378fd765ddf0eabe361c5d0bd5",
+    "Scene/World/Town500m/Graybox/sealed_pillbox.tscn": "603ce76ab255202b2bccde0f3b6505c12d02d6900447fff17d20b3ea75ece884",
+    "Scene/World/Town500m/Graybox/radio_mast.tscn": "b747ebb1e91ce3f47d254f26d8ca43589ddde5324431fffb6247d1d5cb28bf88",
+    "Scene/World/Town500m/Graybox/stone_ruin.tscn": "761591cd920cf2c2f5d2aade5576e36fe0817d08a19e3ec09713ab0263dd6490",
+    "Scene/World/Town500m/Graybox/hunting_stand.tscn": "cefe23592f488254e6db2247cad4a1ddfa159111a8771b86c83bc4eb7e1f274b",
+    "Scene/World/Town500m/Graybox/cache_crate.tscn": "b319a1b89115bba10c5518015b4be2bbc8d179bc6a35f8734fc903ff73621aee",
+    "Scene/World/Town500m/Graybox/wind_pump.tscn": "626467de6998519d84d8fb41cfeab4ae4224e55050507171e90ed373e4f7abe2",
+    "Scene/World/Town500m/Graybox/water_cistern.tscn": "453c8d7f8bfe94e482d4df1ec1ea77903d5df1244aaac685e262d2e9e55d737c",
+    "Scene/World/Town500m/POI/industry.tscn": "1f40d359a7e47dd3dbdf6252c39d14d59e96d0335fada7ee6b958ead7dbe2ba4",
+    "Scene/World/Town500m/POI/bunker.tscn": "dc7b705c3c04b2bfc4f7d3e2a38b3cfada3b4774e069724890288bf2cebc68fd",
+    "Scene/World/Town500m/POI/hills.tscn": "9739add53073b83d7cc893edd3edd294ff8f60e05beea5591b44dc937474c524",
+    "Scene/World/Town500m/POI/forest.tscn": "6ebca4d00b21de3dcadbaca34dbc77aec3d74bea6b74242fcf569ab8f39f9e82",
+    "Scene/World/Town500m/POI/farmland.tscn": "4dea27339e4d40cd653688aa9cf607b98db9970ca85adf63f3e635d7154310cb",
+    "Scene/World/Town500m/POI/lake.tscn": "97c63984a71c218ff8169361512541f80367ac80180495565698519d22a38c9c"
+  }
+}

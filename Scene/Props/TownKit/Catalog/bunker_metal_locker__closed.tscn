@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/bunker_metal_locker/assets/bunker_metal_locker_closed.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/bunker_metal_locker/materials/town_bunker_metal_locker_used.tres" id="2_finish"]
+
+[node name="bunker_metal_locker__closed" type="Node3D"]
+metadata/catalog_id = "bunker_metal_locker"
+metadata/catalog_variant = "closed"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="LockerBody" parent="Model/SteelLocker"]
+surface_material_override/0 = ExtResource("2_finish")
+
+[node name="LockerBolt" parent="Model/SteelLocker/LockerDoorPivot/LockerBoltPivot"]
+surface_material_override/0 = ExtResource("2_finish")
+
+[node name="LockerDoor" parent="Model/SteelLocker/LockerDoorPivot"]
+surface_material_override/0 = ExtResource("2_finish")
+
+[node name="LockerHandle" parent="Model/SteelLocker/LockerDoorPivot/LockerHandlePivot"]
+surface_material_override/0 = ExtResource("2_finish")

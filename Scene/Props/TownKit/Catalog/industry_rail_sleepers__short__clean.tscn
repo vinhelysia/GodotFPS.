@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/rail_sleepers/assets/rail_sleepers_short.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/rail_sleepers/materials/town_rail_sleepers_short_clean.tres" id="2_finish"]
+
+[node name="industry_rail_sleepers__short" type="Node3D"]
+metadata/catalog_id = "industry_rail_sleepers"
+metadata/catalog_variant = "short"
+metadata/finish = "clean"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="RailSleepersShort" parent="Model/TownRailSleepersShort"]
+surface_material_override/0 = ExtResource("2_finish")

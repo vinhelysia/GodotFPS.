@@ -1,0 +1,279 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t01_cottage.tscn" id="building_0"]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t09_shed_shell.tscn" id="building_1"]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t13_guard_booth.tscn" id="building_2"]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t04_shop.tscn" id="building_3"]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t09_shed.tscn" id="building_4"]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t10_kiosk.tscn" id="building_5"]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t02_long_house.tscn" id="building_6"]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t11_substation.tscn" id="building_7"]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t05_clinic.tscn" id="building_8"]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t03_apartment.tscn" id="building_9"]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t12_bus_shelter.tscn" id="building_10"]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t06_garage.tscn" id="building_11"]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t01_cottage_shell.tscn" id="building_12"]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Buildings/t07_workshop.tscn" id="building_13"]
+
+[node name="TownCore" type="Node3D"]
+
+[node name="T01" type="Node3D" parent="."]
+
+[node name="T01_A" parent="T01" instance=ExtResource("building_0")]
+position = Vector3(-142, 2.2, -17)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "T01-A"
+metadata/source_ref = "T01"
+metadata/zone = "town"
+
+[node name="T01_B" parent="T01" instance=ExtResource("building_1")]
+position = Vector3(-130, 2.2, -25)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "T01-B"
+metadata/source_ref = "T01"
+metadata/zone = "town"
+
+[node name="T01_C" parent="T01" instance=ExtResource("building_2")]
+position = Vector3(-130, 2.2, -11)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "T01-C"
+metadata/source_ref = "T01"
+metadata/zone = "town"
+
+[node name="T02" type="Node3D" parent="."]
+
+[node name="T02_A" parent="T02" instance=ExtResource("building_3")]
+position = Vector3(-100, 2.2, -15)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "T02-A"
+metadata/source_ref = "T02"
+metadata/zone = "town"
+
+[node name="T02_B" parent="T02" instance=ExtResource("building_4")]
+position = Vector3(-88, 2.2, -19)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "T02-B"
+metadata/source_ref = "T02"
+metadata/zone = "town"
+
+[node name="T02_C" parent="T02" instance=ExtResource("building_5")]
+position = Vector3(-104, 2.2, -23)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "T02-C"
+metadata/source_ref = "T02"
+metadata/zone = "town"
+
+[node name="T03" type="Node3D" parent="."]
+
+[node name="T03_A" parent="T03" instance=ExtResource("building_6")]
+position = Vector3(-39, 2.2, -13)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "T03-A"
+metadata/source_ref = "T03"
+metadata/zone = "town"
+
+[node name="T03_B" parent="T03" instance=ExtResource("building_1")]
+position = Vector3(-24, 2.2, -19)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "T03-B"
+metadata/source_ref = "T03"
+metadata/zone = "town"
+
+[node name="T03_C" parent="T03" instance=ExtResource("building_7")]
+position = Vector3(-24, 2.2, -9)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "T03-C"
+metadata/source_ref = "T03"
+metadata/zone = "town"
+
+[node name="T04" type="Node3D" parent="."]
+
+[node name="T04_A" parent="T04" instance=ExtResource("building_3")]
+position = Vector3(10, 2.2, -11)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "T04-A"
+metadata/source_ref = "T04"
+metadata/zone = "town"
+
+[node name="T04_B" parent="T04" instance=ExtResource("building_1")]
+position = Vector3(25, 2.2, -17)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "T04-B"
+metadata/source_ref = "T04"
+metadata/zone = "town"
+
+[node name="T05" type="Node3D" parent="."]
+
+[node name="T05_A" parent="T05" instance=ExtResource("building_8")]
+position = Vector3(-137, 2.2, 57)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "T05-A"
+metadata/source_ref = "T05"
+metadata/zone = "town"
+
+[node name="T05_B" parent="T05" instance=ExtResource("building_1")]
+position = Vector3(-120, 2.2, 50)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "T05-B"
+metadata/source_ref = "T05"
+metadata/zone = "town"
+
+[node name="T05_C" parent="T05" instance=ExtResource("building_2")]
+position = Vector3(-120, 2.2, 68)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "T05-C"
+metadata/source_ref = "T05"
+metadata/zone = "town"
+
+[node name="T06" type="Node3D" parent="."]
+
+[node name="T06_A" parent="T06" instance=ExtResource("building_9")]
+position = Vector3(-84, 2.2, 78)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "T06-A"
+metadata/source_ref = "T06"
+metadata/zone = "town"
+
+[node name="T06_B" parent="T06" instance=ExtResource("building_6")]
+position = Vector3(-86, 2.2, 62)
+rotation = Vector3(0, 1.570796327, 0)
+metadata/town500_id = "T06-B"
+metadata/source_ref = "T06"
+metadata/zone = "town"
+
+[node name="T06_C" parent="T06" instance=ExtResource("building_4")]
+position = Vector3(-71, 2.2, 87)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "T06-C"
+metadata/source_ref = "T06"
+metadata/zone = "town"
+
+[node name="T07" type="Node3D" parent="."]
+
+[node name="T07_A" parent="T07" instance=ExtResource("building_6")]
+position = Vector3(-33, 2.2, 70)
+rotation = Vector3(0, 1.570796327, 0)
+metadata/town500_id = "T07-A"
+metadata/source_ref = "T07"
+metadata/zone = "town"
+
+[node name="T07_B" parent="T07" instance=ExtResource("building_3")]
+position = Vector3(-19, 2.2, 82)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "T07-B"
+metadata/source_ref = "T07"
+metadata/zone = "town"
+
+[node name="T07_C" parent="T07" instance=ExtResource("building_10")]
+position = Vector3(-16, 2.2, 61)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "T07-C"
+metadata/source_ref = "T07"
+metadata/zone = "town"
+
+[node name="T08" type="Node3D" parent="."]
+
+[node name="T08_A" parent="T08" instance=ExtResource("building_11")]
+position = Vector3(16, 2.2, 72)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "T08-A"
+metadata/source_ref = "T08"
+metadata/zone = "town"
+
+[node name="T08_B" parent="T08" instance=ExtResource("building_1")]
+position = Vector3(25, 2.2, 84)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "T08-B"
+metadata/source_ref = "T08"
+metadata/zone = "town"
+
+[node name="T09" type="Node3D" parent="."]
+
+[node name="T09_A" parent="T09" instance=ExtResource("building_12")]
+position = Vector3(-138, 2.2, 122)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "T09-A"
+metadata/source_ref = "T09"
+metadata/zone = "town"
+
+[node name="T09_B" parent="T09" instance=ExtResource("building_1")]
+position = Vector3(-121, 2.2, 130)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "T09-B"
+metadata/source_ref = "T09"
+metadata/zone = "town"
+
+[node name="T10" type="Node3D" parent="."]
+
+[node name="T10_A" parent="T10" instance=ExtResource("building_5")]
+position = Vector3(-57, 2.2, 108)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "T10-A"
+metadata/source_ref = "T10"
+metadata/zone = "town"
+
+[node name="T10_B" parent="T10" instance=ExtResource("building_5")]
+position = Vector3(-57, 2.2, 116)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "T10-B"
+metadata/source_ref = "T10"
+metadata/zone = "town"
+
+[node name="T10_C" parent="T10" instance=ExtResource("building_4")]
+position = Vector3(-64, 2.2, 118.3)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "T10-C"
+metadata/source_ref = "T10"
+metadata/zone = "town"
+
+[node name="T11" type="Node3D" parent="."]
+
+[node name="T11_A" parent="T11" instance=ExtResource("building_13")]
+position = Vector3(-27, 2.2, 125)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "T11-A"
+metadata/source_ref = "T11"
+metadata/zone = "town"
+
+[node name="T11_B" parent="T11" instance=ExtResource("building_4")]
+position = Vector3(-14, 2.2, 131)
+rotation = Vector3(0, 3.141592654, 0)
+metadata/town500_id = "T11-B"
+metadata/source_ref = "T11"
+metadata/zone = "town"
+
+[node name="T11_C" parent="T11" instance=ExtResource("building_5")]
+position = Vector3(-14, 2.2, 118)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "T11-C"
+metadata/source_ref = "T11"
+metadata/zone = "town"
+
+[node name="T12" type="Node3D" parent="."]
+
+[node name="T12_A" parent="T12" instance=ExtResource("building_6")]
+position = Vector3(20, 2.2, 122)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "T12-A"
+metadata/source_ref = "T12"
+metadata/zone = "town"
+
+[node name="T12_B" parent="T12" instance=ExtResource("building_1")]
+position = Vector3(25, 2.2, 138)
+rotation = Vector3(0, 0, 0)
+metadata/town500_id = "T12-B"
+metadata/source_ref = "T12"
+metadata/zone = "town"

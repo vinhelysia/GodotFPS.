@@ -1,0 +1,68 @@
+{
+	"collision_triangles": 11980,
+	"glb_sha256": "f3b7f6d5352223684504fd388c4c03b6d7abb8e1f1a60268d3e8f58a4620b0b3",
+	"import_sha256": "cc3cfd26a1b59659c67d58e31f9388d3aad27c6daae4301ef860483642e1ea4d",
+	"limit": "Editor native import only; controller/Town/terrain/navigation/render/performance remain separate gates.",
+	"materials": [
+		{
+			"material": "soviet_overgrown_details_worn",
+			"mesh": "Details",
+			"texture_size": [
+				2048,
+				2048
+			],
+			"transparency": 0
+		},
+		{
+			"material": "soviet_overgrown_glazing_worn",
+			"mesh": "Glazing",
+			"texture_size": [
+				512,
+				512
+			],
+			"transparency": 4
+		},
+		{
+			"material": "soviet_overgrown_interior_worn",
+			"mesh": "Interior",
+			"texture_size": [
+				2048,
+				2048
+			],
+			"transparency": 0
+		},
+		{
+			"material": "soviet_overgrown_masonry_worn",
+			"mesh": "Masonry",
+			"texture_size": [
+				2048,
+				2048
+			],
+			"transparency": 0
+		},
+		{
+			"material": "soviet_overgrown_vegetation_worn",
+			"mesh": "Vegetation",
+			"texture_size": [
+				1024,
+				1024
+			],
+			"transparency": 0
+		}
+	],
+	"status": "PASS",
+	"unit_root": true,
+	"visual_bounds": [
+		[
+			-20.7800006866455,
+			-2.77999997138977,
+			-9.82587146759033
+		],
+		[
+			20.7800006866455,
+			21.0200004577637,
+			9.90900039672852
+		]
+	],
+	"visual_triangles": 32120
+}

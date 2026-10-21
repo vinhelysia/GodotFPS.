@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Circulation/circulation.tscn" id="base"]
+
+[ext_resource type="Material" path="res://Scene/World/Town500m/Art/GroundArt/asphalt.tres" id="asphalt"]
+
+[ext_resource type="Material" path="res://Scene/World/Town500m/Art/GroundArt/gravel.tres" id="gravel"]
+
+[ext_resource type="Material" path="res://Scene/World/Town500m/Art/GroundArt/trail.tres" id="trail"]
+
+[node name="Circulation" instance=ExtResource("base")]
+
+[node name="asphalt" parent="."]
+material_override = ExtResource("asphalt")
+
+[node name="gravel" parent="."]
+material_override = ExtResource("gravel")
+
+[node name="trail" parent="."]
+material_override = ExtResource("trail")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/farmland_farm_tractor/assets/farmland_farm_tractor_abandoned.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/farmland_farm_tractor/materials/town_farmland_farm_tractor_abandoned_used.tres" id="2_finish"]
+
+[node name="farmland_farm_tractor__abandoned" type="Node3D"]
+metadata/catalog_id = "farmland_farm_tractor"
+metadata/catalog_variant = "abandoned"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="FarmTractorAbandoned" parent="Model/TownFarmTractorAbandoned"]
+surface_material_override/0 = ExtResource("2_finish")

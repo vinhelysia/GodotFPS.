@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/used_tires/assets/used_tire_stacked.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/used_tires/materials/town_used_tires_used.tres" id="2_finish"]
+
+[node name="shared_tire_stack__stacked" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "shared_tire_stack"
+metadata/catalog_variant = "stacked"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="TireBodyStacked" parent="Model/TownUsedTireStacked"]
+surface_material_override/0 = ExtResource("2_finish")

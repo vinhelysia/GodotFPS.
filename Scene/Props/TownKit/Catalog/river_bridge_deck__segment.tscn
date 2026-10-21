@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/river_bridge_deck/assets/river_bridge_deck_segment.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/river_bridge_deck/materials/town_river_bridge_deck_segment_used.tres" id="2_finish"]
+
+[node name="river_bridge_deck__segment" type="Node3D"]
+metadata/catalog_id = "river_bridge_deck"
+metadata/catalog_variant = "segment"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="BridgeDeckSegment" parent="Model/TownBridgeDeckSegment"]
+surface_material_override/0 = ExtResource("2_finish")

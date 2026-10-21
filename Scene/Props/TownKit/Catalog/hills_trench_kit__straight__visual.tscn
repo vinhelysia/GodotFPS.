@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/hills_trench_kit/assets/hills_trench_kit_straight.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/hills_trench_kit/materials/town_hills_trench_kit_straight_used.tres" id="2_finish"]
+
+[node name="hills_trench_kit__straight" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "hills_trench_kit"
+metadata/catalog_variant = "straight"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="TrenchStraight" parent="Model/TownTrenchStraight"]
+surface_material_override/0 = ExtResource("2_finish")

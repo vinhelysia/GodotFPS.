@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Blender/TownKit/props/forest_spruce_tree/textures/forest_spruce_tree_C_dusty_albedo.png" id="1_w625a"]
+[ext_resource type="Texture2D" path="res://Assets/Blender/TownKit/props/forest_spruce_tree/textures/forest_spruce_tree_C_dusty_orm.png" id="2_avwo2"]
+
+[resource]
+resource_name = "forest_spruce_tree_C_dusty"
+albedo_texture = ExtResource("1_w625a")
+metallic = 1.0
+metallic_texture = ExtResource("2_avwo2")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_avwo2")
+roughness_texture_channel = 1
+metadata/seed = 202611650
+metadata/moss_coverage_percent = 3.0

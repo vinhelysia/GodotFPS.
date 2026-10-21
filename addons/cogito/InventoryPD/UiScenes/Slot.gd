@@ -175,6 +175,11 @@ func _on_charge_changed():
 
 
 func _on_gui_input(event: InputEvent):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			slot_pressed.emit(slot_index, "inventory_mouse_drag")
+		get_viewport().set_input_as_handled()
+		return
 	# Setting SLOT GAMPEAD INTERACTIONS HERE
 	if event.is_action_pressed("inventory_move_item"):
 		slot_pressed.emit(slot_index, "inventory_move_item")

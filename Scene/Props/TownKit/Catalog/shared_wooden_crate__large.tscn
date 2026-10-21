@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/wooden_crate/assets/wooden_crate_large.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/wooden_crate/materials/town_wooden_crates_used.tres" id="2_finish"]
+
+[node name="shared_wooden_crate__large" type="Node3D"]
+metadata/catalog_id = "shared_wooden_crate"
+metadata/catalog_variant = "large"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="WoodenCrateLarge" parent="Model/TownWoodenCrateLarge"]
+surface_material_override/0 = ExtResource("2_finish")

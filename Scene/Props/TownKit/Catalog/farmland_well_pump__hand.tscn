@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/farmland_well_pump/assets/farmland_well_pump_hand.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/farmland_well_pump/materials/town_farmland_well_pump_hand_used.tres" id="2_finish"]
+
+[node name="farmland_well_pump__hand" type="Node3D"]
+metadata/catalog_id = "farmland_well_pump"
+metadata/catalog_variant = "hand"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="WellPumpHand" parent="Model/TownWellPumpHand"]
+surface_material_override/0 = ExtResource("2_finish")

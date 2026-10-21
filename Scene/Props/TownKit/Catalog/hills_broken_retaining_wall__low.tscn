@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/hills_broken_retaining_wall/assets/hills_broken_retaining_wall_low.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/hills_broken_retaining_wall/materials/town_hills_broken_retaining_wall_low_used.tres" id="2_finish"]
+
+[node name="hills_broken_retaining_wall__low" type="Node3D"]
+metadata/catalog_id = "hills_broken_retaining_wall"
+metadata/catalog_variant = "low"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="WallLow" parent="Model/TownWallLow"]
+surface_material_override/0 = ExtResource("2_finish")

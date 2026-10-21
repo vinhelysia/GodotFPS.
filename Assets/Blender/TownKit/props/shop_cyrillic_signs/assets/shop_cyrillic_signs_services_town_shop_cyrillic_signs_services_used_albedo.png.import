@@ -1,0 +1,44 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ckk4liasrngqn"
+path.s3tc="res://.godot/imported/shop_cyrillic_signs_services_town_shop_cyrillic_signs_services_used_albedo.png-cd35f04001b7b79a1c95f7b562c37b6f.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "a020eb4e8e4c598c9f3a1abc63f1de32"
+}
+
+[deps]
+
+source_file="res://Assets/Blender/TownKit/props/shop_cyrillic_signs/assets/shop_cyrillic_signs_services_town_shop_cyrillic_signs_services_used_albedo.png"
+dest_files=["res://.godot/imported/shop_cyrillic_signs_services_town_shop_cyrillic_signs_services_used_albedo.png-cd35f04001b7b79a1c95f7b562c37b6f.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

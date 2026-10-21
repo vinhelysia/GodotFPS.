@@ -1,6 +1,12 @@
 # Town 500 × 500 m — implementation plan
 
-Ngày: 2026-10-08. **Planning hoàn tất; chưa implementation map mới.** File dùng .txt theo policy Git hiện có loại Markdown khỏi tracking; không đổi .gitignore.
+Ngày: 2026-10-10. **Phase3 production Town500m đã đạt scoped native acceptance PASS; chưa approval finished art/AI/FPS. Current navmesh10,161 polygons/8,083 vertices, radius0.5m/slope40°. Centroid interpolation đã bỏ gờ terrain giả trên tuyến S2→E-D; direct contact walk hai chiều và full S2→E-D PASS. All8 native route walks,23GF/four upper interiors,bridges/dock,seams,168finite LOS rays và rendered capture PASS trên final source; Town/day-night/deployment baselines PASS. Six upper200m views và dark interiors còn cần balance/art pass; xem checkpoint và phase3-verification.json. Phases4/5 chưa bắt đầu.** File dùng .txt theo policy Git hiện có loại Markdown khỏi tracking; không đổi .gitignore.
+
+Phase3 checkpoint: [phase3/integration-handoff.txt](phase3/integration-handoff.txt). Production Town có76 physical catalogue instances/10 static payloads,32 Town structures trong12 plots,hai cầu và bốn extraction markers. Terrain75,422 dry triangles/151 flat pads. Các receipts Phase0–2 dưới đây là lịch sử, không certify composition hiện tại.
+
+Historical Phase0 checkpoint: [phase0-handoff.txt](phase0-handoff.txt), [layout.json](layout.json), [master-map.svg](master-map.svg), [phase0-verification.json](phase0-verification.json). Catalogue chốt32 Town structures trong12 plots,15 ground/four upper interiors; toàn map76 building/prop instances +two bridges +dock. Eight graph routes và bridge-cut checks PASS. Eleven LOS groups cần composition pass trong [los-action-plan.txt](los-action-plan.txt). MCP không dùng được trong lượt Phase0; đã kết nối và chạy baseline/reusable pilots ở Phase1. Native pilots không xác nhận map500m, terrain/crossing geometry hoặc whole-map navigation/LOS.
+
+Historical Phase2 receipt: [phase2/phase2-verification.json](phase2/phase2-verification.json), [phase2/phase2-handoff.txt](phase2/phase2-handoff.txt). Static entry `res://Scene/World/Town500m/terrain_payload.tscn`:64,975 dry triangles/60 groups,13,961 visual road faces,720 vertical bank faces, two physical bridges, dock/gangway and native deep-water health/death. Final rendered regression PASS2,701 checks:14 grounded traversal walks, stand/crouch/lean,18 boundary probes and one real water death. Jump fixture PASS24 flight cases plus2 controls. Core relief, hill peaks,132 flat patches and13 full-width grade bounds PASS offline. Four Y-only junction/ramp corrections are canonical; XZ layout unchanged. Production Town/settings/bunker/perception bytes match task start. Phase0 LOS receipt remains historical HOLD, not rebound to new hashes by these checks. No map nav bake,8 native spawn/extract routes, production water→Hub/kit-loss or FPS claim yet.
 
 Người dùng chọn **layout trong pack mới**, với ba điều chỉnh đã xác nhận:
 1. River chỉ có hai cầu: county bridge và northern footbridge; bỏ ford/log crossing.
@@ -94,7 +100,7 @@ Các widths, terrain targets, asset budgets và content allocation mới trong p
 | Dressing subagent | Scene/World/Town500m/Dressing; own cover/vegetation data và material overrides | Không buildings/terrain/raid/AI/editor |
 | Modeling chat | Dedicated Blender source/exports/textures/manifests/reports cho approved batches | Không Godot scene/layout authority/editor/tests |
 
-Các payload folders là proposed paths, chưa có files. Bốn concurrent slots gồm primary và ba subagents; primary ghép sequentially. Modeling chat làm source/export riêng. Nhiều MCP ports có thể trỏ cùng editor: không cho workers chiếm editor đồng thời.
+Terrain/Circulation/Water payload folders đã có static files ở Phase2; POI/dressing composition theo Phase3. Bốn concurrent slots gồm primary và ba subagents; primary ghép sequentially. Modeling chat làm source/export riêng. Nhiều MCP ports có thể trỏ cùng editor: không cho workers chiếm editor đồng thời.
 
 Town root và NavigationRegion3D/Level giữ identity. Corpse code hiện dùng world position rồi add trực tiếp vào current scene, nên không đặt toàn raid dưới một map parent đã scale/translate. Preserve needed Persist, Loot, Player, original Scav/patrol và interaction paths; change visual placements qua explicit mapping sau đọc callers.
 
@@ -120,6 +126,8 @@ JSON là offline authoring data. Runtime dùng editable PackedScene instances/st
 
 ## 6. Phase1 — modular building, glass và collision pilots
 
+Checkpoint 2026-10-08: imported6 architecture/roof GLBs +12 matched maps; opaque/glass collider wrappers và narrow Scav vision skip đã vào live code. Five template pilots, closed shed, stair ascent/descent and two level deck proxies được native-test qua MCP; actual pane/player/bullet coverage riêng. `phase1/phase1-verification.json` và `phase1/phase1-handoff.txt` giữ final evidence/limits. `phase1/legacy-remap.json` liệt kê exact33 old roots +54 new reusable placements, retirement vẫn deferred Phase3. Không giữ old33/17/4 như500m acceptance; Town production placements, raid/save và terrain/nav chưa đổi. Phase2 tiếp theo là terrain/hydrology/two bridges;11 LOS groups vẫn HOLD cho full map graybox.
+
 **Owner:** architecture/modeling source pilots; primary native checks.
 
 1. Chọn pilots cottage/store/civic/warehouse/shed từ new functions, reuse14 existing templates khi dimensions phù hợp.
@@ -134,13 +142,15 @@ JSON là offline authoring data. Runtime dùng editable PackedScene instances/st
 
 ## 7. Phase2 — terrain, hydrology, two bridges
 
+Checkpoint 2026-10-08: isolated payload native PASS; see Phase2 receipt/handoff above. Production slab/roads remain until Phase3 assembly. Four canonical height corrections preserve XZ/widths. Water/bed have no floor collider or nav source; actual post-bake water/nav absence remains Phase3. Whole-edge adversarial step-chain tests remain composition acceptance; direct9 walk+9 sprint/jump probes and2m perimeter samples pass now.
+
 **Owner:** terrain worker; primary integration/native verification.
 
 1. Build continuous terrain với static chunks khoảng100 m cho authoring/culling, không runtime streaming.
 2. Hills15–20 m, core relief≤3 m, flat building/road/bridge pads. Elevation thật từ graybox, không để tới sau finished art.
 3. New P01/core roads là authority; remove superseded old slab/roads trong active composition sau backup, không delete reusable assets.
 4. River open gap≥max(20 m, measured maximum jump reach+6 m). Measure actual sprint/slide-jump/bunnyhop/air-step/elevated takeoff; nearby rocks/logs không thành crossing chain.
-5. Bridge span = actual bank gap theo deck axis+6 m. County6+1+1 m, footbridge clear2.5 m; guardrails không lấn clear corridor; actual deck floor collision.
+5. R01 span32.955778 m = bank-axis gap20.955778 +6 m landing mỗi bên; clear8 m (county6+1+1). R02 span26 m = gap20 +3 m landing mỗi bên; clear2.5 m. Guardrails ngoài clear corridor; actual deck floor collision.
 6. Banks/roads/trails/decks có continuous approaches, slopes và safety margins. Deep-water/bed không nav source: không để combined layer1 terrain collider mang cả submerged walkable bed vào bake. Rendered bed có thể không có collider; dry terrain/deck collider ownership tách rõ. Water joins north→lake→south/east không walkaround.
 7. Author deep-water Area ngoài bank/deck safe volumes; primary reuse health/death flow, không direct clear kit/teleport.
 

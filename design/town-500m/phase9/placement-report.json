@@ -1,0 +1,131 @@
+{
+  "status": "OFFLINE_CHECKS_PASS_NATIVE_PENDING",
+  "seed": 20261023,
+  "counts": {
+    "grass_tufts": 4651,
+    "shrubs": 12,
+    "debris": 18,
+    "instances": 4681,
+    "multimeshes": 12,
+    "total_visual_triangles": 89442
+  },
+  "generated_grass": 4389,
+  "retained_grass_unchanged": 262,
+  "replaced_v2_grass": 638,
+  "unchanged_reused": 30,
+  "candidates": 25448,
+  "rejected_candidates": 21059,
+  "new_grass_by_kind": {
+    "short": 1519,
+    "dry": 2091,
+    "tall": 352,
+    "weed": 427
+  },
+  "pockets": {
+    "road": {
+      "candidates": 21285,
+      "accepted": 3068,
+      "by_kind": {
+        "short": 1112,
+        "dry": 1455,
+        "tall": 226,
+        "weed": 275
+      }
+    },
+    "north_tree": {
+      "candidates": 918,
+      "accepted": 389,
+      "by_kind": {
+        "short": 130,
+        "dry": 190,
+        "tall": 49,
+        "weed": 20
+      }
+    },
+    "west_tree": {
+      "candidates": 2812,
+      "accepted": 774,
+      "by_kind": {
+        "short": 252,
+        "dry": 385,
+        "tall": 77,
+        "weed": 60
+      }
+    },
+    "entry_south": {
+      "candidates": 339,
+      "accepted": 95,
+      "by_kind": {
+        "short": 15,
+        "dry": 38,
+        "tall": 0,
+        "weed": 42
+      }
+    },
+    "entry_north": {
+      "candidates": 94,
+      "accepted": 63,
+      "by_kind": {
+        "short": 10,
+        "dry": 23,
+        "tall": 0,
+        "weed": 30
+      }
+    }
+  },
+  "minimum_new_grass_footprint_clearance_m": {
+    "road": 0.150151,
+    "spur": 1.107557,
+    "apartment": 0.73485,
+    "building": 6.957704,
+    "tree": 0.821743,
+    "service": 20.768251,
+    "reused": 0.040409,
+    "camera": 0.570307
+  },
+  "max_new_grass_slope_deg": 5.077968,
+  "grass_triangles": 69834,
+  "reused_triangles": 19608,
+  "native_support": "PENDING",
+  "first_person_art": "PENDING",
+  "performance": "PENDING",
+  "apartment_tree_source": {
+    "path": "Scene/World/Town500m/Art/apartment_pilot.tscn",
+    "trees": [
+      {
+        "node": "BirchWest",
+        "xz_m": [
+          -179.5,
+          77
+        ]
+      },
+      {
+        "node": "BirchNorth",
+        "xz_m": [
+          -178.5,
+          42.5
+        ]
+      },
+      {
+        "node": "BirchEast",
+        "xz_m": [
+          -151,
+          81
+        ]
+      }
+    ]
+  },
+  "exact_road_triangles_considered": 1093,
+  "exact_spur_triangles_considered": 20,
+  "preservation": {
+    "source_plan_unchanged": true,
+    "reused_rows_unchanged": true,
+    "placements_outside_pockets_unchanged": true,
+    "writes_only_phase9": true
+  },
+  "limits": [
+    "Native roots/collision/navigation/rendering/performance owned by primary integration.",
+    "Value-noise density does not simulate moisture; original material leaf detail is retained.",
+    "No new physics or AI concealment/penetration behavior."
+  ]
+}

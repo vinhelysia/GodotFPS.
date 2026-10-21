@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/playground_swing/assets/playground_swing_with_seat.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/playground_swing/materials/town_playground_swing_with_seat_used.tres" id="2_finish"]
+
+[node name="town_playground_swing__with-seat" type="Node3D"]
+metadata/catalog_id = "town_playground_swing"
+metadata/catalog_variant = "with-seat"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="PlaygroundSwingWithSeat" parent="Model/TownPlaygroundSwingWithSeat"]
+surface_material_override/0 = ExtResource("2_finish")

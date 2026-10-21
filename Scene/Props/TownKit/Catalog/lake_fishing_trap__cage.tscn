@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/lake_fishing_trap/assets/lake_fishing_trap_cage.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/lake_fishing_trap/materials/town_lake_fishing_trap_cage_used.tres" id="2_finish"]
+
+[node name="lake_fishing_trap__cage" type="Node3D"]
+metadata/catalog_id = "lake_fishing_trap"
+metadata/catalog_variant = "cage"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="FishingTrapCage" parent="Model/TownFishingTrapCage"]
+surface_material_override/0 = ExtResource("2_finish")

@@ -236,6 +236,11 @@ func _refresh_ammo_counter() -> void:
 
 
 func _on_gui_input(event: InputEvent):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			equipment_slot_clicked.emit(equipment, slot_id, "inventory_mouse_drag")
+		get_viewport().set_input_as_handled()
+		return
 	if event.is_action_pressed("inventory_move_item"):
 		equipment_slot_clicked.emit(equipment, slot_id, "inventory_move_item")
 		get_viewport().set_input_as_handled()

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/World/Town500m/Water/water.tscn" id="base"]
+
+[ext_resource type="Material" path="res://Scene/World/Town500m/Art/GroundArt/retaining.tres" id="bank"]
+
+[node name="Water" instance=ExtResource("base")]
+
+[node name="BankFaces" parent="."]
+material_override = ExtResource("bank")

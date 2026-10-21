@@ -1,0 +1,337 @@
+[gd_scene load_steps=22 format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/forest_birch_tree__B.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/farmland_farm_tractor__abandoned.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/farmland_farm_trailer__empty.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/farmland_plough_attachment__multi-furrow.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/farmland_wood_cart__loaded.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/farmland_grain_hopper__tall.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/farmland_wheelbarrow__loaded.tscn" id="7"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/farmland_feed_sack_stack__stack.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/farmland_water_trough__filled.tscn" id="9"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/farmland_well_pump__hand.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/farmland_firewood_stack__stack.tscn" id="11"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/farmland_farm_small_clutter__milk-can.tscn" id="12"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/farmland_farm_small_clutter__bucket.tscn" id="13"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wooden_crate__large.tscn" id="14"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wood_pallet__empty.tscn" id="15"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/farmland_hay_bale__round.tscn" id="16"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/farmland_hay_bale__rectangular.tscn" id="17"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/farmland_wood_cart__empty.tscn" id="18"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/farmland_farm_gate__open.tscn" id="19"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_concrete_utility_pole__insulators.tscn" id="20"]
+[ext_resource type="PackedScene" path="res://Scene/Props/TownKit/Catalog/shared_wood_post_sign__direction.tscn" id="21"]
+
+[node name="farmland" type="Node3D"]
+
+[node name="OT-A001" parent="." instance=ExtResource("1")]
+position = Vector3(-237.84, 2.005, 71.14)
+rotation = Vector3(0, 2.792527, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-A001"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-A002" parent="." instance=ExtResource("1")]
+position = Vector3(-231.7, 2.005, 52.95)
+rotation = Vector3(0, 3.612832, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-A002"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-A003" parent="." instance=ExtResource("1")]
+position = Vector3(-214.55, 2.005, 156.02)
+rotation = Vector3(0, 4.433136, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-A003"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-A004" parent="." instance=ExtResource("1")]
+position = Vector3(-194.188, 1.77059, 92.028)
+rotation = Vector3(0, 5.253441, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-A004"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-A005" parent="." instance=ExtResource("1")]
+position = Vector3(-205.23, 1.999209, 60)
+rotation = Vector3(0, 6.073746, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-A005"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-A006" parent="." instance=ExtResource("1")]
+position = Vector3(-178.18, 2.005, 89.09)
+rotation = Vector3(0, 0.610865, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-A006"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-A007" parent="." instance=ExtResource("1")]
+position = Vector3(-180, 1.990728, 100.91)
+rotation = Vector3(0, 1.43117, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-A007"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-A008" parent="." instance=ExtResource("1")]
+position = Vector3(-236.82, 2.005, 82.27)
+rotation = Vector3(0, 2.251475, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-A008"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-A009" parent="." instance=ExtResource("1")]
+position = Vector3(-213.64, 2.005, 138.52)
+rotation = Vector3(0, 3.071779, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-A009"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-A010" parent="." instance=ExtResource("1")]
+position = Vector3(-183.52, 1.938555, 57.95)
+rotation = Vector3(0, 3.892084, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-A010"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-A011" parent="." instance=ExtResource("1")]
+position = Vector3(-240.195, 1.789875, 146.618)
+rotation = Vector3(0, 4.712389, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-A011"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-A012" parent="." instance=ExtResource("1")]
+position = Vector3(-219.77, 2.005, 143.75)
+rotation = Vector3(0, 5.532694, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-A012"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OT-A013" parent="." instance=ExtResource("1")]
+position = Vector3(-227.61, 2.005, 63.41)
+rotation = Vector3(0, 0.069813, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OT-A013"
+metadata/catalog_id = "forest_birch_tree"
+metadata/role = "Native-size tree replacing its named canonical vegetation proxy"
+
+[node name="OA-tractor" parent="." instance=ExtResource("2")]
+position = Vector3(-207, 1.975, 95)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-tractor"
+metadata/catalog_id = "farmland_farm_tractor"
+metadata/role = "Tractor parked north of A04 barn service wall"
+
+[node name="OA-trailer" parent="." instance=ExtResource("3")]
+position = Vector3(-212.4, 1.975, 95)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-trailer"
+metadata/catalog_id = "farmland_farm_trailer"
+metadata/role = "Unhitched trailer aligned beside tractor"
+
+[node name="OA-plough" parent="." instance=ExtResource("4")]
+position = Vector3(-205, 1.994, 91.2)
+rotation = Vector3(0, 0.261799, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-plough"
+metadata/catalog_id = "farmland_plough_attachment"
+metadata/role = "Detached plough in machinery service patch"
+
+[node name="OA-cart" parent="." instance=ExtResource("5")]
+position = Vector3(-216.5, 1.9725, 95.5)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-cart"
+metadata/catalog_id = "farmland_wood_cart"
+metadata/role = "Timber cart by barn west return"
+
+[node name="OA-hopper" parent="." instance=ExtResource("6")]
+position = Vector3(-205, 1.5, 115)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-hopper"
+metadata/catalog_id = "farmland_grain_hopper"
+metadata/role = "Grain hopper adjacent to A04 feed end"
+
+[node name="OA-wheelbarrow" parent="." instance=ExtResource("7")]
+position = Vector3(-207.6, 1.5, 115.5)
+rotation = Vector3(0, 0.698132, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-wheelbarrow"
+metadata/catalog_id = "farmland_wheelbarrow"
+metadata/role = "Feed handling wheelbarrow beside hopper"
+
+[node name="OA-feed-01" parent="." instance=ExtResource("8")]
+position = Vector3(-202.8, 1.55, 115)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-feed-01"
+metadata/catalog_id = "farmland_feed_sack_stack"
+metadata/role = "Bagged feed beside hopper, visibly hand-sized"
+
+[node name="OA-feed-02" parent="." instance=ExtResource("8")]
+position = Vector3(-203.4, 1.5125, 117)
+rotation = Vector3(0, 0.174533, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-feed-02"
+metadata/catalog_id = "farmland_feed_sack_stack"
+metadata/role = "Separate second feed stack with access around it"
+
+[node name="OA-trough" parent="." instance=ExtResource("9")]
+position = Vector3(-196, 1.718336, 146.5)
+rotation = Vector3(-0.046551, 0.003529, -0.075695)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-trough"
+metadata/catalog_id = "farmland_water_trough"
+metadata/role = "Livestock trough outside A05 shelter"
+
+[node name="OA-pump" parent="." instance=ExtResource("10")]
+position = Vector3(-196, 1.808333, 148)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-pump"
+metadata/catalog_id = "farmland_well_pump"
+metadata/role = "Hand pump serving trough"
+
+[node name="OA-firewood" parent="." instance=ExtResource("11")]
+position = Vector3(-201.4, 3.236784, -28)
+rotation = Vector3(0.237422, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-firewood"
+metadata/catalog_id = "farmland_firewood_stack"
+metadata/role = "Firewood beside farmhouse east side"
+
+[node name="OA-milkcan" parent="." instance=ExtResource("12")]
+position = Vector3(-202.2, 3.30743, -30.4)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-milkcan"
+metadata/catalog_id = "farmland_farm_small_clutter"
+metadata/role = "Milk can beside farmhouse work corner"
+
+[node name="OA-bucket" parent="." instance=ExtResource("13")]
+position = Vector3(-201.5, 3.27992, -30.4)
+rotation = Vector3(-0.008262, 0.176574, -0.242215)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-bucket"
+metadata/catalog_id = "farmland_farm_small_clutter"
+metadata/role = "Water bucket in farmhouse work corner"
+
+[node name="OA-barn-feed-01" parent="." instance=ExtResource("8")]
+position = Vector3(-157, 1.7, 207.8)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-barn-feed-01"
+metadata/catalog_id = "farmland_feed_sack_stack"
+metadata/role = "Feed sacks in rear west barn storage bay"
+
+[node name="OA-barn-feed-02" parent="." instance=ExtResource("8")]
+position = Vector3(-155.4, 1.7, 207.8)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-barn-feed-02"
+metadata/catalog_id = "farmland_feed_sack_stack"
+metadata/role = "Second feed stack in rear barn bay"
+
+[node name="OA-barn-crate" parent="." instance=ExtResource("14")]
+position = Vector3(-141, 1.7, 207.7)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-barn-crate"
+metadata/catalog_id = "shared_wooden_crate"
+metadata/role = "Barn tools in rear east storage bay"
+
+[node name="OA-barn-pallet" parent="." instance=ExtResource("15")]
+position = Vector3(-142, 1.7, 205.2)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-barn-pallet"
+metadata/catalog_id = "shared_wood_pallet"
+metadata/role = "Empty feed pallet beside barn storage"
+
+[node name="OA-hay-01" parent="." instance=ExtResource("16")]
+position = Vector3(-163.5, 1.630004, 212.2)
+rotation = Vector3(-0.030002, 0.001808, -0.060196)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-hay-01"
+metadata/catalog_id = "farmland_hay_bale"
+metadata/role = "Round bale in side barn yard"
+
+[node name="OA-hay-02" parent="." instance=ExtResource("16")]
+position = Vector3(-165.1, 1.732414, 212.4)
+rotation = Vector3(-0.016864, 0.210539, -0.065104)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-hay-02"
+metadata/catalog_id = "farmland_hay_bale"
+metadata/role = "Second round bale in barn stock cluster"
+
+[node name="OA-hay-03" parent="." instance=ExtResource("17")]
+position = Vector3(-163.8, 1.701807, 214)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-hay-03"
+metadata/catalog_id = "farmland_hay_bale"
+metadata/role = "Small square bale beside round stock"
+
+[node name="OA-hay-04" parent="." instance=ExtResource("16")]
+position = Vector3(-55, 2, 210.5)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-hay-04"
+metadata/catalog_id = "farmland_hay_bale"
+metadata/role = "Hay stock on A07 southern service side"
+
+[node name="OA-cart-02" parent="." instance=ExtResource("18")]
+position = Vector3(-48, 2, 210.5)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-cart-02"
+metadata/catalog_id = "farmland_wood_cart"
+metadata/role = "Household cart beside A07 service yard"
+
+[node name="OA-tools-02" parent="." instance=ExtResource("13")]
+position = Vector3(-49.9, 2, 210.7)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-tools-02"
+metadata/catalog_id = "farmland_farm_small_clutter"
+metadata/role = "Bucket near household cart"
+
+[node name="OA-farmgate" parent="." instance=ExtResource("19")]
+position = Vector3(-180, 2, -28)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "OA-farmgate"
+metadata/catalog_id = "farmland_farm_gate"
+metadata/role = "Open loose-leaf gate at A02 tool-yard side, does not span a circulation route"
+
+[node name="S_POLE_W" parent="." instance=ExtResource("20")]
+position = Vector3(-175, 2, 5)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_POLE_W"
+metadata/catalog_id = "shared_concrete_utility_pole"
+metadata/role = "Remnant roadside utility line; no powered gameplay dependency"
+
+[node name="S_FARM_SIGN" parent="." instance=ExtResource("21")]
+position = Vector3(-175, 1.84375, 177)
+rotation = Vector3(0, 1.570796, 0)
+scale = Vector3(1, 1, 1)
+metadata/town_prop_id = "S_FARM_SIGN"
+metadata/catalog_id = "shared_wood_post_sign"
+metadata/role = "Farm approach direction marker on the verge, outside the extraction pad"

@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-19",
+  "scope": "Four visual-only wall mount corrections after physical acceptance; final capture validates current visual revision.",
+  "before": {
+    "physics_geometry_signature": "cb20e96dc3015b05d4ee27a5d382d54391f0024a712e62b04045e0ed0ae6a409",
+    "source": {
+      "source_indices": 890364,
+      "source_bounds": "[P: (-250.0, -0.35, -250.0), S: (500.0, 28.35, 500.0)]",
+      "roof_exclusions": 76,
+      "visual_only_shapes_excluded": 243
+    },
+    "nav_polygons": 11841,
+    "new_lights": 0
+  },
+  "after": {
+    "physics_geometry_signature": "cb20e96dc3015b05d4ee27a5d382d54391f0024a712e62b04045e0ed0ae6a409",
+    "equal_before_visual_revision": true,
+    "source": {
+      "source_indices": 890364,
+      "source_bounds": "[P: (-250.0, -0.35, -250.0), S: (500.0, 28.35, 500.0)]",
+      "roof_exclusions": 76,
+      "visual_only_shapes_excluded": 243
+    }
+  },
+  "physical_test_fixture_change": "Only five extra capture camera views and capture-count guard added after full-route tests; physical test paths/contact logic unchanged.",
+  "transforms": [
+    {
+      "id": "OB-B05-breaker",
+      "before_xyz": [
+        -198.13,
+        11.56,
+        -147
+      ],
+      "after_xyz": [
+        -198.005,
+        11.56,
+        -147
+      ],
+      "collision_policy": "visual_only"
+    },
+    {
+      "id": "OB-B05-duct",
+      "before_xyz": [
+        -199.15,
+        12.45,
+        -147
+      ],
+      "after_xyz": [
+        -198.505,
+        12.45,
+        -145
+      ],
+      "collision_policy": "visual_only"
+    },
+    {
+      "id": "OB-B06-stop",
+      "before_xyz": [
+        -146,
+        11.55,
+        -126.37
+      ],
+      "after_xyz": [
+        -146,
+        11.55,
+        -126.495
+      ],
+      "collision_policy": "visual_only"
+    },
+    {
+      "id": "OL-lifering",
+      "before_xyz": [
+        188,
+        3.05,
+        135.87
+      ],
+      "after_xyz": [
+        188,
+        3.05,
+        135.995
+      ],
+      "collision_policy": "visual_only"
+    }
+  ]
+}

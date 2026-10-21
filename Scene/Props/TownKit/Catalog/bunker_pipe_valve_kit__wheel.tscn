@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/bunker_pipe_valve_kit/assets/bunker_pipe_valve_kit_wheel.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/bunker_pipe_valve_kit/materials/town_bunker_pipe_valve_kit_wheel_used.tres" id="2_finish"]
+
+[node name="bunker_pipe_valve_kit__wheel" type="Node3D"]
+metadata/catalog_id = "bunker_pipe_valve_kit"
+metadata/catalog_variant = "wheel"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="PipeValve" parent="Model/TownBunkerPipeValve"]
+surface_material_override/0 = ExtResource("2_finish")

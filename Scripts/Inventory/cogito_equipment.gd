@@ -26,6 +26,9 @@ const EQUIPMENT_ORIGIN: Dictionary[StringName, int] = {
 func can_equip(slot_id: StringName, slot_data: InventorySlotPD) -> bool:
 	if slot_data == null or slot_data.inventory_item == null:
 		return false
+	var equipped_slot := get_equipped(slot_id)
+	if equipped_slot and equipped_slot.inventory_item and equipped_slot.inventory_item.is_being_wielded:
+		return false
 		
 	var item = slot_data.inventory_item
 	

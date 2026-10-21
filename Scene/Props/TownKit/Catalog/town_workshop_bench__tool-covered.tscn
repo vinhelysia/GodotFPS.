@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/workshop_bench/assets/workshop_bench_tool_covered.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/workshop_bench/materials/town_workshop_bench_tool_covered_used.tres" id="2_finish"]
+
+[node name="town_workshop_bench__tool-covered" type="Node3D"]
+metadata/catalog_id = "town_workshop_bench"
+metadata/catalog_variant = "tool-covered"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="WorkshopBenchToolCovered" parent="Model/TownWorkshopBenchToolCovered"]
+surface_material_override/0 = ExtResource("2_finish")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/farmland_plough_attachment/assets/farmland_plough_attachment_multi-furrow.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/farmland_plough_attachment/materials/town_farmland_plough_attachment_multi-furrow_used.tres" id="2_finish"]
+
+[node name="farmland_plough_attachment__multi-furrow" type="Node3D"]
+metadata/catalog_id = "farmland_plough_attachment"
+metadata/catalog_variant = "multi-furrow"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="PloughMultiFurrow" parent="Model/TownPloughMultiFurrow"]
+surface_material_override/0 = ExtResource("2_finish")

@@ -43,6 +43,10 @@ var is_inventory_open : bool:
 		set_process_input(is_inventory_open)
 		inventory_open.emit(is_inventory_open)
 var grabbed_slot_data: InventorySlotPD
+var _mouse_drag_source: Dictionary = {}
+var _mouse_drag_slot: InventorySlotPD
+var _mouse_drag_snapshot: InventorySlotPD
+var _mouse_drag_weapon: WieldableItemPD
 var external_inventory_owner : Node
 var _external_inventory_button_press: Callable
 var control_in_focus
@@ -155,6 +159,8 @@ func open_inventory():
 ## Returns grabbed cursor item to player inventory. Fail-closed: only clears
 ## the cursor when quantity is fully consumed. Partial remainder stays grabbed.
 func _try_return_grabbed_to_player() -> bool:
+	if not _mouse_drag_source.is_empty():
+		cancel_mouse_drag()
 	if grabbed_slot_data == null:
 		return true
 	get_parent().player.inventory_data.pick_up_slot_data(grabbed_slot_data)
@@ -173,7 +179,7 @@ func close_inventory() -> bool:
 		return false
 	is_inventory_open = false
 	get_viewport().gui_focus_changed.disconnect(_on_focus_changed)
-	if control_in_focus:
+	if is_instance_valid(control_in_focus):
 		control_in_focus.release_focus()
 
 	# Clearing out UI grabbed slot
@@ -275,6 +281,11 @@ func update_grabbed_slot_position():
 
 
 func _physics_process(_delta):
+	if not _mouse_drag_source.is_empty():
+		if not _drag_source_is_visible():
+			cancel_mouse_drag()
+		else:
+			return
 	if InputHelper.device_index == -1: #Checking for keyboard/mouse control.
 		if grabbed_slot_node.visible:
 			grabbed_slot_node.global_position = get_global_mouse_position() + Vector2(5, 5)
@@ -285,6 +296,7 @@ func _physics_process(_delta):
 
 
 func set_external_inventory(_external_inventory_owner):
+	cancel_mouse_drag()
 	if external_inventory_owner != _external_inventory_owner:
 		clear_external_inventory()
 	external_inventory_owner = _external_inventory_owner
@@ -357,6 +369,7 @@ func _take_all_from_equipment(source_equipment: CogitoEquipment, player: Node) -
 
 
 func clear_external_inventory():
+	cancel_mouse_drag()
 	if external_inventory_owner:
 		var inventory_data = external_inventory_owner.inventory_data
 
@@ -466,6 +479,13 @@ func _mod_weapon_in_slot(slot_data: InventorySlotPD) -> void:
 
 # Inventory handling on gamepad buttons
 func on_inventory_button_press(inventory_data: CogitoInventory, index: int, action: String, local_inventory_ui):
+	if action == "inventory_mouse_drag":
+		var source := inventory_data.get_slot_data(index)
+		if source:
+			_begin_mouse_drag({"owner": inventory_data, "index": source.origin_index}, source)
+		return
+	if not _mouse_drag_source.is_empty():
+		return
 	match [grabbed_slot_data, action]:
 		[null, "inventory_move_item"]:
 			# Check if item is being wielded before grabbing it.
@@ -511,6 +531,9 @@ func on_inventory_button_press(inventory_data: CogitoInventory, index: int, acti
 						grabbed_slot_data = null
 		
 		[null, "inventory_assign_item"]: # Pressing "Assign quickslot" on gamepad
+			if _is_slot_wielded(inventory_data.get_slot_data(index)):
+				Audio.play_sound(sound_error)
+				return
 			CogitoGlobals.debug_log(true, "inventory_interface.gd", "Grabbing focus of quickslots.")
 			grabbed_slot_data = inventory_data.grab_slot_data(index)
 			quick_slots.quickslot_containers[0].grab_focus.call_deferred()
@@ -541,6 +564,11 @@ func on_inventory_button_press(inventory_data: CogitoInventory, index: int, acti
 ## for both, letting items cross between the player and a corpse's equipment.
 func _on_equipment_slot_pressed(equipment_instance: CogitoEquipment, slot_id: StringName, action: String):
 	if equipment_instance == null:
+		return
+	if action == "inventory_mouse_drag":
+		_begin_mouse_drag({"owner": equipment_instance, "index": slot_id}, equipment_instance.get_equipped(slot_id))
+		return
+	if not _mouse_drag_source.is_empty():
 		return
 	var player = get_parent().player
 	if not player or not player.get("equipment"):
@@ -684,9 +712,221 @@ func update_grabbed_slot():
 
 
 func _input(event: InputEvent) -> void:
+	if not _mouse_drag_source.is_empty():
+		if event is InputEventMouseMotion:
+			grabbed_slot_node.global_position = event.position + Vector2(5, 5)
+		if event is InputEventMouseButton:
+			get_viewport().set_input_as_handled()
+			if event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
+				_finish_mouse_drag(event.position)
+			return
+		if event is InputEventKey and event.pressed and (event.keycode == KEY_ESCAPE or event.physical_keycode == KEY_ESCAPE):
+			cancel_mouse_drag()
+			get_viewport().set_input_as_handled()
+			return
+		for action in ["inventory_move_item", "inventory_use_item", "inventory_drop_item", "inventory_assign_item", "inventory_detach_item", "inventory_mod_item"]:
+			if event.is_action_pressed(action):
+				get_viewport().set_input_as_handled()
+				return
 	if event.is_action_pressed("inventory_rotate_item") and grabbed_slot_data:
 		get_viewport().set_input_as_handled()
 		rotate_item()
+
+
+func _is_slot_wielded(slot: InventorySlotPD) -> bool:
+	if slot == null or slot.inventory_item == null:
+		return false
+	var player = get_parent().player
+	return slot.inventory_item.is_being_wielded or (player and player.player_interaction_component.equipped_wieldable_item == slot.inventory_item)
+
+
+func _begin_mouse_drag(source: Dictionary, slot: InventorySlotPD) -> void:
+	if not is_inventory_open or grabbed_slot_data != null or slot == null or _is_slot_wielded(slot):
+		return
+	_mouse_drag_source = source
+	_mouse_drag_slot = slot
+	_mouse_drag_snapshot = slot.duplicate(false)
+	_mouse_drag_weapon = source.owner.weapon_item if source.owner is AttachmentEquipment else null
+	if _mouse_drag_weapon and _is_slot_wielded(_weapon_slot(_mouse_drag_weapon)):
+		cancel_mouse_drag()
+		return
+	# Keep the live slot owned by its source until release; only rotate the preview.
+	grabbed_slot_data = slot.duplicate(false)
+	update_grabbed_slot()
+
+
+func cancel_mouse_drag() -> void:
+	if _mouse_drag_source.is_empty():
+		return
+	_mouse_drag_source = {}
+	_mouse_drag_slot = null
+	_mouse_drag_snapshot = null
+	_mouse_drag_weapon = null
+	grabbed_slot_data = null
+	update_grabbed_slot()
+
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_WINDOW_FOCUS_OUT:
+		cancel_mouse_drag()
+
+
+func _weapon_slot(weapon: WieldableItemPD) -> InventorySlotPD:
+	var slot := InventorySlotPD.new()
+	slot.inventory_item = weapon
+	return slot
+
+
+func _drag_slot_at(location: Dictionary) -> InventorySlotPD:
+	if location.owner is CogitoInventory:
+		if location.index < 0 or location.index >= location.owner.inventory_slots.size():
+			return null
+		return location.owner.get_slot_data(location.index)
+	return location.owner.get_equipped(location.index)
+
+
+func _drag_inventory_preview(inventory: CogitoInventory, removed: Array) -> CogitoInventory:
+	var preview := inventory.duplicate(false) as CogitoInventory
+	preview.inventory_slots = inventory.inventory_slots.duplicate()
+	for index in preview.inventory_slots.size():
+		if preview.inventory_slots[index] in removed:
+			preview.inventory_slots[index] = null
+	return preview
+
+
+func _drag_fits(location: Dictionary, slot: InventorySlotPD, removed: Array, occupied: Dictionary = {}) -> bool:
+	if location.owner is CogitoEquipment:
+		if location.owner is AttachmentEquipment:
+			if slot.quantity != 1 or _is_slot_wielded(_weapon_slot(location.owner.weapon_item)):
+				return false
+		return location.owner.can_equip(location.index, slot)
+	var preview := _drag_inventory_preview(location.owner, removed)
+	if not occupied.is_empty() and occupied.owner == location.owner:
+		preview.inventory_slots[occupied.index] = grabbed_slot_data
+		preview.add_adjacent_slots(occupied.index)
+	return preview.is_enough_space(slot, location.index, true)
+
+
+func _drag_remove(location: Dictionary, slot: InventorySlotPD) -> InventorySlotPD:
+	if location.owner is CogitoInventory:
+		location.owner.null_out_slots(slot)
+		return slot
+	# Detaching a magazine returns its per-instance rounds, not the authored item.
+	return location.owner.unequip(location.index)
+
+
+func _drag_put(location: Dictionary, slot: InventorySlotPD) -> void:
+	if location.owner is CogitoInventory:
+		slot.origin_index = location.index
+		location.owner.inventory_slots[location.index] = slot
+		location.owner.add_adjacent_slots(location.index)
+	else:
+		location.owner.equip(location.index, slot)
+		if location.owner == get_parent().player.equipment:
+			_notify_player_equipped(slot)
+
+
+func _drag_target(position: Vector2) -> Dictionary:
+	var equipment_controls: Array = equipment_slots_ui.values() + external_equipment_slots_ui.values()
+	if attachment_panel and attachment_panel.is_visible_in_tree() and attachment_panel.get_global_rect().has_point(position):
+		equipment_controls = attachment_panel.collect_slots().values()
+		for slot in equipment_controls:
+			if slot.is_visible_in_tree() and slot.get_global_rect().has_point(position):
+				return {"owner": slot.equipment, "index": slot.slot_id}
+		return {}
+	for slot in equipment_controls:
+		if slot.is_visible_in_tree() and slot.get_global_rect().has_point(position):
+			return {"owner": slot.equipment, "index": slot.slot_id}
+	for grid_ui in [inventory_ui, external_inventory_ui]:
+		if not grid_ui.is_visible_in_tree():
+			continue
+		for slot in grid_ui.slot_array:
+			if is_instance_valid(slot) and slot.get_global_rect().has_point(position):
+				return {"owner": grid_ui.loaded_inventory_data, "index": slot.slot_index}
+	return {}
+
+
+func _drag_source_is_visible() -> bool:
+	var source = _mouse_drag_source.owner
+	if source is CogitoInventory:
+		return (inventory_ui.is_visible_in_tree() and inventory_ui.loaded_inventory_data == source) \
+				or (external_inventory_ui.is_visible_in_tree() and external_inventory_ui.loaded_inventory_data == source)
+	var controls: Array = equipment_slots_ui.values() + external_equipment_slots_ui.values()
+	if attachment_panel:
+		controls.append_array(attachment_panel.collect_slots().values())
+	for slot in controls:
+		if slot.is_visible_in_tree() and slot.equipment == source:
+			return true
+	return false
+
+
+func _finish_mouse_drag(position: Vector2) -> void:
+	var source_slot := _mouse_drag_slot
+	if source_slot == null:
+		return
+	var snapshot := _mouse_drag_snapshot
+	if not _drag_source_is_visible() or _drag_slot_at(_mouse_drag_source) != source_slot or _is_slot_wielded(source_slot) \
+			or source_slot.inventory_item != snapshot.inventory_item or source_slot.quantity != snapshot.quantity \
+			or source_slot.origin_index != snapshot.origin_index or source_slot.is_rotated != snapshot.is_rotated:
+		cancel_mouse_drag()
+		return
+	if _mouse_drag_source.owner is AttachmentEquipment and (_mouse_drag_source.owner.weapon_item != _mouse_drag_weapon \
+			or _is_slot_wielded(_weapon_slot(_mouse_drag_weapon))):
+		cancel_mouse_drag()
+		return
+	for quickslot in quick_slots.quickslot_containers:
+		if quickslot.is_visible_in_tree() and quickslot.get_global_rect().has_point(position):
+			if _mouse_drag_source.owner == get_parent().player.equipment:
+				quick_slots.bind_to_quickslot(source_slot, quickslot)
+			cancel_mouse_drag()
+			return
+	var target := _drag_target(position)
+	if not target.is_empty():
+		_commit_mouse_drag(target)
+	cancel_mouse_drag()
+
+
+func _commit_mouse_drag(target: Dictionary) -> void:
+	var source := _mouse_drag_source
+	var slot := _mouse_drag_slot
+	var displaced := _drag_slot_at(target)
+	if displaced == slot or _is_slot_wielded(displaced):
+		return
+	var target_inventory: CogitoInventory = target.owner if target.owner is CogitoInventory else get_parent().player.inventory_data
+	if target.owner is CogitoInventory and displaced and slot.inventory_item is AmmoItemPD and displaced.inventory_item is AttachmentItemPD:
+		var loaded := target_inventory._load_magazine(displaced.inventory_item, slot.inventory_item, slot.quantity)
+		slot.quantity -= loaded
+		if slot.quantity <= 0:
+			_drag_remove(source, slot)
+	elif displaced and displaced.can_fully_merge_with(slot):
+		displaced.fully_merge_with(slot)
+		_drag_remove(source, slot)
+	else:
+		if displaced and slot.inventory_item is AttachmentItemPD and displaced.inventory_item is WieldableItemPD:
+			var attachment_equipment := AttachmentEquipment.new()
+			attachment_equipment.bind(displaced.inventory_item, target_inventory)
+			target = {"owner": attachment_equipment, "index": AttachmentEquipment.SLOT_IDS[slot.inventory_item.attachment_slot]}
+			displaced = _drag_slot_at(target)
+		if target.owner is CogitoInventory:
+			var preview := _drag_inventory_preview(target.owner, [slot])
+			if not preview.is_enough_space(grabbed_slot_data, target.index, false):
+				return
+			displaced = preview.get_item_to_swap(grabbed_slot_data, target.index)
+		if _is_slot_wielded(displaced) or not _drag_fits(target, grabbed_slot_data, [slot, displaced]):
+			return
+		if displaced and not _drag_fits(source, displaced, [slot, displaced], target):
+			return
+		slot = _drag_remove(source, slot)
+		if displaced:
+			displaced = _drag_remove(target, displaced)
+		slot.is_rotated = grabbed_slot_data.is_rotated
+		_drag_put(target, slot)
+		if displaced:
+			_drag_put(source, displaced)
+	if source.owner is CogitoInventory:
+		source.owner.inventory_updated.emit(source.owner)
+	if target.owner is CogitoInventory and target.owner != source.owner:
+		target.owner.inventory_updated.emit(target.owner)
 
 
 func rotate_item() -> void:
@@ -700,6 +940,8 @@ func rotate_item() -> void:
 
 
 func _on_bind_grabbed_slot_to_quickslot(quickslotcontainer: CogitoQuickslotContainer):
+	if not _mouse_drag_source.is_empty():
+		return
 	if grabbed_slot_data:
 		CogitoGlobals.debug_log(true, "inventory_interface.gd", "Binding to quickslot container: " + str(grabbed_slot_data) + " -> " + str(quickslotcontainer) )
 		#get_parent().player.inventory_data.pick_up_slot_data(grabbed_slot_data) #Swapped with line below
@@ -714,6 +956,8 @@ func _on_bind_grabbed_slot_to_quickslot(quickslotcontainer: CogitoQuickslotConta
 
 # Grabbed slot data handling for mouse buttons
 func _on_gui_input(event):
+	if not _mouse_drag_source.is_empty():
+		return
 	if event is InputEventMouseButton \
 		and event.is_pressed() \
 		and grabbed_slot_data:
@@ -759,6 +1003,8 @@ func _on_gui_input(event):
 
 
 func _on_visibility_changed():
+	if not visible:
+		cancel_mouse_drag()
 	# drop_slot_data is a no-op on the HUD side — return to inventory instead.
 	if not visible and grabbed_slot_data:
 		_try_return_grabbed_to_player()

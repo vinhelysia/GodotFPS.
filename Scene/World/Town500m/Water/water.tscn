@@ -1,0 +1,160 @@
+[gd_scene load_steps=27 format=3]
+
+[ext_resource type="Script" path="res://Scripts/World/deep_water_zone.gd" id="hazard"]
+
+[ext_resource type="ArrayMesh" path="res://Scene/World/Town500m/Terrain/bank_faces.obj" id="banks"]
+
+[ext_resource type="ArrayMesh" path="res://Scene/World/Town500m/Water/surface.obj" id="surface"]
+
+[ext_resource type="ArrayMesh" path="res://Scene/World/Town500m/Water/bed.obj" id="bed"]
+
+[sub_resource type="StandardMaterial3D" id="water"]
+albedo_color = Color(0.12, 0.29, 0.35, 1)
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="bed"]
+albedo_color = Color(0.22, 0.21, 0.16, 1)
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="bank"]
+albedo_color = Color(0.39, 0.33, 0.22, 1)
+roughness = 0.9
+cull_mode = 2
+
+[sub_resource type="ConvexPolygonShape3D" id="wet_0"]
+points = PackedVector3Array(19.378865, -50, -250, 39.721135, -50, -250, 39.381745, -50, -248.17331, 19.378865, -0.35, -250, 39.721135, -0.35, -250, 39.381745, -0.35, -248.17331)
+
+[sub_resource type="ConvexPolygonShape3D" id="wet_1"]
+points = PackedVector3Array(19.378865, -50, -250, 39.381745, -50, -248.17331, 25.161226, -50, -171.634592, 19.378865, -0.35, -250, 39.381745, -0.35, -248.17331, 25.161226, -0.35, -171.634592)
+
+[sub_resource type="ConvexPolygonShape3D" id="wet_2"]
+points = PackedVector3Array(25.161226, -50, -171.634592, 54.645414, -50, -103.930516, 84.868924, -50, -31.874806, 25.161226, -0.35, -171.634592, 54.645414, -0.35, -103.930516, 84.868924, -0.35, -31.874806)
+
+[sub_resource type="ConvexPolygonShape3D" id="wet_3"]
+points = PackedVector3Array(25.161226, -50, -171.634592, 84.868924, -50, -31.874806, 89.477205, -50, 38.333123, 25.161226, -0.35, -171.634592, 84.868924, -0.35, -31.874806, 89.477205, -0.35, 38.333123)
+
+[sub_resource type="ConvexPolygonShape3D" id="wet_4"]
+points = PackedVector3Array(25.161226, -50, -171.634592, 89.477205, -50, 38.333123, 105.13263, -50, 107.709303, 25.161226, -0.35, -171.634592, 89.477205, -0.35, 38.333123, 105.13263, -0.35, 107.709303)
+
+[sub_resource type="ConvexPolygonShape3D" id="wet_5"]
+points = PackedVector3Array(119.403268, -50, 155.986156, 137.918997, -50, 184.296438, 121.181003, -50, 195.243562, 119.403268, -0.35, 155.986156, 137.918997, -0.35, 184.296438, 121.181003, -0.35, 195.243562)
+
+[sub_resource type="ConvexPolygonShape3D" id="wet_6"]
+points = PackedVector3Array(105.13263, -50, 107.709303, 119.403268, -50, 155.986156, 121.181003, -50, 195.243562, 105.13263, -0.35, 107.709303, 119.403268, -0.35, 155.986156, 121.181003, -0.35, 195.243562)
+
+[sub_resource type="ConvexPolygonShape3D" id="wet_7"]
+points = PackedVector3Array(105.13263, -50, 107.709303, 121.181003, -50, 195.243562, 101.056732, -50, 164.473844, 105.13263, -0.35, 107.709303, 121.181003, -0.35, 195.243562, 101.056732, -0.35, 164.473844)
+
+[sub_resource type="ConvexPolygonShape3D" id="wet_8"]
+points = PackedVector3Array(105.13263, -50, 107.709303, 101.056732, -50, 164.473844, 85.76737, -50, 112.750697, 105.13263, -0.35, 107.709303, 101.056732, -0.35, 164.473844, 85.76737, -0.35, 112.750697)
+
+[sub_resource type="ConvexPolygonShape3D" id="wet_9"]
+points = PackedVector3Array(105.13263, -50, 107.709303, 85.76737, -50, 112.750697, 69.622795, -50, 41.206877, 105.13263, -0.35, 107.709303, 85.76737, -0.35, 112.750697, 69.622795, -0.35, 41.206877)
+
+[sub_resource type="ConvexPolygonShape3D" id="wet_10"]
+points = PackedVector3Array(105.13263, -50, 107.709303, 69.622795, -50, 41.206877, 65.131076, -50, -27.225194, 105.13263, -0.35, 107.709303, 69.622795, -0.35, 41.206877, 65.131076, -0.35, -27.225194)
+
+[sub_resource type="ConvexPolygonShape3D" id="wet_11"]
+points = PackedVector3Array(25.161226, -50, -171.634592, 105.13263, -50, 107.709303, 65.131076, -50, -27.225194, 25.161226, -0.35, -171.634592, 105.13263, -0.35, 107.709303, 65.131076, -0.35, -27.225194)
+
+[sub_resource type="ConvexPolygonShape3D" id="wet_12"]
+points = PackedVector3Array(25.161226, -50, -171.634592, 65.131076, -50, -27.225194, 36.254586, -50, -96.069484, 25.161226, -0.35, -171.634592, 65.131076, -0.35, -27.225194, 36.254586, -0.35, -96.069484)
+
+[sub_resource type="ConvexPolygonShape3D" id="wet_13"]
+points = PackedVector3Array(25.161226, -50, -171.634592, 36.254586, -50, -96.069484, 4.378774, -50, -169.265408, 25.161226, -0.35, -171.634592, 36.254586, -0.35, -96.069484, 4.378774, -0.35, -169.265408)
+
+[sub_resource type="ConvexPolygonShape3D" id="wet_14"]
+points = PackedVector3Array(25.161226, -50, -171.634592, 4.378774, -50, -169.265408, 19.378865, -50, -250, 25.161226, -0.35, -171.634592, 4.378774, -0.35, -169.265408, 19.378865, -0.35, -250)
+
+[sub_resource type="ConvexPolygonShape3D" id="wet_15"]
+points = PackedVector3Array(104.55, -50, 214.77, 114.77, -50, 170.45, 189.77, -50, 150, 104.55, -0.35, 214.77, 114.77, -0.35, 170.45, 189.77, -0.35, 150)
+
+[sub_resource type="ConvexPolygonShape3D" id="wet_16"]
+points = PackedVector3Array(104.55, -50, 214.77, 189.77, -50, 150, 250, -50, 164.77, 104.55, -0.35, 214.77, 189.77, -0.35, 150, 250, -0.35, 164.77)
+
+[sub_resource type="ConvexPolygonShape3D" id="wet_17"]
+points = PackedVector3Array(104.55, -50, 214.77, 250, -50, 164.77, 250, -50, 250, 104.55, -0.35, 214.77, 250, -0.35, 164.77, 250, -0.35, 250)
+
+[sub_resource type="ConvexPolygonShape3D" id="wet_18"]
+points = PackedVector3Array(250, -50, 250, 125, -50, 250, 104.55, -50, 214.77, 250, -0.35, 250, 125, -0.35, 250, 104.55, -0.35, 214.77)
+
+[node name="Water" type="Node3D"]
+
+[node name="surface" type="MeshInstance3D" parent="."]
+mesh = ExtResource("surface")
+material_override = SubResource("water")
+
+[node name="bed" type="MeshInstance3D" parent="."]
+mesh = ExtResource("bed")
+material_override = SubResource("bed")
+
+[node name="BankFaces" type="MeshInstance3D" parent="."]
+mesh = ExtResource("banks")
+material_override = SubResource("bank")
+
+[node name="DeepWater" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 16
+monitorable = false
+script = ExtResource("hazard")
+
+[node name="Wet_0" type="CollisionShape3D" parent="DeepWater"]
+shape = SubResource("wet_0")
+
+[node name="Wet_1" type="CollisionShape3D" parent="DeepWater"]
+shape = SubResource("wet_1")
+
+[node name="Wet_2" type="CollisionShape3D" parent="DeepWater"]
+shape = SubResource("wet_2")
+
+[node name="Wet_3" type="CollisionShape3D" parent="DeepWater"]
+shape = SubResource("wet_3")
+
+[node name="Wet_4" type="CollisionShape3D" parent="DeepWater"]
+shape = SubResource("wet_4")
+
+[node name="Wet_5" type="CollisionShape3D" parent="DeepWater"]
+shape = SubResource("wet_5")
+
+[node name="Wet_6" type="CollisionShape3D" parent="DeepWater"]
+shape = SubResource("wet_6")
+
+[node name="Wet_7" type="CollisionShape3D" parent="DeepWater"]
+shape = SubResource("wet_7")
+
+[node name="Wet_8" type="CollisionShape3D" parent="DeepWater"]
+shape = SubResource("wet_8")
+
+[node name="Wet_9" type="CollisionShape3D" parent="DeepWater"]
+shape = SubResource("wet_9")
+
+[node name="Wet_10" type="CollisionShape3D" parent="DeepWater"]
+shape = SubResource("wet_10")
+
+[node name="Wet_11" type="CollisionShape3D" parent="DeepWater"]
+shape = SubResource("wet_11")
+
+[node name="Wet_12" type="CollisionShape3D" parent="DeepWater"]
+shape = SubResource("wet_12")
+
+[node name="Wet_13" type="CollisionShape3D" parent="DeepWater"]
+shape = SubResource("wet_13")
+
+[node name="Wet_14" type="CollisionShape3D" parent="DeepWater"]
+shape = SubResource("wet_14")
+
+[node name="Wet_15" type="CollisionShape3D" parent="DeepWater"]
+shape = SubResource("wet_15")
+
+[node name="Wet_16" type="CollisionShape3D" parent="DeepWater"]
+shape = SubResource("wet_16")
+
+[node name="Wet_17" type="CollisionShape3D" parent="DeepWater"]
+shape = SubResource("wet_17")
+
+[node name="Wet_18" type="CollisionShape3D" parent="DeepWater"]
+shape = SubResource("wet_18")
+
+[connection signal="body_entered" from="DeepWater" to="DeepWater" method="_on_body_entered"]

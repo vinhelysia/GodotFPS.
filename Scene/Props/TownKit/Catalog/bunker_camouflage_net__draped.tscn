@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/bunker_camouflage_net/assets/bunker_camouflage_net_draped.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/bunker_camouflage_net/materials/town_bunker_camouflage_net_draped_used.tres" id="2_finish"]
+
+[node name="bunker_camouflage_net__draped" type="Node3D"]
+metadata/catalog_id = "bunker_camouflage_net"
+metadata/catalog_variant = "draped"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="CamouflageNet" parent="Model/TownBunkerCamouflageNet"]
+surface_material_override/0 = ExtResource("2_finish")

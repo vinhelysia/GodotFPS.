@@ -1,0 +1,93 @@
+Town500m Phase2 dry terrain payload — 2026-10-08
+
+HISTORICAL WORKER SNAPSHOT: native fixes changed this payload afterwards.
+Use phase2-handoff.txt, terrain-authoring.report.json and phase2-verification.json
+for final geometry/counts/native status. The figures below describe the earlier
+56,833-triangle worker handoff, not the current production candidate.
+
+Entry: res://Scene/World/Town500m/Terrain/dry_terrain.tscn
+Author: node design/town-500m/phase2/terrain-authoring.cjs
+Reproduction: node design/town-500m/phase2/terrain-authoring.cjs --check
+Evidence: terrain-authoring.report.json (source hashes, all pads and grade witnesses).
+
+Static payload only. Identity world transform, X east / Z south / Y up.
+56,833 dry triangles in60 zone/material mesh groups under25 nominal100m chunks.
+OBJ visual meshes reuse the existing Concept B authoring/import pattern;
+native ConcavePolygonShape3D owns exactly the matching dry layer1 triangles,
+mask0/backface_collision=true. No runtime generator, new dependency, bed mesh,
+water floor, submerged collision, hidden causeway, navlink or full nav bake.
+
+131 exact flat patches:76 catalogue footprints plus their0.4m extensions with
+catalogue yaw;13 terrain pads;one dock shore pad;41 road-corner patches derived
+from canonical node/width data. Building root positions remain pad+.2m.
+Hill anchors exactly20/18/15m, max20m, core constrained toY0.5..3.5m.
+Wet exclusion is canonical river/lake union, not zoning or grid-cell centres.
+Dry area228627.02660964662m2; wet union21372.973298545232m2.
+Full triangle/water intersection residual is numerical only (see report).
+Coordinate weld tolerance0.00001m. No duplicate/nonmanifold triangle edges or
+internal open edges; all remaining perimeter edges belong to water/world bounds.
+Microscopic three-edge dry slivers created by floating-point welding are closed
+only when bounded/dry/area<0.001m2; total closure area is reported.
+
+Road planes honor canonical node elevations, exact pad extents and actual
+adjacent-strip overlap. Piecewise profile changes are partitioned into the
+mesh before triangulation; road art should clip to these exported triangles.
+Material/height authority is county asphalt, gravel, dirt, then duplicated graph.
+Primary corrected shared profile conflicts rather than relaxing grade targets:
+G19 at(-225,-110):9→11;P02/G18 at(-139.77,-107):9→9.6;
+P08 at(-75,-113):10.3→9.8;P12/G21 at(-225,-220):14→14.4.
+The original conflicts generated short pad/junction slopes above allowed grades.
+
+Final offline verification:
+- Byte reproduction --check PASS for all OBJ files and PackedScene.
+- All13 corridors centreline and full left/right width edges sampled <=1m PASS.
+- All dry route graph paths sampled the same way PASS.
+- Continuous terrain-triangle longitudinal grade in every road strip PASS:
+  County P01 5.848379%<=6%;gravel P02 9.116034%<=10%;
+  ridge P08 14.948175%<=15%;northwest P12 14.257139%<=15%.
+  Grade bound excludes numerical triangle areas<0.00001m2; sampling still covers
+  corridor width. This is an offline geometry bound, not native traversal.
+- Full triangle clipping against conservative expanded bank rectangles proves
+  collision Y<=3.000000096 throughout the6m wet-bank reservation, below6m.
+  Banks descend3→-.35 over the first2m dry run; reserve stays flat3m through6m,
+  then blends over4m outside the reserve. No in-water geometry is introduced.
+- Natural dry perimeter uses local base+4m, capped20m, over the last2m;
+  exact mesh grid cuts at±248 prevent10m cell smoothing. Actual road termini
+  preserve their profiles; primary owns visible roadway/rail/farm collapse caps.
+- git diff --check PASS for owned source/payload paths.
+
+Exports for primary circulation authoring:
+require('./terrain-authoring.cjs').triangles: lazy-generated dry face array.
+generate(),heightAt(x,z),triangleHeight(x,z,face),wet([x,z]),splitPolygon,
+bounds,overlap,area,signedArea,sampleProfiles(),continuousGrades().
+heightAt returns null outside the dry mesh. No runtime dependency on this file.
+
+No Godot/Blender MCP/CLI native operations were performed by this worker.
+Native OBJ import/render/winding, player walk/crouch/lean/jump containment,
+bridge/dock safe volumes, nav-water exclusion, death/return and FPS remain with
+primary. Town production scene, settings, gameplay, canonical JSON, circulation,
+water, tests and documentation were not edited by this worker.
+
+2026-10-09 — Phase3 pad-shoulder tessellation follow-up (offline only)
+Live composition has151 pads. S1 contact(-230.06922913,172.22286987) hit an
+exported47.771deg face, while authoredHeight specifies a7.125deg shoulder.
+The east-side cell crossed the south pad corner because convex clipping
+removed it before the remaining pad-edge halfplanes were applied.
+All151 pads now split nearby cells along every pad-edge supporting line;
+candidate cells are bounded by the existing4m pad-blend AABB. This happens
+before conformEdges and fan triangulation. No canonical height/function change.
+New terrain:75,422 triangles/38,806 vertices/60 groups, previously68,933/35,553.
+S1 contact physical/authoredY=1.5363463587500021; face slope7.125016348901798deg.
+All151 flat pads,14 road profiles/continuous grade checks,20 dry graph profiles,
+three peaks20/18/15m, core/bank/wet/seam/winding/edge checks PASS offline.
+Terrain/circulation/dressing writers and their deterministic --check runs PASS.
+Roads now16,793 visual faces; banks754 visual faces. Dressing regenerated from
+the same terrain mesh. Phase3 LOS --check retains2D PROXY PASS and its exact hash.
+Town, terrain_payload, canonical JSON and dressing proposal hashes unchanged.
+Detailed before/after hash receipt: terrain-pad-shoulder-tessellation-verification.json.
+This revision changes physical interpolation where old triangles crossed regimes;
+earlier native receipts do not certify it. Primary owns native reload, nav rebake,
+all8 full routes,23GF/4upper,ports/seams/LOS/boundary/water regressions.
+
+2026-10-10 — thin-cell centroid follow-up
+A narrow0.23m cell produced39.845deg fan facets because its independent centre sample dipped below boundary interpolation. CentreY now averages authored boundary heights. Geometry counts/canonical height function/pads/peaks remain unchanged; measured contact now4.958deg. Direct native S2 contact segment passes both directions, and full S2→E-D passes. See centroid-fix-verification.json; all final native gates belong to primary and are separate from historical Phase2 acceptance.

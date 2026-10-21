@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/air_conditioner/assets/air_conditioner_small.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/air_conditioner/materials/town_air_conditioner_small_used.tres" id="2_finish"]
+
+[node name="town_air_conditioner__small" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "town_air_conditioner"
+metadata/catalog_variant = "small"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="AirConditionerSmall" parent="Model/TownAirConditionerSmall"]
+surface_material_override/0 = ExtResource("2_finish")

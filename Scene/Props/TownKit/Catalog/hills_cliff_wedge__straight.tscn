@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/hills_cliff_wedge/assets/hills_cliff_wedge_straight.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/hills_cliff_wedge/materials/town_hills_cliff_wedge_straight_used.tres" id="2_finish"]
+
+[node name="hills_cliff_wedge__straight" type="Node3D"]
+metadata/catalog_id = "hills_cliff_wedge"
+metadata/catalog_variant = "straight"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="CliffWedgeStraight" parent="Model/TownCliffWedgeStraight"]
+surface_material_override/0 = ExtResource("2_finish")

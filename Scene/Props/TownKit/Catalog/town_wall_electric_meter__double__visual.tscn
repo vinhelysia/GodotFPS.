@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/wall_electric_meter/assets/wall_electric_meter_double.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/wall_electric_meter/materials/town_wall_electric_meter_double_used.tres" id="2_finish"]
+
+[node name="town_wall_electric_meter__double" type="Node3D"]
+process_mode = 4
+metadata/catalog_id = "town_wall_electric_meter"
+metadata/catalog_variant = "double"
+metadata/finish = "used"
+metadata/collision_policy = "visual_only_inherited_disable_mode_remove"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="WallElectricMeterDouble" parent="Model/TownWallElectricMeterDouble"]
+surface_material_override/0 = ExtResource("2_finish")

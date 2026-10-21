@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/forest_logging_trailer/assets/forest_logging_trailer_loaded.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/forest_logging_trailer/materials/town_forest_logging_trailer_loaded_used.tres" id="2_finish"]
+
+[node name="forest_logging_trailer__loaded" type="Node3D"]
+metadata/catalog_id = "forest_logging_trailer"
+metadata/catalog_variant = "loaded"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="LoggingTrailerLoaded" parent="Model/TownLoggingTrailerLoaded"]
+surface_material_override/0 = ExtResource("2_finish")

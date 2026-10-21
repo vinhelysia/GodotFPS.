@@ -1,0 +1,96 @@
+Town500m Phase3 dressing grounding / wire policy handoff - 2026-10-09
+
+Owned authoring: design/town-500m/phase3/author-dressing.cjs
+Static output: res://Scene/World/Town500m/Dressing/dressing.tscn
+Report: design/town-500m/phase3/dressing-report.json
+
+terrain_conforming_wall uses closed native BoxMesh/BoxShape3D panels no longer
+than1m along the wall's long axis, preserving the original XZ footprint/yaw.
+Every panel samples analytical phase2 terrain.heightAt at its centre, four
+corners and four edge midpoints. Base embeds3cm below the lowest sample; top
+is the requested cover height above the highest sample. Each panel records
+its dimensions, sample heights, base and minimum exposed height. The author
+asserts exposure>=min(2m,requested height); requested height is retained above
+every recorded sample, even for a lower wall. It does not lift a whole long
+wall into a floating slab. No runtime generator or script is added.
+
+Regular cover retains the existing lowest-centre/corner placement and may
+expose less than2m on slopes; it is reported separately from conforming walls.
+Six initially buried covers now receive authoring-only grounding correction:
+C05-09 boulder uses9 closed native1m-or-smaller XZ box cells with minimum
+sampled exposure2.3m; base remains embedded rather than lifting a rigid box
+into an air gap. Downhill sampled exposure reaches3.567295m on the slope.
+C07-02/04/07/08/09 reeds use five static closed OBJ meshes, each16 cells<=0.3m.
+Top vertices follow all nine terrain samples/cell at exactly0.9m above ground;
+bottom vertices embed3cm beneath each cell minimum. There is no collider,
+opaque proxy or increased visible reed height. This avoids coarse box faces
+which would otherwise reach2.29m downhill despite a0.9m minimum exposure.
+All12 C07 non-solid concealment covers have no gameplay collider, including
+the seven which did not require grounding correction.71 solid cover records
+own457 native cover bodies; canonical footprints/sizes and93 seeds stay locked.
+Exposure proof is sampled analytical terrain only. Native generated mesh,
+eye-height/window/ADS/lean/upstairs/high-ground rays remain primary-owned.
+
+All wire StaticBody3D CollisionObjects directly join native group
+ai_vision_transparent and declare concept_b_los_transparent=true plus
+town500_los_transparent=true for fixture rays. Player/weapon layer1 collision
+is retained. Opaque cover is untagged; foliage has no collider and trunk-only
+collision never certifies an entire tree crown as hard cover. Wire/crowns
+are concealment, not opaque LOS certificates.
+
+Live Scripts/Enemies/scav_perception.gd::_los_clear was read, not changed:
+it skips at most4 tagged StaticBody RIDs and fails closed at the fifth.
+Several fence panels and/or glass in one ray require native acceptance;
+metadata/group correctness alone does not establish whole-route AI vision.
+
+64 canonical Cxx-xx cover records and93 original vegetation records are
+asserted unchanged through proposal application. Additional covers explicitly
+declaring allow_rail_overlap=true bypass only the helper's additional rail
+clearance check; all undeclared additions retain>=0.5m rail clearance. The
+primary canonical checker and native passage test own those declared cases.
+Stable IDs prevent duplicated merged proposal additions.
+
+Imported pallet visuals use process_mode4; native dimensioned stack bodies
+own intended collision. Primary must verify imported visual helper bodies
+are absent from actual physics. No modeling/finished-art/nav/raid/FPS claim.
+
+Checks: node syntax PASS; grounding self-check PASS for both long axes,
+three rotations on sloped terrain, full length coverage and NaN rejection;
+solid grid self-check validates9 cells,<=1m XZ spans and exact footprint area.
+Every generated visual OBJ verifies top-vertex0.9m offset, face-index bounds
+and closed topology (every undirected edge belongs to exactly two triangles).
+Native body-count and per-ID assertions reject colliders on non-solid covers.
+After primary confirmed final canonical/proposal/terrain merge, authoring
+write and exact-byte --check both PASS. Final83 covers=64 canonical+19 added,
+93 vegetation seeds,9 imported pallet stacks,11 fence segments/171 tagged
+wire panels;9 terrain-conforming walls create387 closed native panels,
+plus9 boulder cells and80 closed visual-only reed cells across5 OBJ files.
+Minimum sampled conforming exposure is2.6m: M return/COUNTY_E screen/P12 panel/
+P12 yard return/P12 inner-west panel2.6m; P07 yard/P11 property return3m;
+P12 rock/rock abutment4m. Max longitudinal panel span1m. Rock strips retain
+original transverse footprint thickness6m and2m respectively; the<=1m rule
+is longitudinal subdivision, not a1m-square grid.
+
+No authored cover retains negative exposure at recorded samples. Lowest
+remaining cover exposure0.02886m belongs to an unchanged non-solid seed;
+minimum solid-cover exposure0.662817m includes intentionally low props.
+Primary must inspect all corrections with native terrain rays and visual QA;
+canonical64 source records were not moved or resized. Report status now reads
+OFFLINE STATIC CHECK PASS;2D PROXY PASS;NATIVE PENDING, derived from the current
+LOS proxy report after asserting its layout/proposal hashes match live inputs.
+
+Final source layout SHA256:
+3eaf13391a1fd9781a20bb179bab8f60c88a9a4a14384f8a738b3b7539aab81b
+Final author-dressing.cjs SHA256:
+9bdd058ba452a6028a439aa7a6d2bb6428724cc292b2cbf49d30f45da14e1b89
+Final dressing.tscn SHA256:
+3ea5028fbe5b0fda8d8f0996e42dddd5bd5a4a454823216d2226edae83b1bed8
+Final dressing-report.json SHA256:
+5b9c9605f8faeebe5f7fd032ca1e3b02b8cd5d4c5fe7bd0bba6a226728a80725
+Report records every source/output hash and per-cover/per-panel terrain data.
+
+Reproduce from nested Godot project root after final merge:
+node design/town-500m/phase3/author-dressing.cjs
+node design/town-500m/phase3/author-dressing.cjs --check
+
+No Godot CLI/MCP, Town/canonical/other-worker edit, commit or push by worker.

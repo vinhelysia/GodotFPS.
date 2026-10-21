@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/bunker_anti_vehicle_hedgehog/assets/bunker_anti_vehicle_hedgehog_single.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/bunker_anti_vehicle_hedgehog/materials/town_bunker_anti_vehicle_hedgehog_single_used.tres" id="2_finish"]
+
+[node name="bunker_anti_vehicle_hedgehog__single" type="Node3D"]
+metadata/catalog_id = "bunker_anti_vehicle_hedgehog"
+metadata/catalog_variant = "single"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="AntiVehicleHedgehog" parent="Model/TownBunkerAntiVehicleHedgehog"]
+surface_material_override/0 = ExtResource("2_finish")

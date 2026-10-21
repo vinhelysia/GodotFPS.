@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/street_litter/assets/street_litter_tin.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/street_litter/materials/town_street_litter_tin_used.tres" id="2_finish"]
+
+[node name="shared_street_litter__tin" type="Node3D"]
+metadata/catalog_id = "shared_street_litter"
+metadata/catalog_variant = "tin"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="StreetLitterTin" parent="Model/TownStreetLitterTin"]
+surface_material_override/0 = ExtResource("2_finish")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Blender/TownKit/props/notice_board/assets/notice_board_wall.glb" id="1_model"]
+[ext_resource type="Material" path="res://Assets/Blender/TownKit/props/notice_board/materials/town_notice_board_wall_used.tres" id="2_finish"]
+
+[node name="town_notice_board__wall" type="Node3D"]
+metadata/catalog_id = "town_notice_board"
+metadata/catalog_variant = "wall"
+metadata/finish = "used"
+metadata/collision_policy = "native_import"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="NoticeBoardWall" parent="Model/TownNoticeBoardWall"]
+surface_material_override/0 = ExtResource("2_finish")

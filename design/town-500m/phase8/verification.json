@@ -1,0 +1,467 @@
+{
+  "date": "2026-10-20",
+  "status": "PASS_WITH_SCOPED_LIMITS",
+  "scope": "Bounded V2 first-person environmental pilot; existing Phase7 finish retained elsewhere.",
+  "bounds_xz_m": {
+    "x": [
+      -198,
+      -130
+    ],
+    "z": [
+      5,
+      90
+    ],
+    "feather": 5
+  },
+  "protected_sources": {
+    "count": 33,
+    "byte_identical": 18,
+    "intended_changed": 15,
+    "unexpected_changes": 0,
+    "rows": [
+      {
+        "path": "Scene/Town.tscn",
+        "sha256": "5c83f7fe36169819f3dd81b231b0eb79b3201c729d809032a270bc738cfe0876",
+        "current_sha256": "5c83f7fe36169819f3dd81b231b0eb79b3201c729d809032a270bc738cfe0876",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/terrain_payload.tscn",
+        "sha256": "9e3c705847a20004f38c9b8611eea32a299b58b374201bb170fd7ccf6cdf1e14",
+        "current_sha256": "9e3c705847a20004f38c9b8611eea32a299b58b374201bb170fd7ccf6cdf1e14",
+        "intended_change": false
+      },
+      {
+        "path": "project.godot",
+        "sha256": "080bdb5a0067e222f77529c3dbe1de6b539461103cbfa26c77a9376ca56dd59e",
+        "current_sha256": "080bdb5a0067e222f77529c3dbe1de6b539461103cbfa26c77a9376ca56dd59e",
+        "intended_change": false
+      },
+      {
+        "path": "addons/cogito/Theme/Cogito_Theme_A.tres",
+        "sha256": "adac40397eeb7b9a5e66254336910db3aa36e9082f0619c41f79bf8acfc2686e",
+        "current_sha256": "adac40397eeb7b9a5e66254336910db3aa36e9082f0619c41f79bf8acfc2686e",
+        "intended_change": false
+      },
+      {
+        "path": "Scripts/World/day_night_cycle.gd",
+        "sha256": "456df50ee053f4c0a67a7aeda0a1d88a524cf72038fa7dc4b12b96051b8f2c74",
+        "current_sha256": "456df50ee053f4c0a67a7aeda0a1d88a524cf72038fa7dc4b12b96051b8f2c74",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/apartment_pilot.tscn",
+        "sha256": "0543003d4145009ec81a77b19c34156d6a1e850754531b5c2f11735e3802dab1",
+        "current_sha256": "0543003d4145009ec81a77b19c34156d6a1e850754531b5c2f11735e3802dab1",
+        "intended_change": false
+      },
+      {
+        "path": "design/town-500m/phase7/ground-materials.cjs",
+        "sha256": "a1314a723c4307096d20821f270031ab0433c90991021060a62ddfe9051b1f7d",
+        "current_sha256": "5bc70935cd33b9ae2270a85f9bde44398416150d4048e83893690f17e4692d0d",
+        "intended_change": true
+      },
+      {
+        "path": "design/town-500m/phase7/vegetation-plan.json",
+        "sha256": "adc5cb72b577e3d1887b178ad9355f96795fb078b3d5d28ae03d789accfa7cfa",
+        "current_sha256": "adc5cb72b577e3d1887b178ad9355f96795fb078b3d5d28ae03d789accfa7cfa",
+        "intended_change": false
+      },
+      {
+        "path": "tools/town500_ground_cover_author.gd",
+        "sha256": "4eea807753cf33163e549ac44d81cebc001ca81309f8c8809f5f969cf6bedf07",
+        "current_sha256": "2240e9653a51bfe996a3003e7bfe5fbac4bb8d07d3a8652306b25789cb4ffd85",
+        "intended_change": true
+      },
+      {
+        "path": "tools/town500_ground_variation.gd",
+        "sha256": "0e83c5f78a86a70070748746d1c7761eb63e2f3623e8a1e3000e0d38d737d39f",
+        "current_sha256": "0e83c5f78a86a70070748746d1c7761eb63e2f3623e8a1e3000e0d38d737d39f",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/asphalt.tres",
+        "sha256": "856d94347de4849faa41436ce99f3e115b7b234173fb7a5917fcc5611a142e5e",
+        "current_sha256": "90efe35f8636145da28898015589e82df07fea6e4f9fdf691c1d1dd4d94f441e",
+        "intended_change": true
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/bunker.tres",
+        "sha256": "e1d957dfbdf321ad899b2b4b6f2886355cbd8752c84ffb67186d2dd8d6d6dd94",
+        "current_sha256": "759f071416a551d1eba30a42c64c0ccb0d8149dc73db124708a923f4d415c251",
+        "intended_change": true
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/circulation.tscn",
+        "sha256": "b666bae6912793565c08f6791b6c1c00c7b2a02ce1b391a21cdaeaaea768958d",
+        "current_sha256": "b666bae6912793565c08f6791b6c1c00c7b2a02ce1b391a21cdaeaaea768958d",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/dry_terrain.tscn",
+        "sha256": "43a8c6e783e55de8d037724efc33e402438024077b8ecbc162103886795ffc68",
+        "current_sha256": "43a8c6e783e55de8d037724efc33e402438024077b8ecbc162103886795ffc68",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/farmland.tres",
+        "sha256": "e3ac03093dad57c8a94087e09aeecb69c1381a8bd5f8561d0bdfc4e1b69d5dd3",
+        "current_sha256": "8ebdb37edbd2a7c4ad60a576165e7afc937ec58e31217b84cbd41a75770003a2",
+        "intended_change": true
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/forest.tres",
+        "sha256": "d79988ea4efbcfdb12fbfd20ad586105687218e19f9eda8539d8b6e6a4da6d5b",
+        "current_sha256": "8c0e3e91912830f33c48b1e4eb6abb7b4f7b4c2bb303111f8b4bd9b92294b5d6",
+        "intended_change": true
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/gravel.tres",
+        "sha256": "ed7c59c21bd2eb334dc79f79130d20864414348e1a40797e0d1183342cf80f3c",
+        "current_sha256": "94b22ea84e5bc127e7ba07b567c4f6dadb412a766e0edf2bb1fb154b3c9a95eb",
+        "intended_change": true
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/ground_cover.tscn",
+        "sha256": "11626fcfe8f3b893aa2b3284c0b529cb43b3bf80b82f08b56b6e7b4279ac2aba",
+        "current_sha256": "840d8a0dbe64794548eeb9842492af0533e9009805334d0e20494714fc3ee6c9",
+        "intended_change": true
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/ground_surface.gdshader",
+        "sha256": "53b0747b7952f2810ab030787547dbd5d0b260bb7504b77308fd5190c32457ba",
+        "current_sha256": "61d8f2039c13ec0c5433c478a32730df8ff7c5750237e70a9fb9a0f707af8424",
+        "intended_change": true
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/ground_surface.gdshader.uid",
+        "sha256": "0c093b4b0f01a62efb8a4faddad1bf024b18fbfbe212f56fbd213bfc72b68fa5",
+        "current_sha256": "0c093b4b0f01a62efb8a4faddad1bf024b18fbfbe212f56fbd213bfc72b68fa5",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/hills.tres",
+        "sha256": "79f4ca85853c2f74c84b286fe2a60fa1fa7f05882ddfe087239daa1194df2bd5",
+        "current_sha256": "83e7576a0ad7d63406d07ce995bf9c498e1330dfc597053c5cfba0dcc9c1be37",
+        "intended_change": true
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/industry.tres",
+        "sha256": "b1ec6a9aa65ae8ff5f6919e59be8e03cda1f6b528710d6624fce01e10a5caae9",
+        "current_sha256": "3b98eda654fc2e54c37162767a3afdd4758995f27b2e28f33011ea1b1c7ca01e",
+        "intended_change": true
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/mask_ground_context.png",
+        "sha256": "e8bc1f61d844f93d773e42a79ae4b74596bc5be7312aee94e5c7e4bcd7b23343",
+        "current_sha256": "e8bc1f61d844f93d773e42a79ae4b74596bc5be7312aee94e5c7e4bcd7b23343",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/mask_ground_context.png.import",
+        "sha256": "9e2431d33160e25ed43fcd4824aa085f96245d4f7511458c96f840f3bff8f19e",
+        "current_sha256": "9e2431d33160e25ed43fcd4824aa085f96245d4f7511458c96f840f3bff8f19e",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/mask_roads_leaves.png",
+        "sha256": "ac4f0c76926f4881e239017ddea9b696c0b207ad74bcb153d795923f28fd9ef9",
+        "current_sha256": "ac4f0c76926f4881e239017ddea9b696c0b207ad74bcb153d795923f28fd9ef9",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/mask_roads_leaves.png.import",
+        "sha256": "a7a93ac1156f0a99ff0fc81713124191ddf596f5c526cb28bdaeb92200eb35be",
+        "current_sha256": "a7a93ac1156f0a99ff0fc81713124191ddf596f5c526cb28bdaeb92200eb35be",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/mask_variation.png",
+        "sha256": "eda0c622074545bd50988bedbf5fc3cea111bc0091631e2babe78e4d6b11a3ec",
+        "current_sha256": "eda0c622074545bd50988bedbf5fc3cea111bc0091631e2babe78e4d6b11a3ec",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/mask_variation.png.import",
+        "sha256": "6f283c3e88babe3f3c7a2161caec5fbf2e3b433812a79378f1d6749b213697f1",
+        "current_sha256": "6f283c3e88babe3f3c7a2161caec5fbf2e3b433812a79378f1d6749b213697f1",
+        "intended_change": false
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/retaining.tres",
+        "sha256": "b76e446119defad2d7a5d962e412b01a8cf1a1d3ebc0c1a272ed5f2e4608dffa",
+        "current_sha256": "9e109c5ff8c77516afc4a744a3ad7b57c1bf5f19f7f54e6f8ebeb105f6a5bccf",
+        "intended_change": true
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/shore.tres",
+        "sha256": "b05da23361491fe50fb6f15bf7a0f7307506305cf62ffb3383f708dc6013e7c0",
+        "current_sha256": "a959ebb3faf4b920615d127c4deba5201930223e1f65139263c6fa639d69f58e",
+        "intended_change": true
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/town.tres",
+        "sha256": "d1abc373c856493be614c1ca6e4c5e2116188048feb4626e35208a3175bb7c8b",
+        "current_sha256": "9c0a490347be4589178e162a9a71c1e400aa46fc2e8e08c9a14af6bc4786c2a8",
+        "intended_change": true
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/trail.tres",
+        "sha256": "d4410640bb2fb5e9a6c57d71d45bd0cbc0b2733e7bbaa34a8297a70d41095869",
+        "current_sha256": "4924842d7712898003559989d42ac81dd6bff47f9b16a81639aafb379872cb20",
+        "intended_change": true
+      },
+      {
+        "path": "Scene/World/Town500m/Art/GroundArt/water.tscn",
+        "sha256": "57965d332c7cd40d1670ed31d62b9832f1dfed5e8c2179e70e7b9263fe1dce74",
+        "current_sha256": "57965d332c7cd40d1670ed31d62b9832f1dfed5e8c2179e70e7b9263fe1dce74",
+        "intended_change": false
+      }
+    ]
+  },
+  "native_receipts": [
+    {
+      "name": "after",
+      "path": "tests/artifacts/town500_ground_v2/v2_after/ground_v2_after-native.json",
+      "sha256": "b6be269b6a77de9fbfc736ceb2d2bb440d75f2a9e61cf497bcbbf903ed7bea16",
+      "status": "PASS",
+      "checks": 4359,
+      "source_files": 312,
+      "current_disk_matches": true,
+      "isolated_save_cleanup": [
+        {
+          "label": "Create unique isolated save root",
+          "pass": true
+        },
+        {
+          "label": "No real or fixture save writes",
+          "pass": true
+        },
+        {
+          "label": "Remove owned empty isolated save root",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "name": "walk",
+      "path": "tests/artifacts/town500_ground_v2/traversal/ground_contact-native.json",
+      "sha256": "2a238198d5dcdbce4d2f65bc836b4404c0a7186cea47d1005014885b1392df90",
+      "status": "PASS",
+      "checks": 3369,
+      "source_files": 309,
+      "current_disk_matches": true,
+      "isolated_save_cleanup": [
+        {
+          "label": "Create unique isolated save root",
+          "pass": true
+        },
+        {
+          "label": "No real or fixture save writes",
+          "pass": true
+        },
+        {
+          "label": "Remove owned empty isolated save root",
+          "pass": true
+        }
+      ]
+    }
+  ],
+  "baseline": {
+    "status": "PASS",
+    "checks": 607,
+    "path": "tests/artifacts/town500_ground_v2/v2_before/ground_v2_before-native.json",
+    "sha256": "3f1464e20ed6b0bf6324114a9ab6cafa13755da7c49efb6fe9a0a8980cf627f1"
+  },
+  "matched_camera_rows": 17,
+  "matched_captures_per_revision": 15,
+  "cameras": {
+    "kind": "v2_camera_scope",
+    "native_standing_eye_height_m": 1.50014090538025,
+    "player_camera_path": "Body/Neck/Head/Eyes/Camera",
+    "required_eye_height_m": 1.7,
+    "scope": "Required views use a temporary camera1.70m above native floor; an extra road view uses measured standing Cogito eye height. Player/controller unchanged."
+  },
+  "geometry": {
+    "collision_sha256": "dcbdcd9b8d069607e49c27faf8ef244e77fbad1e2f0eea0d8b2be8670ba8d85a",
+    "collision_shapes": 3129,
+    "kind": "ground_geometry_signature",
+    "navigation_polygons": 13920,
+    "navigation_sha256": "744b61e3a63be2012df7aeef7618af1d1c6c72cf558c11a1501020120e8ffe02",
+    "scope": "World-space collision shapes and saved navigation topology; excludes visual materials and decorative non-colliding foliage."
+  },
+  "geometry_identical": true,
+  "navigation_vertices": 11714,
+  "bridge_queries": [
+    {
+      "id": "R01",
+      "kind": "v2_crossing_navigation",
+      "reverse": false,
+      "waypoints": 28
+    },
+    {
+      "id": "R01",
+      "kind": "v2_crossing_navigation",
+      "reverse": true,
+      "waypoints": 28
+    },
+    {
+      "id": "R02",
+      "kind": "v2_crossing_navigation",
+      "reverse": false,
+      "waypoints": 5
+    },
+    {
+      "id": "R02",
+      "kind": "v2_crossing_navigation",
+      "reverse": true,
+      "waypoints": 5
+    }
+  ],
+  "vegetation": {
+    "batches": 9,
+    "instances": 930,
+    "kind": "v2_cover_support",
+    "maximum_ground_error_m": 0.00000146176147453048,
+    "scope": "Native rendered MultiMesh readback and one support ray per placement; not silhouette/canopy intersection certification."
+  },
+  "controller": {
+    "roundtrips": [
+      "county-road centre",
+      "road-verge-grass cross-section",
+      "apartment pedestrian spur and vestibule"
+    ],
+    "walk_segments": 20,
+    "all_grounded": true,
+    "airborne_frames": 0,
+    "health_unchanged": true,
+    "controller_modified": false
+  },
+  "performance": {
+    "before": [
+      {
+        "draw_calls": 1278,
+        "engine_max_fps": 0,
+        "frames": 180,
+        "gpu_median_ms": 0.902999997138977,
+        "gpu_p95_ms": 1.64400005340576,
+        "kind": "ground_render_cost",
+        "primitives": 747344,
+        "render_cpu_median_ms": 1.04100000858307,
+        "scope": "Native viewport GPU/CPU timestamps on this GPU, no120FPS cap; static scene, BT/survival disabled. Not active-AI whole-map/1080p certification.",
+        "texture_bytes": 786696704,
+        "view": "along_road",
+        "viewport": [
+          1280,
+          720
+        ],
+        "wall_median_ms": 2.192
+      },
+      {
+        "draw_calls": 1748,
+        "engine_max_fps": 0,
+        "frames": 180,
+        "gpu_median_ms": 1.14300000667572,
+        "gpu_p95_ms": 1.79900002479553,
+        "kind": "ground_render_cost",
+        "primitives": 887401,
+        "render_cpu_median_ms": 1.28900003433228,
+        "scope": "Native viewport GPU/CPU timestamps on this GPU, no120FPS cap; static scene, BT/survival disabled. Not active-AI whole-map/1080p certification.",
+        "texture_bytes": 786696704,
+        "view": "tree_contact",
+        "viewport": [
+          1280,
+          720
+        ],
+        "wall_median_ms": 2.568
+      }
+    ],
+    "after": [
+      {
+        "draw_calls": 1277,
+        "engine_max_fps": 0,
+        "frames": 180,
+        "gpu_median_ms": 0.994000017642975,
+        "gpu_p95_ms": 1.57599997520447,
+        "kind": "ground_render_cost",
+        "primitives": 749984,
+        "render_cpu_median_ms": 1.02699995040894,
+        "scope": "Native viewport GPU/CPU timestamps on this GPU, no120FPS cap; static scene, BT/survival disabled. Not active-AI whole-map/1080p certification.",
+        "texture_bytes": 790896128,
+        "view": "along_road",
+        "viewport": [
+          1280,
+          720
+        ],
+        "wall_median_ms": 2.093
+      },
+      {
+        "draw_calls": 1748,
+        "engine_max_fps": 0,
+        "frames": 180,
+        "gpu_median_ms": 1.20500004291534,
+        "gpu_p95_ms": 2.94199991226196,
+        "kind": "ground_render_cost",
+        "primitives": 895201,
+        "render_cpu_median_ms": 1.30900001525879,
+        "scope": "Native viewport GPU/CPU timestamps on this GPU, no120FPS cap; static scene, BT/survival disabled. Not active-AI whole-map/1080p certification.",
+        "texture_bytes": 790896128,
+        "view": "tree_contact",
+        "viewport": [
+          1280,
+          720
+        ],
+        "wall_median_ms": 2.581
+      }
+    ],
+    "scope": "Static Forward+1280x720,180frames/view,no cap,BT and survival disabled only in fixture; not1080p120FPS or active-AI acceptance."
+  },
+  "material_qa": {
+    "path": "design/town-500m/phase8/native-material-qa.json",
+    "sha256": "d5aeb6cb65ded6157ffca53f217ad60ae5b2ab47015f48ce73719594af4b10e7",
+    "shader_sha256": "61d8f2039c13ec0c5433c478a32730df8ff7c5750237e70a9fb9a0f707af8424"
+  },
+  "editor_end": {
+    "scene": "res://Scene/Town.tscn",
+    "playing": false,
+    "run_args": "",
+    "unsaved_scenes": [],
+    "scanning": false,
+    "original_three_tabs_retained": true
+  },
+  "cleanup": {
+    "isolated_roots": "Native receipts confirm no save writes and owned empty isolated-root removal.",
+    "theme": "Exact task-start bytes after glyph-X-advance-only guard; changed cache backed up.",
+    "project_settings": "project.godot byte-identical; no persistent project-setting edits."
+  },
+  "diagnostics": {
+    "editor_output": [
+      "Jolt custom solver bias warning",
+      "Path to node is invalid: Scope"
+    ],
+    "scope": "Editor reports retained; Scope origin not diagnosed in this visual pilot. No zero-warning/error claim."
+  },
+  "visual_review": {
+    "reviewed": [
+      "noon/dusk road",
+      "noon/dusk shoulder",
+      "5m and20m ground",
+      "entrance",
+      "noon/dusk tree contact"
+    ],
+    "assessment": "Reduced broad camouflage within pilot, fine grain/aggregate/cracks visible at first-person height, muted rooted grass, route/entrance readable. No floating or z-fighting observed in sampled views. Low-poly result; not photorealism or exhaustive art approval.",
+    "comparisons": [
+      "tests/artifacts/town500_ground_v2/comparison_along_road.png",
+      "tests/artifacts/town500_ground_v2/comparison_shoulder_close.png",
+      "tests/artifacts/town500_ground_v2/comparison_ground_5m.png",
+      "tests/artifacts/town500_ground_v2/comparison_tree_contact.png"
+    ]
+  },
+  "limits": [
+    "No V2 whole-map extension; outside pilot keeps Phase7 materials.",
+    "No active-AI1080p/120FPS acceptance; tree-view p95 increased in short sample, cause not isolated.",
+    "No upper-stair/full bridge-walk/weapon/save/raid suite repetition for this visual-only change.",
+    "Fine detail is tiled over4m; visibility assessed only at sampled camera/time pairs.",
+    "No original GLB/OBJ or global lighting changes."
+  ]
+}

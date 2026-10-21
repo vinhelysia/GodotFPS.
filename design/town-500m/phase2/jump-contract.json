@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "status": "NATIVE MEASUREMENT PASS via Godot MCP 2026-10-08",
+  "fixture": "res://tests/town500_jump_regression.tscn",
+  "report": "res://tests/artifacts/town500_phase2/jump-reach.json",
+  "controller_scene": "res://addons/cogito/PackedScenes/cogito_player.tscn",
+  "method": "Native Input actions plus CogitoPlayer._physics_process(1/60), automatic callback disabled, collision bodies active. Flat runup translated to bank lip retaining controller state. Measure horizontal root displacement from launch request until first collider-feet frame <= -0.35m; no far floor or water-death shortcut.",
+  "surface_y_m": {
+    "actual_bank": 3,
+    "high_bank_reserve": 6,
+    "hill_stress_only": 20
+  },
+  "water_death_feet_y_m": -0.35,
+  "open_gap_m": 20,
+  "safety_margin_m": 6,
+  "acceptance": "actual bank and reserved high bank each require measured maximum reach + 6 <= 20. Larger measured requirement must be reported to primary; this fixture never edits channel geometry. Hill20m stress stays separate unless live terrain provides that bank takeoff.",
+  "cases": [
+    "walk_jump",
+    "sprint_jump",
+    "native slide_jump request with actual InputEventAction crouch just-pressed and slide positive controls",
+    "bunnyhop_runup: hold native jump for >=3 hops, retain measured current speed"
+  ],
+  "air_step": "All flight cases run native enabled and disabled; separate native airborne 0.30m test-only ledge distinguishes toggle. Record actual ground and air step values because script initialization may precede scene overrides.",
+  "source_caveats": [
+    "Scene CAN_CROUCH_JUMP=false gates the jump before active-slide modifier. Expected slide jump is blocked; do not enable it for this fixture.",
+    "Held jump increments bunny_hop_speed but current_speed interpolation is gated while jump is held. Report main_velocity horizontal speed, not nominal field values.",
+    "STEP_HEIGHT_DEFAULT is scene 0.35m; record STEP_HEIGHT_IN_AIR_DEFAULT live rather than assuming initializer copies the scene override."
+  ],
+  "isolation": "Unique fixture-owned CogitoSceneManager.cogito_state_dir set before instancing player and left isolated through shutdown. Remove empty owned root only. Per-instance stamina is_locked and fall_damage=0 prevent unrelated depletion/death during repeated measurements.",
+  "limits": [
+    "No proof of arbitrary slopes or unbounded bunnyhop history",
+    "No moving platforms, props/log chains or jet propulsion",
+    "No production water Area/death/Hub/save proof",
+    "Measured reach includes one full threshold-crossing frame"
+  ],
+  "native": {
+    "exit_code": 0,
+    "duration_sec": 101.59,
+    "flight_cases": 24,
+    "air_step_probes": 2,
+    "bank_max_reach_m": 10.0334911346436,
+    "high_bank_max_reach_m": 11.9001598358154,
+    "hill_stress_max_reach_m": 17.9668312072754,
+    "actual_air_step_m": 0.5,
+    "actual_ground_step_m": 0.349999994039536,
+    "printed_assertions": 206,
+    "report_assertions_before_report_IO": 204,
+    "known_exit_warning": "2 ObjectDB instances leaked; cause unresolved"
+  }
+}
